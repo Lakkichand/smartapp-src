@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- TA ID -->
+    <string name="mainviewgroupcommand">mainviewgroupcommand</string>
+    <string name="detailviewcontroller">detailviewcontroller</string>
+    <string name="searchviewcontroller">searchviewcontroller</string>
+    <string name="tabcontroller">tabcontroller</string>
+    <string name="tabmanageviewcommand">tabmanageviewcommand</string>
+    <string name="bannercontroller">bannercontroller</string>
+    <string name="featurecontroller">featurecontroller</string>
+    <string name="topiccontroller">topiccontroller</string>
+    <string name="categoriescontroller">categoriescontroller</string>
+    <string name="downloadmanagercontroller">"downloadmanagercontroller"</string>
+    <string name="updatecontroller">updatecontroller</string>
+    <string name="topiccontentcontroller">topiccontentcontroller</string>
+    <string name="extracontroller">extracontroller</string>
+    <string name="categorycontentcontroller">categorycontentcontroller</string>
+    <string name="commentcontroller">commentcontroller</string>
+    <string name="rankingcontroller">rankingcontroller</string>
+    <string name="maincontroller">maincontroller</string>
+    <string name="spkexceptioncontroller">spkexceptioncontroller</string>
+    <string name="marketinstallcontroller">marketinstallcontroller</string>
+    <string name="downloadcountcontroller">downloadcountcontroller</string>
+    <string name="installcountcontroller">installcountcontroller</string>
+    <string name="activatecountcontroller">activatecountcontroller</string>
+    <string name="docommentscontroller">docommentscontroller</string>
+    <string name="xnewcontroller">xnewcontroller</string>
+    <string name="xmustcontroller">xmustcontroller</string>
+    <string name="xallcontroller">xallcontroller</string>
+    <string name="xboxidcontroller">xboxidcontroller</string>
+    <string name="xtimeonlinecontroller">xtimeonlinecontroller</string>
+    <string name="processmanagercontroller">processmanagercontroller</string>
+    <string name="installedappcontroller">installedappcontroller</string>
+    <string name="cachecleanercontroller">cachecleanercontroller</string>
+    <string name="trashscancontroller">trashscancontroller</string>
+    <string name="managercontroller">managercontroller</string>
+    <!-- 底部导航栏 -->
+    <string name="navigationtopic">专题</string>
+    <string name="navigationapp">应用</string>
+    <string name="navigationfeature">推荐</string>
+    <string name="navigationgame">游戏</string>
+    <string name="navigationmanage">管理</string>
+    <string name="navigationmust">装机必备</string>
+    <string name="navigationxfeature">最新推荐</string>
+    <string name="navigationall">全部</string>
+    <!-- 页面TITLE -->
+    <string name="recommApp">推荐应用</string>
+    <string name="CatApp">应用分类</string>
+    <string name="recommGame">推荐游戏</string>
+    <string name="CatGame">游戏分类</string>
+    <string name="downloadTitle">下载</string>
+    <string name="updateTitle">更新</string>
+    <string name="hotapp">热门应用</string>
+    <string name="hotgame">精品游戏</string>
+    <string name="topic">专题</string>
+    <string name="ranking">排行榜</string>
+    <string name="app">应用</string>
+    <string name="game">游戏</string>
+    <string name="open">展开</string>
+    <!-- 页面提示 -->
+    <string name="lastpage">已经是最后一页了</string>
+    <string name="errortip">加载失败，请稍后刷新</string>
+    <!--  -->
+    <string name="app_name">安卓装机大师</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <string name="netstate">网络状态</string>
+    <string name="setnetwork">当前网络不可用，是否连接网络？</string>
+    <string name="ok">设置</string>
+    <string name="confirm">确  定</string>
+    <string name="cancel">取消</string>
+    <string name="update_now">立刻更新</string>
+    <string name="update_later">稍后再说</string>
+    <string name="update_exit">退&#160;&#160;出</string>
+    <string name="loading_more">查看更多</string>
+    <string name="retry">重   试</string>
+    <string name="downloadall">下载全部</string>
+    <string name="alldownload">全部下载</string>
+    <string name="newerror">网络错误</string>
+    <string name="feedbacktip">请输入反馈内容</string>
+    <string name="networknotconnect">网络未连接</string>
+    <string name="feedbacksuccess">反馈成功</string>
+    <string name="feedbackfail">反馈失败</string>
+    <!-- 搜索页面 -->
+    <string name="search">搜索</string>
+    <string name="search_hint">搜您想要的应用</string>
+    <string name="search_xhint">大家都在搜索...</string>
+    <string name="download">下　载</string>
+    <!-- 加载失败页面 -->
+    <string name="load_fail">加载失败，请稍后刷新。</string>
+    <string name="again_load">重新加载</string>
+    <string name="set_network">设置网络</string>
+    <!-- 下载 -->
+    <string name="btn_open">打开</string>
+    <string name="btn_install">安装</string>
+    <string name="btn_installing">安装中</string>
+    <string name="btn_goon">继续</string>
+    <string name="btn_pause">暂停</string>
+    <string name="btn_download">下载</string>
+    <string name="btn_redownload">重新下载</string>
+    <string name="btn_delete">删除</string>
+    <string name="download_title_task">下载任务</string>
+    <string name="download_title_history">下载历史</string>
+    <string name="btn_update">升级</string>
+    <string name="installing">安装中</string>
+    <string name="nodownloadtask">您当前没有下载任务，快去添加几个吧</string>
+    <string name="nodownloadhistory">您还没下载历史记录</string>
+    <string name="back">退出</string>
+    <string name="send">发送</string>
+    <string name="send_title">“安卓装机大师”出问题了</string>
+    <string name="send_exception">将问题发送给“安卓装机大师”团队，我们将更好的优化产品和服务。</string>
+    <string name="downloadmanager_title">下载管理</string>
+
+    <!-- 侧边栏 -->
+    <string name="system_settting">系统设置</string>
+    <string name="about_us_main_drawer">关于我们  ＞＞</string>
+    <string name="feedback_main_drawer">意见反馈  ＞＞</string>
+    <string name="imprint_main_drawer">版本说明  ＞＞</string>
+    <string name="title_about_us">关于我们</string>
+    <string name="title_feedback_main_drawer">意见反馈</string>
+    <string name="imprint_new_main_drawer">新版本说明 </string>
+    <string name="statement_main_drawer">相关说明 </string>
+    <string name="name_main_drawer">wifi盒子（名称）</string>
+    <string name="introduce_main_drawer">公司介绍 </string>
+    <string name="disclaimer_main_drawer">相关资源均通过技术接口自动从第三方直接技术调取。对资源第三方的合法性不承担任何责任。</string>
+    <string name="update_check_main_drawer">检查更新</string>
+    <string name="update_auto_main_drawer">自动更新</string>
+    <string name="now_is_new">已经是最新版本!</string>
+    <string name="update_hint">更新提示</string>
+    <string name="update_decription">版本更新</string>
+    <string name="memory_main_drawer">手机内存</string>
+    <string name="mail_feedback">输入您的邮箱，以便我们给您回复。</string>
+    <string name="commit_feedback">提  交</string>
+    <string name="recommend_update_">推荐更新！</string>
+    <string name="hint_feedback"> 请输入反馈，我们将为您不断改进</string>
+    <string name="separator_main_drawer">/</string>
+    <string name="check_to_main_drawer">检查到有</string>
+    <string name="sd_main_drawer">SD卡</string>
+    <string name="delete_after_install_main_drawer">安装完成删除软件包</string>
+    <string name="install_after_download_main_drawer">下载完成立即安装</string>
+    <string name="sumbit_tip">正在提交反馈</string>
+    <string name="email_tip">请输入正确的邮箱</string>
+    <string name="viewpager_indicator">%1$d/%2$d</string>
+
+    <!-- 上拉刷新 -->
+    <string name="pulldown_to_refresh">下拉可以刷新</string>
+    <string name="pulldown_updated_at">上次更新于%1$s前</string>
+    <string name="loading_show_start">努力加载中……</string>
+    <string name="loading_show_empty">当前暂无数据</string>
+    <string name="loading_data_finished">数据加载完成</string>
+    <string name="pulldown_refreshing">正在刷新…</string>
+    <string name="pulldown_release_to_refresh">释放立即刷新</string>
+    <string name="pulldown_updated_just_now">刚刚更新</string>
+    <string name="pulldown_time_error">时间有问题</string>
+    <string name="pulldown_not_updated_yet">暂未更新过</string>
+
+    <!-- 下载提示 -->
+    <string name="download_hint">下载提示</string>
+    <string name="download_hint_is">是否取消下载？</string>
+    <string name="download_hint_red">（按住状态栏，弹出此对话框）</string>
+    <string name="download_hint_goon">继续下载</string>
+    <string name="download_hint_cancle">取消下载</string>
+
+    <!-- 极速模式 -->
+    <string name="speed_title">米宝盒子</string>
+    <string name="speed_title_sp">（超速）</string>
+    <string name="speed_all_hint">点击图标即可超速下载</string>
+    <string name="speed_all">全选</string>
+    <string name="speed_yi_all">一键下载</string>
+    <string name="speed_text_yi">已选</string>
+    <string name="speed_text_ge">个应用</string>
+    <string name="speed_text_yigong">一共</string>
+    <string name="speed_text_yi_time">预计用时</string>
+    <string name="selecttip">请选择需要下载的应用</string>
+    <string name="switch_mode_title">系统提示</string>
+    <string name="switch_mode_msg">米宝wifi异常断开，即将切换到普通模式！</string>
+    <string name="switch_mode_connect">连接WIFI</string>
+    <string name="switch_mode_switch">切&#160;&#160;&#160;&#160;换</string>
+    <string name="icon_explanation">图标说明</string>
+
+    <!-- 软件管理 -->
+    <string name="app_manage">软件管理</string>
+    <string name="app_update">软件升级</string>
+    <string name="app_remove">软件卸载</string>
+    <string name="apk_manage">安装包管理</string>
+    <string name="app_move">软件搬家</string>
+    <string name="all_remove">批量卸载</string>
+    <string name="wenxin_hint">温馨提示：</string>
+    <string name="wenxin_hint_xq">　　本功能需要获得您的root权限才能操作！</string>
+    <string name="gain_root">获取root权限</string>
+    <string name="wenxin_hint_hs">　　请谨慎卸载系统预装应用，如果卸载后出现系统异常，可在回收站还原已卸载程序！</string>
+    <string name="recycle">回收站</string>
+    <string name="remove">卸载</string>
+    <string name="restore">还原</string>
+    <string name="select_remove">请选择需要卸载的应用</string>
+    <string name="select_install">请选择需要安装的APK</string>
+    <string name="select_clear">请选择需要清理的APK</string>
+    <string name="select_restore">请选择需要还原的应用</string>
+    <string name="select_delete">请选择需要永久删除的应用</string>
+    <string name="all_clear">一键清理</string>
+    <string name="all_install">一键安装</string>
+    <string name="all_restore">批量还原</string>
+    <string name="all_forever_delete">永久删除</string>
+    <string name="clear">清理</string>
+    
+    <!-- 手机清理 -->
+    <string name="phone_clear">手机清理</string>
+    <string name="progress_manager">进程管理</string>
+    <string name="cache_clear">缓存清理</string>
+    <string name="rubbish">残留文件</string>
+    <string name="finish">结束</string>
+
+</resources>

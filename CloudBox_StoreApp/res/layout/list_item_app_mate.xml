@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/home__list_item_bg__top"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/icon" />
+
+    <TextView
+        android:id="@+id/chatting_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/app_logo"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@id/app_logo"
+        android:text="聊天社区"
+        android:textColor="#3269a2"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/app_decription_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/app_logo"
+        android:layout_marginBottom="5dp"
+        android:layout_toRightOf="@id/app_logo"
+        android:text="QQ,腾讯，微信......"
+        android:textColor="#000000"
+        android:textSize="12sp" />
+
+    <View
+        android:id="@+id/test_view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/app_logo"
+        android:background="#a2a2a2" />
+
+    <ImageView
+        android:id="@+id/go_iv"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignRight="@+id/test_view"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="22dp"
+        android:padding="2dp"
+        android:src="@drawable/icon" />
+
+</RelativeLayout>

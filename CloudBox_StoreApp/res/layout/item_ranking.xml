@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/page_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/recommend_layout_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_layout_marginLeftRight"
+        android:layout_marginRight="@dimen/activity_layout_marginLeftRight"
+        android:layout_marginTop="@dimen/activity_layout_marginSmallTop"
+        android:background="@drawable/btn_item_selector"
+        android:focusable="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp" >
+
+            <Button
+                android:id="@+id/item_ranking_app_btn"
+                android:layout_width="@dimen/rank_width"
+                android:layout_height="21dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dip"
+                android:background="@drawable/rank_01"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/item_recommend_image"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dip"
+                android:layout_toRightOf="@id/item_ranking_app_btn"
+                android:src="@drawable/icon" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dip"
+                android:layout_toLeftOf="@+id/devide_view"
+                android:layout_toRightOf="@+id/item_recommend_image"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/item_recommend_appname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@+id/item_recommend_size"
+                        android:singleLine="true"
+                        android:text="sdfasdfasdfsadfasdfasdfasdfasdf"
+                        android:textColor="@color/black"
+                        android:textSize="15dip"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/item_recommend_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:singleLine="true"
+                        android:text="20.5MB"
+                        android:textColor="#989898"
+                        android:textSize="@dimen/gameinfoText"
+                        android:textStyle="normal" >
+                    </TextView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip" >
+
+                    <RatingBar
+                        android:id="@+id/item_recommend_rating"
+                        style="@style/smallRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="3.0dip"
+                        android:clickable="false"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:rating="5" />
+
+                    <TextView
+                        android:id="@+id/item_recommend_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="1798900次下载"
+                        android:textColor="#989898"
+                        android:textSize="@dimen/gameinfoText"
+                        android:textStyle="normal" >
+                    </TextView>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/devide_view"
+                android:layout_width="1dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/item_recommend_download"
+                android:background="#EDEDED" />
+
+            <Button
+                android:id="@+id/item_recommend_download"
+                android:layout_width="@dimen/ranking_item"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:drawableTop="@drawable/icon_download"
+                android:focusable="false"
+                android:text=""
+                android:textColor="#616161"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

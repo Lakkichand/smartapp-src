@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/topic_list_t_bg"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/download_iv"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/hot_apps_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:singleLine="true"
+                android:text="装机必备的"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/subject_textSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/app_no_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:text="10款应用，70.39MB"
+                android:textColor="@color/black"
+                android:textSize="@dimen/subject_textSize_appsize" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/download_iv"
+            android:layout_width="@dimen/subject_button_width"
+            android:layout_height="@dimen/subject_button_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:layout_marginLeft="5.0dip"
+            android:background="@drawable/btn_dialog_cancel_selector"
+            android:text="@string/alldownload"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/subject_button_textSize"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/test_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dip"
+        android:background="#a2a2a2" />
+
+    <TextView
+        android:id="@+id/decription_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="2"
+        android:paddingBottom="10dp"
+        android:text="飞速飙车的感觉让人激情迸发喧就是塞车游戏的迷人之处。一起来体验燃烧速度的快感！"
+        android:textColor="#666666"
+        android:textSize="@dimen/subject_textSize_appsize" />
+
+</LinearLayout>

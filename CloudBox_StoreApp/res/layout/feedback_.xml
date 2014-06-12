@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/header_main_drawer" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp" >
+        
+        <EditText
+            android:id="@+id/feedback_et"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@drawable/intro_bg"
+            android:gravity="top"
+            android:maxLength="300"
+            android:hint="@string/hint_feedback"
+            android:textColor="@color/black"
+            android:textColorHint="#A4A4A4"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/email_et"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginTop="12dp"
+            android:maxLength="100"
+            android:background="@drawable/intro_bg"
+            android:gravity="center_vertical"
+            android:hint="@string/mail_feedback"
+             android:textColor="@color/black"
+            android:textColorHint="#A4A4A4"
+            android:singleLine="true"
+            android:textSize="16sp"
+            tools:ignore="TextFields" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="38dip"
+            android:layout_marginTop="10.0dip"
+            android:background="@drawable/btn_publish_selector"
+            android:text="发　表"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+       
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/page_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/recommend_layout_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_layout_marginLeftRight"
+        android:layout_marginRight="@dimen/activity_layout_marginLeftRight"
+        android:layout_marginTop="@dimen/activity_layout_marginSmallTop"
+        android:background="@drawable/item_bg_default"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/download_item_selector"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" >
+
+            <ImageView
+                android:id="@+id/apkmanage_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dip"
+                android:src="@drawable/check_box_default" />
+
+            <ImageView
+                android:id="@+id/apkmanage_image"
+                android:layout_width="@dimen/game_iconSize"
+                android:layout_height="@dimen/game_iconSize"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dip"
+                android:layout_toRightOf="@+id/apkmanage_select"
+                android:src="@drawable/logo_shikong" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="10dip"
+                android:layout_toLeftOf="@+id/apkmanage_arrow"
+                android:layout_toRightOf="@+id/apkmanage_image"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/apkmanage_appname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                     android:layout_marginTop="8dp"
+                    android:text="高德地图高德地图高德地图高德地图高德地图"
+                    android:textColor="@color/black"
+                    android:textSize="15dip"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/apkmanage_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text="67.75MB"
+                        android:textColor="#FF747474"
+                        android:textSize="@dimen/gameinfoText"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/apkmanage_isinstall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5.0dip"
+                        android:singleLine="true"
+                        android:text="（已安装）"
+                        android:textColor="#FF747474"
+                        android:textSize="@dimen/gameinfoText"
+                        android:textStyle="normal" >
+                    </TextView>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/apkmanage_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:src="@drawable/grey_down_icon" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/gap"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FFeeeeee" />
+
+        <LinearLayout
+            android:id="@+id/operator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/apkmanage_install"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/download_item_selector" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="12dp" >
+
+                    <ImageView
+                        android:layout_width="13.5dp"
+                        android:layout_height="13.5dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_install" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="2dp"
+                        android:text="@string/btn_install"
+                        android:textColor="#545454"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/apkmanage_clear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/download_item_selector" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="12dp" >
+
+                    <ImageView
+                        android:layout_width="13.5dp"
+                        android:layout_height="13.5dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/g_delete_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="2dp"
+                        android:text="@string/clear"
+                        android:textColor="#545454"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="7dp" />
+
+</LinearLayout>

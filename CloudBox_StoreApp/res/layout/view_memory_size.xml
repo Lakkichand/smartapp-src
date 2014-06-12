@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhidian.wifibox.view.MemoryView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="10dp" >
+
+        <RelativeLayout
+            android:id="@+id/fountion_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/memory_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/memory_main_drawer"
+                android:textColor="@color/gray"
+                android:textSize="14sp" />
+
+            <ProgressBar
+                android:id="@+id/memory_pb"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="13dip"
+                android:layout_below="@id/memory_tv"
+                android:layout_marginTop="3dp"
+                android:progressDrawable="@drawable/sdcard_progress_layer2" />
+
+            <TextView
+                android:id="@+id/memory_total_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="18dp"
+                android:textColor="@color/gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/memory_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/memory_total_tv"
+                android:text="/"
+                android:textColor="#828282"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/memory_free_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/memory_tv"
+                android:text="360M"
+                android:textColor="@color/blue"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/sd_memory_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/memory_pb"
+                android:layout_marginTop="15dp"
+                android:text="@string/sd_main_drawer"
+                android:textColor="@color/gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/sd_memory_total_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/memory_pb"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/sd_memory_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/memory_pb"
+                android:layout_marginTop="15dp"
+                android:layout_toLeftOf="@id/sd_memory_total_tv"
+                android:text="/"
+                android:textColor="#828282"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/sd_memory_free_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/memory_pb"
+                android:layout_marginTop="15dp"
+                android:layout_toLeftOf="@id/sd_memory_tv"
+                android:text=""
+                android:textColor="@color/blue"
+                android:textSize="14sp" />
+
+            <ProgressBar
+                android:id="@+id/sd_memory_pb"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="13dip"
+                android:layout_below="@id/sd_memory_tv"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="3dp"
+                android:progressDrawable="@drawable/sdcard_progress_layer2" >
+            </ProgressBar>
+        </RelativeLayout>
+    </LinearLayout>
+
+</com.zhidian.wifibox.view.MemoryView>

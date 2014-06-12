@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhidian.wifibox.view.DetailView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <LinearLayout
+        android:id="@+id/home_liear_pro"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/home_liear_connent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"  >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#458B74"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/detail_back"
+                android:layout_width="wrap_content"
+                android:layout_height="40dip"
+                android:background="@null"
+                android:src="@drawable/bottom_left_normal" />
+
+            <TextView
+                android:id="@+id/detail_app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dip"
+                android:text="高德地图"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.0dip"
+            android:orientation="horizontal" 
+            >
+
+            <RadioButton
+                android:id="@+id/tab_detail_radiobt_describe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="应用描述" 
+                android:background="@drawable/detail_classify_rbtn_selector"
+                style="@style/detail_classify_title_style"
+                />
+
+            <RadioButton
+                android:id="@+id/tab_detail_radiobt_evaluate"
+                style="@style/detail_classify_title_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/detail_classify_rbtn_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="用户评价"
+                />
+        </RadioGroup>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/detail_vPager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.0"
+            android:flipInterval="30"
+            android:persistentDrawingCache="animation" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/detail_app_linear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" >
+
+                    <com.zhidian.wifibox.view.TextProgressBar
+                        android:id="@+id/detail_app_down_progress"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="35dip"
+                        android:layout_centerVertical="true"
+                        android:progressDrawable="@drawable/textprogressbar_info_normal" >
+                    </com.zhidian.wifibox.view.TextProgressBar>
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/detail_download_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dip"
+                    android:text="下载"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</com.zhidian.wifibox.view.DetailView>

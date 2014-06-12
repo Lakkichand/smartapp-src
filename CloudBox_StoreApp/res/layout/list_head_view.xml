@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/group_item_layout"
+    android:layout_width="fill_parent"   
+    android:layout_height="wrap_content" >
+    
+    
+
+    
+    
+    <RelativeLayout 
+        android:id="@+id/list_group_but"
+        android:layout_width="fill_parent"
+        android:background="@drawable/speed_t_bj"
+        android:layout_height="50.0dip">
+
+    <TextView
+        android:id="@+id/speed_group_name"
+        android:layout_width="wrap_content"
+        android:layout_height="50.0dip"       
+        android:layout_marginLeft="40.0dip"
+        android:layout_marginRight="10.0dip"
+        android:ellipsize="end"
+        android:gravity="left|center"
+        android:includeFontPadding="false"
+        android:text="双核四核必备"
+        android:maxEms="11"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="15.0sp" />
+
+    <ImageView
+        android:id="@+id/speed_group_indicator"
+        android:layout_width="12.0dip"
+        android:layout_height="50.0dip"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="14.0dip"
+        android:scaleType="center"
+        android:src="@drawable/speed_open_up" />
+    
+    <ImageView 
+        android:id="@+id/speed_sign"
+        android:layout_width="30dip"
+        android:padding="3.0dip"
+        android:layout_height="40dip"
+        android:src="@drawable/speed_sele"
+        android:background="@color/speed_cyan_s"/>
+    
+    
+    </RelativeLayout>
+    
+
+</FrameLayout>

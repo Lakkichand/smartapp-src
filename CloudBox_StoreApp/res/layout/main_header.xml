@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="42dp"
+    android:background="@drawable/header_bg" >
+
+    <ImageButton
+        android:id="@+id/mapSearchBtn"
+        android:layout_width="46dp"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:background="@drawable/back_press_selector"
+        android:src="@drawable/top_lan_icon" />
+
+    <EditText
+        android:id="@+id/searchEdit"
+        android:layout_width="match_parent"
+        android:layout_height="33dip"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/searchBtn"
+        android:layout_toRightOf="@+id/mapSearchBtn"
+        android:background="@drawable/search_area"
+        android:focusable="false"
+        android:hint="@string/search_xhint"
+        android:paddingLeft="3.0dip"
+        android:textColorHint="#B5B5B5"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/searchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="32dip"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="-1.0dip"
+        android:layout_toLeftOf="@+id/super_speed_Btn"
+        android:background="@drawable/btn_search_selector"
+        android:text="@string/search"
+        android:textColor="@color/gray"
+        android:textSize="16sp" />
+
+    <ImageButton
+        android:id="@+id/super_speed_Btn"
+        android:layout_width="33.5dp"
+        android:layout_height="33.5dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="10dip"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/btn_speed_selector" />
+
+</RelativeLayout>

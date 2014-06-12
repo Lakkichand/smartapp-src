@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/page_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/must_on"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_layout_marginLeftRight"
+        android:layout_marginRight="@dimen/activity_layout_marginLeftRight"
+        android:layout_marginTop="@dimen/activity_layout_marginSmallTop"
+        android:background="@drawable/btn_item_selector"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/item_recommend_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/speed_one" >
+
+                <ImageView
+                    android:id="@+id/speed_app_logo"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="1dp"
+                    android:src="@drawable/default_logo" />
+
+                <ImageView
+                    android:id="@+id/speed_app_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/speed_sele" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="10dip"
+                android:layout_toLeftOf="@+id/devide_view"
+                android:layout_toRightOf="@+id/item_recommend_image"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/speed_app_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:singleLine="true"
+                        android:text="刀塔女神人"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                    
+                    <TextView
+                        android:id="@+id/size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="50MB"
+                        android:textColor="#989898"
+                        android:textSize="13dip" />
+
+                    <TextView
+                        android:id="@+id/speed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="3dp"
+                        android:singleLine="true"
+                        android:text="3194KB/S"
+                        android:textColor="#FF8fc31f"
+                        android:textSize="13dip"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip" >
+
+                    <RatingBar
+                        android:id="@+id/item_recommend_rating"
+                        style="@style/smallRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="3.0dip"
+                        android:clickable="false"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:rating="5" />
+
+                    <TextView
+                        android:id="@+id/item_new_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="2000次下载"
+                        android:textColor="#989898"
+                        android:textSize="@dimen/gameinfoText"
+                        android:textStyle="normal" >
+                    </TextView>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/devide_view"
+                android:layout_width="1dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/download_area"
+                android:background="#EDEDED" />
+
+            <LinearLayout
+                android:id="@+id/download_area"
+                android:layout_width="@dimen/speed_button_weight"
+                android:layout_height="75dip"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/aa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.0dip"
+                    android:layout_marginRight="3.0dip"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/download_iv"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="2dp"
+                        android:src="@drawable/icon_download" />
+
+                    <TextView
+                        android:id="@+id/start_update_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="1.0dip"
+                        android:text="@string/btn_download"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/item_recommend_describe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5.0dip"
+            android:layout_marginLeft="@dimen/speed_two"
+            android:maxLines="2"
+            android:text="我是一款游戏的简介"
+            android:textColor="#989898"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dip"
+        android:layout_marginRight="7dip"
+        android:background="@drawable/game_itme_frame_bg"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/mgdialog_message_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dip"
+            android:text="show message"
+            android:textColor="@color/largeTitleBar"
+            android:textSize="@dimen/textSmallSize"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/mgdialog_message_ok"
+                style="@style/text_style_shadow"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/button_dialog_height"
+                android:layout_margin="15dip"
+                android:background="@drawable/game_button_blue_selector"
+                android:gravity="center"
+                android:text="确 定"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
