@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.appmanagement.component.AppsUpdateViewContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp" >
+
+        <TextView
+            android:id="@+id/operation_button"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/appsmanagement_operation_selector"
+            android:drawableLeft="@drawable/appsmanagement_refresh_icon"
+            android:drawablePadding="3dp"
+            android:gravity="center"
+            android:paddingRight="16dp"
+            android:singleLine="true"
+            android:text="@string/refresh"
+            android:textColor="#8FBE00"
+            android:textSize="14.6sp" />
+
+        <ImageView
+            android:id="@+id/divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/operation_button"
+            android:background="@drawable/appsmanagement_line_right" />
+
+        <TextView
+            android:id="@+id/update_info"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/divider"
+            android:background="#faf9f9"
+            android:cacheColorHint="@android:color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="@string/apps_management_none_for_update"
+            android:textColor="#696969"
+            android:textSize="14.6sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/themestore_list_item_line" />
+
+    <LinearLayout
+        android:id="@+id/network_tips_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </LinearLayout>
+
+    <com.jiubang.ggheart.apps.appmanagement.component.AppsUpdateView
+        android:id="@+id/upate_list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:background="#faf9f9"
+        android:cacheColorHint="@android:color/white" 
+        android:divider="@drawable/themestore_list_item_line" />
+
+</com.jiubang.ggheart.apps.appmanagement.component.AppsUpdateViewContainer>

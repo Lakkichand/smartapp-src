@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:orientation="vertical"
+    >
+
+    <ListView
+        android:id="@+id/selectResponseListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/folder_button_line"
+        android:listSelector="@drawable/gesture_btn_press" 
+        >
+    </ListView>
+</LinearLayout>

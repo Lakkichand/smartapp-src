@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- dingzijian -->
+    <!-- 更新提示log目前最多支持8条更新提示，如需减少条数，直接把updatelog的值置为""即可，无需删除 -->
+    <string name="notice_url">"http://weibo.com/golauncherex"</string>
+    <string name="updateVersion">Version 3.31</string>
+    <string name="updatelog1">1.（新功能）GO多屏壁纸支持导入并保存本地图片</string>
+    <string name="updatelog2">2.（优化）支持关闭双指下滑手势的提示</string>
+    <string name="updatelog3">3.（优化）主题选择界面的显示效果</string>
+    <string name="updatelog4">4.（修复）修复上一版本的bug</string>
+    <string name="updatelog5"></string>
+    <string name="updatelog6"></string>
+    <string name="updatelog7"></string>
+    <string name="updatelog8"></string>
+    <string name="guide_text1">Hello,</string>
+    <string name="guide_text2">I am GO Launcher...</string>
+    <string name="guide_text3">Updated!</string>
+    <string name="transparent_url">http://crowdin.net/project/golauncherex/</string>
+    <string name="bolg_url">http://golauncher.goforandroid.com/zh</string>
+
+</resources>

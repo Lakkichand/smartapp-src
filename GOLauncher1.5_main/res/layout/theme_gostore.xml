@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <!-- 去gostore下载更多界面 -->
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/theme_goto_store"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/theme_gostore_bar_height"
+            android:background="@drawable/theme_gostore_selector"
+            android:gravity="center_vertical"
+            android:layout_alignParentBottom="true">
+            <ImageView
+                android:id="@+id/theme_findmore_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/theme_findmore" 
+                android:scaleType="centerInside"/>
+
+            <com.jiubang.ggheart.components.DeskTextView
+                android:id="@+id/theme_findmore_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/theme_findmore_img"
+                android:paddingLeft="12dp"
+                android:text="@string/theme_findmore"
+                android:textColor="@color/theme_findmore_text_color"
+                android:textSize="16sp" 
+                android:gravity="center_vertical"/>
+        </RelativeLayout>

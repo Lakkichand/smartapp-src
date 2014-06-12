@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:paddingLeft="20dp"
+  android:paddingRight="20dp"
+  android:background="@drawable/mytheme_bottom_bg">
+  <com.jiubang.ggheart.components.DeskButton 
+  	android:id="@+id/more"
+  	android:text="@string/theme_pages_getmore"
+  	android:textSize="12sp"
+  	android:textColor="@android:color/black"
+  	android:layout_width="108dip"
+  	android:layout_height="36dip"
+  	android:layout_alignParentLeft="true"
+  	android:layout_centerVertical="true"
+  	android:drawableLeft="@drawable/mytheme_button_download"
+  	android:background="@drawable/mytheme_button_bg_selector"/>
+  <com.jiubang.ggheart.components.DeskButton 
+  	android:id="@+id/setting"
+  	android:text="@string/theme_pages_customsetting"
+  	android:textSize="12sp"
+  	android:textColor="@android:color/black"
+  	android:layout_width="108dip"
+  	android:layout_height="36dip"
+  	android:layout_alignParentRight="true"
+  	android:layout_centerVertical="true"
+  	android:drawableLeft="@drawable/mytheme_button_setting"
+  	android:background="@drawable/mytheme_button_bg_selector"
+  	/>
+    
+</RelativeLayout>

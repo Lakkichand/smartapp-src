@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.gowidget.WidgetErrorView 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingTop="10dip"
+    android:paddingBottom="10dip"
+    android:paddingLeft="20dip"
+    android:paddingRight="20dip"
+    android:gravity="center"
+    android:background="@drawable/widget_error"
+    android:textAppearance="?android:attr/textAppearanceMediumInverse"
+    android:textColor="@color/appwidget_error_color"
+    android:text="@string/widget_error_text"
+    />
+

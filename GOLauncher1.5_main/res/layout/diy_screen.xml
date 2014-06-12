@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.desks.diy.frames.screen.ScreenLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:screen="http://schemas.android.com/apk/res/com.gau.go.launcherex"
+	android:id="@+id/screenlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    
+    <com.jiubang.ggheart.screen.back.BackWorkspace
+        android:id="@+id/backWorkspace"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    />
+      
+    <com.jiubang.ggheart.apps.desks.diy.frames.screen.Workspace
+		android:id="@+id/diyWorkspace"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    />
+	    
+	<com.jiubang.ggheart.apps.desks.diy.frames.screen.DesktopIndicator
+	    android:id="@+id/desktop_indicator"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	/>
+    <LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="@dimen/linearlayout_height"
+		android:id="@+id/workspace_textlayout"
+		android:background="@drawable/apply_succeed_bg"
+		android:layout_gravity="center|top"
+		android:visibility="gone"
+    >
+    	<TextView
+    		android:layout_width="fill_parent"
+			android:layout_height="@dimen/text_height"
+			android:text="@string/locker_apply_succeed"
+			android:gravity="center"
+			android:textSize="15sp"
+			android:textColor="#ffffff"
+			android:shadowRadius="5"
+			android:shadowDx="2"
+    	/>
+    </LinearLayout>
+    
+    <com.jiubang.ggheart.components.GoProgressBar
+        android:id="@+id/go_screen_progress" 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+		screen:prossbar_color_selete="1"
+		screen:prossbar_background_selete="1"
+		android:visibility="invisible" 
+        >
+        <ProgressBar
+            android:id="@+id/go_progressbar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:visibility="visible" 
+            />
+	</com.jiubang.ggheart.components.GoProgressBar>
+</com.jiubang.ggheart.apps.desks.diy.frames.screen.ScreenLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/recomm_app_list_item_selector"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageSwitcher
+            android:id="@+id/price_alert_imageswitcher"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="6.666dp"
+            android:inAnimation="@anim/appgame_fade_in"
+            android:outAnimation="@anim/appgame_fade_out" >
+
+            <com.jiubang.ggheart.appgame.base.component.BurningIcon
+                android:id="@+id/price_alert_icon"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/default_icon" />
+
+            <com.jiubang.ggheart.appgame.base.component.BurningIcon
+                android:id="@+id/price_alert_icon_another"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY" />
+        </ImageSwitcher>
+
+        <TextView
+            android:id="@+id/price_alert_typeinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/price_alert_imageswitcher"
+            android:layout_toLeftOf="@+id/price_alert_previous"
+            android:layout_marginLeft="6.6666dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/price_alert_imageswitcher"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="TextView"
+            android:textColor="#999999"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/price_alert_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/price_alert_typeinfo"
+            android:layout_marginLeft="6.6666dp"
+            android:layout_toRightOf="@+id/price_alert_imageswitcher"
+            android:layout_toLeftOf="@+id/price_alert_price"
+            android:layout_marginRight="10dp"
+            android:singleLine="true"
+            android:text="TextView"
+            android:textColor="#393939"
+            android:textSize="14.3dp" />
+
+        <RatingBar
+            android:id="@+id/price_alert_progressbar"
+            style="@style/specialRatineBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/price_alert_imageswitcher"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="6.6666dp"
+            android:layout_toRightOf="@+id/price_alert_imageswitcher"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="3.5"
+            android:stepSize="0.5" />
+
+        <TextView
+            android:id="@+id/price_alert_Comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/price_alert_imageswitcher"
+            android:layout_toRightOf="@+id/price_alert_progressbar"
+            android:singleLine="true"
+            android:text="(222)"
+            android:textColor="#999999"
+            android:textSize="10.5dp" />
+
+        <TextView
+            android:id="@+id/price_alert_download_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/price_alert_imageswitcher"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/price_alert_Comment_count"
+            android:singleLine="true"
+            android:text="5,000,000+DLS"
+            android:textColor="#999999"
+            android:textSize="10.5dp" />
+
+        <TextView
+            android:id="@+id/price_alert_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="6.6666dp"
+            android:singleLine="true"
+            android:text="TextView"
+            android:textColor="#393939"
+            android:textSize="14.3dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/price_alert_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/price_alert_imageswitcher"
+            android:layout_marginRight="6.6666dp"
+            android:singleLine="true"
+            android:text="TextView"
+            android:textColor="#999999"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/price_alert_summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rl"
+        android:layout_marginLeft="61.33333dp"
+        android:ellipsize="end"
+        android:text="summary"
+        android:textColor="#999999"
+        android:textSize="12dp" />
+
+</RelativeLayout>

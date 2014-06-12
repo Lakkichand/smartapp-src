@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- 默认行列数 -->
+    <integer name="screen_col_row_style">2</integer>
+    <integer name="screen_default_row">5</integer>
+    <integer name="screen_default_column">4</integer>
+    
+    <integer name="appfunc_col_row_style">0</integer>
+    <integer name="appfunc_default_row">5</integer>
+    <integer name="appfunc_default_column">4</integer>
+    
+     <!-- 状态栏高度 -->
+    <integer name="status_bar_height">25</integer>
+    <bool name="screen_appicon_autofit">false</bool>
+    
+    <!-- 推荐位的上下边距 -->
+    <dimen name="favorite_top">2dp</dimen>
+    <dimen name="favorit_bottom">5dp</dimen>
+</resources>

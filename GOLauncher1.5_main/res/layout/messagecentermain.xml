@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#f2f2f2">
+<RelativeLayout
+  android:id="@+id/empty_msg"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:gravity="center"
+  >
+  <ImageView
+    android:id="@+id/nomsgimageview1"
+  	android:layout_width="wrap_content"
+  	android:layout_height="wrap_content"
+  	android:background="@drawable/themestore_nodata_all"
+  	android:layout_alignParentTop="true"
+  	android:layout_centerHorizontal="true"
+  />
+  <com.jiubang.ggheart.components.DeskTextView
+    android:id="@+id/nomsgtextview2"
+  	android:layout_width="wrap_content"
+  	android:layout_height="wrap_content"
+  	android:paddingTop="25dp"
+  	android:layout_below="@id/nomsgimageview1"
+  	android:layout_centerHorizontal="true"
+  	android:textColor="#676767"
+  	android:textSize="16sp"
+  	android:text="@string/themestore_no_data"
+  	android:gravity="center_horizontal"
+  />
+  <com.jiubang.ggheart.components.DeskTextView
+    android:id="@+id/nomsgtext"
+  	android:layout_width="wrap_content"
+  	android:layout_height="wrap_content"
+  	android:layout_below="@id/nomsgtextview2"
+  	android:layout_centerHorizontal="true"
+  	android:textColor="#676767"
+  	android:textSize="13sp"
+  	android:text="@string/themestore_back_to_try"
+  	android:gravity="center_horizontal"
+  />
+</RelativeLayout>
+<RelativeLayout  
+    android:id="@+id/title"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="horizontal"
+    android:background="@drawable/message_center_topbar_bg">
+    <com.jiubang.ggheart.components.DeskTextView 
+       android:id="@+id/msgcenter"
+       android:text="@string/menuitem_msgcenter"
+       android:layout_height="fill_parent"
+       android:layout_width="wrap_content"
+       android:gravity="center_vertical"
+       android:textSize="17sp"
+       android:textColor="#DCDCDC"
+       android:singleLine="true"
+       android:paddingLeft="13dip"
+     />
+    <com.jiubang.ggheart.components.DeskTextView 
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:textSize="17sp"
+        android:textColor="#DCDCDC"
+       	android:gravity="center_vertical"
+		android:layout_toRightOf="@id/msgcenter"
+		/>
+    
+    <com.jiubang.ggheart.components.DeskButton 
+    android:id="@+id/clear"
+    android:layout_width="wrap_content"
+  	android:layout_height="wrap_content"
+	android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    android:background="@drawable/message_center_asread"
+    android:layout_marginRight="10dip"
+    />
+
+</RelativeLayout >
+
+<ListView 
+    android:id="@+id/listview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_below="@id/title"
+    android:layout_above="@id/buttons"
+    android:divider="@drawable/appfunc_search_list_line"
+    android:cacheColorHint="#00000000" >
+</ListView>
+
+</RelativeLayout>

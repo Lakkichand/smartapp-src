@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ftp xmlns:launcher="http://schemas.android.com/apk/res/com.gau.go.launcherex">
+	<!-- 日历widget -->
+	<urlAddress 
+		launcher:refId="@string/calendar"
+		launcher:address="http://down.goforandroid.com/soft/3GHeart/golauncher/widget/FTP/Calendar.apk" 
+	/>
+	<!-- 联系人widget -->
+	<urlAddress 
+		launcher:refId="@string/contact"
+		launcher:address="http://down.goforandroid.com/soft/3GHeart/golauncher/widget/FTP/Contact.apk" 
+	/>
+	<!-- facebook widget -->
+	<urlAddress 
+		launcher:refId="@string/facebook"
+		launcher:address="http://down.goforandroid.com/soft/3GHeart/golauncher/widget/FTP/Facebook.apk" 
+	/>
+	<!-- 搜索 widget -->
+	<urlAddress 
+		launcher:refId="@string/search"
+		launcher:address="http://down.goforandroid.com/soft/3GHeart/golauncher/widget/qudao/search/gosearch_202.apk" 
+	/>
+	<!-- 短信widget -->
+	<urlAddress 
+		launcher:refId="@string/sms"
+		launcher:address="http://down.goforandroid.com/soft/3GHeart/golauncher/widget/FTP/SMS.apk" 
+	/>
+	<!-- 任务管理器  -->
+	<urlAddress 
+		launcher:refId="@string/task_killer"
+		launcher:address="http://smsftp.3g.cn/soft/GoTaskManagerEX/qudao/gotaskmanagerex_202.apk" 
+	/>
+<!-- 		launcher:address="http://down.goforandroid.com/soft/3GHeart/golauncher/widget/FTP/TaskManager.apk"  -->
+	<!-- twitter widget -->
+	<urlAddress 
+		launcher:refId="@string/twitter"
+		launcher:address="http://down.goforandroid.com/soft/3GHeart/golauncher/widget/FTP/Twitter.apk" 
+	/>
+	<!-- clock widget -->
+	<urlAddress 
+		launcher:refId="@string/clock"
+		launcher:address="http://down.goforandroid.com/soft/3GHeart/golauncher/widget/FTP/clock.apk" 
+	/>
+	<!-- note widget -->
+	<urlAddress 
+		launcher:refId="@string/note"
+		launcher:address="http://down.goforandroid.com/soft/3GHeart/golauncher/widget/FTP/Note.apk" 
+	/>
+	<!-- 新浪微博 -->
+	<urlAddress 
+		launcher:refId="@string/sinaweibo"
+		launcher:address="http://down.goforandroid.com/soft/3GHeart/golauncher/widget/FTP/SinaWeibo.apk" 
+	/>
+	<!-- 开关 -->
+	<urlAddress 
+		launcher:refId="@string/onoff"
+		launcher:address="http://smsftp.3g.cn/soft/3GHeart/golauncher/widget/qudao/switch/Switch_202.apk" 
+	/>
+<!-- 		launcher:address="http://down.goforandroid.com/soft/3GHeart/golauncher/widget/FTP/Switch.apk"  -->
+	<!-- 天气 -->
+	<urlAddress 
+		launcher:refId="@string/weather"
+		launcher:address="http://smsftp.3g.cn/soft/3GHeart/golauncher/widget/qudao/goweatherex/goweatherex_202.apk" 
+	/>
+<!-- 		launcher:address="http://down.goforandroid.com/soft/3GHeart/golauncher/widget/FTP/Weather.apk"  -->
+	<!-- 省电 -->
+	<urlAddress 
+		launcher:refId="@string/powermaster"
+		launcher:address="http://smsftp.3g.cn/soft/3GHeart/golauncher/widget/qudao/gopowermaster/gopowermaster_202.apk" 
+	/>
+	<!-- GOSMS -->
+	<urlAddress 
+		launcher:refId="@string/gosms"
+		launcher:address="http://down.goforandroid.com/soft/gosms/hutui/GOSmsLauncherwidget.apk" 
+	/>
+	
+</ftp>

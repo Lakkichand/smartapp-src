@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:layout_width="@dimen/folder_edit_view_width"
+        android:layout_height="wrap_content"
+        android:background="@drawable/folder_edit_bg"
+        android:orientation="vertical" >
+
+        <com.jiubang.ggheart.components.DeskTextView
+            android:id="@+id/name"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/folder_edit_top_bottom_hight"
+            android:background="@drawable/folder_top_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/gesture_for_shortcut"
+            android:textColor="#2f2f2f"
+            android:textSize="16sp" />
+
+        <com.jiubang.ggheart.components.MultiCheckViewGroup
+            android:id="@+id/multi_check_viewgroup"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/folder_edit_top_bottom_hight"
+            android:orientation="horizontal" >
+
+            <com.jiubang.ggheart.components.DeskButton
+                android:id="@+id/finish_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/folder_button_selector"
+                android:gravity="center"
+                android:text="@string/ok"
+                android:textColor="#343434"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/folder_button_line" />
+
+            <com.jiubang.ggheart.components.DeskButton
+                android:id="@+id/cancle_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/folder_button_selector"
+                android:gravity="center"
+                android:text="@string/cancle"
+                android:textColor="#343434"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

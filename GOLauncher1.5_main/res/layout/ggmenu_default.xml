@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.desks.ggmenu.GGMenuGridView
+  	xmlns:android="http://schemas.android.com/apk/res/android"
+  	android:id="@+id/ggMenu"
+  	android:layout_width="fill_parent"
+  	android:layout_height="fill_parent"
+  	android:scrollbars="none"
+  	android:listSelector="@drawable/menu_item_background"
+  	android:paddingTop="7dip"
+  	android:paddingLeft="4dip"
+  	android:paddingRight="4dip"
+  	android:paddingBottom="7dip"
+  	android:horizontalSpacing="0dip"
+  	android:verticalSpacing="10dip">
+</com.jiubang.ggheart.apps.desks.ggmenu.GGMenuGridView>

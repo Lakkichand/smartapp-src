@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<recommendedapps xmlns:launcher="http://schemas.android.com/apk/res/com.gau.go.launcherex">
+    <!-- <recommended_app
+		launcher:titleid="@string/recommend_title"						必选。名字。
+		launcher:iconid="@drawable/recommend_netqin" 					必选。图标。
+		launcher:packagename="com.netqin.ps" 							必选。包名。
+		launcher:action="com.jiubang.intent.action.DOWNLOAD_NQ" 		必选。这个不需要在ICustomAction里定义。
+		launcher:download_url="" 										必选。跳电子市场：包名+ＧＡ(可选); FTP地址。
+		launcher:group="1" 												必选。列数 负数表示倒数第几列，正数表示列数，不填默认最后一列。
+		launcher:priority="0" 											必选。所在推荐组的优先级。
+		launcher:channelid="200" 										必选。推荐所在渠道。
+		launcher:rowindex="2" 											必选。所在行数 负数表示倒数第几行，正数表示行数，不填默认最后一行。
+		launcher:screenindex="0" 										可选。图标所在屏幕，不填默认主屏。
+		launcher:stime="2012-12-27 02:00" 								可选。推荐时间段开始 按照格式：yyyy-MM-dd HH:mm。
+		launcher:etime="2012-12-27 21:00" 								可选。推荐时间段结束 按照格式：yyyy-MM-dd HH:mm。
+		launcher:acttype="0" 											必选。跳转类型 0:电子市场， 1:ftp,不填200包跳电子市场，其它ftp。
+		launcher:showinstallicon="true" 								可选。如果该应用已安装是否显示其图标，false不显示，true显示，不填不显示。
+		launcher:clickurl="url"											统计相关，必选。回调的url地址。
+		launcher:id="56"												统计相关，必选。推荐图标id，由服务器那边提供。
+		launcher:mapid="2232055" 										统计相关，必选。回传的id，服务器提供。
+	/>  -->
+	<!-- 网秦(200)-->
+	<recommended_app
+		launcher:titleid="@string/recommend_title"
+		launcher:iconid="@drawable/recommend_netqin"
+		launcher:packagename="com.netqin.ps"
+		launcher:action="com.jiubang.intent.action.DOWNLOAD_NQ"
+		launcher:download_url="com.netqin.ps&amp;referrer=utm_source%3D3Ggolauncher%26utm_medium%3DCPA%26utm_campaign%3DVault"
+		launcher:group="0"
+		launcher:priority="0"
+		launcher:channelid="200"
+		launcher:rowindex="-2"
+		launcher:acttype="0"
+		launcher:showinstallicon="true"
+		launcher:clickurl="http://69.28.52.42:8090/recommendedapp/manage/appcallback.action?cburl=&amp;ctype=0&amp;pname=com.netqin.ps&amp;uid=3818431973086579092&amp;aid=1454344&amp;from=golaunchermagAdv&amp;mapid=2232039&amp;corpid=2"
+		launcher:id="56"
+		launcher:mapid="2232039"
+	/> 
+	
+	<!-- 网秦(373)-->
+	<recommended_app
+		launcher:titleid="@string/recommend_title"
+		launcher:iconid="@drawable/recommend_netqin"
+		launcher:packagename="com.netqin.ps"
+		launcher:action="com.jiubang.intent.action.DOWNLOAD_NQ"
+		launcher:download_url="com.netqin.ps&amp;referrer=utm_source%3D3Ggolauncher%26utm_medium%3DCPA%26utm_campaign%3DVault"
+		launcher:group="0"
+		launcher:priority="0"
+		launcher:channelid="373"
+		launcher:rowindex="-2"
+		launcher:acttype="0"
+		launcher:showinstallicon="true"
+		launcher:clickurl="http://69.28.52.42:8090/recommendedapp/manage/appcallback.action?cburl=&amp;ctype=0&amp;pname=com.netqin.ps&amp;uid=3818431973086579092&amp;aid=1454344&amp;from=golaunchermagAdv&amp;mapid=2232039&amp;corpid=2"
+		launcher:id="56"
+		launcher:mapid="2232039"
+	/> 
+	
+	<!--nextlauncher(200)-->
+	<recommended_app
+		launcher:titleid="@string/recommend_nextlauncher"
+		launcher:iconid="@drawable/recommend_icon_nextlauncher"
+		launcher:packagename="com.gtp.nextlauncher"
+		launcher:action="com.jiubang.intent.action.DOWNLOAD_NEXTLAUNCHER"
+		launcher:download_url="com.gtp.nextlauncher&amp;referrer=utm_source%3Dgo_launcher%26utm_medium%3DHyperlink%26utm_campaign%3Dhomescreen_ads"
+		launcher:group="0"
+		launcher:priority="0"
+		launcher:channelid="200"
+		launcher:rowindex="-1"
+		launcher:acttype="0"
+		launcher:showinstallicon="true"
+		launcher:clickurl="http://69.28.52.42:8090/recommendedapp/manage/appcallback.action?cburl=&amp;ctype=0&amp;pname=com.gtp.nextlauncher&amp;uid=3818431973086579092&amp;aid=1454344&amp;from=golaunchermagAdv&amp;mapid=2360425&amp;corpid=2"
+		launcher:id="57"
+		launcher:mapid="2360425"
+	/> 
+	
+	<!--nextlauncher(373)-->
+	<recommended_app
+		launcher:titleid="@string/recommend_nextlauncher"
+		launcher:iconid="@drawable/recommend_icon_nextlauncher"
+		launcher:packagename="com.gtp.nextlauncher"
+		launcher:action="com.jiubang.intent.action.DOWNLOAD_NEXTLAUNCHER"
+		launcher:download_url="com.gtp.nextlauncher&amp;referrer=utm_source%3Dgo_launcher%26utm_medium%3DHyperlink%26utm_campaign%3Dhomescreen_ads"
+		launcher:group="0"
+		launcher:priority="0"
+		launcher:channelid="373"
+		launcher:rowindex="-1"
+		launcher:acttype="0"
+		launcher:showinstallicon="true"
+		launcher:clickurl="http://69.28.52.42:8090/recommendedapp/manage/appcallback.action?cburl=&amp;ctype=0&amp;pname=com.gtp.nextlauncher&amp;uid=3818431973086579092&amp;aid=1454344&amp;from=golaunchermagAdv&amp;mapid=2360425&amp;corpid=2"
+		launcher:id="57"
+		launcher:mapid="2360425"
+	/> 
+	
+	<!-- 清理大师(200)-->
+	<recommended_app
+		launcher:titleid="@string/recommend_clean_master"
+		launcher:iconid="@drawable/recommend_icon_cleanmaster"
+		launcher:packagename="com.cleanmaster.mguard"
+		launcher:action="com.jiubang.intent.action.DOWNLOAD_CLEANMASTER"
+		launcher:download_url="com.cleanmaster.mguard&amp;referrer=utm_source%3Dgo_launcher%26utm_medium%3Dhyperlink%26utm_campaign%3Dthirdscreen"
+		launcher:group="-1"
+		launcher:priority="0"
+		launcher:channelid="200"
+		launcher:rowindex="-2"
+		launcher:acttype="0"
+		launcher:showinstallicon="true"
+		launcher:clickurl="http://69.28.52.42:8090/recommendedapp/manage/appcallback.action?cburl=&amp;ctype=0&amp;pname=com.cleanmaster.mguard&amp;uid=3818431973086579092&amp;aid=&amp;from=golaunchermsgAdv&amp;mapid=2369836&amp;corpid=2"
+		launcher:id="84"
+		launcher:mapid="2369836"
+	/> 
+	
+	<!-- 清理大师(373)-->
+	<recommended_app
+		launcher:titleid="@string/recommend_clean_master"
+		launcher:iconid="@drawable/recommend_icon_cleanmaster"
+		launcher:packagename="com.cleanmaster.mguard"
+		launcher:action="com.jiubang.intent.action.DOWNLOAD_CLEANMASTER"
+		launcher:download_url="com.cleanmaster.mguard&amp;referrer=utm_source%3Dgo_launcher%26utm_medium%3Dhyperlink%26utm_campaign%3Dthirdscreen"
+		launcher:group="-1"
+		launcher:priority="0"
+		launcher:channelid="373"
+		launcher:rowindex="-2"
+		launcher:acttype="0"
+		launcher:showinstallicon="true"
+		launcher:clickurl="http://69.28.52.42:8090/recommendedapp/manage/appcallback.action?cburl=&amp;ctype=0&amp;pname=com.cleanmaster.mguard&amp;uid=3818431973086579092&amp;aid=&amp;from=golaunchermsgAdv&amp;mapid=2369836&amp;corpid=2"
+		launcher:id="84"
+		launcher:mapid="2369836"
+	/> 
+	
+	<!-- 安智(205)-->
+	<recommended_app
+		launcher:titleid="@string/recommend_anzhuo"
+		launcher:iconid="@drawable/recommend_anzhuo"
+		launcher:packagename="com.hiapk.marketpho"
+		launcher:action="com.jiubang.intent.action.DOWNLOAD_ANZHUO"
+		launcher:download_url="http://sc.hiapk.com/Download.aspx?aid=342&amp;sc=1"
+		launcher:group="0"
+		launcher:priority="0"
+		launcher:channelid="205"
+		launcher:rowindex="-1"
+		launcher:acttype="1"
+		launcher:showinstallicon="true"
+	/> 
+	
+	<!-- 安智-->
+	<!-- <recommended_app
+		launcher:titleid="@string/recommended_anzhi"
+		launcher:iconid="@drawable/anzhi_icon"
+		launcher:packagename="cn.goapk.market"
+		launcher:action="com.jiubang.intent.action.DOWNLOAD_ANZHIMARKET"
+		launcher:download_url="http://m.anzhi.com/redirect.php?do=dlapk&amp;puid=565"
+		launcher:group="1"
+		launcher:priority="0"
+		launcher:channelid="353"
+	/> -->
+	<!-- 新浪微博 -->
+<!-- 	<recommended_app -->
+<!-- 		launcher:titleid="@string/recommended_sina" -->
+<!-- 		launcher:iconid="@drawable/sinaweibo" -->
+<!-- 		launcher:packagename="com.sina.weibo" -->
+<!-- 		launcher:action="com.jiubang.intent.action.DOWNLOAD_SINAEWEIBO" -->
+<!-- 		launcher:download_url="http://soft.3g.cn/xuan/download.aspx?fid=59054&amp;cooid=567&amp;sid=golaunch " -->
+<!-- 		launcher:group="0" -->
+<!-- 		launcher:priority="3" -->
+<!-- 	/> -->
+	<!-- 米聊 -->
+<!-- 	<recommended_app -->
+<!-- 		launcher:titleid="@string/recommended_miliao" -->
+<!-- 		launcher:iconid="@drawable/miliao" -->
+<!-- 		launcher:packagename="com.xiaomi.channel" -->
+<!-- 		launcher:action="com.jiubang.intent.action.DOWNLOAD_MILIAO" -->
+<!-- 		launcher:download_url="http://soft.3g.cn/xuan/download.aspx?fid=35281&amp;cooid=576&amp;sid=golaunch" -->
+<!-- 		launcher:group="0" -->
+<!-- 		launcher:priority="4" -->
+<!-- 	/> -->
+	
+	<!-- 点评 -->
+<!-- 	<recommended_app -->
+<!-- 		launcher:titleid="@string/recommended_dianping" -->
+<!-- 		launcher:iconid="@drawable/dianping" -->
+<!-- 		launcher:packagename="com.dianping.v1" -->
+<!-- 		launcher:action="com.jiubang.intent.action.DOWNLOAD_DIANPING" -->
+<!-- 		launcher:download_url="http://soft.3g.cn/xuan/download.aspx?fid=22039&amp;cooid=564&amp;sid=golaunch" -->
+<!-- 		launcher:group="0" -->
+<!-- 		launcher:priority="5" -->
+<!-- 	/> -->
+	<!-- 酷狗音乐 -->
+<!-- 	<recommended_app -->
+<!-- 		launcher:titleid="@string/recommended_kugou" -->
+<!-- 		launcher:iconid="@drawable/kugou" -->
+<!-- 		launcher:packagename="com.kugou.android" -->
+<!-- 		launcher:action="com.jiubang.intent.action.DOWNLOAD_KUGOU" -->
+<!-- 		launcher:download_url="http://soft.3g.cn/xuan/download.aspx?fid=30454&amp;cooid=578&amp;sid=golaunch" -->
+<!-- 		launcher:group="0" -->
+<!-- 		launcher:priority="6" -->
+<!-- 	/> -->
+	
+	<!-- UU电话 -->
+<!-- 	<recommended_app -->
+<!-- 		launcher:titleid="@string/recommended_uu" -->
+<!-- 		launcher:iconid="@drawable/uu" -->
+<!-- 		launcher:packagename="com.uu" -->
+<!-- 		launcher:action="com.jiubang.intent.action.DOWNLOAD_UU" -->
+<!-- 		launcher:download_url="http://soft.3g.cn/xuan/download.aspx?fid=30628&amp;cooid=569" -->
+<!-- 		launcher:group="0" -->
+<!-- 		launcher:priority="2" -->
+<!-- 	/> -->
+	<!-- 掌上宝 -->
+<!-- 	<recommended_app -->
+<!-- 		launcher:titleid="@string/recommended_zsbao" -->
+<!-- 		launcher:iconid="@drawable/zhangshangbao" -->
+<!-- 		launcher:packagename="com.dft.hb.app" -->
+<!-- 		launcher:action="com.jiubang.intent.action.ZHANGSHANGBAO" -->
+<!-- 		launcher:download_url="http://soft.3g.cn/xuan/download.aspx?fid=41027&amp;cooid=570" -->
+<!-- 		launcher:group="0" -->
+<!-- 		launcher:priority="3" -->
+<!-- 	/> -->
+	<!-- sky网络电话 -->
+<!-- 	<recommended_app -->
+<!-- 		launcher:titleid="@string/recommended_skycall" -->
+<!-- 		launcher:iconid="@drawable/sky" -->
+<!-- 		launcher:packagename="com.skycall.oem" -->
+<!-- 		launcher:action="com.jiubang.intent.action.DOWNLOAD_SKYCALL" -->
+<!-- 		launcher:download_url="http://soft.3g.cn/xuan/download.aspx?fid=41600&amp;cooid=571" -->
+<!-- 		launcher:group="0" -->
+<!-- 		launcher:priority="3" -->
+<!-- 	/> -->
+<!-- group2 对应主屏默认图标的第二个位置-->
+	<!-- 安全管家 -->
+<!-- 	<recommended_app -->
+<!-- 		launcher:titleid="@string/recommended_aqguanjia" -->
+<!-- 		launcher:iconid="@drawable/anquanguanjia" -->
+<!-- 		launcher:packagename="com.anguanjia.safe" -->
+<!-- 		launcher:action="com.jiubang.intent.action.DOWNLOAD_ANGUANJIA" -->
+<!-- 		launcher:download_url="http://soft.3g.cn/xuan/download.aspx?fid=58988&amp;cooid=560&amp;sid=golaunch" -->
+<!-- 		launcher:group="1" -->
+<!-- 		launcher:priority="0" -->
+<!-- 	/> -->
+	<!-- 酷我音乐 -->
+<!-- 	<recommended_app -->
+<!-- 		launcher:titleid="@string/recommended_kuwo" -->
+<!-- 		launcher:iconid="@drawable/kuwo" -->
+<!-- 		launcher:packagename="cn.kuwo.player" -->
+<!-- 		launcher:action="com.jiubang.intent.action.DOWNLOAD_KUWO" -->
+<!-- 		launcher:download_url="http://soft.3g.cn/xuan/download.aspx?fid=22521&amp;cooid=579&amp;sid=golaunch" -->
+<!-- 		launcher:group="1" -->
+<!-- 		launcher:priority="1" -->
+<!-- 	/> -->
+	<!-- 腾讯手机管家 -->
+<!-- 	<recommended_app -->
+<!-- 		launcher:titleid="@string/recommended_qqsafe" -->
+<!-- 		launcher:iconid="@drawable/qqsafe" -->
+<!-- 		launcher:packagename="com.tencent.qqpimsecure" -->
+<!-- 		launcher:action="com.jiubang.intent.action.DOWNLOAD_QQPIMSECURE" -->
+<!-- 		launcher:download_url="http://soft.3g.cn/xuan/download.aspx?fid=25677&amp;cooid=561&amp;sid=golaunch" -->
+<!-- 		launcher:group="1" -->
+<!-- 		launcher:priority="2" -->
+<!-- 	/> -->
+	<!-- ZAKER -->
+<!-- 	<recommended_app -->
+<!-- 		launcher:titleid="@string/recommended_zaker" -->
+<!-- 		launcher:iconid="@drawable/zhake" -->
+<!-- 		launcher:packagename="com.myzaker.ZAKER_Phone" -->
+<!-- 		launcher:action="com.jiubang.intent.action.DOWNLOAD_ZHAKE" -->
+<!-- 		launcher:download_url="http://soft.3g.cn/xuan/download.aspx?fid=44924&amp;cooid=575&amp;sid=golaunch" -->
+<!-- 		launcher:group="1" -->
+<!-- 		launcher:priority="3" -->
+<!-- 	/> -->
+	<!-- 360 -->
+<!-- 	<recommended_app -->
+<!-- 		launcher:titleid="@string/recommended_360" -->
+<!-- 		launcher:iconid="@drawable/qihu360" -->
+<!-- 		launcher:packagename="com.qihoo360.mobilesafe" -->
+<!-- 		launcher:action="com.jiubang.intent.action.DOWNLOAD_QIHU360" -->
+<!-- 		launcher:download_url="http://soft.3g.cn/xuan/download.aspx?fid=42054&amp;cooid=562&amp;sid=golaunch" -->
+<!-- 		launcher:group="1" -->
+<!-- 		launcher:priority="4" -->
+<!-- 	/> -->
+	<!-- 老虎地图 -->
+<!-- 	<recommended_app -->
+<!-- 		launcher:titleid="@string/recommended_tigermap" -->
+<!-- 		launcher:iconid="@drawable/tigermap" -->
+<!-- 		launcher:packagename="com.tigerknows" -->
+<!-- 		launcher:action="com.jiubang.intent.action.DOWNLOAD_TIGERKNOWS" -->
+<!-- 		launcher:download_url="http://soft.3g.cn/xuan/download.aspx?fid=35184&amp;cooid=568&amp;sid=golaunch" -->
+<!-- 		launcher:group="1" -->
+<!-- 		launcher:priority="5" -->
+<!-- 	/> -->
+	<!-- 美团 -->
+<!-- 	<recommended_app -->
+<!-- 		launcher:titleid="@string/recommended_mmtuangou" -->
+<!-- 		launcher:iconid="@drawable/meituan" -->
+<!-- 		launcher:packagename="com.sankuai.meituan" -->
+<!-- 		launcher:action="com.jiubang.intent.action.DOWNLOAD_MEITUAN" -->
+<!-- 		launcher:download_url="http://soft.3g.cn/xuan/download.aspx?fid=31984&amp;cooid=565&amp;sid=golaunch" -->
+<!-- 		launcher:group="1" -->
+<!-- 		launcher:priority="6" -->
+<!-- 	/> -->
+	<!-- 有你短信 -->
+<!-- 	<recommended_app -->
+<!-- 		launcher:titleid="@string/recommended_youni" -->
+<!-- 		launcher:iconid="@drawable/youni" -->
+<!-- 		launcher:packagename="com.snda.youni" -->
+<!-- 		launcher:action="com.jiubang.intent.action.DOWNLOAD_YOUNI" -->
+<!-- 		launcher:download_url="http://soft.3g.cn/xuan/download.aspx?fid=30590&amp;cooid=577&amp;sid=golaunch" -->
+<!-- 		launcher:group="1" -->
+<!-- 		launcher:priority="7" -->
+<!-- 	/> -->
+<!-- group3 对应主屏默认图标的第三个位置-->
+<!-- 	<recommended_app -->
+<!-- 		launcher:titleid="@string/recommended_shijie" -->
+<!-- 		launcher:iconid="@drawable/shijie" -->
+<!-- 		launcher:packagename="com.lori.app" -->
+<!-- 		launcher:action="com.jiubang.intent.action.DOWNLOAD_SHIJIEOL" -->
+<!-- 		launcher:download_url="http://wy.3g.cn/xuan/download.aspx?gid=185&amp;fid=2604" -->
+<!-- 		launcher:group="2" -->
+<!-- 		launcher:priority="0" -->
+<!-- 		launcher:appid="0" -->
+<!-- 	/> -->
+<!-- 	<recommended_app -->
+<!-- 		launcher:titleid="@string/recommended_diguo" -->
+<!-- 		launcher:iconid="@drawable/empire" -->
+<!-- 		launcher:packagename="com.lakoo.empireCn" -->
+<!-- 		launcher:action="com.jiubang.intent.action.DOWNLOAD_EMPIRECN" -->
+<!-- 		launcher:download_url="http://wy.3g.cn/xuan/download.aspx?gid=185&amp;fid=2602" -->
+<!-- 		launcher:group="2" -->
+<!-- 		launcher:priority="1" -->
+<!-- 		launcher:appid="0" -->
+<!-- 	/> -->
+<!-- 	<recommended_app -->
+<!-- 		launcher:titleid="@string/recommended_xiyou" -->
+<!-- 		launcher:iconid="@drawable/xiyou" -->
+<!-- 		launcher:packagename="com.yinhan.android" -->
+<!-- 		launcher:action="com.jiubang.intent.action.DOWNLOAD_MHXY" -->
+<!-- 		launcher:download_url="http://wy.3g.cn/xuan/download.aspx?gid=185&amp;fid=2601" -->
+<!-- 		launcher:group="2" -->
+<!-- 		launcher:priority="2" -->
+<!-- 	/> -->
+<!-- 	<recommended_app  -->
+<!-- 		launcher:titleid="@string/recommended_wushaung" -->
+<!-- 		launcher:iconid="@drawable/wushuang" -->
+<!-- 		launcher:packagename="com.baimo.jsws" -->
+<!-- 		launcher:action="com.jiubang.intent.action.DOWNLOAD_JSWS" -->
+<!-- 		launcher:download_url="http://wy.3g.cn/xuan/download.aspx?gid=185&amp;fid=2597" -->
+<!-- 		launcher:group="2" -->
+<!-- 		launcher:priority="3"	 -->
+<!-- 		/> -->
+<!-- 	<recommended_app -->
+<!-- 		launcher:titleid="@string/recommended_sanguo" -->
+<!-- 		launcher:iconid="@drawable/sanguo" -->
+<!-- 		launcher:packagename="com.pip.androidnewui" -->
+<!-- 		launcher:action="com.jiubang.intent.action.DOWNLOAD_SANGUO" -->
+<!-- 		launcher:download_url="http://wy.3g.cn/xuan/download.aspx?gid=185&amp;fid=2598" -->
+<!-- 		launcher:group="2" -->
+<!-- 		launcher:priority="4" -->
+<!-- 	/> -->
+<!-- 	<recommended_app -->
+<!-- 		launcher:titleid="@string/recommended_xuanyuan" -->
+<!-- 		launcher:iconid="@drawable/xuanyuan" -->
+<!-- 		launcher:packagename="shaft.android" -->
+<!-- 		launcher:action="com.jiubang.intent.action.DOWNLOAD_XUANYUAN" -->
+<!-- 		launcher:download_url="http://wy.3g.cn/xuan/download.aspx?gid=185&amp;fid=2600" -->
+<!-- 		launcher:group="2" -->
+<!-- 		launcher:priority="5" -->
+<!-- 	/> -->
+<!-- 	<recommended_app -->
+<!-- 		launcher:titleid="@string/recommended_mzxiyou" -->
+<!-- 		launcher:iconid="@drawable/mzxiyou" -->
+<!-- 		launcher:packagename="com.pip.android.xiyou" -->
+<!-- 		launcher:action="com.jiubang.intent.action.DOWNLOAD_MZXIYOU" -->
+<!-- 		launcher:download_url="http://wy.3g.cn/xuan/download.aspx?gid=185&amp;fid=2599" -->
+<!-- 		launcher:group="2" -->
+<!-- 		launcher:priority="6" -->
+<!-- 	/> -->
+	<!-- group4 对应主屏默认图标的第四个位置-->
+	
+	
+</recommendedapps>

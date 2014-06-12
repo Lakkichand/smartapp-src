@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+  	android:background="#b2000000"
+    android:orientation="vertical"
+    android:gravity="bottom" >
+
+     <ListView
+        android:id="@+id/tutoriallist"    
+        android:layout_width="fill_parent"     
+        android:layout_height="wrap_content"
+       	android:background="@drawable/chosestore_bg"
+        android:cacheColorHint="#00000000" 
+     />  
+
+</LinearLayout>

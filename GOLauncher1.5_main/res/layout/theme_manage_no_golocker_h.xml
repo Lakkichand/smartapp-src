@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+     >
+<RelativeLayout 
+    android:id="@+id/left_imges"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:paddingLeft="@dimen/lockerimg_padding_left_h">
+   <ImageView android:id="@+id/theme_golockers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/theme_golockers_img"
+        android:contentDescription="@string/app_name"
+        android:paddingTop="20dip"
+      />    
+</RelativeLayout>
+
+<LinearLayout  android:id="@+id/right_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@id/left_imges"
+    android:orientation="vertical"
+    android:layout_marginLeft="@dimen/logo_padding_left_h"
+    android:gravity="center_horizontal">
+    <ImageView
+        android:id="@+id/theme_golocker_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/screen_edit_golocker"
+        android:paddingTop="27dip" />
+    <com.jiubang.ggheart.components.DeskTextView 
+        android:id="@+id/golocker_logo_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/theme_golocker_logo"
+        android:text="@string/theme_golocker_logo"
+        android:layout_marginTop="9dip"/>  
+    <Button 
+        android:id="@+id/download_golocker"
+        android:layout_width="127dip"
+        android:layout_height="40dip"
+        android:gravity="center"
+        android:textSize="17sp"
+        android:textColor="@color/theme_detail_modify_text"
+        android:text="@string/theme_download_golocker"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/down_golocker_selector"/>
+    
+</LinearLayout>
+    
+    <com.jiubang.ggheart.components.DeskTextView 
+        android:id="@+id/theme_no_golocker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="13sp"
+        android:textColor="@color/theme_golocker_tips"
+        android:text="@string/theme_golockers_tips"
+        android:layout_marginTop="25dip"
+        android:layout_below="@id/right_layout"
+        android:layout_centerHorizontal="true"/>
+     
+  
+</RelativeLayout>

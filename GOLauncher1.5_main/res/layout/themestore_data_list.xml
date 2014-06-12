@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/android:list"
+   	android:layout_width="fill_parent"
+   	android:layout_height="wrap_content"
+   	android:listSelector="@drawable/themestore_item_selected"
+   	android:dividerHeight="0.66dp"
+   	android:divider="@drawable/themestore_list_item_line"
+   	android:cacheColorHint="#00000000">
+  </ListView>
+  

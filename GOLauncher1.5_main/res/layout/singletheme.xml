@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.desks.diy.themescan.SingleThemeView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:gravity="center">
+  
+  <LinearLayout 
+  	android:id="@+id/themeview"
+  	android:orientation="vertical"
+  	android:layout_width="wrap_content"
+ 	android:layout_height="wrap_content"
+ 	android:gravity="center">
+ 	<RelativeLayout 
+ 		android:id="@+id/imagecontainer"
+ 		android:layout_width="wrap_content"
+ 		android:layout_height="wrap_content"
+ 		>
+  		<ImageView 
+  			android:id="@+id/image"
+  			android:layout_width="@dimen/mytheme_pic_width"
+ 			android:layout_height="@dimen/mytheme_pic_height"
+ 			android:scaleType="fitXY"
+ 			android:background="@drawable/singletheme_bg"/>
+ 	</RelativeLayout>
+  	
+  	<TextView
+  		android:id="@+id/name"
+  		android:layout_below="@id/image"
+  		android:layout_marginTop="7dip"
+  		android:textSize="12sp" 
+  		android:textColor="@android:color/black"
+  		android:layout_width="fill_parent"
+ 		android:layout_height="wrap_content"
+ 		android:gravity="center"
+ 		android:singleLine="true"/>
+  </LinearLayout>
+</com.jiubang.ggheart.apps.desks.diy.themescan.SingleThemeView>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.appgame.appcenter.component.SoftInforListItem
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="60dp"
+  android:background="@drawable/recomm_app_list_item_selector"
+  >
+ <!-- <com.jiubang.ggheart.apps.gowidget.gostore.component.SimpleImageView
+	android:id="@+id/softImageView"
+	android:layout_width="wrap_content"
+	android:layout_height="48dip"
+	android:layout_alignParentLeft="true"
+	android:layout_centerVertical="true"
+	android:layout_marginBottom="8dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="6dp"
+  /> -->
+
+ <ImageSwitcher
+     android:id="@+id/softImageSwitcher"
+     android:layout_width="48dp"
+     android:layout_height="48dp"
+     android:layout_alignParentLeft="true"
+     android:layout_centerVertical="true"
+     android:layout_marginBottom="8dp"
+     android:layout_marginLeft="16dp"
+     android:layout_marginRight="8dp"
+     android:layout_marginTop="6dp"
+     android:inAnimation="@anim/appgame_fade_in"
+     android:outAnimation="@anim/appgame_fade_out" >
+
+     <com.jiubang.ggheart.apps.gowidget.gostore.component.SimpleImageView
+         android:id="@+id/softImageView"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:scaleType="fitXY" />
+
+     <com.jiubang.ggheart.apps.gowidget.gostore.component.SimpleImageView
+         android:id="@+id/anotherSoftImageView"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:scaleType="fitXY" />
+ </ImageSwitcher>
+ 
+  <Button
+      android:id="@+id/operatorbutton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentRight="true"
+      android:layout_centerVertical="true"
+      android:layout_marginLeft="12dp"
+      android:layout_marginRight="12dp"
+      android:background="@drawable/apps_uninstall_not_selected"
+      android:focusable="false"
+      android:gravity="center" />
+  
+  <ImageView 
+      android:layout_toLeftOf="@id/operatorbutton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:background="@drawable/appsmanagement_line_right"
+      />
+  
+  <RelativeLayout 
+    android:id="@+id/contentRelativeLayout"
+  	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_toLeftOf="@id/operatorbutton"
+	android:layout_toRightOf="@id/softImageSwitcher"
+	android:layout_centerVertical="true"
+  >
+  	<TextView
+		android:id="@+id/softNameTextView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignTop="@id/softImageSwitcher"
+		android:layout_alignParentLeft="true"
+		android:textColor="#000000"
+		android:textSize="16sp"
+		android:singleLine="true"
+  	/>
+  	
+  	<ImageView
+  		android:id="@+id/moveImageView"
+  		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/softNameTextView"
+		android:layout_alignLeft="@id/softNameTextView"
+		android:gravity="center_vertical"
+	/>
+	
+  	<TextView
+  		android:id="@+id/verTextView"
+  		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/softNameTextView"
+		android:layout_toRightOf="@id/moveImageView"
+		android:gravity="center_vertical"
+		android:textColor="#929292"
+		android:textSize="11.6sp"
+		android:singleLine="true"
+		android:paddingTop="1dip"
+  	/>
+  	
+  </RelativeLayout>
+</com.jiubang.ggheart.appgame.appcenter.component.SoftInforListItem>

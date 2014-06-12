@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_focused="false" android:drawable="@drawable/apps_mgr_listview_foot_retry_background" />
+    <item android:drawable="@drawable/apps_mgr_listview_foot_retry_background_light" android:state_pressed="true"></item>
+
+</selector>

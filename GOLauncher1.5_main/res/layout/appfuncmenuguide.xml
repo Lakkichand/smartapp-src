@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ggheart="http://schemas.android.com/apk/res/com.gau.go.launcherex"
+	android:background="@drawable/guide_black_bg"
+	android:clickable="true"
+	android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:orientation="vertical">
+	<com.jiubang.ggheart.apps.desks.appfunc.AppFuncMenuGuideView
+		android:id="@+id/appfuncmenuguide"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+	/>
+    
+
+</FrameLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F2F2F2"
+     >
+     
+<RelativeLayout 
+    android:id="@+id/message__center_detail_topbar"
+    android:layout_width="match_parent"
+    android:layout_height="48dip" 
+    android:background="@drawable/message_center_topbar_bg"
+    >    
+	    
+	 <LinearLayout 
+	   android:id="@+id/back_btnArea"
+	   android:layout_width="40dip"
+	   android:layout_height="50dip"
+	   	android:background="@drawable/message_center_back_selector"
+	   android:gravity="center"> 
+	    <ImageView
+			android:id="@+id/message_center_back_btn"
+			android:layout_width="25dp"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_alignParentLeft="true"
+			android:layout_marginLeft="5dip"
+			android:src="@drawable/message_center_back"
+			android:background="@drawable/message_center_back_selector"
+			/>
+	</LinearLayout> 		
+	    
+	 <com.jiubang.ggheart.components.DeskTextView
+	    android:id="@+id/topbar_title"
+	    android:layout_width="match_parent"
+	    android:layout_height="50dip"
+	    android:textSize="17sp"
+	    android:textColor="#DCDCDC"
+	    android:gravity="center_vertical"
+	    android:layout_toRightOf="@id/back_btnArea"
+	    android:text="@string/message_center_topbar_title"
+	    android:paddingLeft="8dip"
+	    />
+  </RelativeLayout>
+
+<include layout="@layout/message_content_webview"
+      android:id="@+id/webviewlayout"
+      android:layout_below="@id/message__center_detail_topbar"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"/>
+
+
+
+	<RelativeLayout 
+	    android:id="@+id/messagecenter_download_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="53dip"
+	    android:orientation="horizontal"
+	    android:layout_alignParentBottom="true"
+		android:visibility="gone"
+	    android:gravity="center_vertical"
+	    android:background="@drawable/message_center_toolbarbg" >
+	    
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_centerInParent="true"
+	    android:gravity="center">
+	  
+	    <TextView 
+			 android:id="@+id/messagecenter_download_percent"
+			 android:layout_width="wrap_content"
+			 android:layout_height="wrap_content"
+			 android:textColor="#404040"
+			 android:textSize="13sp"
+			 android:layout_marginTop="8dip"
+			 android:layout_marginLeft="16dip"
+			 android:singleLine="true"/>
+			 
+		<ProgressBar
+			  android:id="@+id/messagecenter_download_progress"
+			  android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			  style="@style/DownloadProgressBarStyle"
+			  android:layout_alignParentLeft="true"
+			  android:layout_marginLeft="12dip"
+			  android:layout_below="@id/messagecenter_download_percent"
+			  android:max="100"/>	 
+			 
+			 
+			<!--   android:layout_marginTop="12dp" -->  
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/messagecenter_download_progress"
+            android:layout_marginLeft="2dip">
+           
+	        <ImageView
+	            android:id="@+id/download_control"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="left"
+	            android:background="@drawable/downloadmanager_pause_selector" />
+	
+	        <ImageView
+	            android:id="@+id/download_cancle"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="right"
+	            android:background="@drawable/downloadmanager_cancel_selector" />
+   		
+	   </LinearLayout>  
+			  
+		</RelativeLayout>	  
+	</RelativeLayout>
+    
+  
+
+
+    
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ListView
+        android:id="@+id/appfunc_search_result_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/appfunc_search_navigation_bar"
+        android:addStatesFromChildren="true"
+        android:divider="@null"
+        android:drawSelectorOnTop="true"
+        android:listSelector="@drawable/appfunc_search_result_list_selector" >
+    </ListView>
+
+    <com.jiubang.ggheart.apps.gowidget.gostore.component.ThemeStoreProgressBar
+        android:id="@+id/appfunc_search_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/appfunc_search_result_listView"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/themestore_btmprogress"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="6dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/themestore_btmProgress_text"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:text="@string/loading"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+    </com.jiubang.ggheart.apps.gowidget.gostore.component.ThemeStoreProgressBar>
+
+    <TextView
+        android:id="@+id/appfunc_search_no_data_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/appfunc_search_result_listView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:drawablePadding="10dp"
+        android:drawableTop="@drawable/appfunc_search_info"
+        android:gravity="center"
+        android:text="@string/appfunc_search_tip_no_match_data"
+        android:textColor="#878787"
+        android:textSize="13.3dp"
+        android:visibility="gone" />
+
+    <com.jiubang.ggheart.apps.desks.appfunc.search.SearchNavigationbarIcon
+        android:id="@+id/appfunc_search_navigation_bar_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp" >
+    </com.jiubang.ggheart.apps.desks.appfunc.search.SearchNavigationbarIcon>
+
+    <com.jiubang.ggheart.apps.desks.appfunc.search.SearchNavigationbar
+        android:id="@+id/appfunc_search_navigation_bar"
+        android:layout_width="23dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical" >
+    </com.jiubang.ggheart.apps.desks.appfunc.search.SearchNavigationbar>
+
+</RelativeLayout>

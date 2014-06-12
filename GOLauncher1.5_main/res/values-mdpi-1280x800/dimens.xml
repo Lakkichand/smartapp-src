@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 定义与组件相关的尺寸、坐标 -->
+
+<resources>
+    <dimen name="theme_list_item_height">340dip</dimen>
+</resources>

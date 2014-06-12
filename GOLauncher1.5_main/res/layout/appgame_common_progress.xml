@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.appgame.base.component.CommonProgress xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@drawable/appgame_commonprogress_bg"
+    android:clickable="false"
+    android:orientation="vertical" >
+
+    <ProgressBar
+        android:id="@+id/common_progressbar"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerInParent="true"
+        android:clickable="false" />
+
+</com.jiubang.ggheart.appgame.base.component.CommonProgress>

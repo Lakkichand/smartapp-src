@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/popwindow_up"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/apps_packagemanagement_package_popup_up_bg"
+        android:gravity="center" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16.66dp"
+            android:layout_marginRight="16.66dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/open_app_up"
+                android:layout_width="90dp"
+                android:layout_height="30.66dp"
+                android:layout_marginRight="13.33dp"
+                android:layout_weight="1"
+                android:background="@drawable/update_detail_selector_new"
+                android:gravity="center"
+                android:text="@string/app_manager_open_app"
+                android:textColor="#ffffff"
+                android:textSize="14.66dp" />
+
+            <TextView
+                android:id="@+id/manange_app_up"
+                android:layout_width="90dp"
+                android:layout_height="30.66dp"
+                android:layout_weight="1"
+                android:background="@drawable/update_detail_selector_new"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/app_manager_app"
+                android:textColor="#ffffff"
+                android:textSize="14.66dp" />
+
+            <TextView
+                android:id="@+id/similar_apps_up"
+                android:layout_width="90dp"
+                android:layout_height="30.66dp"
+                android:layout_marginLeft="13.33dp"
+                android:layout_weight="1"
+                android:background="@drawable/update_detail_selector_new"
+                android:gravity="center"
+                android:text="@string/app_similar_apps"
+                android:textColor="#ffffff"
+                android:textSize="14.66dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/popwindow_down"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/apps_packagemanagement_package_popup_down_bg"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16.66dp"
+            android:layout_marginRight="16.66dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/open_app_down"
+                android:layout_width="90dp"
+                android:layout_height="30.66dp"
+                android:layout_marginRight="13.33dp"
+                android:layout_weight="1"
+                android:background="@drawable/update_detail_selector_new"
+                android:gravity="center"
+                android:text="@string/app_manager_open_app"
+                android:textColor="#ffffff"
+                android:textSize="14.66dp" />
+
+            <TextView
+                android:id="@+id/manange_app_down"
+                android:layout_width="90dp"
+                android:layout_height="30.66dp"
+                android:layout_weight="1"
+                android:background="@drawable/update_detail_selector_new"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/app_manager_app"
+                android:textColor="#ffffff"
+                android:textSize="14.66dp" />
+
+            <TextView
+                android:id="@+id/similar_apps_down"
+                android:layout_width="90dp"
+                android:layout_height="30.66dp"
+                android:layout_marginLeft="13.33dp"
+                android:layout_weight="1"
+                android:background="@drawable/update_detail_selector_new"
+                android:gravity="center"
+                android:text="@string/app_similar_apps"
+                android:textColor="#ffffff"
+                android:textSize="14.66dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

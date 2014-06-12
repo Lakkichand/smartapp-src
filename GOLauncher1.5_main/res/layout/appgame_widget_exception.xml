@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/appgame_widget_network_error_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="@dimen/appgame_widget_layout_margin"
+        android:text="@string/appgame_widget_exception_info"
+        android:textColor="#666666"
+        android:textSize="14.67sp" />
+
+    <Button
+        android:id="@+id/appgame_widget_retry_button"
+        android:layout_width="78.67dp"
+        android:layout_height="28dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/appgame_widget_network_error_text"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="@dimen/appgame_widget_layout_margin"
+        android:background="@drawable/appgame_widget_exception_refresh_selector"
+        android:text="@string/apps_recomm_network_refresh"
+        android:textColor="#373737"
+        android:textSize="14.67sp" />
+
+</RelativeLayout>

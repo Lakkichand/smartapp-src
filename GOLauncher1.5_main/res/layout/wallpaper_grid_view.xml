@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.gowidget.gostore.views.WallpaperDataGridView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+   	android:layout_width="fill_parent"
+   	android:layout_height="fill_parent"
+   	android:listSelector="@null"
+   	android:padding="5.33dip"
+   	android:verticalSpacing="3.33dip"
+   	android:horizontalSpacing="3.33dip"
+	android:numColumns="4"
+   	>
+  </com.jiubang.ggheart.apps.gowidget.gostore.views.WallpaperDataGridView>
+  

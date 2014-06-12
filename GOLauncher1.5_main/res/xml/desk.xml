@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Desk Version="1.0" VersionCode="1" Wallpaper="背景图片名称" ScollWallpaper="false" WallpaperFill="0">
+	<!-- 共用样式，目前的只有图标 -->
+	<CommonStyles>
+		<IconStyle>
+			<ShowItemLayer  Valign=""  Halign="" Width="" Height=""  Margins="{1,1,0,0}">
+				<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+				<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+			</ShowItemLayer>
+			<Layer Width="" Height="" Valign=""  Halign=""  Margins="{1,1,0,0}" />
+			<ShowItemLayer  Valign=""  Halign="" Width="" Height=""  Margins="{1,1,0,0}">
+				<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+				<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+			</ShowItemLayer>
+		</IconStyle>
+	</CommonStyles>
+	<Screen Source="screen.xml">
+		<!-- 屏幕样式 -->
+		<ScreenStyles ScreenCount="5">
+			<ScreenIconStyle ShowLightMode="1" Width="" Height="" Valign=""  Halign=""  Margins="{1,1,0,0}" TextValign="" TextHalign="" >
+				<!-- 文字背景 -->
+				<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+			</ScreenIconStyle>
+			<FolderStyle>
+				<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+				<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+				<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+			</FolderStyle>
+			<!-- 发光颜色定义 -->
+			<Light Color="" Image="" Size=""/>
+			<Font Color="" Size="" />
+			<TrashStyle Color="">
+				<Trashing  Margins="{1,1,0,0}" Image="" Valign=""  Halign="">
+					<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+				</Trashing>
+				<Trashed  Margins="{1,1,0,0}" Image="" Valign=""  Halign="">
+					<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+				</Trashed>
+			</TrashStyle>
+		</ScreenStyles>
+	</Screen>
+	<Indicator Source="indicator.xml">
+		<IndicatorStyles ShowMode="1" >
+			<!-- 指示器项 -->
+			<IndicatorItem Margins="{1,1,0,0}" Width="" Height="" WhenScreenCount="" >
+				<Wallpaper Identity="Selected" Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+				<Wallpaper Identity="UnSelected" Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+			</IndicatorItem>
+		</IndicatorStyles>
+	</Indicator>
+	<Preview Source="preview.xml">
+		<PreviewStyles LineItemCount="3">
+			<!-- 当前屏卡片 -->
+			<Card Identity="CurrentScreen">
+				<Item Identity="Port" Width="" Height=""  Margins="{1,1,0,0}">
+					<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+					<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+				</Item>
+				<Item Identity="Land" Width="" Height=""  Margins="{1,1,0,0}">
+					<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+					<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+				</Item>
+			</Card>
+			<!-- 非当前屏卡片 -->
+			<Card Identity="NomalScreen">
+				<Item Identity="Port" Width="" Height=""  Margins="{1,1,0,0}">
+					<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+					<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+				</Item>
+				<Item Identity="Land" Width="" Height=""  Margins="{1,1,0,0}">
+					<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+					<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+				</Item>
+			</Card>
+			<!-- 添加屏卡片 -->
+			<Card Identity="AddScreen">
+				<Item Identity="Port" Width="" Height=""  Margins="{1,1,0,0}">
+					<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+					<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+				</Item>
+				<Item Identity="Land" Width="" Height=""  Margins="{1,1,0,0}">
+					<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+					<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+				</Item>
+			</Card>
+			<!-- 主屏 -->
+			<Wallpaper Identity="Home" Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+			<!-- 非主屏 -->
+			<Wallpaper Identity="NotHome" Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+			<!-- 删除 -->
+			<Wallpaper Identity="Colseing" Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+			<Wallpaper Identity="Colsed" Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+		</PreviewStyles>
+	</Preview>
+	<Dock Source="dock.xml">
+		<DockSetting RowCount="2" IsBackground="false" Background="" BackgroundFill="1"/>
+		<Notifys>
+			<NotifyItem Key="SMS" Value="true" KeyWord=".SMS" />
+			<NotifyItem Key="CALL" Value="true" KeyWord=".CALL" />
+			<NotifyItem Key="GMAIL" Value="true" KeyWord=".GMAIL" />
+		</Notifys>
+		<DockStyles Width="" Height="" LineItemCount="5">
+			<DockIconStyle Width="" Height="" Valign="" Halign=""  Margins="{1,1,0,0}" />
+			<!-- GO桌面默认的前5个只能换图 -->
+			<SymtemDefualt>
+				<SymtemDockItem GestureIntent="">
+					<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+				</SymtemDockItem>
+				<SymtemDockItem GestureIntent="">
+					<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+				</SymtemDockItem>
+				<SymtemDockItem GestureIntent="">
+					<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+				</SymtemDockItem>
+				<SymtemDockItem GestureIntent="">
+					<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+				</SymtemDockItem>
+				<SymtemDockItem GestureIntent="">
+					<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+				</SymtemDockItem>
+			</SymtemDefualt>
+			<!-- +号 -->
+			<NoApplicationIcon GestureIntent="" >
+				<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+			</NoApplicationIcon>
+			<!-- 空白 -->
+			<NullIcon GestureIntent="">
+				<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+			</NullIcon>
+			<!-- 通知提示信息 -->
+			<NotifyStyle Valign="" Halign="" TextValign="" TextHalign=""  Margins="{1,1,0,0}">
+				<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+			</NotifyStyle>
+		</DockStyles>
+		<!-- 主题默认的图标 -->
+		<ThemeDefualt>
+			<ThemeDockItem Intent="" GestureIntent="">
+				<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+			</ThemeDockItem>
+			<ThemeDockItem Intent="" GestureIntent="">
+				<Wallpaper Color="" Image="" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+			</ThemeDockItem>
+		</ThemeDefualt>
+	</Dock>
+	<OperationSetting Source="operation.xml">
+		<Item key="Rotation" value="true"/>
+		<Item key="PopupMenu" value="true"/>
+		<Response>
+			<Item key="Home" GestureIntent="" GestureName="" />
+			<Item key="UpGlide" GestureIntent="" GestureName=""/>
+			<Item key="DownGlide" GestureIntent="" GestureName=""/>
+		</Response>
+	</OperationSetting>
+	<AdvancedSetting Source="advancedsetting.xml">
+		<Item key="Persistent" value="true"/>
+		<Item key="Force_Close" value="true"/>
+	</AdvancedSetting>
+</Desk>

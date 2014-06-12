@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.desks.appfunc.search.AppFuncSearchView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true" >
+
+    <!-- android:background="@drawable/guide_black_bg" -->
+
+    <RelativeLayout
+        android:id="@+id/appfunc_search_result_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="2.67dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@+id/appfunc_search_homebar" >
+
+        <RelativeLayout
+            android:id="@+id/appfunc_search_result_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="4dp"
+            android:layout_toLeftOf="@+id/appfunc_search_homebar"
+            android:background="@drawable/appfunc_search_list_topbg" >
+
+            <com.jiubang.ggheart.components.DeskEditText
+                android:id="@+id/appfunc_search_result_editor"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/appfunc_search_editor_height"
+                android:layout_alignParentTop="true"
+                android:background="@null"
+                android:hint="@string/app_func_search_hint"
+                android:imeOptions="actionSearch|flagNoExtractUi"
+                android:paddingLeft="8dp"
+                android:paddingRight="30dp"
+                android:singleLine="true"
+                android:textColor="#383838"
+                android:textSize="14.67dp" />
+
+            <com.jiubang.ggheart.components.DeskButton
+                android:id="@+id/appfunc_search_clear_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/appfunc_search_result_editor"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/appfunc_search_clear_btn_selector"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/appfunc_search_result_title_layout"
+            android:layout_toLeftOf="@+id/appfunc_search_homebar"
+            android:background="@drawable/appfunc_search_list_view_bg" >
+
+            <LinearLayout
+                android:id="@+id/appfunc_search_tab"
+                android:layout_width="186dp"
+                android:layout_height="38.5dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:baselineAligned="false"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/appfunc_search_title_local_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:layout_weight="1" >
+
+                    <com.jiubang.ggheart.components.DeskTextView
+                        android:id="@+id/appfunc_search_title_local"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="6.67dp"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/appfunc_search_tab_title_local"
+                        android:textColor="#9FD300"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:id="@+id/appfunc_search_local_base_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/appfunc_search_base_line_light" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/appfunc_search_title_network_layout"
+                    android:layout_width="match_parent"
+					android:clickable="true"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" >
+
+                    <com.jiubang.ggheart.components.DeskTextView
+                        android:id="@+id/appfunc_search_title_network"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="6.67dp"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/appfunc_search_tab_title_web"
+                        android:textColor="#ACACAC"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:id="@+id/appfunc_search_network_base_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/appfunc_search_bael_line" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/appfunc_search_result_list_scroller"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/appfunc_search_tab"
+                android:layout_marginTop="8dp" >
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/appfunc_search_homebar"
+            android:layout_width="@dimen/appfunc_bottomheight"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true" >
+
+            <com.jiubang.ggheart.components.DeskButton
+                android:id="@+id/appfunc_search_switch_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+            <com.jiubang.ggheart.components.DeskButton
+                android:id="@+id/appfunc_search_home_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <com.jiubang.ggheart.components.DeskButton
+                android:id="@+id/appfunc_search_menu_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</com.jiubang.ggheart.apps.desks.appfunc.search.AppFuncSearchView>

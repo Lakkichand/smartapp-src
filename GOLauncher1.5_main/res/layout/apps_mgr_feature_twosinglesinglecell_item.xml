@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="155dip"
+    android:layout_marginTop="5dp"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/two_single_single_grid_app1"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:background="#FF333333" >
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="4dp"
+        android:layout_height="fill_parent"
+        android:background="@android:color/transparent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:background="@android:color/transparent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/two_single_single_grid_app2"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:background="#FF808080" >
+
+  <!--           <ImageView
+                android:id="@+id/two_single_single_grid_app2_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon" /> -->
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="4dp"
+            android:background="@android:color/transparent" />
+
+        <RelativeLayout
+            android:id="@+id/two_single_single_grid_app3"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:background="#FF808080" >
+
+<!--             <ImageView
+                android:id="@+id/two_single_single_grid_app3_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon" /> -->
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

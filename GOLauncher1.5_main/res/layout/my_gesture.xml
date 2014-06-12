@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical"
+    >
+	<RelativeLayout 
+    	android:layout_width="fill_parent"
+    	android:layout_height="48dip"
+    	android:background="@drawable/theme_detail_topbar_bg">
+    
+    	<ImageView 
+        	android:id="@+id/my_gesture_icon"
+        	android:layout_width="32dp"
+        	android:layout_height="32dp"
+        	android:layout_alignParentLeft="true"
+        	android:layout_centerVertical="true"
+        	android:layout_marginLeft="4dp"
+        	android:layout_marginRight="8dp"
+        	android:src="@drawable/gesture_icon"
+        	android:scaleType="centerInside"/>
+    
+    	<com.jiubang.ggheart.components.DeskTextView 
+        	android:id="@+id/my_gesture_text"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_toRightOf="@id/my_gesture_icon"
+        	android:layout_centerVertical="true"
+        	android:text="@string/gesture_my_gesture"
+        	android:textSize="17.33sp"
+        	android:textColor="@android:color/white"
+    	/>
+    
+    	<ImageView
+        	android:id="@+id/my_gesture_plus"
+        	android:layout_width="53.33dp"
+        	android:layout_height="fill_parent"
+        	android:layout_alignParentRight="true"
+        	android:layout_centerVertical="true"
+        	android:src="@drawable/gesture_actionbar_add"
+        	android:background="@drawable/theme_detail_back_selector"
+			android:scaleType="centerInside"
+    	/>
+    
+    	<ImageView
+        	android:id="@+id/my_gesture_finger"
+        	android:layout_width="53.33dp"
+        	android:layout_height="fill_parent"
+        	android:layout_toLeftOf="@id/my_gesture_plus"
+        	android:layout_centerVertical="true"
+        	android:src="@drawable/gesture_actionbar_finger"
+        	android:background="@drawable/theme_detail_back_selector"
+			android:scaleType="centerInside"
+    	/>
+
+	</RelativeLayout>
+	
+	<LinearLayout 
+	    android:id="@+id/no_gesture_info"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:gravity="center_horizontal"
+	    android:visibility="gone"
+	    >
+	    
+	    <ImageView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+	        android:layout_marginTop="48dp"
+	        android:src="@drawable/appfunc_search_info"/>
+	    
+	    <com.jiubang.ggheart.components.DeskTextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+	        android:layout_marginTop="40dp"
+	        android:textSize="13.33sp"
+	        android:textColor="#878787"
+	        android:text="@string/no_gesture_tips"/>
+	    
+	</LinearLayout>
+	
+	
+	<ListView 
+	    android:id="@+id/my_gesture_list"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:listSelector="@drawable/theme_detail_back_selector"
+	    android:divider="#FFE6E6E6"
+	    android:dividerHeight="0.66dp"
+	    android:scrollingCache="false"
+ 	    android:background="@drawable/gesture_list_bg"
+	    android:cacheColorHint="@android:color/transparent"
+	    >
+	</ListView>
+</LinearLayout>

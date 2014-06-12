@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="53.33dp"
+    android:background="@color/center_background"
+    android:focusable="false">
+
+    <RelativeLayout
+        android:id="@+id/apps_mgr_listview_foot_loading"
+        android:layout_width="fill_parent"
+        android:layout_height="53.33dp">
+        <com.jiubang.ggheart.apps.gowidget.gostore.component.ThemeStoreProgressBar
+              	android:layout_width="fill_parent"
+  				android:layout_height="wrap_content"
+  				android:orientation="horizontal"
+  				android:gravity="center">
+  				<ProgressBar
+  	 				android:id="@+id/themestore_btmprogress"
+   	 				android:layout_width="20dp"
+  	 				android:layout_height="20dp"
+  	 				android:visibility="visible"	
+  	 				android:layout_marginRight="6dp"/>
+  				<TextView
+  					android:id="@+id/themestore_btmProgress_text"
+  					android:layout_width="wrap_content"
+  					android:layout_height="48dp"
+  					android:textColor="#000000"
+  					android:textSize="16sp"
+  					android:text="@string/loading"
+  					android:gravity="center_vertical"/>
+            </com.jiubang.ggheart.apps.gowidget.gostore.component.ThemeStoreProgressBar>
+    </RelativeLayout>
+    <RelativeLayout 
+        android:id="@+id/apps_mgr_listview_foot_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="53.33dp"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true">
+        <ImageView 
+            android:id="@+id/apps_mgr_listview_foot_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/apps_mgr_listview_foot_warning"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/apps_mgr_listview_foot_net_error_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/apps_mgr_listview_foot_warning"
+            android:textSize="14.667sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#757575"
+            android:text="@string/apps_mgr_listview_foot_net_error"
+            android:layout_centerVertical="true"/>
+        <Button
+            android:id="@+id/apps_mgr_listview_foot_retry_btn"
+	    	android:background="@drawable/apps_mgr_listview_foot_retry_selector"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:paddingLeft="10dp"
+	    	android:paddingRight="10dp"
+	    	android:layout_marginLeft="10dp"
+	    	android:gravity="center"
+	    	android:layout_toRightOf="@+id/apps_mgr_listview_foot_net_error_tip"
+	    	android:text="@string/apps_mgr_listview_foot_retry"
+	    	android:textSize="17.33dp"
+	    	android:textColor="#535353" 
+	    	android:layout_centerVertical="true"/>
+    </RelativeLayout>        
+
+    <RelativeLayout
+        android:id="@+id/apps_mgr_listview_foot_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+              
+        <TextView
+            android:id="@+id/apps_mgr_listview_foot_end_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="to end"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/trash_area"
+		android:layout_width="fill_parent" 
+		android:layout_height="@dimen/cards_top_land"
+		android:gravity="fill_horizontal|top">
+			
+		<ImageView android:id="@+id/trash_can" 
+			android:layout_width="fill_parent"
+			android:layout_height="30dip" 
+			android:src="@drawable/del"
+			android:scaleType="center"
+			android:background="@drawable/trash_bg_normal"/>
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<resources>  
+
+   <style name="WorkspaceLargeIcon">
+        <item name="android:textSize">12dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">middle</item>
+        <item name="android:shadowColor">#FF000000</item>
+        <item name="android:shadowRadius">2.0</item>
+        <item name="android:textColor">#FFF</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:background">@drawable/shortcut_selector</item>
+        <item name="android:paddingLeft">2dip</item>
+        <item name="android:paddingRight">2dip</item>
+    </style>
+    
+    <style name="WorkspaceLargeIcon.Portrait">
+        <!-- <item name="android:drawablePadding">5dip</item> -->
+        <item name="android:drawablePadding">2dip</item>
+        <item name="android:paddingTop">4dip</item>
+        <item name="android:layout_marginLeft">1dip</item>
+        <item name="android:layout_marginRight">1dip</item>
+        <item name="android:layout_marginTop">13dip</item>
+        <item name="android:layout_marginBottom">8dip</item>
+    </style>
+    
+    <style name="WorkspaceLargeIcon.Landscape">
+        <!-- <item name="android:drawablePadding">3dip</item> -->
+        <item name="android:drawablePadding">1dip</item>
+        <item name="android:paddingTop">2dip</item>
+        <item name="android:layout_marginLeft">10dip</item>
+        <item name="android:layout_marginRight">10dip</item>
+    </style>
+</resources> 

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+
+  >
+  
+  <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10.05dip"
+        android:paddingBottom="18.76dip"
+        android:paddingLeft="4dp"
+        android:orientation="horizontal" >
+        
+	  <TextView
+	        android:id="@+id/typeSpinner"
+	        android:layout_marginLeft="6dip"
+	        android:paddingLeft="6.67dp"
+	        android:layout_width="95dip"
+	        android:textSize="12sp"
+	        android:layout_gravity="center_vertical"
+	        android:layout_height="31.49dip" 
+	        android:gravity="center_vertical"
+	        android:textColor="#ff313131"
+	        android:singleLine="true"
+	        android:text="@string/gostore_search_type_all"
+	        android:background="@drawable/gostore_search_type_n"/>
+	   
+	  <RelativeLayout
+	      android:layout_width="fill_parent"
+	      android:layout_height="31.49dip"
+	      android:layout_marginLeft="4dp"
+	      android:layout_marginRight="10dp"
+	      >
+
+	      <RelativeLayout
+	          android:layout_width="fill_parent"
+	          android:layout_height="fill_parent"
+	          android:id="@+id/searchRelativeLayout"
+	          android:background="@drawable/gostore_seachbar_bg_n" >
+
+	          <com.jiubang.ggheart.components.DeskEditText
+	              android:id="@+id/searchInputEditText"
+	              android:layout_width="fill_parent"
+	              android:layout_height="fill_parent"
+	              android:layout_alignParentBottom="true"
+	              android:layout_alignParentLeft="true"
+	              android:layout_alignParentTop="true"
+	              android:paddingTop="1dip"
+	              android:paddingBottom="1dip"
+	              android:hint="@string/themestore_search_input_hint"
+	              android:singleLine="true"
+	              android:textColor="#000000"
+	              android:background="#00000000"
+	              android:textSize="13.33sp" />
+	      </RelativeLayout>
+
+
+     	<com.jiubang.ggheart.components.DeskTextView
+	  		android:id="@+id/searchGoTextView"
+	  		android:layout_width="40dip"
+	  		android:layout_height="30dip"
+	  		android:layout_alignParentRight="true"
+	  		android:layout_centerVertical="true"
+	  		android:textColor="#000000"
+	  		android:textSize="20sp"
+	  	/>
+
+	  </RelativeLayout>
+  </LinearLayout>
+  
+  <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/gostore_search_line"/>
+</LinearLayout>

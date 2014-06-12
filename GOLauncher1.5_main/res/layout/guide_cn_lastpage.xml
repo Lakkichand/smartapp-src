@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.desks.diy.GuideTipsView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/guide_bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/guide_last_lay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/guide_bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/guide_linear"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" >
+
+            <TextView
+                android:id="@+id/text_hello"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/img_golauncher"
+                android:paddingLeft="16dp"
+                android:paddingTop="36dp"
+                android:text="@string/guide_text3"
+                android:textColor="#55AF2B"
+                android:textSize="28dp" />
+
+            <ImageView
+                android:id="@+id/img_golauncher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:focusable="false"
+                android:src="@drawable/guide_lastpage_socket" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/updatedetail1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/guide_linear"
+            android:layout_marginTop="@dimen/guide_layout_version_text_space"
+            android:paddingLeft="28dp"
+            android:text="@string/updateVersion"
+            android:textColor="#747474"
+            android:textSize="13dp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/guide_go_animation"
+            android:layout_below="@+id/updatedetail1" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top" >
+
+                <TextView
+                    android:id="@+id/updatedetail2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="16dp"
+                    android:drawableLeft="@drawable/guide_update_icon"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="@string/updatelog1"
+                    android:textColor="#7c7c7c"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/updatedetail3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/updatedetail2"
+                    android:layout_marginTop="6dp"
+                    android:drawableLeft="@drawable/guide_update_icon"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="@string/updatelog2"
+                    android:textColor="#7c7c7c"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/updatedetail4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/updatedetail3"
+                    android:layout_marginTop="6dp"
+                    android:drawableLeft="@drawable/guide_update_icon"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="@string/updatelog3"
+                    android:textColor="#7c7c7c"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/updatedetail5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/updatedetail4"
+                    android:layout_marginTop="6dp"
+                    android:drawableLeft="@drawable/guide_update_icon"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="@string/updatelog4"
+                    android:textColor="#7c7c7c"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/updatedetail6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/updatedetail5"
+                    android:layout_marginTop="6dp"
+                    android:drawableLeft="@drawable/guide_update_icon"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="@string/updatelog5"
+                    android:textColor="#7c7c7c"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/updatedetail7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/updatedetail6"
+                    android:layout_marginTop="6dp"
+                    android:drawableLeft="@drawable/guide_update_icon"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="@string/updatelog6"
+                    android:textColor="#7c7c7c"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/updatedetail8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/updatedetail7"
+                    android:layout_marginTop="6dp"
+                    android:drawableLeft="@drawable/guide_update_icon"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="@string/updatelog7"
+                    android:textColor="#7c7c7c"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/updatedetail9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/updatedetail8"
+                    android:layout_marginTop="6dp"
+                    android:drawableLeft="@drawable/guide_update_icon"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="@string/updatelog8"
+                    android:textColor="#7c7c7c"
+                    android:textSize="13dp" />
+            </RelativeLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/guide_go_animation"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="100dp" >
+
+            <ImageButton
+                android:id="@+id/guide_gobtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/guide_go_btn_selector"
+                android:focusable="false" />
+
+            <com.jiubang.ggheart.apps.desks.diy.GuideSlideView
+                android:layout_width="@dimen/guide_slide_width"
+                android:layout_height="@dimen/guide_slide_height"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10.5dp"
+                android:layout_toLeftOf="@id/guide_gobtn" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/gotolicense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textSize="10.5dp" />
+
+        <RelativeLayout
+            android:id="@+id/guide_lastpage_btn_group"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/gotolicense"
+            android:layout_marginBottom="16dp" >
+
+            <ImageButton
+                android:id="@+id/guide_left_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="46dp"
+                android:layout_toLeftOf="@+id/guide_middle_btn"
+                android:background="@drawable/guide_btn_selector"
+                android:src="@drawable/guide_weibo" />
+
+            <ImageView
+                android:id="@+id/guide_middle_line"
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/guide_btn_line" />
+
+            <ImageButton
+                android:id="@+id/guide_middle_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/guide_middle_line"
+                android:background="@drawable/guide_btn_selector"
+                android:src="@drawable/guide_blog" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</com.jiubang.ggheart.apps.desks.diy.GuideTipsView>

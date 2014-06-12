@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:gravity="center" android:layout_marginTop="8dip"
+	android:layout_marginBottom="8dip">
+
+	<RelativeLayout android:id="@+id/frame"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_marginTop="4dip" android:background="@drawable/desk_setting_visual_icon_bg"
+		android:layout_marginBottom="6dip" android:layout_marginRight="4dip">
+
+		<ImageView android:id="@+id/large_line"
+			android:layout_width="fill_parent" android:layout_height="1px"
+			android:layout_alignParentBottom="true" android:background="#ff89b3ff" />
+
+		<ImageView android:id="@+id/small_line"
+			android:layout_width="fill_parent" android:layout_height="1px"
+			android:layout_alignParentBottom="true" android:background="#ffff8989" />
+
+		<ImageView android:id="@+id/deskicon" android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true" />
+
+		<ImageView android:id="@+id/dockicon" android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true" />
+
+		<ImageView android:id="@+id/foldericon"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true" />
+
+	</RelativeLayout>
+
+	<com.jiubang.ggheart.components.DeskTextView android:id="@+id/max_text" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="@string/desk_setting_visual_tab_icon_max"
+		android:textColor="#565656" android:textSize="8sp"
+		android:layout_toRightOf="@id/frame" />
+
+	<com.jiubang.ggheart.components.DeskTextView android:id="@+id/large_text" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="@string/desk_setting_visual_tab_icon_large"
+		android:textColor="#565656" android:textSize="8sp"
+		android:layout_toRightOf="@id/frame"/>
+
+	<com.jiubang.ggheart.components.DeskTextView android:id="@+id/small_text" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="@string/desk_setting_visual_tab_icon_small"
+		android:textColor="#565656" android:textSize="8sp"
+		android:layout_toRightOf="@id/frame"/>
+
+	<com.jiubang.ggheart.components.DeskTextView android:id="@+id/desktext" android:layout_width="52dip"
+		android:layout_height="wrap_content" android:gravity="center"
+		android:text="@string/desk_setting_visual_tab_icon_name_icon"
+		android:textColor="#565656" android:textSize="10sp"
+		android:layout_below="@id/frame" android:layout_marginTop="2dip"
+		android:layout_marginBottom="2dip" />
+
+	<com.jiubang.ggheart.components.DeskTextView android:id="@+id/docktext" android:layout_width="52dip"
+		android:layout_height="wrap_content" android:gravity="center"
+		android:text="@string/desk_setting_visual_tab_icon_name_dock"
+		android:textColor="#565656" android:textSize="10sp"
+		android:layout_below="@id/frame" android:layout_marginTop="2dip"
+		android:layout_marginBottom="2dip" />
+
+	<com.jiubang.ggheart.components.DeskTextView android:id="@+id/foldertext" android:layout_width="52dip"
+		android:layout_height="wrap_content" android:gravity="center"
+		android:text="@string/desk_setting_visual_tab_icon_name_folder"
+		android:textColor="#565656" android:textSize="10sp"
+		android:layout_below="@id/frame" android:layout_marginTop="2dip"
+		android:layout_marginBottom="2dip" />
+
+</RelativeLayout>

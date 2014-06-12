@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/messagecenter_webview_width"
+    android:layout_height="@dimen/messagecenter_webview_height"
+    android:background="@drawable/messagecenter_webview_bg">
+        
+  	<include layout="@layout/message_content_webview"
+	android:id="@+id/webviewlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+</RelativeLayout>

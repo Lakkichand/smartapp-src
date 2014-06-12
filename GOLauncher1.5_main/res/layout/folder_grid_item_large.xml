@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" >
+
+    
+<com.jiubang.ggheart.components.DeskIcon
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/name"
+    android:layout_width="fill_parent"
+    android:layout_height="85dip"
+
+    android:drawablePadding="0dip"
+    android:paddingLeft="0dip"
+    android:paddingRight="2dip"
+    android:paddingTop="2dip"
+    android:paddingBottom="3dip"
+        
+    android:textSize="13sp"
+    android:singleLine="true"
+    android:ellipsize="middle"
+    android:fadingEdge="horizontal"
+    android:textColor="@color/bright_text_dark_focused"
+    android:gravity="center" />
+
+    <ImageView android:id="@+id/choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"/>
+
+</FrameLayout>

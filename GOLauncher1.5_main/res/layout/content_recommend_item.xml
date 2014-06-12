@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    >
+    	<com.jiubang.ggheart.apps.gowidget.gostorewidget.SimpleImageView
+   			android:id="@+id/recommendImageView1"
+   			android:layout_width="92dp"
+   			android:layout_height="61.33dp"
+   			android:layout_alignParentLeft="true"
+   			android:layout_alignParentTop="true"
+   			android:background="@drawable/recommend_item_bg"
+		/>
+  		<TextView
+  		    android:id="@+id/recommendTextView1"
+  			android:layout_width="92dp"
+  			android:layout_height="16.67dp"
+  			android:layout_below="@id/recommendImageView1"
+  			android:layout_alignLeft="@id/recommendImageView1"
+  			android:layout_alignRight="@id/recommendImageView1"
+  			android:gravity="center"
+  			android:textColor="#393939"
+   			android:textSize="12sp"
+   			android:singleLine="true"
+  		/>
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="66dip" >
+
+    <ImageView
+        android:id="@+id/notificationAppIcon"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dip"
+        android:src="@drawable/notification_not_installed" />
+    <!-- android:layout_marginRight="6dip" -->
+
+    <CheckBox
+        android:id="@+id/notificationCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="7dip"
+        android:layout_marginRight="7dip"
+        android:button="@drawable/notification_checkbox_selector"
+        android:focusable="false" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dip"
+        android:layout_toLeftOf="@+id/notificationCheckBox"
+        android:layout_toRightOf="@+id/notificationAppIcon"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/notificationAppTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/notificationAppSummry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#404040"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/numImageView"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignRight="@+id/notificationAppIcon"
+        android:layout_alignTop="@+id/notificationAppIcon"
+         />
+
+</RelativeLayout>

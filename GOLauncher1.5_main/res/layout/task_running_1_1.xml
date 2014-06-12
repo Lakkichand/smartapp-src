@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.jiubang.ggheart.apps.gowidget.taskmanager.TaskRunning11Widget
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<include android:id="@+id/contentview" layout="@layout/task_running_1_1content"></include>
+</com.jiubang.ggheart.apps.gowidget.taskmanager.TaskRunning11Widget>
+

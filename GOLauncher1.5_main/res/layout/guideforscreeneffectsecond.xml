@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.desks.diy.frames.tipsforgl.GuideForScreenEffectSecondTipView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@drawable/guide_black_bg"
+  android:clickable="true">
+  
+  	<com.jiubang.ggheart.components.DeskTextView 
+  		android:id="@+id/title"
+  		android:layout_width="wrap_content"
+  		android:layout_height="@dimen/guide_screeneffect_title_height"
+  		android:layout_alignParentTop="true"
+  		android:layout_marginLeft="20dip"
+  		android:gravity="center_vertical"
+  		android:text="@string/effects"
+  		android:textColor="@android:color/white"
+  		android:textSize="22sp"/>
+  		
+  	<ImageView 
+  		android:id="@+id/topline"
+  		android:layout_width="match_parent"
+  		android:layout_height="wrap_content"
+  		android:layout_below="@id/title"
+  		android:background="@drawable/guide_list_line"/>
+  		
+  		
+  	<ListView 
+  		android:id="@+id/effects"
+  		android:layout_width="261dip"
+  		android:layout_height="@dimen/guide_screeneffect_listview_height_secondtip"
+  		android:layout_centerHorizontal="true"
+  		android:layout_below="@id/topline"
+  		android:layout_marginTop="@dimen/guide_screeneffect_topline_listview_space_secondtip"
+  		android:layout_marginBottom="@dimen/guide_screeneffect_listview_button_space_secondtip"
+  		android:background="@drawable/guide_list_bg"
+  		android:divider="@drawable/guide_list_line"/>
+  	
+  		
+  	<LinearLayout 
+  		android:id="@+id/buttons"
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:layout_centerHorizontal="true"
+  		android:layout_below="@id/effects"
+  		android:orientation="horizontal">
+  		<com.jiubang.ggheart.components.DeskButton 
+  			android:id="@+id/ok"
+  			android:layout_width="100dip"
+  			android:layout_height="40dip"
+  			android:layout_marginRight="15dip"
+  			android:text="@string/guide_screen_effect_secondtip_ok"
+  			android:background="@drawable/guide_screen_effect_button_selector"
+  			android:textColor="@android:color/white"
+  			android:textSize="18sp"/>
+  		<com.jiubang.ggheart.components.DeskButton 
+  			android:id="@+id/continuetry"
+  			android:layout_width="100dip"
+  			android:layout_height="40dip"
+  			android:layout_marginLeft="15dip"
+  			android:text="@string/guide_screen_effect_secondtip_continue_try"
+  			android:background="@drawable/guide_screen_effect_button_selector"
+  			android:textColor="@android:color/white"
+  			android:textSize="18sp"/>
+  		</LinearLayout>
+  		
+  		<com.jiubang.ggheart.components.DeskTextView 
+  			android:id="@+id/settingpath"
+  			android:layout_width="wrap_content"
+  			android:layout_height="wrap_content"
+  			android:layout_below="@id/buttons"
+  			android:drawableLeft="@drawable/guide_point"
+  			android:layout_marginTop="@dimen/guide_screeneffect_buttons_settingpath_space_secondtip"
+  			android:layout_marginLeft="19dip"
+  			android:layout_marginRight="20dip"
+  			android:drawablePadding="8dip"
+  			android:textColor="@android:color/white"
+  			android:textSize="17sp"
+  			android:text="@string/guide_screen_effect_show_settingpath"/>
+  		
+</com.jiubang.ggheart.apps.desks.diy.frames.tipsforgl.GuideForScreenEffectSecondTipView>
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   	 
+   	<string name="gostorewidget41_preview_title">GOStoreWidget(4x1)</string>
+   	<string name="gostorewidget_new41_preview_title">GOStore Cool Widget(4*1)</string>
+   	
+	<string name="dialogtitle">Checking GO Launcher EX</string>
+	<string name="dialogcontent">GO Launcher EX is not installed in your phone,
+		please press OK to download it</string>
+	<string name="dialogok">OK</string>
+	<string name="title">GO Store</string>
+	
+	<string name="gostorewidget_default_theme">Default</string>
+	
+	<string name="appgamewidget41_preview_title">GOMarket Widget(4x1)</string>
+	
+</resources>

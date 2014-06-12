@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ 	android:id="@+id/mainview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff5f5f5"
+    android:orientation="vertical" >
+    
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gostore_tabview_shadow" />
+        
+
+    <com.jiubang.ggheart.components.SortTabView
+        android:id="@+id/tabview"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:layout_gravity=""
+        android:background="@drawable/gostore_tabview_bg"
+        android:orientation="horizontal" 
+        android:visibility="gone"/>
+
+</LinearLayout>

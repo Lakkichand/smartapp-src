@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:paddingLeft="2dp"
+	android:paddingRight="2dp">
+
+	<LinearLayout android:orientation="horizontal"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:padding="5dp">
+		<com.jiubang.ggheart.components.DeskTextView
+			android:text="@string/app_fun_new_folder_name" android:editable="false"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		<com.jiubang.ggheart.components.DeskEditText
+			android:id="@+id/userfolder_name" android:maxLines="1" android:text="@string/folder_name"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:editable="false" />
+	</LinearLayout>
+	<com.jiubang.ggheart.components.DeskTextView
+		android:text="@string/app_fun_edit_folder_app_title" android:editable="false"
+		android:padding="5dp" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:id="@+id/apptips" />
+
+	<ListView android:id="@+id/applist" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_weight="1"
+		android:drawSelectorOnTop="false"
+		android:fastScrollEnabled="true" 
+		/>
+
+	<LinearLayout android:layout_width="fill_parent"
+		android:orientation="horizontal" android:layout_height="wrap_content"
+		android:paddingLeft="8dp" android:paddingRight="8dp">
+		<com.jiubang.ggheart.components.DeskButton android:id="@+id/finish_btn" android:layout_weight="1"
+			android:layout_width="wrap_content" android:gravity="center"
+			android:layout_height="wrap_content" android:text="@string/finish"
+			>
+		</com.jiubang.ggheart.components.DeskButton>
+		<com.jiubang.ggheart.components.DeskButton android:id="@+id/cancle_btn" android:layout_weight="1"
+			android:layout_width="wrap_content" android:gravity="center"
+			android:layout_height="wrap_content" android:text="@string/cancle">
+		</com.jiubang.ggheart.components.DeskButton>
+	</LinearLayout>
+	<!-- </LinearLayout> -->
+</LinearLayout>
+<!-- 		<com.jiubang.ggheart.components.DeskButton android:id="@+id/delete_btn" android:layout_weight="1"
+			android:layout_width="wrap_content" android:gravity="center"
+			android:layout_height="wrap_content" android:text="@string/app_fun_delete_folder">
+		</com.jiubang.ggheart.components.DeskButton> -->
+
+
+
+    

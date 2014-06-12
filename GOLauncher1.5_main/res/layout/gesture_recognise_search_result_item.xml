@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myandroid="http://schemas.android.com/apk/res/com.gau.go.launcherex"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/my_gesture_item"
+        android:layout_width="fill_parent"
+        android:layout_height="53.33dp" >
+
+        <com.jiubang.ggheart.components.diygesture.gesturemanageview.DiyGestureItemView
+            android:id="@+id/my_gesture_item_icon"
+            android:layout_width="41.33dp"
+            android:layout_height="41.33dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="9dp"
+            android:background="@drawable/gesture_image_bg"
+            android:padding="2dp" 
+            myandroid:is_small_preview="true"
+            myandroid:strokeWidth = "@dimen/gesture_preview_width"
+            myandroid:paintColor = "@color/gesture_draw_color"
+            myandroid:is_move_center="true"
+            />
+
+        <TextView
+            android:id="@+id/my_gesture_item_type_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="#A2A2A2"
+            android:textSize="14.67sp" />
+
+        <TextView
+            android:id="@+id/my_gesture_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="#3E3E3E"
+            android:textSize="14.67sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.appmanagement.component.AppsUninstallContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/buttom_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="53dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/appsuninstall_bottombar"
+            android:gravity="center">
+          	<Button
+	            android:id="@+id/apps_uninstall_btn"
+	            android:layout_width="126.7dp"
+	            android:layout_height="37dp"
+	            android:layout_alignParentLeft="true"
+	            android:layout_marginLeft="14dp"
+	            android:text="@string/appsuninstall_btn"
+	            android:background="@drawable/yzjz_white_button"
+	            android:textColor="#535353"
+	            android:layout_centerVertical="true"
+	            android:textSize="16sp"/>
+	        <Button
+	            android:id="@+id/apps_uninstall_cancel"
+	            android:layout_width="126.7dp"
+	            android:layout_height="37dp"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginRight="14dp"
+	            android:text="@string/cancel"
+	            android:background="@drawable/yzjz_white_button"
+	            android:layout_centerVertical="true"
+	            android:textColor="#535353"
+	            android:textSize="16sp"/>
+        </RelativeLayout>
+  
+        <RelativeLayout
+            android:id="@+id/apps_uninstall_title"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" 
+	        android:layout_alignParentTop="true"
+	        android:background="@drawable/appsuninstall_topbar">
+
+	        <ImageView
+	            android:id="@+id/apps_uninstall_title_imageView_back"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_alignParentTop="true"
+	            android:src="@drawable/apps_uninstall_title_cancel" />
+	
+	        <ImageView
+	            android:id="@+id/imageView3"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_toRightOf="@+id/apps_uninstall_title_imageView_back"
+	            android:src="@drawable/appsmanagement_line_right" />
+	        
+	        <TextView
+	            android:id="@+id/apps_uninstall_title_textView"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_marginLeft="14dp"
+	            android:layout_toRightOf="@+id/imageView3"
+	            android:text="@string/select_group_applications"
+	            android:textColor="#51B500"
+	            android:textSize="18.6sp" />
+	
+	        <ImageView
+	            android:id="@+id/apps_uninstall_title_imageView_select"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="11dp"
+	            android:layout_alignParentRight="true"
+	            android:layout_centerVertical="true"
+	            android:background="@drawable/apps_uninstall_not_selected" />
+    	</RelativeLayout>
+    	
+        <com.jiubang.ggheart.apps.appmanagement.component.MyAppsView
+                android:id="@+id/phoneapps_list"
+                android:layout_above="@id/buttom_layout"
+                android:layout_below="@+id/apps_uninstall_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#faf9f9"
+                android:cacheColorHint="#00000000"
+                android:fadingEdge="none"
+                android:divider="@drawable/themestore_list_item_line" />     
+        
+    </RelativeLayout>
+
+</com.jiubang.ggheart.apps.appmanagement.component.AppsUninstallContainer>

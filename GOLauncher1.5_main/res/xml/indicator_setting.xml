@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:ggheart="http://schemas.android.com/apk/res/com.gau.go.launcherex"
+	android:title="@string/indicators_setting" >
+	
+	<com.jiubang.ggheart.components.DeskListPreference
+		android:entryValues="@array/screen_indicator_showmode_values"
+		android:title="@string/screen_indicator_showmode"
+		android:key="@string/key_indicator_showmode"
+		android:entries="@array/screen_indicator_showmode_array"
+		android:negativeButtonText="@string/cancle" />
+	
+	<com.jiubang.ggheart.components.DeskListPreference
+	    android:entryValues="@array/screen_indicator_position_values"
+		android:title="@string/screen_indicator_position"
+		android:key="@string/key_indicator_position"
+		android:entries="@array/screen_indicator_position_array"
+		android:negativeButtonText="@string/cancle" />
+	
+	<com.jiubang.ggheart.components.DeskListPreference
+	    android:entryValues="@array/screen_indicator_values"
+		android:title="@string/screen_indicator"
+		android:key="@string/key_merge_indicator"
+		android:entries="@array/screen_indicator_array"
+		android:negativeButtonText="@string/cancle" />
+	<!-- 
+	<com.jiubang.ggheart.components.DeskCheckBoxPreference 
+		android:title="@string/screen_indicator" 
+		android:summary="@string/screen_indicator_hint" 
+		android:key="@string/key_screen_indicator"/>
+	
+	<com.jiubang.ggheart.components.DeskCheckBoxPreference 
+		android:title="@string/screen_indicator_autohide" 
+		android:summary="@string/screen_indicator_autohide_hint" 
+		android:key="@string/key_indicator_auto_hide"
+	/>
+	 
+	<com.jiubang.ggheart.components.DeskListPreference
+		android:title="@string/draw_indicator_showmode"
+		android:key="@string/key_draw_indicator_showmode"
+		android:negativeButtonText="@string/cancle" />
+	-->
+    
+</PreferenceScreen>

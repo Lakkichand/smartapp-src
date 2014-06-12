@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="69.33333dp"
+    android:paddingBottom="0dp"
+    android:paddingTop="0dp" >
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="69.33333dp" />
+    
+    
+    <ImageSwitcher
+        android:id="@+id/categories_imageswitcher"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:inAnimation="@anim/appgame_fade_in"
+        android:outAnimation="@anim/appgame_fade_out"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6.666dp" >
+
+        <ImageView
+            android:id="@+id/recomm_app_group_image"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:scaleType="fitXY" />
+        
+         <ImageView
+            android:id="@+id/recomm_app_group_image_another"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:scaleType="fitXY" />
+    </ImageSwitcher>
+
+    <TextView
+        android:id="@+id/recomm_app_nametext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.666667dp"
+        android:layout_marginTop="14dp"
+        android:layout_toRightOf="@+id/categories_imageswitcher"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="#393939"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/recomm_app_desc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/recomm_app_nametext"
+        android:layout_below="@+id/recomm_app_nametext"
+        android:layout_marginTop="3dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="#909090"
+        android:textSize="12.5dp" />
+
+</RelativeLayout>

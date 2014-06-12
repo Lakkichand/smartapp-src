@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.jiubang.ggheart.apps.desks.diy.themescan.ThemeDetailView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:clickable="true"
+  android:gravity="center_horizontal"
+  android:background="#ffe6e6e6"
+  android:scrollbars="vertical" >
+     
+    <include 
+    	android:id="@+id/detail_title"
+    	layout="@layout/theme_detail_title_new"
+    	android:layout_width="fill_parent"
+    	android:layout_height="48dp"
+    	android:layout_alignParentTop="true"
+    	/>
+    <include 
+    	android:id="@+id/detail_buttons"
+    	layout="@layout/theme_detail_button"
+    	android:layout_width="fill_parent"
+    	android:layout_height="53dp"
+    	android:layout_alignParentBottom="true"/>
+    	
+    <include 
+    	android:id="@+id/theme_detail"
+    	layout="@layout/theme_detail_scan"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_below="@id/detail_title"
+    	android:layout_above="@id/detail_buttons"/>
+   <include 
+      android:id="@+id/theme_detail_loading"
+      layout="@layout/themestore_btmprogress"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      />
+</com.jiubang.ggheart.apps.desks.diy.themescan.ThemeDetailView>

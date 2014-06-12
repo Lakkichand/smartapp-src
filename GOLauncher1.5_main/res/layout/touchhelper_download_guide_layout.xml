@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@drawable/touchhelper_download_bg"
+    android:orientation="vertical" >
+<LinearLayout
+    android:id="@+id/linearlayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal" >
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/touchhelper_download_guide_title_margin_top"
+        android:text="@string/guide_custom_full_screen_widget_title"
+        android:textColor="#55af2b"
+        android:textSize="@dimen/touchhelper_download_guide_title_size" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="@string/touchhelper_download_recommand_text1"
+        android:textSize="@dimen/touchhelper_download_button_text_size" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:text="@string/touchhelper_download_recommand_text2"
+        android:textColorHint="#747474"
+        android:textSize="@dimen/touchhelper_download_button_text_size"
+        android:textStyle="bold" />
+</LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/linearlayout1"
+        android:layout_above="@+id/download"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/touchhelper_download_recommand" />
+
+    <Button
+        android:id="@+id/download"
+        android:layout_width="@dimen/touchhelper_download_button_width"
+        android:layout_height="@dimen/touchhelper_download_button_height"
+        android:layout_above="@+id/never_show"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/touchhelper_download_guide_download_selector"
+        android:text="@string/touchhelper_download_guide_download_now"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/touchhelper_download_button_text_size"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/never_show"
+        android:layout_width="@dimen/touchhelper_download_button_width"
+        android:layout_height="@dimen/touchhelper_download_button_height"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/touchhelper_download_guide_never_show_selector"
+        android:text="@string/touchhelper_download_guide_never_show"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/touchhelper_download_button_text_size"
+        android:textStyle="bold" />
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 定义与组件相关的尺寸、坐标 -->
+
+<resources>
+
+    <!-- BubbleTextView 图标与文字的间距 -->
+    <dimen name="drawable_padding">4.5dip</dimen>
+    <dimen name="folder_edit_item_height">114dip</dimen>
+    <dimen name="folder_edit_view_height">420dip</dimen>
+    <dimen name="folder_edit_view_width">600dip</dimen>
+</resources>

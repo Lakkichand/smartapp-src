@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:paddingTop="10dp" android:paddingLeft="10dp"  android:paddingRight="10dp" 
+	android:paddingBottom="15dip"  
+	 android:orientation="vertical">
+<!-- 程序图标区域 -->
+	<FrameLayout android:id="@+id/icons_layout" android:background="#000000"
+		android:padding="1dp" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_weight="7">
+		<ViewFlipper android:layout_height="wrap_content"
+			android:gravity="center|top" android:id="@+id/icon_flipper"
+			android:layout_gravity="center|top" android:layout_width="fill_parent"></ViewFlipper>
+			 
+	</FrameLayout>
+	
+<!-- 内存状态区域 -->
+	<LinearLayout android:layout_width="fill_parent" android:layout_marginTop="8dip"  
+		  android:background="#000000"   	android:id="@+id/arm_layout"
+		android:layout_height="wrap_content"  android:minHeight="55dip" android:layout_weight="3">
+		
+	<RelativeLayout  android:layout_gravity="center_vertical"
+	  	android:layout_width="fill_parent"   
+		android:layout_height="wrap_content" >
+		
+		<LinearLayout android:layout_width="wrap_content" android:id="@+id/layout_left" 
+			android:layout_height="wrap_content" android:gravity="center_vertical|left" 
+			android:paddingLeft="8dip"  android:paddingRight="5dip"  android:layout_centerVertical="true"
+					android:layout_alignParentLeft = "true"  android:layout_weight="2"   
+			android:orientation="horizontal">
+			
+				<ImageView android:layout_height="wrap_content" android:layout_width="wrap_content"  
+				android:id="@+id/progress_bar" android:scaleType="fitCenter" android:layout_marginRight="5dip"
+				></ImageView>
+			
+				 <LinearLayout android:layout_width="wrap_content"
+					 android:layout_height="wrap_content" 
+					android:orientation="vertical">
+				
+						<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:textSize="12sp"
+						android:scaleType="fitCenter" android:textColor="#000000" android:id="@+id/arm_txt"
+						/>
+						
+						<com.jiubang.ggheart.components.DeskTextView android:text="12M/242M"
+						android:id="@+id/text"  
+						android:textSize="12sp" android:textColor="#000000"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						 />
+				</LinearLayout>
+		</LinearLayout>
+	
+	 <LinearLayout android:layout_width="wrap_content" android:layout_alignParentRight="true"  android:layout_weight="1"
+			 android:layout_height="wrap_content"     android:paddingRight="5dip" 
+			 android:layout_centerVertical="true"
+			android:orientation="horizontal">
+
+			<ImageButton android:layout_height="wrap_content"  android:layout_marginRight="5dip" 
+				android:background="#000000" android:scaleType="fitCenter" 
+				 android:layout_width="wrap_content" android:id="@+id/kill"></ImageButton>
+
+			<ImageButton android:layout_height="wrap_content" 
+				android:background="#000000" android:id="@+id/refresh"
+				android:scaleType="fitCenter" 
+				android:layout_width="wrap_content"></ImageButton>
+		</LinearLayout>
+	 
+	</RelativeLayout>
+		
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.appgame.base.downloadmanager.DownloadControllView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <LinearLayout
+        android:id="@+id/apps_download_tips"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:visibility="gone" >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:background="#FFFFFF" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/appgame_titlebar_bg" >
+
+            <ImageButton
+                android:id="@+id/appgame_download_controll_back"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:background="@drawable/apps_management_back_select"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:src="@drawable/app_center_back" />
+
+            <TextView
+                android:id="@+id/appgame_download_controll_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/appgame_download_controll_back"
+                android:text="@string/download_manager_title"
+                android:textColor="#393939"
+                android:textSize="18dp" />
+
+            <ImageButton
+                android:id="@+id/appgame_download_delete_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/apps_management_back_select"
+                android:src="@drawable/download_manager_delete_icon" >
+            </ImageButton>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.jiubang.ggheart.appgame.appcenter.component.PinnedHeaderListView
+        android:id="@+id/appgame_download_controll_listView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/top_view"
+        android:background="@color/center_background"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/listline"
+        android:dividerHeight="0.5dp"
+        android:fadingEdge="none"
+        android:scrollbarStyle="outsideOverlay"
+        android:listSelector="@color/transparent_background">
+    </com.jiubang.ggheart.appgame.appcenter.component.PinnedHeaderListView>
+
+</com.jiubang.ggheart.appgame.base.downloadmanager.DownloadControllView>

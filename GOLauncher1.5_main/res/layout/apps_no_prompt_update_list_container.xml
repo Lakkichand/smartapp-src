@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/center_background"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/no_update_info"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:cacheColorHint="@android:color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="@string/apps_management_none_for_no_update"
+            android:textColor="#5d5d5d"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/no_operation_button"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/appgame_install_btn_selector"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="@string/apps_management_reprompt_all_update"
+            android:textColor="#5d5d5d"
+            android:textSize="13.2dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/themestore_list_item_line" />
+
+    <LinearLayout
+        android:id="@+id/no_upate_no_data_linear"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/center_background"
+        android:gravity="center"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/no_data_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="13.3dip"
+            android:drawableTop="@drawable/appsmanagement_no_update_bg"
+            android:text="@string/apps_management_no_update_info_message"
+            android:textColor="#666666"
+            android:textSize="14.7sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/no_upate_list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1.0"
+        android:background="@color/center_background"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/listline"
+        android:dividerHeight="0.5dp"
+        android:fadeScrollbars="true"
+        android:listSelector="@android:color/transparent" />
+
+</LinearLayout>

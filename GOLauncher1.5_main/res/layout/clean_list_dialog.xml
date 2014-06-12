@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical">
+
+	<CheckBox android:id="@+id/clean_screen" 
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content" 
+	android:layout_weight="0"
+	android:text="@string/clean_screen"
+	android:textAppearance="?android:attr/textAppearanceMedium"
+	android:layout_centerVertical="true"
+	/>
+	
+	<CheckBox android:id="@+id/clean_dock" 
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content" 
+	android:layout_weight="0"
+	android:text="@string/clean_dock"
+	android:textAppearance="?android:attr/textAppearanceMedium"
+	android:layout_centerVertical="true"
+	/>
+	<CheckBox android:id="@+id/clean_list_dialog_clean_func" 
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content" 
+	android:layout_weight="0"
+	android:text="@string/clean_func"
+	android:textAppearance="?android:attr/textAppearanceMedium"
+	android:layout_centerVertical="true"
+	/>
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/recomm_app_list_item_selector" >
+
+    <RelativeLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp" >
+
+        <ImageSwitcher
+            android:id="@+id/feature_image_switcher"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:inAnimation="@anim/appgame_fade_in"
+            android:outAnimation="@anim/appgame_fade_out"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6.666dp"
+            android:layout_marginRight="6.666dp" >
+
+            <com.jiubang.ggheart.appgame.base.component.BurningIcon
+                android:id="@+id/feature_app_icon"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY" />
+            
+             <com.jiubang.ggheart.appgame.base.component.BurningIcon
+                android:id="@+id/feature_app_another_icon"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY" />
+        </ImageSwitcher>
+
+        <TextView
+            android:id="@+id/feature_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="1dp"
+            android:layout_toRightOf="@+id/feature_image_switcher"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#393939"
+            android:textSize="15.333dp" />
+
+        <RatingBar
+            android:id="@+id/feature_rating"
+            style="@style/specialRatineBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/feature_name"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/feature_image_switcher"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="3.5"
+            android:stepSize="0.5" />
+
+        <ViewStub
+            android:id="@+id/feature_progress_stub"
+            android:layout="@layout/appgame_feature_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/feature_name"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/feature_image_switcher" />
+
+    </RelativeLayout>
+    
+    <ViewStub
+        android:id="@+id/feature_icon_stub"
+        android:layout_width="33.333333dp"
+        android:layout_height="22.666666667dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout="@layout/appgame_feature_icon" />
+
+</RelativeLayout>

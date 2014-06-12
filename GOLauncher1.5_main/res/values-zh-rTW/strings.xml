@@ -1,0 +1,1493 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<string name="app_name">GO桌面</string>
+	<string name="ok">確定</string>
+	<string name="cancle">取消</string>
+	<string name="tabs_allApps">所有資源</string>
+	<string name="tabs_recentApps">最近打開</string>
+	<string name="tabs_processManagement">正在運行</string>
+	<string name="btns_memory">內存：</string>
+    <string name="btns_runninginfo">程序信息</string>
+    <string name="btns_runninglock">鎖定程序</string>
+    <string name="btns_runningunlock">取消鎖定</string>
+	<string name="menuitem_sorticon">圖示排序</string>
+	<string name="menuitem_createfolder">建立資料夹</string>
+	<string name="menuitem_appfuncSetting">功能表設定</string>
+	<string name="menuitem_hide_tilt">隱藏程式</string>
+	<string name="menuitem_screensetting">螢幕編輯</string>
+	<string name="menuitem_themesetting">主題</string>
+	<string name="menuitem_feedback">意見反饋</string>
+	<string name="menuitem_snapshot">截屏分享</string>
+	<string name="menuitem_expend">通知欄</string>
+	<string name="locklist">選擇需要鎖定的程式</string>
+	<string name="closeicontext">關閉</string>
+	<string name="lock2text">鎖定程式</string>
+	<string name="gototext">跳轉</string>
+	<string name="unlock2text">取消鎖定</string>
+	<string name="infotext">程式資訊</string>
+	<string name="dlg_promanageTitle">提示</string>
+	<string name="dlg_promanageContent">確定關閉所有正在運行的程式？</string>
+	<string name="dlg_recentContent">確定清除所有程式運行記錄？</string>
+	<string name="dlg_activityNotFound">系统找不到指定程式。是否確定從功能表中移除？</string>
+	<string name="dlg_deleteFolder">删除資料夹提醒</string>
+	<string name="dlg_deleteFolderContent">確定刪除文件夾並把圖標放迴功能錶？</string>
+	<string name="sort_processing">排序中, 請稍候</string>
+	<string name="dlg_sortChangeTitle">圖示排序方式</string>
+	<string name="menuitem_wallpaper">桌布</string>
+	<string name="menuitem_addprogram">添加</string>
+	<string name="menuitem_search">應用搜尋</string>
+	<string name="menuitem_setting">系統設定</string>
+	<string name="menuitem_moresetting">桌面設定</string>
+	<string name="menuitem_desksetting">桌面設定</string>
+	<string name="menuitem_gostore">GO精品</string>
+	<string name="menuitem_gowidget">GO小部件</string>
+	<string name="menuitem_notification">消息提示器</string>
+	<string name="menuitem_language">語言設置</string>
+	<string name="menuitem_handbook">GO幫助手冊</string>
+	<string name="menuitem_update">更新</string>
+	<string name="menuitem_rate">評分</string>
+	<string name="menuitem_lockdesktop_lock">鎖定編輯</string>
+	<string name="menuitem_lockdesktop_restart">重新啟動</string>
+	<string name="menuitem_lockdesktop_unlock">解鎖編輯</string>
+	<string name="menuitem_one_x_guide">升級指引</string>
+	<string name="lockdesktop_dialog_context">注意：開啟編輯鎖定後，桌面、屏幕預覽與功能表停止編輯，長按將不進行響應。再次點擊按鈕可解鎖編輯。</string>
+	<string name="delete">删除</string>
+	<string name="menuitem_change_icon_dock">換圖標</string>
+	<string name="menuitem_change_gesture_dock">換手勢</string>
+	<string name="add_app_icon">捷徑</string>
+	<string name="add_widget">小工具</string>
+	<string name="add_widget_failed">空間不足，請添加螢幕后繼續操作。</string>
+	<string name="desktop_general_setting">常規設定</string>
+	<string name="desktop_more_setting">更多設定</string>
+	<string name="home_gesture_hint">HOME鍵設定</string>
+	<string name="up_gesture_hint">選擇在屏幕向上滑動手勢的響應</string>
+	<string name="down_gesture_hint">下滑手勢設定</string>
+	<string name="oper_gesture">操作手勢</string>
+	<string name="statusbar">顯示桌面狀態欄</string>
+	<string name="statusbar_hint">顯示/隱藏狀態欄</string>
+	<string name="screen_looping">螢幕循環切換</string>
+	<string name="screen_looping_summary">螢幕可在最後一屏與第一屏間循環切換</string>
+	<string name="wallpaper_scrolling">壁紙裁剪模式</string>
+	<string name="wallpaper_scrolling_summary">螢幕切換时桌布跟隨滾動.\n開：雙倍屏寬 關：單倍屏寬</string>
+	<string name="show_app_name">桌面程式名</string>
+	<string name="show_app_name_hint">顯示/隱藏桌面程式名称</string>
+	<string name="appfunc_show_app_name_hint">在功能表中顯示/隱藏程式名称</string>
+	<string name="appfunc_show_search_hint">顯示/隱藏搜索界面</string>
+  	<string name="appfunc_show_app_update">在應用圖標上顯示更新提示</string>	
+	<string name="show_neglect_app_hint">顯示/隱藏鎖定程式</string>
+	<string name="screen_rows_cols">桌面行列數</string>
+	<string name="screen_auto_fit_items">桌面組件自適應</string>
+	<string name="screen_auto_fit_items_hint">根據桌面行列自動調整小部件和圖標大小</string>
+	<string name="screen_grid_diy">自定義行列</string>
+	<string name="screen_rows_cols_hint">選擇在桌面顯示的行列數</string>
+	<string name="screen_row_dialog_msg">設置行數</string>
+	<string name="screen_column_dialog_msg">設置列數</string>
+	<string name="screen_indicator">桌面指示器</string>
+	<string name="screen_indicator_hint">顯示/隱藏页面指示器</string>
+	<string name="screen_indicator_autohide">桌面指示器自動隱藏</string>
+	<string name="screen_indicator_autohide_hint">不觸碰螢幕時，隱藏页面指示器</string>
+	<string name="dynamic_effect">動態特效</string>
+	<string name="desktop_transition">螢幕切換特效</string>
+	<string name="desktop_transition_hint">設置螢幕切換特效</string>
+	<string name="screen_indicator_showmode">指示器模式</string>
+	<string name="screen_indicator_position">指示器位置</string>
+	<string name="dock_set">快捷條設定</string>
+	<string name="screen_set">螢幕設定</string>
+	<string name="advanced_setting">進階設定</string>
+    <string name="christmas_setting">聖誕節特效</string>
+    <string name="christmas_setting_tips">桌面屏幕無操作5秒後出現特效</string>
+    <string name="christmas_setting_is_not_coming">聖誕節還沒到哦，親～</string>
+     <string name="christmas_setting_super">聖誕超級主題</string>
+    <string name="christmas_setting_super_info">希望您喜歡聖誕節特效，在聖誕節特效的基礎上我們特別製作了聖誕超級主題，引入更多的互動元素和趣味動畫，是否查看？</string>
+       <string name="christmas_setting_super_check">查看</string>
+	<string name="Dockrow">快捷條行數</string>
+	<string name="Dockrowsummary">選擇快捷條可使用的行數</string>
+	<string name="Dockshowsummary">顯示/隱藏快捷條</string>	
+	<string name="Dockautofitsummary">根據快捷條圖標個數自動調整圖標位置和大小</string>
+	<string name="autocycle">循環滑動</string>
+	<string name="Dockshow">顯示快捷條</string>
+	<string name="autofit">圖標位置自適應</string>
+	<string name="statcommunication">GO桌面EX消息提示器</string>
+	<string name="statunreadsms">未讀取簡訊統計</string>
+	<string name="statunreadsmssummary">在簡訊圖示中顯示未讀取簡訊統計</string>
+	<string name="statunpickupphone">未接來電統計</string>
+	<string name="statunpickupphonesummary">在撥號圖示中顯示未接來電統計</string>
+	<string name="statunreadGmail">未讀取Gmail統計</string>
+	<string name="statunreadGmailsummary">在郵箱圖示中顯示未读Gmail統計</string>
+	<string name="statunreadk9mail">未讀取K9mail統計</string>
+	<string name="statunreadk9mailsummary">在郵箱圖示中顯示未读K9mail統計</string>
+	<string name="k9mailtip">未發現該程式，請先安裝再開啟該功能</string>
+	<string name="gmailtip_2.0">僅支持2.3.6版本以上的Gmail。</string>
+	<string name="gmailtip_4.0">僅支持4.0.5版本以上的Gmail。</string>
+	<string name="moreapp_hint">您暫沒安裝消息提示器支持的更多應用，安装后將自動為您添加。</string>
+	<string name="select_app_icon">選擇捷徑</string>
+	<string name="select_widget_app">選擇小工具</string>
+	<string name="blank">空白顯示</string>
+	<string name="appfunc">功能表圖示</string>
+	<string name="selecticongesture">選擇操作手勢</string>
+	<string name="func_app_setting">功能表設定</string>
+	<string name="func_app_screen_transition">屏幕切換</string>
+	<string name="func_app_running">正在運行</string>
+	<string name="func_app_select_bg">更換背景图</string>
+	<string name="func_app_select_bg_hint">選擇在功能表顯示的背景图片</string>
+	<string name="func_app_grid_setting">功能表行列數</string>
+	<string name="func_app_inout_setting">功能表進出特效</string>
+	<string name="func_app_inout_setting_hint">進出特效</string>
+	<string name="func_app_icon_effect_setting">橫向滾屏特效</string>
+	<string name="func_app_icon_effect_setting_hint">橫向滾屏特效</string>
+	<string name="func_app_vertical_scroll_effect_setting">豎向滾屏特效</string>
+	<string name="func_app_vertical_scroll_effect_setting_hint">豎向滾屏特效</string>
+	<string name="func_app_grid_setting_hint">選擇在功能表顯示的行列數</string>
+	<string name="func_app_show_tab_row">顯示功能表選項卡</string>
+	<string name="func_app_show_tab_row_hint">顯示/隱藏選項卡</string>
+	<string name="func_app_show_app_name">顯示功能表程式名</string>
+	<string name="func_app_show_search">顯示功能表搜索</string>
+	<string name="func_app_update_info">顯示應用更新提示</string>
+	<string name="func_app_show_action_bar">顯示底部操作欄</string>
+	<string name="func_app_show_home_key_only">只顯示主頁按鈕</string>	
+	<string name="func_app_show_neglect_app">顯示鎖定程式</string>
+	<string name="func_app_flip_horizontal">功能表滾屏方向</string>
+	<string name="func_app_flip_horizontal_hint">選擇功能表的滾屏模式</string>
+	<string name="func_app_screen_looping">功能表循環切換</string>
+	<string name="func_app_screen_looping_summary">功能表可在最後一屏與第一屏間循環切換</string>
+	<string name="func_app_blur_bg">模糊功能表背景</string>
+  	<string name="func_app_blur_bg_hint">模糊背景圖可突出圖標顯示</string>
+	<string name="func_app_bg_switch">訂製背景</string>
+	<string name="func_app_bg_switch_hint">開啟/關閉訂製背景</string>
+	<string name="func_app_lock_list">鎖定列表</string>
+	<string name="func_app_lock_list_hint">鎖定程式在\"關閉所有程序\"時會被忽略</string>
+	<string name="func_app_gesture">功能表手勢</string>
+	<string name="func_app_glide_up">啟用上滑手勢</string>
+	<string name="func_app_glide_down">啟用下滑手勢</string>
+	<string name="func_app_glide_up_summary">顯示/隱藏選項卡</string>
+	<string name="func_app_glide_down_summary">顯示/隱藏操作欄</string>
+	<string name="home_key_setting">點擊HOME鍵</string>
+	<string name="up_gesture_setting">上滑手勢</string>
+	<string name="down_gesture_setting">下滑手勢</string>
+	<string name="double_click_setting">雙擊空白處手勢</string>
+	<string name="disable">無回應</string>
+	<string name="open_App">應用程式</string>
+	<string name="show_mainscreen">顯示主螢幕</string>
+	  <string name="choose_mainscreen">請選擇您的主螢幕</string>
+	<string name="first_mainscreen">先主熒后預覽</string>
+	<string name="show_preview">顯示預覽介面</string>
+	<string name="show_hide_funcitonmenu">顯示功能表</string>
+	<string name="show_hide_shortcotbar">顯示/隱藏狀態欄</string>
+	<string name="show_expend_bar">顯示通知欄</string>
+	<string name="group_applications">"應用程式"</string>
+	<string name="select_group_applications">選擇應用程式</string>
+	<string name="applist">"應用程式列表"</string>
+	<string name="not_move_to_folder">無法拖動至該文件夾，圖標恢復原有位置。</string>
+    <string name="no_more_room">屏幕空間不足，選擇其他屏幕或添加新的屏幕。</string>
+    <string name="no_enough_room">屏幕空間不足，請選擇其他屏幕。</string>
+    <string name="preview_drag_explain">拽動屏幕可調換位置或刪除。</string>
+    <string name="folder_name">"資料夾"</string>
+    <string name="group_search">"搜索"</string>
+    <string name="no_more_screen">"屏幕數已滿，拖動可刪除屏幕。"</string>
+    <string name="no_less_screen">"已經達到最小螢幕數，無法繼續刪除"</string>
+    <string name="uninstall_fail">無法卸載系統程式。</string>
+    <string name="activitynofound">未安裝此應用</string>
+<!-- 	<string name="screen_preview_drag_tip">拖動圖示至螢幕上方確認選擇</string>
+ -->
+    <string name="text_rename">修改名稱</string>
+    <string name="title_select_live_folder">"選擇資料夾"</string>
+    <string name="group_folder">"新建資料夾"</string>
+    <string name="app_drawer_folder">功能表資料夾</string>
+    <string name="activity_not_found">"讀取失敗無法激活應用，請嘗試重新啟動GO桌面"</string>
+    <string name="back">返回</string>
+    <string name="chooser_wallpaper">選擇壁紙</string>
+    <string name="high_quality_drawing">高質量繪圖</string>
+    <string name="high_quality_drawing_summary">該選項可解決屏幕花屏的問題，但可能會影響桌面性能</string>
+    <string name="transparent_statusbar">支持透明通知欄</string>
+    <string name="transparent_statusbar_summary">該選項可能會影響桌面性能</string>
+    <string name="permanentmemory_enable">常駐記憶體</string>
+    <string name="permanentmemory_enablesummary">GO桌面常駐手機內存可能導致手機不穩定，如果出現異常（如無法使用通訊錄），請關閉此選項。</string>
+    <string name="prevent_force_close">阻止強制關閉</string>
+    <string name="prevent_force_close_summary">阻止系統記憶體不足時強制關閉GO桌面EX</string>
+    <string name="heap_size_title">設置內存大小</string>
+    <string name="heap_size_summery">當前大小為</string>
+    <string name="heap_size_default">默認</string>
+    <string name="heap_size_recommended">推薦</string>
+    <string name="heap_size_larger">較大</string>
+    <string name="heap_size_tip">當前大小已經是</string>
+    <string name="heap_rebootdlg_title">注意</string>
+    <string name="heap_rebootdlg_message">新的可用內存值將在重啟手機后生效。</string>
+    <string name="heap_rebootdlg_ok">立即重啟</string>
+    <string name="heap_rebootdlg_cancel">稍後重啟</string>
+    <string name="heap_setsize_failed">設置默認堆大小失敗。</string>
+    <string name="heap_size_description">功能介紹</string>
+    <string name="heap_size_description_summery">什麽是可用內存?</string>
+    <string name="heap_size_description_msg">可用內存是每個應用可使用的最大內存值，內存值越大，則運行程序（例如GO桌面）會更流暢。\n使用該功能需要root手機，如果您還未root手機，請查看教程：</string>
+    <string name="heap_size_link_text">安卓論壇root教程</string>
+    <string name="heap_size_without_busybox">设置失败，请确认已经授予GO桌面最高权限，以及已经安装了Busybox</string>
+    <string name="check_version">版本更新</string>
+    <string name="check_version_summary">版本更新</string>
+    <string name="share_app">分享軟體</string>
+    <string name="aboutGo">關於GO桌面EX</string>
+    <string name="ExitGo">退出GO桌面EX</string>
+    <string name="share_app_summary">將GO桌面EX分享給朋友</string>
+    <string name="choose_share_way">請選擇分享方式</string>
+    <string name="share_title">推薦使用GO桌面EX</string>
+    <string name="rate_go_launcher">軟體評分</string>
+    <string name="rate_go_launcher_summary">在Android Market上為GO桌面EX評分</string>
+    <string name="feedback">意見反饋</string>
+    <string name="feedback_summary">將意見和建議反饋給GO桌面EX團隊</string>
+    <string name="joinus_info">加入我們</string>
+    <string name="joinus_info_summary">招聘信息</string>
+    <string name="copyright_info">版權信息</string>
+    <string name="copyright_info_summary">Copyright © 2004-2013版權所有 \n3G門戶網 手機登錄3G.cn</string>
+    <string name="currentversion">當前版本為:</string>
+    <string name="reset_to_default_title">恢復默認</string>
+    <string name="configure_wallpaper">設定...</string>
+    <string name="imagepreviewtip">沒有可選擇的圖片，請嘗試保存圖片再進行操作</string>
+    <string name="changeicontext">換圖示</string>
+    <string name="renametext">重命名</string>
+    <string name="fbsharetext">分享</string>
+    <string name="edit">編輯</string>
+    <string name="zoomtext">縮放</string>
+    <string name="uninstalltext">卸載</string>
+    <string name="deltext">删除</string>
+    <string name="skintext">主題</string>
+    <string name="configtext">設定</string>
+    <string name="del_title_tip">刪除提示</string>
+    <string name="del_content_tip">確定刪除非空白螢幕</string>
+    <string name="notselectapp">未選擇應用</string>
+<!-- 	<string name="shortcut_installed">"捷徑 \"%s\" 已建立。"</string>
+ -->
+<!-- 	<string name="shortcut_duplicate">"捷徑 \"%s\" 已存在。"</string>
+ -->
+    <string name="drag_uninstall_tip">卸載應用程式。</string>
+    <string name="folder_naming">資料夾命名</string>
+<!-- 	<string name="enter_appfunc_edit_status">拖動圖示至底部停留，啟動螢幕選擇</string>
+ -->
+    <string name="sd_card_app_load">正在加載SD卡上的應用程式，請稍候...</string>
+    <string name="app_fun_strat_loading">正在初始化功能表，請稍候</string>
+    <string name="pro_manage_refresh_finish">刷新已完成</string>
+    <!--
+	<string name="app_fun_end_loading">功能表初始完成，現在可以進入編輯模式了</string>
+	<string name="app_fun_new_folder">拖動圖示重疊可新建功能表資料夾</string>
+
+    -->
+    <string name="app_fun_folder_clean_rubbish_folder">清理功能表垃圾數據，請重啓桌面</string>
+    <string name="app_fun_edit_folder_title">編輯資料夾</string>
+    <string name="app_fun_delete_folder">刪除資料夾</string>
+    <string name="app_fun_new_folder_name">資料夾名稱 :</string>
+    <string name="app_fun_new_folder_app_title">選擇添加至資料夾的程序</string>
+    <string name="app_fun_edit_folder_app_title">編輯資料夹内的程序</string>
+    <string name="app_fun_hide_app_title">隱藏應用程序</string>
+    <string name="app_fun_hide_app_success_tip">可以在功能表菜單->隱藏程序的對話框中取消隱藏。</string>
+    <string name="app_fun_hide_app_tip_hightlight">功能表菜單->隱藏程序</string>
+    <string name="app_fun_hide_app_success_toast">修改成功</string>
+    <string name="app_fun_hide_app_success_title">隱藏程序成功！</string>
+    <string name="sure">確定</string>
+    <string name="finish">完成</string>
+    <string name="cancel">取消</string>
+    <string name="defaultbtn">默認</string>
+    <string name="http_exception">失敗！不能連接到網絡！</string>
+    <string name="tip_btn_txt">我知道了</string>
+    <string name="clearDefault_title">注意</string>
+    <string name="clearDefault">清除GO桌面EX的主頁默認值？</string>
+    <string name="crop_text">裁剪</string>
+    <string name="no_crop_text">不裁剪</string>
+    <string name="wallpaper">設置壁紙，請等待...</string>
+    <string name="savingImage">保存圖片...</string>
+    <string name="save_image_error">圖片保存失敗，無法設置圖標</string>
+    <string name="fail_drag_to_screen">移動失敗，圖示回到原位置</string>
+    <string name="select_icon">請選擇圖示</string>
+    <string name="NotFindCROP">未發現裁剪程式，無法完成裁剪功能</string>
+    <string name="sort_fail">排序失敗，請嘗試重新操作</string>
+    <string name="crash_notif_ticker_text">GO桌面EX意外錯誤，請發送一個錯誤報告...</string>
+    <string name="crash_notif_title">GO桌面EX發生意外錯誤...</string>
+    <string name="crash_notif_text">請點擊這裡幫助我們修復這個問題</string>
+    <string name="crash_dialog_title">GO桌面EX錯誤報告</string>
+    <string name="crash_dialog_text">意外錯誤導致程式停止，我們需要您的反饋來幫助我們盡快修復這個問題，請放心，我們只採集出錯信息，不收集您的個人信息</string>
+    <string name="crash_yes">告訴我們</string>
+    <string name="crash_no">取消操作</string>
+    <string name="crash_subject">錯誤</string>
+    <string name="ShareMenu">分享</string>
+    <string name="err_out_of_memory">記憶體不足，請刪減桌面小部件或關閉其他程式后繼續操作</string>
+    <string name="dbfile_export_dialog">正在進行備份，請稍等...</string>
+    <string name="dbfile_export_success">備份成功！</string>
+    <string name="dbfile_export_error">無法完成備份，請重試</string>
+    <string name="import_export_sdcard_unmounted">無法讀取SD卡，請插入SD卡后重試</string>
+    <string name="dbfile_import_dialog">恢復桌面設置...</string>
+    <string name="dbfile_not_found">無法讀取備份資料，請重試</string>
+    <string name="dbfile_not_readable">無法讀取備份資料，請重試</string>
+    <string name="restore_default_golauncher">恢復桌面默認設置···</string>
+<!-- 	<string name="dbfile_import_success">恢復備份成功！</string>
+ -->
+    <string name="dbfile_import_error">無法恢復備份，請重試</string>
+    <string name="restore_db_title">恢復備份</string>
+    <string name="cannot_read_app">讀取失敗無法激活應用，請嘗試重新啟動GO桌面。</string>
+    <string name="appfunc_folderlist">功能表資料夾列表</string>
+    <string name="homescreen_full_warning">該屏幕已滿，請適當取消后再次點選</string>
+    <string name="appfunc_uninitialized">功能表初始化還未完成</string>
+    <string name="homescreen_available">該屏可放置資料夾個數:</string>
+    <string name="pref_title_theme_settings">個性化設置</string>
+    <string name="theme_title">默認主題</string>
+    <string name="theme_info">默認/經典/普通\n\n版本:V1.0\n\n開發者:\nGO桌面開發小組\n\n反饋:\ngolauncher@goforandroid.com
+		\n\n博客:\ngolauncher.goforandroid.com</string>
+    <string name="theme_title_3">3.0主題</string>
+    <string name="theme_info_3">3.0主題\n\n版本:V1.0\n\n開發者:\nGO桌面開發小組\n\n反饋:\ngolauncher@goforandroid.com
+		\n\n博客:\ngolauncher.goforandroid.com</string>
+    <string name="notification_tip_title">注意</string>
+    <string name="notification_tip_content">您未安装GO桌面消息提示器，请點擊確認下载。</string>
+    <string name="notification_update_tip_content">您的手機GO桌面EX消息提示器版本過低，請先下載更新。</string>
+    <string name="set_wallpaper">設置桌布</string>
+    <string name="go_wallpaper">GO桌面桌布</string>
+    <string name="set_func_background">設置背景</string>
+    <string name="set_dock_background">設置底圖</string>
+    <string name="set_onlyforgolauncher">仅支持GO桌面</string>
+    <string name="widget_error_text">載入小工具時發生問題</string>
+    <string name="loading_screen">正在加載螢幕，請稍等...</string>
+    <string name="add_go_widget">GO桌面小部件</string>
+    <string name="adding_or_deleting_items">正在修改，請稍候。</string>
+    <!-- custom name -->
+    <string name="customname_dial">撥號</string>
+    <string name="customname_contacts">聯繫人</string>
+    <string name="customname_Appdrawer">功能表</string>
+    <string name="customname_sms">信息</string>
+    <string name="customname_browser">瀏覽器</string>
+    <!-- GoLauncher Action -->
+    <string name="launcher_action">GO桌面</string>
+    <string name="launcher_action_list">GO桌面捷徑列表</string>
+    <string name="customname_mainscreen">主螢幕</string>
+    <string name="customname_mainscreen_or_preview">主螢/預覽</string>
+    <string name="customname_notification">通知欄</string>
+    <string name="customname_status_bar">狀態欄</string>
+    <string name="customname_themeSetting">主題設定</string>
+    <string name="customname_preferences">桌面設定</string>
+    <string name="customname_preview">螢幕預覽</string>
+    <string name="customname_gostore">GO精品</string>
+    <string name="customname_golocker">GO鎖屏</string>
+    <string name="customname_mainmenu">桌面菜單</string>
+    <string name="customname_diygesture">自定義手勢</string>
+    <string name="customname_photo">圖片</string>
+    <string name="customname_music">音樂</string>
+    <string name="customname_video">視頻</string>
+    <!-- updateLog decleared here -->
+    <string name="updatelog">更新日誌</string>
+    <!-- Set Persistent Alarm -->
+    <string name="setSystemPersistentTitle">常駐內存警告</string>
+    <string name="setSystemPersistent">當你啟用這個功能的時候，也許會造成電量損耗更快，請注意！</string>
+    <string name="setSystemPersistentRestart">此項操作需要重啓GO桌面EX，您可選擇立即重啓或下次重啓時應用。</string>
+    <string name="reboot_next_time">下次重啓</string>
+    <string name="reboot_right_now">立即重啓</string>
+    
+    <string name="clean_dirty_data">清除桌面垃圾數據</string>
+    <string name="clean_dirty_data_summary">檢查並清除桌面上重疊的圖標或小工具</string>
+    <string name="found_dirty_data">選擇清除項：</string>
+    <string name="no_dirty_data">未發現垃圾數據</string>
+    <string name="found_dock_dirty_data_title">快捷條垃圾數據</string>
+    <string name="found_dock_dirty_data">對不起，发现快捷條有垃圾數據，Go桌面重新初始化了快捷條數據.</string>
+    <string name="clean_screen">清理屏幕</string>
+    <string name="clean_dock">清理快捷條</string>
+    <string name="clean_func">清理功能表</string>
+    <string name="initialization">正在初始化，請稍候...</string>
+    <string name="key_appfunc_show_setting">功能表顯示</string>
+    <string name="key_appfunc_bg_settings">功能表背景</string>
+    <string name="key_appfunc_bg_settings_hint">選擇功能表背景</string>
+<!-- 	<string name="change_dock_version_tip">無數據，您選擇的快捷條風格包版本過舊，請更新。</string>
+ -->
+    <!-- GO Widget -->
+    <string name="onoff">開關</string>
+    <string name="email">郵箱</string>
+    <string name="task_killer">任務管理</string>
+    <string name="contact">聯係人 </string>
+    <string name="calendar">日曆</string>
+    <string name="sms">信息</string>
+    <string name="search">搜索</string>
+    <string name="bookmark">書籤</string>
+    <string name="clock">時鐘</string>
+    <string name="note">便簽</string>
+    <string name="go_store">GO精品</string>
+    <string name="powermaster">GO省電</string>
+    <string name="weather">GO天氣</string>
+    <string name="gosms">GO短信</string>
+    <string name="task_killer_toast">GO桌面幫您釋放了%1$sM內存</string>
+    <string name="task_killer_toast_best">您的設備已達到最佳狀態</string>
+    <!-- widget choose -->
+    <string name="widget_choose_addtodestop">添加到桌面</string>
+    <string name="widget_choose_download">下載</string>
+    <string name="widget_choose_defaulstyle">普通風格</string>
+    <string name="widget_choose_downloadnow">立即下載</string>
+    <string name="widget_choose_downloadinfo">您尚未安裝該小工具,點擊立即下載.</string>
+    <string name="loading">加載中</string>
+    <string name="out_of_mem">記憶體不足，請刪減桌面小部件或關閉其他程序后繼續操作</string>
+    <string name="more_menu_item">更多</string>
+    <string name="pre_menu_item">返回</string>
+
+    <!-- Choose Wallpaper -->
+    <string name="set_wallpaper_error">記憶體不足，請嘗試刪減桌面小部件或關閉其他程式后繼續操作</string>
+
+    <!-- tolltheme -->
+    <string name="thanks_title">感恩</string>
+    <string name="puppylove_title">初戀</string>
+    <string name="fuzzybirdy_title">毛茸茸</string>
+    <string name="sketch_title">藍圖</string>
+    <string name="dark_title">酷炫黑</string>
+    <string name="club_title">酒吧</string>
+
+    <!-- downDialog -->
+    <string name="downDialog_title">提示</string>
+    <string name="downDialog_downForWhere">請選擇下載方式（如果在穀歌電子市場搜索不到，請從官方渠道下載）</string>
+    <string name="downDialog_downForMarket">穀歌電子市場</string>
+    <string name="downDialog_downForGoLauncher">3G·主題</string>
+    <string name="downDialog_title_select_market">去哪逛逛？</string>
+
+    <!-- MOVE Theme and Screen Preview -->
+
+    <string name="alerDialog_error">系統錯誤無響應，請嘗試重新操作</string>
+
+	<!-- Theme Store -->
+	<string name="themestore_price_free">免費</string>
+	<string name="gostore_price_used">使用中</string>
+	<string name="themestore_item_ver">版本:</string>
+	<string name="themestore_item_size">大小:</string>
+	<string name="themestore_item_updatetime">更新時間:</string>
+	<string name="themestore_mainlistview_btmbutton">獲取更多</string>
+	<string name="themestore_already_install">已安裝</string>
+	<string name="themestore_can_update">更新</string>
+	<string name="themestore_begin_download">開始下載</string>
+	<string name="themestore_download_finish">下載完成，點擊安裝</string>
+	<string name="themestore_download_fail">網絡異常</string>
+	<string name="themestore_downloading">正在下載</string>
+	<string name="themestore_download_stop">已停止</string>
+	<string name="themestore_download_connecting">正在連接</string>
+	<string name="themestore_download_management">點擊進入下載管理</string>
+	<string name="themestore_download_add_to_download_queue">已經添加到下載隊列</string>
+	<string name="themestore_download_waiting">正在等待下載</string>
+
+	<string name="themestore_title_search">搜索</string>
+	<string name="themestore_title_apps">安卓應用市場</string>
+	<string name="themestore_title_games">遊戲中心</string>
+	<string name="themestore_title_update">軟件更新</string>
+	
+	<!-- Go Store -->
+	<string name="gostore_search_change">換一批</string>
+	<string name="gostore_priceview_processing">處理中</string>
+	<string name="gostore_buyid">訂單號:</string>
+	<string name="gostore_note_processing">正在處理,請稍候</string>
+	
+	<string name="gostore_price_free">免費</string>
+	<string name="gostore_price_downloading">下載中</string>
+	<string name="gostore_already_install">已安裝</string>
+	<string name="gostore_can_update">更新</string>
+	<string name="gostore_can_install">安裝</string>
+	<string name="gostore_can_apply">應用</string>
+	<string name="gostore_price_retry">重試</string>
+	<string name="gostore_no_sdcard">檢測不到SD卡，無法下載</string>
+	
+	<string name="gostore_buy_theme">購買主題 </string>	
+	<string name="gostore_order_manage">訂單中心</string>
+
+	<string name="gostore_downlaod_fail_note_title">幫助我們修復主題下載錯誤</string>
+	<string name="gostore_downlaod_fail_note">請點擊發送郵件給我們</string>
+	<string name="gostore_downlaod_fail_mail_title">GO Launcher Theme Error Bug Report -</string>
+	<string name="gostore_downlaod_fail_mail">我們檢測到你的手機在下載主題的時候出現了錯誤。我們需要一些信息去幫助我們跟踪和修復這個問題。
+	請將這封郵件發送給我們，謝謝！！</string>
+    <string name="gostore_downlaod_fail_mail_country">地區:</string>
+    <string name="gostore_downlaod_fail_mail_ip1">IP1:</string>
+    <string name="gostore_downlaod_fail_mail_ip2">IP2:</string>
+    <string name="gostore_downlaod_fail_mail_gmail">GOOGLE帳號:</string>
+    <string name="gostore_downlaod_fail_mail_theme">主題名字:</string>
+    <string name="gostore_destory_toast">點擊 Menu 進入 GO 精品</string>
+    <!-- widget theme -->
+<!-- 	<string name="themeNotFound">沒有主題可應用！</string>
+ -->
+    <string name="apply_widget_theme">應用</string>
+    <string name="widget_theme_update">您的組件版本過低，更新更精彩。</string>
+    <string name="widget_theme_upgradenow">立即更新</string>
+    <string name="widget_theme_downinfo">小組件皮膚已為您準備好，請下載！</string>
+    <string name="widget_theme_download">下載更多主題</string>
+    <string name="widget_theme_apply_download">下載</string>
+    <string name="widget_theme_moretheme">更多主題</string>
+    <string name="widget_theme_data_parse_error">讀取失敗無法更換主題，請嘗試重新進入。</string>
+    <string name="uninstall_switch_version_too_old_to_uninstall">卸載失敗，請通過系統應用列表卸載</string>
+
+    <!-- widget2.0 -->
+    <string name="widget_list_delete">卸載組件</string>
+    <string name="widget_list_help">帮助</string>
+    <string name="widget_delete_done">完成</string>
+    <string name="func_gowidget_icon">GO桌面小部件</string>
+
+    <!-- theme pages -->
+    <string name="theme_pages_mythemetitle">我的主題</string>
+    <string name="theme_pages_getmore">獲取更多</string>
+    <string name="theme_pages_customsetting">個性設置</string>
+    <string name="theme_pages_apply">應用主題</string>
+    <string name="theme_pages_update">檢查更新</string>
+
+    <!-- new theme -->
+    <string name="new_theme_title">請選擇應用的主題資源</string>
+    <string name="new_theme_tip_download">下載</string>
+    <string name="new_theme_golauncher">GO桌面主題</string>
+    <string name="new_theme_gowidget">GO小部件主題</string>
+    <string name="new_theme_golock">GO鎖屏主題</string>
+
+    <!-- Go Widget pages -->
+    <string name="gowidget_detail_addtodesktop">添加到桌面</string>
+    <string name="gowidget_detail_fb">意見反饋</string>
+    <string name="gowidget_detail_uninstall">卸載組件</string>
+    <string name="gowidget_info_name">名稱:</string>
+    <string name="gowidget_info_version">版本:</string>
+    <string name="gowidget_info_designer">設計者:GO桌面開發小組</string>
+    <string name="gosms_info_designer">設計者:GO短信開發團隊</string>
+    <string name="gosms_info_blog">博客:gosms.goforandroid.com</string>
+    <string name="gowidget_info_fb">反饋:fboflauncher@gmail.com</string>
+    <string name="gowidget_appgame_info_fb">反饋:golauncher@goforandroid.com</string>
+    <string name="gowidget_info_blog">博客:golauncher.goforandroid.com</string>
+    <string name="gowidget_info_fb_subject">widget 反饋</string>
+
+    <!-- Notification -->
+    <string name="notification_screen_lock">鎖定編輯</string>
+    <string name="notification_screen_unlock">屏幕已解鎖</string>
+    <string name="toast_screen_unlock">編輯功能已鎖定</string>
+
+    <!-- Favorite -->
+    <string name="fav_title_first">檢查</string>
+    <string name="fav_content">您的手機未安裝此組件，請下載安裝</string>
+    <string name="fav_content_cn">您的手機未安裝此組件，請選擇下載方式進行安裝</string>
+    <string name="fav_app">您的手機未安裝該應用，請下載安裝</string>
+    <string name="fav_update">您的手機上該應用版本有更新，請下載安裝</string>
+
+    <!-- No GoogleMarket Tip -->
+    <string name="no_googlemarket_tip">請確認已安裝穀歌電子市場</string>
+    <string name="crash_notif_uninstall_text">請重新安裝，點擊這裡卸載</string>
+    <string name="db_dataException">GO桌面發生數據錯誤，請先卸載再重新安裝！</string>
+
+    <!-- Cancel default desk -->
+    <string name="cancel_default_tip_title">注意</string>
+    <string name="cancel_default_tip_message">您當前使用的默認桌面程序不是GO桌面EX，是否清除該默認設置？</string>
+    <string name="cancel_default_toast_message">請點擊“清除默認值”按鈕。</string>
+    <string name="cancel_default_no_tip">不再提醒</string>
+
+    <!-- Migrate Desk -->
+    <string name="migrate_app_tip_title">桌面搬家</string>
+    <string name="migrate_app_tip_message">我們支持將其他桌面的圖標複製到GO桌面上，是否立即安裝搬家程序並開始桌面搬家？</string>
+    <string name="migrate_tip_title">注意</string>
+    <string name="migrate_tip_message">我們支持將其他桌面的圖標複製到GO桌面上，是否開始桌面搬家？</string>
+    <string name="onexguidtitle">請更新至4.0.4并進行正確設置</string>
+    <string name="onexguidsummary">隱藏ONE X/S狀態條</string>
+
+	<!-- FOR DEBUG -->
+	<string name="doc_ico_styleselect">快捷條圖標風格</string>
+	<string name="folder_icon_style">文件夾圖標風格</string>
+	<string name="ggmen_icon_style">菜單項圖標風格</string>
+	<string name="doc_style">快捷條風格</string>
+	<string name="desk_style">桌面風格</string>
+	<string name="fun_style">功能表風格</string>
+	<string name="screen_transition_effect">屏幕切換速度</string>
+	<string name="screen_transition_title">屏幕切換速度和彈力</string>
+	<string name="screen_speed">速度</string>
+	<string name="screen_elastic">彈力</string>
+	<string name="effects">特效設置</string>
+	<string name="pref_effects_settings">特效設置</string>
+	<string name="communication_title">在圖標中顯示消息提示器</string>
+	<string name="notification_hint_title_first">提示</string>
+	<string name="notification_hint_content_first">GO桌面消息提示器需要開啟輔助功能服務。</string>
+	<string name="summary_nonbackup">當前未備份</string>
+	<string name="summary_backupdetail">最近備份時間：</string>
+	<string name="desk_icon_style">主題圖標風格</string>
+	<string name="pref_theme_settings">我的主題</string>
+	<string name="pref_effects_desk">桌面特效</string>
+	<string name="pref_effects_app">功能表特效</string>
+	<string name="pref_desk_title">桌面設置</string>
+	<string name="dockBg">快捷條背景</string>
+	<string name="defaultstyle">默認風格</string>
+	<string name="current">當前</string>
+	<string name="go_theme">GO桌面主題</string>
+	<string name="screen_orientation">屏幕方向</string>
+	<string name="screen_orientation_setting">屏幕方向設置</string>
+
+    <!-- Go Backup -->
+    <string name="menuitem_gobackup">GO備份</string>
+    <string name="title_backup_setting">備份&amp;恢復</string>
+    <string name="backup_desk">備份GO桌面</string>
+    <string name="reset_to_default_summary">恢復最近備份的GO桌面數據</string>
+    <string name="summary_reset">恢復GO桌面的默認數據</string>
+    <string name="title_local_backup">本地備份</string>
+    <string name="title_more_backup">更多備份</string>
+    <string name="go_backup">GO備份</string>
+    <string name="summary_go_backup">備份多個GO桌面數據</string>
+    <string name="attention_title">注意</string>
+    <string name="backup_db_summary">將GO桌面的设置數據備份至SD卡中？</string>
+    <string name="restore_db_dialog_summary">从SD卡中恢復最近備份的GO桌面數據？</string>
+    <string name="resetDefault">將GO桌面數據恢復为默认數據？</string>
+    <string name="backup_tip_message">您未安裝GO備份，請點擊確認下載。</string>
+
+    <!-- Go HD Launcher -->
+    <string name="menuitem_hdlauncher">GO桌面HD</string>
+    <string name="hdlauncher_tip_message">爲了更好的體驗，推薦平板電腦使用GO桌面HD，請下載安裝。</string>
+
+    <!-- Locker -->
+    <string name="menuitem_locker">GO鎖屏</string>
+    <string name="locker_title">GO鎖屏</string>
+    <string name="locker_tip_title">GO鎖屏提示</string>
+    <string name="locker_tip_message">系統沒有安裝GO鎖屏，是否立刻下載安裝？</string>
+    <string name="locker_apply_succeed">應用成功</string>
+    <string name="locker_default_theme">默認</string>
+    <string name="haploid_wallpaper">壁紙保持單個屏幕大小，不可滾動</string>
+    <string name="normal_wallpaper">默認模式，壁紙可滾動</string>
+
+	<!-- 桌面嚮導 -->
+	<string name="guid_cloud_security_title">應用雲安全檢測</string>
+    <!-- ColorPickerDialog -->
+    <string name="pref_dialog_color_picker_alpha">透明度</string>
+    <string name="pref_title_icon_highlights">圖標高亮背景顏色</string>
+    <string name="pref_summary_icon_highlights">設置桌面圖標被點擊時的背景顏色</string>
+    <string name="color_picker_alert_dialog_title">是否放棄設置顏色并退出？</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <!-- Effect Toast -->
+    <string name="effect_warn">部份設備不能完美支持此特效，如不滿意使用效果，請更換其他特效。</string>
+
+    <!-- AppFunc Search -->
+  <string name="appfunc_search_tab_title_local">本地搜索</string>
+    <string name="appfunc_search_tab_title_web">在線搜索</string>
+    <string name="appfunc_search_tab_title_web_gostore">GO精品</string>
+    <string name="appfunc_search_clear_history">清除歷史</string>
+    <string name="appfunc_search_history">搜索記錄:</string>
+    <string name="appfunc_search_tip_no_match_data">暫未搜索到相關內容\n向左滑動可搜索安卓應用市場內容</string>
+    <string name="appfunc_search_tip_no_match_data_web">暫未搜索到相關內容</string>
+    <string name="initial">首字母: </string>
+    <string name="theme_setting_wallpaper">桌面壁紙</string>
+    <string name="bg_setting">背景</string>
+    <string name="icon_style">圖標</string>
+    <string name="indicators_setting">指示器</string>
+    <string name="appfunc_tab_bottom_bg_settings">選項卡和底座背景</string>
+    <string name="draw_indicator_showmode">功能表指示器風格</string>
+	
+     <string name="appfunc_search_get_more_apps">點擊查看更多精選應用</string>
+    <string name="appfunc_search_key_words_sorts">搜索熱詞榜</string>
+    <string name="appfunc_search_result">搜索結果</string>
+    <!-- 桌面嚮導 -->
+    <string name="guid_theme_title">數不盡的配套主題</string>
+    <string name="guid_effect_title">自定義手勢，方便快捷</string>
+    <string name="guid_widget_title">手機資源，盡在掌握</string>
+    <string name="guid_new_theme_title">海量主題，炫酷特效任你選</string>
+    <string name="guid_new_operation_title">便捷操作，輕鬆擺放桌面元素</string>
+    <string name="guid_new_manager_title">簡單管理，你的應用你做主</string>
+    <string name="no_app_handle">沒有程序支持處理...</string>
+    <string name="guide_screen_effect_haveatry">馬上試用！</string>
+    <string name="guide_screen_effect_secondtip_ok">確定</string>
+    <string name="guide_screen_effect_secondtip_continue_try">繼續試用</string>
+    <string name="guide_screen_effect_show_settingpath">通過\"桌面設置－－特效設置\"修改</string>
+    <string name="guide_screen_effect_noselect_effect">請選擇一種特效</string>
+    <string name="guide_wallpapersetting_defaultstyle">壁紙滾動</string>
+    <string name="guide_wallpapersetting_verticalstyle">壁紙鎖定</string>
+    <string name="guide_screen_gesture_open_menu_title">菜單</string>
+    <string name="guide_screen_gesture_open_menu_tips">向上滑動屏幕激活菜單</string>
+    <string name="preview_delete_tutoria">刪除屏幕</string>
+    <string name="preview_delete_detail_tips">長按并拖動屏幕至垃圾桶可刪除屏幕。</string>
+    <string name="preview_add_tutoria">添加屏幕</string>
+    <string name="preview_sethome_tutoria">設置為主屏</string>
+    <string name="preview_edit_screen_title">屏幕編輯</string>
+    <string name="preview_edit_screen_next_page">下一頁</string>
+    <string name="guide_screen_folder_title">新建文件夾</string>
+    <string name="guide_screen_folder_tips">長按并拖動圖標重疊可新建文件夾。</string>
+    <string name="guide_dock_auto_fit_setting_title">圖標位置自適應</string>
+    <string name="guide_dock_auto_fit_setting_without_plus">移除圖標后位置自適應</string>
+    <string name="guide_dock_auto_fit_setting_with_plus">移除圖標后位置不自適應</string>
+    <string name="guide_dock_auto_fit_setting_msg">根據圖標個數自動調整圖標在快捷條上的位置和大小</string>
+    <string name="guide_custom_gesture_title">自定義手勢</string>
+    <string name="guide_custom_gesture_msg">雙擊屏幕空白處打開自定義手勢面板，通過手勢快速執行響應 。</string>
+	<string name="guide_custom_full_screen_widget_title">超级插件</string>
+	<string name="guide_custom_full_screen_widget_msg">雙指下滑，開啟更多功能！</string>
+    <!-- icon size setting -->
+    <string name="icon_size_setting">圖標大小</string>
+    <string name="icon_size_setting_hint">選擇圖標大小的樣式</string>
+    <string name="icon_size_setting_dialog_title">自定義圖標大小</string>
+    <string name="icon_size_setting_seekbar_text">設置圖標大小:</string>
+    <!-- <string name="icon_size_setting_seekbar_text">設置尺寸:</string> -->
+    <string name="icon_style_loading_message">正在加載主題數據...</string>
+
+    <!-- Icon Base -->
+    <string name="icon_base_setting">顯示圖標底圖</string>
+
+	<!-- Font setting -->
+	<string name="font_setting_title">字體</string>
+	<string name="choosefont_warning">掃描字體后默認使用的字體會導致圖標名稱被裁剪。您可以替換其他字體解決此問題。是否繼續?</string>
+	<string name="font_size">程式名大小</string>
+	<string name="font_scan">掃描字體</string>
+	<string name="font_scan_package">正在掃描字體包</string>
+	<string name="app_labels_color">程式名顏色</string>
+    <string name="app_labels_color_hint">設置程式名顏色</string>
+	<string name="font_type">字體</string>
+	<string name="font_category">字體</string>
+	<string name="font_size_hint">選擇字體大小的樣式</string>
+	<string name="font_size_category">應用程式名稱</string>
+	<string name="font_size_setting_dialog_title">自定義字體大小</string>
+	 <string name="font_scan_summary">如果你喜歡使用第三方字體，請把字體文件放到"/GOLauncherEX/fonts" 目錄下</string>
+    <!-- menu2.0 -->
+    <string name="glmenu_screen_tab_common">常用</string>
+    <string name="glmenu_screen_tab_plugins">周邊</string>
+    <string name="glmenu_screen_tab_more">更多</string>
+    <string name="setting_help_list_title">常用操作指南</string>
+    <string name="setting_help_pref">使用幫助</string>
+    <string name="setting_help_tab_title_desk">GO桌面</string>
+    <string name="setting_help_tab_title_widget">GO小部件</string>
+    <string name="setting_help_tab_title_golock">GO鎖屏</string>
+    <string name="setting_help_operation_tips">操作提示</string>
+    <string name="app_func_search_search_web">在安卓應用市場搜索</string>
+    <string name="app_func_search_search_web_gostore">在GO精品搜索</string>
+    <string name="app_func_search_feelluck">更多搜索詞</string>
+    <string name="app_func_search_hint">請輸入搜索詞</string>
+    <string name="hint">提示</string>
+    <string name="delete_current_theme_hint">當前正使用該主題，卸載后桌面將恢復默認主題。</string>
+
+    <!-- 判断平板的对话框 -->
+    <string name="tosat_for_pad_title">注意</string>
+    <string name="tosat_for_pad_content">我们针对平板分辨率进行了新的适配，可能会导致原有图标放大的问题。
+如果希望保持v2.70的默认图标大小，请点击下边的按钮。
+您还可以通过“屏幕设置”修改行列数；通过”个性化设置-图标设置”来修改图标大小。</string>
+    <string name="tosat_for_pad_confirm">恢复v2.70默认图标大小</string>
+    <string name="tosat_for_pad_cancel">取消</string>
+
+    <!-- gamecenter -->
+    <string name="gamecenter_title">遊戲中心</string>
+    <string name="gamecenter_mygame">我的遊戲</string>
+
+    <!-- appcenter -->
+  	<string name="appcenter_title">安卓應用市場</string>
+	<string name="appcenter_title_other">GO精品</string>
+    
+     <!-- appgamewidget -->
+    <string name="appgame_widget_title">安卓應用市場</string>
+    <string name="appgame_widget_for_game">遊戲</string>
+    <string name="appgame_widget_for_app">應用</string>
+    <string name="appgame_widget_for_soft">軟件</string>
+    <string name="appgame_widget_for_manager">管理</string>
+    <string name="appgame_widget_for_search">搜索</string>
+    <string name="appgame_widget_exception_info">連接到網絡出現問題</string>
+    <string name="appgame_widget_scroll_message">上下滑動安卓應用市場插件切換顯示內容</string>
+     <string name="appgame_widget_scroll_message_gostore">上下滑動Go精品插件切換顯示內容</string>
+
+    <!-- softmanager -->
+    <string name="appgame_toptitle_apps">首頁</string>
+    <string name="appgame_toptitle_app">應用</string>
+    <string name="appgame_toptitle_game">遊戲</string>
+    <string name="appgame_toptitle_theme">主題</string>
+    <string name="appgame_toptitle_category">類別</string>
+    <string name="appgame_toptitle_hot">熱門</string>
+    <string name="appgame_toptitle_search">搜索</string>
+    <string name="appgame_toptitle_manage">管理</string>
+    <string name="softmanager_titile">應用管理</string>
+    <string name="update_time">更新時間: </string>
+    <string name="update">更新</string>
+    <string name="apps_uninstall">我的應用</string>
+    <string name="apps_update">應用更新</string>
+    <string name="apps_mgr_menu_item_download_manager">下載管理</string>
+    <string name="apps_mgr_menu_item_refresh">刷新</string>
+    <string name="apps_mgr_sub_title_categories">應用類別</string>
+    <string name="apps_mgr_sub_title_featued">精品推薦</string>
+    <string name="phone_memory">手機儲存:</string>
+    <string name="sd_memory">存儲卡:</string>
+    <string name="internal_storage">手機儲存:</string>
+    <string name="sdcard_storage">SD卡:</string>
+    <string name="menuitem_apps_mananement">應用管理</string>
+    <string name="appmgr_menuitem_app_center">安卓應用市場</string>
+    <string name="appmgr_menuitem_app_center_other">GO精品</string>
+    <string name="appmgr_menuitem_game_center">遊戲中心</string>
+    <string name="apps_management_dialog_title">應用大小</string>
+    <string name="apps_management_dialog_message">請下載最新版本GO任務管理器，以便能準確展現應用大小信息</string>
+    <string name="apps_management_dialog_button_confirm">確定</string>
+    <string name="apps_management_dialog_button_cancel">取消</string>
+    <string name="apps_management_sdcard_no_exist">不可用</string>
+    <string name="apps_management_update_all_dialog_title">提示</string>
+    <string name="apps_management_update_all_dialog_message">確定更新全部應用？</string>
+    <string name="apps_sort_dialog_title">應用排序方式</string>
+    <string name="apps_recomm_network_refresh">重試</string>
+    <string name="apps_recomm_network_feedback">報告問題</string>
+
+    <!--
+    <string name="apps_no_prompt_update_title">忽略更新</string>
+	<string name="aspps_no_update_dialog_title">不提示更新</string>
+    -->
+    <string name="appsuninstall_btn">批量卸載</string>
+    <string name="appsuninstall_root_alert_title">ROOT權限</string>
+    <string name="appsuninstall_root_alert_text">"批量卸載"隱藏卸載界面需要ROOT權限。
+	    	想要使用隱藏界面特性?</string>
+    <string name="selected_apps_result">已選擇 %d 應用</string>
+    <string name="appsuninstall_sure">是否確定卸載?</string>
+    <string name="appsuninstall_uninstalling">正在卸載，請稍候...</string>
+    <string name="appsuninstall_no_root_message">獲取ROOT權限失敗，不能啟動靜默卸載模式</string>
+    <string name="getroot_failed">取ROOT權限失敗</string>
+    <string name="appsuninstall_finish">卸載完成</string>
+    <string name="apps_no_prompt_update_title">忽略更新</string>
+    <string name="apps_management_none_for_no_update">沒有忽略更新</string>
+    <string name="apps_management_has_no_update_item">項忽略更新：</string>
+    <string name="apps_management_reprompt_all_update">全部重新提醒</string>
+    <string name="apps_management_no_update_info_message">當前無忽略更新的應用</string>
+    <string name="apps_management_no_update_guide_message">長按更新項，選擇忽略即可添加 </string>
+    <string name="apps_management_no_refresh_message">當前存在正在下載項，請稍後刷新...</string>
+    <string name="appgame_appsupdate_header_update">可更新應用</string>
+    <string name="appgame_appsupdate_header_app">全部本地應用</string>
+    <string name="appgame_myapp_sort_by_time">最新安裝</string>
+    <string name="appgame_myapp_sort_by_name">名稱(A-Z)</string>
+    <string name="appgame_myapp_sort_by_size">最占空間</string>
+    <string name="appgame_update_myapp">可更新</string>
+    <string name="appgame_ingore_myapp">已忽略</string>
+    <string name="appgame_network_error_message">網絡未連接</string>
+    <string name="appgame_network_error_tip">70W應用，精彩不容錯過，馬上設置網絡吧！</string>
+    <string name="appgame_network_error_feedback_tip">把問題反饋給我們</string>
+    <string name="appgame_no_update_message">沒有可更新軟件</string>
+    <string name="appgame_sdcard_error_message">連接到SD卡時出現問題</string>
+    <string name="appgame_no_download_message">當前無下載項</string>
+    <string name="appgame_no_game_message">未發現遊戲</string>
+    <string name="appgame_update_loading_message">正在獲取更新...</string>
+    <!-- end softmanager -->
+
+    <string name="wallpaper_setting">桌布</string>
+    <string name="icon_display">圖標顯示</string>
+    <string name="pref_icon_style">圖標風格</string>
+    <string name="pref_gesture_settings">手勢設置</string>
+	<string name="func_app_icon_effect_enable_hint">請在功能表設置中修改滾屏模式</string>
+	<string name="pref_help_hint">了解如何使用GO桌面</string>
+	<string name="dialog_title_custom_effect">隨機(自定義)</string>
+	<string name="toast_msg_noeffect_select">無效的操作，未選擇任何特效！</string>
+	<string name="heapsize_progress_tip">加載中...</string>
+	<string name="gostore_recommend">推薦</string>
+	<string name="gostore_theme">主題</string>
+	<string name="gostore_locker">鎖屏</string>
+	<string name="gostore_widget">插件</string>
+	<string name="gostore_soft">軟件</string>
+	<string name="gostore_wallpaper">壁紙</string>
+	<string name="gostore_set_wallpaper">設置爲桌面壁紙</string>
+    <string name="gostore_set_wallpaper_succeed">設置壁紙成功</string>
+    <string name="gostore_set_wallpaper_failed">設置壁紙失敗</string>
+    <string name="gostore_search_type_livewallpaper">動態壁紙</string>
+    <string name="gostore_search_type_wallpaper">靜態壁紙</string>
+	
+	
+	<string name="title_goLauncher_shortcut_dialog">桌面功能</string>
+	<string name="lock_internal_error">發生內部錯誤，請再次嘗試鎖屏。</string>
+    <string name="lock_internal_error_new_screen">發生內部錯誤，請通過系統設置界面取消GO桌面的激活。</string>
+    <string name="lock_internal_error_remove_componentname">發生內部錯誤,鎖屏失敗。你可以通過重啟你的手機或者取消並沖洗激活鎖屏功能來解決這個問題。</string>
+    <string name="lock_screen_tips">允許應用程序獲得鎖屏管理權限，激活鎖屏功能。如果用戶想卸載應用程序，請從設置界面-->安全-->選擇設備管理器中選擇GO桌面取消激活。</string>
+    <string name="lock_screen_dialog_tips">激活鎖屏功能後如果想卸載應用程序，請從設置界面-->安全-->選擇設備管理器中選擇GO桌面取消激活。</string>
+    <string name="lock_screen_func_tips">鎖屏功能需要Android2.2或以上系統支持</string>
+    <string name="need_to_reboot">嘗試重啟手機解決問題</string>
+    <string name="goshortcut_lockscreen">鎖屏</string>
+    <string name="goshortcut_showdockbar">快捷條</string>
+
+    <!-- 后台不保留活动 -->
+    <string name="finishactivity_title">注意</string>
+    <string name="finishactivity_content">“不保留後台活動”功能已啓動並會導致無法正常使用GO桌面，點擊確定進行關閉。</string>
+
+    <!-- 消息中心 -->
+	<string name="menuitem_msgcenter">消息中心</string>
+  	<string name="msgcenter_dialog_wait_msg">正在獲取消息,請稍候...</string>
+  	<string name="msgcenter_msg_update_erro">獲取消息失敗！</string>
+  	<string name="msg_time_stamp">發佈時間:</string>
+  	 	<string name="message_download">正在下載:</string>
+ 	<string name="message_file_install">已安裝</string>
+ 	<string name="message_file_not_install">安裝</string>
+  	
+  	<string name="no_install_goswitchwidget_tips">鎖屏功能需要安裝GO開關小部件，確認下載？</string>
+  	<string name="update_goswitchwidget_tips">鎖屏功能需要更新GO開關到最新版本，現在更新？</string>
+  	
+  	<string name="clear_all_desktop_view">刪除失敗，請重啟桌面。</string>
+  	
+  	<!-- appservice foregound -->
+  	<string name="foregound_title">常駐記憶體</string>
+  	<string name="foregound_informations">注意：實驗性功能，可能導致不穩定！如果使用過程中出現異常請禁用此項！</string>
+  	<string name="foregound_yes">繼續</string>
+  	<string name="foregound_no">關閉</string>
+  	
+  	<string name="too_many_screen_tip">最多9個屏幕。\n過多屏幕會影響桌面流暢性</string>
+  	
+  	
+  	<string name="apps_management_waiting">等待中……</string>
+  	<string name="apps_management_download_completed">已下載完成</string>
+  	<string name="apps_management_download_failed">下載失敗，請重試</string>
+  	<string name="apps_management_network_error">網絡發生異常</string>
+  	<string name="apps_management_network_warning_title">網絡提示</string>
+  	<string name="apps_management_network_warning_message">您正在使用的運營商網絡，更新應用將會消耗流量，是否繼續？</string>
+  	<string name="apps_management_none_for_update">沒有發現更新</string>
+  	<string name="apps_management_has_update_item">可更新應用</string>
+  	<string name="apps_management_operation_button_update_all_label">全部更新</string>
+  	<string name="apps_management_operation_button_cancel_all_label">全部取消</string>
+  	<string name="apps_management_operation_button_refresh_label">刷新</string>
+  	<string name="apps_management_notification_title_update_info_suffix">個應用可更新</string>
+  	<string name="apps_management_download_canceled">下載已取消</string>
+  	<string name="apps_management_preparing">準備中……</string>
+  	<string name="apps_management_canceling">取消中……</string>
+  	
+  	<string name="refresh">刷新</string>
+  	
+  	
+  	<string name="tab_add_app">應用程式</string>
+  	<string name="tab_add_widget">GO小部件</string>
+  	<string name="tab_add_wallpaper">壁紙</string>
+        <string name="tab_add_visual_theme">桌面主題</string>
+  	<string name="tab_add_visual_locker">鎖屏主題</string>
+    <string name="tab_add_visual_effect">特效</string>
+    <string name="tab_add_app_add">添加</string>
+    <string name="tab_add_app_folder">文件夾</string>
+    <string name="tab_add_app_shortcut">快捷方式</string>
+    <string name="tab_add_wallpaper_displaymode">裁剪模式</string>
+    <string name="tab_add_wallpaper_mode_hint">請選擇壁紙模式</string>
+    <string name="random_locker_theme">隨機</string>
+    <string name="tab_add_no_more_room">屏幕空間不足，無法選擇更多圖標。</string>
+    <string name="cell_has_been_occupied">位置已被佔用</string>
+    <string name="appfunc_no_recent_data">無最近打開記錄</string>
+  	<string name="gostore_themes_shortcut">百變主題</string>
+  	
+  	<!-- ScreenEdit Layout-->
+  	<string name="dialog_name_system_folder">系統資料夾</string>
+  	<string name="dialog_name_go_shortcut">GO快捷方式</string>
+  	
+  	<!-- dock3.0提示 -->
+  	<string name="dock_no_more_room">快捷條只能放5個圖標，圖標回到原來位置</string>
+  	<string name="add_to_dock">添加到快捷條</string>
+  	<string name="default_icon">默認圖標</string>
+  	<string name="dock_is_full">該快捷條已滿</string>
+  	
+ 	<string name="newest_version">最新版本:</string>
+ 	
+ 	<string name="go_apps">GO應用</string>
+ 	
+ 	<string name="recommended_download_dialog_title">推薦應用</string>
+	<string name="recommended_download_dialog_msg1">推薦您下載</string>
+	<string name="recommended_download_dialog_msg2">，點擊確定免費下載。</string>
+ 	
+ 	<string name="operation_failed">操作失敗, 請再嘗試</string>
+ 	
+ 	<string name="creat_folder_no_icon_tip">沒有圖標可供選擇創建文件夾！</string>
+ 	
+ 	<string name = "add_app_to_dock">添加程序</string>
+ 	<string name="dock_add_application_gesture">手勢程序</string>
+ 	
+ 	 		 	<!-- 主题预览主界面 -->
+ 	<string name="theme_toptab_desk">桌面主題</string>
+ 	<string name="theme_toptab_locker">鎖屏主題</string>	
+ 	<string name="theme_bottom_featured">精選</string>
+ 	<string name="theme_bottom_hot">热门</string>
+ 	<string name="theme_bottom_installed">本地</string>
+ 	<string name="theme_detail_menu_reset">恢復默認</string>
+ 	<string name="theme_detail_menu_del">刪除</string>
+ 	<string name="theme_detail_menu_del_update">卸載更新</string>
+ 	<string name="theme_detail_menu_info">主題信息</string>
+    <string name="theme_detail_menu_preview">主題預覽</string>	
+ 	<string name="theme_download_golocker">下載GO鎖屏</string>
+ 	<string name="theme_findmore">獲取更多主題</string>
+ 	<string name="locker_low_verson_tips_title">提示</string>
+ 	<string name="locker_low_verson_tips_content">您使用的GO鎖屏版本過低，將無法使用部分功能，請升級到v1.22</string>
+ 	<string name="locker_low_verson_update">更新</string>
+ 	<string name="locker_low_verson_use">應用</string>
+ 	<string name="theme_detail_alertdialog_title">主題資源</string>
+ 	<string name="theme_detail_alertdialog_sure">確定</string>
+ 	<string name="theme_modifyed_text">已修改</string>	
+    <string name="share_content_theme1">我正在使用GO桌面</string>
+    <string name="share_content_theme2">主題，很酷，你可以在谷歌Play市場或者GO精品搜索主題，或者使用Android手機瀏覽器點擊以下網址：http://goo.gl/hFbA5</string>
+    <string name="theme_already_using">此主題已應用</string>
+    <string name="theme_golocker_logo">GO鎖屏 秀個性</string>
+	<string name="theme_golockers_tips">想要個性化的鎖屏，請點擊下載</string>
+ 	<!-- 正在运行菜单栏 -->
+ 	<string name="promanage_menuitem_lock_list">鎖定列表</string>
+ 	<string name="promanage_menuitem_hide_lock_program">隱藏鎖定程序</string>
+ 	<string name="promanage_menuitem_show_lock_program">顯示隱藏程序</string>
+ 	<string name="promanage_menuitem_refresh">刷新</string>
+ 	<!-- 正在运行菜单栏 结束-->
+
+    <!-- 推荐非桌面的应用图标名称，需要下载 -->
+    <string name="recommand_gosms">GO短信</string>
+    <string name="recommand_gopowermaster">GO省電</string>
+    <string name="recommand_gotaskmanager">GO任務管理器</string>
+    <string name="recommand_gokeyboard">GO輸入法</string>
+    <string name="recommand_gobackup">GO備份</string>
+    <string name="recommand_lockscreen">一鍵鎖屏</string>
+    <string name="recommand_goweatherex">GO天氣</string>
+    <string name="recommend_nextlauncher">3D桌面</string>
+    <string name="recommend_media_plugin">GO資源管理器</string>
+    <string name="recommend_clean_master">清理大師</string>
+    <string name="recommend_baidu">百度瀏覽器</string>
+    <string name="recommend_anzhuo">安卓市場</string>
+    <!-- 推荐非桌面的应用图标名称，需要下载——结束 -->
+    <!-- 消息中心 -->
+    <string name="message_center_topbar_title">詳情信息</string>
+    <string name="message_center_date">yyyy年MM月dd日</string>
+    <string name="today">今天</string>
+
+    <!-- 功能反馈 -->
+    <string name="feedback_select_type_title">選擇反饋種類</string>
+    <string name="feedback_select_type_bug">問題反饋</string>
+    <string name="feedback_select_type_suggestion">功能建議</string>
+    <string name="feedback_select_type_question">操作疑問</string>
+
+    <!-- 更换图标 -->
+    <string name="change_icon_reset_default">恢復默認</string>
+    <string name="change_icon_default_icon">(默認圖標)</string>
+    <string name="change_icon_folder">文件夾圖標</string>
+
+    <!-- 选择透明通知栏的对话框提示 -->
+    <string name="tran_statusbar_dialog_title">注意</string>
+    <string name="tran_statusbar_dialog_content">GO桌面無法辨別您的系統是否有此功能，請確保您的系統具有透明通知欄的功能。</string>
+
+    <!-- 桌面启动时弹出的提示语 -->
+    <string name="notice">提示</string>
+    <string name="with_golauncherlv_and_golocker">發現您的手機已經安裝了GO桌面鎖屏版，已經包含了GO桌面和GO鎖屏的所有功能。建議繼續使用GO桌面鎖屏版。</string>
+    <string name="with_golauncherlv_without_golocker">發現您的手機已安裝GO桌面，請選擇使用GO桌面或GO桌面鎖屏版。若選擇GO桌面，鎖屏將恢復為系統鎖屏。</string>
+    <string name="golauncherex">GO桌面EX</string>
+    <string name="golauncherlv">GO桌面鎖屏版</string>
+    <!-- end 桌面启动时弹出的提示语 -->
+
+
+    <!-- 命名对话框 -->
+    <string name="new_default_name">播放列表</string>
+    <string name="name_blank_tip">名字不能為空</string>
+    <string name="rename_window_title">重命名</string>
+    <string name="rename_window_recommendedname">建議名稱：</string>
+
+    <!-- 资源管理开始 -->
+    <string name="no_way_to_open_file">無法打開此資料</string>
+    <string name="appfunc_mediamanagement_chooser_music">選擇音樂播放器</string>
+    <string name="appfunc_mediamanagement_chooser_pic">選擇圖片瀏覽器</string>
+    <string name="appfunc_mediamanagement_chooser_setdefault">設為默認打開方式</string>
+    <string name="media_file_not_found_title">資源不存在</string>
+    <string name="media_file_not_found_message">資源不存在，請點擊刷新后再操作</string>
+    
+    <!-- 图片/音乐播放设置 -->
+    <string name="menu_item_settings">設置</string>
+    <string name="go_picture_browser">GO圖片查看器</string>
+    <string name="go_music_player">GO音樂播放器</string>
+    <string name="gallery_settings">圖庫設置</string>
+    <string name="picture_browser">圖片查看器</string>
+    <string name="music_settings">音樂設置</string>
+    <string name="music_player">音樂播放器</string>
+    <string name="open_with">選擇以下方式打開</string>
+    <string name="open_with_none">無</string>
+    <!-- 资源管理结束 -->
+
+	<string name="no_featured_themes">你已安裝了所有精選主題，點擊獲取更多主題吧。</string>
+    <string name="no_hot_themes">正在加載熱門主題，請稍等.....</string>
+    <string name="setting_dialog_show_action_bar_title">提示</string>
+    <string name="setting_dialog_show_action_bar_message">隱藏功能表操作欄后，將無法從功能表添加圖標至桌面。</string>
+    <string name="setting_dialog_dont_show_again">不再提醒</string>
+    
+    <!-- 手势管理 -->
+    <string name="gesture_my_gesture">我的手勢</string>
+    <string name="gesture_for_app">選擇應用程序</string>
+    <string name="gesture_for_shortcut">選擇GO快捷方式</string>
+    <string name="redraw">重畫</string>
+    <string name="back_redraw">返回重畫</string>
+    <string name="gesture_recognise_result_title">您畫的手勢與某些相似：</string>
+    <string name="add_new_gesture_success">添加成功</string>
+    <string name="add_new_gesture_fail">添加失敗</string>
+    <string name="modify_gesture_title">修改手勢</string>
+    <string name="modify_gesture_success">修改成功</string>
+    <string name="modify_gesture_fail">修改失敗</string>
+    <string name="no_sdcard">無法讀取SD卡，請插入SD卡后使用手勢功能</string>
+    <string name="no_gesture_tips">還沒有添加手勢，請點擊上面的“+”添加。</string>
+    <string name="first_open_gesture_tips">您可以嘗試畫個手勢,如:</string>
+    <string name="gesture_app">打開應用:</string>
+    <string name="gesture_shortcut">快捷方式:</string>
+    <string name="gesture_goshortcut">GO快捷方式:</string>
+    <string name="gesture_uninstalled">已卸載:</string>
+    <string name="gesture_select_open_response">請選擇您想打開的響應：</string>
+    <string name="gesture_draw_one">畫一個手勢</string>
+    <string name="gesture_no_response">沒有響應</string>
+    <string name="gesture_add_response">添加響應</string>
+    <string name="gesture_select_response">選擇響應</string>
+    <string name="gesture_change_response">修改響應</string>
+    <string name="gesture_draw_one_title">畫手勢</string>
+    <string name="gesture_select_response_title">選響應</string>
+    <string name="gesture_next_btn">下一步</string>
+    <string name="gesture_up_btn">上一步</string> 	
+    <string name="gesture_load_fail">手勢加載失敗</string>
+ 	<!--end 手势管理 -->
+ 	<!-- 屏幕设置-桌面行列数 -->   
+	<string name="icon_autofit">自動調整小部件和圖標的大小</string>
+    <string name="screen_gesture">桌面手勢</string>
+
+    <!-- 音樂播放列表 -->
+    <string name="edit_button_remove">移出列表</string>
+    <string name="edit_button_rename">重命名</string>
+    <string name="edit_button_addto">添加到</string>
+    <string name="playlist_dialog_title">提示</string>
+    <string name="playlist_dialog_confirm_tips">確定移出音樂?</string>
+    <string name="playlist_dialog_del_files">同時刪除該文件</string>
+    <string name="playlist_dialog_add_title">添加到播放列表</string>
+    <string name="playlist_dialog_add_no_data">暫時沒有播放列表</string>
+    <string name="playlist_dialog_add_create">新建</string>
+    <string name="playlist_dialog_add_create_playlist">新建播放列表</string>
+    <string name="playlist_dialog_add_create_succeed">添加成功!</string>
+    <string name="playlist_dialog_new_title">新建播放列表名稱</string>
+    <string name="playlist_dialog_rename_title">重命名</string>
+    <!-- end 音樂播放列表 -->
+
+
+	<!--桌面分享-->
+    <string name="share_title_text">桌面分享</string>
+    <string name="share_text_choose_tip">點擊選擇您要分享的桌面截圖 (最多三張)</string>
+    <string name="share_text_choose_max_tip">最多只能選擇三張！</string>
+    <string name="share_text_immediately_share">馬上分享</string>
+    <string name="share_text_choose_tip_low">點擊選擇您要分享的桌面截圖 (只能選擇一張)</string>
+    <string name="share_text_choose_max_tip_low">只能選擇一張！</string>
+    <string name="share_img_title_text">GO桌面，秀出你的個性！</string>
+    <string name="share_img_text_1">掃描二維碼，立刻免費擁有！</string>
+    <string name="share_img_text_4">GO桌面海量主題、豐富插件，讓你手機桌面與眾不同。
+</string>
+    <string name="share_content_text">Hi，秀一下我正在使用的#GO桌面#，很酷吧！它有數不盡的主題，豐富多彩的配套組件，可以隨心DIY你的手機桌面。你也安裝@GO桌面  試試吧！下載地址：</string>
+    <string name="share_img_loading_text">正在生成桌面分享圖片...</string>
+    <string name="share_img_no_wallpaper">動態壁紙、透明通知欄無法獲取桌面背景！</string>
+
+    <!-- 主题更新提示 -->
+    <string name="theme_download_tips">UI 3.0新主題正在下載，請稍等...</string>
+    <string name="evernote_title">印像筆記</string>
+    <string name="notification_launcher_theme_title">GO桌面新主題上線!</string>
+    <string name="notification_launcher_theme_notetitle">GO桌面新主題上線!</string>
+    <string name="notification_launcher_theme_notetext">點擊獲取最新版本的GO桌面主題!</string>
+    <string name="notification_locker_theme_title">GO鎖屏新主題上線!</string>
+    <string name="notification_locker_theme_notetext">>點擊獲取最新版本的GO鎖屏主題!</string>
+
+    <!-- 文件夹换图标，为NinePatchDrawable时弹的提示 -->
+    <string name="folder_change_ninepatchdrawable_toast">抱歉！圖標格式不合適，無法進行替換</string>
+    <string name="one_x_guide_dialogtitle">隱藏下方狀態條</string>
+    <string name="one_x_guide_dialogcontent">隱藏ONEX/S屏幕下方的狀態條，您必須要更新HTC官方提供的4.0.4升級包并進行相關設置，請查看我們為您提供的詳細升級及設置指南。</string>
+	     
+	<string name="theme_featured_get">獲取</string>
+    <string name="payment_list_item1">通過GetJar獎勵免費使用該主題</string>
+    <string name="payment_list_item2">通過應用內付費支付使用該主題</string>
+    <string name="theme_detail_getnow">獲取</string>
+    <string name="theme_get_detailinfo_failed">獲取詳情失敗！</string>
+    <string name="system_default">系統默認</string>
+    <string name="language_change_content">桌面語言被修改，現在要重啓桌面。</string>
+    <string name="check_language_title">語言設置</string>
+    <string name="appinbilling_start_google_play">請先啟動您的電子市場</string>
+    <string name="appinbilling_google_service_error">Google服務異常，請檢查帳戶及網絡后重試。</string>
+    
+    <string name="smsbilling_send_success_message">付費成功后，請在“訂單管理”下載已購買的主題</string>
+    <string name="smsbilling_send_failed_message">扣費短信發送失敗，請重試</string>
+    
+     <!--Go手册 -->
+    <string name="go_handbook_title">GO幫助手冊</string>
+    <string name="go_handbook_connect_fail">聯網獲取失敗，請重試!</string>
+    <string name="go_handbook_try_now">馬上試用</string>
+    <string name="go_handbook_go_on">繼續瀏覽</string>
+    <string name="mirgrate_overwrite_launcher_summery">覆蓋到當前桌面</string>
+    <string name="mirgrate_copy_launcher_summery">複製到當前桌面</string>
+    
+    <string name="overwrite_launcher_notify">應用其他GO桌面設置</string>
+    
+    <!-- 安全桌面模块 -->
+    <string name="security_engine_safemanager">安全管家</string>
+    <string name="security_engine_kingsoft">金山</string>
+    <string name="security_engine_tencent_security">腾讯手机管家</string>
+    <string name="security_result_dialog_title">GO桌面</string>
+  	<string name="security_result_dialog_title_detail">掃描詳情報告</string>
+  	<string name="security_result_dialog_cancel">取消</string>
+  	<string name="security_result_dialog_ignore">忽略</string>  	 
+  	<string name="security_result_dialog_retry">重試</string>
+  	<string name="security_result_dialog_open">打開</string>
+  	<string name="security_result_dialog_uninstall">卸載</string>
+  	<string name="security_result_dialog_interrupt">停止</string>
+  	<string name="security_result_item_engine_tip">%1$s雲掃描引擎</string>
+  	<string name="security_result_item_state_unknow">未知</string>
+  	<string name="security_result_item_state_safe">安全</string>
+  	<string name="security_result_item_state_danger">危險</string>
+  	<string name="security_result_item_state_neterror">聯網失敗</string>
+  	<string name="security_result_item_state_scanning">正在掃描</string>
+  	<string name="security_scanning_result">掃描結果：</string>
+  	<string name="security_scanning_tip">正在掃描：“%1$s”</string>
+  	<string name="security_new_installed">新安裝應用掃描</string>
+  	<string name="security_network_disconnected">無法檢測應用，網絡連接失敗！</string>
+  	<string name="security_scan_result_safe">該軟件未發現安全風險，可放心使用。</string>
+  	<string name="security_scan_result_unknow">經安全管家雲安全檢測，該軟件的安全結果為未知。</string>
+  	<string name="security_scan_result_disconnected">與安全管家雲安全檢測連接超時，請重新連接</string>
+  	<string name="security_scan_result_scanning">正在掃描...</string>
+  	
+  	<string name="security_notify_title">Go桌面提示</string>
+  <string name="security_notify_message_for_out_of_date">建議您進行全盤掃描，保護您的手提電話。</string>
+  <string name="security_notify_message_for_dangerous">發現危險軟件，點擊進行全盤掃描。</string>
+  <string name="security_notify_checking">正在進行批量掃描應用程式...</string>
+  <string name="security_notify_finish">批量掃描完成，點擊查看詳情。</string>
+  <string name="security_batch_check_detail">雲查殺結果詳情。</string>
+  <string name="security_batch_check_engine">安全掃描引擎。</string>
+  <string name="security_batch_check_engine_safe_manager">安全雲掃描引擎</string>
+  <string name="security_batch_check_engine_tencent_manager">QQ手機管家雲掃描引擎</string>
+  <string name="security_batch_checking">正在掃描應用程式...</string>
+  <string name="security_batch_wait_for_checking">正在等待掃描...</string>
+  <string name="security_batch_stop">停止掃描</string>
+  <string name="security_batch_restart">重新掃描</string>
+  <string name="security_batch_contiune">繼續查殺</string>
+  <string name="security_batch_detail">查看詳情</string>
+  <string name="security_batch_safe_app">確認%1$s個安全應用程式</string>
+   <string name="security_batch_unsafe_app">發現%1$s個危險應用程式</string>
+   <string name="security_batch_already_stoped">雲查殺已經停止</string>
+   <string name="security_batch_check_failed">雲查殺失敗</string>
+   <string name="security_batch_check_threats">%1$s存在威脅</string>
+   <string name="security_batch_advice">建議立刻卸載</string>
+  		
+  	<string name="security_notify_timeout_msg">連接伺服器超時，無法進行安全檢測</string>
+  	<string name="security_notify_timeout_tilte">連接伺服器超時</string>
+  	<string name="security_notify_timeout_content">連接伺服器超時，點擊查看</string>
+  	<string name="security_notify_safe_msg">“%1$s”未發現安全風險</string>
+  	<string name="security_notify_safe_title">GO桌面提示</string>
+  	<string name="security_notify_safe_content">“%1$s”未發現安全風險，點擊查看</string>
+  	<string name="security_notify_unsafe_msg">“%1$s”發現安全風險</string>
+  	<string name="security_notify_unsafe_title">“%1$s”發現安全風險</string>
+  	<string name="security_notify_unsafe_content">“%1$s”發現安全風險，點擊查看</string>
+  	<string name="security_notify_unknow_msg">“%1$s”安全結果未知</string>
+  	<string name="security_notify_unknow_title">GO桌面雲安全提示</string>
+  	<string name="security_notify_unknow_content">“%1$s”安全結果未知，點擊查看</string>
+  	<string name="cloud_security_enable">雲安全掃描</string>
+  	<string name="cloud_security_enable_summary">應用安裝或更新後進行聯網雲端掃描</string>
+	
+	<string name="appfunc_auto_fit_row_column_enable">行列數自適應</string>
+    <string name="appfunc_auto_fit_msg">自適應</string>
+    <string name="appfunc_set_row_number">設置行數：%1$s</string>
+    <string name="appfunc_set_column_number">設置列數：%1$s</string>
+    
+    <string name="db_import_failed">抱歉，操作失敗!</string>
+    <string name="quick_add_folder_create_new_folder">新建資料夾</string>
+    <string name="quick_add_folder_game_folder">遊戲</string>
+    <string name="quick_add_folder_social_folder">社交</string>
+    <string name="quick_add_folder_system_folder">系統</string>
+    <string name="quick_add_folder_tool_folder">工具</string>
+
+    <!-- GOWidget一键下载 -->
+    <string name="download_gowidget_dialog_title">注意</string>
+    <string name="download_gowidget_network_unavailable">無法連接到網絡，請檢查網絡配置</string>
+    <string name="download_gowidget_wifi_tips">目前處於數據流量模式，繼續將會產生一定的流量費（由運營商收取），建議開啟wifi節省流量</string>
+    <string name="download_gowidget_wifi_setting">設置WI-FI</string>
+    <string name="download_gowidget_continue">繼續</string>
+    <string name="download_gowidget_apply_btn">一鍵下載</string>
+    <string name="download_gowidget_download">未下載</string>
+    <string name="download_gowidget_pending">等待中</string>
+    <string name="download_gowidget_downloaded">已下載</string>
+    <string name="download_gowidget_installed">已安裝</string>
+    <!-- end GOWidget一键下载 -->
+     
+    <!-- BEGIN 自定义设置 -->
+    <string name="desk_setting_gosetting">GO桌面設定</string>
+    <string name="desk_setting_routine">常規設定</string>
+    <string name="desk_setting_screen">介面設定</string>
+    <string name="desk_setting_app">行爲設定</string>
+    <string name="desk_setting_other">其他設定</string>
+    <string name="desk_setting_tab_title_desk">桌面</string>
+    <string name="desk_setting_tab_title_dock">快捷條</string>
+    <string name="desk_setting_tab_title_function">功能表</string>
+    <string name="desk_setting_show_app_name">顯示程式名稱</string>
+    <string name="desk_setting_show_app_name_bg">顯示名稱背景</string>
+    <string name="desk_setting_screen_rows_cols">屏幕行列數</string>
+    <string name="desk_setting_screen_gesture">桌面手勢設定</string>
+    <string name="desk_setting_dock_auto_cycle">快捷條循環切換</string>
+    <string name="desk_setting_dock_auto_fit">快捷條圖標位置自適應</string>
+    <string name="desk_setting_function_gesture">功能表手勢設定</string>
+    <string name="desk_setting_visual_tab_wallpaper_scrollable">壁紙滾動</string>
+    <string name="desk_setting_visual_tab_icon_max">最大值</string>
+    <string name="desk_setting_visual_tab_icon_large">大圖標</string>
+    <string name="desk_setting_visual_tab_icon_small">小圖標</string>
+    <string name="desk_setting_visual_tab_icon_name_icon">圖標</string>
+    <string name="desk_setting_visual_tab_icon_name_dock">快捷條圖標</string>
+    <string name="desk_setting_visual_tab_icon_name_folder">文件夾圖標</string>
+    <string name="desk_setting_visual_tab_font_size_title">設定字體大小:</string>
+    <string name="desk_setting_select_color_title">程式名顏色</string>
+    <string name="desk_setting_custom_string">自定義</string>
+    <string name="desk_setting_multi_select_tips">操作無效，請選擇需要的選項!</string>
+    <string name="desk_setting_have_dirty_data">發現%1$s存在垃圾數據，確定清除數據？</string>
+    <string name="desk_setting_performance">性能</string>
+    <string name="desk_setting_optesthesia">視覺</string>
+    <string name="desk_setting_operate">操作</string>
+    <string name="desk_setting_transparent">透明</string>
+    <string name="desk_setting_touchhelper">超級插件設定</string>
+    
+    <!-- END 自定义设置 -->
+
+    <string name="rate_remind_tips">評分提示</string>
+    <string name="rate_remind_msg">GO桌面是富於個性化、操作便捷的桌面美化工具。如果您喜歡它，就給它評分，謝謝。</string>
+    
+        <string name="rate_go_launcher_mail_content">標題：（請簡要描述您的問題）\n\n\n詳情：（請詳細描述問題和出現問題的情景）\n\n\n</string>
+    <string name="rate_remind_next">下次提醒</string>
+    <string name="rate_rate">評分</string>
+    <string name="rate_remind_never">取消</string>
+    <string name="notification_setting_subtitle">未讀消息提示</string>
+    <string name="notification_setting_subtitle_more">更多應用（退出應用後計數清零）</string>
+    <string name="notification_setting_accessbility">支持更多應用，請開啟輔助功能 。輔助功能僅檢測通知欄消息提醒，不收集其他任何信息</string>
+    <string name="notification_setting_tip_title">更多應用統計提醒</string>
+    <string name="notification_setting_tip_content">更多應用中添加的應用，打開后提醒將消失，是否繼續使用？</string>
+    <string name="notification_setting_noaccessbility">抱歉，你的系統不支持輔助功能</string>
+    <string name="notification_setting_hint_title">輔助功能設置</string>
+    <string name="notification_setting_hint_content">消息提示器輔助功能已關閉，需重新開啟</string>
+    <string name="notification_setting_show_nexttime">下次不再顯示</string>
+    <string name="notification_setting_show_facebook_move">Facebook被移動到了“更多應用”中</string>
+    <string name="notification_setting_accessbility_title">開啓更多應用的未讀消息提示</string>
+    <string name="notification_setting_accessbility_tip_open">已支持更多應用</string>
+    <string name="notification_setting_accessbility_tip_close">開啓後將支持更多應用</string>
+    <!-- 桌面Toast提示 -->
+    <string name="screen_long_press_new_tip">圖標重疊可創建文件夾</string>
+    <string name="screen_goto_func_tip">長按圖標可進入編輯模式</string>
+    <!-- END 桌面Toast提示 -->
+    <!-- DOCK栏拖动删除 /添加 icon遮罩提示 -->
+    <string name="guide_dock_bar_icon_title">快捷條圖標</string>
+    <string name="guide_dock_bar_icon_tip">長按圖標拖動，可刪除或添加快捷條圖標</string>
+    <string name="guide_dock_bar_icon_add_title">添加</string>
+    <string name="guide_dock_bar_icon_add_tip">長按桌面圖標；\n拖動至快捷條。</string>
+    <string name="guide_dock_bar_icon_delete_title">刪除</string>
+    <string name="guide_dock_bar_icon_delete_tip">長按快捷條圖標；\n拖動至桌面或垃圾箱。</string>
+    <!-- END DOCK栏拖动删除 /添加 icon遮罩提示 -->
+
+    <string name="gostore_guide_title">GO桌面超人氣主題</string>
+    <string name="gostore_guide_content">主屏幕點擊菜單鍵進入GO精品</string>
+    <string name="goto_main">跳過</string>
+    <string name="goto_theme">更多主題</string>
+    <string name="gostore_content_msg1">立即下載</string>
+    <string name="gostore_content_msg2">炫出手機個性，就這麽簡單！</string>
+
+    <!-- 截屏相关 -->
+    <string name="snapshot_imagebeensave">截圖已保存在</string>
+    <string name="snapshot_tutorial">開啟截屏模式後，可通過搖晃手機截取GO桌面任一頁面。</string>
+    <string name="snapshot_tutorial_notice1">提示：</string>
+    <string name="snapshot_tutorial_notice2">两分钟内无截屏操作，将自动关闭截屏模式。</string>
+    <string name="snapshot_mode">截屏模式(试用)</string>
+    <string name="snapshot_notification_title">截屏模式已啟動!</string>
+    <string name="snapshot_notification_title_off">截屏模式已關閉!</string>
+    <string name="snapshot_notification_message_title">已截取%張圖片</string>
+    <string name="snapshot_notification_message">搖動手機可截圖,點擊退出GO桌面截屏模式.</string>
+    <string name="snapshot_paused">截屏功能不支持該頁面</string>
+    <string name="snapshot_icon_title_exit">退出</string>
+    <string name="snapshot_icon_title_back">返回</string>
+    <string name="snapshot_icon_title_save">保存</string>
+    <string name="snapshot_icon_title_share">分享</string>
+    <string name="snapshot_icon_title_open">打開</string>
+    <string name="snapshot_open_way">選擇打開方式</string>
+    <string name="snapshot_create_image_error">生成分享圖片失敗</string>
+    <string name="snapshot_create_image_error_oom">生成分享圖片時內存不足</string>
+    <string name="snapshot_need_root_for_more">此截屏模式只支持部分頁面，如果您需要截取更多的頁面，您需要獲取Root權限。</string>
+    <string name="snapshot_require_root">此截屏模式只支持部分頁面,如果您需要截取更多的頁面,需要開啟您手機的Root權限</string>
+    <string name="snapshot_never_show">不再顯示</string>
+    <string name="snapshot_authorization_failed">授權失敗</string>
+    <string name="snapshot_authorization">授權</string>
+    <string name="snapshot_detect_root">檢測Root權限</string>
+    <string name="snapshot_creating_share_image">創建圖片</string>
+    <string name="snapshot_sdcard_error">SD卡不可用</string>
+    <string name="snapshot_root_mode_faild">Root截圖模式失敗，切換為非root模式。</string>
+
+    <!-- 桌面生成系统widget -->
+    <string name="golauncherex_widget_title">GO桌面主題 1x1</string>
+
+    <!-- GO多屏壁纸 -->
+    <string name="go_multiple_wallpaper_title">GO多屏桌布</string>
+    <string name="go_multiple_wallpaper_tip_content">您未安装GO多屏桌布，请點擊確認下载。</string>
+    <string name="go_multiple_wallpaper_toast">請切換裁剪模式爲默認模式，以顯示多屏桌布特效。</string>
+
+    <string name="not_support_live_wallpaper_toast">抱歉，您的設備不支持動態桌布。</string>
+    
+    <!-- 应用中心邮箱意见反馈 -->
+    <string name="appgame_feedback_title">意見反饋</string>
+    <string name="appgame_feedback_hint">在使用中遇到任何您覺得不爽的問題或者新的要求，歡迎反饋給我們。您的反饋至關重要，我們會爲您作出改變！\n\n</string>
+    <string name="appgame_feedback_submit_button">提交</string>
+
+     
+    <!-- facebook分享 -->
+    <string name="facebook_login_title">Facebook登陸</string>
+    <string name="facebook_share_success">分享成功,謝謝支持！</string>
+    <string name="facebook_share_fail">分享失敗:</string>
+    <string name="facebook_share_on_facebook">Facebook分享</string>
+    <string name="facebook_share_text">如果您也喜歡GO桌面，請告訴您的朋友們，讓更多人享受GO桌面帶來的樂趣</string>
+    <string name="facebook_shareus_on_facebook">分享到Facebook</string>
+    <string name="facebook_share_remindlater">以後提示</string>
+    <string name="facebook_share_msg">我正在安卓手機上使用GO桌面EX！酷炫，有趣，並且免費！你也來試一試吧！</string>
+    <string name="facebook_backup_title">Facebook備份</string>
+    <string name="facebook_backup">Facebook備份GO桌面</string>
+    <string name="facebook_restore">Facebook恢復備份</string>
+    <string name="facebook_logout">Facebook登出</string>
+    <string name="facebook_user_summary">當前用戶:</string>
+    <string name="facebook_user_notlogin_summary">未登陸</string>
+    <string name="facebook_taost_uploadsuccess">備份上傳成功</string>
+    <string name="facebook_taost_uploadfail">備份上傳失敗</string>
+    <string name="facebook_taost_downloadsuccess">備份下載成功</string>
+    <string name="facebook_taost_downloadfail">備份下載失敗</string>
+    <string name="facebook_restore_summary">恢復備份在服務器中的桌面數據</string>
+    <string name="facebook_toast_loging">正在登陸...</string>
+    <string name="facebook_toast_uploading_backup">正在上傳備份...</string>
+    <string name="facebook_restore_db_dialog_summary">將服務器上的設置數據恢復至GO桌面？</string>
+    <string name="facebook_connect_succeed">登陸成功!</string>
+	<string name="facebook_share">分享</string>
+	<string name="facebook_connect_with">綁定Facebook帳號</string>
+	<string name="facebook_networkerror">請檢查網絡連接!</string>
+	<string name="facebook_logout_succeed">登出成功!</string>
+	<string name="facebook_restore_succeed_title">備份&amp;恢複成功!</string>
+	<string name="facebook_restore_succeed_summury">向朋友們分享對GO桌面的使用體驗嗎？</string>
+	<string name="facebook_restore_succeed_content">在GO桌面中，我可以方便地通過Facebook在線備份及恢複GO桌面設置，妳也可以試壹試。</string>
+	<string name="facebook_guide_contend1">主題跟蹤，把您應用的主題記錄到您的時間軸上。</string>
+    <string name="facebook_guide_contend2">通過facebook帳號備份、還原。</string>
+    <string name="facebook_guide_summury">(我們不會未經您的許可發布任何消息。)</string>
+
+    <!-- 资源管理插件化 -->
+    <string name="mediamanagement_plugin_download_title">GO資源管理器</string>
+    <string name="download_mediamanagement_plugin_dialog_title">資源管理器插件</string>
+    <string name="download_mediamanagement_plugin_dialog_text">資源管理器獨立爲GO桌面EX插件,可沿用舊版設置數據,是否下載繼續使用?</string>
+    <string name="mediamanagement_delete_data_dialog_title">资源管理器数据</string>
+    <string name="mediamanagement_delete_data_dialog_text">是否清除資源管理器的音樂播放列表數據?</string>
+    <string name="update_go_launcher_dialog_title">升級提示</string>
+    <string name="update_go_launcher_dialog_text">請升級GO桌面以支持GO資源管理器的最新功能</string>
+    <string name="update_media_plugin_dialog_text">請升級GO資源管理器以適配最新的GO桌面</string>
+    <string name="menuitem_mediamanagement_plguin">資源管理器</string>
+    <string name="download_mediamanagement_plugin_dialog_download_btn_text">立即下載</string>
+    <string name="download_mediamanagement_plugin_dialog_later_btn_text">以後再說</string>
+    <string name="download_mediamanagement_plugin_dialog_text_first">資源管理器可在功能表中管理手機內的圖片、音樂和視頻等資料,是否下載使用?\n</string>
+    <string name="download_mediamanagement_plugin_dialog_text_middle">提示</string>
+    <string name="download_mediamanagement_plugin_dialog_text_last">：資源管理器插件化可帶給您更流暢的操作體驗。</string>
+        <string name="init_mediamanagement_plugin_fail">GO資源管理器初始化失敗，請安裝最新版本的GO桌面和GO資源管理器</string>
+    
+    <!-- 应用游戏中心详情页网络连接错误提示 -->
+    <string name="appgame_network_error_title">網絡異常</string>
+    <string name="appgame_network_error_no_connection">網絡未連接，無法獲取內容</string>
+    <string name="appgame_network_error_connect_timeout">網絡連接超時，無法獲取內容</string>
+    <string name="appgame_network_error_setting">網絡設置</string>
+    <string name="appgame_network_error_back">返回</string>
+    
+    <string name="advert_dialog_message">您安裝了%s</string>
+    <string name="advert_dialog_message_content">點擊打開</string>
+    <string name="advert_dialog_message_click_open">建議立即打開體驗。</string>
+    <string name="advert_btn_active">激活</string>
+    <string name="advert_dialog_content">已經成功安裝了%s，趕快打開嘗鮮吧。</string>
+    
+    <!-- 动态壁纸 -->
+    <string name="livewallpaper_desc">最好的手機桌面壁紙。</string>
+    <string name="livewallpaper_setting_title">壁紙設置</string>
+    <string name="livewallpaper_setting_start_golauncher">啟動GO桌面</string>
+
+    <string name="widget_errors">由於%s小部件發生錯誤導致桌面重啟!</string>
+    
+    <string name="plugin_setting">插件設置</string>
+    
+     <string name="vip_notification_tip">喜歡GO主題,可嘗試獲取任意下載主題的特權。</string>
+     <string name="vip_level1_tip">您已擁有高級特權，可免費下載所有官方設計的GO桌面、GO鎖屏收費主題以及超級主題。</string>
+	<string name="vip_level2_tip">您已擁有高級特權，可免費下載所有官方設計的GO桌面、GO鎖屏主題以及超級主題。</string>
+	<string name="vip_level1_title">普通特權</string>
+	<string name="vip_level2_title">高級特權</string>
+	<string name="vip_paid_success">獲取成功</string>
+	<string name="vip_level1_facebook_share_content">我擁有GO桌面主題下載的普通特權,可任意下載所有官方設計的 GO 桌面和 GO 鎖屏收費主題。http://www.facebook.com/appcenter/golauncher</string>
+	<string name="vip_level2_facebook_share_content">我擁有GO桌面主題下載的高級特權,可任意下載所有官方設計的 GO 桌面,GO 鎖屏收費主題以及超級主題。http://www.facebook.com/appcenter/golauncher</string>
+    <string name="vip_page_title">獲取任意下載主題特權</string>
+	
+    <string name="guide_wallpapersetting_scrollable">壁紙可滾動。</string>
+    <string name="guide_wallpapersetting_locked">壁紙已鎖定。</string>
+    <string name="locker_vip_low_verson_tips_content">您使用的GO鎖屏版本過低，將無法使用部分功能，請升級到最新版本</string>
+    
+        <!-- feedback时未安装email或浏览器时的提示 -->
+    <string name="feedback_no_browser_tip">請確認已安裝郵件客戶端或瀏覽器</string>
+    
+    <string name="locker_setting_tip">這裏可以設置鎖屏</string>
+    
+    <string name="top_vip_theme_tip_title">主題提示</string>
+    <string name="top_vip_theme_tip_content">該版本的主題特效僅適用于享有高級特權的用戶，請重新下載其他版本或升級成爲高級特權的用戶。</string>
+	<string name="top_vip_theme_btn_details">查看特權</string>
+	<string name="top_vip_theme_btn_ok">我知道了</string>
+    
+    <!-- 关闭自定义手势dialog -->
+	<string name="close_gesture_dialog_title">關閉雙擊手勢</string>
+	<string name="close_gesture_dialog_contend_1">如果您不需要雙擊手勢,您可以通過</string>
+	<string name="close_gesture_dialog_contend_2">\"桌面設置->行為設置->桌面手勢設置\"</string>
+	<string name="close_gesture_dialog_contend_3">設置雙擊空白處手勢為無響應.</string>
+	<string name="close_gesture_dialog_setbutton">立即設置</string>
+	
+	<!-- touchhelper -->
+	<string name="touchhelper_dialog_title">设置默认</string>
+    
+</resources>

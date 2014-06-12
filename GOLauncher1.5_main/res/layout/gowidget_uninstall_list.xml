@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffe6e6e6" >
+
+    <ListView 
+        android:id="@+id/uninstall_list"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_marginTop="11dp"
+    	android:layout_marginBottom="11dp"
+    	android:layout_marginLeft="11dp"
+    	android:layout_marginRight="11dp"
+    	android:scrollingCache="false"
+    	android:cacheColorHint="#00000000"
+    	android:divider="#ffe6e6e6"
+    	android:dividerHeight="0.66dp"
+    	android:background="@drawable/gowidget_list_bg"
+    	android:listSelector="@android:color/transparent"
+    />
+
+</RelativeLayout>

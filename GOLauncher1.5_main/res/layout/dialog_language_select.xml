@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/dialog_layout"
+        android:layout_width="@dimen/folder_edit_view_width"
+        android:layout_height="wrap_content"
+        android:background="@drawable/folder_edit_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/desk_setting_listview_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dip"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <com.jiubang.ggheart.components.DeskTextView
+                android:id="@+id/desk_setting_dialog_singleormulti_title"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/folder_edit_top_bottom_hight"
+                android:background="@drawable/folder_top_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="11.33dp"
+                android:text="@string/menuitem_language"
+                android:textColor="#2C2C2C"
+                android:textSize="16sp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/single_choice_radio_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/desk_setting_dialog_buttons"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="-40dip"
+            android:orientation="vertical" >
+
+            <com.jiubang.ggheart.components.DeskButton
+                android:id="@+id/dialog_cancel"
+                android:layout_width="fill_parent"
+                android:layout_height="40.67dp"
+                android:layout_weight="1"
+                android:background="@drawable/folder_button_selector"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textColor="#2C2C2C"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <com.jiubang.ggheart.apps.gowidget.gostore.component.GoStoreIndicators 
+       android:layout_centerHorizontal="true"
+       android:id="@+id/gallery_mark"  
+       android:orientation="horizontal"  
+       android:layout_width="fill_parent"  
+       android:layout_height="33.33dp" 
+       android:paddingTop="13.33dp"
+       android:paddingBottom="13.33dp"
+       android:gravity="center_horizontal"/> 
+    <Button 
+        android:id="@+id/gostore_theme_detail_button"
+        android:layout_width="216.67dp"
+        android:layout_height="34.67dp"
+        android:layout_marginTop="17.33dp"
+        android:layout_marginBottom="17.33dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:textSize="17.33dp"
+        android:background="@drawable/gostore_theme_detail_gallery_button_selector"/>
+    <!-- <com.jiubang.ggheart.apps.gowidget.gostore.component.GoStoreThemeDetailGallery
+        android:id="@+id/gostore_theme_detail_gallery"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:spacing="20dp"
+        android:unselectedAlpha="0.5"
+        android:layout_below="@id/gallery_mark"
+        android:layout_above="@id/gostore_theme_detail_button"
+        />
+     -->
+    <com.jiubang.ggheart.apps.gowidget.gostore.component.GoStoreDetailScrollViewGroup
+        android:id="@+id/gostore_theme_detail_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/gallery_mark"
+        android:layout_above="@id/gostore_theme_detail_button"
+        android:layout_centerVertical="true"
+        />
+</RelativeLayout>

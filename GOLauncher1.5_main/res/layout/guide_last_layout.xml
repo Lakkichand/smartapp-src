@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/guide_bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/guide_bg"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dip"
+            android:layout_marginTop="32dip"
+            android:text="@string/gostore_guide_title"
+            android:textColor="#55ab34"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/title_msg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="16dip"
+            android:layout_marginTop="12dip"
+            android:text="@string/gostore_guide_content"
+            android:textColor="#909090"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/theme_page"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_msg"
+            android:layout_marginTop="40dip"
+            android:gravity="center_horizontal"
+            android:src="@drawable/themepage" />
+        
+<!--         <TextView
+            android:id="@+id/content_msg1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_msg"
+            android:layout_marginTop="277dip"
+            android:gravity="center_horizontal"
+            android:text="@string/gostore_content_msg1"
+            android:textColor="#909090"
+            android:textSize="12sp" /> -->
+        <TextView
+            android:id="@+id/content_msg2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_msg"
+            android:layout_marginTop="274dip"
+            android:gravity="center_horizontal"
+            android:text="@string/gostore_content_msg2"
+            android:textColor="#979797"
+            android:textSize="13sp" />
+        
+        <LinearLayout
+            android:id="@+id/bottom_panel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="35dip"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/gotomain"
+                android:layout_width="116dip"
+                android:layout_height="30dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="27dip"
+                android:layout_marginRight="17dip"
+                android:layout_weight="1"
+                android:background="@drawable/message_center_dialog_btn_selector_green"
+                android:text="@string/goto_main"
+                android:textColor="#60af3c"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/gototheme"
+                android:layout_width="116dip"
+                android:layout_height="30dip"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="17dip"
+                android:layout_marginRight="27dip"
+                android:layout_weight="1"
+                android:background="@drawable/message_center_dialog_btn_selector_green"
+                android:text="@string/goto_theme"
+                android:textColor="#60af3c"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

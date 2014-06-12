@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="support_language">
+    	<!-- 乌克兰 -->
+		<item>uk</item>
+		<!-- 斯洛伐克 -->
+		<item>sk</item>
+		<!-- 保加利亚 -->
+		<item>bg</item>
+		<!-- 荷兰 -->
+		<item>nl</item>
+		<!-- 犹太人 -->
+		<item>iw</item>
+		<!-- 匈牙利 -->
+		<item>hu</item>
+		<!-- 丹麦 -->
+		<item>da</item>
+		<!-- 越南 -->
+		<item>vi</item>
+		<!-- 瑞典 -->
+		<item>sv</item>
+		<!-- 挪威 -->
+		<item>nb</item>
+		<!-- 加泰罗尼亚 -->
+		<item>ca</item>
+		<!-- 芬兰 -->
+		<item>fi</item>
+		<!-- 克罗地亚 -->
+		<item>hr</item>
+		<!-- 印度 -->
+		<item>in</item>
+		<!-- 格鲁吉亚 -->
+		<item>ka</item>
+		<!-- 苏里南 -->
+		<item>sr</item>
+		<!-- 马来西亚 -->
+		<item>ms</item>
+		<!-- 葡萄牙 -->
+		<item>pt</item>
+		<!-- 维吾尔 -->
+		<item>ug</item>
+		<!-- 印度尼西亚 -->
+		<item>id</item>
+		<!-- 罗马尼亚 -->
+		<item>ro</item>
+		<!-- 希腊 -->
+		<item>el</item>
+		<!-- 土耳其 -->
+		<item>tr</item>	
+		<!-- 捷克 -->
+		<item>cs</item>
+		<!-- 波兰 -->
+		<item>pl</item>	
+		<!-- 爱沙尼亚 -->
+		<item>et</item>		
+		<!-- 阿拉伯 -->
+		<item>ar</item>	
+		<!-- 伊朗 -->
+		<item>ir</item>		
+		<!-- 意大利 -->
+		<item>it</item>		
+		<!-- 法语 -->
+		<item>fr</item>		
+		<!-- 日语 -->
+		<item>ja</item>
+		<!-- 德语 -->
+		<item>de</item>
+		<!-- 繁体中文（HK） -->
+		<item>zh_HK</item>
+  	</string-array>
+  	
+  	<string-array name="support_language_versioncode">
+  	    <!-- 乌克兰 -->
+		<item>15</item>
+		<!-- 斯洛伐克 -->
+		<item>21</item>
+		<!-- 保加利亚 -->
+		<item>25</item>
+		<!-- 荷兰 -->
+		<item>11</item>
+		<!-- 犹太人 -->
+		<item>8</item>
+		<!-- 匈牙利 -->
+		<item>13</item>
+		<!-- 丹麦 -->
+		<item>5</item>
+		<!-- 越南 -->
+		<item>4</item>
+		<!-- 瑞典 -->
+		<item>4</item>
+		<!-- 挪威 -->
+		<item>12</item>
+		<!-- 加泰罗尼亚 -->
+		<item>9</item>
+		<!-- 芬兰 -->
+		<item>5</item>
+		<!-- 克罗地亚 -->
+		<item>6</item>
+		<!-- 印度 -->
+		<item>4</item>
+		<!-- 格鲁吉亚 -->
+		<item>10</item>
+		<!-- 苏里南 -->
+		<item>11</item>
+		<!-- 马来西亚 -->
+		<item>4</item>
+		<!-- 葡萄牙 -->
+		<item>7</item>
+		<!-- 维吾尔 -->
+		<item>2</item>
+		<!-- 印度尼西亚 -->
+		<item>2</item>
+		<!-- 罗马尼亚 -->
+		<item>5</item>
+		<!-- 希腊 -->
+		<item>1</item>
+		<!-- 土耳其 -->
+		<item>2</item>
+		<!-- 捷克 -->
+		<item>1</item>
+		<!-- 波兰 -->
+		<item>1</item>	
+		<!-- 爱沙尼亚 -->
+		<item>1</item>
+		<!-- 阿拉伯 -->
+		<item>1</item>						
+  	</string-array>
+</resources>

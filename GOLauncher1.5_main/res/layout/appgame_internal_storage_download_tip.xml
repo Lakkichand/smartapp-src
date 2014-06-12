@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/folder_edit_bg" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/folder_top_bg" >
+
+            <TextView
+                android:id="@+id/appgame_internal_storage_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/downDialog_title"
+                android:textColor="#383737"
+                android:textSize="17.3dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/appgame_internal_storage_relativeLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/appgame_menu_bg"
+            android:paddingLeft="23dp"
+            android:paddingRight="5dp" >
+
+            <TextView
+                android:id="@+id/appgame_download_manager_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="@string/appgame_sd_card_tips"
+                android:textColor="#202020"
+                android:textSize="18dp" />
+
+            <RelativeLayout
+                android:id="@+id/appgame_internal_storage_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/appgame_internal_storage_ok"
+                android:layout_alignLeft="@+id/appgame_download_manager_tip"
+                android:layout_below="@+id/appgame_download_manager_tip"
+                android:layout_marginTop="10dp" >
+
+                <ImageView
+                    android:id="@+id/appgame_internal_storage_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/apps_uninstall_not_selected" />
+
+                <TextView
+                    android:id="@+id/appgame_internal_storage_checkbox_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/appgame_internal_storage_checkbox"
+                    android:text="@string/app_save_flow_remain_dialog_remember_this"
+                    android:textColor="#5a5a5a"
+                    android:textSize="15dp" >
+                </TextView>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/folder_edit_top_bottom_hight"
+            android:layout_below="@+id/appgame_internal_storage_relativeLayout"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/appgame_internal_storage_ok"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/folder_button_selector"
+                android:gravity="center"
+                android:text="@string/ok"
+                android:textColor="#535353"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/folder_button_line" />
+
+            <Button
+                android:id="@+id/appgame_internal_storage_cancel"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/folder_button_selector"
+                android:gravity="center"
+                android:text="@string/cancle"
+                android:textColor="#535353"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

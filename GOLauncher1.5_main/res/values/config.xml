@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- preference key  -->
+	<string name="key_statusbar">key_statusbar</string>
+	<string name="key_high_light">key_high_light</string>
+	<string name="key_show_appname_setting">key_show_appname_setting</string>
+	<string name="key_screen_looping">key_screen_looping</string>
+	<string name="key_wallpaper_scrolling_mode">key_wallpaper_scrolling_mode</string>
+	<string name="key_screen_grid_model">key_screen_grid_model</string>
+	<string name="key_merge_indicator">key_merge_indicator</string>
+	<string name="key_indicator_auto_hide">key_indicator_auto_hide</string>
+	<string name="key_indicator_showmode">key_indicator_showmode</string>
+	<string name="key_indicator_position">key_indicator_position</string>
+	<string name="key_draw_indicator_showmode">key_draw_indicator_showmode</string>
+	<string name="key_desktop_transition">key_desktop_transition</string>
+    <string name="key_home_setting">home_key_setting</string>
+    <string name="key_up_gesture_setting">key_up_gesture_setting</string>
+    <string name="key_down_gesture_setting">key_down_gesture_setting</string>
+     <string name="key_double_click_setting">key_double_click_setting</string>
+    
+    <string name="key_func_app_select_bg">key_func_app_select_bg</string>
+    <string name="key_func_app_grid_setting">key_func_app_grid_setting</string>
+    <string name="key_func_app_effects">key_func_app_effects</string>
+    <string name="key_func_app_inout_setting">key_func_app_inout_setting</string>
+    <string name="key_func_app_icon_effect_setting">key_func_app_icon_effect_setting</string>
+    <string name="key_func_app_vertical_scroll_effect_setting">key_func_app_vertical_scroll_effect_setting</string>
+    <string name="key_func_app_scroll_loop_setting">key_func_app_scroll_loop_setting</string>
+    <string name="key_func_app_blur_background_setting">key_func_app_blur_background_setting</string>
+    
+    <string name="key_func_app_show_tab_row">key_func_app_show_tab_row</string>
+    <string name="key_func_app_scroll_setting">key_func_app_scroll_setting</string>
+    <string name="key_func_app_lock_list">key_func_app_lock_list</string>
+    <string name="key_func_app_show_app_name">key_func_app_show_app_name</string>
+    <string name="key_func_app_show_search">key_func_app_show_search</string>
+    <string name="key_func_app_update_info">key_func_app_update_info</string>
+    <string name="key_func_app_show_neglect_app">key_func_app_show_neglect_app</string>
+    <string name="key_func_app_show_action_bar">key_func_app_show_action_bar</string>
+    <string name="key_func_app_show_home_key_only">key_func_app_show_home_key_only</string>
+    <string name="key_func_app_running">key_func_app_running</string>
+    <string name="key_func_app_gesture">key_func_app_gesture</string>
+    <string name="key_func_app_glide_up">key_func_app_glide_up</string>
+    <string name="key_func_app_glide_down">key_func_app_glide_down</string>
+    
+    <string name="key_func_app_show_tab_row001">key_func_app_show_tab_row001</string>
+    <string name="key_func_app_scroll_setting001">key_func_app_scroll_setting001</string>
+    <string name="key_func_app_lock_list001">key_func_app_lock_list001</string>
+    <string name="key_func_app_show_app_name001">key_func_app_show_app_name001</string>
+    <string name="key_func_app_show_search001">key_func_app_show_search001</string>
+    <string name="key_func_app_show_neglect_app001">key_func_app_show_neglect_app001</string>
+    <string name="key_func_app_grid_setting001">key_func_app_grid_setting001</string>
+    
+    
+    <string name="key_func_app_flip_bg_switch">key_func_app_flip_bg_switch</string>
+    <string name="key_high_quality_drawing">key_high_quality_drawing</string>
+    <string name="key_transparent_statusbar">key_transparent_statusbar</string>
+    <string name="key_permanentmemory_enable">key_permanentmemory_enable</string>
+    <string name="key_prevent_force_close">key_prevent_force_close</string>
+    <string name="key_font_scan">key_font_scan</string>
+    <string name="key_font_type">key_font_type</string>
+    <string name="key_heap_size">key_heap_size</string>    
+    <string name="key_heap_size_description">key_heap_size_description</string>
+    <string name="key_check_version">key_check_version</string>
+    <string name="key_share_app">key_share_app</string>
+    <string name="key_rate_go_launcher">key_rate_go_launcher</string>
+    <string name="key_feedback">key_feedback</string>
+    <string name="key_joinus_info">key_joinus_info</string>
+    <string name="key_copyright_info">key_copyright_info</string>
+    <string name="key_beta_updates">key_beta_updates</string>
+    <string name="key_dock_style_setting">key_dock_style_setting</string>
+    <string name="key_dock_rows_setting">key_dock_rows_setting</string>
+    <string name="key_dock_bg_type">key_dock_bg_type</string>
+    <string name="key_dock_revolve_setting">key_dock_revolve_setting</string>
+    <string name="key_dock_show">key_dock_show</string>
+    <string name="key_dock_autofit_setting">key_dock_autofit_setting</string>
+    <string name="key_dock_message_setting">key_dock_message_setting</string>
+    <string name="key_dock_misscall_setting">key_dock_misscall_setting</string>
+    <string name="key_dock_missmail_setting">key_dock_missmail_setting</string>
+    <string name="key_dock_missk9mail_setting">key_dock_missk9mail_setting</string>
+    <string name="key_show_setting">key_show_setting</string>
+    <string name="key_screen_setting">key_screen_setting</string>
+    <string name="key_dock_setting">key_dock_setting</string>
+    <string name="key_appdrawer_setting">key_appdrawer_setting</string>
+    <string name="key_operation_setting">key_operation_setting</string>
+    <string name="key_advance_setting">key_advance_setting</string>
+    <string name="key_theme_setting">key_theme_setting</string>
+    <string name="key_about_go_destop">key_about_go_destop</string>
+	<string name="key_reset_to_default">key_reset_to_defaul</string>
+	<string name="key_go_backup">key_go_backup</string>
+	<string name="key_backup_db">key_backup_db</string>
+	<string name="key_restore_db">key_restore_db</string>
+	<string name="key_exit_go_destop">key_exit_go_destop</string>
+	<string name="key_clean_dirty_data">key_clean_dirty_data</string>
+	<string name="key_set_theme">key_set_theme</string>
+	<string name="key_set_wallpaper">key_set_wallpaper</string>
+	<string name="key_key_appfunc_bg_settings">App Drawer background</string>
+	<string name="key_screen_auto_fit_items">key_screen_auto_fit_items</string>
+	
+	<!-- more app -->
+	<string name="key_go_sms">key_go_sms</string>
+	<string name="key_go_contact">key_go_contact</string>
+	<string name="key_go_weather">key_go_weather</string>
+	<string name="key_go_sakura">key_go_sakura</string>
+	<string name="key_go_skyrocket">key_go_skyrocket</string>
+	<string name="key_desk_icon_style">key_desk_icon_style</string>
+	<string name="key_screen_transition_effect">key_screen_switch_effect</string>
+	<string name="key_go_effects">key_go_effects</string>
+	<string name="key_statcommunication">key_statcommunication</string>
+	<string name="key_backup_setting">key_backup_setting</string>
+	<string name="key_orientation_setting">key_orientation_setting</string>
+	
+	<!-- Locker -->
+	<string name="key_locker">key_locker</string>
+	
+	<!-- Language -->
+	<string name="key_check_language">key_check_language</string>
+	<string name="key_quick_setting">key_quick_setting</string>
+	<!-- style -->
+	<string name="key_icon_style">key_icon_style</string>
+	<string name="key_bg_setting">key_bg_setting</string>
+	<string name="key_indicator_setting">key_indicator_setting</string>
+	<string name="key_foldericon_style">key_foldericon_style</string>
+	<string name="key_ggmenuicon_style">key_ggmenuicon_style</string>
+	<string name="key_draw_tab_bottom_bg">key_draw_tab_bottom_bg</string>
+	
+	<!-- icon size setting -->
+	<string name="key_icon_size_setting">key_icon_size_setting</string>
+	<!-- icon base setting -->
+	<string name="key_icon_base_setting">key_icon_base_setting</string>
+	<!-- font setting -->
+	<string name="key_font_setting">key_font_setting</string>
+	<string name="key_font_size">key_font_size</string>
+	
+	<string name="key_app_labels_color">key_app_labels_color</string>
+	
+	<!-- 默认行列数 -->
+	<integer name="screen_col_row_style">1</integer>
+        <integer name="screen_default_row">4</integer>
+    <integer name="screen_default_column">4</integer>
+    
+    <integer name="appfunc_col_row_style">0</integer>
+    <integer name="appfunc_default_row">4</integer>
+    <integer name="appfunc_default_column">4</integer>
+    
+    <!-- 状态栏高度 -->
+    <integer name="status_bar_height">25</integer>
+    
+    <bool name="screen_appicon_autofit">false</bool>
+	<string name="key_setting_help">key_setting_help</string>
+
+	<string name="key_screen_gesture">key_screen_gesture</string>
+	
+	<!-- 应用游戏中心设置key -->
+	<string name="key_appgame_network_flow">key_appgame_network_flow</string>
+	
+	<!-- 甩动删除的速度上限 -->
+	<integer name="config_flingToDeleteMinVelocity">-1500</integer>
+	
+	<!-- The alpha value at which to show the most recent drop visualization outline. -->
+    <integer name="config_dragOutlineMaxAlpha">225</integer>
+    
+    <!-- The duration (in ms) of the fade animation on the object outlines, used when
+         we are dragging objects around on the home screen. -->
+    <integer name="config_dragOutlineFadeTime">900</integer>
+</resources>

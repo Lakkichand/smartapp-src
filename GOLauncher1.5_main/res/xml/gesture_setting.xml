@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- <com.jiubang.ggheart.components.DeskPreferenceCategory android:title="@string/screen_orientation"> -->
+    <!-- <com.jiubang.ggheart.components.DeskListPreference -->
+    <!-- android:title="@string/screen_orientation_setting" -->
+    <!-- android:key="@string/key_orientation_setting" -->
+    <!-- android:entries="@array/orientation_entries" -->
+    <!-- android:entryValues="@array/orientation_value" -->
+    <!-- android:negativeButtonText="@string/cancle" /> -->
+    <!-- </com.jiubang.ggheart.components.DeskPreferenceCategory> -->
+
+
+    <!-- <com.jiubang.ggheart.components.DeskPreferenceCategory android:title="@string/oper_gesture"> -->
+
+    <com.jiubang.ggheart.components.DeskPreferenceCategory
+        android:key="@string/key_screen_gesture"
+        android:title="@string/screen_gesture" >
+        <com.jiubang.ggheart.components.DeskListPreference
+            android:entries="@array/gesture_entries"
+            android:entryValues="@array/gesture_values"
+            android:key="@string/key_home_setting"
+            android:negativeButtonText="@string/cancle"
+            android:summary="@string/home_gesture_hint"
+            android:title="@string/home_key_setting" />
+        <com.jiubang.ggheart.components.DeskListPreference
+            android:entries="@array/gesture_entries"
+            android:entryValues="@array/gesture_values"
+            android:key="@string/key_up_gesture_setting"
+            android:negativeButtonText="@string/cancle"
+            android:summary="@string/up_gesture_hint"
+            android:title="@string/up_gesture_setting" />
+        <com.jiubang.ggheart.components.DeskListPreference
+            android:entries="@array/gesture_entries"
+            android:entryValues="@array/gesture_values"
+            android:key="@string/key_down_gesture_setting"
+            android:negativeButtonText="@string/cancle"
+            android:summary="@string/down_gesture_hint"
+            android:title="@string/down_gesture_setting" />
+        <com.jiubang.ggheart.components.DeskListPreference
+            android:entries="@array/gesture_entries"
+            android:entryValues="@array/gesture_values"
+            android:key="@string/key_double_click_setting"
+            android:negativeButtonText="@string/cancle"
+            android:title="@string/double_click_setting" />
+    </com.jiubang.ggheart.components.DeskPreferenceCategory>
+    <com.jiubang.ggheart.components.DeskPreferenceCategory
+        android:key="@string/key_func_app_gesture"
+        android:title="@string/func_app_gesture" >
+        <com.jiubang.ggheart.components.DeskCheckBoxPreference
+            android:defaultValue="false"
+            android:key="@string/key_func_app_glide_up"
+            android:summary="@string/func_app_glide_up_summary"
+            android:title="@string/func_app_glide_up" />
+        <com.jiubang.ggheart.components.DeskCheckBoxPreference
+            android:defaultValue="false"
+            android:key="@string/key_func_app_glide_down"
+            android:summary="@string/func_app_glide_down_summary"
+            android:title="@string/func_app_glide_down" />
+    </com.jiubang.ggheart.components.DeskPreferenceCategory>
+
+</PreferenceScreen>

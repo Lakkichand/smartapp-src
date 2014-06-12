@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/dialog_layout"
+        android:layout_width="@dimen/folder_edit_view_width"
+        android:layout_height="wrap_content"
+        android:background="@drawable/folder_edit_bg"
+        android:orientation="vertical" >
+
+        <com.jiubang.ggheart.components.DeskTextView
+            android:id="@+id/dialog_title"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/folder_edit_top_bottom_hight"
+            android:background="@drawable/folder_top_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="11.33dp"
+            android:text="@string/snapshot_mode"
+            android:textColor="#383737"
+            android:textSize="17.3sp" />
+
+        <LinearLayout
+            android:id="@+id/message_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+         <ProgressBar
+             android:id="@+id/progress"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"/>
+
+         <TextView
+             android:id="@+id/message"
+             android:layout_width="wrap_content"
+             android:layout_height="fill_parent"
+             android:layout_marginLeft="5dp"
+             android:gravity="center_vertical"
+             android:text="@string/snapshot_detect_root"
+             android:textSize="18sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

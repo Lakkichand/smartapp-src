@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.appmanagement.component.RecommendedAppsContainer
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:orientation="vertical">
+	 <LinearLayout
+        android:id="@+id/error_tips_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+    </LinearLayout>
+    <!-- <TextView 
+    	android:id="@+id/recomm_app_refresh_button"
+    	android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:background="@drawable/recomm_app_network_refresh_selector";
+    /> -->
+    <com.jiubang.ggheart.components.DeskButton 
+		    android:id="@+id/recomm_app_refresh_button" 
+			android:layout_width="wrap_content" 
+			android:layout_gravity="center_horizontal"
+			android:gravity="center"
+			android:layout_height="wrap_content" 
+			android:textColor="#FF333333"
+			android:textSize="16sp"
+			android:layout_marginTop="46dp"
+			android:visibility="gone"
+			android:background="@drawable/recomm_app_network_refresh_selector"
+		/>
+	<RelativeLayout 
+		android:orientation="vertical" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:background="#987788" >
+		<com.jiubang.ggheart.apps.appmanagement.component.RecommendedAppListView
+			android:id="@+id/recomm_app_list_view" 
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:background="#faf9f9"
+			android:cacheColorHint="#00000000"
+			android:fadingEdge="none" 
+			android:choiceMode="singleChoice"
+			android:divider="@drawable/themestore_list_item_line" />
+	</RelativeLayout>
+</com.jiubang.ggheart.apps.appmanagement.component.RecommendedAppsContainer>

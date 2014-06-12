@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#f1f1f1" >
+    <TextView 
+        android:id="@+id/appgame_security_loading_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#89b600" 
+        android:text="@string/cloud_security_verification_title"/>
+    <ImageView 
+        android:id="@+id/appgame_security_loading_instance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appgame_security_loading_title"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/appgame_security_instance"/>
+    <TextView 
+        android:id="@+id/appgame_security_loading_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appgame_security_loading_instance"
+        android:gravity="left"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="#535353"
+        android:textSize="13.333sp"
+        android:layout_marginTop="33.333dp"
+        android:text="@string/cloud_security_verification_content"/>
+    <TextView 
+        android:id="@+id/appgame_security_loading"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#535353"
+        android:textSize="13.333sp"
+        android:gravity="center"
+        android:layout_marginBottom="53.333dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/cloud_security_verification_loading"/>
+</RelativeLayout>

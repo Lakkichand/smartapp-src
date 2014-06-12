@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 定义与组件相关的尺寸、坐标 -->
+
+<resources>
+    <!-- 应用游戏中心主题详情 -->
+    <dimen name="item_height">777.6px</dimen>
+    <dimen name="item_width">465px</dimen>
+    <dimen name="indicator_hight">56px</dimen>
+    <dimen name="button_layout_hight">136px</dimen>
+    <dimen name="button_hight">80px</dimen>
+    <dimen name="item_height_noneions">848px</dimen>
+    <dimen name="item_width_noneicons">487.5px</dimen>
+    <dimen name="indicator_hight_noneicons">80px</dimen>
+    <dimen name="button_layout_hight_noneicons">179.2px</dimen>
+    <dimen name="button_hight_noneicons">83.2px</dimen>
+    <dimen name="icons_height">144px</dimen>
+</resources>

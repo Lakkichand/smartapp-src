@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 因为父容器是ViewGroup,layout_width，layout_height设置得不到正确值，须在代码中设置，所以其他排版参数也在代码中设置
+     针对小分辨率手机的info配置文件 -->
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="wrap_content"
+  android:layout_height="fill_parent"
+  android:layout_gravity="top"
+  android:gravity="center_horizontal|center_vertical">
+  
+            <LinearLayout
+                android:id="@+id/textsLayout"
+                android:layout_width="266dip"
+                android:layout_height="105dip"
+                android:orientation="vertical"
+                   android:background="@drawable/screen_edit_info_bg"
+                  >
+                <com.jiubang.ggheart.components.DeskTextView
+                    android:id="@+id/text1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dip"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="12sp" />
+
+                <com.jiubang.ggheart.components.DeskTextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dip"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="12sp"/>
+                <com.jiubang.ggheart.components.DeskTextView
+                    android:id="@+id/text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dip"
+                    
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="12sp" />
+                <com.jiubang.ggheart.components.DeskTextView
+                    android:id="@+id/text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dip"
+                    android:autoLink="web|email"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="12sp"/>
+                <com.jiubang.ggheart.components.DeskTextView
+                    android:id="@+id/text5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dip"
+                    android:autoLink="web|email"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="12sp"
+                   />
+            </LinearLayout>
+  			<RelativeLayout
+            android:id="@+id/buttons"
+            android:layout_width="266dip"
+            android:layout_height="40dip"
+            android:paddingTop="8dip"
+        	>
+
+            <com.jiubang.ggheart.components.DeskButton
+                android:id="@+id/fb"
+                android:layout_width="120dip"
+                android:layout_height="30dip"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/screenedit_gowidget_info_button_selector"
+                android:text="@string/gowidget_detail_fb"
+                android:textColor="#CCFFFFFF"
+                android:textSize="12sp" />
+
+            <com.jiubang.ggheart.components.DeskButton
+                android:id="@+id/uninstall"
+                android:layout_width="120dip"
+                android:layout_height="30dip"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/screenedit_gowidget_info_button_selector"
+                android:text="@string/gowidget_detail_uninstall"
+                android:textColor="#CCFFFFFF"
+                android:textSize="12sp" />
+        </RelativeLayout>
+        
+    </LinearLayout>

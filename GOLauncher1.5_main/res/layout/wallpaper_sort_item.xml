@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <!-- 
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+     
+    <RelativeLayout
+        android:layout_width="152.6dip"
+        android:layout_height="94.6dip"
+        android:background="@drawable/wallpaper_sort_item_bg"
+        android:padding="0.1dip" >
+    <com.jiubang.ggheart.apps.gowidget.gostore.component.SimpleImageView
+        android:id="@+id/img"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="fill_parent"
+        android:layout_height="22dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/wallpaper_sort_item_title_bg"
+        android:gravity="left"
+        android:paddingLeft="6.6dip"
+        android:textColor="#434343"
+        android:textSize="13.3dip" />
+    
+     </RelativeLayout>
+</RelativeLayout>-->
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="152.6dip"
+        android:layout_height="94.6dip"
+        android:background="@drawable/wallpaper_sort_item_bg"
+        android:padding="0.1dip" >
+		    <com.jiubang.ggheart.apps.gowidget.gostore.component.SimpleImageView
+		        android:id="@+id/img"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:scaleType="fitXY" />
+		
+		    <TextView
+		        android:id="@+id/text"
+		        android:layout_width="fill_parent"
+		        android:layout_height="22dip"
+		        android:layout_alignParentBottom="true"
+		        android:background="@drawable/wallpaper_sort_item_title_bg"
+		        android:gravity="left"
+		        android:paddingLeft="6.6dip"
+		        android:textColor="#434343"
+		        android:textSize="13.3dip" />
+    
+     </RelativeLayout>

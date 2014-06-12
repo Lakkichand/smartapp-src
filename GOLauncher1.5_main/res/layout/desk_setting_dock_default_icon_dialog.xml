@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	android:gravity="center" android:orientation="vertical">
+
+	<LinearLayout android:layout_width="@dimen/folder_edit_view_width"
+		android:layout_height="wrap_content" android:background="@drawable/folder_edit_bg"
+		android:orientation="vertical">
+
+		<TextView android:id="@+id/dialog_title"
+			android:layout_width="fill_parent" android:layout_height="@dimen/folder_edit_top_bottom_hight"
+			android:background="@drawable/folder_top_bg" android:gravity="center_vertical"
+			android:text="@string/default_icon" android:paddingLeft="11.33dp"
+			android:textColor="#383737" android:textSize="17.3sp" />
+
+		<GridView android:id="@+id/gridview" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" />
+
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:orientation="horizontal">
+
+			<Button android:id="@+id/dialog_ok" android:layout_width="fill_parent"
+				android:layout_height="40.67dp" android:layout_weight="1"
+				android:background="@drawable/folder_button_selector"
+				android:gravity="center" android:text="@string/ok"
+				android:textColor="#2C2C2C" android:textSize="16sp" />
+
+			<ImageView android:layout_width="wrap_content"
+				android:layout_height="fill_parent" android:background="@drawable/folder_button_line" />
+
+			<Button android:id="@+id/dialog_cancel" android:layout_width="fill_parent"
+				android:layout_height="40.67dp" android:layout_weight="1"
+				android:background="@drawable/folder_button_selector"
+				android:gravity="center" android:text="@string/cancel"
+				android:textColor="#2C2C2C" android:textSize="16sp" />
+		</LinearLayout>
+	</LinearLayout>
+
+</LinearLayout>

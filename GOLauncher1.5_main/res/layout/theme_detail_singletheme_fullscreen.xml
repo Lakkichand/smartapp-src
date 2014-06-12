@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout 
+ 	    xmlns:android="http://schemas.android.com/apk/res/android"
+ 		android:id="@+id/imagecontainer"
+ 		android:layout_width="fill_parent"
+ 		android:layout_height="fill_parent"
+ 		android:gravity="center"
+ 		>
+  	<ImageView 
+  		android:id="@+id/image"
+  		android:layout_width="fill_parent"
+ 		android:layout_height="fill_parent"
+ 		android:layout_centerInParent="true"/>
+  	<include 
+      android:id="@+id/image_loading"
+      layout="@layout/themestore_btmprogress"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      />
+</RelativeLayout>

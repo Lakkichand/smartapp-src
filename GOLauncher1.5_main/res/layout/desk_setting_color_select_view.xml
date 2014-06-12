@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/dialog_layout"
+        android:layout_width="@dimen/folder_edit_view_width"
+        android:layout_height="wrap_content"
+        android:background="@drawable/folder_edit_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dip"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <com.jiubang.ggheart.components.DeskTextView
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/folder_edit_top_bottom_hight"
+                android:background="@drawable/folder_top_bg"
+                android:paddingLeft="11.33dp"
+                android:gravity="center_vertical"
+                android:text="@string/desk_setting_select_color_title"
+                android:textColor="#2C2C2C"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/color_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/folder_button_line" />
+
+            <LinearLayout
+                android:id="@+id/desk_setting_colorpicker_seekbar_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <com.jiubang.ggheart.components.DeskTextView
+                    android:id="@+id/desk_setting_colorpicker_seekbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="8dp"
+                    android:textColor="#2C2C2C"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <com.jiubang.ggheart.components.DeskTextView
+                        android:id="@+id/min_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="0dp"
+                        android:textColor="#2C2C2C"
+                        android:textSize="16sp" />
+
+                    <com.jiubang.ggheart.components.DeskTextView
+                        android:id="@+id/max_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="16dp"
+                        android:textColor="#2C2C2C"
+                        android:textSize="16sp" />
+
+                    <SeekBar
+                        android:id="@+id/desk_setting_colorpicker_seekbar"
+                        style="@style/DeskSettingDialogSeekBarStyle"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_toLeftOf="@id/max_value"
+                        android:layout_toRightOf="@id/min_value"
+                        android:thumb="@drawable/desk_setting_dialog_seekbar_thumb_selector" >
+                    </SeekBar>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/folder_button_line" />
+
+            <EditText 
+                android:id="@+id/color_edit_text"
+                 android:layout_width="fill_parent"
+                android:layout_height="33dip"
+                android:layout_marginLeft="12dip"
+                 android:layout_marginRight="12dip"
+                 android:layout_marginTop="5dip"
+                   android:layout_marginBottom="5dip"
+                   android:paddingLeft="5dip"
+                 android:background="@drawable/desk_setting_color_select_edittext"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/desk_setting_dialog_buttons"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="-40dip"
+            android:orientation="vertical" >
+
+            <CheckBox
+                android:id="@+id/desk_setting_dialog_with_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="53dip"
+                android:layout_marginLeft="12dip"
+                android:button="@drawable/desk_setting_checkbox"
+                android:textColor="#2E2E2E"
+                android:textSize="13.3sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/desk_setting_single_button_height"
+                android:orientation="horizontal" >
+
+                <com.jiubang.ggheart.components.DeskButton
+                    android:id="@+id/ok_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/folder_button_selector"
+                    android:gravity="center"
+                    android:text="@string/ok"
+                    android:textColor="@color/desk_setting_button_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/folder_button_line" />
+
+                <com.jiubang.ggheart.components.DeskButton
+                    android:id="@+id/cancel_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/folder_button_selector"
+                    android:gravity="center"
+                    android:text="@string/cancel"
+                    android:textColor="@color/desk_setting_button_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/folder_button_line" />
+
+                <com.jiubang.ggheart.components.DeskButton
+                    android:id="@+id/reset_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/folder_button_selector"
+                    android:gravity="center"
+                    android:text="@string/change_icon_reset_default"
+                    android:textColor="@color/desk_setting_button_color"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gostorewidget41_popup"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:clickable="true" >
+    
+    <RelativeLayout 
+        android:id="@+id/gostorewidget41_popup_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="253dp"
+        android:background="@drawable/gostorewidget41_bg"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:clickable="true"
+        >
+        <ImageView 
+            android:id="@+id/gostorewidget41_popup_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/gostorewidget41_popup_icon"/>
+        
+        <ImageButton 
+            android:id="@+id/gostorewidget41_popup_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/gostorewidget41_popup_button_selector"
+            />
+        
+       <GridView
+           android:id="@+id/gostorewidget41_popup_gridview"
+           android:layout_width="wrap_content"
+           android:layout_height="200dp"
+           android:layout_marginTop="6dp"
+           android:layout_marginLeft="15dp"
+           android:layout_marginRight="15dp"
+           android:layout_marginBottom="15dp"
+           android:gravity="center"
+           android:numColumns="4"
+           android:verticalSpacing="6dp"
+           android:listSelector="@android:color/transparent"
+           android:scrollbars="none"
+           android:fadingEdge="none"
+           android:layout_below="@id/gostorewidget41_popup_btn"
+           android:background="@drawable/gostorewidget41_recommend_area"
+           />
+    </RelativeLayout>
+
+</RelativeLayout>

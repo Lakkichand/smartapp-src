@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="48dp"
+    android:orientation="horizontal" >
+    <TextView 
+        android:id="@+id/my_apps"
+        android:layout_width="160dp"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:layout_weight="1.0"
+        android:textSize="16sp"
+        android:text="@string/apps_uninstall"
+        android:textColor="#343434"
+        android:background="@drawable/appsmanagement_tab_default_selector"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        android:background="@drawable/appsmanagement_tab_line"/>
+    <com.jiubang.ggheart.apps.appmanagement.component.AppsUpdateTab 
+        android:id="@+id/update_apps"
+        android:layout_width="160dp"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:layout_weight="1.0"
+        android:textSize="16sp"
+        android:text="@string/apps_update"
+        android:textColor="#343434"
+        android:background="@drawable/appsmanagement_tab_default_selector" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        android:background="@drawable/appsmanagement_tab_line"/>
+     <TextView 
+        android:id="@+id/recomm_apps"
+        android:layout_width="160dp"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:layout_weight="1.0"
+        android:textSize="16sp"
+        android:text="@string/apps_mgr_sub_title_categories"
+        android:textColor="#343434"
+        android:background="@drawable/appsmanagement_tab_default_selector"/>
+</LinearLayout>

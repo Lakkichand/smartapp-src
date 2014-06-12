@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+  <string-array name="gesture_entries">
+    <item>無響應</item>
+    <item>桌面功能</item>
+    <item>應用程式</item>
+    <item>GO快捷方式</item>
+  </string-array>
+  <string-array name="gesture_goshortcut">
+    <item>顯示主螢幕</item>
+    <item>先主螢幕後預覽</item>
+    <item>顯示屏幕預覽</item>
+    <item>顯示功能表</item>
+    <item>顯示通知欄</item>
+    <item>顯示/隱藏狀態欄</item>
+    <item>顯示/隱藏快捷條</item>
+    <item>鎖屏</item>
+    <item>GO精品</item>
+    <item>皮膚設置</item>
+    <item>桌面設置</item>
+    <item>桌面菜單</item>
+    <item>自定義手勢</item>
+    <item>圖片</item>
+    <item>音樂</item>
+    <item>視頻</item>   
+  </string-array>
+  <string-array name="grid_list_title">
+    <item>4×4（原始）</item>
+    <item>4×5（適中）</item>
+    <item>5×4（適中）</item>
+    <item>5×5（密集）</item>
+    <item>自定義行列數</item>
+  </string-array>
+  <string-array name="qvga_grid_list_title">
+    <item>3×4（原始）</item>
+    <item>4×4（適中）</item>
+    <item>4×5（密集）</item>
+    <item>自定義行列數</item>
+  </string-array>
+  
+  <string-array name="fun_app_rows_cols">
+    <item>4×4（原始）</item>
+    <item>4×5（適中）</item>
+    <item>5×4（適中）</item>
+    <item>5×5（密集）</item>
+    <item>智能行列數</item>
+    <item>自定義行列數</item>
+  </string-array>
+  
+  <string-array name="qvga_fun_app_rows_cols">
+    <item>3×4（原始）</item>
+    <item>4×4（適中）</item>
+    <item>4×5（密集）</item>
+    <item>智能行列數</item>
+    <item>自定義行列數</item>
+  </string-array>
+  
+  <string-array name="inout_list_title">
+    <item>默認</item>
+    <item>無特效</item>
+    <item>隨機</item>
+    <item>電視機</item>
+    <item>風車</item>
+   <!-- <item>抽屜</item> -->
+    <item>縮放</item>
+    <item>翻轉</item>
+    <item>自定義</item>
+  </string-array>
+  <string-array name="scroll_list_title">
+    <item>縱向滾屏</item>
+    <item>橫向滾屏</item>
+  </string-array>
+  <string-array name="screen_rows_cols_title">
+    <item>4×4（原始）</item>
+    <item>5×4（適中）</item>
+    <item>5×5（密集）</item>
+    <item>自定義行列數</item>
+  </string-array>
+  
+  <string-array name="dock_style_select">
+    <item>默认風格</item>
+    <item>透明風格</item>
+    <item>聖誕風格</item>
+    <item>主題風格</item>
+  </string-array>
+  <string-array name="select_sort_style">
+    <item>按字母排序</item>
+    <item>按時間從近到遠排序</item>
+    <item>按時間從遠到近排序</item>
+    <item>按使用頻率排序</item>
+  </string-array>
+  
+  <string-array name="apps_sort_dialog_style">
+    <item>按安裝位置排序</item>
+    <item>按安装時間排序</item>
+    <item>按應用名稱排序</item>
+    <item>按大小排序</item>
+  </string-array>
+  
+  <string-array name="apps_no_prompt_update_dialog_style">
+    <item>不提示更新</item>
+  </string-array>
+  
+    <string-array name="select_desktop_transition">
+    <item>默認</item>
+    <item>隨機</item>
+    <!-- 按字母序排列，每个语言的顺序可能不一样，下面的desktop_transition_item_value中的项要跟着一起排列 -->
+    <!-- 12 -->	<item>滾咕嚕咕嚕滾</item>		
+    <!-- 16 -->	<item>球</item>	
+    <!-- 9 -->	<item>波浪</item>
+    <!-- 15 -->	<item>圓柱體</item>			
+    <!-- 3 -->	<item>彈跳</item>
+    <!-- 1 -->	<item>盒子(外)</item>
+    <!-- 6 -->	<item>盒子(内)</item>
+    <!-- 7 -->	<item>風車</item>    
+    <!-- 11 -->	<item>雙子星</item>		
+    <!-- 8 -->	<item>翻轉(简单)</item>
+    <!-- 10 -->	<item>卡片堆</item>
+    <!-- 5 -->	<item>推壓</item>
+    
+    <!-- 4 -->	<item>翻滚</item>
+    <!-- 14 -->	<item>弦</item>	
+    <!-- 13 -->	<item>百葉窗</item>			
+    <!-- 2 -->	<item>翻轉(带壁纸)</item>
+    <item>隨機(自定義 )</item>
+  </string-array>
+  <string-array name="desktop_transition_value">
+    <item>0</item>
+    <item>-1</item>
+  	<!-- 编号顺序和特效被添加进来的次序相关 -->
+    <item>12</item>
+    <item>16</item>
+    <item>9</item>
+    <item>15</item>
+    <item>3</item>
+    <item>1</item>
+    <item>6</item>
+    <item>7</item>    
+    <item>11</item>
+    <item>8</item>
+    <item>10</item>
+    <item>5</item>
+    <item>4</item>
+    <item>14</item>
+    <item>13</item>
+    <item>2</item>
+    <item>-2</item>
+  </string-array>
+
+  <string-array name="func_app_icon_effect_entris">
+    <!-- 0 -->	<item>默認</item>
+    <!-- -1 -->	<item>隨機</item>
+    
+    <!-- 如果按字母序排列，每个语言的顺序可能不一样，则在下面重写appfunc_grid_effect_value -->
+    <!-- 2 -->	<item>滾咕嚕咕嚕滾</item>	
+    <!-- 6 -->	<item>球</item>	
+    <!-- 15 -->	<item>波浪</item>	
+    <!-- 5 -->	<item>圓柱體</item>
+    <!-- 09 -->	<item>彈跳</item>
+    <!-- 07 -->	<item>盒子(外)</item>
+    <!-- 12 -->	<item>盒子(内)</item>
+    <!-- 13 -->	<item>風車</item>    
+    <!-- 1 -->	<item>雙子星</item>	
+    <!-- 14 -->	<item>翻轉(简单)</item>	
+    <!-- 16 -->	<item>卡片堆</item>
+    <!-- 11 -->	<item>推壓</item>	
+    <!-- 10 -->	<item>翻滚</item>
+    <!-- 4 -->	<item>弦</item>		
+    <!-- 3 -->	<item>百葉窗</item>			
+    <!-- -2 -->	<item>自定義</item>    	
+  </string-array>
+  
+  <string-array name="func_app_icon_effect_entry_values">
+    <item>0</item>
+    <item>-1</item>
+    
+  	<!-- 编号顺序和特效被添加进来的次序相关 -->
+    <item>2</item>
+    <item>6</item>
+    <item>15</item> 
+    <item>5</item> 
+    <item>9</item> 
+    <item>7</item>  
+    <item>12</item>
+    <item>13</item>
+    <item>1</item> 
+    <item>14</item>
+    <item>16</item> 
+    <item>11</item> 
+    <item>10</item>
+    <item>4</item>
+    <item>3</item>
+    <item>-2</item>
+  </string-array>
+  <string-array name="wallpaper_bg_type_entris">
+    <item>GO桌面桌布</item>
+    <!-- item>GO桌面其他主題背景</item-->
+    <item>自定义桌布</item> 
+  </string-array>
+  <string-array name="dock_bg_type_entris">
+    <item>無</item>
+    <item>GO桌面主題背景</item>
+    <!-- item>GO桌面其他主題背景</item-->
+    <item>自定義背景</item> 
+  </string-array>
+   <!-- 页面指示器类型 -->
+	<string-array name="screen_indicator_showmode_array">
+		<item>默認主题</item>
+		<item>數字風格</item>
+	</string-array>
+	<!-- 指示器位置 -->
+	<string-array name="screen_indicator_position_array">
+		<item>螢幕上方</item>
+		<item>螢幕下方</item>
+	</string-array>
+	<!-- 桌面指示器 -->
+	<string-array name="screen_indicator_array">
+		<item>顯示指示器</item>
+		<item>隱藏指示器</item>
+		<item>自動隱藏指示器</item>
+	</string-array>
+	<!-- 添加到快捷条弹框-->
+	<string-array name="add_to_dock_array">
+		<item>應用程序</item>
+		<item>快捷方式</item>
+		<item>默認圖標</item>
+	</string-array>
+ <string-array name="fun_bg_type_entris">
+    <item>無</item>
+    <item>GO桌面主題背景</item>
+    <item>自定義背景</item> 
+  </string-array>
+  <string-array name="screen_transition_entris">
+    <item>默認 (速度：60)</item>
+    <item>快速 (速度：75)</item>
+    <item>平緩 (速度：45)</item>
+    <item>自定義</item>
+  </string-array>
+  <string-array name="communication_arry">
+    <item>未讀簡信統計</item>
+    <item>未接來電統計</item>
+    <item>未讀Gmail統計</item>
+    <item>未讀K9mail統計</item>
+    <!-- <item>未讀Facebook統計</item> -->
+    <item>未讀新浪微博統計</item>
+  </string-array>
+  
+  <string-array name="func_app_vertical_scroll_effect_entris">
+    <!-- 0 -->	<item>默認</item>
+    <!-- 1 -->	<item>瀑布</item>
+  </string-array>
+  
+  <string-array name="func_app_vertical_scroll_effect_entry_values">
+    <item>0</item>
+    <item>1</item>
+  </string-array>
+ <string-array name="orientation_entries">
+    <item>跟隨系統設置</item>
+    <item>保持豎屏</item>
+    <item>保持豎屏（屏蔽實體鍵盤）</item>
+    <item>保持橫屏</item>
+  </string-array>
+  
+  <string-array name="wallpaper_mode_entries">
+    <item>默認模式</item>
+    <item>豎屏壁紙模式</item>
+  </string-array>
+  
+    <string-array name="appname_setting_entries">
+    <item>顯示程式名</item>
+    <item>顯示程式名（背景）</item>
+    <item>隱藏程式名</item>
+   </string-array>
+   
+   <string-array name="icon_size_setting_entries">
+    <item>推薦大小(大圖標)</item>
+    <item>默認大小(小圖標)</item>
+    <item>自定義大小</item> 
+	<!--   <item>默認圖標</item>
+    <item>大圖標</item>
+    <item>自定義圖標</item>-->
+    </string-array>
+    
+   <string-array name="font_size_entries">
+    <item>默認大小</item>
+    <item>自定義字體大小</item>
+   </string-array>
+   <string-array name="qatutorial_list_items">
+    <item>1.自定義手勢</item>	  	 	  	 
+	<item>2.屏幕預覽與編輯</item>  	
+	<item>3.快捷條圖標</item>	 	 
+  </string-array>
+  <string-array name="appfunc_mediamanagement_select_sort_style">
+    <item>按資料名排序</item>
+    <item>按最近添加排序</item>
+  </string-array>
+  
+  <!-- 重命名框 -->
+  <string-array name="rename_window_names">
+    <item>遊戲</item>
+    <item>社交</item>
+    <item>工具</item>
+    <item>網絡</item>
+    <item>系統</item>
+    <item>工作</item>
+    <item>常用</item>
+    <item>不常用</item>
+   </string-array>
+   
+  <!-- 响应手势类型对话框 -->
+  <string-array name="gesture_dialog_types">
+      <item>打開應用程序</item>
+      <item>打開GO快捷方式</item>
+      <item>打開快捷方式</item>
+  </string-array>
+  
+  <!-- 手势管理列表menu菜单 -->
+  <string-array name="gesture_menu_item_names">
+      <item>修改手勢</item>
+      <item>修改響應</item>
+      <item>刪除手勢</item>
+      <item>打開手勢</item>
+  </string-array>
+  
+       <!-- 文件夹排序方式 -->
+  <string-array name="folder_select_sort_style">
+    <item>按字母排序</item>
+    <item>按添加時間從近到遠排序</item>
+    <item>按添加時間從遠到近排序</item>
+  </string-array>
+  
+  <!-- 应用游戏中心省流量模式选项 -->
+  <string-array name="network_flow_select_item">
+    <item>不載入圖標/截圖</item>
+    <item>只載入圖標</item>
+    <item>載入全部圖標/截圖</item>
+  </string-array>
+  
+    <!-- 应用游戏中心Menu菜单意见反馈选项 -->
+  <string-array name="appgame_menu_feedback_array">
+    <item>問題反饋</item>
+    <item>功能建議</item>
+    <item>機型支持</item>
+    <item>產品使用</item>
+    <item>其他</item>
+  </string-array>
+  
+   <!-- 应用游戏中心详情页意见反馈选项 -->
+  <string-array name="appgame_detail_feedback_array">
+    <item>無法下載</item>
+    <item>無法安裝</item>
+    <item>版本較舊</item>
+    <item>錯誤更新提示</item>
+    <item>網絡異常/緩慢</item>
+    <item>色情內容/暴力圖片</item>
+    <item>其他</item>
+   </string-array>
+   
+  <!-- 智能分类应用类别 -->
+  <string-array name="folder_classify_name">
+    <item>桌面美化</item>
+    <item>閱讀學習</item>
+    <item>遊戲</item>
+    <item>影音圖像</item>
+    <item>網絡應用</item>
+    <item>實用工具</item>
+    <item>生活購物</item>
+    <item>交友聊天</item>
+    <item>地圖導航</item>
+    <item>辦公理財</item>
+    <item>GO系列</item>
+    <item>系統</item>
+  </string-array>
+  
+</resources>

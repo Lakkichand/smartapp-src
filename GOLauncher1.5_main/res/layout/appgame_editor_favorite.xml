@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.appgame.base.component.EditorFavoriteContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/editor_favorite_tips_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/editor_favorite_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@color/center_background" 
+        android:background="@color/center_background"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:listSelector="@drawable/recomm_app_list_item_selector"
+        android:scrollbarStyle="outsideOverlay"
+        android:divider="@android:color/transparent">
+    </ListView>
+
+</com.jiubang.ggheart.appgame.base.component.EditorFavoriteContainer>

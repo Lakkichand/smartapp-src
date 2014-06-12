@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="gostorewidget41_preview_title">Go스토어위젯(4x1)</string>
+  <string name="dialogtitle">GO런처EX 확인</string>
+  <string name="dialogcontent">고런처EX가 폰에 설치되지 않았습니다. OK를 누르면 다운로드됩니다</string>
+  <string name="dialogok">OK</string>
+  <string name="title">Go스토어</string>
+  <string name="gostorewidget_default_theme">기본</string>
+</resources>

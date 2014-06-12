@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/guide_bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/guide_act_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/guide_bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/guide_linear"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" >
+
+            <TextView
+                android:id="@+id/text_hello"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/img_golauncher"
+                android:paddingLeft="30dp"
+                android:paddingTop="@dimen/guide_layout_text_space"
+                android:text="@string/guide_text1"
+                android:textColor="#55AF2B"
+                android:textSize="28dp" />
+
+            <ImageView
+                android:id="@+id/img_golauncher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:focusable="false"
+                android:src="@drawable/guide_golauncherex" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/text_golanucher"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/guide_linear"
+            android:paddingLeft="30dp"
+            android:paddingTop="20dp"
+            android:text="@string/guide_text2"
+            android:textColor="#55AF2B"
+            android:textSize="28dp" />
+
+        <com.jiubang.ggheart.apps.desks.diy.GuideImageScroller
+            android:id="@+id/giudeview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_golanucher"
+            android:layout_marginTop="@dimen/guide_layout_imgscroller_space" />
+
+        <com.jiubang.ggheart.apps.desks.diy.frames.screen.DesktopIndicator
+            android:id="@+id/indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="33.3dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

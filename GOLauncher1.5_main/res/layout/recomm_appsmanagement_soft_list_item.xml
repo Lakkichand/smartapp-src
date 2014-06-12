@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70.33dp"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/contentRelativeLayout"
+            android:layout_width="0dip"
+            android:layout_height="69.33dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/recomm_app_list_item_selector"
+            android:orientation="vertical"
+            android:paddingBottom="10.66dp"
+            android:paddingTop="10.66dp" >
+
+            <!-- <ImageView
+                android:id="@+id/softImageView"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="8dp" /> -->
+
+            <ImageSwitcher
+                android:id="@+id/softImageSwitcher"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="8dp"
+                android:inAnimation="@anim/appgame_fade_in"
+                android:outAnimation="@anim/appgame_fade_out" >
+
+                <ImageView
+                    android:id="@+id/softImageView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/anotherSoftImageView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitXY" />
+            </ImageSwitcher>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/softImageSwitcher" >
+
+                <TextView
+                    android:id="@+id/softNameTextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true" >
+
+                    <ImageView
+                        android:id="@+id/moveImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/verTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="#929292"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!--
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent" >
+
+        <Button
+            android:id="@+id/operatorbutton"
+            android:layout_width="64dp"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/appgame_install_btn_selector"
+            android:focusable="false"
+            android:singleLine="true"
+            android:text="@string/app_detail_installed_uninstall"
+            android:textColor="#393939"
+            android:textSize="12.67dp" />
+    </RelativeLayout>
+        -->
+
+        <ImageView
+            android:id="@+id/rightline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/appsmanagement_line_right" />
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/content_right_layout"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/operatorbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/appsmanagement_uninstall_selector"
+                android:focusable="false"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/app_detail_installed_uninstall"
+                android:textColor="#787878"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/open_manange"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/popwindow_bg" 
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16.66dp"
+            android:layout_marginRight="16.66dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/open_app"
+                android:layout_width="fill_parent"
+                android:layout_height="30.66dp"
+                android:layout_marginRight="13.33dp"
+                android:layout_weight="1"
+                android:background="@drawable/update_detail_selector_new"
+                android:gravity="center"
+                android:text="@string/app_manager_open_app"
+                android:textColor="#ffffff"
+                android:textSize="14.66dp" />
+
+            <TextView
+                android:id="@+id/manange_app"
+                android:layout_width="fill_parent"
+                android:layout_height="30.66dp"
+                android:layout_marginLeft="13.33dp"
+                android:layout_weight="1"
+                android:background="@drawable/update_detail_selector_new"
+                android:gravity="center"
+                android:text="@string/app_manager_app"
+                android:textColor="#ffffff"
+                android:textSize="14.66dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

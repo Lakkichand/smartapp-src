@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.appgame.base.component.CategoriesContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/categories_tips_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/categories_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/center_background"
+        android:cacheColorHint="@color/center_background"
+        android:choiceMode="singleChoice"
+        android:divider="@drawable/listline"
+        android:dividerHeight="0.5dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:fadingEdge="none"
+        android:scrollbarStyle="outsideOverlay"
+        android:listSelector="@drawable/recomm_app_list_item_selector" />
+
+</com.jiubang.ggheart.appgame.base.component.CategoriesContainer>

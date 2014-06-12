@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+    
+<com.jiubang.ggheart.components.DeskCheckedTextView 
+	xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:id="@+id/radio_textview"
+	android:layout_width="match_parent" 
+	android:layout_height="wrap_content"
+	android:textAppearance="?android:attr/textAppearanceMediumInverse" 
+	android:gravity="center_vertical" 
+	android:paddingLeft="12dip" 
+	android:paddingRight="7dip" 
+	android:checkMark="@android:drawable/btn_radio" 
+	android:ellipsize="marquee" />

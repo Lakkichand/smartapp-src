@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingVisualView
+	xmlns:android="http://schemas.android.com/apk/res/android" 
+	xmlns:myAndroid="http://schemas.android.com/apk/res/com.gau.go.launcherex"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@color/desk_setting_bg_color">
+	
+	<com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingPageTitleView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        myAndroid:titleTextLineHeight="1dip"
+        myAndroid:titleText="@string/pref_title_theme_settings" />
+
+</com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingVisualView>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/media_open_dialog_listitem_height"
+    android:orientation="horizontal" >
+    <ImageView 
+        android:id="@+id/appfunc_mediamanagement_shooser_list_item_icon"
+        android:layout_width="52dip"
+        android:layout_height="52dip"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="6dip"
+        android:layout_marginRight="6dip"
+        />
+	<TextView 
+	    android:id="@+id/appfunc_mediamanagement_shooser_list_item_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="16sp"
+	    android:textColor="#000000"/>
+</LinearLayout>

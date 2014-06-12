@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gowidgets xmlns:launcher="http://schemas.android.com/apk/res/com.gau.go.launcherex">
+
+	<!-- 任务管理器 widget -->
+	<innner_widget
+		launcher:buildin="code_only"
+        launcher:prototype="taskman"
+		launcher:inflatePackage="com.gau.go.launcherex"
+		launcher:widgetPackage="com.gau.go.launcherex.gowidget.taskmanager"
+	/>
+	
+	<!-- appgame widget -->
+	<innner_widget
+		launcher:buildin="all"
+        launcher:prototype="appgame"
+		launcher:inflatePackage="com.gau.go.launcherex"
+		launcher:widgetPackage="com.gau.go.launcherex"
+		launcher:statisticPackage="com.gau.go.launcherex.gowidget.appgame"
+		launcher:title="@string/appgame_widget_title"
+		launcher:icon="@drawable/appgame_widget_icon"
+		launcher:themeConfig="widget_appgamewidget.xml"
+		launcher:previewList="@array/appgame_previewlist"
+		launcher:nameList="@array/appgame_namelist"
+		launcher:typeList="@array/appgame_typelist"
+		launcher:layoutList="@array/appgame_layoutidlist"
+		launcher:rowList="@array/appgame_rowlist"
+		launcher:columnList="@array/appgame_columnlist"
+		launcher:minHeightList="@array/appgame_minHeight"
+		launcher:minWidthList="@array/appgame_minWidth"
+	/>
+
+</gowidgets>

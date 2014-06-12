@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" 
+	android:layout_gravity="center">
+
+	<FrameLayout android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" android:layout_gravity="center">
+		<ImageView android:id="@+id/bgid" 
+			android:layout_width="fill_parent" android:layout_height="fill_parent" />
+		<!-- com.jiubang.ggheart.components.DeskTextView  -->
+		<com.jiubang.ggheart.components.DeskTextView
+			android:id="@+id/text" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_gravity="center" android:gravity="center_horizontal"
+			android:textColor="#B312ff00"
+			android:textSize="9sp" 
+			android:layout_marginBottom="7dp"
+			 />
+
+		<com.jiubang.ggheart.apps.gowidget.taskmanager.PointerView
+			android:id="@+id/movepoint" 
+			android:layout_width="fill_parent" android:layout_height="fill_parent"
+			android:paddingLeft="0dip" android:paddingTop="0dip" />
+
+	</FrameLayout>
+
+	<ImageView 
+		android:id="@+id/wrapimage"
+		android:adjustViewBounds="true" android:layout_gravity="center"
+		android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+	<ImageView 
+		android:id="@+id/applybutton"
+		android:clickable="true"
+		android:adjustViewBounds="true" android:layout_gravity="center"
+		android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

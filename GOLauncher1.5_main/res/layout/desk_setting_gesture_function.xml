@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myAndroid="http://schemas.android.com/apk/res/com.gau.go.launcherex"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/desk_setting_bg_color"
+    android:orientation="vertical" >
+    <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingPageTitleView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        myAndroid:titleText="@string/desk_setting_function_gesture" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/desk_setting_view_padding"
+            android:paddingRight="@dimen/desk_setting_view_padding" >
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemCheckBoxView
+                android:id="@+id/glide_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:summaryText="@string/func_app_glide_up_summary"
+                myAndroid:titleText="@string/func_app_glide_up" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemCheckBoxView
+                android:id="@+id/glide_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:summaryText="@string/func_app_glide_down_summary"
+                myAndroid:titleText="@string/func_app_glide_down" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

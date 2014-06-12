@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 渠道配置文件 -->
+<!-- 针对不同的渠道，对桌面的不同模块进行配置 -->
+<channel>
+	<!-- 
+		应用中心、游戏中心、装机必备、玩机必备的配置规则
+		属性want表示需要的渠道， 属性unwant表示不需要的渠道
+		如果有多个渠道的话，使用英文分号隔开，如want="200;300;305"
+		如果配置值为*，代表全部渠道
+		如果want与unwant有冲突的话，将优先保证unwant
+	-->
+    <!-- 应用中心 -->
+    <!-- 
+         应用游戏中心跟GO精品合并后，所有的渠道都有应用中心，但是在不同的渠道使用不同的名字
+         大部分的渠道都叫安卓应用市场/GO Market
+         在原来没有应用中心的渠道，就叫GO精品，替代原来的GO精品模块，内容的配置与显示都是GO精品的内容
+     -->
+    <appcenter want="*" unwant="312;357">
+		<addMainMenuItem want="*" unwant=""/>
+		<addFunItem want="*" unwant=""/>
+		<addFunMenuItem want="*" unwant=""/>
+		<addGoStoreTitleEntrance want="*" unwant=""/>
+		<addGoStoreListEntrance want="*" unwant=""/>		
+    </appcenter>
+    
+    <!-- 游戏中心 -->
+    <!-- 应用游戏中心跟GO精品合并后，游戏中心在所有的渠道都已经不存在了，这个控制已经失效 -->
+    <gamecenter want="*" unwant="353;312">
+        <addMainMenuItem want="" unwant="*"/>
+		<addFunItem want="" unwant="*"/>
+		<addFunMenuItem want="" unwant="*"/>
+		<addGoStoreTitleEntrance want="" unwant="*"/>
+		<addGoStoreListEntrance want="" unwant="*"/>
+    </gamecenter>
+        
+    <!-- 应用游戏中心安全验证加载页面 -->
+    <securityAppGameLoading want="*" unwant="200;210;373">
+    </securityAppGameLoading>
+    
+    <!-- 装机必备 -->
+    <!-- 目前200电子市场的包没有装机必备，所以unwant一定包括200 -->
+    <appskit want="*" unwant="200;373">
+        <addDeskItem want="*" unwant="200;373"/>
+    </appskit>
+    
+    <!-- 玩机必备 -->
+    <!-- 应用游戏中心跟GO精品合并后，玩机必备在所有的渠道都已经不存在了，这个控制已经失效 -->
+    <gameskit want="" unwant="*">
+        <addDeskItem want="" unwant="*"/>
+    </gameskit>
+    
+    <!-- 下载管理配置 -->
+    <downloadmanager want="*" unwant="200;373">
+    </downloadmanager>
+    
+    <downloadservice want="*" unwant="200;210;373">
+    </downloadservice>
+    
+    <!-- 内购的服务，只有200和210的渠道才有 -->
+    <billingservice want="200;210;373" unwant="">
+    </billingservice>
+    
+    <!-- 安装包管理 -->
+    <packageManagement want="*" unwant="200;373">
+    </packageManagement>    
+    
+    <!-- 是否允许使用长连接 -->
+    <!-- 国内渠道允许使用 -->
+    <keepAliveEnable want="*" unwant="">
+    </keepAliveEnable>
+    
+    <!-- 是否需要省流量模式提醒对话框 -->
+    <showSaveFlow want="*" unwant="200;373">
+    </showSaveFlow>
+    
+</channel>

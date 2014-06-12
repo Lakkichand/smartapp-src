@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myAndroid="http://schemas.android.com/apk/res/com.gau.go.launcherex"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/desk_setting_bg_color"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/desk_setting_view_padding"
+            android:paddingRight="@dimen/desk_setting_view_padding" >
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemListView
+                android:id="@+id/func_app_scroll_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:dialogTitle="@string/func_app_flip_horizontal"
+                myAndroid:dialogType="SINGLE_CHOICE"
+                myAndroid:listEntries="@array/scroll_list_title"
+                myAndroid:listEntryValues="@array/scroll_list_value"
+                myAndroid:summaryText="@string/defaultbtn"
+                myAndroid:titleText="@string/func_app_flip_horizontal" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemCheckBoxView
+                android:id="@+id/func_app_looping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:summaryText="@string/func_app_screen_looping_summary"
+                myAndroid:titleText="@string/func_app_screen_looping" />
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemListView
+                android:id="@+id/fun_app_inout_effects"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:dialogTitle="@string/func_app_inout_setting"
+                myAndroid:dialogType="SINGLE_CHOICE"
+                myAndroid:listEntries="@array/inout_list_title"
+                myAndroid:listEntryValues="@array/inout_list_value"
+                myAndroid:summaryText="@string/func_app_inout_setting_hint"
+                myAndroid:titleText="@string/func_app_inout_setting" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemListView
+                android:id="@+id/fun_app_landscape_effects"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:dialogTitle="@string/func_app_icon_effect_setting"
+                myAndroid:dialogType="SINGLE_CHOICE"
+                myAndroid:listEntries="@array/func_app_icon_effect_entris"
+                myAndroid:listEntryValues="@array/func_app_icon_effect_entry_values"
+                myAndroid:summaryText="@string/func_app_icon_effect_setting_hint"
+                myAndroid:titleText="@string/func_app_icon_effect_setting" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemListView
+                android:id="@+id/fun_app_vertical_effects"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:dialogTitle="@string/func_app_vertical_scroll_effect_setting"
+                myAndroid:dialogType="SINGLE_CHOICE"
+                myAndroid:listEntries="@array/func_app_vertical_scroll_effect_entris"
+                myAndroid:listEntryValues="@array/func_app_vertical_scroll_effect_entry_values"
+                myAndroid:summaryText="@string/func_app_vertical_scroll_effect_setting_hint"
+                myAndroid:titleText="@string/func_app_vertical_scroll_effect_setting" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemBaseView
+                android:id="@+id/setting_gesture_fuction"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/desk_setting_gosetting_item_height"
+                myAndroid:isHiddenBottomLine="true"
+                myAndroid:titleText="@string/desk_setting_function_gesture" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

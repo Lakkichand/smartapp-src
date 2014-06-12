@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/recomm_app_list_item_selector"
+    android:padding="10.6dp" >
+
+    <RelativeLayout
+        android:id="@+id/app_download_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <com.jiubang.ggheart.apps.gowidget.gostore.component.SimpleImageView
+            android:id="@+id/download_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/download_name"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/download_icon"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/download_icon"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/download_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/download_name"
+            android:layout_below="@+id/download_name"
+            android:layout_marginTop="1dp"
+            android:textColor="#696969"
+            android:textSize="11dp" />
+
+        <TextView
+            android:id="@+id/download_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/download_progressbar"
+            android:layout_alignTop="@+id/download_size"
+            android:layout_marginTop="1dp"
+            android:textColor="#696969"
+            android:textSize="11dp" />
+
+        <ProgressBar
+            android:id="@+id/download_progressbar"
+            style="@style/AppsManagementProgressBarStyle"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/download_size"
+            android:layout_below="@+id/download_percent"
+            android:layout_marginRight="40dp"
+            android:layout_toLeftOf="@+id/app_download_manager_button" />
+
+        <TextView
+            android:id="@+id/download_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/download_name"
+            android:layout_below="@+id/download_name"
+            android:layout_marginTop="6dp"
+            android:text="@string/download_manager_finish"
+            android:textColor="#818181"
+            android:textSize="14dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/app_download_manager_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.6dp"
+            android:background="@drawable/apps_uninstall_not_selected"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center" />
+    </RelativeLayout>
+
+    <!--
+    <Button
+      android:id="@+id/operatorbutton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentRight="true"
+      android:layout_centerVertical="true"
+      android:layout_marginLeft="12dp"
+      android:layout_marginRight="12dp"
+      android:background="@drawable/apps_uninstall_not_selected"
+      android:focusable="false"
+      android:gravity="center" />
+
+
+
+
+    -->
+
+
+    <!--
+    <RelativeLayout
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/app_download_layout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignTop="@+id/app_download_layout" >
+
+        <ImageView
+            android:id="@+id/download_control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/downloadmanager_pause_selector" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/appsmanagement_line_right" />
+    </RelativeLayout>
+
+
+
+
+    -->
+
+</RelativeLayout>

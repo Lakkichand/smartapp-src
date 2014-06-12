@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.desks.share.ShareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/share_title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/theme_top_height"
+        android:background="@drawable/theme_top_tab_bg" >
+
+        <TextView
+            android:id="@+id/share_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/share_title_left"
+            android:text="@string/share_title_text"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/share_title_text_size"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/share_title_layout"
+        android:layout_above="@+id/share_button_layout"
+        android:fadingEdge="none"
+        android:background="#fff7f7f7" >
+
+        <LinearLayout
+            android:id="@+id/share_content_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/share_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/share_list_item_padding_edge"
+                android:paddingLeft="16dp"
+                android:paddingTop="7dip"
+                android:text="@string/share_text_choose_tip"
+                android:textColor="#ff838383"
+                android:textSize="16sp" />
+
+            <com.jiubang.ggheart.apps.desks.share.ShareContainer
+                android:id="@+id/shareContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:verticalSpacing="10dp" >
+            </com.jiubang.ggheart.apps.desks.share.ShareContainer>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/share_button_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="53dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="@drawable/mytheme_bottom_bg"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/immediately_share"
+            android:layout_width="107dip"
+            android:layout_height="38dip"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/mytheme_button_bg_selector"
+            android:drawableLeft="@drawable/theme_detail_apply"
+            android:paddingLeft="11dip"
+            android:text="@string/share_text_immediately_share"
+            android:textColor="@color/theme_detail_apply_text"
+            android:textSize="13sp" />
+    </RelativeLayout>
+    
+    <com.jiubang.ggheart.apps.gowidget.gostore.component.ThemeStoreProgressBar
+        android:id="@+id/share_loading"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_below="@+id/share_title_layout"
+        android:visibility="gone" >
+        <ProgressBar
+            android:id="@+id/themestore_btmprogress"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="6dp"
+             />
+
+        <TextView
+            android:id="@+id/share_Progress_text"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:text="@string/share_img_loading_text"
+            android:textColor="#ffffffff"
+            android:textSize="16sp" />
+    </com.jiubang.ggheart.apps.gowidget.gostore.component.ThemeStoreProgressBar>
+</com.jiubang.ggheart.apps.desks.share.ShareLayout>

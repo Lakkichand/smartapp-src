@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.appgame.base.component.AppsManagementSearchFooterView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <ProgressBar
+        android:id="@+id/apps_management_search_progress"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="6dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/apps_mgr_listview_foot_warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/apps_mgr_listview_foot_warning"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/apps_management_search_text"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:text="@string/loading"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/apps_management_search_retry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/apps_mgr_listview_foot_retry_selector"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/apps_mgr_listview_foot_retry"
+        android:textColor="#535353"
+        android:textSize="17.33dp" />
+
+</com.jiubang.ggheart.appgame.base.component.AppsManagementSearchFooterView>

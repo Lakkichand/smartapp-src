@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.appgame.base.component.AppsManagementSearchHeaderView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/appsmanagement_group_section"
+    android:paddingBottom="3.3333333dp"
+    android:paddingTop="3.333333dp" >
+
+    <TextView
+        android:id="@+id/apps_management_search_header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16.6dp"
+        android:gravity="center|left"
+        android:textColor="#474747"
+        android:textSize="13.3dip" />
+
+</com.jiubang.ggheart.appgame.base.component.AppsManagementSearchHeaderView>

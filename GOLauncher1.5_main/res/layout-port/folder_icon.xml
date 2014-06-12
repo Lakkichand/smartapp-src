@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 竖屏时文件夹图标 -->
+<com.jiubang.ggheart.apps.desks.diy.frames.screen.FolderIcon xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ggheart="http://schemas.android.com/apk/res/com.gau.go.launcherex"
+    style="@style/WorkspaceIcon.Portrait"
+    ggheart:drawablePadding="@dimen/drawable_padding" />

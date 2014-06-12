@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:background="#ffcecece">
+
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:orientation="horizontal">
+		<TextView android:layout_height="fill_parent"
+			android:layout_width="1dp" android:layout_weight="5" />
+
+		<FrameLayout android:layout_width="1dp"
+			android:layout_height="fill_parent" android:layout_weight="4">
+			<ImageView android:src="@drawable/widgetchoosestyle_bg"
+				android:layout_width="fill_parent" android:scaleType="fitXY"
+				android:layout_height="fill_parent" android:layout_weight="3" />
+
+
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:paddingLeft="8dip"
+				android:paddingTop="8dip" android:paddingRight="8dip"
+				android:orientation="vertical">
+
+
+				<FrameLayout android:layout_width="fill_parent"
+					android:layout_height="0dp" android:layout_weight="8"
+					android:layout_gravity="center|center">
+					<ImageView android:id="@+id/widgetsubviewimage"
+						android:scaleType="fitXY" android:layout_width="fill_parent"
+						android:layout_height="fill_parent" />
+					<LinearLayout android:layout_width="fill_parent"
+						android:layout_height="fill_parent" android:orientation="vertical"
+						android:padding="3dip">
+						<TextView android:layout_height="0dp"
+							android:layout_width="fill_parent" android:layout_weight="7" />
+					<LinearLayout android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:orientation="horizontal"
+					 android:gravity="center_horizontal">
+						<ImageView android:id="@+id/down_mark_view"
+							android:scaleType="fitXY" android:layout_width="20dip"
+							android:layout_height="20dip"
+							android:layout_margin="5dip"/>
+						<LinearLayout android:layout_width="wrap_content"
+						android:layout_height="fill_parent" android:orientation="vertical" android:gravity="center_vertical">
+						<com.jiubang.ggheart.components.DeskTextView
+							android:layout_height="wrap_content" android:id="@+id/download"
+							android:layout_width="fill_parent" android:textColor="#ffffffff"
+							android:textSize="10sp" 
+							android:layout_margin="1dip" android:paddingTop="2dip"/>
+						
+						<com.jiubang.ggheart.components.DeskTextView
+							android:layout_height="wrap_content" android:id="@+id/downlaodinfo"
+							android:layout_width="fill_parent" android:textColor="#ffffffff"
+							android:textSize="6sp" 
+							android:layout_marginTop="1dip" />
+						</LinearLayout>
+						</LinearLayout>
+					</LinearLayout>
+				</FrameLayout>
+
+				<LinearLayout android:layout_width="fill_parent"
+					android:layout_weight="2" android:layout_height="0dp"
+					android:orientation="horizontal" android:gravity="left|center">
+					<GridView android:id="@+id/widgetgridview"
+						android:layout_width="30dp" android:layout_height="wrap_content"
+						android:numColumns="4" android:gravity="center"
+						android:verticalSpacing="0dp" android:horizontalSpacing="0dp"
+						android:stretchMode="columnWidth" />
+
+					<com.jiubang.ggheart.components.DeskTextView
+						android:layout_height="wrap_content" android:id="@+id/widgetstyletitle"
+						android:layout_width="wrap_content" android:text="default style"
+						android:textColor="#ff000000" android:textSize="12sp" />
+				</LinearLayout>
+
+			</LinearLayout>
+		</FrameLayout>
+
+		<TextView android:layout_height="fill_parent"
+			android:layout_width="1dp" android:layout_weight="5" />
+
+	</LinearLayout>
+
+</FrameLayout>

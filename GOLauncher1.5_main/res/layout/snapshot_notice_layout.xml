@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/snapshot_tutorial_padding"
+    android:paddingLeft="@dimen/snapshot_tutorial_padding"
+    android:paddingRight="@dimen/snapshot_tutorial_padding"
+    android:paddingTop="@dimen/snapshot_tutorial_padding" >
+
+<ImageView
+    android:id="@+id/snapshot_icon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:src="@drawable/snapshot_icon_info" />
+
+<TextView
+    android:id="@+id/snapshot_message"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/snapshot_tutorial_padding"
+    android:layout_marginTop="@dimen/snapshot_tutorial_padding"
+    android:text="@string/snapshot_tutorial"
+    android:textColor="@color/snapshot_tutorial_color"
+    android:textSize="18sp" />
+
+<TextView
+    android:id="@+id/snapshot_notice"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text=""
+    android:textColor="@color/snapshot_tutorial_color"
+    android:textSize="14sp" />
+
+</LinearLayout>

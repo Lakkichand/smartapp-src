@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.desks.diy.themescan.ItemThemeView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+
+ 	<RelativeLayout
+ 	    android:id="@+id/imagecontainer"
+ 	    android:layout_width="wrap_content"
+ 	    android:layout_height="wrap_content" >
+  		<ImageView
+  		    android:id="@+id/image"
+  		    android:layout_width="@dimen/mytheme_pic_width"
+  		    android:layout_height="@dimen/mytheme_pic_height"
+  		    android:layout_centerHorizontal="true"
+  		    android:background="@drawable/theme_item_bg"
+  		    android:contentDescription="@string/app_name"
+  		    android:scaleType="fitXY" /> 	
+ 	</RelativeLayout>
+  	<TextView
+  		android:id="@+id/name"
+  		android:textSize="12sp" 
+  		android:layout_marginTop="@dimen/theme_list_item_text_padding"
+  		android:textColor="@android:color/black"
+  		android:layout_width="@dimen/mytheme_pic_width"
+ 		android:layout_height="wrap_content"
+ 		android:gravity="center"
+ 		android:singleLine="true"/>
+</com.jiubang.ggheart.apps.desks.diy.themescan.ItemThemeView>

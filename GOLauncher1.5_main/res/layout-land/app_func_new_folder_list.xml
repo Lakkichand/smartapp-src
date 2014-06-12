@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:paddingLeft="2dp"
+	android:paddingRight="2dp">
+
+	<LinearLayout android:orientation="horizontal"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:padding="5dp">
+		<com.jiubang.ggheart.components.DeskTextView
+			android:text="@string/app_fun_new_folder_name" android:editable="false"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		<com.jiubang.ggheart.components.DeskEditText
+			android:id="@+id/folder_name" android:maxLines="1" android:text="@string/folder_name"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:editable="false" />
+	</LinearLayout>
+	<com.jiubang.ggheart.components.DeskTextView
+		android:text="@string/app_fun_new_folder_app_title" android:editable="false"
+		android:padding="5dp" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:id="@+id/tips" />
+
+	<ListView android:id="@+id/list" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_weight="1"
+		android:fastScrollEnabled="true" 
+		android:drawSelectorOnTop="false" />
+
+	<!-- <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" android:paddingLeft="8dp" android:paddingRight="8dp"> -->
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:paddingLeft="5dp"
+		android:paddingRight="5dp">
+		<com.jiubang.ggheart.components.DeskButton
+			android:id="@+id/ok" android:layout_width="230dp" android:gravity="center"
+			android:layout_height="wrap_content" android:text="@string/finish"
+			android:layout_alignParentLeft="true">
+		</com.jiubang.ggheart.components.DeskButton>
+		<com.jiubang.ggheart.components.DeskButton
+			android:id="@+id/cancle" android:layout_width="230dp"
+			android:gravity="center" android:layout_height="wrap_content"
+			android:text="@string/cancle" android:layout_alignParentRight="true">
+		</com.jiubang.ggheart.components.DeskButton>
+	</RelativeLayout>
+	<!--</LinearLayout> -->
+</LinearLayout>
+
+
+
+    

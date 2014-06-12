@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/seekbar_double_view"
+        layout="@layout/appfunc_seekbar_double"/>
+
+    <com.jiubang.ggheart.components.DeskCheckBox
+        android:id="@+id/auto_fit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_marginTop="5dip"
+        android:checked="false"
+        android:text="@string/appfunc_auto_fit_row_column_enable"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</LinearLayout>

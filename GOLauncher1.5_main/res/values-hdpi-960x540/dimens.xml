@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 定义与组件相关的尺寸、坐标 -->
+
+<resources>
+
+    <!-- 主题管理 -->
+    <dimen name="theme_list_item_height">195dip</dimen>
+    
+    <!-- 应用游戏中心的按钮文件大小 -->
+     <dimen name="appgame_textSize_cn">8dip</dimen>
+     <dimen name="appgame_textSize_es">6dip</dimen>
+     
+     <dimen name="appfunc_search_naviagation_text_size">12dp</dimen>
+</resources>

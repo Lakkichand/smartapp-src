@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myAndroid="http://schemas.android.com/apk/res/com.gau.go.launcherex"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/desk_setting_bg_color"
+    android:orientation="vertical" >
+
+    <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingPageTitleView
+        android:id="@+id/fun_app_ui_setting_main_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        myAndroid:image="@drawable/icon"
+        myAndroid:titleText="@string/func_app_setting" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/desk_setting_view_padding"
+            android:paddingRight="@dimen/desk_setting_view_padding" >
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemBaseView
+                android:id="@+id/fun_app_ui_setting_visual"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/desk_setting_gosetting_item_height"
+                myAndroid:image="@drawable/desk_setting_visual"
+                myAndroid:titleText="@string/pref_title_theme_settings"
+                myAndroid:titleTextSize="@dimen/desk_setting_main_text_size" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemBaseView
+                android:id="@+id/fun_app_ui_setting_screen"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/desk_setting_gosetting_item_height"
+                myAndroid:image="@drawable/desk_setting_screen"
+                myAndroid:titleText="@string/desk_setting_screen"
+                myAndroid:titleTextSize="@dimen/desk_setting_main_text_size" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemBaseView
+                android:id="@+id/fun_app_ui_setting_app"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/desk_setting_gosetting_item_height"
+                myAndroid:image="@drawable/desk_setting_app"
+                myAndroid:titleText="@string/desk_setting_app"
+                myAndroid:titleTextSize="@dimen/desk_setting_main_text_size" />
+            
+             <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemBaseView
+                android:id="@+id/fun_app_ui_media_plugin"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/desk_setting_gosetting_item_height"
+                myAndroid:image="@drawable/desk_setting_media_plugin"
+                myAndroid:titleText="@string/download_mediamanagement_plugin_dialog_title"
+                myAndroid:titleTextSize="@dimen/desk_setting_main_text_size" />
+             
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

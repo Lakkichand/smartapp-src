@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/message_center_dialog_bt_light" android:state_pressed="true"/>
+    <item android:state_focused="false" android:drawable="@drawable/message_center_dialog_btn_green" />
+    
+</selector>

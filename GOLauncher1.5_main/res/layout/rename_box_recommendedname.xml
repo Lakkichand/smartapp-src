@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="302dip"
+	android:layout_height="234dip" android:background="@drawable/folder_edit_bg"
+	android:id="@+id/contentview" android:gravity="top">
+
+	<com.jiubang.ggheart.components.DeskTextView
+		android:id="@+id/title" android:layout_width="fill_parent"
+		android:layout_height="40dip" android:background="@drawable/folder_top_bg"
+		android:text="@string/rename_window_title" android:gravity="center_vertical"
+		android:textColor="#2f2f2f" android:textSize="17sp"
+		android:paddingLeft="10dip" android:layout_alignParentLeft="true" />
+
+	<RelativeLayout android:id="@+id/editanddel"
+		android:layout_below="@id/title" android:layout_width="fill_parent"
+		android:layout_height="37dip" android:layout_marginLeft="8dip"
+		android:layout_marginRight="8dip" android:layout_marginTop="8dip">
+
+		<com.jiubang.ggheart.components.DeskEditText
+			android:id="@+id/edit" android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:paddingRight="28dip"
+			android:background="@drawable/rename_input"/>
+
+		<ImageButton android:id="@+id/del" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_alignParentRight="true"
+			android:layout_centerVertical="true" android:layout_marginRight="2dip"
+			android:background="@drawable/rename_del_selector" />
+
+	</RelativeLayout>
+
+	<com.jiubang.ggheart.components.DeskTextView
+		android:id="@+id/suggestnametitle" android:layout_below="@id/editanddel"
+		android:layout_alignParentLeft="true" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_marginLeft="14dip"
+		android:layout_marginTop="13dip" android:text="@string/rename_window_recommendedname"
+		android:textColor="#ffa1a1a1" android:textSize="12sp" />
+
+	<GridView android:id="@+id/suggestnamegrid"
+
+		android:layout_width="fill_parent" android:layout_height="60dip"
+		android:layout_below="@id/suggestnametitle" android:layout_marginLeft="22dip"
+		android:layout_marginRight="10dip" android:layout_marginTop="4dip"
+		android:verticalSpacing="10dip" android:numColumns="4"
+		android:listSelector="@drawable/rename_itembg_selector" />
+
+	<LinearLayout android:id="@+id/buttons"
+		android:layout_width="fill_parent" android:orientation="horizontal"
+		android:layout_height="40dip" android:layout_alignParentBottom="true">
+		<com.jiubang.ggheart.components.DeskButton
+			android:id="@+id/finish_btn" android:layout_weight="1"
+			android:layout_width="fill_parent" android:gravity="center"
+			android:layout_height="fill_parent" android:text="@string/ok"
+			android:textColor="#343434" android:textSize="16sp"
+			android:background="@drawable/folder_button_selector" />
+
+		<ImageView android:layout_width="wrap_content"
+			android:layout_height="fill_parent" android:background="@drawable/folder_button_line" />
+		<com.jiubang.ggheart.components.DeskButton
+			android:id="@+id/cancle_btn" android:layout_weight="1"
+			android:layout_width="fill_parent" android:gravity="center"
+			android:layout_height="fill_parent" android:text="@string/cancle"
+			android:textColor="#343434" android:textSize="16sp"
+			android:background="@drawable/folder_button_selector" />
+	</LinearLayout>
+</RelativeLayout>

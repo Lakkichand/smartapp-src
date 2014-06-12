@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   	 
+   	<string name="russian_dialogcontent">Чтобы уменьшить размер установочного файла, в новой версии мы удалили поддержку интерфейсом русского языка.
+Для использования русского языка установите языковой пакет.
+Нажмите на кнопку, чтобы загрузить языковой пакет.</string>
+   	<string name="russian_notification">Языковой пакет Go Launcher
+Используйте Go Launcher с русским языком.</string>
+   	
+   	<string name="hebrew_dialogcontent">לתשומת לבכם
+כדי להפחית את הגודל של קובץ ההתקנה, הסרנו את הקובץ של השפה העברית בגירסה החדשה.
+הינכם עדיין יכולים להשתמש ב-Go Launcher בעברית ע”י שימוש בחבילת השפה.
+לחץ על כפתור ההורדה כדי לקבל את חבילת השפה.
+</string>
+   	<string name="hebrew_notification">חבילת השפה של Go Launcher
+השתמש ב-Go Launcher בעברית
+</string>
+   	
+   	<string name="romanian_dialogcontent">Atentie
+Pentru a reduce dimensiunea pachetului de instalare am eliminat resursa pentru limba Română din noua versiune.
+Puteti totusi folosi Go Launcher în limba Română prin folosirea pachetului de limbă.
+Click pe butonul de descărcare pentru a obtine pachetul de limbă.
+</string>
+   	<string name="romanian_notification">GO Launcher Pachet Limbă
+Folositi GO Launcher în Limba Română
+</string>
+
+   	<string name="spanish_dialogcontent">Atención
+Para reducir el tamaño del archivo de instalación, hemos eliminado los recursos del idioma español en la nueva versión.
+Aún puedes usar GO Launcher en español utilizando el pack de idioma.
+Pulsa el botón descargar para obtener el pack de idioma.
+</string>
+   	<string name="spanish_notification">Pack de Idioma de GO Launcher
+Uso de GO Launcher en Español.
+</string>	
+   	
+   	<string name="italiano_dialogcontent">Attenzione
+Per ridurre la dimensione del file di installazione, abbiamo rimosso dalla nuova versione la risorsa della lingua italiana.
+Potrai utilizzare ancora GO Launcher in Italiano, scaricando il relativo language pack.
+Clicca il bottone di download per ottenere il language pack.
+</string>
+   	<string name="italiano_notification">GO Launcher Language Pack
+Utilizza GO Launcher in Italiano.
+</string>
+   	
+   	<string name="german_dialogcontent">Achtung
+Um die Größe der Installationsdatei zu reduzieren, haben wir in der neuen Version die Sprache Deutsch entfernt.
+Um GO Launchen weiterhin in Deutsch zu benutzen muss das Sprachpaket benutzt werden.
+Klicken Sie auf den Download Button um das Sprachpaket zu bekommen.
+</string>
+   	<string name="german_notification">GO Launcher Sprachpaket
+GO Launcher in deutsch benutzen
+</string>
+   	
+   	<string name="turkish_dialogcontent">Dikkat
+Yükleme dosyasının boyutunu küçültmek için, yeni versiyonda Türkçe dil paketini kaldırdık.
+Buna rağmen GO Launcher’i Türkçe dil paketini indirerek kendi dilinizde kullanabilirsiniz.
+İndirme butoununa tıklayarak dil paketini indirebilirsiniz.
+</string>
+   	<string name="turkish_notification">GO Launcher Dil Paketi
+GO Launcher’i Türkçe olarak kullan.
+</string>
+
+   	<string name="polish_dialogcontent">Aby zmniejszyć rozmiar pliku instalacyjnego, usunęliśmy z nowej wersji polskie tłumaczenie.
+Można nadal korzystać z GO Launcher w języku polskim za pomocą pakietu językowego.
+Kliknij przycisk Pobierz, aby pobrać polski pakiet językowy.
+</string>
+   	<string name="polish_notification">Tłumaczenie do GO Launcher
+Korzystaj z Go Launchera w języku polskim.
+</string>	
+   	
+   	<string name="portugu_dialogcontent">Atenção
+Para reduzir o tamanho do arquivo de instalação, nós removemos o pacote de idioma Português Brasil na nova versão.
+Você ainda pode usar o GO Launcher em Português Brasil usando o pacote de idioma.
+Clique no botão download para obter o pacote de idioma.
+</string>
+   	<string name="portugu_notification">Pacote de Idioma do GO Launcher
+Use GO Launcher em Português Brasil.
+</string>
+   	
+   	<string name="french_dialogcontent">Attention
+Pour réduire la taille du fichier d’installation, nous retirons le language français dans la nouvelle version.
+Vous pouvez toujours utiliser GO Launcher en français en utilisant le pack linguistique.
+Cliquez sur le bouton de téléchargement pour récupérer le pack de linguistique.
+</string>
+   	<string name="french_notification">Pack Linguistique GO Launcher
+Utilisez GO Launcher en français.
+</string>
+   	
+   	<string name="japanese_dialogcontent">注意
+インストール後のファイルサイズを減らす為、我々は最新バージョンで”日本語”の言語リソースを削除しました。
+GO Launcherを”日本語”で使用するには言語パックを導入して下さい。
+ダウンロードボタンをクリックする事で言語パックを入手できます。
+</string>
+   	<string name="japanese_notification">GO Launcher 言語パック
+GO Launcherを”日本語”で使用する
+</string>
+
+   	<string name="vietnamese_dialogcontent">Chú ý
+để giảm kích thước gói cài đặt, chúng tôi đã xóa gói ngôn ngữ xx trong phiên bản mới
+Bạn vẫn có thể sử dụng ngôn ngữ Việt trong Go Launcher bằng cách sử dụng gói ngôn ngữ
+Bấm vào nút Download để tải nó
+</string>
+   	<string name="vietnamese_notification">Gói ngôn ngữ Go Launcher
+Sử dụng ngôn ngữ Việt trong Go Launcher
+</string>	
+   	
+   	<string name="indonesia_dialogcontent">Perhatian
+Untuk mengurangi ukuran berkas instalasi, kami telah menghapus bahasa xx dalam versi yang baru.
+Anda tetap bisa menggunakan Go Launcher dalam bahasa Indonesia dengan menggunakan paket bahasa.
+</string>
+   	<string name="indonesia_notification">Ketuk tombol download untuk mendapatkan paket bahasa.
+Gunakan GO Launcher dalam bahasa Indonesia.
+</string>
+   	
+   	<string name="swedish_dialogcontent">Observera
+För att minska installationsfilens storlek har vi tagit bort språkpaketet svenska i den nya versionen.
+Du kan fortfarande använda GO Launcher på svenska genom att installera språkpaketet.
+Klicka på nedladdningsknappen för att ladda ner språkpaketet.
+</string>
+   	<string name="swedish_notification">GO Launcher språkpaket
+Använd GO Launcher på svenska.
+</string>
+   	
+   	<string name="persian_dialogcontent">توجه
+برای کاهش اندازه فایل نصبی, ما منبع زبانی فارسی را در نسخه جدید پاک خواهیم کرد.
+شما همچنان قادر به استفاده از GO Launcher به زبان فارسی با استفاده از بسته های زبانی خواهید بود.
+برای دریافت بسته زبانی بر روی دکمه دانلود کلیک کنید.
+</string>
+   	<string name="persian_notification">بسته زبانی GO Launcher
+استفاده از GO Launcher به زبان فارسی.
+</string>
+
+   	<string name="croatian_dialogcontent">Pozor
+U cilju smanjenja veličine instalacijske datoteke, u novoj verziji uklonili smo hrvatski jezik.
+I dalje možete koristiti Go Launcher na hrvatskom jeziku pomoću jezičnog paketa.
+Kliknite na gumb Preuzmi (Download) da biste preuzeli jezični paket.
+</string>
+   	<string name="croatian_notification">Jezični paket za Go Launcher
+Koristite Go Launcher na hrvatskom jeziku.
+</string>	
+   	
+   	<string name="serbian_dialogcontent">Upozorenje
+Kako bismo smanjili veličinu datoteke za instalaciju, u novoj verziji uklonili smo jezički paket za srpski/crnogorski/bosanski jezik.
+I dalje možete koristiti Go Launcher na srpskom/crnogorskom/bosanskom jeziku tako što ćete preuzeti jezički paket.
+Kliknite na dugme Preuzmi (Download) kako biste preuzeli jezički paket.
+</string>
+   	<string name="serbian_notification">Jezički paket za Go Launcher
+Koristite Go Launcher na srpskom/crnogorskom/bosanskom jeziku
+</string>
+   	
+   	<string name="hongkong_dialogcontent">為了減小GO桌面的安裝包大小，我們在這個版本將刪除繁體中文的語言資源。
+但您仍可以通過下載語言包來使用繁體中文。
+請點擊下方的下載按鈕進行下載。</string>
+   	<string name="hongkong_notification">GO桌面語言包
+使用繁體中文的GO桌面</string>
+</resources>

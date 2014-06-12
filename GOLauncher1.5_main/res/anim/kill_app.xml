@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:oneshot="true"> 
+   <item android:drawable="@drawable/kill5" android:duration="80" /> 
+   <item android:drawable="@drawable/kill4" android:duration="80" /> 
+   <item android:drawable="@drawable/kill3" android:duration="80" /> 
+   <item android:drawable="@drawable/kill2" android:duration="80" /> 
+   <item android:drawable="@drawable/kill1" android:duration="80" /> 
+   <item android:drawable="@drawable/kill6" android:duration="80" /> 
+</animation-list>

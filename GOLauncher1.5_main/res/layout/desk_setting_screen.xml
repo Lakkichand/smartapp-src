@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myAndroid="http://schemas.android.com/apk/res/com.gau.go.launcherex"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/desk_setting_bg_color"
+    android:orientation="vertical" >
+
+    <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingPageTitleView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        myAndroid:titleText="@string/desk_setting_screen" />
+
+    <include
+        android:id="@+id/desk_setting_tab_title_layout"
+        layout="@layout/desk_setting_tab_title" />
+
+    <com.jiubang.ggheart.apps.gowidget.gostore.views.ScrollerViewGroup
+        android:id="@+id/desk_setting_scroller_view_group"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <!-- 桌面设置 -->
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/desk_setting_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/desk_setting_view_padding"
+                android:paddingRight="@dimen/desk_setting_view_padding" >
+
+                <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingTitleView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    myAndroid:titleText="@string/customname_preferences" />
+
+                <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemListView
+                    android:id="@+id/screen_rows_cols"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/desk_setting_gosetting_item_height"
+                    myAndroid:dialogTitle="@string/desk_setting_screen_rows_cols"
+                    myAndroid:dialogType="SINGLE_CHOICE_WITH_CHECKBOX"
+                    myAndroid:listEntries="@array/screen_rows_cols_title"
+                    myAndroid:listEntryValues="@array/screen_rows_cols_value"
+                    myAndroid:singleDialogTips="@string/icon_autofit"
+                    myAndroid:summaryText="@string/screen_rows_cols_hint"
+                    myAndroid:titleText="@string/desk_setting_screen_rows_cols" />
+
+                <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemCheckBoxView
+                    android:id="@+id/desk_statusbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/desk_setting_gosetting_item_height"
+                    myAndroid:titleText="@string/statusbar" />
+
+                <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemCheckBoxView
+                    android:id="@+id/show_app_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/desk_setting_gosetting_item_height"
+                    myAndroid:titleText="@string/desk_setting_show_app_name" />
+
+                <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemCheckBoxView
+                    android:id="@+id/show_app_name_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/desk_setting_gosetting_item_height"
+                    myAndroid:isHiddenBottomLine="true"
+                    myAndroid:titleText="@string/desk_setting_show_app_name_bg" />
+                <!-- 快捷条设置 -->
+
+                <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingTitleView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    myAndroid:titleText="@string/dock_set" />
+
+                <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemListView
+                    android:id="@+id/dock_rows"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/desk_setting_gosetting_item_height"
+                    myAndroid:dialogTitle="@string/Dockrow"
+                    myAndroid:dialogType="SINGLE_CHOICE"
+                    myAndroid:listEntries="@array/dock_row_count"
+                    myAndroid:listEntryValues="@array/dock_row_value"
+                    myAndroid:summaryText="@string/Dockrowsummary"
+                    myAndroid:titleText="@string/Dockrow" />
+
+                <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemCheckBoxView
+                    android:id="@+id/show_dock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/desk_setting_gosetting_item_height"
+                    myAndroid:isHiddenBottomLine="true"
+                    myAndroid:titleText="@string/Dockshow" />
+            </LinearLayout>
+        </ScrollView>
+        <!-- 功能表设置 -->
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/desk_setting_view_padding"
+                android:paddingRight="@dimen/desk_setting_view_padding" >
+
+                <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingTitleView
+                    android:id="@+id/appfun_setting_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    myAndroid:titleText="@string/func_app_setting" />
+
+                <include layout="@layout/appfunc_setting_ui_include" />
+            </LinearLayout>
+        </ScrollView>
+    </com.jiubang.ggheart.apps.gowidget.gostore.views.ScrollerViewGroup>
+
+</LinearLayout>

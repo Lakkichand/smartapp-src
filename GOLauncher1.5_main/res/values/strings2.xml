@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    
+    <!-- LoadingDialog -->
+    <!-- downDialog -->
+    
+    
+   	<!-- Theme Store -->
+	<string name="themestore_total_result">Total %1$s items categories</string>
+	<string name="themestore_item_new_result">[ %1$s ]</string>
+    <string name="themestore_search_return_result">Search  “%1$s” result: %2$d items</string>
+    <string name="themestore_search_input">GO Store Search</string>
+    <string name="themestore_search_input_hint">Input, then click GO</string>
+    <string name="themestore_search_result">GO Search Result</string>
+    <string name="themestore_detail_introduction">Introduction</string>
+    <string name="themestore_detail_updatedcontent">What‘s new</string>
+    <string name="themestore_detail_basiccontent">Base Info</string>
+    <string name="themestore_detail_more">More</string>
+    <string name="themestore_detail_brief">Brief</string>
+    <string name="themestore_detail_developer">Developer:</string>
+    <string name="themestore_detail_pkgsize">Size:</string>
+    <string name="themestore_no_data">There is no data to display now.</string>
+    <string name="themestore_back_to_try">You can try to enter it again after return, to reload data.</string>
+    <string name="themestore_unknow">unknown</string>
+    <string name="themestore_url_empty">No url to operate!</string>
+    <string name="themestore_url_fail">Fail to download!</string>
+    <string name="themestore_search_input_empty">Search content can not be empty!</string>
+    <string name="themestore_mainview_update">Update</string>
+    <string name="themestore_download_count">Downloads:</string>
+    <string name="themestore_infor_no_data">No data</string>
+    <string name="themestore_load_data_exception">Loading Exception</string>
+    <string name="themestore_retry_load_data">Retry</string>
+    <!--GO精品默认名称-->
+    <string name="themestore_default_channel_name">GO Store</string>
+    <!--GO精品渠道名称，如果没有渠道，则跟默认默认渠道名称相同-->
+	<!-- <string name="themestore_channel_name">GFun Recommend</string> -->
+    <string name="themestore_channel_name">GO Store</string>
+    
+    <string name="gostore_detail_downloading">Downloading:</string>
+    <string name="gostore_detail_cancel_download">Downloading</string>
+    <string name="gostore_detail_install">Install</string>
+    <string name="gostore_detail_update">Update</string>
+    
+    <!-- 主题激活码验证 -->
+    <string name="theme_manager_activation_dialog_title">Attention</string>
+    <string name="theme_manager_activation_dialog_tip">Enter Code to unlock the theme:</string>
+    <string name="theme_manager_activation_dialog_check_failed">Verify Code is wrong, please enter again!</string>
+    <string name="theme_manager_activation_dialog_check_success">Success!Applying the theme.</string>
+    <string name="theme_manager_activation_dialog_get_code">Get Code Free</string>
+    <string name="theme_manager_activation_dialog_confirm">Confirm</string>
+    
+    <!-- 主题在黑名单之列 -->
+    <string name="theme_infringed_copyright">The theme infringed the copyright of the original designer, can not be applied. Please download the official theme.</string>
+    
+    <string name="message_center_nomsg">No unread messages.</string>        
+        
+    
+    <!-- 应用中心详情 -->    
+    <string name="app_detail_installed_open">Open</string>
+    <string name="app_detail_installed_uninstall">Uninstall</string>
+    <string name="app_detail_version_tip">Version:</string>
+    <string name="app_detail_user_also_install">Users Also Installed</string>
+    <string name="app_detail_security_title_tip">Safety certification</string>
+    <string name="app_detail_security_tip">Safety certification by GO Launcher</string>
+    <string name="app_detail_security_content">Has passed the safety inspection, no viruses, Trojans and other malicious programs, please rest assured that use</string>
+    <string name="app_detail_prompt">Prompt</string>
+    <string name="app_detail_more_similar_app">more similar apps</string>
+            
+    <!-- 下载管理 -->
+     <string name="download_manager_title">Download Manager</string>
+     <string name="download_manager_finish">Downloaded</string>
+     <string name="download_manager_failed">Failed</string>
+     <string name="download_manager_pause">Paused</string>
+     <string name="download_manager_wait">Waiting</string>
+     <string name="download_manager_continue">Resume</string>
+     <string name="download_manager_btn_delete">Delete</string>
+     <string name="download_manager_dialog_tips_left">We will delete </string>
+     <string name="download_manager_dialog_tips_right"> selected items</string>
+     <string name="download_manager_dialog_selected_text">Delete the download files</string>
+     <string name="download_manager_group_downloading_item">Downloading items</string>
+     <string name="download_manager_group_downloaded_item">Downloaded items</string>
+     <string name="download_manager_group_installed_item">Installed items</string>
+     <string name="download_manager_cannot_be_installed">The file isn\'t an APK file</string>
+     <string name="download_manager_no_selected_item">Please select items to delete!</string>
+     <string name="download_manager_get_more_apps">Press me,more apps!</string>
+     <string name="download_manager_delete_apk">Deleted Apk file From SD Card</string>
+     <string name="has_download">has already downloaded.</string>
+     <string name="installed_tap_to_start">Successfully installed,tap to start now</string>
+     <string name="download_state_paused">Paused</string>
+     
+     <string name="apps_mgr_listview_foot_net_error">Network error</string>
+     <string name="apps_mgr_listview_foot_retry">Retry</string>
+     <string name="download_manager_apk_not_found">Package not found,please download again!</string>
+     <!-- 游戏中心 -->
+     <string name="game_search_hint">Please enter keyword</string>
+     <string name="mgr_add_games">Add Games</string>
+     <string name="game_has_added">has existed</string>
+     <string name="game_center_exit_toast">Press again to exit GameZone</string>
+     <!-- 应用中心 -->
+     <string name="app_center_exit_toast">Press again to exit GO Market</string>
+     <string name="app_search_hint">Please enter keyword</string>
+     <string name="app_center_uncomplete_download_notification">uncompleted download</string>
+     <string name="app_center_uncomplete_download_text">Tap for detail</string>
+     <!-- 应用游戏中心菜单 -->
+     <string name="appgame_menu_item_refresh">Refresh</string>
+     <string name="appgame_menu_item_downloadmanager">Download Manager</string>
+     <string name="appgame_menu_item_setting">Setting</string>
+     <string name="appgame_menu_item_sort_app">Sort By</string>
+     <string name="appgame_menu_item_batch_uninstall">Batch Uninstall</string>
+     <string name="appgame_menu_item_feedback">Feedback</string>
+     
+     <string name="appgame_list_end_tip">No more apps</string>
+     
+     <!-- 网络错误邮箱反馈 -->
+     <string name="appgame_error_record_noemail">Mail client not found</string>
+     
+     <!-- 安全认证 -->
+     <string name="cloud_security_verification_title">GO Launcher cloud security</string>
+     <string name="cloud_security_verification_content">AppCenter/GameZone has been certified by GO Launcher cloud security,NO security risk be found, can be assured to download</string>    
+     <string name="cloud_security_verification_loading">loading...</string>
+         
+     <!-- 应用游戏中心设置 -->
+     <string name="traffic_saving_mode_mobile_network">Data saving in mobile network</string>
+     <string name="app_save_flow_remain_toast_tip">Data saving mode is turned on ,open the menu to change setting</string>
+     <string name="app_save_flow_remain_dialog_tip">Using mobile network currently,this may generate data expenses.Want to open \"Data saving mode\"?</string>
+     <string name="app_save_flow_remain_dialog_remember_this">Remember this choice</string>          
+     <string name="appgame_sd_card_tips">SD card not connected,continue to download?</string>
+     <string name="appgame_sd_card_cancel_text">The downloading has been canceled.</string>
+     <string name="appgame_sd_card_tag">1111</string>
+     <!-- 应用游戏中心启动loading页 -->
+     <string name="appgame_start_loading_descnum">700,000</string>
+     <string name="appgame_start_loading_desc">+ apps – We pick the best for you.</string>
+     <string name="appgame_start_loading_copyright">Copyright ©2004-2013 3G.cn</string>
+     <string name="appgame_start_loading_reserved">All Rights Reserved</string>
+     <!-- 搜索 -->
+     <string name="apps_management_search_loading">Loading...</string>
+     <string name="apps_management_search_more">More</string>
+     <string name="apps_management_search_word_null">Please input keyword!</string>
+     <string name="appgame_download">Download</string>
+     <string name="appgame_installed">Installed</string>
+     <string name="appgame_install">Install</string>
+     <string name="appgame_update">Update</string>
+     <string name="appgame_hot_search_keyword_headtip">Hot searches</string>
+     <string name="appgame_search_noresult">Sorry，no app was found</string>
+     <string name="appgame_loading_search_keyword">loading hot searches...</string>
+     <string name="appgame_clean_search_history">Clear search history</string>
+     <!-- 编辑推荐 样式-->
+     <string name="appgame_editor_favorite_enter">Enter</string>
+     <string name="appgame_version">Version:</string>
+     <!-- 一键装机 一键玩机 -->
+    <string name="recommended_yjzj">Apps kit</string>
+	<string name="recommended_yjwj">Games kit</string>
+	<string name="recommended_install">INSTALL</string>
+	<string name="recommended_install_all_app">Congratulation，All apps have been installed.</string>
+	<!-- 高级管理 -->
+	<string name="appcenter_advanced_management">Advanced</string>
+	<string name="appcenter_advanced_management_download">Download</string>
+	<string name="appcenter_advanced_management_makespace">Migrate</string>
+	<string name="appcenter_advanced_management_package">Package</string>
+	<string name="appcenter_advanced_management_orders">Order</string>
+	<!-- 安装包管理 -->
+	<string name="appcenter_package">Package</string>
+	<string name="appcenter_packages">Packages</string>
+	<string name="appcenter_package_uninstall">NOT INSTALLED</string>
+	<string name="appcenter_package_installed">INSTALLED</string>
+	<string name="appcenter_package_installed_new_version">(Old version)</string>
+	<string name="appcenter_package_scan">(Scanning...)</string>
+	<string name="appcenter_package_no_package_tip">No package found on SD card</string>
+	<!-- 下载通知栏 -->
+	<string name="appgame_notification_connect_text">is connecting</string>
+	<string name="appgame_notification_download_text">is downloading</string>
+	<string name="appgame_notification_pause_text">paused</string>
+	<string name="appgame_notification_fail_text">failed</string>
+	<string name="appgame_notification_complete_text">Finished,tap to install.</string>
+	<string name="appgame_notification_progress_text"> </string>
+	<!-- 下载通知栏ticker -->
+	<string name="appgame_notification_ticker_start_text">start download</string>
+	<string name="appgame_notification_ticker_stop_text">has been paused</string>
+	<string name="appgame_notification_ticker_fail_text">fail</string>
+	<string name="appgame_notification_ticker_complete_text">download completed</string>
+	<string name="appgame_notification_ticker_cancel_text">has been cancel</string>
+	<!-- 应用搬家 -->
+	<string name="appgame_migration_title">Migrate</string>
+	<string name="appgame_migration_to_phone">To Phone</string>
+	<string name="appgame_migration_to_sdcard">To SD Card</string>
+	<string name="appgame_migration_tab_sdcard">SD Card</string>
+	<string name="appgame_migration_tab_phone">Phone</string>
+	<string name="appgame_migration_tab_no_move">Unmovable</string> 
+	<string name="appgame_migration_no_application_on_sdcard">No apps installed on SD card</string>
+	<string name="appgame_migration_no_application_on_phone">No apps installed on phone</string>
+	<string name="appgame_migration_no_application_unmovable">No unmovable apps</string>
+	<!-- 付费推广应用安装成功弹出对话框提示打开 -->
+	<string name="appgame_recommend_app_dialog_title">Attention</string>
+	<string name="appgame_recommend_app_dialog_message_partone">You have installed the </string>
+	<string name="appgame_recommend_app_dialog_message_parttwo"> app, click the button below to active.</string>
+	<string name="appgame_recommend_app_dialog_active">Active</string>
+</resources>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/app_migration_left_relativelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="69.33333dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/app_migration_right_relativelayout"
+        android:paddingRight="18.66667dp" 
+        android:background="@drawable/recomm_app_list_item_selector">
+
+        <!-- <ImageView
+            android:id="@+id/app_migration_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6.666dp"
+            android:scaleType="fitXY" /> -->
+        <ImageSwitcher
+            android:id="@+id/app_migration_switcher"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6.666dp"
+            android:inAnimation="@anim/appgame_fade_in"
+            android:outAnimation="@anim/appgame_fade_out" >
+
+            <ImageView
+                android:id="@+id/app_migration_icon"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/app_migration_another_icon"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY" />
+        </ImageSwitcher>
+
+        <TextView
+            android:id="@+id/app_migration_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/app_migration_switcher"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/app_migration_switcher"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#FF393939"
+            android:textSize="15.5dp" />
+
+        <TextView
+            android:id="@+id/app_migration_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/app_migration_switcher"
+            android:layout_alignLeft="@+id/app_migration_name"
+            android:layout_marginBottom="5dp"
+            android:singleLine="true"
+            android:textColor="#FF909090"
+            android:textSize="12.5dp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/app_migration_right_relativelayout"
+        android:layout_width="69.33333dp"
+        android:layout_height="69.33333dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/recomm_app_list_item_selector" >
+
+        <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/app_migration_right_relativelayout"
+        android:src="@drawable/appsmanagement_line_right" />
+        
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <ImageView
+                android:id="@+id/app_migration_button"
+                android:layout_width="34.6666667dp"
+                android:layout_height="34.6666667dp"
+                android:layout_centerHorizontal="true">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/app_migration_button_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/app_migration_button"
+                android:layout_centerHorizontal="true"
+                android:maxLines="2"
+                android:text=""
+                android:textColor="#FF909090"
+                android:textSize="10dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

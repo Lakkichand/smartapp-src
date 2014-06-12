@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.desks.diy.frames.screeneditbox.ScreenEditLargeTabView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ggheart="http://schemas.android.com/apk/res/com.gau.go.launcherex"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/screen_edit_tab_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/main_large_tabs"
+        android:layout_width="fill_parent"
+        android:layout_height="29dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/screen_edit_tab_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        
+		<LinearLayout
+            android:id="@+id/tabs_back_large"
+            android:layout_width="180dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|left"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/tabs_back_img_large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/screen_edit_tab_top_back" />
+
+            <ImageView
+                android:id="@+id/tabs_back_icon_large"
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_marginLeft="5dip" />
+
+            <com.jiubang.ggheart.components.DeskTextView
+                android:id="@+id/tabs_back_text_large"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dip"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="#D2D3D3"
+                android:textSize="16sp" />
+        </LinearLayout>
+        
+		
+        <LinearLayout
+            android:id="@+id/tabs_back_gowidget"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/tabs_gowidget_skin"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="20dip"
+                android:background="@drawable/screenedit_widget_skin_select"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/tabs_gowidget_info"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="12dip"
+                android:background="@drawable/screenedit_widget_info_select" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tab_lines"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_large_tabs" >
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <com.jiubang.ggheart.components.GoProgressBar
+            android:id="@+id/edit_tab_progress"
+            android:layout_width="fill_parent"
+            android:layout_height="176dip"
+            android:gravity="center"
+            android:visibility="invisible"
+            ggheart:prossbar_color_selete="1" >
+
+            <ProgressBar
+                android:id="@+id/go_progressbar"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:visibility="visible" />
+        </com.jiubang.ggheart.components.GoProgressBar>
+
+        <com.jiubang.ggheart.apps.desks.diy.frames.screeneditbox.ScreenEditBoxContainerForApps
+            android:id="@+id/container_apps"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" />
+
+        <com.jiubang.ggheart.apps.desks.diy.frames.screeneditbox.ScreenEditBoxContainerForGoWidgets
+            android:id="@+id/container_gowidgets"
+            android:layout_width="fill_parent"
+            android:layout_height="176dip"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/indicator_layout_large"
+        android:layout_width="fill_parent"
+        android:layout_height="20dip"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="0dip"
+        android:gravity="bottom"
+        android:visibility="invisible" >
+
+        <com.jiubang.ggheart.apps.desks.diy.frames.screen.DesktopIndicator
+            android:id="@+id/edit_indicator_large"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</com.jiubang.ggheart.apps.desks.diy.frames.screeneditbox.ScreenEditLargeTabView>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:gravity="center_vertical"
+    android:paddingRight="?android:attr/scrollbarSize">
+    <ScrollView 
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:fillViewport="true"
+    	android:scrollbars="none"
+    >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="26dip"
+        android:layout_marginTop="@dimen/appfunc_custom_grid_dialog_margine_top"
+        android:layout_marginBottom="6dip"
+        android:layout_weight="1">
+        <!--  第一个滑动条 -->
+        <com.jiubang.ggheart.components.DeskTextView android:id="@+android:id/rowActualValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@android:id/title"
+            android:layout_alignLeft="@android:id/title"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:maxLines="2" />
+		<SeekBar android:id="@+android:id/mRowBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="14dip"
+            android:layout_below="@android:id/rowActualValue"
+            android:layout_alignLeft="@android:id/rowActualValue" />
+            
+         <!--  第二个滑动条 -->
+        <com.jiubang.ggheart.components.DeskTextView android:id="@+android:id/columnActualValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@android:id/mRowBar"
+            android:layout_marginTop="@dimen/appfunc_custom_grid_dialog_seek_bar_margine"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:maxLines="2" />
+		<SeekBar android:id="@+android:id/mColumnBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="14dip"
+            android:layout_below="@android:id/columnActualValue"
+            android:layout_alignLeft="@android:id/columnActualValue" />
+    </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

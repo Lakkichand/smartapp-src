@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.gowidget.gostore.component.ThemeTabsBar
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:background="#00000000"
+  android:orientation="horizontal"
+  android:gravity="center_vertical|center_horizontal"
+  >
+  
+</com.jiubang.ggheart.apps.gowidget.gostore.component.ThemeTabsBar>

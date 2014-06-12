@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+  android:paddingLeft="20dip"
+  android:paddingRight="20dip"
+  android:paddingTop="20dip"
+  android:background="#ffffffff">
+  <com.jiubang.ggheart.components.DeskTextView
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:textSize="12sp"
+  	android:text="@string/font_scan_package"
+  	android:textColor="#ff000000"/>
+  <com.jiubang.ggheart.components.DeskTextView
+  	android:id="@+id/scan_folder" 
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:singleLine="true"
+  	android:ellipsize="middle"
+  	android:textSize="12sp"
+  	android:layout_marginBottom="20dip"
+  	android:textColor="#ff000000"/>
+  <com.jiubang.ggheart.components.DeskTextView 
+  	android:id="@+id/scan_result"
+  	android:layout_width="fill_parent"
+  	android:layout_height="wrap_content"
+  	android:textSize="12sp"
+  	android:layout_marginBottom="20dip"
+  	android:textColor="#ff000000"/>
+</LinearLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/bottom_imgs"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/gostore_theme_detail_thumdails_backrepeat"
+        android:visibility="gone" >
+
+        <com.jiubang.ggheart.appgame.gostore.base.component.GoStoreDetailHorizontalScrollView
+            android:id="@+id/bottom_thumbnails_scrollview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/gostore_theme_detail_thumbnails_bg"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/bottom_thumbnails_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent" >
+            </LinearLayout>
+        </com.jiubang.ggheart.appgame.gostore.base.component.GoStoreDetailHorizontalScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_imgs"
+        android:layout_alignParentTop="true"
+        android:baselineAligned="false"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/gallery_mark_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/indicator_hight_noneicons"
+            android:layout_alignParentTop="true" >
+
+            <com.jiubang.ggheart.apps.gowidget.gostore.component.GoStoreIndicators
+                android:id="@+id/gallery_mark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/buttons_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center" >
+
+            <RelativeLayout
+                android:id="@+id/gostore_theme_detail_button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_layout_hight_noneicons" >
+
+                <LinearLayout
+                    android:id="@+id/gostore_theme_detail_button_big"
+                    android:layout_width="216.67dp"
+                    android:layout_height="@dimen/button_hight_noneicons"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:background="@drawable/appgame_download_btn_selector" >
+                    <ImageView 
+                        android:id="@+id/gostore_theme_detail_button_big_img"	
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/gostore_theme_detail_button_big_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="17.33dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/gostore_theme_detail_download_progress"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_layout_hight_noneicons"
+                android:visibility="gone" >
+
+                <FrameLayout
+                    android:id="@+id/gostore_theme_detail_bar_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" >
+
+                    <ProgressBar
+                        android:id="@+id/gostore_theme_detail_progressbar"
+                        style="@style/DownloadProgressBarStyle"
+                        android:layout_width="206.67dp"
+                        android:layout_height="@dimen/button_hight_noneicons"
+                        android:max="100" />
+
+                    <TextView
+                        android:id="@+id/gostore_theme_detail_progresstext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="#404040"
+                        android:textSize="17.33dp" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/app_detail_download_pause_or_resume_click"
+                    android:layout_width="37.33dp"
+                    android:layout_height="@dimen/button_hight_noneicons"
+                    android:layout_alignTop="@id/gostore_theme_detail_bar_layout"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/gostore_theme_detail_bar_layout"
+                    android:background="@drawable/app_detail_download_cancel_selector_new"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:id="@+id/app_detail_download_pause_or_resume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/detail_download_pause_new" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/app_detail_download_cancel_click"
+                    android:layout_width="37.33dp"
+                    android:layout_height="@dimen/button_hight_noneicons"
+                    android:layout_alignTop="@id/gostore_theme_detail_bar_layout"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/gostore_theme_detail_bar_layout"
+                    android:background="@drawable/app_detail_download_cancel_selector_new"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:id="@+id/app_detail_download_cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/app_detail_download_cancel_new" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/buttons_layout"
+            android:layout_below="@id/gallery_mark_layout" >
+
+            <com.jiubang.ggheart.apps.gowidget.gostore.component.GoStoreDetailScrollViewGroup
+                android:id="@+id/gostore_theme_detail_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

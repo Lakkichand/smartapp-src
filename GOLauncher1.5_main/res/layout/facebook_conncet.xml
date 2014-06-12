@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myAndroid="http://schemas.android.com/apk/res/com.gau.go.launcherex"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingPageTitleView
+        android:id="@+id/main_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        myAndroid:titleText="@string/facebook_con_title" />
+
+    <ImageView
+        android:id="@+id/picview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dip"
+        android:background="@drawable/facebook_con_pic" />
+
+    <com.jiubang.ggheart.components.DeskTextView
+        android:id="@+id/explain_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="21.33dip"
+        android:layout_marginRight="21.33dip"
+        android:layout_marginTop="12dip"
+        android:gravity="center_horizontal"
+        android:text="@string/facebook_con_explain"
+        android:textColor="#002E7E"
+        android:textSize="13.33sp" />
+
+    <Button
+        android:id="@+id/addLineBt"
+        android:layout_width="220dip"
+        android:layout_height="43dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="21.33dip"
+        android:background="@drawable/facebook_addline_bt_selector"
+        android:text="@string/facebook_con_button"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <com.jiubang.ggheart.components.DeskTextView
+        android:id="@+id/point_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="24dip"
+        android:layout_marginRight="24dip"
+        android:layout_marginTop="26.67dip"
+        android:gravity="center_horizontal"
+        android:text="@string/facebook_con_point"
+        android:textColor="#818181"
+        android:textSize="12sp" />
+
+</LinearLayout>

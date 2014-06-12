@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.gowidget.gostore.component.ThemeStoreProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <ProgressBar
+        android:id="@+id/themestore_btmprogress"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="6dp"
+        android:visibility="visible" />
+
+</com.jiubang.ggheart.apps.gowidget.gostore.component.ThemeStoreProgressBar>

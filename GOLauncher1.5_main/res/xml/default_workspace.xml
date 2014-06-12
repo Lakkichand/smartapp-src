@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 
+!!!注意：
+1)validArea与invalidArea规则说明：
+	-1代表全地区，
+	多个地区用","分隔，
+	地区码可以不全，前几个数字亦可匹配
+	
+2)如果是内置的widget，需要添加 launcher:prototype字段，
+	该字段的取值范围定制在attrs.xml的prototype内，并与
+	GoWidgetBaseInfo的mPrototype对应
+-->
+
+<!--widget对应的下载链接移动到res/xml/address.xml中  -->
+	
+<favorites xmlns:launcher="http://schemas.android.com/apk/res/com.gau.go.launcherex">
+    <!-- 任务管理器 4x1-->
+    <!-- <gowidget
+        launcher:widgetid="-101"
+        launcher:packageName="com.gau.go.launcherex"
+        launcher:validArea="{-1}"
+        launcher:invalidArea="{}"
+        launcher:className="com.gau.go.launcherex.gowidget.taskmanager.SettingsActivity"
+        launcher:type="1" 
+        launcher:layout="task_running_4_1"
+        launcher:screen="2"
+        launcher:x="0"
+        launcher:y="1"
+        launcher:spanX="4"
+        launcher:spanY="1"
+        launcher:preview="@drawable/favorite_task"
+        launcher:title="@string/task_killer"
+        launcher:prototype="taskman"
+    /> -->
+    
+    <!-- 短信 4x4 --><!-- 
+    <gowidget
+    	launcher:widgetid="-102"
+        launcher:packageName="com.gau.go.launcherex.gowidget.smswidget"
+        launcher:validArea="{460}"
+        launcher:invalidArea="{}"
+        launcher:className=""
+        launcher:type="1"
+        launcher:layout="sms_4_4"
+        launcher:screen="1"
+        launcher:x="0"
+        launcher:y="0"
+        launcher:spanX="4" 
+        launcher:spanY="4" 
+        launcher:preview="@drawable/favorite_sms"
+		launcher:title="@string/sms"
+    />
+    -->
+    
+    <!-- facebook 4x4 
+    <gowidget
+    	launcher:widgetid="-103"
+        launcher:packageName="com.gau.go.launcherex.gowidget.fbwidget"
+        launcher:validArea="{-1}"
+        launcher:invalidArea="{460}"
+        launcher:className="com.gau.go.launcherex.gowidget.fbwidget.FaceBookChooserActivity"
+        launcher:type="0"
+        launcher:layout="facebook_4_4"
+        launcher:screen="1"
+        launcher:x="0"
+        launcher:y="0"
+        launcher:spanX="4" 
+        launcher:spanY="4" 
+        launcher:preview="@drawable/favorite_facebook"
+        launcher:title="@string/facebook"
+    />
+    -->
+    
+<!-- 时钟 4x2 -->
+    <!-- <gowidget
+    	launcher:widgetid="-104"
+        launcher:packageName="com.gau.go.launcherex.gowidget.clockwidget"
+        launcher:validArea="{460}"
+        launcher:invalidArea="{}"
+        launcher:className=""
+        launcher:type="1"
+        launcher:layout="digital_main"
+        launcher:screen="1"
+        launcher:x="0"
+        launcher:y="0"
+        launcher:spanX="4" 
+        launcher:spanY="2" 
+        launcher:preview="@drawable/favorite_clock"
+		launcher:title="@string/clock"
+		launcher:theme="com.gau.go.launcherex.gowidget.clockwidget"
+		launcher:themeId="1"
+    /> -->
+
+<!-- 便签2x2 -->
+    <!-- <gowidget
+    	launcher:widgetid="-108"
+        launcher:packageName="com.gau.go.launcherex.gowidget.notewidget"
+        launcher:validArea="{-1}"
+        launcher:invalidArea="{460}"
+        launcher:className=""
+        launcher:type="1"
+        launcher:layout="note_2_2_layout"
+        launcher:screen="3"
+        launcher:x="0"
+        launcher:y="1"
+        launcher:spanX="2" 
+        launcher:spanY="2" 
+        launcher:preview="@drawable/favorite_note"
+		launcher:title="@string/note"
+    /> -->
+    
+<!-- twitter 4x4 -->
+   <!-- <gowidget
+    	launcher:widgetid="-106"
+        launcher:packageName="com.gau.go.launcherex.gowidget.twitterwidget"
+        launcher:validArea="{-1}"
+        launcher:invalidArea="{460}"
+        launcher:className="com.gau.go.launcherex.gowidget.twitterwidget.TwitterChooserActivity"
+        launcher:type="0"
+        launcher:layout="twitter_4_4"
+        launcher:screen="1"
+        launcher:x="0"
+        launcher:y="0"
+        launcher:spanX="4" 
+        launcher:spanY="4" 
+        launcher:preview="@drawable/favorite_twitter"
+		launcher:title="@string/twitter"
+    /> -->
+
+<!-- 联系人 4x4 
+    <gowidget
+    	launcher:widgetid="-103"
+        launcher:packageName="com.gau.go.launcherex.gowidget.contactwidget"
+        launcher:className=""
+        launcher:type="1"
+        launcher:layout="main"
+        launcher:screen="3"
+        launcher:x="0"
+        launcher:y="0"
+        launcher:spanX="4" 
+        launcher:spanY="4" 
+        launcher:preview="@drawable/widget_downoad"
+   		launcher:title="@string/contact"
+    />
+    -->
+       
+<!-- GOStore Widget -->
+    <!-- <gowidget
+    	launcher:widgetid="-105"
+        launcher:packageName="com.gau.go.launcherex"
+        launcher:validArea="{460}"
+        launcher:invalidArea="{}"
+        launcher:className=""
+        launcher:type="0" 
+        launcher:layout="gostorewidget"
+        launcher:screen="3"
+        launcher:x="0"
+        launcher:y="1"
+        launcher:spanX="4"
+        launcher:spanY="3"
+        launcher:title="@string/go_store"
+        launcher:prototype="gostore"
+    />  -->
+    
+<!-- 开关4x1 -->
+     <gowidget
+    	launcher:widgetid="-109"
+        launcher:packageName="com.gau.go.launcherex.gowidget.switchwidget"
+        launcher:validArea="{-1}"
+        launcher:invalidArea="{}"
+        launcher:className=""
+        launcher:type="0" 
+        launcher:layout="main"
+        launcher:screen="1"
+        launcher:x="0"
+        launcher:y="0"
+        launcher:spanX="4"
+        launcher:spanY="1"
+        launcher:preview="@drawable/favorite_switch"
+        launcher:title="@string/onoff"
+    />
+    
+    <!-- 新浪微博4x4 -->
+    <!-- <gowidget
+    	launcher:widgetid="-110"
+        launcher:packageName="com.gau.go.launcherex.gowidget.weibowidget"
+        launcher:validArea="{460}"
+        launcher:invalidArea="{}"
+        launcher:className="com.gau.go.launcherex.gowidget.weibowidget.WeiboChooserActivity"
+        launcher:type="0" 
+        launcher:layout="weibo_4_4"
+        launcher:screen="1"
+        launcher:x="0"
+        launcher:y="0"
+        launcher:spanX="4"
+        launcher:spanY="4"
+        launcher:preview="@drawable/favorite_sinaweibo"
+        launcher:title="@string/sinaweibo"
+    /> -->   
+    
+    <!-- email 4x4 -->
+    <!-- <gowidget
+    	launcher:widgetid="-111"
+        launcher:packageName="com.gau.go.launcherex.gowidget.emailwidget"
+        launcher:validArea="{-1}"
+        launcher:invalidArea="{460}"
+        launcher:className="com.gau.go.launcherex.gowidget.emailwidget.SettingActivity"
+        launcher:type="0"
+        launcher:layout="email_4_4"
+        launcher:screen="1"
+        launcher:x="0"
+        launcher:y="0"
+        launcher:spanX="4" 
+        launcher:spanY="4" 
+        launcher:preview="@drawable/favorite_email"
+		launcher:title="@string/email"
+    /> -->
+    
+    <!-- 省电 4x1 -->
+    <gowidget
+    	launcher:widgetid="-112"
+        launcher:packageName="com.gau.go.launcherex.gowidget.gopowermaster"
+        launcher:validArea="{-1}"
+        launcher:type="0"
+        launcher:layout="gowidget_41_new"
+        launcher:screen="3"
+        launcher:x="0"
+        launcher:y="0"
+        launcher:spanX="4" 
+        launcher:spanY="1" 
+        launcher:preview="@drawable/favorite_powermaster"
+		launcher:title="@string/powermaster"
+    />
+    
+    <!-- GOStore Widget4x1 
+    <gowidget
+    	launcher:widgetid="-113"
+        launcher:packageName="com.gau.go.launcherex"
+        launcher:validArea="{-1}"
+        launcher:invalidArea="{}"
+        launcher:className=""
+        launcher:type="1" 
+        launcher:layout="gostore41widget"
+        launcher:screen="3"
+        launcher:x="0"
+        launcher:y="1"
+        launcher:spanX="4"
+        launcher:spanY="1"
+        launcher:title="@string/go_store"
+        launcher:prototype="gostore"
+    /> 
+    -->
+    
+      <!-- appcenter Widget4x1 -->
+    <gowidget
+    	launcher:widgetid="-118"
+        launcher:packageName="com.gau.go.launcherex"
+        launcher:validArea="{-1}"
+        launcher:invalidArea="{}"
+        launcher:className=""
+        launcher:type="1" 
+        launcher:layout="appgamewidget41"
+        launcher:screen="3"
+        launcher:x="0"
+        launcher:y="1"
+        launcher:spanX="4"
+        launcher:spanY="1"
+        launcher:title="@string/appcenter_title"
+        launcher:prototype="appgame"
+    />
+    
+    <!-- GO天气 4x1 -->
+    <gowidget
+    	launcher:widgetid="-114"
+        launcher:packageName="com.gau.go.launcherex.gowidget.weatherwidget"
+        launcher:className="com.gau.go.launcherex.gowidget.weather.view.Setting41Activity"
+        launcher:validArea="{-1}"
+        launcher:type="1"
+        launcher:layout="weather_4_1"
+        launcher:screen="2"
+        launcher:x="0"
+        launcher:y="0"
+        launcher:spanX="4" 
+        launcher:spanY="1" 
+        launcher:preview="@drawable/favorite_weather"
+		launcher:title="@string/weather"
+    />
+    
+    <!-- 任务管理器 4x1(新)-->
+   <!--  <gowidget
+        launcher:widgetid="-115"
+        launcher:packageName="com.gau.go.launcherex.gowidget.taskmanager"
+        launcher:validArea="{-1}"
+        launcher:invalidArea="{}"
+        launcher:type="3" 
+        launcher:layout="task_running_style_4_1"
+        launcher:screen="2"
+        launcher:x="0"
+        launcher:y="1"
+        launcher:spanX="4"
+        launcher:spanY="1"
+        launcher:preview="@drawable/favorite_task_new"
+        launcher:title="@string/task_killer"
+        launcher:prototype="taskman"
+    /> -->
+    
+    <!-- GOSMS 4x1 -->
+<!--     <gowidget
+    	launcher:widgetid="-116"
+        launcher:packageName="com.jb.gosms"
+        launcher:className="com.jb.gosms.golauex.smswidget.SmsSettingActivity"
+        launcher:validArea="{-1}"
+        launcher:type="4"
+        launcher:layout="sms_4_1"
+        launcher:screen="1"
+        launcher:x="0"
+        launcher:y="1"
+        launcher:spanX="4" 
+        launcher:spanY="1" 
+        launcher:preview="@drawable/favorite_gosms"
+		launcher:title="@string/gosms"
+    /> -->
+    
+    <!-- GOSMS 4x1 new-->
+    <gowidget
+    	launcher:widgetid="-116"
+        launcher:packageName="com.jb.gosms"
+        launcher:validArea="{-1}"
+        launcher:type="5"
+        launcher:layout="sms_icon_widget"
+        launcher:screen="1"
+        launcher:x="0"
+        launcher:y="1"
+        launcher:spanX="4" 
+        launcher:spanY="1" 
+        launcher:preview="@drawable/favorite_gosms_new"
+		launcher:title="@string/gosms"
+    />
+    
+    <!-- 任务管理器 4x1(新)-->
+    <gowidget
+        launcher:widgetid="-117"
+        launcher:packageName="com.gau.go.launcherex.gowidget.taskmanagerex"
+        launcher:validArea="{-1}"
+        launcher:invalidArea="{}"
+        launcher:type="3" 
+        launcher:layout="task_running_style_4_1"
+        launcher:screen="2"
+        launcher:x="0"
+        launcher:y="1"
+        launcher:spanX="4"
+        launcher:spanY="1"
+        launcher:preview="@drawable/favorite_task_new"
+        launcher:title="@string/task_killer"
+    />
+    
+    <!-- 搜索widget -->
+    <!-- <gowidget
+        launcher:widgetid="-119"
+        launcher:packageName="com.gau.go.launcherex.gowidget.gosearchwidget"
+        launcher:className="com.gau.go.launcherex.gowidget.gosearchwidget.activity.SettingActivity"
+        launcher:validArea="{460}"
+        launcher:invalidArea="{}"
+        launcher:type="0"
+        launcher:layout="search_4_1"
+        launcher:screen="3"
+        launcher:x="0"
+        launcher:y="1"
+        launcher:spanX="4"
+        launcher:spanY="1"
+        launcher:preview="@drawable/favorite_search"
+        launcher:title="@string/search"
+    /> -->
+    
+</favorites>

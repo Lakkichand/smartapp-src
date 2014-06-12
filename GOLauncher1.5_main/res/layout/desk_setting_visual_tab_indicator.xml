@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:myAndroid="http://schemas.android.com/apk/res/com.gau.go.launcherex"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+	<com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingVisualIndicatorTabView
+		android:id="@+id/indicator" xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:myAndroid="http://schemas.android.com/apk/res/com.gau.go.launcherex"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:paddingLeft="@dimen/desk_setting_view_padding"
+		android:paddingRight="@dimen/desk_setting_view_padding"
+		android:background="@color/desk_setting_bg_color">
+
+		<com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemListView
+			android:id="@+id/mode" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" myAndroid:titleText="@string/screen_indicator_showmode"
+			myAndroid:dialogTitle="@string/screen_indicator_showmode"
+			myAndroid:listEntryValues="@array/screen_indicator_showmode_values"
+			myAndroid:listEntries="@array/screen_indicator_showmode_array"
+			myAndroid:dialogType="SINGLE_CHOICE" />
+
+		<com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemListView
+			android:id="@+id/position" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" myAndroid:titleText="@string/screen_indicator_position"
+			myAndroid:dialogTitle="@string/screen_indicator_position"
+			myAndroid:listEntryValues="@array/screen_indicator_position_values"
+			myAndroid:listEntries="@array/screen_indicator_position_array"
+			myAndroid:dialogType="SINGLE_CHOICE" />
+
+		<com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemListView
+			android:id="@+id/screen_indicator" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" myAndroid:titleText="@string/screen_indicator"
+			myAndroid:isHiddenBottomLine="true" myAndroid:dialogTitle="@string/screen_indicator"
+			myAndroid:listEntryValues="@array/screen_indicator_values"
+			myAndroid:listEntries="@array/screen_indicator_array"
+			myAndroid:dialogType="SINGLE_CHOICE" />
+
+	</com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingVisualIndicatorTabView>
+</ScrollView>

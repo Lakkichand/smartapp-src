@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:paddingTop="40dp"
+  >
+  <ImageView
+    android:id="@+id/noDataImageViewFull"
+  	android:layout_width="wrap_content"
+  	android:layout_height="wrap_content"
+  	android:background="@drawable/themestore_nodata_all"
+  	android:layout_alignParentTop="true"
+  	android:layout_centerHorizontal="true"
+  />
+  <com.jiubang.ggheart.components.DeskTextView
+    android:id="@+id/noDataTextViewFullOne"
+  	android:layout_width="wrap_content"
+  	android:layout_height="wrap_content"
+  	android:paddingTop="30dp"
+  	android:layout_below="@id/noDataImageViewFull"
+  	android:layout_centerHorizontal="true"
+  	android:textColor="#676767"
+  	android:textSize="16sp"
+  	android:text="@string/themestore_no_data"
+  	android:gravity="center_horizontal"
+  />
+  <com.jiubang.ggheart.components.DeskTextView
+    android:id="@+id/noDataTextViewFullTwo"
+  	android:layout_width="wrap_content"
+  	android:layout_height="wrap_content"
+  	android:layout_below="@id/noDataTextViewFullOne"
+  	android:layout_centerHorizontal="true"
+  	android:textColor="#676767"
+  	android:textSize="13sp"
+  	android:text="@string/themestore_back_to_try"
+  	android:gravity="center_horizontal"
+  />
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/desk_setting_title_topbar"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/desk_setting_pagetitle_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/back_layout"
+            android:layout_width="@dimen/desk_setting_page_title_image_width"
+            android:layout_height="fill_parent"
+            android:background="@drawable/change_icon_tab_selector"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/title_image"
+                android:layout_width="wrap_content"
+                android:layout_height="32dip"
+                android:src="@drawable/theme_detail_back" />
+        </LinearLayout>
+
+        <com.jiubang.ggheart.components.DeskTextView
+            android:id="@+id/title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/desk_setting_pagetitle_font_size" />
+    </LinearLayout>
+
+    <ImageView
+    	android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/desk_setting_pagetitle_line_height"
+        android:background="@drawable/desk_setting_gree_line" />
+
+</LinearLayout>

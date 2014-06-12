@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.gowidget.gostore.views.ThemesListItem xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    >
+
+    <com.jiubang.ggheart.apps.gowidget.gostore.component.SimpleImageView
+        android:id="@+id/itemIconImageView"
+        android:layout_width="53dip"
+        android:layout_height="53dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:padding="3dip" />
+
+        <RelativeLayout
+        android:id="@+id/ControlRelativeLayout"
+        android:layout_width="84dp"
+        android:layout_height="59.4dip"
+        android:layout_alignParentRight="true" >
+
+
+        <ImageView
+            android:id="@+id/item_line"
+            android:layout_width="wrap_content"
+            android:layout_height="34.32dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/gostore_item_line_v" />
+        
+        <ImageView
+            android:id="@+id/priceIconView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/item_line"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="11dip"
+            android:background="@drawable/gostore_price_download" />
+        
+        <TextView
+            android:id="@+id/priceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/priceIconView"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:layout_marginLeft="6dip"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/itemHotNewImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" />
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/ControlRelativeLayout"
+        android:layout_toRightOf="@id/itemIconImageView"
+        android:layout_centerVertical="true"
+        android:paddingBottom="2dip"
+        android:paddingTop="2dip" 
+        android:paddingRight="5dip">
+
+        <TextView
+            android:id="@+id/itemNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            />
+		<RelativeLayout
+		    android:id="@+id/detail"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@id/itemNameTextView"
+            android:layout_below="@id/itemNameTextView"
+            >
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="#404040"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/installPackageSizeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/itemNameTextView"
+            android:layout_below="@id/descriptionTextView"
+            android:singleLine="true"
+            android:textColor="#404040"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/verTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descriptionTextView"
+            android:layout_marginLeft="13.33dp"
+            android:layout_toRightOf="@id/installPackageSizeTextView"
+            android:singleLine="true"
+            android:textColor="#404040"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/updateTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/descriptionTextView"
+            android:layout_below="@id/descriptionTextView"
+            android:singleLine="true"
+            android:textColor="#626262"
+            android:textSize="10sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/downloadCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/itemNameTextView"
+            android:layout_below="@id/updateTimeTextView"
+            android:singleLine="true"
+            android:textColor="#626262"
+            android:textSize="10sp"
+            android:visibility="visible" />
+        </RelativeLayout>
+          <!-- 下载进度条 -->
+		<LinearLayout 
+		    android:id="@+id/download_progress_layout"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		     android:layout_alignLeft="@id/itemNameTextView"
+            android:layout_below="@id/itemNameTextView"
+		    android:orientation="vertical"
+		    android:visibility="gone"
+		    >
+		    
+<!-- 		    <TextView  -->
+<!-- 		        android:id="@+id/list_download_text" -->
+<!-- 		        android:layout_width="wrap_content" -->
+<!-- 		        android:layout_height="wrap_content" -->
+<!-- 		        android:text="@string/gostore_detail_downloading" -->
+<!-- 		        android:layout_gravity="left|center_vertical" -->
+<!-- 		        android:layout_weight="1" -->
+<!-- 		        android:textColor="#626262" -->
+<!-- 		        android:textSize="10sp" -->
+<!-- 		        android:singleLine="true"/> -->
+		    <TextView 
+		        android:id="@+id/list_download_percent"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="left"
+		        android:textColor="#626262"
+		        android:textSize="10sp"
+		        android:singleLine="true"/>
+		    
+		    <ProgressBar
+		        android:id="@+id/list_download_progress"
+		        android:layout_width="@dimen/gosotre_download_progressbar_length"
+		        android:layout_height="2.01dp"
+		        style="@style/ProgressBarStyle"
+		        android:layout_gravity="center_vertical"
+		        android:max="100"/>
+		    
+		    
+		</LinearLayout>
+    </RelativeLayout>
+
+</com.jiubang.ggheart.apps.gowidget.gostore.views.ThemesListItem>

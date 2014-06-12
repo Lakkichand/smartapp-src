@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.jiubang.ggheart.apps.desks.diy.frames.screen.LiveFolder xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+        
+    <com.jiubang.ggheart.components.DeskButton
+        android:id="@+id/folder_close"
+   		android:background="@drawable/box_launcher_top"
+        android:gravity="left|center_vertical"
+        android:textSize="14sp"
+        android:textColor="#404040"
+        android:textStyle="bold"
+        android:layout_width="fill_parent"
+    	android:layout_height="wrap_content" />
+
+    <GridView
+        android:id="@id/folder_content"
+        android:layout_width="fill_parent"
+    	android:layout_height="0dip"
+    	android:layout_weight="1"
+
+        android:cacheColorHint="#00000000"
+        android:background="@drawable/box_launcher_bottom"
+
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarStyle="insideInset"
+        android:drawSelectorOnTop="false"
+        android:listSelector="@drawable/grid_selector"
+
+        android:verticalSpacing="10dip"
+        android:numColumns="4" />
+
+</com.jiubang.ggheart.apps.desks.diy.frames.screen.LiveFolder>

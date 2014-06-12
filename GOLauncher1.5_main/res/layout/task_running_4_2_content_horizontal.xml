@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:padding="3dp" android:orientation="horizontal">
+
+	<FrameLayout android:id="@+id/icons_layout"
+		  android:layout_width="0dp"  
+		android:layout_height="wrap_content" android:layout_weight="75">
+
+		<ViewFlipper android:layout_height="fill_parent" 
+			android:gravity="center" android:id="@+id/icon_flipper"
+			android:layout_gravity="center" android:layout_width="fill_parent"></ViewFlipper>
+	</FrameLayout>
+
+	<LinearLayout android:layout_width="0dp"
+		android:paddingLeft="8dp" android:paddingRight="4dp" 
+		android:layout_height="fill_parent" android:layout_weight="25"
+		android:orientation="vertical">
+
+		<ImageView android:layout_height="0dp" android:layout_width="fill_parent"
+			android:id="@+id/progress_bar" android:scaleType="fitCenter" 
+			android:layout_weight="32"></ImageView>
+
+		<com.jiubang.ggheart.components.DeskTextView
+			android:id="@+id/text" android:paddingRight="6dp" android:gravity="right|top"
+			android:textSize="12sp" android:textColor="#000000" 
+			android:layout_width="fill_parent" android:layout_height="0dp"
+			android:layout_weight="22" />
+
+		<LinearLayout android:layout_width="fill_parent"  
+			android:layout_weight="46" android:layout_height="0dp"
+			android:orientation="horizontal">
+
+			<ImageButton android:layout_height="fill_parent" android:layout_weight="1"
+				android:background="#00000000" android:scaleType="fitCenter"
+			  android:layout_width="0dp" android:id="@+id/kill"></ImageButton>
+
+			<ImageButton android:layout_height="fill_parent" android:layout_weight="1"
+				android:background="#00000000" android:id="@+id/refresh" 
+				android:scaleType="fitCenter"  
+				android:layout_width="0dp"></ImageButton>
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

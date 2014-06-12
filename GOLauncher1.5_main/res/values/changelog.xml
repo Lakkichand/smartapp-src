@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- dingzijian -->
+    <!-- 更新提示log目前最多支持8条更新提示，如需减少条数，直接把updatelog的值置为""即可，无需删除 -->
+    <string name="updateVersion">Version 3.31</string>
+    <string name="updatelog1">1.(New) GO Multiple Wallpaper supports importing and saving local pictures</string>
+    <string name="updatelog2">2.(Improve) Supports closing the reminder of two-finger-slide gesture</string>
+    <string name="updatelog3">3.(Improve) The interface of theme selecting page</string>
+    <string name="updatelog4">4.(Fix) Several bugs of last version</string>
+    <string name="updatelog5"></string>
+    <string name="updatelog6"></string>
+    <string name="updatelog7"></string>
+    <string name="updatelog8"></string>
+    <string name="guide_text1">Hello,</string>
+    <string name="guide_text2">I am GO Launcher...</string>
+    <string name="guide_text3">Updated!</string>
+    <string name="notice_url">"http://twitter.com/golauncher"</string>
+    <string name="translate_url">"http://crowdin.net/project/golauncherex"</string>
+    <string name="facebook_url">http://www.facebook.com/golauncher</string>
+    <string name="twitter_url">http://twitter.com/#!/golauncher</string>
+    <string name="bolg_url">http://golauncher.goforandroid.com/</string>
+    <string name="french_quotes_left">《</string>
+	<string name="french_quotes_right">》</string>
+</resources>

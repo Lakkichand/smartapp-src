@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/gostore_theme_gallery_background" >
+
+    <com.jiubang.ggheart.apps.gowidget.gostore.component.GoStoreDetailScrollView
+        android:id="@+id/scrollItemView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/ItemDetailRelativeLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="13.33dp" >
+
+            <TextView
+                android:id="@+id/contentNameTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6.67dp"
+                android:singleLine="true"
+                android:text="@string/themestore_detail_basiccontent"
+                android:textColor="#8ec220"
+                android:textSize="13.33sp" />
+
+            <TextView
+                android:id="@+id/contentDeveloperTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="#1a1a1a"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/contentVersionTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="#1a1a1a"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/contentPackageSizeTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="#1a1a1a"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/contentDownloadCountTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="#1a1a1a"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/contentUpateTimeTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#1a1a1a"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/firstLineImageView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="13.33dp"
+                android:layout_marginTop="13.33dp"
+                android:background="@drawable/gostore_theme_detail_green_line" />
+
+            <TextView
+                android:id="@+id/contentUpdateTitleTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6.67dp"
+                android:singleLine="true"
+                android:text="@string/themestore_detail_updatedcontent"
+                android:textColor="#1a1a1a"
+                android:textSize="13.33sp" />
+
+            <TextView
+                android:id="@+id/contentUpdateTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#7b7b7b"
+                android:textSize="12sp" />
+			
+            <LinearLayout
+                android:id="@+id/moreUpdateTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="16.67dp"
+                android:layout_marginTop="6.67dp"
+                android:gravity="right"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/moreUpdateTextView_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@drawable/gostore_theme_gallery_text_close"
+                    android:gravity="right" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/secondLineImageView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="13.33dp"
+                android:layout_marginTop="13.33dp"
+                android:background="@drawable/gostore_theme_gallery_dot_line" />
+
+            <TextView
+                android:id="@+id/contentDescriptionTitleTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6.67dp"
+                android:singleLine="true"
+                android:text="@string/themestore_detail_introduction"
+                android:textColor="#1a1a1a"
+                android:textSize="13.33sp" />
+
+            <TextView
+                android:id="@+id/contentDescriptionTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#7b7b7b"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/moreDescriptionTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="16.67dp"
+                android:layout_marginTop="6.67dp"
+                android:gravity="right"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/moreDescriptionTextView_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:background="@drawable/gostore_theme_gallery_text_close" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.jiubang.ggheart.apps.gowidget.gostore.component.GoStoreDetailScrollView>
+
+</LinearLayout>

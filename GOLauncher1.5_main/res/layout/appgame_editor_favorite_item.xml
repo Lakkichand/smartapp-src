@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/editor_favorite_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10.666667dp"
+    android:paddingRight="10.666667dp"
+    android:paddingTop="8dp" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/appgame_editorfavorite_item_bg"
+        android:paddingBottom="10.666667dp" >
+        
+        
+        <ImageSwitcher
+            android:id="@+id/editor_favorite_imageswitcher"
+            android:layout_width="fill_parent"
+            android:layout_height="155dp"
+            android:inAnimation="@anim/appgame_fade_in"
+            android:outAnimation="@anim/appgame_fade_out"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" >
+
+            <ImageView
+                android:id="@+id/editor_favorite_img"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY" />
+            
+             <ImageView
+                android:id="@+id/editor_favorite_img_another"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY" />
+        </ImageSwitcher>
+
+        <TextView
+            android:id="@+id/editor_favorite_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/editor_favorite_imageswitcher"
+            android:layout_marginLeft="10.6667dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="6dp"
+            android:layout_toLeftOf="@+id/editor_favorite_button"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#393939"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/editor_favorite_button"
+            android:layout_width="65dp"
+        	android:layout_height="34dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/editor_favorite_imageswitcher"
+            android:layout_gravity="center"
+            android:layout_marginRight="10.666667dp"
+            android:layout_marginTop="10.666667dp"
+            android:background="@drawable/appgame_install_btn_selector"
+            android:focusable="false"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#393939"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/editor_favorite_prgress"
+            android:layout_width="64dp"
+            android:layout_height="30.3dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/editor_favorite_imageswitcher"
+            android:layout_marginRight="10.666667dp"
+            android:layout_marginTop="10.666667dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="#818181"
+            android:textSize="14dp"
+            android:visibility="gone" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/editor_favorite_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/editor_favorite_name"
+            android:layout_marginLeft="10.6667dp"
+            android:layout_marginTop="2dp"
+            android:text=""
+            android:textColor="#FF909090"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/editor_favorite_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/editor_favorite_size"
+            android:layout_marginLeft="10.6667dp"
+            android:layout_marginRight="10.66667dp"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text=""
+            android:textColor="#909090"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

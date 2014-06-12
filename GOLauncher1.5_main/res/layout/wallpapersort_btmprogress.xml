@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.gowidget.gostore.component.ThemeStoreProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <ProgressBar
+        android:id="@+id/themestore_btmprogress"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginRight="6dp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/themestore_btmProgress_text"
+        android:layout_width="wrap_content"
+        android:layout_height="94.6dip"
+        android:gravity="center_vertical"
+        android:text="@string/loading"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+</com.jiubang.ggheart.apps.gowidget.gostore.component.ThemeStoreProgressBar>

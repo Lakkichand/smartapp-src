@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="center" android:layout_marginTop="@dimen/screen_edit_view_top_padding"
+        android:paddingLeft="@dimen/screen_edit_view_padding" android:paddingRight="@dimen/screen_edit_view_padding"
+        >
+        <ImageView 
+        android:id="@+id/screen_edit_effect_thumb"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/go_store"
+         android:gravity="center_horizontal"
+        />
+         <ImageView 
+        android:id="@+id/screen_edit_effect_thumb_installed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        />
+    </FrameLayout>
+        <com.jiubang.ggheart.components.DeskTextView
+        android:id="@+id/screen_edit_effect_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+          android:singleLine="true"
+            android:ellipsize="marquee"
+        android:textSize="12sp"
+         android:gravity="center_horizontal"
+        />
+
+</LinearLayout>

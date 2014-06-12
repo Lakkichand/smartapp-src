@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/folder_edit_bg" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/folder_top_bg" >
+
+            <TextView
+                android:id="@+id/appgame_network_dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/traffic_saving_mode_mobile_network"
+                android:textColor="#383737"
+                android:textSize="17.3dp" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/appgame_network_dialog_listView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout1"
+            android:background="@color/appgame_menu_bg"
+            android:cacheColorHint="#00000000"
+            android:listSelector="@color/transparent_background"
+            android:divider="@drawable/allfunc_allapp_menu_line" >
+        </ListView>
+
+        <Button
+            android:id="@+id/appgame_network_dialog_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/appgame_network_dialog_listView"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/folder_button_selector"
+            android:text="@string/cancel"
+            android:textColor="#535353"
+            android:textSize="16dp" />
+    </RelativeLayout>
+</LinearLayout>

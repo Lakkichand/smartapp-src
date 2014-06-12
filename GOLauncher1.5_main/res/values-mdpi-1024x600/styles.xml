@@ -1,0 +1,90 @@
+<resources>  
+  <style name="Transparent">  
+    <item name="android:windowBackground">@color/transparent_background</item>  
+    <item name="android:windowNoTitle">true</item>  
+    <item name="android:windowIsTranslucent">true</item>     
+    <item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>  
+  </style>  
+  
+   <style name="WorkspaceIcon">
+        <item name="android:textSize">13sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:shadowColor">#FF000000</item>
+        <item name="android:shadowRadius">2.0</item>
+        <item name="android:textColor">#FFF</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:background">@drawable/shortcut_selector</item>
+        <item name="android:paddingLeft">5dip</item>
+        <item name="android:paddingRight">5dip</item>
+    </style>
+
+    <style name="WorkspaceIcon.Portrait">
+        <item name="android:drawablePadding">7.5dip</item>
+        <item name="android:paddingTop">6dip</item>
+        <item name="android:layout_marginLeft">4.5dip</item>
+        <item name="android:layout_marginRight">4.5dip</item>
+        <item name="android:layout_marginTop">19.5dip</item>
+        <item name="android:layout_marginBottom">12dip</item>
+    </style>
+
+    <style name="WorkspaceIcon.Landscape">
+        <item name="android:drawablePadding">4.5dip</item>
+        <item name="android:paddingTop">3dip</item>
+        <item name="android:layout_marginLeft">15dip</item>
+        <item name="android:layout_marginRight">15dip</item>
+    </style>
+    
+    <style name="PopMenuItem">
+   		<item name="android:layout_width">wrap_content</item>
+   		<item name="android:layout_height">wrap_content</item>
+   		<item name="android:gravity">top|center_horizontal</item>
+   		<item name="android:textSize">18.0dip</item>
+   		<item name="android:textStyle">bold</item>
+   		<item name="android:textColor">#ffffffff</item>
+   		<item name="android:ellipsize">marquee</item>
+   		<item name="android:fadingEdge">horizontal</item>
+   		<item name="android:paddingLeft">4.5dip</item>
+   		<item name="android:paddingRight">4.5dip</item>
+    </style>
+    
+    <style name="AnimationInputMethod">
+     	<item name="android:windowEnterAnimation">@anim/input_method_enter</item>
+     	<item name="android:windowExitAnimation">@anim/input_method_exit</item>
+  	</style>
+	
+    <style name="ProgressBarStyle">  
+        <item name="android:indeterminateOnly">false</item>  
+        <item name="android:progressDrawable">@drawable/gostore_detail_progress_style</item>  
+        <item name="android:minHeight">8dp</item>
+        <item name="android:maxHeight">8dp</item>
+        <item name="android:focusable">false</item>
+    </style>
+    
+    <style name="appsmanagement_memory_green">  
+        <item name="android:indeterminateOnly">false</item>  
+        <item name="android:progressDrawable">@drawable/appsmanagement_memory_green</item>  
+        <item name="android:minHeight">8dp</item>
+        <item name="android:maxHeight">8dp</item>
+        <item name="android:focusable">false</item>
+    </style>
+    
+  <style name="appsmanagement_memory_orange">  
+        <item name="android:indeterminateOnly">false</item>  
+        <item name="android:progressDrawable">@drawable/appsmanagement_memory_orange</item>  
+        <item name="android:minHeight">8dp</item>
+        <item name="android:maxHeight">8dp</item>
+        <item name="android:focusable">false</item>
+    </style>
+    
+  <style name="appsmanagement_memory_red">  
+        <item name="android:indeterminateOnly">false</item>  
+        <item name="android:progressDrawable">@drawable/appsmanagement_memory_red</item>  
+        <item name="android:minHeight">8dp</item>
+        <item name="android:maxHeight">8dp</item>
+        <item name="android:focusable">false</item>
+    </style>
+    
+</resources> 

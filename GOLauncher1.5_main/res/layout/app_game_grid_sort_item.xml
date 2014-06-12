@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?><RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+	android:padding="2.68dip">
+
+    <ImageView
+        android:id="@+id/recomm_app_group_image"
+        android:layout_width="152.76dip"
+        android:layout_height="95.14dip"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/recomm_app_nametext"
+        android:layout_width="152.76dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:singleLine="true"
+        android:text=""
+        android:background="@drawable/appgame_text_title_bg"
+        android:gravity="center_horizontal|bottom"
+        android:textColor="#ffffff"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

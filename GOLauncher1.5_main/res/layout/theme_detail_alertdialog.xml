@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+   >
+   <!--在ThemeDetailView的 showDialog()中window.setbackground(),  android:background="@drawable/theme_detail_menu_bg" -->
+
+   <com.jiubang.ggheart.components.DeskTextView 
+        android:text="@string/theme_detail_alertdialog_title"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text1"
+        android:paddingLeft="25dip"
+        android:paddingTop="10dip"
+        android:paddingBottom="10dip"
+         android:textColor="@android:color/black"
+        />
+      
+   <LinearLayout android:layout_width="fill_parent"
+     		     android:layout_height="wrap_content">
+		 <View  
+		    android:layout_width="fill_parent"  
+		    android:layout_height="1px"  
+		    android:background="@drawable/allfunc_allapp_menu_line"
+		    android:layout_marginLeft="10dip"
+		    android:layout_marginRight="10dip"  />  
+	</LinearLayout>
+       
+    <ListView
+           android:id="@+id/Theme_detail_alertdialog_list"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingTop="20dip"/>
+	 <Button 
+			android:id="@+id/theme_detail_alertdialog_sure"
+			android:text="@string/theme_detail_alertdialog_sure"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginTop="20dip"
+			android:textSize="17sp"
+			android:paddingLeft="20dip"
+			android:paddingRight="20dip"/>
+
+</LinearLayout>

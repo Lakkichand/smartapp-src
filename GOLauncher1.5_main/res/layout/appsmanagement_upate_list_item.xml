@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.appmanagement.component.AppsUpdateInfoListItem xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="60dp" android:minHeight="60dp"
+    android:background="@drawable/recomm_app_list_item_selector" >
+
+    <com.jiubang.ggheart.apps.gowidget.gostore.component.SimpleImageView
+        android:id="@+id/app_image_view"
+        android:layout_width="48dip"
+        android:layout_height="48dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="6dp" />
+	 <RelativeLayout 
+	     android:id="@+id/update_operation_layout" 
+	     android:layout_width="56dip"
+	     android:layout_height="60dp"
+	     android:layout_alignParentRight="true"
+	     >       
+	    <ImageView
+	        android:id="@+id/operation_button"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerInParent="true"
+	        android:focusable="false"
+	        android:focusableInTouchMode="false"
+	        android:gravity="center" >
+	    </ImageView>
+	</RelativeLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/update_operation_layout"
+        android:background="@drawable/appsmanagement_line_right" />
+
+    <RelativeLayout
+        android:id="@+id/content_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_toLeftOf="@id/update_operation_layout"
+        android:layout_toRightOf="@id/app_image_view" >
+
+        <TextView
+            android:id="@+id/app_name_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="16sp"/>
+
+        <FrameLayout
+            android:id="@+id/info_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/app_name_view" >
+
+            <RelativeLayout
+                android:id="@+id/normal_info_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingTop="5.3dp" >
+
+                <TextView
+                    android:id="@+id/app_size_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:singleLine="true"
+                    android:textColor="#696969"
+                    android:textSize="10.6sp" />
+
+                <TextView
+                    android:id="@+id/update_datetime_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_toLeftOf="@id/app_size_view"
+                    android:layout_marginLeft="10dp"
+                    android:singleLine="true"
+                    android:textColor="#696969"
+                    android:textSize="10.6sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/download_info_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="gone"
+                android:paddingTop="2dp"  >
+
+                <RelativeLayout
+                    android:id="@+id/progress_text_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true" >
+
+                    <TextView
+                        android:id="@+id/progress_size_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:singleLine="true"
+                        android:textColor="#696969"
+                        android:textSize="10.6sp" />
+
+                    <TextView
+                        android:id="@+id/progress_percent_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignRight="@id/progress_size_view"
+                        android:singleLine="true"
+                        android:text="0%"
+                        android:textColor="#696969"
+                        android:textSize="10.6sp" />
+                </RelativeLayout>
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    style="@style/AppsManagementProgressBarStyle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/progress_text_layout"
+                    android:max="100" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/hints_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:singleLine="true"
+                android:textColor="#404040"
+                android:textSize="10.6sp"
+                android:visibility="gone"
+                android:paddingTop="5.3dp" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</com.jiubang.ggheart.apps.appmanagement.component.AppsUpdateInfoListItem>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:clickable="false"
+    android:background="@drawable/appsmanagement_list_section"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/notification_setting_subtitle"
+        android:clickable="false"
+        android:focusable="false"
+        android:layout_marginLeft="8dp"
+        android:textColor="#2f2f2f"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>

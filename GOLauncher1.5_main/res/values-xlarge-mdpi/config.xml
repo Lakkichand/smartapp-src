@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- 默认行列数 -->
+    <integer name="screen_col_row_style">4</integer>
+    <integer name="screen_default_row">7</integer>
+    <integer name="screen_default_column">8</integer>
+    
+    <integer name="appfunc_col_row_style">0</integer>
+    <integer name="appfunc_default_row">6</integer>
+    <integer name="appfunc_default_column">7</integer>
+    
+    <!-- 状态栏高度 -->
+    <integer name="status_bar_height">0</integer>
+    
+    <bool name="screen_appicon_autofit">true</bool>
+</resources>

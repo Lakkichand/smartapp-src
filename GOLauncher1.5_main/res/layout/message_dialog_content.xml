@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   android:orientation="vertical"
+   android:gravity="center"
+   >
+          
+<com.jiubang.ggheart.apps.desks.diy.messagecenter.BackgroundView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/message_center_popup_bg" 
+    android:id="@+id/backgroundview"
+    android:layout_marginTop="25dip"
+    
+    >
+    
+<LinearLayout 
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/message__center_detail_topbar"
+    >
+    
+    
+	   <RelativeLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content">
+	    
+			<ImageView 
+			        android:id="@+id/stamp_logo"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:background="@drawable/message_center_stamp"
+					android:layout_marginTop="10dip"
+					android:layout_alignParentRight="true"
+					android:layout_marginRight="@dimen/msgCenter_stamplogo_marginRight" 	
+					/>
+
+			 
+		    <com.jiubang.ggheart.components.DeskTextView
+			    android:id="@+id/title"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:textSize="16sp"
+			    android:textColor="#4A4A4A" 
+			    android:paddingTop="15dip"  
+			    android:singleLine="true"
+			    android:layout_marginLeft="10dip"
+			    android:layout_alignParentLeft="true"
+			    android:layout_toLeftOf="@id/stamp_logo"/>
+	
+	   </RelativeLayout>	       
+    </LinearLayout>    
+    
+    
+    <ImageView 
+    android:id="@+id/line"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/message_dialog_line"
+    android:visibility="invisible"
+    />
+    
+	<include layout="@layout/message_content_webview"
+	android:id="@+id/webviewlayout"
+    android:layout_below="@id/message__center_detail_topbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+
+</com.jiubang.ggheart.apps.desks.diy.messagecenter.BackgroundView >
+</LinearLayout>

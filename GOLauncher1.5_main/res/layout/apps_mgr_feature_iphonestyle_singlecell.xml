@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginTop="5.33333dp"
+    android:orientation="horizontal" >
+
+    <ImageSwitcher
+        android:id="@+id/iphonestyle_singlecell_imageswitcher1"
+        android:layout_width="0dp"
+        android:inAnimation="@anim/appgame_fade_in"
+        android:outAnimation="@anim/appgame_fade_out"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0" >
+
+        <ImageView
+            android:id="@+id/iphonestyle_singlecell_app1"
+            android:layout_width="fill_parent"
+            android:scaleType="fitXY"
+            android:layout_height="fill_parent" >
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/iphonestyle_singlecell_app1_another"
+            android:layout_width="fill_parent"
+            android:scaleType="fitXY"
+            android:layout_height="fill_parent" >
+        </ImageView>
+    </ImageSwitcher>
+
+    <View
+        android:layout_width="4dp"
+        android:layout_height="fill_parent"
+        android:background="@android:color/transparent" />
+
+    <ImageSwitcher
+        android:id="@+id/iphonestyle_singlecell_imageswitcher2"
+        android:layout_width="0dp"
+        android:inAnimation="@anim/appgame_fade_in"
+        android:outAnimation="@anim/appgame_fade_out"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0" >
+
+        <ImageView
+            android:id="@+id/iphonestyle_singlecell_app2"
+            android:layout_width="fill_parent"
+            android:scaleType="fitXY"
+            android:layout_height="fill_parent" >
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/iphonestyle_singlecell_app2_another"
+            android:layout_width="fill_parent"
+            android:scaleType="fitXY"
+            android:layout_height="fill_parent" >
+        </ImageView>
+    </ImageSwitcher>
+
+</LinearLayout>

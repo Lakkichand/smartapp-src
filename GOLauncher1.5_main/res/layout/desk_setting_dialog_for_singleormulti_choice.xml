@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/dialog_layout"
+        android:layout_width="@dimen/folder_edit_view_width"
+        android:layout_height="wrap_content"
+        android:background="@drawable/folder_edit_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/desk_setting_listview_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dip"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <com.jiubang.ggheart.components.DeskTextView
+                android:id="@+id/desk_setting_dialog_singleormulti_title"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/folder_edit_top_bottom_hight"
+                android:background="@drawable/folder_top_bg"
+                android:gravity="center_vertical"
+                android:paddingLeft="11.33dp"
+                android:textColor="#2C2C2C"
+                android:textSize="16sp" />
+
+            <ListView
+                android:id="@+id/desk_setting_dialog_singleormulti_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@drawable/folder_button_line"
+                android:dividerHeight="0.67dp"
+                android:listSelector="@drawable/change_icon_tab_selector" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/desk_setting_dialog_buttons"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="-40dip"
+            android:orientation="vertical" >
+
+            <CheckBox
+                android:id="@+id/desk_setting_dialog_with_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="53dip"
+                android:layout_marginLeft="12dip"
+                android:button="@drawable/desk_setting_checkbox"
+                android:textColor="#2E2E2E"
+                android:textSize="13.3sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/desk_setting_single_button_height"
+                android:orientation="horizontal" >
+
+                <com.jiubang.ggheart.components.DeskButton
+                    android:id="@+id/desk_setting_dialog_singleormulti_ok_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.67dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/folder_button_selector"
+                    android:gravity="center"
+                    android:text="@string/ok"
+                    android:textColor="@color/desk_setting_button_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/folder_button_line" />
+
+                <com.jiubang.ggheart.components.DeskButton
+                    android:id="@+id/desk_setting_dialog_singleormulti_cancel_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.67dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/folder_button_selector"
+                    android:gravity="center"
+                    android:text="@string/cancel"
+                    android:textColor="@color/desk_setting_button_color"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

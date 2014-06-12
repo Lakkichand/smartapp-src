@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.desks.diy.messagecenter.MessageCenterWebView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    >
+    <WebView 
+        android:id="@+id/webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        />
+    <LinearLayout
+            android:id="@+id/modify_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            >
+
+             <ProgressBar
+	            android:id="@+id/progress"
+	            android:layout_width="29.3dip"
+	            android:layout_height="29.3dip"
+	            android:indeterminateDrawable="@drawable/go_progress_green"
+	            android:scrollbarStyle="outsideOverlay"
+	            android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/progress_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dip"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+</com.jiubang.ggheart.apps.desks.diy.messagecenter.MessageCenterWebView>

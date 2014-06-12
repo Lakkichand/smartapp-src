@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!-- 预览图片 -->
+	<string-array name="appgame_previewlist">
+		<item>appgame_widget_preview41</item>
+	</string-array>
+
+<!-- 预览图片底部描述 -->
+	<string-array name="appgame_namelist">
+		<item>appgamewidget41_preview_title</item>
+	</string-array>
+
+	<integer-array name="appgame_typelist">
+		<item>1</item>
+	</integer-array>
+
+	<integer-array name="appgame_rowlist">
+		<item>1</item>
+	</integer-array>
+
+	<integer-array name="appgame_columnlist">
+		<item>4</item>
+	</integer-array>
+
+	<string-array name="appgame_layoutidlist">
+		<item>appgamewidget41</item>
+	</string-array>
+
+	<integer-array name="appgame_minWidth">
+		<item>292</item>
+	</integer-array>
+
+	<integer-array name="appgame_minHeight">
+		<item>73</item>
+	</integer-array>
+
+</resources>

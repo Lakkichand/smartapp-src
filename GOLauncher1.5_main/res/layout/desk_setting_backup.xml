@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myAndroid="http://schemas.android.com/apk/res/com.gau.go.launcherex"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/desk_setting_bg_color"
+    android:orientation="vertical" >
+
+    <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingPageTitleView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        myAndroid:titleText="@string/title_backup_setting" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/desk_setting_view_padding"
+            android:paddingRight="@dimen/desk_setting_view_padding" >
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingTitleView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:titleText="@string/title_local_backup" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemBaseView
+                android:id="@+id/backup_desk_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:summaryText="@string/summary_nonbackup"
+                myAndroid:titleText="@string/backup_desk" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemBaseView
+                android:id="@+id/restore_db_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:summaryText="@string/reset_to_default_summary"
+                myAndroid:titleText="@string/restore_db_title" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemBaseView
+                android:id="@+id/reset_to_default_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:isHiddenBottomLine="true"
+                myAndroid:summaryText="@string/summary_reset"
+                myAndroid:titleText="@string/reset_to_default_title" />
+            
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingTitleView
+                android:id="@+id/facebook_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                myAndroid:titleText="@string/facebook_backup_title" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemBaseView
+                android:id="@+id/facebook_backup_desk_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:summaryText="@string/summary_nonbackup"
+                myAndroid:titleText="@string/facebook_backup" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemBaseView
+                android:id="@+id/facebook_restore_db_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:summaryText="@string/facebook_restore_summary"
+                myAndroid:titleText="@string/facebook_restore" />
+
+<!--             <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemBaseView
+                android:id="@+id/facebook_logout_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:isHiddenBottomLine="true"
+                myAndroid:titleText="@string/facebook_logout" /> -->
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingTitleView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:titleText="@string/title_more_backup" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemBaseView
+                android:id="@+id/more_go_backup_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:isHiddenBottomLine="true"
+                myAndroid:summaryText="@string/summary_go_backup"
+                myAndroid:titleText="@string/go_backup" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

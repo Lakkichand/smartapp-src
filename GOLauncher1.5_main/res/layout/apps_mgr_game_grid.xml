@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.appgame.gostore.base.component.GridViewContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/featrue_tips_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </LinearLayout>
+
+    <com.jiubang.ggheart.appgame.base.component.FeatureListView
+        android:id="@+id/feature_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="#00000000"
+   		android:cacheColorHint="#00000000"
+        android:scrollbarStyle="outsideOverlay"
+        android:dividerHeight="0.5dp"
+        android:listSelector="@color/transparent_background"
+        android:fadeScrollbars="true" >
+    </com.jiubang.ggheart.appgame.base.component.FeatureListView>
+
+</com.jiubang.ggheart.appgame.gostore.base.component.GridViewContainer>

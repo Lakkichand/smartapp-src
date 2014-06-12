@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/themeview"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    android:paddingLeft="21dip"
+    android:paddingTop="21dip"
+    android:paddingRight="21dip" >
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <com.jiubang.ggheart.components.DeskTextView
+            android:id="@+id/info_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="web|email"
+            android:background="@drawable/gowidget_list_bg"
+            android:paddingLeft="21dip"
+            android:paddingTop="21dip"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</ScrollView>

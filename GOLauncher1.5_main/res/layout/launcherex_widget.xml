@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <ImageButton
+            android:id="@+id/launcherex_widget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/change_theme_4_def3" 
+            android:background="#00000000"/>
+
+        <TextView
+            android:id="@+id/go_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_gravity="center"
+            android:text="@string/go_theme" 
+            android:textColor="#ffffffff"
+            android:shadowColor="#ff000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+           />
+
+    </LinearLayout>

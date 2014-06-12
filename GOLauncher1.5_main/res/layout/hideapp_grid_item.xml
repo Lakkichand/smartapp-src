@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/screen_edit_item_select">
+
+    
+<com.jiubang.ggheart.components.DeskTextView
+    android:id="@+id/name"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/folder_edit_item_height"
+
+    android:paddingLeft="2dip"
+    android:paddingRight="2dip"
+    android:paddingBottom="1dip"
+    android:drawablePadding="0dip"
+        
+    android:textSize="12sp"
+    android:singleLine="true"
+    android:textColor="#343434"
+    android:gravity="center" />
+
+    <ImageView android:id="@+id/choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/folder_select"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="top|right"/>
+
+</RelativeLayout>

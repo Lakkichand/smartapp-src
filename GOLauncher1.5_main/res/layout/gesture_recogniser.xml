@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myandroid="http://schemas.android.com/apk/res/com.gau.go.launcherex"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <!-- 输入界面 -->
+
+    <LinearLayout
+        android:id="@+id/uiLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/gesture_ui_layout_height"
+        android:background="@drawable/gesture_recogniser_draw_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/recongniserLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingBottom="45dip" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/addBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/gesture_add_selector" />
+
+                    <com.jiubang.ggheart.components.DeskTextView
+                        android:id="@+id/drawOneGestureText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/gesture_draw_one"
+                        android:textColor="#727272"
+                        android:textSize="@dimen/gesture_title_text_size" />
+
+                    <LinearLayout
+                        android:id="@+id/warmingLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="8dip"
+                            android:src="@drawable/gesture_warming" />
+
+                       <com.jiubang.ggheart.components.DeskTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/gesture_no_response"
+                            android:textColor="@color/gesture_waring_color"
+                            android:textSize="@dimen/gesture_title_text_size" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/manageBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/gesture_manage_selector" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gesture_line_top" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <android.gesture.GestureOverlayView
+                        android:id="@+id/overlayView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gestureColor="@color/gesture_draw_color"
+                        android:fadeDuration="20" 
+                        android:gestureStrokeType="multiple" />
+
+                    <com.jiubang.ggheart.components.diygesture.gesturemanageview.DiyGestureItemView
+                        android:id="@+id/drawResultImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        myandroid:is_small_preview="false"
+                      	myandroid:strokeWidth = "@dimen/gesture_stroke_width"
+                      	myandroid:paintColor = "@color/gesture_draw_color"
+                        android:padding="3dip"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cancleLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginTop="-45dip"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/folder_button_line" />
+
+                <com.jiubang.ggheart.components.DeskButton
+                    android:id="@+id/cancleOneBtn"
+                    style="@style/DiyGestureButton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/cancel" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reDrawLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginTop="-45dip"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/folder_button_line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <com.jiubang.ggheart.components.DeskButton
+                        android:id="@+id/reDrawBtn"
+                        style="@style/DiyGestureButton"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:text="@string/redraw" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/folder_button_line" />
+
+                    <com.jiubang.ggheart.components.DeskButton
+                        android:id="@+id/addResponseBtn"
+                        style="@style/DiyGestureButton"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:text="@string/gesture_add_response" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 输入界面__end -->
+
+
+        <!-- 选择响应界面 -->
+
+        <LinearLayout
+            android:id="@+id/selectResponseLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingBottom="45dip" >
+
+                <com.jiubang.ggheart.components.DeskTextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dip"
+                    android:gravity="center"
+                    android:text="@string/gesture_select_response"
+                    android:textColor="#727272"
+                    android:textSize="@dimen/gesture_title_text_size" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gesture_line_top" />
+
+                <com.jiubang.ggheart.components.diygesture.gesturemanageview.DiyGestureSelectRespondView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                </com.jiubang.ggheart.components.diygesture.gesturemanageview.DiyGestureSelectRespondView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginTop="-45dip"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/folder_button_line" />
+
+                <com.jiubang.ggheart.components.DeskButton
+                    android:id="@+id/selectResponseBackBtn"
+                    style="@style/DiyGestureButton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/back" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 选择响应界面__end -->
+
+
+        <!-- 匹配结果界面 -->
+
+        <LinearLayout
+            android:id="@+id/reslutLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="48dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip"
+                    android:src="@drawable/gesture_warming" />
+
+                <com.jiubang.ggheart.components.DeskTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/gesture_select_open_response"
+                    android:textColor="@color/gesture_waring_color"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gesture_line_top" />
+
+            <ListView
+                android:id="@+id/resultListView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:cacheColorHint="#00000000"
+                android:divider="@drawable/folder_button_line"
+                android:listSelector="@drawable/gesture_btn_press"
+                android:paddingBottom="45dip" >
+            </ListView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_marginTop="-45dip"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/folder_button_line" />
+
+                <com.jiubang.ggheart.components.DeskButton
+                    android:id="@+id/backRedrawBtn"
+                    style="@style/DiyGestureButton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/back_redraw" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 匹配结果界面__end -->
+    </LinearLayout>
+
+</LinearLayout>

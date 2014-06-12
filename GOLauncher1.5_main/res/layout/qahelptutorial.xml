@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="47dp"
+        android:background="@drawable/recomm_themestore_detail_topbar_bg"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/changeContentBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="2dip"
+            android:background="@drawable/change_icon_tab_selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <com.jiubang.ggheart.components.DeskTextView
+                android:id="@+id/contentName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="150dip"
+                android:paddingLeft="10dip"
+                android:singleLine="true"
+                android:textColor="#E5e4e4e4"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="15dp"
+                android:src="@drawable/change_icon_down_arrow" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/operationtips"
+            android:layout_width="48dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/theme_detail_back_selector"
+            android:scaleType="centerInside"
+            android:src="@drawable/qa_help" />
+
+        <ImageView
+            android:id="@+id/helpfeedback"
+            android:layout_width="48dp"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/operationtips"
+            android:background="@drawable/theme_detail_back_selector"
+            android:scaleType="centerInside"
+            android:src="@drawable/qa_feedback" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+    </LinearLayout>
+
+</LinearLayout>

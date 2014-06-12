@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/folder_edit_item_height">
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/screen_edit_item_select" >
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/recommand_icon_gobackup" />
+
+        <ImageView
+            android:id="@+id/choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:src="@drawable/folder_select" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/framelayout"
+        android:drawablePadding="0dip"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:paddingBottom="1dip"
+        android:paddingLeft="2dip"
+        android:paddingRight="2dip"
+        android:singleLine="true"
+        android:textColor="#343434"
+        android:textSize="12sp" />
+
+</RelativeLayout>

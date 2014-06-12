@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.appgame.appcenter.component.MyAppsContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/namesort"
+            android:layout_width="fill_parent"
+            android:layout_height="30.6dp"
+            android:layout_weight="1"
+            android:background="@drawable/app_mgr_tab_left"
+            android:gravity="center"
+            android:text="@string/appgame_myapp_sort_by_name"
+            android:textColor="#666666"
+            android:textSize="13.2sp" />
+
+        <TextView
+            android:id="@+id/timesort"
+            android:layout_width="fill_parent"
+            android:layout_height="30.6dp"
+            android:layout_weight="1"
+            android:background="@drawable/app_mgr_tab"
+            android:gravity="center"
+            android:text="@string/appgame_myapp_sort_by_time"
+            android:textColor="#666666"
+            android:textSize="13.2sp" />
+
+        <TextView
+            android:id="@+id/sizesort"
+            android:layout_width="fill_parent"
+            android:layout_height="30.6dp"
+            android:layout_weight="1"
+            android:background="@drawable/app_mgr_tab_right"
+            android:gravity="center"
+            android:text="@string/appgame_myapp_sort_by_size"
+            android:textColor="#666666"
+            android:textSize="13.2sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/themestore_list_item_line" />
+
+    <com.jiubang.ggheart.apps.gowidget.gostore.component.ThemeStoreProgressBar
+        android:id="@+id/app_list_progress"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ProgressBar
+            android:id="@+id/themestore_btmprogress"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:visibility="visible" />
+    </com.jiubang.ggheart.apps.gowidget.gostore.component.ThemeStoreProgressBar>
+
+    <com.jiubang.ggheart.appgame.appcenter.component.MyAppsView
+        android:id="@+id/phone_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/center_background"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/listline"
+        android:dividerHeight="0.5dp"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent"
+        android:scrollbarStyle="outsideOverlay" />
+    <!-- </LinearLayout> -->
+
+</com.jiubang.ggheart.appgame.appcenter.component.MyAppsContainer>

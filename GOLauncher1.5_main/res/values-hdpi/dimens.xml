@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 定义与组件相关的尺寸、坐标 -->
+
+<resources>
+
+    <!-- 主题管理 -->
+    <dimen name="mytheme_respond_click_distance">7dip</dimen>
+    <!--
+    <dimen name="mytheme_pic_width">87dip</dimen>
+    <dimen name="mytheme_pic_height">133dip</dimen>
+    -->
+    <dimen name="mytheme_pic_width">82dip</dimen>
+    <dimen name="mytheme_name_width">76dip</dimen>
+    <dimen name="mytheme_pic_height">128dip</dimen>
+    <dimen name="singletheme_detail_pic_width_hdpi">214dip</dimen>
+    <dimen name="singletheme_detail_pic_height_hdpi">346dip</dimen>
+    <dimen name="theme_list_item_height">170dip</dimen>
+    <!-- Listview的item间距 -->
+	<dimen name="theme_list_item_divider_height">15dip</dimen>
+    <!-- 桌面帮助层 -->
+    <dimen name="guide_screeneffect_title_height">60dip</dimen>
+    <dimen name="guide_screeneffect_listview_height">240dip</dimen>
+    <dimen name="guide_screeneffect_listview_height_secondtip">285dip</dimen>
+    <dimen name="guide_screeneffect_listview_item_height">43dip</dimen>
+    <dimen name="guide_screeneffect_topline_listview_space">44dip</dimen>
+    <dimen name="guide_screeneffect_listview_button_space">32dip</dimen>
+    <dimen name="guide_screeneffect_topline_listview_space_secondtip">15dip</dimen>
+    <dimen name="guide_screeneffect_listview_button_space_secondtip">15dip</dimen>
+    <dimen name="guide_screeneffect_buttons_settingpath_space_secondtip">15dip</dimen>
+    <dimen name="guide_dock_gesture_topline_pic_space">39dip</dimen>
+    <dimen name="guide_dock_gesture_pic_summery1">58dip</dimen>
+    <dimen name="guide_wallpapersetting_topline_pic_space">18dip</dimen>
+    <dimen name="guide_wallpapersetting_pic_list_space">25dip</dimen>
+    <dimen name="guide_wallpapersetting_list_button_space">15dip</dimen>
+    <dimen name="guide_wallpapersetting_button_summery_space">17dip</dimen>
+	<dimen name="guide_menu_button_margin_bottom">164dp</dimen>
+    <dimen name="guide_dock_button_margin_top">40dp</dimen>
+	<dimen name="guide_dock_tip_width">360dp</dimen>
+    <!-- 功能表帮助层 -->
+    <dimen name="guide_appfunc_title_left_margin">20dip</dimen>
+    <dimen name="guide_appfunc_title_line_space">30dip</dimen>
+    <dimen name="guide_appfunc_title_line_land_space">10dip</dimen>
+    <dimen name="guide_appfunc_line_img_space">26dip</dimen>
+    <dimen name="guide_appfunc_img_text_space">50dip</dimen>
+    <dimen name="guide_appfunc_img_text_land_space">20dip</dimen>
+    <dimen name="guide_appfunc_point_text_width">12dip</dimen>
+    <dimen name="guide_appfunc_menu_bottom_space">8dip</dimen>
+    <dimen name="guide_appfunc_drag_line_text_space">90dip</dimen>
+    <dimen name="guide_appfunc_drag_texts_space">40dip</dimen>
+    <dimen name="guide_appfunc_drag_btn_line_space">10dip</dimen>
+    <dimen name="guide_slide_width">30dip</dimen>
+    <dimen name="guide_slide_height">14dip</dimen>
+    <dimen name="favorite_top">6dp</dimen>
+    <dimen name="favorit_bottom">7dp</dimen>
+    <dimen name="guide_layout_text_space">36dip</dimen>
+    <dimen name="guide_layout_imgscroller_space">43dip</dimen>
+    <dimen name="guide_layout_version_text_space">16dip</dimen>
+    <dimen name="guide_open_menu_phone_top_padding">20dip</dimen>
+    <dimen name="guide_open_menu_phone_bottom_padding">31dip</dimen>
+    <dimen name="guide_open_menu_margin_top">149dip</dimen>
+	
+    <!-- 功能表搜索 -->  
+    <dimen name="appfunc_search_editor_height">36dip</dimen>
+    <dimen name="appfunc_search_naviagation_text_size">9.33dp</dimen>
+    
+    <!-- 功能表层 -->
+    <dimen name="appfunc_tabheight_v">60dip</dimen>
+    <dimen name="appfunc_tabheight_h">67dip</dimen>
+    <dimen name="appfunc_bottomheight">60dip</dimen>
+    <dimen name="appfunc_tab_icon_width">43dip</dimen>
+    <dimen name="appfunc_tab_icon_height">43dip</dimen>
+    <dimen name="appfunc_tab_text_size">13dip</dimen>
+    <dimen name="appfunc_home_width">60dip</dimen>
+    <dimen name="appfunc_home_heigth">60dip</dimen>
+    <dimen name="appfunc_indicator_height">12dip</dimen>
+    <dimen name="appfunc_memory_bar_height">33dip</dimen>
+    <dimen name="appfunc_content_padding_size">6dip</dimen>
+    <dimen name="appfunc_icon_width_auto_fit">76dip</dimen>
+	<dimen name="appfunc_icon_height_auto_fit">90dip</dimen>
+    <dimen name="appfunc_icon_text_dst">3dip</dimen>
+    
+    <!-- 行列数自适应 -->
+    <dimen name="cell_width_auto_fit">80dip</dimen>
+    <dimen name="cell_height_auto_fit">90dip</dimen>
+    
+     <!-- 应用游戏中心的按钮文件大小 -->
+     <dimen name="appgame_textSize_cn">9dip</dimen>
+     <dimen name="appgame_textSize_es">8dip</dimen>
+     <!-- 应用游戏中心启动loading页 -->
+     <dimen name="appgame_startloading_image_width">233.333333dp</dimen>
+     <dimen name="appgame_startloading_image_height">246.666666667dp</dimen>
+     <dimen name="appgame_startloading_image_topmargin">50dp</dimen>
+     <dimen name="appgame_startloading_title_size">24dp</dimen>
+     <dimen name="appgame_startloading_title_topmargin">8dp</dimen>
+     <dimen name="appgame_startloading_desc_size">12.666666666667dp</dimen>
+     <dimen name="appgame_startloading_desc_topmargin">17.33333333333dp</dimen>
+     <dimen name="appgame_startloading_progress_width">20dp</dimen>
+     <dimen name="appgame_startloading_progress_height">20dp</dimen>
+     <dimen name="appgame_startloading_progress_topmargin">16.66666667dp</dimen>
+     <dimen name="appgame_startloading_copyright_bottommargin">15dp</dimen>
+     <dimen name="appgame_startloading_copyright_size">11.33333333dp</dimen>
+    
+     <!-- BEGIN 自定义设置 -->
+    <dimen name="desk_setting_visual_tab_icon_frame_width">200dip</dimen>
+    
+    <!-- facebook相关 -->
+    <dimen name="facebook_guide_toppic_margintop">47dp</dimen>
+    <dimen name="facebook_guide_contend1_margintop">53dp</dimen>
+    <dimen name="facebook_guide_contend2_margintop">27dp</dimen>
+    <dimen name="facebook_guide_button_margintop">40dp</dimen>
+    <dimen name="facebook_guide_summury_margintop">36dp</dimen>
+</resources>

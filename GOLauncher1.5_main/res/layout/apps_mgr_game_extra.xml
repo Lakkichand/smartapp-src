@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.appgame.base.component.ExtraContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/topfree_tips_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </LinearLayout>
+
+    <com.jiubang.ggheart.appgame.base.component.SpecialSubjectListView
+        android:id="@+id/topfree_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#fcfcfc"
+        android:cacheColorHint="#77ffffff"
+        android:divider="@drawable/listline"
+        android:dividerHeight="1dp"
+        android:fadeScrollbars="true" >
+    </com.jiubang.ggheart.appgame.base.component.SpecialSubjectListView>
+
+</com.jiubang.ggheart.appgame.base.component.ExtraContainer>

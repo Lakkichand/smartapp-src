@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.appgame.appcenter.component.AppsNoUpdateInfoListItem xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/center_background" >
+
+    <RelativeLayout
+        android:id="@+id/up"
+        android:layout_width="fill_parent"
+        android:layout_height="69.33dp" >
+
+        <RelativeLayout
+            android:id="@+id/content_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@+id/app_no_update_operation_view"
+            android:background="@drawable/recomm_app_list_item_selector" >
+
+            <!-- <com.jiubang.ggheart.apps.gowidget.gostore.component.SimpleImageView
+                android:id="@+id/app_no_update_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="48dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp" /> -->
+			<ImageSwitcher
+                android:id="@+id/app_no_update_image_switcher"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:inAnimation="@anim/appgame_fade_in"
+                android:outAnimation="@anim/appgame_fade_out" >
+
+                <com.jiubang.ggheart.apps.gowidget.gostore.component.SimpleImageView
+                    android:id="@+id/no_update_app_icon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitXY" />
+
+                <com.jiubang.ggheart.apps.gowidget.gostore.component.SimpleImageView
+                    android:id="@+id/no_update_app_another_icon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="fitXY" />
+                
+            </ImageSwitcher>
+
+            <RelativeLayout
+                android:id="@+id/content_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/app_no_update_image_switcher"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/app_no_update_name_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="1dp"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/app_no_update_size_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/app_no_update_name_view"
+                    android:singleLine="true"
+                    android:textColor="#696969"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/app_no_update_datetime_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/app_no_update_size_view"
+                    android:singleLine="true"
+                    android:textColor="#696969"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/app_no_update_operation_view"
+            android:background="@drawable/appsmanagement_line_right" />
+
+        <LinearLayout
+            android:id="@+id/app_no_update_operation_view"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/app_no_update_operation_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center" >
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/app_detail_prompt"
+                android:textColor="#787878"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/intro"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/up"
+        android:background="@drawable/popwindow_bg"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16.66dp"
+            android:layout_marginRight="16.66dp"
+            android:layout_marginTop="13.2dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/open_app"
+                android:layout_width="fill_parent"
+                android:layout_height="30.66dp"
+                android:layout_marginRight="13.33dp"
+                android:layout_weight="1"
+                android:background="@drawable/update_detail_selector_new"
+                android:gravity="center"
+                android:text="@string/app_manager_open_app"
+                android:textColor="#ffffff"
+                android:textSize="14.66dp" />
+
+            <TextView
+                android:id="@+id/detail_page"
+                android:layout_width="fill_parent"
+                android:layout_height="30.66dp"
+                android:layout_marginLeft="13.33dp"
+                android:layout_weight="1"
+                android:background="@drawable/update_detail_selector_new"
+                android:gravity="center"
+                android:text="@string/app_update_detail_app"
+                android:textColor="#ffffff"
+                android:textSize="14.66dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</com.jiubang.ggheart.appgame.appcenter.component.AppsNoUpdateInfoListItem>

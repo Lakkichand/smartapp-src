@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  >
+  <com.jiubang.ggheart.components.DeskTextView
+  	android:id="@+id/noDataTextView"
+  	android:layout_width="wrap_content"
+  	android:layout_height="48dp"
+  	android:layout_centerInParent="true"
+  	android:textColor="#676767"
+  	android:textSize="16sp"
+  	android:text="@string/themestore_no_data"
+  	android:gravity="center"
+  	/>
+  <ImageView
+  	android:id="@+id/noDataImageView"
+  	android:layout_width="wrap_content"
+  	android:layout_height="wrap_content"
+  	android:background="@drawable/themestore_nodata_small"
+  	android:layout_alignParentRight="true"
+  	android:layout_alignParentTop="true"
+  />
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.desks.diy.frames.tipsforgl.GuideCustomGestureView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/guide_black_bg"
+    android:clickable="true" >
+
+    <com.jiubang.ggheart.components.DeskTextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/guide_custom_gesture_title"
+        android:textColor="#92DD6D"
+        android:textSize="20sp" />
+
+    <com.jiubang.ggheart.components.DeskTextView
+        android:id="@+id/tips_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/guide_custom_gesture_msg"
+        android:textColor="#d4d4d4"
+        android:textSize="14.6sp" />
+
+    <ImageView
+        android:id="@+id/guide_double_tap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tips_message"
+        android:layout_marginTop="21.4dp"
+        android:layout_marginBottom="21.4dp"
+		android:layout_centerHorizontal="true"
+        android:src="@drawable/guide_double_tap"
+        />
+
+    <com.jiubang.ggheart.components.DeskButton
+        android:id="@+id/got_it"
+        android:layout_below="@id/guide_double_tap"
+        android:layout_width="126.6dp"
+        android:layout_height="34.6dp"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/guide_tips_btn"
+        android:text="@string/tip_btn_txt"
+        android:textColor="#ffffff"
+        android:textSize="17.3sp" />
+
+</com.jiubang.ggheart.apps.desks.diy.frames.tipsforgl.GuideCustomGestureView>

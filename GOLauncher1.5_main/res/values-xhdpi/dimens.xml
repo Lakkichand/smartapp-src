@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 功能表搜索 -->  
+    <dimen name="appfunc_search_editor_height">38dip</dimen>
+    
+    <!-- 行列数自适应 -->
+    <dimen name="cell_width_auto_fit">90dip</dimen>
+    <dimen name="cell_height_auto_fit">120dip</dimen>
+    
+    <!-- BEGIN 自定义设置 -->
+    <dimen name="desk_setting_visual_tab_icon_frame_width">230dip</dimen>
+    
+     <!-- 应用游戏中心的按钮文件大小 -->
+     <dimen name="appgame_textSize_cn">8dip</dimen>
+     <dimen name="appgame_textSize_es">6dip</dimen>
+     <!-- 应用游戏中心启动loading页 -->
+     <dimen name="appgame_startloading_image_width">233.333333dp</dimen>
+     <dimen name="appgame_startloading_image_height">246.666666667dp</dimen>
+     <dimen name="appgame_startloading_image_topmargin">50dp</dimen>
+     <dimen name="appgame_startloading_title_size">24dp</dimen>
+     <dimen name="appgame_startloading_title_topmargin">8dp</dimen>
+     <dimen name="appgame_startloading_desc_size">12.666666666667dp</dimen>
+     <dimen name="appgame_startloading_desc_topmargin">17.33333333333dp</dimen>
+     <dimen name="appgame_startloading_progress_width">20dp</dimen>
+     <dimen name="appgame_startloading_progress_height">20dp</dimen>
+     <dimen name="appgame_startloading_progress_topmargin">16.66666667dp</dimen>
+     <dimen name="appgame_startloading_copyright_bottommargin">15dp</dimen>
+     <dimen name="appgame_startloading_copyright_size">11.33333333dp</dimen>
+     <dimen name="app_detail_scroll_view_width">195dp</dimen>
+     
+     <!-- 应用中心详情页缩略图相关 -->
+	 <dimen name="app_detail_scroll_view_height">315dp</dimen>
+	 <dimen name="app_detail_gostore_scroll_height">326dp</dimen>
+     
+     <!-- 应用游戏中心主题详情 
+    <dimen name="item_height">400dp</dimen>
+    <dimen name="item_width">275.56dp</dimen>
+    <dimen name="indicator_hight">31.11dp</dimen>
+    <dimen name="button_layout_hight">75.56dp</dimen>
+    <dimen name="button_hight">44.44dp</dimen>
+    <dimen name="item_height_noneions">471.11dp</dimen>
+    <dimen name="item_width_noneicons">288.89dp</dimen>
+    <dimen name="indicator_hight_noneicons">44.44dp</dimen>
+    <dimen name="button_layout_hight_noneicons">90.67dp</dimen>
+    <dimen name="button_hight_noneicons">42.23dp</dimen>
+    <dimen name="icons_height">80dp</dimen>
+    -->
+     <dimen name="item_height">324dp</dimen>
+    <dimen name="item_width">206.67dp</dimen>
+    <dimen name="indicator_hight">23.33dp</dimen>
+    <dimen name="button_layout_hight">56.67dp</dimen>
+    <dimen name="button_hight">33.33dp</dimen>
+    <dimen name="item_height_noneions">353.33dp</dimen>
+    <dimen name="item_width_noneicons">216.67dp</dimen>
+    <dimen name="indicator_hight_noneicons">33.33dp</dimen>
+    <dimen name="button_layout_hight_noneicons">68dp</dimen>
+    <dimen name="button_hight_noneicons">34.67dp</dimen>
+    <dimen name="icons_height">60dp</dimen>
+</resources>

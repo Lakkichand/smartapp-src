@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="codes_language_cn">
+        <item>default</item>
+		<item>ar</item>
+		<item>bg</item>
+		<item>ca</item>
+		<item>cs</item>
+		<item>da</item>
+		<item>el</item>
+		<item>en_US</item>
+		<item>et</item>
+		<item>fr</item>
+		<item>fi</item>
+		<item>hr</item>
+		<item>hu</item>
+		<item>id</item>
+		<item>in</item>
+		<item>ir</item>
+		<item>it</item>
+		<item>iw</item>
+		<item>ka</item>
+		<item>ms</item>
+		<item>nb</item>
+		<item>nl</item>
+		<item>pl</item>
+		<item>pt</item>
+		<item>ro</item>
+		<item>sk</item>
+		<item>sr</item>
+		<item>sv</item>
+		<item>tr</item>
+		<item>uk</item>
+		<item>vi</item>
+ 		<item>zh_CN</item>	
+		<item>zh_TW</item>	
+		<item>zh_HK</item>	
+  	</string-array>
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.appgame.gamecenter.component.MyGameContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/center_background" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/appgame_titlebar_bg" >
+        
+        <TextView
+            android:id="@+id/appgame_download_controll_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:text="@string/gamecenter_mygame"
+            android:textColor="#393939"
+            android:textSize="18.6sp" />
+
+    </RelativeLayout>
+    </RelativeLayout>
+    <!-- 用于加载子组件：加载中；找不到游戏，等等 -->
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_view" >
+    </FrameLayout>
+
+    <GridView
+        android:id="@+id/gridView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_view"
+        android:background="@color/center_background"
+        android:gravity="center_horizontal"
+        android:horizontalSpacing="3dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="4"
+        android:padding="6dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="3dp" >
+    </GridView>
+
+</com.jiubang.ggheart.appgame.gamecenter.component.MyGameContainer>

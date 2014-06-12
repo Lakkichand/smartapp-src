@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.appgame.widget.AppGameWidget xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/appgame_widget_41"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/appgame_widget_layout_height"
+        android:layout_gravity="center"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/appgame_widget_top_view"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/appgame_widget_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="22.67dip"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/appgame_widget_base" />
+
+            <com.jiubang.ggheart.appgame.widget.AppGameWidgetIconContainer
+                android:id="@+id/appgame_widget_icon_grid"
+                android:layout_width="fill_parent"
+                android:layout_height="80dip"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="1dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/appgame_widget_bottom_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/appgame_widget_base_bottom" >
+
+            <TextView
+                android:id="@+id/appgame_widget_button_app"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/appgame_widget_bottom_bg_selector"
+                android:gravity="center"
+                android:shadowColor="#FFFFFF"
+                android:shadowRadius="1"
+                android:text="@string/appgame_widget_for_app"
+                android:textColor="#212121"
+                android:textSize="13.33dip" />
+            
+            <TextView
+                android:id="@+id/appgame_widget_button_recommend"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/appgame_widget_bottom_bg_selector"
+                android:drawableLeft="@drawable/appgame_widget_app_line"
+                android:gravity="center"
+                android:shadowColor="#FFFFFF"
+                android:shadowRadius="1"
+                android:text="@string/gostore_recommend"
+                android:textColor="#212121"
+                android:textSize="13.33dip" />
+            
+            <TextView
+                android:id="@+id/appgame_widget_button_game"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/appgame_widget_bottom_bg_selector"
+                android:drawableLeft="@drawable/appgame_widget_app_line"
+                android:gravity="center"
+                android:shadowColor="#FFFFFF"
+                android:shadowRadius="1"
+                android:text="@string/appgame_widget_for_game"
+                android:textColor="#212121"
+                android:textSize="13.33dip" />
+            
+			<TextView
+                android:id="@+id/appgame_widget_button_theme"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/appgame_widget_bottom_bg_selector"
+                android:drawableLeft="@drawable/appgame_widget_app_line"
+                android:gravity="center"
+                android:shadowColor="#FFFFFF"
+                android:shadowRadius="1"
+                android:text="@string/gostore_theme"
+                android:textColor="#212121"
+                android:textSize="13.33dip" />
+			
+            <TextView
+                android:id="@+id/appgame_widget_button_manager"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/appgame_widget_bottom_bg_selector"
+                android:drawableLeft="@drawable/appgame_widget_app_line"
+                android:gravity="center"
+                android:shadowColor="#FFFFFF"
+                android:shadowRadius="1"
+                android:text="@string/appgame_widget_for_manager"
+                android:textColor="#212121"
+                android:textSize="13.33dip" />
+
+            <TextView
+                android:id="@+id/appgame_widget_button_locker"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/appgame_widget_bottom_bg_selector"
+                android:drawableLeft="@drawable/appgame_widget_app_line"
+                android:gravity="center"
+                android:shadowColor="#FFFFFF"
+                android:shadowRadius="1"
+                android:text="@string/gostore_locker"
+                android:textColor="#212121"
+                android:textSize="13.33dip" />
+            
+            <TextView
+                android:id="@+id/appgame_widget_button_search"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/appgame_widget_bottom_bg_selector"
+                android:drawableLeft="@drawable/appgame_widget_app_line"
+                android:gravity="center"
+                android:shadowColor="#FFFFFF"
+                android:shadowRadius="1"
+                android:text="@string/appgame_widget_for_search"
+                android:textColor="#212121"
+                android:textSize="13.33dip" />
+            
+            
+            <TextView
+                android:id="@+id/appgame_widget_button_soft"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/appgame_widget_bottom_bg_selector"
+                android:drawableLeft="@drawable/appgame_widget_app_line"
+                android:gravity="center"
+                android:shadowColor="#FFFFFF"
+                android:shadowRadius="1"
+                android:text="@string/appgame_widget_for_soft"
+                android:textColor="#212121"
+                android:textSize="13.33dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+</com.jiubang.ggheart.appgame.widget.AppGameWidget>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/appgame_feedback_dialog_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <RelativeLayout
+        android:id="@+id/appgame_feedback_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/appgame_titlebar_bg" >
+
+        <ImageButton
+            android:id="@+id/appgame_feedback_backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/apps_management_back_select"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:src="@drawable/app_center_back" />
+
+        <TextView
+            android:id="@+id/appgame_feedback_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/appgame_feedback_backBtn"
+            android:text="@string/appgame_feedback_title"
+            android:textColor="#393939"
+            android:textSize="18dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/appgame_feedback_changeContentBtn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/appgame_feedback_titlebar"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/change_icon_tab_selector" >
+
+        <TextView
+            android:id="@+id/appgame_feedback_contentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="6dp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="#393939"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/desk_setting_visual_picbase" />
+
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/appgame_feedback_commitBtn_layout" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/appgame_topbar_bg">
+        
+    <Button
+        android:id="@+id/appgame_feedback_commitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/apps_management_back_select"
+        android:text="@string/appgame_feedback_submit_button"
+        android:textColor="#393939"
+        android:textSize="14.7dp" />
+    </LinearLayout>
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appgame_feedback_changeContentBtn"
+        android:layout_above="@id/appgame_feedback_commitBtn_layout"
+        android:paddingBottom="10dp">
+   		
+    <EditText
+        android:id="@+id/appgame_feedback_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="17.4dp"
+        android:gravity="top"
+        android:hint="@string/appgame_feedback_hint"
+        android:textColor="#393939"
+        android:textColorHint="#969595"
+        android:textSize="14.7dp"
+        android:background="@drawable/appgame_feedback_edittext"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

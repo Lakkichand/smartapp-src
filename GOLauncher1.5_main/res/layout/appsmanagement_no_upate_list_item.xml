@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.appmanagement.component.AppsNoUpdateInfoListItem xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="60dp" android:minHeight="60dp"
+    android:background="@drawable/recomm_app_list_item_selector" >
+
+    <com.jiubang.ggheart.apps.gowidget.gostore.component.SimpleImageView
+        android:id="@+id/app_no_update_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="48dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="6dp" />
+
+    <ImageView
+        android:id="@+id/app_no_update_operation_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center" >
+    </ImageView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/app_no_update_operation_button"
+        android:background="@drawable/appsmanagement_line_right" />
+
+    <RelativeLayout
+        android:id="@+id/content_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="6dp"
+        android:layout_toLeftOf="@id/app_no_update_operation_button"
+        android:layout_toRightOf="@id/app_no_update_image_view" >
+
+        <TextView
+            android:id="@+id/app_no_update_name_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="16sp"/>
+
+         <RelativeLayout
+            android:id="@+id/app_no_update_normal_info_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingTop="5.3dp" 
+            android:layout_below="@id/app_no_update_name_view">
+			
+			<TextView
+               android:id="@+id/app_no_update_size_view"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentLeft="true"
+               android:singleLine="true"
+               android:textColor="#696969"
+               android:textSize="10.6sp" />
+
+           <TextView
+               android:id="@+id/app_no_update_datetime_view"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentRight="true"
+               android:layout_toLeftOf="@id/app_no_update_size_view"
+               android:layout_marginLeft="10dp"
+               android:singleLine="true"
+               android:textColor="#696969"
+               android:textSize="10.6sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</com.jiubang.ggheart.apps.appmanagement.component.AppsNoUpdateInfoListItem>

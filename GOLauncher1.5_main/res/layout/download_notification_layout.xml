@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#111111"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/downloadImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@drawable/notification_download_icon" />
+
+    <TextView
+        android:id="@+id/downloadTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/downloadImageView"/>
+
+    <ProgressBar
+        android:id="@+id/downloadProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/downloadTextView"
+        android:layout_toLeftOf="@+id/downloadProgressTextView"
+        android:max="100"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:id="@+id/downloadProgressTextView"
+        android:textColor="#FFFFFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/downloadProgressBar"
+        android:layout_alignParentRight="true" />
+		
+</RelativeLayout>

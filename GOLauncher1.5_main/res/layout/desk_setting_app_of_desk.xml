@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myAndroid="http://schemas.android.com/apk/res/com.gau.go.launcherex"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/desk_setting_bg_color"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/desk_setting_view_padding"
+            android:paddingRight="@dimen/desk_setting_view_padding" >
+
+            <!-- 桌面设置 -->
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingTitleView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:titleText="@string/menuitem_moresetting" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemListView
+                android:id="@+id/screen_orientation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:dialogTitle="@string/screen_orientation"
+                myAndroid:dialogType="SINGLE_CHOICE"
+                myAndroid:listEntries="@array/orientation_entries"
+                myAndroid:listEntryValues="@array/orientation_value"
+                myAndroid:summaryText="@string/defaultbtn"
+                myAndroid:titleText="@string/screen_orientation" />
+
+            <!--
+                  <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemListView
+                android:id="@+id/screen_rows_cols"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:singleDialogTips="@string/icon_autofit"
+                myAndroid:dialogTitle="@string/desk_setting_screen_rows_cols"
+                myAndroid:dialogType="SINGLE_CHOICE_WITH_CHECKBOX"
+                myAndroid:listEntries="@array/screen_rows_cols_title"
+                myAndroid:listEntryValues="@array/screen_rows_cols_value"
+                myAndroid:summaryText="@string/screen_rows_cols_hint"
+                myAndroid:titleText="@string/desk_setting_screen_rows_cols" />
+            -->
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemCheckBoxView
+                android:id="@+id/screen_looping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:summaryText="@string/screen_looping_summary"
+                myAndroid:titleText="@string/screen_looping" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemListView
+                android:id="@+id/screen_transition_effect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:dialogTitle="@string/screen_transition_effect"
+                myAndroid:dialogType="SINGLE_CHOICE"
+                myAndroid:listEntries="@array/screen_transition_entris"
+                myAndroid:listEntryValues="@array/screen_transition_value"
+                myAndroid:summaryText="@string/screen_transition_effect"
+                myAndroid:titleText="@string/screen_transition_effect" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemListView
+                android:id="@+id/desktop_transition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:dialogTitle="@string/desktop_transition"
+                myAndroid:dialogType="SINGLE_CHOICE"
+                myAndroid:listEntries="@array/select_desktop_transition"
+                myAndroid:listEntryValues="@array/desktop_transition_value"
+                myAndroid:summaryText="@string/desktop_transition_hint"
+                myAndroid:titleText="@string/desktop_transition" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemBaseView
+                android:id="@+id/gesture_screen"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/desk_setting_gosetting_item_height"
+                myAndroid:isHiddenBottomLine="true"
+                myAndroid:titleText="@string/desk_setting_screen_gesture" />
+
+            <!-- 快捷条设置 -->
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingTitleView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:titleText="@string/dock_set" />
+            <!--
+                    <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemListView
+                android:id="@+id/dock_rows"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:dialogTitle="@string/Dockrow"
+                myAndroid:dialogType="SINGLE_CHOICE"
+                myAndroid:listEntries="@array/dock_row_count"
+                myAndroid:listEntryValues="@array/dock_row_value"
+                myAndroid:summaryText="@string/Dockrowsummary"
+                myAndroid:titleText="@string/Dockrow" />
+            -->
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemCheckBoxView
+                android:id="@+id/dock_change_loop"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/desk_setting_gosetting_item_height"
+                myAndroid:titleText="@string/desk_setting_dock_auto_cycle" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemCheckBoxView
+                android:id="@+id/dock_auto_fit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:isHiddenBottomLine="true"
+                myAndroid:summaryText="@string/Dockautofitsummary"
+                myAndroid:titleText="@string/desk_setting_dock_auto_fit" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

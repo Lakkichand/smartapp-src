@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.appgame.base.component.MoreRecommendedAppsView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <RelativeLayout
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/center_background" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/appgame_titlebar_bg" >
+
+            <ImageButton
+                android:id="@+id/more_apps_back"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:background="@drawable/apps_management_back_select"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:src="@drawable/app_center_back" />
+
+            <TextView
+                android:id="@+id/more_apps_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/more_apps_back"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#393939"
+                android:textSize="17dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/more_apps_tips_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_view"
+        android:background="#FFFFFF" >
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/more_apps_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/top_view"
+        android:background="@color/center_background"
+        android:cacheColorHint="@color/center_background"
+        android:divider="@drawable/listview_divider"
+        android:dividerHeight="0.5dp"
+        android:listSelector="@android:color/transparent"
+        android:scrollbarStyle="outsideOverlay"
+        android:visibility="gone" >
+    </ListView>
+
+</com.jiubang.ggheart.appgame.base.component.MoreRecommendedAppsView>

@@ -1,0 +1,146 @@
+<com.jiubang.ggheart.appgame.appcenter.component.PackageManagementView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="50.67dip"
+        android:layout_alignParentTop="true"
+        android:background="#FFFFFF" >
+
+        <RelativeLayout
+            android:id="@+id/normal_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/appgame_titlebar_bg" >
+
+            <ImageButton
+                android:id="@+id/appcenter_packagemanagement_back"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:background="@drawable/apps_management_back_select"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:src="@drawable/app_center_back" />
+
+            <TextView
+                android:id="@+id/appcenter_packagemanagement_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/appcenter_packagemanagement_back"
+                android:text="@string/appcenter_advanced_management_package"
+                android:textColor="#393939"
+                android:textSize="18dp" />
+
+            <ImageButton
+                android:id="@+id/appcenter_packagemanagement_title_delete_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/apps_management_back_select"
+                android:src="@drawable/download_manager_delete_icon" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/delete_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/appsuninstall_topbar"
+            android:visibility="gone" >
+
+            <!-- <ImageButton
+                android:id="@+id/appcenter_packagemanagement_dlt_back"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:background="@drawable/apps_management_back_select"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:src="@drawable/app_center_back" /> -->
+
+            <TextView
+                android:id="@+id/appcenter_packagemanagement_dlt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/select_group_applications"
+                android:layout_marginLeft="14dp"
+                android:textColor="#51B500"
+                 android:textSize="18.6sp" />
+
+            <ImageView
+                android:id="@+id/appcenter_packagemanagement_title_select_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14dp"
+                android:src="@drawable/apps_uninstall_not_selected" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/appcenter_packagemanagement_delete_buttom_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="53dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/appsuninstall_bottombar"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/appcenter_packagemanagement_delete_btn"
+            android:layout_width="126.7dp"
+            android:layout_height="37dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:background="@drawable/yzjz_white_button"
+            android:text="@string/download_manager_btn_delete"
+            android:textColor="@color/appgame_download_btn_black"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/appcenter_packagemanagement_delete_cancel_btn"
+            android:layout_width="126.7dp"
+            android:layout_height="37dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="14dp"
+            android:background="@drawable/yzjz_white_button"
+            android:text="@string/cancel"
+            android:textColor="#535353"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <com.jiubang.ggheart.appgame.appcenter.component.PinnedHeaderListView
+        android:id="@+id/appcenter_packagemanagement_listView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/top_view"
+        android:layout_above="@id/appcenter_packagemanagement_delete_buttom_layout"
+        android:background="@color/center_background"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/listline"
+        android:dividerHeight="0.5dp"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none"
+        android:listSelector="@color/transparent_background"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="vertical" >
+    </com.jiubang.ggheart.appgame.appcenter.component.PinnedHeaderListView>
+
+    <RelativeLayout
+        android:id="@+id/appcenter_packagemanagement_tip"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/top_view"
+        android:background="@color/center_background" >
+    </RelativeLayout>
+
+</com.jiubang.ggheart.appgame.appcenter.component.PackageManagementView>

@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 定义与组件相关的尺寸、坐标 -->
+
+<resources>
+    <!-- BubbleTextView 图标与文字的间距-->
+	<dimen name="drawable_padding">5dip</dimen>
+	<dimen name="large_icon_drawable_padding">2dip</dimen>
+	
+	<!-- 屏幕预览的卡片组离屏幕上下左右的间隙 -->
+	<dimen name="cards_top_port_full">62dip</dimen>
+	<dimen name="cards_top_port">55dip</dimen>
+	<dimen name="cards_bottom_port">18.6dip</dimen>
+	<dimen name="cards_left_port">4dip</dimen>
+	<dimen name="cards_right_port">4dip</dimen>
+	<dimen name="cards_top_margin_port">5dip</dimen>
+	<dimen name="sense_indicator_top">15dip</dimen>
+	
+	<dimen name="linearlayout_height">57dip</dimen>
+    <dimen name="text_height">40dip</dimen>
+	
+	<dimen name="cards_top_land">46dip</dimen>
+	<dimen name="cards_bottom_land">6dip</dimen>
+	<dimen name="cards_left_land">25dip</dimen>
+	<dimen name="cards_right_land">25dip</dimen>
+	
+	<dimen name="dots_indicator_height">21dip</dimen>
+	<!-- 指示器横屏高度，只参与行列数自适应计算 -->
+	<dimen name="dots_indicator_height_land1">16dip</dimen>
+	<dimen name="dots_indicator_height_port">57dip</dimen>
+	<dimen name="dots_indicator_height_land">46dip</dimen>
+	<dimen name="dots_indicator_buttom_port">16dip</dimen>
+	<dimen name="dots_indicator_buttom_land">0dip</dimen>
+	<dimen name="dots_indicator_width">21dip</dimen>
+	<dimen name="slider_indicator_height">21dip</dimen>
+
+	<dimen name="linearlayout_port">40dip</dimen>
+	<dimen name="linearlayout_land">30dip</dimen>
+
+	<!-- 屏幕预览的卡片底图使用NinePatch图片，其边框间隙如下 -->
+	<dimen name="screen_preview_card_padding_left">9px</dimen>
+	<dimen name="screen_preview_card_padding_top">10px</dimen>
+	<dimen name="screen_preview_card_padding_right">9px</dimen>
+	<dimen name="screen_preview_card_padding_bottom">21px</dimen>
+
+	<dimen name="screen_preview_card_padding_spacex">8dip</dimen>
+	<dimen name="screen_preview_card_padding_spacey">5.3dip</dimen>
+	<dimen name="screen_preview_card_padding_right_port">4dip</dimen>
+	<dimen name="screen_preview_card_padding_bottom_port">2.6dip</dimen>
+
+	<dimen name="screen_preview_card_padding_spacex_land">24dip</dimen>
+	<dimen name="screen_preview_card_padding_spacey_land">1dip</dimen>
+	<dimen name="screen_preview_card_padding_right_land">12dip</dimen>
+	<dimen name="screen_preview_card_padding_bottom_land">0dip</dimen>
+
+	<dimen name="screen_preview_drag_tip_textsize">16sp</dimen>
+	<dimen name="screen_preview_home_textsize">18sp</dimen>
+	<dimen name="screen_preview_drag_tip_text_port">40dip</dimen>
+	<dimen name="screen_preview_drag_tip_text_land">25dip</dimen>
+	<dimen name="screen_preview_drag_tip_text_padding">30dip</dimen>
+	<dimen name="screen_preview_drag_tip_text_line_space">3dip</dimen>
+	
+	
+	
+	<dimen name="actual_cell_width_port">80dip</dimen>
+	<dimen name="actual_cell_height_port">100dip</dimen>
+	<dimen name="actual_cell_width_land">106dip</dimen>
+	<dimen name="actual_cell_height_land">74dip</dimen>
+	<dimen name="cell_width_port">80dip</dimen>
+	<dimen name="cell_height_port">100dip</dimen>
+	<dimen name="cell_width_land">106dip</dimen>
+	<dimen name="cell_height_land">74dip</dimen>
+	<dimen name="cell_widget_custom_padding">5dip</dimen>
+	<dimen name="screen_long_start_padding_port">21dip</dimen>
+	<dimen name="screen_long_end_padding_port">60dip</dimen>
+	<dimen name="screen_short_start_padding_port">0dip</dimen>
+	<dimen name="screen_short_end_padding_port">0dip</dimen>
+	<dimen name="screen_long_start_padding_land">0dip</dimen>
+	<dimen name="screen_long_end_padding_land">60dip</dimen>
+	<dimen name="screen_short_start_padding_land">21dip</dimen>
+	<dimen name="screen_short_end_padding_land">0dip</dimen>
+	<dimen name="screen_icon_size">48dip</dimen>
+	<dimen name="dock_icon_size">40dip</dimen>
+	<dimen name="dock_icon_padding_top_port">5dip</dimen>
+	<dimen name="dock_icon_padding_bottom_port">7dip</dimen>
+	<dimen name="dock_icon_padding_left_land">5dip</dimen>
+	<dimen name="dock_icon_padding_right_land">7dip</dimen>
+	<dimen name="dock_notify_width">21dip</dimen>
+	<dimen name="dock_notify_height">21dip</dimen>
+	<dimen name="dock_notify_font_size">14dip</dimen>
+	<dimen name="dock_bg_height">60dip</dimen>
+	<!-- dimen name="imagepreview_count">4</dimen> -->
+	<dimen name="imagepreview_grid_width">64dip</dimen>
+	<dimen name="imagepreview_grid_height">64dip</dimen>
+	<!-- <dimen name="imagepreview_grid_h_space">5dip</dimen> -->
+	<!-- <dimen name="imagepreview_grid_v_space">5dip</dimen> -->
+	<dimen name="imagepreview_grid_l_padding">8dip</dimen>
+	<dimen name="imagepreview_grid_t_padding">8dip</dimen>
+	<dimen name="imagepreview_grid_r_padding">8dip</dimen>
+	<dimen name="imagepreview_grid_b_padding">8dip</dimen>
+	<dimen name="flowerpreview_grid_width">100dip</dimen>
+	<dimen name="flowerpreview_grid_height">100dip</dimen>
+	<dimen name="flowerpreview_grid_l_padding">0dip</dimen>
+	<dimen name="flowerpreview_grid_t_padding">5dip</dimen>
+	<dimen name="flowerpreview_grid_r_padding">0dip</dimen>
+	<dimen name="flowerpreview_grid_b_padding">5dip</dimen>
+	<dimen name="counter_circle_padding">4dip</dimen>
+	<dimen name="inner_desk_folder_icon_size">17dip</dimen>
+	<dimen name="inner_dock_folder_icon_size">16dip</dimen>
+	<dimen name="scale_size">20dip</dimen>
+
+	<!--userFolder-->
+	<dimen name="user_folder_line_y">8dip</dimen>
+	<dimen name="user_folder_cut_width">205dip</dimen>
+	<dimen name="user_folder_width_h">561px</dimen>
+	<dimen name="user_folder_width_v">482px</dimen>
+	<dimen name="user_folder_grid_width_h">543px</dimen>
+	<dimen name="user_folder_line_height">76dip</dimen>
+	<dimen name="user_folder_grid_width_v">452px</dimen>
+	<dimen name="user_folder_closeBtn_margin">30dip</dimen>
+
+	<dimen name="user_folder_line_bottom">39dip</dimen>
+	<dimen name="user_folder_line_left">6dip</dimen>
+	<dimen name="user_folder_line_right">315dip</dimen>
+
+	<!-- 页面指示器 -->
+	<dimen name="indicator_numeric_textsize">10sp</dimen>
+	<dimen name="indicator_top_padding_port">0dip</dimen>
+	<dimen name="indicator_top_padding_land">0dip</dimen>
+	
+	<!-- 消息中心 -->
+    <dimen name="msgCenter_stamplogo_marginRight">24dip</dimen>
+	
+	
+	<!-- 主题预览模块 -->
+	
+	<dimen name="mytheme_respond_click_distance">7dip</dimen>
+	<!-- 主题缩略图宽 -->
+    <dimen name="mytheme_pic_width">82dip</dimen>
+    <dimen name="mytheme_name_width">76dip</dimen>
+    <!-- 主题缩略图高 -->
+	<dimen name="mytheme_pic_height">128dip</dimen>
+	<!-- 主题缩略图之间的间距 -->
+    <dimen name="theme_list_item_padding_eachother">23dip</dimen>
+    <!-- 主题缩略图边距 -->
+	<dimen name="theme_list_item_padding_edge">15dip</dimen>
+	<!-- 主题缩略图距离每行分隔线的高度 -->
+	<dimen name="theme_list_item_height_add_space">44dip</dimen>
+	<!-- 竖屏时主题缩略图边距 -->
+	<dimen name="theme_list_item_padding_edge_portrait">16dip</dimen>
+	<!-- 竖屏时主题缩略图之间的间距 -->
+    <dimen name="theme_list_item_padding_eachother_portrait">21dip</dimen>
+    <!-- 缩略图不可绘制区域 -->
+    <dimen name="mytheme_pic_padding">8dp</dimen>
+    <!-- 缩略图按钮图标与字体间隔 -->
+    <dimen name="mytheme_button_drawable_padding">5dp</dimen>
+	<!-- 去gostore下载bar高度 -->	
+	<dimen name="theme_gostore_bar_height">48dip</dimen>
+	<dimen name="theme_list_item_height">185dip</dimen>
+	<dimen name="theme_top_height">48dip</dimen>
+	<dimen name="theme_tab_height">56dip</dimen>	
+	
+	<!-- 分享页面的坐标信息 -->
+	
+	<dimen name="share_title_left">20dip</dimen>
+	<dimen name="share_title_text_size">19sp</dimen>
+	
+	
+	<dimen name="share_item_width_port">100dip</dimen>
+	<dimen name="share_item_width_land">160dip</dimen>
+	<dimen name="share_item_checkbox_offset">10dip</dimen>
+	<dimen name="share_list_item_padding_edge">20dip</dimen>
+	<dimen name="share_list_item_padding_eachother">20dip</dimen>
+	<dimen name="share_list_line_space">15dip</dimen>
+	
+	<!-- 分享图片的坐标信息 -->
+	<dimen name="share_img_go_padding_edge">16dip</dimen>
+	<dimen name="share_img_go_padding_bottom">20dip</dimen>
+	<dimen name="share_img_plane_padding_top">7dip</dimen>
+	<dimen name="share_img_plane_padding_right">15dip</dimen>	
+	<dimen name="share_img_padding_edge">20dip</dimen>
+	<dimen name="share_img_planar_code_edge">20dip</dimen>
+	<dimen name="share_img_planar_code_width">200dip</dimen>
+	<dimen name="share_img_max_height">400dip</dimen>
+	
+	<dimen name="share_img_title_top_1">26dip</dimen>
+	<dimen name="share_img_title_bottom_1">26dip</dimen>
+	<dimen name="share_img_max_width_1">332dip</dimen>
+    <dimen name="share_img_edge_1">26dip</dimen>
+    <dimen name="share_text_left_1">28dip</dimen>
+    <dimen name="share_text_top_1">40dip</dimen>
+    <dimen name="share_planarcode_top_1">40dip</dimen>
+    <dimen name="share_planarcode_bottom_1">34dip</dimen>
+    <dimen name="share_bottom_1">60dip</dimen>
+	
+    <dimen name="share_img_text_size_1">20sp</dimen>
+    <dimen name="share_img_text_size_2">16sp</dimen>
+    <dimen name="share_img_text_size_3">12sp</dimen>
+    <dimen name="share_img_line_space">14sp</dimen>
+    
+	<!-- Listview的item间距 -->
+	<dimen name="theme_list_item_divider_height">13dip</dimen>
+	<!-- 主题名和主题缩略图之间的间距 -->
+	<dimen name="theme_list_item_text_padding">4dip</dimen>
+	<dimen name="singletheme_detail_pic_width">249dip</dimen>
+	<dimen name="singletheme_detail_pic_height">500dip</dimen>
+	<dimen name="theme_info_paddingtop">46dip</dimen>
+	<dimen name="theme_info_paddingleft">27dip</dimen>
+	<dimen name="theme_info_text_width">54dip</dimen>
+	<!-- 主题详情界面更多菜单宽 -->
+	<dimen name="theme_detail_menu_width">148dip</dimen>
+	
+	<!-- 未安装锁屏界面 -->
+	<dimen name="logo_padding_top_v">20dip</dimen>
+	<dimen name="logo_text_padding_top_v">9dip</dimen>
+	<dimen name="lockerimg_padding_top_v">24dip</dimen>
+	<dimen name="locker_text_padding_top_v">25dip</dimen>
+	<dimen name="btn_padding_top_v">20dip</dimen>
+	<dimen name="lockerimg_padding_left_h">3dip</dimen>
+	<dimen name="logo_padding_left_h">20dip</dimen>
+
+	<!-- QuickActionMenu箭头左右边距 -->
+	<dimen name="qa_arrow_padding_left">16dip</dimen>
+	<dimen name="qa_arrow_padding_right">16dip</dimen>
+
+	<!-- ColorPickerDialog -->
+	<dimen name="color_picker_center">135px</dimen>
+	<dimen name="color_picker_radius">45px</dimen>
+
+	<!-- LargeIcon -->
+	<dimen name="dock_icon_large_size">48dip</dimen>
+	<dimen name="dock_bg_large_height">65dip</dimen>
+	<dimen name="screen_long_start_padding_large_icon_port">8dip</dimen>
+	<dimen name="screen_long_start_padding_large_icon_land">8dip</dimen>
+	<dimen name="screen_icon_large_size">56dip</dimen>
+	<dimen name="user_folder_line_height_large">85dip</dimen>
+	<dimen name="cell_layout_blank_height">10dip</dimen>
+	<dimen name="cell_layout_blank_width">20dip</dimen>
+	<dimen name="indicator_in_bottom_blank">5dip</dimen>
+
+	<!-- widget管理2.0 -->
+	<!-- 小分辨率机型的图片宽高 -->
+	<dimen name="widget_detail_pic_width_ldpi">195dip</dimen>
+	<dimen name="widget_detail_pic_height_ldpi">210dip</dimen>
+	<dimen name="widget_detail_pic_width_land">120dip</dimen>
+	<dimen name="widget_detail_pic_height_land">110dip</dimen>
+	<dimen name="widget_detail_pic_width_default_portrait">250dip</dimen>
+	<dimen name="widget_detail_pic_height_default_portrait">270dip</dimen>
+	<dimen name="skin_menu_item_height">36dip</dimen>
+	<dimen name="skin_menu_max_height">180dip</dimen>
+	<dimen name="skin_menu_width">108dip</dimen>
+	<dimen name="skin_subview_margintop_land">24dip</dimen>
+
+	<!-- 桌面帮助层 -->
+	<dimen name="guide_screeneffect_title_height">60dip</dimen>
+	<dimen name="guide_screeneffect_listview_height">240dip</dimen>
+	<dimen name="guide_screeneffect_listview_height_secondtip">285dip</dimen>
+	<dimen name="guide_screeneffect_listview_item_height">43dip</dimen>
+	<dimen name="guide_screeneffect_topline_listview_space">44dip</dimen>
+	<dimen name="guide_screeneffect_listview_button_space">32dip</dimen>
+	<dimen name="guide_screeneffect_topline_listview_space_secondtip">15dip</dimen>
+	<dimen name="guide_screeneffect_listview_button_space_secondtip">15dip</dimen>
+	<dimen name="guide_screeneffect_buttons_settingpath_space_secondtip">15dip</dimen>
+	<dimen name="guide_dock_gesture_topline_pic_space">39dip</dimen>
+	<dimen name="guide_dock_gesture_pic_summery1">58dip</dimen>
+	<dimen name="guide_wallpapersetting_topline_pic_space">18dip</dimen>
+	<dimen name="guide_wallpapersetting_pic_list_space">25dip</dimen>
+	<dimen name="guide_wallpapersetting_list_button_space">15dip</dimen>
+	<dimen name="guide_wallpapersetting_button_summery_space">17dip</dimen>
+	<dimen name="guide_wallpapersetting_list_item_width">260dip</dimen>
+	<dimen name="guide_wallpapersetting_picture_margin">15dip</dimen>
+	<dimen name="guide_wallpapersetting_picture_list_margin">10dip</dimen>
+	<dimen name="guide_menu_button_margin_bottom">70dp</dimen>
+	<dimen name="guide_dock_button_margin_top">40dp</dimen>
+	<dimen name="guide_dock_tip_width">360dp</dimen>
+	<!-- 功能表帮助层 -->
+	<dimen name="guide_appfunc_title_left_margin">20dip</dimen>
+	<dimen name="guide_appfunc_title_line_space">30dip</dimen>
+	<dimen name="guide_appfunc_title_line_land_space">10dip</dimen>
+	<dimen name="guide_appfunc_title_top_margin">15dip</dimen>
+	<dimen name="guide_appfunc_line_img_space">26dip</dimen>
+	<dimen name="guide_appfunc_img_text_space">50dip</dimen>
+	<dimen name="guide_appfunc_img_text_land_space">20dip</dimen>
+	<dimen name="guide_appfunc_point_text_width">12dip</dimen>
+	<dimen name="guide_appfunc_menu_bottom_space">8dip</dimen>
+	<dimen name="guide_appfunc_drag_line_text_space">110dip</dimen>
+	<dimen name="guide_appfunc_drag_texts_space">30dip</dimen>
+	<dimen name="guide_button_width">100dip</dimen>
+	<dimen name="guide_button_height">40dip</dimen>
+	<dimen name="guide_appfunc_drag_btn_line_space">10dip</dimen>
+	<dimen name="guide_appfunc_drag_btn_right_space">20dip</dimen>
+	<dimen name="guide_appfunc_move_to_desk_title_text_space">12dp</dimen>
+
+	<!-- menu2.0 -->
+	<!-- 分割线的宽、高 -->
+	<dimen name="menu_divline_height">33dip</dimen>
+
+	<dimen name="max_message_image_wight">253dip</dimen>
+	<dimen name="message_notify_size">24dip</dimen>
+	<dimen name="recomm_message_notify_size">20dip</dimen>
+	<dimen name="new_message_count_text_size">13dip</dimen>
+
+	<!-- 屏幕添加 -->
+	<dimen name="screen_edit_box_container_normal">130dip</dimen>
+	<dimen name="screen_edit_box_container_gowidgets">226dip</dimen>
+	<dimen name="screen_edit_box_container_app">280dip</dimen>
+	<dimen name="screen_edit_skin_menu_item_height">40dip</dimen>
+	
+	<dimen name="screen_edit_box_height">130dip</dimen>
+	<dimen name="screen_edit_container_height">80dip</dimen>
+	<dimen name="screen_edit_view_height">90dip</dimen>
+	
+	<dimen name="screen_edit_widget_detail_bottom_h">30dip</dimen>
+	<!--  -->
+	<dimen name="screen_edit_widget_botton_margin">16dip</dimen>
+	<dimen name="screen_edit_widget_div_line_height">2.67dip</dimen>
+	<dimen name="screen_edit_widget_pic_padding_top">26.67dip</dimen>
+	<dimen name="screen_edit_subview_widght">130dip</dimen>
+	<dimen name="screen_edit_subview_height">154dip</dimen>
+	
+	<dimen name="screen_edit_subview_pic_widght">126dip</dimen>
+	<dimen name="screen_edit_subview_pic_height">126dip</dimen>
+	<dimen name="screen_edit_appgrid_height">13dip</dimen>
+	<dimen name="screen_edit_appgrid_width">7dip</dimen>
+	<dimen name="screen_edit_indicator_height">20dip</dimen>
+	<dimen name="screen_edit_tabtitle_height">30dip</dimen>
+	
+		
+	
+	
+	<!-- 原大小：	
+	<dimen name="screen_edit_view_width">64dip</dimen> 
+	<dimen name="screen_edit_view_horizontal_space">16dip</dimen>
+	<dimen name="screen_edit_view_vertical_pading">6dip</dimen>-->
+	<dimen name="screen_edit_view_height_app">78dip</dimen>
+	<dimen name="screen_edit_view_width">68dip</dimen>
+	<dimen name="screen_edit_view_padding">6dip</dimen>
+	<dimen name="screen_edit_view_top_padding">5dip</dimen>
+	<dimen name="screen_edit_view_horizontal_space">8dip</dimen>
+	<dimen name="screen_edit_view_vertical_pading">1dip</dimen>
+	
+	<dimen name="screen_edit_view_margin_bottom">11dip</dimen>
+	<dimen name="screen_edit_widget_detail_margin_top">61.3dip</dimen>
+	<dimen name="screen_edit_widget_detail_margin_left">16.7dip</dimen>
+	<dimen name="screen_edit_widget_detail_margin_right">16.7dip</dimen>
+	<dimen name="screen_edit_widget_detail_margin_bottom">50dip</dimen>
+<!-- 	 <dimen name="screen_edit_widget_detail_height">350dip</dimen> -->
+	<dimen name="screen_edit_image_size">56dip</dimen>
+	<dimen name="screen_edit_gowidget_preimage_heght">153dip</dimen>
+	<dimen name="screen_edit_gowidget_detail_top_pading">61dip</dimen>
+	<dimen name="screen_edit_info_top_pading">35dip</dimen>
+	<dimen name="gowidget_title_icon_size">24dip</dimen>
+	<dimen name="screen_edit_image_hight">254dip</dimen>
+	<dimen name="screen_edit_image_width">216dip</dimen>
+    
+    <!-- folder 3.0 -->
+    <dimen name="folder_margin_botton">53dip</dimen>
+    <dimen name="folder_indicator_height">20dip</dimen>
+    
+    <dimen name="folder_mask_height">9.5dip</dimen>
+    <dimen name="folder_mask_wight">14.6dip</dimen>
+    <dimen name="folder_edit_item_height">75dip</dimen>
+    <dimen name="folder_edit_view_height">420dip</dimen>
+    <dimen name="folder_edit_view_width">302dip</dimen>
+    <dimen name="folder_edit_left_padding">11dip</dimen>
+    <dimen name="folder_edit_grid_vspace">4dip</dimen>
+    <dimen name="folder_edit_top_bottom_hight">40dip</dimen>
+    <dimen name="folder_edit_indicator_hight">21dip</dimen>
+    <dimen name="folder_grid_heght">297dip</dimen>
+    <dimen name="folder_modify_name_length">140dip</dimen>
+    
+     <dimen name="apps_management_update_count_text_size">12sp</dimen>
+     
+     
+     <dimen name="app_screen_card_height">47dip</dimen>
+     <dimen name="app_screen_card_width">34dip</dimen>
+     <dimen name="app_screen_card_padding">6dip</dimen>
+     
+     <dimen name="favorite_top">6dp</dimen>
+     <dimen name="favorite_bottom">7dp</dimen>
+     <dimen name="favorite_left">0dp</dimen>
+     <dimen name="favorite_right">0dp</dimen>
+     
+     <!--guide screenfolder tips -->
+     <dimen name="screenfolder_text_tips_to_left">16dp</dimen>
+     <dimen name="screenfolder_img_tips_to_left">40dp</dimen>
+     <dimen name="screenfolder_button_tips_to_left">17.3dp</dimen>
+     <dimen name="screenfolder_title_to_top">34.7dp</dimen>
+     <dimen name="screenfolder_text_to_title">12dp</dimen>
+     <dimen name="screenfolder_img_to_text">58.67dp</dimen>
+     <dimen name="screenfolder_button_to_img_top">53.33dp</dimen>
+     <dimen name="screenfolder_button_width">125.3dp</dimen>
+     <dimen name="screenfolder_button_height">34.67dp</dimen>
+     <dimen name="screenfolder_title_to_top_land">48dp</dimen>
+     <dimen name="screenfolder_text_tips_to_left_land">22.67dp</dimen>
+     <dimen name="screenfolder_img_tips_to_left_land">22.67dp</dimen>
+     <dimen name="screenfolder_button_tips_to_left_land">22.67dp</dimen>
+     <dimen name="screenfolder_img_to_text_land">23.33dp</dimen>
+     <dimen name="screenfolder_button_to_img_top_land">16dp</dimen>
+     <!--guide screen edit tips -->
+     <dimen name="screenedit_title_marginleft">20dp</dimen>
+     <dimen name="screenedit_button_marginleft">12dp</dimen>
+     <dimen name="screenedit_light_circle_radius">30dp</dimen>
+     <dimen name="screenedit_next_page_title_margintop">202.67dp</dimen>
+     <dimen name="screenedit_next_page_trash_image_margintop">28dp</dimen>
+     <dimen name="screenedit_next_page_button_to_tips_margintop">28dp</dimen>
+     <dimen name="screenedit_next_page_title_margintop_land">160dp</dimen>
+     <dimen name="screenedit_next_page_trash_image_margintop_land">36dp</dimen>
+     <dimen name="screenedit_next_page_button_to_tips_margintop_land">17.33dp</dimen>
+     <dimen name="screenedit_wall_default_lay_height">60dp</dimen>
+     <dimen name="screenedit_wall_default_IMV_left_magrin">8dp</dimen>
+     <dimen name="screenedit_wall_cut_setting_height">220dp</dimen>
+     
+     <dimen name="recommend_icon_size">43.3dip</dimen>
+     <dimen name="recommend_top_size">100dip</dimen>
+     <dimen name="recommend_grid_item_height">80dip</dimen>
+     <dimen name="recommend_grid_item_vspace">16.6dip</dimen>
+     <dimen name="recommend_grid_margin_top">21.3dip</dimen>
+     <dimen name="recommend_view_bottom_height">53dip</dimen>
+     <dimen name="recommend_grid_bottom_padding">12dip</dimen>
+     <dimen name="recommend_applybtn_drawablepadding">-44dip</dimen>
+     <dimen name="recommend_applybtn_left_padding">48.3dip</dimen>
+     <dimen name="gosotre_download_progressbar_length">153.3dp</dimen>
+     
+     <dimen name="recomm_apps_management_update_count_text_size">10.7sp</dimen>
+     
+     <dimen name="changet_icon_theme_menu_width">191dp</dimen>
+     <dimen name="changet_icon_theme_menu_item_height">39dp</dimen>
+     
+     <!-- 媒体文件打开方式选择界面 -->
+     <dimen name="media_open_dialog_height">420dip</dimen>
+     <dimen name="media_open_dialog_width">302dip</dimen>
+     <dimen name="media_open_dialog_listitem_height">60dip</dimen>
+     <dimen name="media_open_dialog_top_height">48dip</dimen>
+     <dimen name="media_open_dialog_bottom_height">40dip</dimen>
+     <dimen name="media_open_dialog_edittext_height">72dip</dimen>
+     
+     <!-- 媒体默认打开方式设置界面 -->
+     <dimen name="media_open_setting_title_paddingleft">13dip</dimen>
+     <!-- 媒体默认打开方式设置界面-END-->
+     
+    <!-- 自定义手势 -->
+   	<dimen name="overlayview_height">238dip</dimen>
+    <dimen name="overlayview_width">298dip</dimen>
+   	<dimen name="draw_result_imageview_height">184dip</dimen> 
+   	<dimen name="gesture_stroke_width">4dip</dimen>
+   	<dimen name="gesture_preview_width">1.66dip</dimen>
+   	<dimen name="gesture_ui_layout_height">353dip</dimen>
+   	<dimen name="gesture_title_text_size">14.6sp</dimen>
+   	<dimen name="gesture_conflict_view_height">80dip</dimen>
+   	<dimen name="gesture_select_last_move_height">-30dip</dimen>
+   	
+    <!-- 自定义手势-END -->
+    
+    <!-- 音乐播放列表 -->
+    <dimen name="playlist_delete_confirm_dialog_height">200dip</dimen>
+    <dimen name="playlist_delete_confirm_dialog_width">300dip</dimen>   
+    
+    <dimen name="playlist_delete_add_dialog_height">300dip</dimen>
+    <dimen name="playlist_delete_add_dialog_nodata_height">180dip</dimen>
+    <dimen name="playlist_delete_add_dialog_width">300dip</dimen>  
+    <!-- 音乐播放列表-END -->
+	
+	<!-- 功能表搜索 -->  
+    <dimen name="appfunc_search_editor_height">36dip</dimen>
+    <!-- 单选对话框 -->
+     <dimen name="single_choice_dialog_height">300dip</dimen>
+    <dimen name="single_choice_dialog_width">300dip</dimen>  
+    <dimen name="messagecenter_webview_width">302dip</dimen>
+    <dimen name="messagecenter_webview_height">420dip</dimen>
+    
+    <!-- 应用游戏中心设置 -->
+    <dimen name="appgame_menu_width">280dip</dimen>
+    <dimen name="appgame_menu_item_height">40dip</dimen>
+    <dimen name="appkits_title_padding">13dp</dimen>
+    <!-- 应用游戏中心widget的高度 -->
+     <dimen name="appgame_widget_layout_height">100dip</dimen>
+     <dimen name="appgame_widget_layout_margin">10dip</dimen>
+      
+    <!-- 应用游戏中心的按钮文件大小 -->
+     <dimen name="appgame_textSize_cn">9dip</dimen>
+     <dimen name="appgame_textSize_es">8dip</dimen>     
+     <!-- 应用游戏中心启动loading页 -->
+     <dimen name="appgame_startloading_image_width">233.333333dp</dimen>
+     <dimen name="appgame_startloading_image_height">246.666666667dp</dimen>
+     <dimen name="appgame_startloading_image_topmargin">50dp</dimen>
+     <dimen name="appgame_startloading_title_size">24dp</dimen>
+     <dimen name="appgame_startloading_title_topmargin">8dp</dimen>
+     <dimen name="appgame_startloading_desc_size">12.666666666667dp</dimen>
+     <dimen name="appgame_startloading_desc_topmargin">17.33333333333dp</dimen>
+     <dimen name="appgame_startloading_progress_width">20dp</dimen>
+     <dimen name="appgame_startloading_progress_height">20dp</dimen>
+     <dimen name="appgame_startloading_progress_topmargin">16.66666667dp</dimen>
+     <dimen name="appgame_startloading_copyright_bottommargin">15dp</dimen>
+     <dimen name="appgame_startloading_copyright_size">11.33333333dp</dimen>
+    <!-- 下载管理的字体间隔 -->
+    <dimen name="download_manager_text_margin">16dip</dimen>
+    <dimen name="download_manager_text_padding">4dip</dimen>
+     
+      <!-- GoStore 4*1widget -->
+     <dimen name="gostore_41_widget_height">100dip</dimen>
+     <dimen name="gostore_41_widget_container_h">56dip</dimen>
+     <dimen name="gostore_41_widget_container_half_h">28dip</dimen>
+     <dimen name="gostore_41_widget_bottom_menu_h">28dip</dimen>
+     <dimen name="gostore_41_widget_icon_padding">3dip</dimen>
+     <dimen name="gostore_41_widget_icon_height">48dip</dimen>
+     <dimen name="gostore_41_widget_banner_space">20dip</dimen>
+     <dimen name="gostore_41_widget_icon_size">40dip</dimen>
+     <dimen name="gostore_41_widget_listitem_left_padding">8dip</dimen>
+     <dimen name="gostore_41_widget_banner_width">103dip</dimen>
+     
+     
+    <!-- 行列数自适应 -->
+    <dimen name="cell_width_port_auto_fit">76dip</dimen>
+    <dimen name="cell_height_port_auto_fit">90dip</dimen>
+     
+     <dimen name="theme_paid_getbtn_height">22dip</dimen>
+     
+     <dimen name="appfunc_custom_grid_dialog_margine_top">6dip</dimen>
+	 <dimen name="appfunc_custom_grid_dialog_seek_bar_margine">8dip</dimen>
+     
+     <!-- BEGIN 自定义设置 -->
+     <dimen name="desk_setting_pagetitle_height">48dip</dimen>
+     <dimen name="desk_setting_pagetitle_font_size">20sp</dimen>
+     <dimen name="desk_setting_pagetitle_line_height">3dip</dimen>
+     <dimen name="desk_setting_visual_pagetitle_line_height">1dip</dimen>
+     <dimen name="desk_setting_visual_tab_icon_frame_width">200dip</dimen>
+     <dimen name="desk_setting_visual_tab_icon_text_width">48dip</dimen>
+     <dimen name="desk_setting_visual_tab_background_wallpaperpic_height">80dip</dimen>
+     
+     <dimen name="desk_setting_page_title_image_width">40dip</dimen>
+	 <dimen name="desk_setting_tab_options_height">48dip</dimen>
+	 <dimen name="desk_setting_tab_text_size">16sp</dimen>
+	 
+	 <dimen name="desk_setting_gosetting_item_height">60dip</dimen>
+	 
+	 <dimen name="desk_setting_view_padding">16dip</dimen>
+	 <dimen name="desk_setting_title_padding_left">8dip</dimen>
+	 <dimen name="desk_setting_title_text_default_size">13.3sp</dimen>
+	 <dimen name="desk_setting_item_title_text_default_size">16sp</dimen>
+	 <dimen name="desk_setting_item_summary_text_default_size">12sp</dimen>
+	 <dimen name="desk_setting_checkbox_padding_right">16dip</dimen>
+	 <dimen name="desk_setting_checkbox_width">26dip</dimen>
+	 <dimen name="desk_setting_checkbox_button_padding_right">16dip</dimen>
+	 <dimen name="desk_setting_checkbox_button_width">53.4dip</dimen>
+	 
+	 <dimen name="desk_setting_main_text_size">17.3sp</dimen>
+	 <dimen name="desk_setting_dialog_button_height">40.67dp</dimen>
+	  
+	 <dimen name="desk_setting_single_button_height">40dip</dimen>
+	 <dimen name="desk_setting_single_button_with_checkbox_height">93dip</dimen>
+     <dimen name="dialog_padding_width">18dip</dimen>
+     <!-- END 自定义设置 -->
+	 
+	 <dimen name="appfunc_quick_add_folder_padding_top">3dip</dimen>
+	 <dimen name="appfunc_quick_add_folder_size">45.3dip</dimen>
+	 <dimen name="appfunc_quick_add_folder_grid_size">68.6dip</dimen>
+	 <dimen name="appfunc_quick_add_folder_text_size">10dip</dimen>
+	 <dimen name="appfunc_quick_add_folder_icon_text_dst">0dip</dimen>
+	 
+	 <!-- 应用中心 列表项 左右间距 -->
+	 <dimen name="appcenter_list_item_padding">10.33333dp</dimen>
+	 <dimen name="theme_list_banner_height">66dip</dimen>	 
+	 <dimen name="theme_spec_page_title_group_height">120dip</dimen>
+
+	 <!-- dock添加图标 -->
+	 <dimen name="dock_add_view_view_height">392dip</dimen>
+	 <dimen name="dock_add_view_view_height_default">242dip</dimen>
+	 
+	 <!-- 截屏相关 -->
+	 <dimen name="snapshot_tutorial_padding">4dp</dimen>
+	 
+	 <!-- 应用中心详情页缩略图相关 -->
+	 <dimen name="app_detail_scroll_view_width">173dp</dimen>
+	 <dimen name="app_detail_scroll_view_height">280dp</dimen>
+	 <dimen name="app_detail_gostore_scroll_height">291dp</dimen>
+	 
+	 <!-- 应用游戏中心主题详情padding -->
+	 <!-- 应用游戏中心主题详情 -->
+    <dimen name="item_height">324dp</dimen>
+    <dimen name="item_width">206.67dp</dimen>
+    <dimen name="indicator_hight">23.33dp</dimen>
+    <dimen name="button_layout_hight">56.67dp</dimen>
+    <dimen name="button_hight">33.33dp</dimen>
+    <dimen name="item_height_noneions">353.33dp</dimen>
+    <dimen name="item_width_noneicons">216.67dp</dimen>
+    <dimen name="indicator_hight_noneicons">33.33dp</dimen>
+    <dimen name="button_layout_hight_noneicons">68dp</dimen>
+    <dimen name="button_hight_noneicons">34.67dp</dimen>
+    <dimen name="icons_height">60dp</dimen>
+    
+    <!-- facebook相关 -->
+    <dimen name="facebook_guide_toppic_margintop">47dp</dimen>
+    <dimen name="facebook_guide_contend1_margintop">53dp</dimen>
+    <dimen name="facebook_guide_contend2_margintop">27dp</dimen>
+    <dimen name="facebook_guide_button_margintop">40dp</dimen>
+    <dimen name="facebook_guide_summury_margintop">36dp</dimen>
+    <dimen name="touchhelper_download_guide_title_margin_top">16dp</dimen>
+    <dimen name="touchhelper_download_guide_title_size">28sp</dimen>
+    <dimen name="touchhelper_download_button_text_size">14sp</dimen>
+    <dimen name="touchhelper_download_button_width">220dp</dimen>
+    <dimen name="touchhelper_download_button_height">49dp</dimen>
+    
+    <dimen name="locker_tip_height">66.67dp</dimen>
+    <dimen name="locker_tip_margin_top">93.33dp</dimen>
+    <dimen name="locker_tip_margin_right">0dp</dimen>
+    
+    <!-- 功能表图标大小 -->
+	<dimen name="appfunc_folder_icon_size_large">86dip</dimen>
+	<dimen name="appfunc_folder_icon_size">80dip</dimen>
+</resources>

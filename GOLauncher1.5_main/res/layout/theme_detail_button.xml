@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:layout_gravity="center"
+  android:background="@drawable/mytheme_bottom_bg">
+  
+  <LinearLayout
+     android:id="@+id/linear_update"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:layout_weight="1" 
+     android:gravity="center"
+     android:visibility="gone">
+	   <com.jiubang.ggheart.components.DeskButton 
+	  	android:id="@+id/theme_update"
+	  	android:text="@string/theme_pages_update"
+	  	android:textSize="13sp"
+	  	android:textColor="@color/theme_detail_apply_text"
+	  	android:layout_width="107dip"
+	  	android:layout_height="38dip"
+	  	android:background="@drawable/mytheme_button_bg_selector"
+	  	android:drawableLeft="@drawable/theme_detail_apply"
+	  	android:paddingLeft="11dip"
+	  	/>
+  	</LinearLayout>
+  <LinearLayout
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:layout_weight="1" 
+      android:gravity="center">	
+	   <com.jiubang.ggheart.components.DeskButton 
+	  	android:id="@+id/theme_apply"
+	  	android:text="@string/theme_pages_apply"
+	  	android:textSize="13sp"
+	  	android:textColor="@color/theme_detail_apply_text"
+	  	android:layout_width="107dip"
+	  	android:layout_height="38dip"
+	  	android:background="@drawable/apply_theme_button_bg_selector"
+	  	android:drawableLeft="@drawable/theme_detail_apply"
+	  	android:paddingLeft="11dip"
+	  	/>
+  	</LinearLayout>
+  	
+</LinearLayout>

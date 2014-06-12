@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.appgame.base.component.AppsManagementCleanHistoryView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/clean_history_relativelayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/listline" />
+
+    <Button
+        android:id="@+id/clean_history_button"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/imageView1"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/appgame_install_btn_selector"
+        android:gravity="center"
+        android:text="@string/appgame_clean_search_history"
+        android:textColor="#FF535353"
+        android:textSize="16dp" />
+
+</com.jiubang.ggheart.appgame.base.component.AppsManagementCleanHistoryView>

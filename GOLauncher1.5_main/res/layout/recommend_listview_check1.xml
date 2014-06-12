@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/center_background"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/Recommend_relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/Recommend_icon1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/default_icon" />
+
+            <RelativeLayout
+                android:id="@+id/Recommend_textLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Recommend_icon1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="1dp" >
+
+                <TextView
+                    android:id="@+id/Recommend_appname1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Recommend_icon1"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="top|center"
+                    android:maxLines="2"
+                    android:textColor="#535353"
+                    android:textSize="10.6dp" />
+
+                <TextView
+                    android:id="@+id/Recommend_progressTextView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Recommend_icon1"
+                    android:layout_centerHorizontal="true"
+                    android:singleLine="true"
+                    android:textColor="#8ec000"
+                    android:textSize="13.3dp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="1px"
+                android:layout_height="1px"
+                android:layout_below="@+id/Recommend_icon1"
+                android:layout_marginTop="39dp" />
+
+            <ImageView
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="#e0e0e0" />
+
+            <TextView
+                android:id="@+id/Recommend_size1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Recommend_textLayout1"
+                android:layout_centerHorizontal="true"
+                android:singleLine="true"
+                android:textColor="#535353"
+                android:textSize="10.6dp" />
+
+            <ProgressBar
+                android:id="@+id/Recommend_progressbar1"
+                style="@style/AppsManagementProgressBarStyle"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Recommend_textLayout1"
+                android:layout_centerHorizontal="true"
+                android:max="100"
+                android:visibility="gone" >
+            </ProgressBar>
+
+            <ImageView
+                android:id="@+id/Recommend_checkbox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="3.3dp"
+                android:layout_marginRight="3.3dp"
+                android:src="@drawable/yjzj_selected" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/Recommend_relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/Recommend_icon2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/default_icon" />
+
+            <RelativeLayout
+                android:id="@+id/Recommend_textLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Recommend_icon2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="1dp" >
+
+                <TextView
+                    android:id="@+id/Recommend_appname2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Recommend_icon2"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="top|center"
+                    android:maxLines="2"
+                    android:textColor="#535353"
+                    android:textSize="10.6dp" />
+
+                <TextView
+                    android:id="@+id/Recommend_progressTextView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Recommend_icon2"
+                    android:layout_centerHorizontal="true"
+                    android:singleLine="true"
+                    android:textColor="#8ec000"
+                    android:textSize="13.3dp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="1px"
+                android:layout_height="1px"
+                android:layout_below="@+id/Recommend_icon2"
+                android:layout_marginTop="39dp" />
+
+            <ImageView
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="#e0e0e0" />
+
+            <TextView
+                android:id="@+id/Recommend_size2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Recommend_textLayout2"
+                android:layout_centerHorizontal="true"
+                android:singleLine="true"
+                android:textColor="#535353"
+                android:textSize="10.6dp" />
+
+            <ProgressBar
+                android:id="@+id/Recommend_progressbar2"
+                style="@style/AppsManagementProgressBarStyle"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Recommend_textLayout2"
+                android:layout_centerHorizontal="true"
+                android:max="100"
+                android:visibility="gone" >
+            </ProgressBar>
+
+            <ImageView
+                android:id="@+id/Recommend_checkbox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="3.3dp"
+                android:layout_marginRight="3.3dp"
+                android:src="@drawable/yjzj_selected" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/Recommend_relativeLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" >
+
+            <ImageView
+                android:id="@+id/Recommend_icon3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/default_icon" />
+
+            <RelativeLayout
+                android:id="@+id/Recommend_textLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Recommend_icon3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="1dp" >
+
+                <TextView
+                    android:id="@+id/Recommend_appname3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Recommend_icon3"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="top|center"
+                    android:maxLines="2"
+                    android:textColor="#535353"
+                    android:textSize="10.6dp" />
+
+                <TextView
+                    android:id="@+id/Recommend_progressTextView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Recommend_icon3"
+                    android:layout_centerHorizontal="true"
+                    android:singleLine="true"
+                    android:textColor="#8ec000"
+                    android:textSize="13.3dp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="1px"
+                android:layout_height="1px"
+                android:layout_below="@+id/Recommend_icon3"
+                android:layout_marginTop="39dp" />
+
+            <ImageView
+                android:layout_width="1px"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="#e0e0e0" />
+
+            <TextView
+                android:id="@+id/Recommend_size3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Recommend_textLayout3"
+                android:layout_centerHorizontal="true"
+                android:singleLine="true"
+                android:textColor="#535353"
+                android:textSize="10.6dp" />
+
+            <ProgressBar
+                android:id="@+id/Recommend_progressbar3"
+                style="@style/AppsManagementProgressBarStyle"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Recommend_textLayout3"
+                android:layout_centerHorizontal="true"
+                android:max="100"
+                android:visibility="gone" >
+            </ProgressBar>
+
+            <ImageView
+                android:id="@+id/Recommend_checkbox3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="3.3dp"
+                android:layout_marginRight="3.3dp"
+                android:src="@drawable/yjzj_selected" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/Recommend_relativeLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" >
+
+            <ImageView
+                android:id="@+id/Recommend_icon4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/default_icon" />
+
+            <RelativeLayout
+                android:id="@+id/Recommend_textLayout4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Recommend_icon4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="1dp" >
+
+                <TextView
+                    android:id="@+id/Recommend_appname4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Recommend_icon4"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="top|center"
+                    android:maxLines="2"
+                    android:textColor="#535353"
+                    android:textSize="10.6dp" />
+
+                <TextView
+                    android:id="@+id/Recommend_progressTextView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Recommend_icon4"
+                    android:layout_centerHorizontal="true"
+                    android:singleLine="true"
+                    android:textColor="#8ec000"
+                    android:textSize="13.3dp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="1px"
+                android:layout_height="1px"
+                android:layout_below="@+id/Recommend_icon4"
+                android:layout_marginTop="39dp" />
+
+            <TextView
+                android:id="@+id/Recommend_size4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Recommend_textLayout4"
+                android:layout_centerHorizontal="true"
+                android:singleLine="true"
+                android:textColor="#535353"
+                android:textSize="10.6dp" />
+
+            <ProgressBar
+                android:id="@+id/Recommend_progressbar4"
+                style="@style/AppsManagementProgressBarStyle"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Recommend_textLayout4"
+                android:layout_centerHorizontal="true"
+                android:max="100"
+                android:visibility="gone" >
+            </ProgressBar>
+
+            <ImageView
+                android:id="@+id/Recommend_checkbox4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="3.3dp"
+                android:layout_marginRight="3.3dp"
+                android:src="@drawable/yjzj_selected" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

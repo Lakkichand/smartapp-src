@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.desks.Preferences.view.TitlePagerActionBar 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:PagerActionBar="http://schemas.android.com/apk/res/com.gau.go.launcherex"
+    android:id="@+id/titlepagebar"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    PagerActionBar:selected_title_text_color="#ff81ab01"
+    PagerActionBar:title_text_color="#8ab800"
+    PagerActionBar:selector_color="#000f6bb0"
+    PagerActionBar:title_text_size="14.67sp"
+    PagerActionBar:header_padding="9dip"
+    PagerActionBar:footer_padding="9dip"
+    android:background="@drawable/recomm_apps_management_tab_bg">
+</com.jiubang.ggheart.apps.desks.Preferences.view.TitlePagerActionBar>

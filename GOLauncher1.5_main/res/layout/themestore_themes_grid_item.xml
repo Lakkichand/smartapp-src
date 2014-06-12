@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.gowidget.gostore.views.ThemesGridItem xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    android:descendantFocusability="blocksDescendants"
+    android:visibility="invisible" >
+
+    <RelativeLayout
+        android:id="@+id/countImageView"
+        android:layout_width="81.74dip"
+        android:layout_height="128.64dip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10.05dip"
+        android:background="@drawable/gostore_theme_grid_imagebg"
+        android:padding="3dip" >
+
+        <com.jiubang.ggheart.apps.gowidget.gostore.component.SimpleImageView
+            android:id="@+id/itemIconImageView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/itemNameTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/theme_title_bg"
+            android:gravity="center_horizontal|bottom"
+            android:singleLine="true"
+            android:textColor="#ffffffff"
+            android:textSize="13.33sp" />
+    </RelativeLayout>
+
+   <!--   <RelativeLayout
+        android:id="@+id/ControlRelativeLayout"
+        android:layout_width="95dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/countImageView"
+        android:layout_centerHorizontal="true" >
+
+             <LinearLayout
+            android:id="@+id/download_progress_layout"
+            android:layout_width="81.74dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/itemNameTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2.2dip"
+            android:orientation="vertical" >
+
+            <ProgressBar
+                android:id="@+id/list_download_progress"
+                style="@style/ThemeDownloadProgressBarStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="2.01dp"
+                android:layout_gravity="center_vertical"
+                android:max="100" />
+        </LinearLayout>
+        -->
+        <!--  
+        <RelativeLayout
+            android:id="@+id/priceView"
+            android:layout_width="95dip"
+            android:layout_height="30dip"
+            android:paddingTop="3.35dip" 
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+      	    android:layout_below="@id/countImageView">
+		-->
+            <!--
+                 <ImageView
+                android:id="@+id/priceImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/gostore_price_download"
+                android:paddingLeft="6dip"
+                android:gravity="center" />
+            -->
+
+            <TextView
+                android:id="@+id/priceTextView"
+                android:layout_width="82dip"
+                android:layout_height="28.14dip"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/theme_paid_free"
+                android:gravity="center_horizontal"
+                android:layout_alignParentBottom="true"
+                android:textSize="11sp" 
+                android:layout_below="@id/countImageView"
+                android:layout_marginTop="3.35dip"/>
+      <!--  </RelativeLayout> -->
+
+       <!--   <LinearLayout
+            android:id="@+id/download_progress_layout"
+            android:layout_width="95dip"
+            android:layout_height="30dip"
+            android:gravity="center_horizontal"
+            android:paddingTop="3.35dip"
+            android:layout_alignParentBottom="true"
+      	    android:layout_below="@id/countImageView"
+      	    android:layout_centerHorizontal="true"
+            android:visibility="gone" >
+		-->
+            <ProgressBar
+                android:id="@+id/list_download_progress"
+                style="@style/ThemeDownloadProgressBarStyle"
+                android:layout_width="77.72dip"
+                android:layout_height="9.38dip"
+                android:gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10.31dip"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/countImageView"
+                android:max="100" 
+                android:visibility="gone"/>
+       <!--   </LinearLayout> -->
+    <!--  </RelativeLayout> -->
+
+</com.jiubang.ggheart.apps.gowidget.gostore.views.ThemesGridItem>

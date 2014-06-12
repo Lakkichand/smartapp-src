@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/center_background" >
+
+    <RelativeLayout
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/center_background" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/appgame_titlebar_bg" >
+
+            <ImageButton
+                android:id="@+id/yjzj_back"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:background="@drawable/apps_management_back_select"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:src="@drawable/app_center_back" />
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/yjzj_back"
+                android:text="@string/recommended_yjzj"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#393939"
+                android:textSize="17dp" />
+
+            <ImageButton
+                android:id="@+id/download_manager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/apps_management_back_select"
+                android:src="@drawable/app_center_download" />
+
+            <!--
+        <ImageButton
+            android:id="@+id/app_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/download_manager"
+            android:background="@drawable/apps_management_back_select"
+            android:src="@drawable/app_center_icon" />
+            -->
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.jiubang.ggheart.appgame.appcenter.component.PinnedHeaderListView
+        android:id="@+id/recommend_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_view"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/top_view"
+        android:cacheColorHint="#55FFFFFF"
+        android:fadingEdge="none"
+        android:divider="@drawable/listview_divider"
+        android:fadeScrollbars="true"
+        android:listSelector="@color/transparent_background"
+        android:visibility="gone" >
+    </com.jiubang.ggheart.appgame.appcenter.component.PinnedHeaderListView>
+
+    <RelativeLayout
+        android:id="@+id/progress_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_view"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/top_view"
+        android:cacheColorHint="#77ffffff" >
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_view"
+        android:layout_width="fill_parent"
+        android:layout_height="56dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/yjzj_bottom" >
+
+        <LinearLayout
+            android:id="@+id/gotocenterLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/gotocenter"
+                android:layout_width="126.7dp"
+                android:layout_height="37dp"
+                android:layout_gravity="center"
+                android:background="@drawable/yzjz_white_button"
+                android:text="@string/softmanager_titile"
+                android:textColor="#FF535353"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/apply"
+                android:layout_width="126.7dp"
+                android:layout_height="37dp"
+                android:layout_gravity="center"
+                android:background="@drawable/yjzi_btn_disable"
+                android:text="@string/recommended_install"
+                android:textColor="@color/appgame_download_btn_black"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

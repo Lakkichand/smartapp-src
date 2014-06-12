@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <string-array name="wallpaperlist">
+	<item>default_wallpaper</item>
+  </string-array>
+  <string-array name="backgroundlist">
+  	<item>appdrawer_bg</item>
+  </string-array>
+  
+  <string-array name="gesture_values">
+    <item>0</item>
+    <item>8</item>
+    <item>1</item>
+    <item>-1</item>
+ </string-array>
+ <string-array name="gesture_goshortcut_value">
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
+    <item>6</item>
+    <item>7</item>
+    <item>9</item>
+    <item>10</item>
+    <item>11</item>
+    <item>12</item>
+    <item>13</item>
+    <item>14</item>
+    <item>15</item>
+    <item>16</item>
+    <item>17</item>
+    <item>18</item>
+  </string-array>
+  <string-array name="scroll_list_value">
+    <item>0</item>
+    <item>1</item>
+  </string-array>
+  <string-array name="grid_list_value">
+    <item>1</item>
+    <item>2</item>
+    <item>4</item>
+    <item>3</item>
+    <item>5</item>
+    <item>6</item>
+  </string-array>
+  <string-array name="qvga_grid_list_value">
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>5</item>
+    <item>4</item>
+    <item>6</item>
+  </string-array>
+  
+  <string-array name="fun_app_rows_cols_value">
+    <item>1</item>
+    <item>2</item>
+    <item>4</item>
+    <item>3</item>
+    <item>0</item>
+    <item>5</item>
+  </string-array>
+  
+  <string-array name="qvga_fun_app_rows_cols_value">
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>0</item>
+    <item>5</item>
+  </string-array>
+  
+  
+  <string-array name="inout_list_value">
+    <item>1</item>
+    <item>6</item>
+    <item>0</item>
+    <item>3</item>
+    <item>2</item>
+    <item>4</item>
+    <item>5</item>
+    <item>-1</item>
+  </string-array>
+    <string-array name="screen_rows_cols_value">
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+  </string-array>
+  <string-array name="dock_style_value">
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+  </string-array>
+  <string-array name="dock_row_count">
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+  </string-array>
+  <string-array name="dock_row_value">
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+  </string-array>
+  
+  <!-- 拨号识别数组 -->
+  <string-array name="notifiction_dialers_array">
+  	<item>dialer</item>
+  	<item>Dialer</item>
+  	<item>android.intent.action.DIAL</item>
+  	<item>DialtactsActivity</item>
+  	<item>com.jbapps.contact/.ui.MainEntry</item>
+  	<item>com.jbapps.contactpro/.ui.MainEntry</item>
+  </string-array>
+  
+  <!-- 短信缺省识别数组 -->
+  <string-array name="notification_default_sms_array">
+  	<!-- 系统短信一般会包含的字符串 -->
+	<item>messaging</item>
+	<!-- 特殊第三方短信程序 -->
+	<item>ui.ConversationList</item>  
+  </string-array>
+  
+  <!-- 短信完整识别数组  -->
+  <string-array name="notification_full_sms_array">
+  	<!-- 系统短信一般会包含的字符串 -->
+	<item>com.android.mms</item>
+	<!-- 特殊第三方短信程序 -->
+	<item>com.jb.mms</item>
+	<item>com.jb.gosms</item>
+	<item>com.handcent.nextsms</item>
+	<item>com.p1.chompsms</item>  
+  </string-array>
+
+	<!-- Gmail识别数组 -->
+	<string-array name="notification_gmail_array">
+		<item>com.google.android.gm</item>
+	</string-array>
+	
+	<!-- K9mail识别数组 -->
+	<string-array name="notification_k9mail_array">
+		<item>com.fsck.k9</item>
+	</string-array>
+	
+	<!-- Facebook识别数组 -->
+	<string-array name="notification_facebook_array">
+		<item>com.facebook.katana</item>
+	</string-array>
+	
+	<!-- Sina识别数组 -->
+	<string-array name="notification_sinaweibo_array">
+	    <item>com.sina.weibo</item>
+	</string-array>
+	
+	<string-array name="dock_bg_type_entry_value">
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+    <!-- >item>3</item--> 
+  	</string-array>
+  	
+	<string-array name="wallpaper_bg_type_entry_value">
+    <item>0</item>
+    <item>1</item>
+  	</string-array>
+  	
+  	
+  	<!-- 0和1以前的版本使用 默认主题和go主题合并为一项 -->
+  	<string-array name="appfunc_bg_type_entry_value">
+    <item>2</item>
+    <item>4</item>
+    <item>5</item>
+  	</string-array>
+  	
+    <string-array name="screen_transition_value">
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+  </string-array>
+  <string-array name="orientation_value">
+    <item>0</item>
+    <item>1</item>
+    <item>3</item>
+    <item>2</item>
+  </string-array>
+  
+  <string-array name="heap_value">
+    <item>32</item>
+    <item>48</item>
+    <item>64</item>
+  </string-array>
+  
+  <string-array name="wallpaper_value">
+    <item>1</item>
+    <item>0</item>
+  </string-array>
+  
+  <string-array name="icon_size_setting_value">
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+  </string-array>
+  
+  <string-array name="font_size_value">
+    <item>1</item>
+    <item>2</item>
+  </string-array>
+  
+  <string-array name="screen_indicator_showmode_values">
+	<item>com.gau.go.launcherex</item>
+	<item>Numeric Style</item>
+  </string-array>  
+  
+    <string-array name="screen_indicator_position_values">
+	<item>top</item>
+	<item>bottom</item>
+  </string-array>  
+  
+   <string-array name="screen_indicator_values">
+	<item>Show</item>
+	<item>Hide</item>
+	<item>Auto-hide</item>
+  </string-array>  
+  
+  <!-- 使用帮助不同语言对应的不同页面 -->
+  <string-array name="help_pages_names_cn_ch">
+	<item>golauncher_help_desk_performance_zh_cn.HTML</item>
+	<item>golauncher_help_desk_vision_zh_cn.HTML</item>
+	<item>golauncher_help_desk_operation_zh_cn.HTML</item>
+  </string-array>  
+  
+  <string-array name="help_pages_names_en_us">
+	<item>golauncher_help_desk_performance_en_us.HTML</item>
+	<item>golauncher_help_desk_vision_en_us.HTML</item>
+	<item>golauncher_help_desk_operation_en_us.HTML</item>
+  </string-array> 
+   
+  <string-array name="help_pages_names_cn_hk">
+	<item>golauncher_help_desk_performance_zh_hk.HTML</item>
+	<item>golauncher_help_desk_vision_zh_hk.HTML</item>
+	<item>golauncher_help_desk_operation_zh_hk.HTML</item>
+  </string-array>  
+  
+  <string-array name="widget_pages_names_cn_ch">
+	<item>golauncher_help_gowidget_zh_cn.HTML</item>
+  </string-array>  
+  
+  <string-array name="widget_pages_names_en_us">
+	<item>golauncher_help_gowidget_en_us.HTML</item>
+  </string-array> 
+  
+  <string-array name="widget_pages_names_cn_hk">
+	<item>golauncher_help_gowidget_zh_hk.HTML</item>
+  </string-array> 
+  
+  <string-array name="locker_pages_names_cn_ch">
+	<item>golauncher_help_golock_zh_cn.HTML</item>
+  </string-array>  
+  
+  <string-array name="locker_pages_names_en_us">
+	<item>golauncher_help_golock_en_us.HTML</item>
+  </string-array> 
+  
+  <string-array name="locker_pages_names_cn_hk">
+	<item>golauncher_help_golock_zh_hk.HTML</item>
+  </string-array> 
+   
+   
+   
+   
+  <!-- 使用帮助支持的语言 -->
+   <string-array name="help_support_languages">
+	<item>zh-CN</item>
+	<item>en-US</item>
+	<item>zh-HK</item>
+	<item>zh-TW</item>
+  </string-array> 
+  <!-- 更多应用识别数组 -->
+	<string-array name="notification_more_app_array">
+		<item>com.tencent.mm</item><!-- 微信 -->
+		<item>com.gtomato.talkbox</item><!-- TalkBox -->
+		<item>com.kaitenmail</item><!-- kaitenmail -->
+		<item>com.whatsapp</item><!-- whatsapp -->
+		<item>com.skype.rover</item><!-- skype -->
+		<item>com.skype.raider</item><!-- skype -->
+		<item>com.kakao.talk</item><!-- kakaotalk -->
+		<item>com.yahoo.mobile.client.android.mail</item><!-- yahoomail -->
+		<item>com.hotmail.Z7</item><!-- hotmail -->
+		<item>com.tencent.qq</item><!-- QQ -->
+		<item>com.tencent.mobileqq</item><!-- QQ 2012-->
+		<item>com.viber.voip</item><!-- Viber -->
+		<item>com.twitter.android</item><!-- twitter -->
+		<item>com.google.android.talk</item><!-- google talk -->
+		<item>com.google.android.apps.googlevoice</item><!-- google voice -->
+		<item>com.android.email</item><!-- google email -->
+		<item>com.htc.android.mail</item><!-- htc google email -->
+		<item>com.facebook.katana</item><!-- facebook -->
+		<item>com.instagram.android</item><!-- Instagram -->
+		<item>jp.naver.line.android</item><!-- LINE -->
+		<item>kik.android</item><!-- Kik Messenger -->
+		<item>com.sec.chaton</item><!-- ChatON -->
+		<item>com.facebook.orca</item><!-- 移动即时通 -->
+	</string-array>
+</resources>

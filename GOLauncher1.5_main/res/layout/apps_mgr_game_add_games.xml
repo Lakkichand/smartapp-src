@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contentview"
+    android:layout_width="@dimen/folder_edit_view_width"
+    android:layout_height="@dimen/folder_edit_view_height"
+    android:background="@drawable/folder_edit_bg"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/folder_edit_top_bottom_hight"
+        android:background="@drawable/folder_top_bg"
+        android:orientation="horizontal" >
+        <com.jiubang.ggheart.components.DeskTextView
+            android:id="@+id/name"
+            android:layout_width="@dimen/folder_modify_name_length"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:textColor="#2f2f2f"
+            android:textSize="16sp"
+            android:text="@string/mgr_add_games" />
+    </RelativeLayout>
+    <com.jiubang.ggheart.apps.desks.diy.frames.screen.DesktopIndicator
+        android:id="@+id/folder_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/folder_edit_indicator_hight"
+        android:layout_below="@id/title" />
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/folder_edit_top_bottom_hight"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+        <com.jiubang.ggheart.components.DeskButton
+            android:id="@+id/finish_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/folder_button_selector"
+            android:gravity="center"
+            android:text="@string/ok"
+            android:textColor="#343434"
+            android:textSize="16sp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/folder_button_line" />
+        <com.jiubang.ggheart.components.DeskButton
+            android:id="@+id/cancle_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/folder_button_selector"
+            android:gravity="center"
+            android:text="@string/cancle"
+            android:textColor="#343434"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <com.jiubang.ggheart.components.MutilCheckGridView
+        android:id="@+id/gridview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttons"
+        android:layout_below="@id/folder_indicator"
+        android:layout_marginTop="5dip" />
+</RelativeLayout>

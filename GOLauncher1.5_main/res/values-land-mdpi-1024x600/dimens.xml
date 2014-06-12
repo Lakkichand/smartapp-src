@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 定义与组件相关的尺寸、坐标 -->
+
+<resources>
+
+    <!-- BubbleTextView 图标与文字的间距 -->
+    <dimen name="drawable_padding">4.5dip</dimen>
+
+</resources>

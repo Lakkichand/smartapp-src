@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/apps_packagemanagement_package_top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/apps_packagemanagement_package_info_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/apps_packagemanagement_operator_layout"
+            android:background="@drawable/recomm_app_list_item_selector"
+            android:paddingBottom="10.6dp"
+            android:paddingLeft="@dimen/appcenter_list_item_padding"
+            android:paddingTop="10.6dp" >
+
+            <ImageView
+                android:id="@+id/apps_packagemanagement_package_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/apps_packagemanagement_package_name"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/apps_packagemanagement_package_icon"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/apps_packagemanagement_package_icon"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/apps_packagemanagement_package_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/apps_packagemanagement_package_name"
+                android:layout_below="@+id/apps_packagemanagement_package_name"
+                android:singleLine="true"
+                android:textColor="#696969"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/apps_packagemanagement_package_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/apps_packagemanagement_package_name"
+                android:layout_below="@+id/apps_packagemanagement_package_size"
+                android:layout_toLeftOf="@+id/apps_packagemanagement_line"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="#696969"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/apps_packagemanagement_package_has_intalled_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/apps_packagemanagement_package_version"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_toLeftOf="@+id/apps_packagemanagement_line"
+                android:layout_toRightOf="@+id/apps_packagemanagement_package_version"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/appcenter_package_installed_new_version"
+                android:textColor="#6ba001"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/apps_packagemanagement_operator_layout"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true" >
+
+            <Button
+                android:id="@+id/apps_packagemanagement_operator"
+                android:layout_width="34.6666667dp"
+                android:layout_height="34.6666667dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/appgame_download_selector"
+                android:focusable="false" >
+            </Button>
+
+            <TextView
+                android:id="@+id/apps_packagemanagement_operator_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/apps_packagemanagement_operator"
+                android:layout_centerHorizontal="true"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#FF909090"
+                android:textSize="12dp" />
+
+            <ImageView
+                android:id="@+id/apps_packagemanagement_delete_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/apps_uninstall_not_selected"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/apps_packagemanagement_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/apps_packagemanagement_operator_layout"
+            android:src="@drawable/appsmanagement_line_right" />
+    </RelativeLayout>
+
+</RelativeLayout>

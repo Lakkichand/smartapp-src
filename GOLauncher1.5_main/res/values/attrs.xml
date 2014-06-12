@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- 屏幕指示器 
+		<attr name="lightImage" format="integer"/>指示当前屏幕图片
+		<attr name="darkImage" format="integer"/>只是其他屏幕图片
+	-->
+	<declare-styleable name="ScreenIndicator">
+		<attr name="lightImage" format="integer"/>
+		<attr name="darkImage" format="integer"/>
+		<attr name="dotWidth" format="dimension"/>
+	</declare-styleable>
+	
+	<!-- BubbleTextView -->
+    <declare-styleable name="BubbleTextView">
+        <attr name="drawablePadding" format="dimension" />
+        <attr name="textSize" format="dimension" />
+        <attr name="textColor" format="integer" />
+    </declare-styleable>
+	
+	 <!-- CellLayout 单个屏幕布局 -->
+    <declare-styleable name="CellLayout">
+        <!-- The width of a single cell -->
+        <attr name="cellWidth" format="dimension"  />
+        <!-- The height of a single cell -->
+        <attr name="cellHeight" format="dimension"  />
+        <!-- Padding to apply at the start of the long axis -->
+        <attr name="longAxisStartPadding" format="dimension"  />
+        <!-- Padding to apply at the end of the long axis -->
+        <attr name="longAxisEndPadding" format="dimension"  />
+        <!-- Padding to apply at the start of the short axis -->
+        <attr name="shortAxisStartPadding" format="dimension"  />
+        <!-- Padding to apply at the end of the short axis -->
+        <attr name="shortAxisEndPadding" format="dimension"  />
+        <!-- Number of cells on the short axis of the CellLayout -->
+        <attr name="shortAxisCells" format="integer" />
+        <!-- Number of cells on the long axis of the CellLayout -->
+        <attr name="longAxisCells" format="integer" />
+        <attr name="rows" format="integer"/>
+        <attr name="columns" format="integer"/>
+    </declare-styleable>
+    
+    <declare-styleable name="SenseWorkspace">
+        <attr name="backgroundColor" format="color"/>
+    	<attr name="cardRows" format="integer"/>
+        <attr name="cardCols" format="integer"/>
+        <!-- 屏幕预览顶部给卡片预留的高度 -->
+        <attr name="marginTop" format="dimension"/>
+        <!-- 屏幕预览顶部给卡片预留的高度 -->
+        <attr name="marginBottom" format="dimension"/>
+        <!-- 屏幕预览顶部给卡片预留的高度 -->
+        <attr name="marginLeft" format="dimension"/>
+        <!-- 屏幕预览顶部给卡片预留的高度 -->
+        <attr name="marginRight" format="dimension"/>
+        <!-- 屏幕预览的宽度相对卡片之间水平空隙的最大倍数 -->
+        <attr name="cardSpaceScaleX" format="integer"/>
+        <attr name="cardSpaceScaleY" format="integer"/>
+    </declare-styleable>
+    
+    <attr name="title" format="reference" />
+    <attr name="icon" format="reference" />
+    
+    <!--  行列设置的对话框  -->
+    <declare-styleable name="DialogDoubleSeekBarPreference">
+        <attr name="rowDialogMsg" format="string"/>
+    	<attr name="columnDialogMsg" format="string"/>
+    	<attr name="rowDefaultValue" format="integer"/>
+    	<attr name="columnDefaultValue" format="integer"/>
+    </declare-styleable>
+    
+    <!-- 内置widget的原型，与GoWidgetBaseInfo定义的Prototype一一对应-->
+    <attr name="prototype">
+    	 <flag name="normal" value="0" /> <!-- 独立的widget -->
+    	 <flag name="taskman" value="1" /> <!-- 任务管理器 widget-->
+    	 <flag name="gostore" value="2" /> <!-- GoStore widget-->
+    	 <flag name="appgame" value="3" /> <!-- appcenter widget-->
+    </attr>
+
+	<!-- widget内置类型的取值范围，与InnerWidgetInfo中定义的BuildIn类型一一对应 -->
+    <attr name="buildin">
+    	 <flag name="all" value="0" />	<!-- 全部内置 ，如GoStore widget-->
+    	 <flag name="code_only" value="1" /> <!-- 仅代码内置资源包为独立安装包 ，如任务管理 widget-->
+    </attr>
+    
+    <!-- 首次安装初始化gowidget，引导用户下载 -->
+    <declare-styleable name="Favorite">
+        <attr name="title"/>
+        <attr name="widgetid" format="integer" />
+        <attr name="packageName" format="string" />
+        <attr name="validArea" format="string" />
+        <attr name="invalidArea" format="string" />
+        <attr name="className" format="string" />
+        <attr name="layout" format="string" />
+        <attr name="type" format="integer" />
+        <attr name="screen" format="integer" />
+        <attr name="x" format="integer" />
+        <attr name="y" format="integer" />
+        <attr name="spanX" format="integer" />
+        <attr name="spanY" format="integer" />
+        <attr name="preview" format="reference" />
+        <attr name="theme" format="string" />
+        <attr name="themeId" format="integer" />
+        <!-- 内置的widget必须有此字段，与GoWidgetBaseInfo的mPrototype对应 -->
+        <attr name="prototype"/>
+    </declare-styleable>
+    
+    <declare-styleable name="UrlAddress">
+        <attr name="refId" format="reference" />
+        <attr name="address" format="string" />
+    </declare-styleable>
+    
+    <!-- InnerWidgetInfo内置widget信息 -->
+    <declare-styleable name="InnerWidget">
+    	<!-- 内置widget的原型，被解析到 InnerWidgetInfo.mPrototype-->
+        <attr name="prototype" />
+    	<!-- 内置类型 ，被解析到 InnerWidgetInfo.mInnerType -->
+        <attr name="buildin" />
+    	<!-- 渲染xml的包 -->
+        <attr name="inflatePackage" format="string" />
+    	<!-- 资源包 -->
+        <attr name="widgetPackage" format="string" />
+        <!-- 以下配置为全内置类型需要的信息 -->
+        <!-- 统计内置widget的伪包名 -->
+        <attr name="statisticPackage" format="string" />
+        <attr name="title" />
+        <attr name="icon" />
+        <attr name="themeConfig" format="string" />
+        <attr name="previewList" format="reference" />
+        <attr name="layoutList" format="reference" />
+        <attr name="nameList" format="reference" />
+        <attr name="typeList" format="reference" />
+        <attr name="rowList" format="reference" />
+        <attr name="columnList" format="reference" />
+        <attr name="minHeightList" format="reference" />
+        <attr name="minWidthList" format="reference" />
+        <attr name="configList" format="reference" />
+        <attr name="settinglist" format="reference" />
+        <attr name="configName" format="string" />
+    </declare-styleable>
+    
+    <!-- GOStore myGravity -->
+        <declare-styleable name="Theme">
+        <attr name="galleryStyle" format="reference" />
+        <attr name="spinnerStyle" format="reference" />
+        <attr name="gravity">
+            <!-- Push object to the top of its container, not changing its size. -->
+            <flag name="top" value="0x30" />
+            <!-- Push object to the bottom of its container, not changing its size. -->
+            <flag name="bottom" value="0x50" />
+            <!-- Push object to the left of its container, not changing its size. -->
+            <flag name="left" value="0x03" />
+            <!-- Push object to the right of its container, not changing its size. -->
+            <flag name="right" value="0x05" />
+            <!-- Place object in the vertical center of its container, not changing its size. -->
+            <flag name="center_vertical" value="0x10" />
+            <!-- Grow the vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill_vertical" value="0x70" />
+            <!-- Place object in the horizontal center of its container, not changing its size. -->
+            <flag name="center_horizontal" value="0x01" />
+            <!-- Grow the horizontal size of the object if needed so it completely fills its container. -->
+            <flag name="fill_horizontal" value="0x07" />
+            <!-- Place the object in the center of its container in both the vertical and horizontal axis, not changing its size. -->
+            <flag name="center" value="0x11" />
+            <!-- Grow the horizontal and vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill" value="0x77" />
+            <!-- Additional option that can be set to have the top and/or bottom edges of
+                 the child clipped to its container's bounds.
+                 The clip will be based on the vertical gravity: a top gravity will clip the bottom
+                 edge, a bottom gravity will clip the top edge, and neither will clip both edges. -->
+            <flag name="clip_vertical" value="0x80" />
+            <!-- Additional option that can be set to have the left and/or right edges of
+                 the child clipped to its container's bounds.
+                 The clip will be based on the horizontal gravity: a left gravity will clip the right
+                 edge, a right gravity will clip the left edge, and neither will clip both edges. -->
+            <flag name="clip_horizontal" value="0x08" />
+        </attr>
+        <attr name="entries" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="MyGallery">
+        <attr name="gravity" />
+        <attr name="animationDuration" format="integer" min="0" />
+        <attr name="spacing" format="dimension" />
+        <attr name="unselectedAlpha" format="float" />
+    </declare-styleable>
+    <declare-styleable name="MyAbsSpinner">
+        <attr name="entries"/>
+    </declare-styleable>
+    
+         <!--  应用中心，tab栏 自定义的样式-->
+    <declare-styleable name="PagerActionBar">
+	   <attr name="footer_separator_color" format="color"/>
+	   <attr name="title_text_color" format="color"/>
+	   <attr name="selected_title_text_color" format="color"/>
+	   <attr name="selector_color" format="color"/>
+	   <attr name="title_text_size" format="dimension"/>
+	   <attr name="header_padding" format="dimension"/>
+	   <attr name="footer_padding" format="dimension"/>
+	   <attr name="footer_separator_line_weight" format="dimension"/>
+	</declare-styleable>
+	
+	<declare-styleable name="TitlePagerActionBar">
+	    <attr name="footer_underline_weight" format="dimension"/>
+	    <attr name="footer_underline_padding" format="dimension"/>
+	    <attr name="footer_underline_color" format="color"/>
+	</declare-styleable>
+
+        <declare-styleable name="RecommendedApp">
+	        <attr name="titleid" format="reference"/>
+	        <attr name="iconid" format="reference"/>
+	        <attr name="packagename" format="string" />
+	        <attr name="action" format="string" />
+	        <attr name="download_url" format="string"/>
+	        <attr name="group" format="integer"/>
+	        <attr name="priority" format="integer" min="0"/>
+	        <attr name="appid" format="integer" min="0"/>
+	        <attr name="channelid" format="string"/>
+	        <attr name="stime" format="string"/>
+	        <attr name="etime" format="string"/>
+	        <attr name="rowindex" format="integer"/>
+	        <attr name="screenindex" format="integer" min="0"/>
+	        <attr name="acttype" format="integer" min="0"/>
+	        <attr name="showinstallicon" format="boolean"/>
+	        <attr name="description" format="string"/>
+	        <attr name="clickurl" format="string"/>
+	        <attr name="id" format="string"/>
+	        <attr name="mapid" format="string"/>
+    </declare-styleable>
+
+	<!--  progressbarcolor : ProgressBar颜色 1代表白色 0代表绿色
+		  background 0表示没黑色罩子 1表示有黑色罩子
+	-->
+	<declare-styleable name="ProgressBar">
+	   <attr name="prossbar_color_selete" format="integer"/>
+	   <attr name="prossbar_background_selete" format="integer"/>
+	</declare-styleable>
+	
+	<!-- 自定义手势预览图 is_small_preview：是否小的预览图-->
+	<declare-styleable name="DiyGestureItemView">
+	   <attr name="is_small_preview" format="boolean"/>
+	   <attr name="is_move_center" format="boolean"/>
+	   <attr name="paintColor" format="color" />  
+       <attr name="strokeWidth" format="dimension" />  
+	</declare-styleable>
+	
+	<!-- 桌面设置-->
+	<declare-styleable name="DeskSettingItemView">
+	   <attr name="image" format="reference"/>
+	   
+	   <attr name="titleTextSize" format="dimension"/>
+	   <attr name="titleTextColor" format="color"/>
+	   <attr name="titleText" format="string"/>
+	   <attr name="titleTextLineHeight" format="dimension"/>
+	   
+	   <attr name="summaryTextSize" format="dimension"/>
+	   <attr name="summaryTextColor" format="color"/>
+	   <attr name="summaryText" format="string"/>
+	   <attr name="isBtnCheckBox" format="boolean"/>
+	   <attr name="isHiddenBottomLine" format="boolean"/>
+	   
+	   <attr name="listEntryValues" format="reference"/>
+	   <attr name="listEntries" format="reference"/>
+	   
+	   <attr name="dialogType">  
+	       <enum name="SINGLE_CHOICE" value="0" />  
+	       <enum name="MULTI_CHOICE" value="1" />  
+	       <enum name="SEEKBAR" value="2" />  
+	       <enum name="SINGLE_CHOICE_WITH_CHECKBOX" value="3" />  
+	       <enum name="NORMAL" value="4" />  
+	       <enum name="GESTURE" value="5" /> 
+	       <enum name="SINGLE_CHOICE_FONT" value="6" /> 
+	   </attr>
+	   <attr name="singleDialogTips" format="string"/>
+	   <attr name="dialogTitle" format="string"/>
+	   <attr name="dialogMessage" format="string"/>
+	</declare-styleable>
+</resources>

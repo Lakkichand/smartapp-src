@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 定义与组件相关的尺寸、坐标 -->
+
+<resources>
+	<!-- 主题管理 -->
+    <dimen name="singletheme_detail_pic_land_width_hdpi">127dip</dimen>
+    <dimen name="singletheme_detail_pic_land_height_hdpi">208dip</dimen>
+    <!-- 桌面帮助层 -->
+    <dimen name="guide_screeneffect_listview_height">170dip</dimen>
+    <dimen name="guide_screeneffect_listview_height_secondtip">170dip</dimen>
+    <dimen name="guide_screeneffect_topline_listview_space">5dip</dimen>
+    <dimen name="guide_screeneffect_listview_button_space">10dip</dimen>
+    <dimen name="guide_screeneffect_title_height">45dip</dimen>
+    <dimen name="guide_screeneffect_topline_listview_space_secondtip">3dip</dimen>
+    <dimen name="guide_screeneffect_listview_button_space_secondtip">3dip</dimen>
+    <dimen name="guide_screeneffect_buttons_settingpath_space_secondtip">3dip</dimen>
+    <dimen name="guide_dock_gesture_topline_pic_space">5dip</dimen>
+    <dimen name="guide_dock_gesture_pic_summery1">10dip</dimen>
+    <dimen name="guide_wallpapersetting_topline_pic_space">4dip</dimen>
+    <dimen name="guide_wallpapersetting_pic_list_space">4dip</dimen>
+    <dimen name="guide_wallpapersetting_list_button_space">3dip</dimen>
+    <dimen name="guide_wallpapersetting_button_summery_space">1dip</dimen>
+    
+    <dimen name="linearlayout_height">48dip</dimen>
+    <dimen name="text_height">30dip</dimen>
+    
+    <dimen name="sense_indicator_top">5dip</dimen>
+    <dimen name="folder_edit_view_height">270dip</dimen>
+    <dimen name="folder_modify_name_length">250dip</dimen>
+    <dimen name="folder_edit_view_width">415dip</dimen>
+    
+    <!-- 大图标模式下的图文边距设为0 -->
+    <dimen name="large_icon_drawable_padding">0dip</dimen>
+    
+    <dimen name="mediamanagement_dialog_height">270dip</dimen>
+     <dimen name="mediamanagement_dialog_width">302dip</dimen>
+     
+     <!-- 自定义手势 -->
+     <dimen name="overlayview_height">180dip</dimen>
+     <dimen name="overlayview_width">332dip</dimen>
+     <dimen name="gesture_ui_layout_height">353dip</dimen>
+     <!-- 自定义手势 end -->
+     
+     <!-- 应用游戏中心widget的高度 -->
+     <dimen name="appgame_widget_layout_height">72dip</dimen>
+     <dimen name="appgame_widget_layout_margin">1dip</dimen>
+      <dimen name="appfunc_custom_grid_dialog_margine_top">2dip</dimen>
+	 <dimen name="appfunc_custom_grid_dialog_seek_bar_margine">0dip</dimen>
+      
+     <!-- BEGIN 自定义设置 -->
+     <dimen name="desk_setting_visual_tab_icon_frame_width">350dip</dimen>
+     
+     <!-- dock添加图标 -->
+	 <dimen name="dock_add_view_view_height">242dip</dimen>
+	 <dimen name="dock_add_view_view_height_default">182dip</dimen>
+	 
+     <!-- 截屏相关 -->
+	 <dimen name="snapshot_tutorial_padding">4dp</dimen>
+	 
+	 <dimen name="locker_tip_margin_right">21dp</dimen>
+</resources>

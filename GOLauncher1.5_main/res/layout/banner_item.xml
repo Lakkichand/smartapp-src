@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+
+	<com.jiubang.ggheart.apps.gowidget.gostore.component.SimpleImageView android:id="@+id/img" android:src="@drawable/themestore_mainview_sort_default"
+		android:layout_width="fill_parent" android:layout_height="160dip" android:scaleType="fitXY"/>
+
+</LinearLayout>

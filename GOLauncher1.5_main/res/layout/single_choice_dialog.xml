@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/folder_edit_view_width"
+    android:layout_height="@dimen/folder_edit_view_height" 
+    >
+
+    <LinearLayout
+        android:id="@+id/single_choice_top"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/folder_top_bg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/single_choice_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="5dip"
+            android:text="@string/menuitem_language"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/single_choice_scroll_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/single_choice_top" 
+        android:layout_above="@+id/single_choice_button_group"
+        >
+
+        <LinearLayout
+            android:id="@+id/single_choice_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/single_choice_button_group"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_alignParentBottom="true"
+        
+        >
+
+        <Button
+            android:id="@+id/single_choice_cancle_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/folder_button_selector"
+            android:gravity="center"
+            android:text="@string/cancle"
+            android:textColor="#343434"
+            android:textSize="16sp"
+             />
+
+ <!--        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/folder_button_line" />
+
+        <Button
+            android:id="@+id/single_choice_ok_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/folder_button_selector"
+            android:gravity="center"
+            android:text="@string/ok"
+            android:textColor="#343434"
+            android:textSize="16sp" /> -->
+    </LinearLayout>
+
+</RelativeLayout>

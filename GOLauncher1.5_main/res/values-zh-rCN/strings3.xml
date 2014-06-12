@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	 
+	<string name="gostorewidget41_preview_title">GO精品部件(4x1)</string>
+	<string name="gostorewidget_new41_preview_title">GO精品部件炫版(4x1)</string>
+	
+	<string name="dialogtitle">检查GO桌面EX是否安装</string>
+	<string name="dialogcontent">GO桌面EX没有安装在你手机上，请按确定去下载</string>
+	<string name="dialogok">确定</string>
+	<string name="title">GO精品</string>
+
+	<string name="gostorewidget_default_theme">默认</string>
+
+	<string name="appgamewidget41_preview_title">安卓应用市场部件(4x1)</string>
+</resources>

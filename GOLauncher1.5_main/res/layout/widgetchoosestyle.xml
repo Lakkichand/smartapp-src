@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="#ffcecece">
+
+	<com.jiubang.ggheart.components.DeskTextView
+		 android:layout_width="fill_parent" android:id="@+id/widgettitle"
+		android:layout_height="1dp" android:gravity="center|center"
+		android:background="@drawable/image_top" android:text=""
+		android:textColor="#ff000000" android:textSize="20sp"
+		android:layout_weight="69" />
+
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="1dp" android:orientation="vertical"
+		android:gravity="center|center" android:layout_weight="72">
+		<com.jiubang.ggheart.apps.desks.diy.themescan.DotProgressBar
+			android:id="@+id/indicate" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" />
+	</LinearLayout>
+
+	<com.jiubang.ggheart.apps.desks.appfunc.WidgetStyleChooseView
+		android:id="@+id/choosecontentview" android:layout_width="fill_parent"
+		android:layout_height="1dp" android:layout_weight="472" />
+
+
+	<TextView android:layout_height="0dp" android:layout_width="fill_parent"
+		android:layout_weight="50" />
+
+	<LinearLayout android:layout_width="fill_parent"
+	android:layout_weight="77"
+	android:layout_height="0dp"
+	 android:background="@drawable/image_bottom"
+	 android:gravity="center_vertical|center_horizontal">
+	<LinearLayout android:layout_width="wrap_content"
+		android:id="@+id/widgetchoosebutton" 
+		android:layout_height="wrap_content" 
+		android:background="@drawable/widget_choosestyle_selector"
+		android:orientation="horizontal" 
+		android:focusable="true"
+		android:clickable="true"
+		android:paddingLeft="10dip"
+		android:paddingRight="10dip"
+		android:gravity="center_vertical|center_horizontal">
+		<ImageView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:src="@drawable/android_market" />
+		<com.jiubang.ggheart.components.DeskTextView
+		 android:layout_width="wrap_content"
+			android:id="@+id/widgetchoosedesktoptext"
+			android:layout_height="wrap_content" android:text="@string/widget_choose_addtodestop"
+			android:textColor="#ff000000" 
+			android:paddingLeft="5dip"
+			android:textSize="14sp" />
+	</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

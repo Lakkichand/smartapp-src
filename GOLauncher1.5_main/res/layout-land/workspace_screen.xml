@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.jiubang.ggheart.apps.desks.diy.frames.screen.CellLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:ggheart="http://schemas.android.com/apk/res/com.gau.go.launcherex"
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    ggheart:cellWidth="@dimen/cell_width_land"
+    ggheart:cellHeight="@dimen/cell_height_land"
+    ggheart:longAxisStartPadding="@dimen/screen_long_start_padding_land"
+    ggheart:longAxisEndPadding="@dimen/screen_long_end_padding_land"
+    ggheart:shortAxisStartPadding="@dimen/screen_short_start_padding_land"
+    ggheart:shortAxisEndPadding="@dimen/screen_short_end_padding_land"
+    ggheart:shortAxisCells="4"
+    ggheart:longAxisCells="4" />

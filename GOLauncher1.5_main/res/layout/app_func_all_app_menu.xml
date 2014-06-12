@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:gravity="fill">
+
+    <com.jiubang.ggheart.apps.desks.appfunc.menu.AppFuncMenuItemView
+        android:id="@+id/app_func_menu_text"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/lee.test"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/go_book_webview_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/theme_detail_topbar_bg" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/backLayout"
+                android:layout_width="40dip"
+                android:layout_height="fill_parent"
+                android:background="@drawable/change_icon_tab_selector"
+                android:gravity="center" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/app_center_back" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/viewGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="48dip" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/indicator_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="48dip"
+            android:layout_alignParentBottom="true"
+            android:gravity="center" >
+
+            <com.jiubang.ggheart.apps.desks.diy.frames.screen.DesktopIndicator
+                android:id="@+id/indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/try_now_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="48dip"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/mytheme_bottom_bg"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/try_now_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="4dip"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_marginTop="4dip"
+                    android:background="@drawable/mytheme_button_bg_selector"
+                    android:text= "@string/go_handbook_try_now"
+                    android:textColor="#646464"
+                    android:textSize="15sp" >
+                </Button>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/continue_browse_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="4dip"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:layout_marginTop="4dip"
+                    android:background="@drawable/mytheme_button_bg_selector"
+                    android:text="@string/go_handbook_go_on"
+                    android:textColor="#646464"
+                    android:textSize="15sp" >
+                </Button>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

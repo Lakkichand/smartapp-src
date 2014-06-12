@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+    android:background="@drawable/folder_edit_bg"
+    android:orientation="vertical"
+    >
+    <LinearLayout 
+        android:id="@+id/top"
+            android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:background="@drawable/folder_top_bg"
+    		android:gravity="center_vertical"
+    		android:layout_alignParentTop="true">
+    	<TextView 
+        	android:id="@+id/appfunc_mediamanagement_activity_chooser_title"
+        	android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:layout_gravity="center_vertical"
+    		android:textSize="20sp"
+    		android:textColor="@android:color/black"
+    		android:layout_marginTop="8dip"
+    		android:layout_marginBottom="8dip"
+    		android:layout_marginLeft="8dip"
+    	/>
+    </LinearLayout>
+
+    <LinearLayout  
+        android:id="@+id/bottom"
+        android:layout_width="fill_parent"
+    	android:layout_height="@dimen/media_open_dialog_bottom_height"
+    	android:gravity="center_vertical"
+    	android:background="@drawable/folder_button"
+    	android:layout_alignParentBottom="true">
+    	  <ImageView 
+        android:id="@+id/appfunc_mediamanagement_activity_chooser_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingLeft="15dip"
+        android:src="@drawable/apps_uninstall_not_selected"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        />
+    	  <TextView 
+    	android:id="@+id/set_as_default" 
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:text="@string/appfunc_mediamanagement_chooser_setdefault"
+    	android:gravity="center_vertical"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="5dip"/>
+    </LinearLayout>
+
+        <ListView
+            android:id="@+id/appfunc_mediamanagement_activity_chooser_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/bottom"
+            android:layout_below="@id/top"
+            android:cacheColorHint="@null"
+            android:divider="#DCDCDC"
+            android:dividerHeight="1dip" />
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 预览图片 -->
+    <string-array name="gostore_previewlist">
+        <item>gostorewidget41_preview</item>
+        <item>gostorewidget_new41_preview</item>
+    </string-array>
+
+    <!-- 预览图片底部描述 -->
+    <string-array name="gostore_namelist">
+        <item>gostorewidget41_preview_title</item>
+        <item>gostorewidget_new41_preview_title</item>
+    </string-array>
+
+    <integer-array name="gostore_typelist">
+        <item>1</item>
+        <item>3</item>
+    </integer-array>
+    <integer-array name="gostore_rowlist">
+        <item>1</item>
+        <item>1</item>
+    </integer-array>
+    <integer-array name="gostore_columnlist">
+        <item>4</item>
+        <item>4</item>
+    </integer-array>
+
+    <string-array name="gostore_layoutidlist">
+        <item>gostorewidget41</item>
+        <item>gostore41widget</item>
+    </string-array>
+
+    <integer-array name="gostore_minWidth">
+        <item>292</item>
+        <item>292</item>
+    </integer-array>
+    <integer-array name="gostore_minHeight">
+        <item>73</item>
+        <item>73</item>
+    </integer-array>
+
+</resources>

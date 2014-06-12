@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.components.BubbleTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ggheart="http://schemas.android.com/apk/res/com.gau.go.launcherex"
+    style="@style/WorkspaceLargeIcon.Landscape"
+    ggheart:drawablePadding="@dimen/large_icon_drawable_padding" />

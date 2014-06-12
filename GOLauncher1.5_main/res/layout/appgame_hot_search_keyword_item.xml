@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/appgame_hot_search_keyword_num"
+        android:layout_width="17.33333dp"
+        android:layout_height="16.3333dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12.66667dp"
+        android:gravity="center"
+        android:textSize="11dp" />
+
+    <TextView
+        android:id="@+id/appgame_hot_search_keyword_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10.66667dp"
+        android:layout_toRightOf="@+id/appgame_hot_search_keyword_num"
+        android:maxWidth="270dp"
+        android:textColor="#FF343434"
+        android:textSize="16dp" />
+
+    <ImageView
+        android:id="@+id/appgame_hot_search_keyword_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12.66667dp"
+        android:scaleType="fitCenter" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="46.66667dp" />
+	
+    <ImageView
+        android:id="@+id/appgame_hot_search_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/app_name"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/appfunc_search_result_list_divider"
+        android:visibility="gone" />
+</RelativeLayout>

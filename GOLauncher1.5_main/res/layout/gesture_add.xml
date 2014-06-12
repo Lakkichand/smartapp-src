@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myandroid="http://schemas.android.com/apk/res/com.gau.go.launcherex"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <!-- 输入界面 -->
+
+    <LinearLayout
+        android:id="@+id/uiLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/gesture_ui_layout_height"
+        android:background="@drawable/gesture_recogniser_draw_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/addLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingBottom="45dip" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="42dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <com.jiubang.ggheart.components.DeskTextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingTop="5dip"
+                        android:text="@string/gesture_draw_one_title"
+                        android:textColor="@color/gesture_draw_color"
+                        android:textSize="@dimen/gesture_title_text_size" />
+
+                    <com.jiubang.ggheart.components.DeskTextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingTop="5dip"
+                        android:text="@string/gesture_select_response_title"
+                        android:textColor="@color/gesture_next_color"
+                        android:textSize="@dimen/gesture_title_text_size" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/gesture_line_top" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/gesture_now_tip" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/gesture_no_select_tip" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <android.gesture.GestureOverlayView
+                        android:id="@+id/overlayView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gestureColor="@color/gesture_draw_color"
+                        android:fadeDuration="20"
+                        android:gestureStrokeType="multiple" />
+
+                    <com.jiubang.ggheart.components.diygesture.gesturemanageview.DiyGestureItemView
+                        android:id="@+id/drawResultImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        myandroid:is_small_preview="false"
+                      	myandroid:strokeWidth = "@dimen/gesture_stroke_width"
+                      	myandroid:paintColor = "@color/gesture_draw_color"
+                        android:padding="3dip"
+                        android:visibility="gone" />
+
+                    <!-- 第一次打开提示 -->
+
+                    <LinearLayout
+                        android:id="@+id/firstOpenLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <com.jiubang.ggheart.components.DeskTextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="33dip"
+                            android:paddingLeft="7dip"
+                            android:paddingTop="10dip"
+                            android:text="@string/first_open_gesture_tips"
+                            android:textColor="#878787"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/gestrue_fisrt_open_tip" />
+                    </LinearLayout>
+                    <!-- 第一次打开提示 __end -->
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cancleBtnLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginTop="-45dip"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/folder_button_line" />
+
+                <com.jiubang.ggheart.components.DeskButton
+                    android:id="@+id/cancelAddBtn"
+                    style="@style/DiyGestureButton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/cancel" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reDrawBtnLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginTop="-45dip"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/folder_button_line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <com.jiubang.ggheart.components.DeskButton
+                        android:id="@+id/reDrawBtn"
+                        style="@style/DiyGestureButton"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:text="@string/redraw" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/folder_button_line" />
+
+                    <com.jiubang.ggheart.components.DeskButton
+                        android:id="@+id/nextBtn"
+                        style="@style/DiyGestureButton"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:text="@string/gesture_next_btn" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 输入界面__end -->
+
+
+        <!-- 选择响应界面 -->
+
+        <LinearLayout
+            android:id="@+id/selectResponseLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingBottom="45dip" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="42dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <com.jiubang.ggheart.components.DeskTextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingTop="5dip"
+                        android:text="@string/gesture_draw_one_title"
+                        android:textColor="@color/gesture_next_color"
+                        android:textSize="@dimen/gesture_title_text_size" />
+
+                    <com.jiubang.ggheart.components.DeskTextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingTop="5dip"
+                        android:text="@string/gesture_select_response_title"
+                        android:textColor="@color/gesture_draw_color"
+                        android:textSize="@dimen/gesture_title_text_size" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/gesture_line_top" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/gesture_done" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/gesture_now_tip" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <com.jiubang.ggheart.components.diygesture.gesturemanageview.DiyGestureSelectRespondView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                </com.jiubang.ggheart.components.diygesture.gesturemanageview.DiyGestureSelectRespondView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginTop="-45dip"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/folder_button_line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <com.jiubang.ggheart.components.DeskButton
+                        android:id="@+id/upBtn"
+                        style="@style/DiyGestureButton"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:text="@string/gesture_up_btn" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/folder_button_line" />
+
+                    <com.jiubang.ggheart.components.DeskButton
+                        android:id="@+id/cancelSelectResponseBtn"
+                        style="@style/DiyGestureButton"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:text="@string/cancel" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 选择响应界面__end -->
+
+
+        <!-- 冲突界面 -->
+
+        <LinearLayout
+            android:id="@+id/conflictLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingBottom="45dip" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="42dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <com.jiubang.ggheart.components.DeskTextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingTop="5dip"
+                        android:text="@string/gesture_draw_one_title"
+                        android:textColor="@color/gesture_draw_color"
+                        android:textSize="@dimen/gesture_title_text_size" />
+
+                    <com.jiubang.ggheart.components.DeskTextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingTop="5dip"
+                        android:text="@string/gesture_select_response_title"
+                        android:textColor="@color/gesture_next_color"
+                        android:textSize="@dimen/gesture_title_text_size" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/gesture_line_top" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/gesture_now_tip" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/gesture_no_select_tip" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        >
+
+                        <com.jiubang.ggheart.components.diygesture.gesturemanageview.DiyGestureConflictView
+                            android:id="@+id/conflictDrawResultImageView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent">
+                        </com.jiubang.ggheart.components.diygesture.gesturemanageview.DiyGestureConflictView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/conflictTipsViewLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="vertical" 
+   						android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingBottom="4dip" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="3dip"
+                                android:paddingRight="4dip"
+                                android:src="@drawable/gesture_warming" />
+
+                            <com.jiubang.ggheart.components.DeskTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/gesture_recognise_result_title"
+                                android:textColor="@color/gesture_waring_color"
+                                android:textSize="13.3sp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/folder_button_line" />
+
+                        <!-- 冲突界面 -->
+
+                        <include layout="@layout/gesture_recognise_search_result_item" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginTop="-45dip"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/folder_button_line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <com.jiubang.ggheart.components.DeskButton
+                        android:id="@+id/conflictReDrawBtn"
+                        style="@style/DiyGestureButton"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:text="@string/redraw" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/folder_button_line" />
+
+                    <com.jiubang.ggheart.components.DeskButton
+                        android:id="@+id/cancelConflictBtn"
+                        style="@style/DiyGestureButton"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:text="@string/cancel" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 匹配结果界面__end -->
+    </LinearLayout>
+
+</LinearLayout>

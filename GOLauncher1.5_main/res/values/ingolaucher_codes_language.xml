@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ingolaucher_codes_language">
+		<item>ko</item>
+		<item>ja</item>
+		<item>es</item>
+		<item>ru</item>
+		<item>de</item>
+		<item>en_US</item>
+ 		<item>zh_CN</item>	
+		<item>zh_TW</item>
+		<item>zh_HK</item>	
+  	</string-array>
+</resources>

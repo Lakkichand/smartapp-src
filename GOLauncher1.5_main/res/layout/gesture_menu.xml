@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gesture_menu"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:numColumns="4"
+    android:stretchMode="columnWidth"
+    android:gravity="center"
+    android:listSelector="@drawable/theme_detail_back_selector"
+    android:background="@drawable/gesture_menu_bg"
+    android:scrollbars="none"
+/>

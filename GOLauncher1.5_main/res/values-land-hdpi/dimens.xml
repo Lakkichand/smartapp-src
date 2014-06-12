@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <!--自定义手势-->
+      <dimen name="recogniser_overlayview_width">306dip</dimen>
+     <!-- 自定义手势 end -->
+</resources>

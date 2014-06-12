@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+  
+  
+  <RelativeLayout 
+    android:id="@+id/banner_detail_topbar"
+    android:layout_width="match_parent"
+    android:layout_height="48dip" 
+    android:background="@drawable/message_center_topbar_bg">    
+	    
+	 <LinearLayout 
+	   android:id="@+id/back_btnArea"
+	   android:layout_width="40dip"
+	   android:layout_height="50dip"
+	   	android:background="@drawable/message_center_back_selector"
+	   android:gravity="center"> 
+	    <ImageView
+			android:id="@+id/back_btn"
+			android:layout_width="25dp"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="5dip"
+			android:src="@drawable/message_center_back"
+			android:background="@drawable/message_center_back_selector"
+			/>
+	</LinearLayout> 		
+	    
+	 <com.jiubang.ggheart.components.DeskTextView
+	    android:id="@+id/banner_title"
+	    android:layout_width="match_parent"
+	    android:layout_height="50dip"
+	    android:textSize="17sp"
+	    android:textColor="#388800"
+	    android:gravity="center_vertical"
+	    android:layout_toRightOf="@id/back_btnArea"
+	    android:paddingLeft="8dip"
+	    />
+  </RelativeLayout>
+  
+  
+  <com.jiubang.ggheart.apps.desks.diy.themescan.SpecThemelistViewLayout
+  		android:id="@+id/banner_layout"
+  		android:layout_width="fill_parent"
+  		android:layout_height="fill_parent"
+  		android:layout_below="@id/banner_detail_topbar"
+  		android:background="@color/theme_bg"
+  />
+
+</RelativeLayout>

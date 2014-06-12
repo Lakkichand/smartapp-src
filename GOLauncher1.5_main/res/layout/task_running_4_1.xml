@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.jiubang.ggheart.apps.gowidget.taskmanager.TaskRunning41Widget
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:gravity="center" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout android:id="@+id/layout_gobal"
+		android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<include android:id="@+id/content" layout="@layout/task_running_4_1_content"></include>
+	</LinearLayout>
+</com.jiubang.ggheart.apps.gowidget.taskmanager.TaskRunning41Widget>
+

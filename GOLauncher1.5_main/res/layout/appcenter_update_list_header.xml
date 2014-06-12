@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.appgame.appcenter.component.AppsUpdateInfoListHeaderItem xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="60dip" >
+
+    <TextView
+        android:id="@+id/appcenter_update_list_head_text"
+        android:layout_width="0dip"
+        android:layout_height="60dip"
+        android:layout_marginLeft="@dimen/appcenter_list_item_padding"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:text="@string/appgame_appsupdate_header_app"
+        android:textColor="#393939"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/appcenter_update_list_head_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="13.3dp"
+        android:background="@drawable/appgame_more_button" />
+
+    <Button
+        android:id="@+id/appcenter_update_list_head_button"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginRight="@dimen/appcenter_list_item_padding"
+        android:background="@drawable/appgame_install_btn_selector"
+        android:focusable="false"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="#393939"
+        android:textSize="12.67dp" />
+
+</com.jiubang.ggheart.appgame.appcenter.component.AppsUpdateInfoListHeaderItem>

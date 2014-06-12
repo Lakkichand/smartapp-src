@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="#ffe6e6e6">
+  
+  <com.jiubang.ggheart.apps.desks.diy.themescan.ThemeDetailScan
+  		android:id="@+id/theme_detail_image"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_marginTop="12dip"
+  	/>
+  
+  <com.jiubang.ggheart.apps.desks.diy.frames.screen.InfoScreenIndicator
+	    android:id="@+id/indicator"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="2dip"
+	/>    
+</RelativeLayout>

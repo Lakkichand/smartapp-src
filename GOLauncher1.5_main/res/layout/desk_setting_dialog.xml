@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gesture_recogniser_draw_bg"
+        android:orientation="vertical" 
+        >
+        
+    	<TextView 
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:text="1111111111"
+        	/>
+    
+    	<ListView 
+    	    android:id="@+id/desk_setting_dialog_list"
+    	    android:layout_width="fill_parent"
+    	    android:layout_height="wrap_content"
+    	    />
+    	
+    	<LinearLayout 
+        	android:layout_width="fill_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	>
+        
+        	<Button
+        		android:layout_width="fill_parent"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="1"
+            	android:text="ok"
+        	/>
+        
+        	<Button
+            	android:layout_width="fill_parent"
+            	android:layout_height="wrap_content"
+            	android:layout_weight="1"
+            	android:text="cancel" 
+        	/>
+        
+     	</LinearLayout>
+     	
+    </LinearLayout>
+
+</LinearLayout>

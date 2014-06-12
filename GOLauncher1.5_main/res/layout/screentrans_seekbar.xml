@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:gravity="center_vertical"
+    android:paddingRight="?android:attr/scrollbarSize">
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="16dip"
+        android:layout_marginTop="6dip"
+        android:layout_marginBottom="6dip"
+        android:layout_weight="1">
+        <!--  第一个滑动条 -->
+        <com.jiubang.ggheart.components.DeskTextView android:id="@+android:id/speedSettingMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@android:id/title"
+            android:layout_alignLeft="@android:id/title"
+            android:text = "@string/screen_speed"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:maxLines="2" />
+		<SeekBar android:id="@+android:id/speedbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@android:id/speedSettingMessage"
+            android:layout_alignLeft="@android:id/speedSettingMessage" />
+        <com.jiubang.ggheart.components.DeskTextView android:id="@+android:id/speedActualValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@android:id/speedbar"
+            android:layout_alignLeft="@android:id/speedbar"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:maxLines="1" />
+            
+         <!--  第二个滑动条 -->
+        <com.jiubang.ggheart.components.DeskTextView android:id="@+android:id/elasticSettingMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@android:id/speedActualValue"
+            android:layout_alignLeft="@android:id/speedActualValue"
+            android:text = "@string/screen_elastic"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:maxLines="2" />
+		<SeekBar android:id="@+android:id/elasticbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@android:id/elasticSettingMessage"
+            android:layout_alignLeft="@android:id/elasticSettingMessage" />
+        <com.jiubang.ggheart.components.DeskTextView android:id="@+android:id/elasticActualValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@android:id/elasticbar"
+            android:layout_alignLeft="@android:id/elasticbar"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:maxLines="1" />
+    </RelativeLayout>
+</LinearLayout>

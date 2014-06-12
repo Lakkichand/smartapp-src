@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.appgame.base.component.NewExtraContainer
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:id="@+id/new_extra_tips_view"
+        android:background="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/new_extra_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/center_background"
+        android:cacheColorHint="@color/center_background"
+        android:dividerHeight="0.5dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:listSelector="@android:color/transparent"
+        android:divider="@drawable/listview_divider">
+    </ListView>
+
+</com.jiubang.ggheart.appgame.base.component.NewExtraContainer>

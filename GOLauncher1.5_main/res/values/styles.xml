@@ -1,0 +1,238 @@
+<resources>
+
+	<style name="Transparent">
+		<item name="android:windowBackground">@color/transparent_background</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>
+	</style>
+
+	<style name="WorkspaceIcon">
+		<item name="android:textSize">13dip</item>
+		<item name="android:singleLine">true</item>
+		<item name="android:ellipsize">marquee</item>
+		<item name="android:shadowColor">#FF000000</item>
+		<item name="android:shadowRadius">2.0</item>
+		<item name="android:textColor">#FFF</item>
+		<item name="android:gravity">center_horizontal</item>
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">fill_parent</item>
+		<item name="android:background">@drawable/shortcut_selector</item>
+		<item name="android:paddingLeft">5dip</item>
+		<item name="android:paddingRight">5dip</item>
+	</style>
+
+	<style name="WorkspaceIcon.Portrait">
+		<item name="android:drawablePadding">5dip</item>
+		<item name="android:paddingTop">4dip</item>
+		<item name="android:layout_marginLeft">3dip</item>
+		<item name="android:layout_marginRight">3dip</item>
+		<item name="android:layout_marginTop">13dip</item>
+		<item name="android:layout_marginBottom">8dip</item>
+	</style>
+
+	<style name="WorkspaceIcon.Landscape">
+		<item name="android:drawablePadding">3dip</item>
+		<!-- <item name="android:drawablePadding">1dip</item> -->
+		<item name="android:paddingTop">2dip</item>
+		<item name="android:layout_marginLeft">10dip</item>
+		<item name="android:layout_marginRight">10dip</item>
+	</style>
+
+	<style name="PopMenuItem">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:gravity">top|center_horizontal</item>
+		<item name="android:textSize">11dp</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textColor">#ffffffff</item>
+		<item name="android:ellipsize">marquee</item>
+		<item name="android:fadingEdge">horizontal</item>
+		<item name="android:paddingLeft">3dip</item>
+		<item name="android:paddingRight">3dip</item>
+	</style>
+
+	<style name="AnimationInputMethod">
+		<item name="android:windowEnterAnimation">@anim/input_method_enter</item>
+		<item name="android:windowExitAnimation">@anim/input_method_exit</item>
+	</style>
+
+	<style name="AnimationZoom">
+		<item name="android:windowEnterAnimation">@anim/menu_zoom_enter</item>
+	</style>
+
+	<style name="AppGameMenuAnim">
+		<item name="android:windowEnterAnimation">@anim/appgame_menu_enter</item>
+		<item name="android:windowExitAnimation">@anim/appgame_menu_exit</item>
+	</style>
+	<!-- <item name="android:windowExitAnimation">@anim/menu_zoom_exit</item> -->
+
+	<style name="AnimationZoomH">
+		<item name="android:windowEnterAnimation">@anim/menu_zoom_enter_h</item>
+	</style>
+	<!-- <item name="android:windowExitAnimation">@anim/menu_zoom_exit_h</item> -->
+
+	<style name="Dialog" parent="android:style/Theme.Dialog">
+		<item name="android:backgroundDimEnabled">true</item>
+		<item name="android:windowBackground">@color/new_transparent</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+	</style>
+	
+	<style name="ProgressBarStyle">
+		<item name="android:indeterminateOnly">false</item>
+		<item name="android:progressDrawable">@drawable/gostore_detail_progress_style</item>
+		<item name="android:minHeight">8dp</item>
+		<item name="android:maxHeight">8dp</item>
+		<item name="android:focusable">false</item>
+	</style>
+
+	<style name="DownloadProgressBarStyle">
+		<item name="android:indeterminateOnly">false</item>
+		<item name="android:progressDrawable">@drawable/downloadmanager_progress_style</item>
+		<item name="android:minHeight">10dp</item>
+		<item name="android:maxHeight">10dp</item>
+		<item name="android:focusable">false</item>
+	</style>
+
+	<style name="msg_dialog" parent="@android:style/Theme.Dialog">
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:background">@android:color/transparent</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:backgroundDimEnabled">true</item>
+		<item name="android:backgroundDimAmount">0.6</item>
+	</style>
+
+	<style name="appsmanagement_memory_green">
+		<item name="android:indeterminateOnly">false</item>
+		<item name="android:progressDrawable">@drawable/appsmanagement_memory_green</item>
+		<item name="android:minHeight">8dp</item>
+		<item name="android:maxHeight">8dp</item>
+		<item name="android:focusable">false</item>
+	</style>
+
+	<style name="appsmanagement_memory_orange">
+		<item name="android:indeterminateOnly">false</item>
+		<item name="android:progressDrawable">@drawable/appsmanagement_memory_orange</item>
+		<item name="android:minHeight">8dp</item>
+		<item name="android:maxHeight">8dp</item>
+		<item name="android:focusable">false</item>
+	</style>
+
+	<style name="appsmanagement_memory_red">
+		<item name="android:indeterminateOnly">false</item>
+		<item name="android:progressDrawable">@drawable/appsmanagement_memory_red</item>
+		<item name="android:minHeight">8dp</item>
+		<item name="android:maxHeight">8dp</item>
+		<item name="android:focusable">false</item>
+	</style>
+
+	<style name="NotificationText">
+		<item name="android:textColor">#000000</item>
+	</style>
+
+	<style name="NotificationTitle">
+		<item name="android:textColor">#000000</item>
+		<item name="android:textStyle">bold</item>
+	</style>
+
+	<style name="specialRatineBar" parent="@android:style/Widget.RatingBar">
+		<item name="android:progressDrawable">@drawable/special_rating_bar_full</item>
+		<item name="android:minHeight">10dp</item>
+		<item name="android:maxHeight">10dp</item>
+	</style>
+
+	<style name="AppsManagementProgressBarStyle">
+		<item name="android:indeterminateOnly">false</item>
+		<item name="android:progressDrawable">@drawable/appsmanagement_progress_style</item>
+		<item name="android:minHeight">9dp</item>
+		<item name="android:maxHeight">9dp</item>
+		<item name="android:focusable">false</item>
+	</style>
+
+	<style name="SwtichMenuAnimationZoom">
+		<item name="android:windowEnterAnimation">@anim/switch_menu_zoom_enter</item>
+	</style>
+
+	<style name="SwtichMenuAnimationZoomH">
+		<item name="android:windowEnterAnimation">@anim/switch_menu_zoom_enter_h</item>
+	</style>
+
+	<style name="media_open_chooser_dialog" parent="android:style/Theme.Dialog">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowIsTranslucent">false</item>
+		<item name="android:background">@android:color/transparent</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:backgroundDimEnabled">false</item>
+	</style>
+
+	<style name="single_choice_Dialog" parent="@android:Theme.Dialog">
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowBackground">@drawable/folder_edit_bg</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowContentOverlay">@null</item>
+	</style>
+
+	<style name="AppGameSetting">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:background">@color/center_background</item>
+	</style>
+
+	<style name="AppGameSettingDialog" parent="@android:Theme.Dialog">
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowBackground">@color/transparent_background</item>
+		<item name="android:windowNoTitle">true</item>
+	</style>
+
+	<style name="DiyGestureButton">
+		<item name="android:background">@drawable/gesture_btn_selector</item>
+		<item name="android:textColor">#626262</item>
+		<item name="android:textSize">13.3sp</item>
+	</style>
+
+	<style name="SpinnerAnimationFade">
+		<item name="android:windowEnterAnimation">@anim/spinner_in</item>
+		<item name="android:windowExitAnimation">@anim/spinner_out</item>
+	</style>
+
+	<style name="ColorViewAnimationFade">
+		<item name="android:windowEnterAnimation">@anim/color_view_in</item>
+		<item name="android:windowExitAnimation">@anim/color_view_out</item>
+	</style>
+
+	<style name="ThemePaidDialog" parent="@android:Theme.Dialog">
+		<item name="android:windowFrame">@null</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowBackground">@drawable/theme_paid_dialog_bg</item>
+		<item name="android:windowIsFloating">true</item>
+		<item name="android:windowContentOverlay">@null</item>
+	</style>
+	<style name="ThemeDownloadProgressBarStyle">
+		<item name="android:indeterminateOnly">false</item>
+		<item name="android:progressDrawable">@drawable/theme_download_progress_style</item>
+		<item name="android:minHeight">10dp</item>
+		<item name="android:maxHeight">10dp</item>
+		<item name="android:focusable">false</item>
+	</style>
+	<style name="TransparentActivity">
+		<item name="android:windowBackground">@color/transparent_background</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>
+	</style>
+
+	<style name="DeskSettingDialogSeekBarStyle">
+		<item name="android:indeterminateOnly">false</item>
+		<item name="android:progressDrawable">@drawable/desk_setting_dialog_seekbar_style</item>
+		<item name="android:minHeight">2dp</item>
+		<item name="android:maxHeight">2dp</item>
+		<item name="android:focusable">false</item>
+	</style>
+</resources>

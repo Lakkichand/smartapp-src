@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<resources xmlns:android="http://schemas.android.com/apk/res/android">  
+  <color name="transparent_background">#00000000</color>  
+  <color name="window_background">#FF191919</color>
+  <color name="bubble_dark_background">#B2191919</color>
+  <color name="delete_color_filter">#A5FF0000</color>
+  <color name="appwidget_error_color">#000000</color>
+  <color name="appfunc_search_list_item_bg">#FFFFFFF5</color>
+  <color name="list_item_bg">#FFF5F5F5</color>
+  <color name="new_transparent">#11000000</color>
+  
+  <!-- 图标轮廓颜色 -->
+  <color name="icon_outline_color">#ACE501</color>
+  <color name="icon_glow_color">#ACE501</color>
+  
+  
+  <color name="guide_bg_color">#F4F4F4</color>
+    
+    <!-- 主题预览界面 -->
+  <color name="theme_top_cur_text">#99cc00</color>
+  <color name="theme_top_text">#838383</color>
+  <color name="theme_tab_focus">#88b500</color>
+  <color name="theme_tab_no_focus">#9a9a9a</color>
+  <color name="theme_bottom_text_focus">#656565</color>
+  <color name="theme_bottom_text_normal">#838383</color>
+  <color name="theme_findmore_text_color">#89BB65</color>
+  <color name="theme_detail_topbar_title">#DCDCDC</color>
+  <color name="theme_detail_menu_text">#505253</color>
+  <color name="theme_detail_apply_text">#6BB24B</color>
+  <color name="theme_detail_modify_text">#FFFFFF</color>
+  <color name="theme_golocker_tips">#888888</color>
+  <color name="theme_golocker_logo">#8fc31f</color>
+   <color name="theme_bg">#f7f7f7</color>
+  
+	<!-- 应用中心背景颜色 -->	      
+  <color name="app_back_color">#ededed</color>
+  <color name="app_detail_security_info">#3bbf1c</color>      
+  
+  <color name="center_background">#f2f2f2</color>
+  
+  <!-- 应用中心、游戏中心页面间隙颜色值 -->
+  <color name="app_game_page_gap_color">#141414</color>
+  <color name="appgame_menu_bg">#EEEEEE</color>
+  <!-- 应用中心、游戏中心详情页背景颜色 -->
+  <color name="app_detail_bg">#F6F6F6</color>
+  <!-- 应用中心、游戏中心详情页按钮字体颜色 -->
+  <color name="app_detail_btn">#FF393939</color>
+  <!-- 应用游戏中心精品推荐、编辑推荐的图片填充颜色 -->
+  <color name="appgame_img_color">#808080</color>
+  <!-- 应用游戏中心的按钮字体颜色 -->
+  <color name="appgame_download_btn_black">#818181</color>
+  <color name="appgame_download_btn_white">#FFFFFF</color>
+  <!-- 应用中心、游戏中心banner图点击效果颜色-->
+  <color name="appgame_banner_press_color">#99b3d450</color>
+  <!-- 下载管理界面 -->
+  <color name="downloadmanager_text_black">#535353</color>
+  <color name="downloadmanager_text_red">#FF0000</color>
+  <!-- 应用游戏中 心的按钮字体的shadow颜色 -->
+  <color name="appgame_download_btn_shadow_green">#83ad00</color>
+  <color name="appgame_download_btn_shadow_yellow">#ad7300</color>
+  <!-- 自定义手势 -->
+  <color name="gesture_draw_color">#9CCD00</color>
+  <color name="gesture_conflict_color">#B5B5B5</color>
+  <color name="gesture_next_color">#787878</color>
+  <color name="gesture_waring_color">#FFBB00</color>
+  
+  <!-- go手册 -->
+  <color name="go_book_webview_bg">#E7E7E7</color>
+  
+  <!-- 桌面设置 -->
+  <color name="desk_setting_bg_color">#EEEEEE</color>
+  <color name="desk_setting_title_color">#71A900</color>
+  <color name="desk_setting_item_title_color">#585858</color>
+  <color name="desk_setting_item_summary_color">#8C8C8C</color>
+  <color name="desk_setting_tab_title_select">#88B500</color>
+  <color name="desk_setting_tab_title_no_select">#9A9A9A</color>
+  <color name="desk_setting_button_color">#2C2C2C</color>
+  <!-- 精品引导字体 -->
+  <color name="gostore_guide">#909090</color>
+  
+  <!-- 截图相关 -->
+  <color name="snapshot_tutorial_color">#828282</color>
+  <color name="snapshot_tutorial_notice_color">#73bf00</color>
+</resources>  

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1.0"
+    android:background="@drawable/appgame_tabbar_selector" >
+
+    <ImageView
+        android:id="@+id/grid_titlebar_image"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/grid_titlebar_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/grid_titlebar_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="1dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="#FF626262"
+        android:textSize="12dp" />
+
+    <ViewStub
+        android:id="@+id/grid_titlebar_updatecount_stub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout="@layout/appgame_grid_titlebar_updatetext"
+        android:layout_marginLeft="-14dp"
+        android:layout_toRightOf="@+id/grid_titlebar_image" />
+
+</RelativeLayout>

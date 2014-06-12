@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@color/center_background"
+    android:id="@+id/appgame_error_root"
+    >
+
+    <TextView
+        android:id="@+id/appgame_error_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/appgame_titlebar_bg"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:paddingLeft="13.333333333dp"
+        android:singleLine="true"
+        android:textColor="#393939"
+        android:textSize="18.6sp"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:id="@+id/appgame_error_image"
+        android:layout_width="69.3333333dp"
+        android:layout_height="62.66666667dp"
+        android:layout_above="@+id/center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:src="@drawable/appsmanagement_network_exception_bg" />
+
+    <TextView
+        android:id="@+id/appgame_error_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-5dp"
+        android:gravity="center"
+        android:text="@string/appgame_network_error_message"
+        android:textColor="#404040" />
+
+    <TextView
+        android:id="@+id/appgame_error_nettip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/appgame_network_error_tip"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/retrybutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="86.6667dp"
+        android:layout_below="@+id/center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/appgame_install_btn_selector"
+        android:singleLine="true"
+        android:gravity="center"
+        android:text="@string/apps_recomm_network_refresh"
+        android:textColor="#404040" />
+    
+    <LinearLayout
+        android:id="@+id/appgame_error_feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/menuitem_message" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="@string/appgame_network_error_feedback_tip"
+            android:textColor="#404040" >
+        </TextView>
+    </LinearLayout>
+
+</RelativeLayout>

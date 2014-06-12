@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.gowidget.gostore.views.MainListItem xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants" >
+    <com.jiubang.ggheart.apps.gowidget.gostore.component.SimpleImageView
+        android:id="@+id/recommendIconImageView"
+        android:layout_width="55dip"
+        android:layout_height="55dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:padding="3dip" />
+
+    <RelativeLayout
+        android:id="@+id/recommendRightView"
+        android:layout_width="wrap_content"
+        android:layout_height="59.4dip" 
+        android:layout_alignParentRight="true">
+
+        <RelativeLayout
+            android:id="@+id/recommendControlRelativeLayout"
+            android:layout_width="83.16dp"
+            android:layout_height="fill_parent"
+             >
+
+            <ImageView
+                android:id="@+id/item_line"
+                android:layout_width="wrap_content"
+                android:layout_height="34.32dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/gostore_item_line_v" />
+
+            <ImageView
+                android:id="@+id/recommendPriceIconView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11.88dip"
+                android:layout_toRightOf="@id/item_line"
+                android:background="@drawable/gostore_price_download" />
+
+            <TextView
+                android:id="@+id/recommendPriceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6.6dip"
+                android:layout_toRightOf="@id/recommendPriceIconView"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="13.3sp" />
+
+            <ImageView
+                android:id="@+id/recommendHotNewImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/orderProgressView"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="@string/gostore_note_processing"
+            android:textSize="15sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/recommendRightView"
+        android:layout_toRightOf="@id/recommendIconImageView"
+        android:paddingBottom="2dip"
+        android:paddingTop="2dip" 
+        android:paddingRight="5dip">
+
+        <TextView
+            android:id="@+id/recommendNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            />
+		
+				<!-- 详情 -->
+				<TextView
+		            android:id="@+id/recommendSortTextView"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:singleLine="true"
+		            android:textColor="#404040"
+		            android:textSize="10sp" 
+		            android:layout_alignLeft="@id/recommendNameTextView"
+            		android:layout_below="@id/recommendNameTextView"
+            		/>
+		
+		        <TextView
+		            android:id="@+id/recommendVerTextView"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignBottom="@id/recommendNameTextView"
+		            android:layout_marginLeft="3dp"
+		            android:layout_toRightOf="@id/recommendNameTextView"
+		            android:singleLine="true"
+		            android:textColor="#404040"
+		            android:textSize="12sp"
+		            android:visibility="gone" />
+		
+		        <LinearLayout
+		            android:id="@+id/recommendStarLinearLayout"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignLeft="@id/recommendSortTextView"
+		            android:layout_below="@id/recommendSortTextView"
+		            android:layout_marginTop="5dp"
+		            android:visibility="gone" />
+		
+		        <TextView
+		            android:id="@+id/recommendDownloadCountTextView"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignLeft="@id/recommendSortTextView"
+		            android:layout_below="@id/recommendSortTextView"
+		            android:singleLine="true"
+		            android:textColor="#404040"
+		            android:textSize="10sp"
+		            android:visibility="visible" />
+        <!-- 下载进度条 -->
+		
+			<TextView 
+		        android:id="@+id/gostore_list_download_percent"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="left"
+		        android:textColor="#626262"
+		        android:textSize="10sp"
+		        android:singleLine="true"
+		        android:layout_alignLeft="@id/recommendNameTextView"
+           	 	android:layout_below="@id/recommendNameTextView"
+           	 	android:visibility="gone"/>
+		    <ProgressBar
+		        android:id="@+id/gostore_list_download_progress"
+		        android:layout_width="@dimen/gosotre_download_progressbar_length"
+		        android:layout_height="4.7dp"
+		        style="@style/ProgressBarStyle"
+		        android:layout_gravity="center_vertical"
+		        android:max="100"
+		        android:layout_alignLeft="@id/recommendNameTextView"
+           	 	android:layout_below="@id/gostore_list_download_percent"
+           	 	android:visibility="gone"/>
+    </RelativeLayout>
+</com.jiubang.ggheart.apps.gowidget.gostore.views.MainListItem>
+    
+	<!--  
+	<com.jiubang.ggheart.apps.gowidget.gostore.views.MainListItem xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants" >
+    
+    <com.jiubang.ggheart.apps.gowidget.gostore.component.SimpleImageView
+        android:id="@+id/recommendIconImageView"
+        android:layout_width="55dip"
+        android:layout_height="55dip"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:padding="3dip" />
+
+    <RelativeLayout
+        android:id="@+id/recommendRightView"
+        android:layout_width="wrap_content"
+        android:layout_height="59.4dip" 
+        android:layout_alignParentRight="true">
+
+        <RelativeLayout
+            android:id="@+id/recommendControlRelativeLayout"
+            android:layout_width="83.16dp"
+            android:layout_height="fill_parent"
+             >
+
+            <ImageView
+                android:id="@+id/item_line"
+                android:layout_width="wrap_content"
+                android:layout_height="34.32dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/gostore_item_line_v" />
+
+            <ImageView
+                android:id="@+id/recommendPriceIconView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11.88dip"
+                android:layout_toRightOf="@id/item_line"
+                android:background="@drawable/gostore_price_download" />
+
+            <TextView
+                android:id="@+id/recommendPriceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6.6dip"
+                android:layout_toRightOf="@id/recommendPriceIconView"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="13.3sp" />
+
+            <ImageView
+                android:id="@+id/recommendHotNewImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/orderProgressView"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:textSize="15sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/recommendRightView"
+        android:layout_toRightOf="@id/recommendIconImageView"
+        android:paddingBottom="2dip"
+        android:paddingRight="5dip"
+        android:paddingTop="2dip" >
+
+        <TextView
+            android:id="@+id/recommendNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/recommendNameTextView"
+            android:layout_below="@id/recommendNameTextView" >
+
+            <RelativeLayout
+                android:id="@+id/detail_normal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <TextView
+                    android:id="@+id/recommendSortTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="#404040"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/recommendVerTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/recommendNameTextView"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@id/recommendNameTextView"
+                    android:singleLine="true"
+                    android:textColor="#404040"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/recommendStarLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/recommendSortTextView"
+                    android:layout_below="@id/recommendSortTextView"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/recommendDownloadCountTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/recommendSortTextView"
+                    android:layout_below="@id/recommendSortTextView"
+                    android:singleLine="true"
+                    android:textColor="#404040"
+                    android:textSize="10sp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/detail_order_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/orderTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="#404040"
+                    android:textSize="10sp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+        </RelativeLayout>
+		-->
+        <!-- 下载进度条 -->
+		<!--  
+        <LinearLayout
+            android:id="@+id/gostore_download_progress_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/recommendNameTextView"
+            android:layout_below="@id/recommendNameTextView"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/gostore_list_download_percent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:singleLine="true"
+                android:textColor="#626262"
+                android:textSize="10sp" />
+
+            <ProgressBar
+                android:id="@+id/gostore_list_download_progress"
+                style="@style/ProgressBarStyle"
+                android:layout_width="@dimen/gosotre_download_progressbar_length"
+                android:layout_height="4.7dp"
+                android:layout_gravity="center_vertical"
+                android:max="100" />
+        </LinearLayout>
+    </RelativeLayout>
+    </com.jiubang.ggheart.apps.gowidget.gostore.views.MainListItem>
+	-->

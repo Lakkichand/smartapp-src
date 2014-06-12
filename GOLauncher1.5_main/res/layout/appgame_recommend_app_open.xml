@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/folder_edit_bg" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/folder_top_bg" >
+
+            <TextView
+                android:id="@+id/appgame_recommend_app_open_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/appgame_recommend_app_dialog_title"
+                android:textColor="#383737"
+                android:textSize="17.3dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/appgame_recommend_app_open_relativeLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout1"
+            android:background="@color/appgame_menu_bg"
+            android:layout_marginBottom="16dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp" >
+
+            <ImageView
+                android:id="@+id/appgame_recommend_app_open_icon"
+                android:layout_width="56dip"
+                android:layout_height="56dip"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="21.3312dp"
+                android:layout_marginTop="21.3312dp"
+                android:background="@drawable/default_icon" />
+
+            <TextView
+                android:id="@+id/appgame_recommend_app_open_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/appgame_recommend_app_open_icon"
+                android:textColor="#525252"
+                android:textSize="13.3sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/appgame_recommend_app_open_buttons"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appgame_recommend_app_open_relativeLayout"
+            android:paddingBottom="16dp" >
+
+            <Button
+                android:id="@+id/appgame_recommend_app_open_active"
+                android:layout_width="106.6654dp"
+                android:layout_height="36.6666dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="16dp"
+                android:textColor="#FFFFFF"
+                android:text="@string/ok"
+                android:background="@drawable/appgame_recommend_app_active_button_selector"/>
+
+            <Button
+                android:id="@+id/appgame_recommend_app_open_cancel"
+                android:layout_width="106.6654dp"
+                android:layout_height="36.6666dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:textColor="#343434"
+                android:background="@drawable/appgame_recommend_app_cancel_button_selector"
+                android:text="@string/cancel"/>
+        </RelativeLayout>
+        <!--
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/folder_edit_top_bottom_hight"
+            android:layout_below="@+id/appgame_internal_storage_relativeLayout"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/appgame_internal_storage_ok"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/folder_button_selector"
+                android:gravity="center"
+                android:text="@string/appgame_recommend_app_dialog_active"
+                android:textColor="#535353"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/folder_button_line" />
+
+            <Button
+                android:id="@+id/appgame_internal_storage_cancel"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/folder_button_selector"
+                android:gravity="center"
+                android:text="@string/cancle"
+                android:textColor="#535353"
+                android:textSize="16sp" />
+        </LinearLayout>
+        -->
+    </RelativeLayout>
+
+</LinearLayout>

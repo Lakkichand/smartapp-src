@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myAndroid="http://schemas.android.com/apk/res/com.gau.go.launcherex"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/desk_setting_bg_color"
+    android:orientation="vertical" >
+
+		<com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingPageTitleView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        myAndroid:titleTextLineHeight="1dip"
+        myAndroid:titleText="@string/pref_title_theme_settings" />
+		
+		 <ScrollView
+        	android:layout_width="fill_parent"
+        	android:layout_height="fill_parent" >
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/desk_setting_view_padding"
+            android:paddingRight="@dimen/desk_setting_view_padding" >
+
+		 <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingTitleView
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			myAndroid:titleText="@string/key_appfunc_bg_settings" />  
+
+		<com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemListView
+			android:id="@+id/fun_app_appdrawer_bg_base_view" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:visibility="gone"
+			myAndroid:isHiddenBottomLine="true" myAndroid:dialogTitle="@string/key_appfunc_bg_settings"
+			myAndroid:listEntryValues="@array/appfunc_bg_type_entry_value"
+			myAndroid:listEntries="@array/fun_bg_type_entris"
+			myAndroid:dialogType="SINGLE_CHOICE" />
+		
+		<ImageView android:id="@+id/fun_app_appdrawwallpaperpic"
+			android:layout_width="wrap_content"
+			android:layout_height="@dimen/desk_setting_visual_tab_background_wallpaperpic_height"
+			android:layout_marginTop="8dip" android:layout_marginLeft="3dip" />
+
+		<ImageView android:id="@+id/fun_app_appdrawerwallpaperpicbase"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:background="@drawable/desk_setting_visual_picbase" />
+
+		<com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemCheckBoxView
+			android:id="@+id/fun_app_appdrawer_blur" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" myAndroid:titleText="@string/func_app_blur_bg"
+			myAndroid:summaryText="@string/func_app_blur_bg_hint" />
+
+		<com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemListView
+			android:id="@+id/fun_app_appdrawer_selectcard" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" myAndroid:titleText="@string/appfunc_tab_bottom_bg_settings"
+			myAndroid:isHiddenBottomLine="true" myAndroid:dialogTitle="@string/appfunc_tab_bottom_bg_settings"
+			myAndroid:dialogType="SINGLE_CHOICE" />
+		</LinearLayout>
+	</ScrollView>
+
+</LinearLayout>

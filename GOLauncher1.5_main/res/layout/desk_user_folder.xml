@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.desks.diy.frames.screen.FolderRelativeLayout  
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/folderMainLayout"
+    android:orientation="vertical"
+ 	android:layout_width="match_parent" android:layout_height="match_parent">
+  <RelativeLayout
+   android:id="@+id/title"
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:layout_marginTop="5dip"
+   android:paddingLeft="7dip"
+   android:paddingRight="10dip">
+	<com.jiubang.ggheart.components.DeskTextView
+		android:id="@+id/rename_folder_edittext" 
+		android:layout_width="wrap_content" android:layout_height="wrap_content" 
+		android:layout_centerVertical="true"
+		android:layout_alignParentLeft="true"
+		android:text="folder"
+		android:gravity="center_vertical|left" android:background="@drawable/appfunc_rename" />
+	
+	<ImageButton android:id="@+id/sort_folder_btn"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:layout_toRightOf="@id/rename_folder_edittext"
+		android:layout_marginLeft="7dp"
+		android:background="@drawable/folder_sort_btn_selector" />
+	
+	<ImageButton android:id="@+id/edit_folder_btn"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_centerVertical="true"
+		android:layout_toRightOf="@id/sort_folder_btn"
+		android:layout_marginLeft="5dp"
+		android:background="@drawable/folder_edit_btn_selector" />
+</RelativeLayout>
+    
+<com.jiubang.ggheart.apps.desks.diy.frames.screen.DesktopIndicator
+	android:id="@+id/folder_indicator"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_below="@id/title"
+	/>
+	
+<com.jiubang.ggheart.apps.desks.diy.frames.screen.FolderGridView
+    android:id="@+id/folder_gridView"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/folder_indicator"
+    android:layout_alignLeft="@id/folder_indicator"
+    android:layout_centerHorizontal="true"
+    />
+ </com.jiubang.ggheart.apps.desks.diy.frames.screen.FolderRelativeLayout>
+<!--   android:layout_height="255dip" -->
+<!-- android:layout_width="321dip" -->
+<!-- android:layout_height="280dip" -->

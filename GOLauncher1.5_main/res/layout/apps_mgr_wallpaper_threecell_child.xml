@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/recomm_app_list_item_selector"
+    android:padding="1.675dip">
+    
+    
+    <ImageSwitcher
+        android:id="@+id/app_icon_switcher"
+        android:layout_width="101.84dip"
+        android:layout_height="89.84dip"
+        android:layout_centerHorizontal="true"
+        android:inAnimation="@anim/appgame_fade_in"
+        android:outAnimation="@anim/appgame_fade_out" >
+
+        <ImageView
+            android:layout_width="101.84dip"
+            android:layout_height="89.84dip"
+            android:gravity="center_horizontal"
+            android:scaleType="fitXY" />
+        
+         <ImageView
+            android:layout_width="101.84dip"
+            android:layout_height="89.84dip"
+            android:gravity="center_horizontal"
+            android:scaleType="fitXY" />
+    </ImageSwitcher>
+
+</RelativeLayout>

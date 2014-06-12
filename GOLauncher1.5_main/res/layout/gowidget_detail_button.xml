@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="horizontal"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:paddingLeft="20dp"
+  android:paddingRight="20dp"
+  android:background="@drawable/mytheme_bottom_bg">
+  <Button 
+  	android:id="@+id/skin"
+  	android:textSize="12sp"
+  	android:textColor="@android:color/black"
+  	android:layout_width="108dip"
+  	android:layout_height="36dip"
+  	android:layout_alignParentLeft="true"
+  	android:layout_centerVertical="true"
+  	android:background="@drawable/mytheme_button_bg_selector"
+  	android:singleLine="true"/>
+  <com.jiubang.ggheart.components.DeskButton 
+  	android:id="@+id/addtodesktop"
+  	android:text="@string/gowidget_detail_addtodesktop"
+  	android:textSize="12sp"
+  	android:textColor="@android:color/black"
+  	android:layout_width="108dip"
+  	android:layout_height="36dip"
+  	android:layout_alignParentRight="true"
+  	android:layout_centerVertical="true"
+  	android:drawableLeft="@drawable/add_to_desktop"
+  	android:background="@drawable/mytheme_button_bg_selector"
+  	/>
+    
+</RelativeLayout>

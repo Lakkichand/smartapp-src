@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="100dp"
+  android:paddingTop = "3.33dp"
+  android:paddingBottom = "3.33dp"
+  android:paddingLeft = "16.67dp"
+  android:paddingRight = "13.33dp"
+  android:descendantFocusability = "blocksDescendants"
+  >
+  <ImageView
+	android:id = "@+id/itemIconImageView"
+	android:layout_width = "61.33dp"
+	android:layout_height = "94.67dp"
+	android:layout_alignParentLeft = "true"
+	android:layout_centerVertical = "true"
+	android:layout_marginRight = "12dp"
+  />
+  <RelativeLayout
+	android:layout_width = "fill_parent"
+	android:layout_height = "wrap_content"
+	android:layout_toRightOf = "@id/itemIconImageView"
+	android:layout_alignTop = "@id/itemIconImageView"
+	android:paddingTop = "3.33dp"
+	android:paddingBottom = "3.33dp"
+  >
+  <TextView
+    android:id = "@+id/itemNameTextView"
+    android:layout_alignParentLeft = "true"
+    android:layout_alignParentTop = "true"
+  	android:layout_width = "wrap_content"
+	android:layout_height = "wrap_content"
+	android:textSize = "14sp"
+	android:textColor = "#000000"
+	android:singleLine = "true"
+  />
+  <TextView
+    android:id = "@+id/descriptionTextView"
+    android:layout_below = "@id/itemNameTextView"
+    android:layout_alignLeft = "@id/itemNameTextView"
+  	android:layout_width = "wrap_content"
+	android:layout_height = "wrap_content"
+	android:layout_marginBottom = "10dp"
+	android:textSize = "12sp"
+	android:textColor = "#494949"
+	android:singleLine = "true"
+  />
+  <TextView
+    android:id = "@+id/installPackageSizeTextView"
+    android:layout_below = "@id/descriptionTextView"
+    android:layout_alignLeft = "@id/itemNameTextView"
+  	android:layout_width = "wrap_content"
+	android:layout_height = "wrap_content"
+	android:textSize = "12sp"
+	android:textColor = "#404040"
+	android:singleLine = "true"
+  />  
+  
+  <TextView
+    android:id = "@+id/verTextView"
+    android:layout_below = "@id/installPackageSizeTextView"
+    android:layout_alignLeft = "@id/descriptionTextView"
+  	android:layout_width = "wrap_content"
+	android:layout_height = "wrap_content"
+	android:layout_marginRight = "13.33dp"
+	android:textSize = "12sp"
+	android:textColor = "#404040"
+	android:singleLine = "true"
+  />
+
+  
+  <TextView
+    android:id = "@+id/updateTimeTextView"
+    android:layout_below = "@id/verTextView"
+    android:layout_alignLeft = "@id/itemNameTextView"
+  	android:layout_width = "wrap_content"
+	android:layout_height = "wrap_content"
+	android:textSize = "12sp"
+	android:textColor = "#404040"
+	android:singleLine = "true"
+  />  
+
+  <TextView
+	android:id = "@+id/priceTextView"
+	android:layout_width = "65dp"
+	android:layout_height = "wrap_content"
+	android:layout_alignParentRight = "true"
+	android:layout_alignParentBottom = "true"
+	android:textSize = "12sp"
+	android:gravity = "center"
+	android:textColor = "#FFFFFF"
+  />
+  
+  </RelativeLayout>
+</RelativeLayout>

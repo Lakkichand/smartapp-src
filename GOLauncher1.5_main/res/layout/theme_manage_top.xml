@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/theme_top_height"
+    android:background="@drawable/theme_top_tab_bg"
+    android:orientation="horizontal" >
+
+    <!-- 分割线 -->
+
+    <ImageView
+        android:id="@+id/theme_middle_line"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/theme_top_height"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/theme_top_line" />
+
+    <RelativeLayout
+        android:id="@+id/desk_theme_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/theme_top_height"
+        android:layout_toLeftOf="@id/theme_middle_line"
+        android:background="@drawable/theme_top_bg_selector">
+
+        <com.jiubang.ggheart.components.DeskTextView
+            android:id="@+id/desk_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/theme_toptab_desk"
+            android:layout_centerInParent="true"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/desk_lightpoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/desk_theme"
+            android:paddingRight="12dip"
+            android:src="@drawable/theme_top_lightpoint" />
+    </RelativeLayout>
+
+    <RelativeLayout
+          android:id="@+id/locker_theme_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/theme_top_height"
+        android:layout_toRightOf="@id/theme_middle_line"
+        android:background="@drawable/theme_top_bg_selector"
+      >
+
+        <com.jiubang.ggheart.components.DeskTextView
+            android:id="@+id/lock_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/theme_toptab_locker"
+            android:textSize="16sp" 
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+              android:id="@+id/lock_lightpoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/lock_theme"
+            android:paddingRight="12dip"
+            android:src="@drawable/theme_top_lightpoint" />
+    </RelativeLayout>
+
+</RelativeLayout>

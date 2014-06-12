@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.appgame.gostore.base.component.GoStoreDetailGalleryImage
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/gostore_theme_gallery_background" >
+
+    <RelativeLayout
+        android:id="@+id/loading_View"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/loading_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/gostore_theme_gallery_loading" />
+
+            <TextView
+                android:id="@+id/loading_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/apps_management_search_loading"
+                android:layout_below="@id/loading_img"
+                android:layout_centerHorizontal="true"
+                android:textColor="#616161"
+                android:textSize="13.33sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/retry_View"
+        android:layout_width="fill_parent"
+   		android:layout_height="fill_parent"
+        android:visibility="gone" 
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/retry_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="60dp"
+            android:layout_marginTop="90dp"
+            android:background="@drawable/gostore_theme_gallery_retry_bg" 
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/retry_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/retry_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="13.33dp"
+            android:text="@string/themestore_load_data_exception"
+            android:textColor="#616161"
+            android:textSize="13.33sp" />
+
+        <RelativeLayout 
+            android:id="@+id/retry_btn_text"
+            android:layout_width="100dp"
+            android:layout_height="24.67dp"
+            android:layout_below="@id/retry_text"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/gostore_theme_gallery_retry_btn">
+             <TextView
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_centerInParent="true"
+            	android:drawableLeft="@drawable/gostore_theme_gallery_retry_refresh"
+            	android:drawablePadding="3dp"
+            	android:gravity="center"
+            	android:text="@string/themestore_retry_load_data"
+            	android:textColor="#000000"
+            	android:textSize="13.33sp" />
+            </RelativeLayout>
+       
+    </RelativeLayout>
+    <!-- <ImageView 
+        android:id="@+id/gallery_image_View"
+        android:layout_width="fill_parent"
+   		android:layout_height="fill_parent"
+   	    android:padding="6.67dp"
+        android:visibility="gone"/>
+     -->
+    <ImageSwitcher
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/gallery_image_View"
+        android:inAnimation="@anim/appgame_fade_in"
+        android:outAnimation="@anim/appgame_fade_out" >
+    </ImageSwitcher>
+
+</com.jiubang.ggheart.appgame.gostore.base.component.GoStoreDetailGalleryImage>

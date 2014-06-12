@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/recomm_app_list_item_selector" >
+
+    <RelativeLayout
+        android:id="@+id/relativelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="6dp"
+        android:paddingLeft="6dp"
+        android:paddingBottom="6dp"
+        >
+
+        <ImageView
+            android:id="@+id/app_detail_recommend_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/app_detail_recommend_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/app_detail_recommend_icon"
+            android:layout_marginLeft="6.667dp"
+            android:layout_toRightOf="@+id/app_detail_recommend_icon"
+            android:ellipsize="end"
+            android:maxEms="8"
+            android:singleLine="true"
+            android:textColor="#393939"
+            android:textSize="15sp" />
+
+        <RatingBar
+            android:id="@+id/app_detail_recommend_ratingbar"
+            style="@style/specialRatineBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/app_detail_recommend_icon"
+            android:layout_alignLeft="@+id/app_detail_recommend_name"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="3.5"
+            android:stepSize="0.5" />
+    </RelativeLayout>
+
+</RelativeLayout>

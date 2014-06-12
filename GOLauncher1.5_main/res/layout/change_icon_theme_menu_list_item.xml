@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:background="@drawable/change_icon_tab_selector"
+    android:textSize="16sp"
+    android:textColor="#B2fefefe"
+    android:singleLine="true"
+    android:gravity="center_vertical"
+    android:paddingLeft="5dip"
+    android:maxEms="12">
+</TextView>

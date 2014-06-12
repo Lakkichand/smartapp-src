@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10.667dp"
+    android:paddingLeft="10.667dp"
+    android:paddingBottom="10.667dp">
+
+    <ImageView
+        android:id="@+id/app_detail_security_list_dialog_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"/>
+    
+    <TextView 
+        android:id="@+id/app_detail_security_list_dialog_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/app_detail_security_list_dialog_icon"
+        android:layout_toLeftOf="@+id/app_detail_security_list_dialog_score"
+        android:layout_marginRight="6dp"
+        android:layout_marginLeft="10.667dp"
+        android:layout_centerVertical="true"
+        android:textSize="16sp"
+        android:textColor="#535353"
+        android:singleLine="true"
+        android:ellipsize="end"/>
+    
+    <TextView 
+        android:id="@+id/app_detail_security_list_dialog_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textSize="16sp"
+        android:textColor="#6f8edf"
+        android:layout_marginRight="16.667dp"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>

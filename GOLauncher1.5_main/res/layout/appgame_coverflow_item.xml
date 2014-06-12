@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageSwitcher xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/appgame_coverflow_switcher"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/coverflow_bg"
+    android:inAnimation="@anim/appgame_fade_in"
+    android:outAnimation="@anim/appgame_fade_out" >
+
+    <ImageView
+        android:id="@+id/appgame_coverflow_image"
+        android:layout_width="172dp"
+        android:layout_height="108dp"
+        android:padding="3.3333333dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/appgame_coverflow_image_another"
+        android:layout_width="172dp"
+        android:layout_height="108dp"
+        android:padding="3.3333333dp"
+        android:scaleType="fitXY" />
+
+</ImageSwitcher>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myAndroid="http://schemas.android.com/apk/res/com.gau.go.launcherex"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/desk_setting_bg_color"
+    android:orientation="vertical" >
+
+    <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingPageTitleView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        myAndroid:titleText="@string/aboutGo" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/desk_setting_view_padding"
+            android:paddingRight="@dimen/desk_setting_view_padding" >
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemBaseView
+                android:id="@+id/check_version_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:summaryText="@string/curVersion"
+                myAndroid:titleText="@string/check_version" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemBaseView
+                android:id="@+id/help_use_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:summaryText="@string/pref_help_hint"
+                myAndroid:titleText="@string/setting_help_pref" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemBaseView
+                android:id="@+id/share_app_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:summaryText="@string/share_app_summary"
+                myAndroid:titleText="@string/share_app" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemBaseView
+                android:id="@+id/rate_go_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:summaryText="@string/rate_go_launcher_summary"
+                myAndroid:titleText="@string/rate_go_launcher" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemBaseView
+                android:id="@+id/feedback_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:summaryText="@string/feedback_summary"
+                myAndroid:titleText="@string/feedback" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemBaseView
+                android:id="@+id/joinus_info_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:summaryText="@string/joinus_info_summary"
+                myAndroid:titleText="@string/joinus_info" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemBaseView
+                android:id="@+id/copyright_info_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:isHiddenBottomLine="true"
+                myAndroid:summaryText="@string/copyright_info_summary"
+                myAndroid:titleText="@string/copyright_info" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemBaseView
+                android:id="@+id/beta_updates_info_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:isHiddenBottomLine="true"
+                myAndroid:summaryText="@string/beta_updates_info_summary"
+                myAndroid:titleText="@string/beta_updates_info" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/guide_bg_color"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/guide_bg" />
+
+    <ImageView
+        android:id="@+id/toppic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/facebook_guide_toppic_margintop"
+        android:src="@drawable/guide_facebook_toppic" />
+
+    <TextView
+        android:id="@+id/contend1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toppic"
+        android:layout_marginTop="@dimen/facebook_guide_contend1_margintop"
+        android:drawableLeft="@drawable/guide_update_icon"
+        android:drawablePadding="10dp"
+        android:lineSpacingExtra="5dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="32dp"
+        android:text="@string/facebook_guide_contend1"
+        android:textColor="#303030"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/contend2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contend1"
+        android:layout_marginTop="@dimen/facebook_guide_contend2_margintop"
+        android:drawableLeft="@drawable/guide_update_icon"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="5dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="32dp"
+        android:text="@string/facebook_guide_contend2"
+        android:textColor="#303030"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/connectbutton"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/contend2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="@dimen/facebook_guide_button_margintop"
+        android:background="@drawable/facebook_sharebutton_selector"
+        android:text="@string/facebook_connect_with"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/summury"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/connectbutton"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="@dimen/facebook_guide_summury_margintop"
+        android:lineSpacingExtra="5dp"
+        android:text="@string/facebook_guide_summury"
+        android:textColor="#747474"
+        android:textSize="14sp" />
+
+</RelativeLayout>

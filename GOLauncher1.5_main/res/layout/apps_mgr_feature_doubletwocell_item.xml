@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="155dip"
+    android:layout_marginTop="5dp"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/double_two_grid_app1"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:background="#FF333333" >
+
+<!--         <RatingBar
+            android:id="@+id/double_two_grid_ratingbar1"
+            style="@style/specialRatineBar"
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="8dip"
+            android:numStars="5"
+            android:rating="3.5"
+            android:stepSize="0.5" />
+
+        <TextView
+            android:id="@+id/double_two_grid_price1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dip"
+            android:layout_marginRight="8dip"
+            android:text="免费"
+            android:textSize="12sp" /> -->
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="4dp"
+        android:layout_height="fill_parent"
+        android:background="@android:color/transparent" />
+
+    <RelativeLayout
+        android:id="@+id/double_two_grid_app2"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:background="#FF333333" >
+
+<!--         <RatingBar
+            android:id="@+id/double_two_grid_ratingbar2"
+            style="@style/specialRatineBar"
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="8dip"
+            android:numStars="5"
+            android:rating="3.5"
+            android:stepSize="0.5" />
+
+        <TextView
+            android:id="@+id/double_two_grid_price2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dip"
+            android:layout_marginRight="8dip"
+            android:text="免费"
+            android:textSize="12sp" /> -->
+    </RelativeLayout>
+
+</LinearLayout>

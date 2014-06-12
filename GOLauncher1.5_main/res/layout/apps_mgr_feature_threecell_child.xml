@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="3.35dip"
+    android:background="@drawable/recomm_app_list_item_selector" >
+    
+    <ImageSwitcher
+        android:layout_width="96.48dip"
+        android:layout_height="157.45dip"
+        android:id="@+id/app_icon_switcher"
+        android:layout_centerHorizontal="true"
+        android:inAnimation="@anim/appgame_fade_in"
+        android:outAnimation="@anim/appgame_fade_out" >
+        
+        <ImageView
+            android:layout_width="96.48dip"
+            android:layout_height="157.45dip"
+            android:gravity="center_horizontal"
+            android:scaleType="fitXY" />
+        
+        <ImageView
+            android:layout_width="96.48dip"
+            android:layout_height="157.45dip"
+            android:gravity="center_horizontal"
+            android:scaleType="fitXY" />
+
+    </ImageSwitcher>
+    
+    <TextView
+        android:id="@+id/feature_name"
+        android:layout_width="96.48dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/theme_title_bg"
+        android:gravity="center_horizontal|bottom"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#ffffff"
+        android:textSize="12sp" />
+
+
+</RelativeLayout>

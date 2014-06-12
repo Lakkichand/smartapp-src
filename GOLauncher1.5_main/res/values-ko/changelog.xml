@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- dingzijian -->
+    <!-- 更新提示log目前最多支持8条更新提示，如需减少条数，直接把updatelog的值置为""即可，无需删除 -->
+    <string name="notice_url">"http://weibo.com/golauncherex"</string>
+    <string name="updateVersion">Version 3.31</string>
+    <string name="updatelog1">1.(새 기능) GO런처 새로운 로고 </string>
+    <string name="updatelog2">2.(새 기능) 두 손가락 아래로 글라이드하면 터치 도우미 활성화하기</string>
+    <string name="updatelog3">3.(새 기능) 테마 무제한 이용권 구매후 모든 프리미엄 테마 뮤료 다운. </string>
+    <string name="updatelog4">4.(수정) 폴더안의 아이콘이 일부 태블릿에서 나타나지 못하는 문제 </string>
+    <string name="updatelog5"></string>
+    <string name="updatelog6"></string>
+    <string name="updatelog7"></string>
+    <string name="updatelog8"></string>
+    <string name="guide_text1">Hello,</string>
+    <string name="guide_text2">I am GO Launcher...</string>
+    <string name="guide_text3">Updated!</string>
+    <string name="transparent_url">http://crowdin.net/project/golauncherex/</string>
+
+</resources>

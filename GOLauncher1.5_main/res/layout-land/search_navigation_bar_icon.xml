@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:alwaysDrawnWithCache="true" >
+
+    <TextView
+        android:id="@+id/appfunc_search_navigation_bar_initial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/appfunc_search_box_h"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textSize="53.33dp" />
+
+    <ImageView
+        android:id="@+id/appfunc_search_navigation_bar_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/appfunc_search_navigation_bar_initial"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/appfunc_search_box_history"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFebebeb"
+    android:clickable="true" >
+
+    <ImageView
+        android:id="@+id/appgame_default_start_loading_pic"
+        android:layout_width="@dimen/appgame_startloading_image_width"
+        android:layout_height="@dimen/appgame_startloading_image_height"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/appgame_startloading_image_topmargin"
+        android:src="@drawable/appgame_default_start_loading_img" />
+
+    <TextView
+        android:id="@+id/appgame_default_start_loading_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appgame_default_start_loading_pic"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/appgame_startloading_title_topmargin"
+        android:text="@string/appcenter_title"
+        android:textColor="#FF595858"
+        android:textSize="@dimen/appgame_startloading_title_size" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appgame_default_start_loading_title"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/appgame_default_start_loading_decsnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/appgame_startloading_desc_topmargin"
+            android:text="@string/appgame_start_loading_descnum"
+            android:textColor="#FF6a9f01"
+            android:textSize="@dimen/appgame_startloading_desc_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/appgame_default_start_loading_decs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/appgame_startloading_desc_topmargin"
+            android:text="@string/appgame_start_loading_desc"
+            android:textColor="#FF747474"
+            android:textSize="@dimen/appgame_startloading_desc_size" />
+    </LinearLayout>
+    
+    <ProgressBar
+        android:id="@+id/appgame_default_start_loading_progressbar"
+        android:layout_width="@dimen/appgame_startloading_progress_width"
+        android:layout_height="@dimen/appgame_startloading_progress_height"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/appgame_startloading_progress_topmargin" />
+
+    <TextView
+        android:id="@+id/appgame_default_start_loading_copyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/appgame_default_start_loading_reserved"
+        android:layout_centerHorizontal="true"
+        android:text="@string/appgame_start_loading_copyright"
+        android:textColor="#FF959595"
+        android:textSize="@dimen/appgame_startloading_copyright_size" />
+
+    <TextView
+        android:id="@+id/appgame_default_start_loading_reserved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/appgame_startloading_copyright_bottommargin"
+        android:text="@string/appgame_start_loading_reserved"
+        android:textColor="#FF959595"
+        android:textSize="@dimen/appgame_startloading_copyright_size" />
+
+</RelativeLayout>

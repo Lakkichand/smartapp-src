@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageSwitcher xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/appgame_adbanner_switcher"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:inAnimation="@anim/appgame_fade_in"
+    android:outAnimation="@anim/appgame_fade_out" >
+
+    <ImageView
+        android:layout_width="143.3333333dp"
+        android:layout_height="83.3333333dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:layout_width="143.3333333dp"
+        android:layout_height="83.3333333dp"
+        android:scaleType="fitXY" />
+
+</ImageSwitcher>

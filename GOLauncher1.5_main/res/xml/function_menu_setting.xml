@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	android:title="@string/func_app_setting">
+	
+	<com.jiubang.ggheart.components.DeskPreferenceCategory android:title="@string/key_appfunc_show_setting">
+	
+		<com.jiubang.ggheart.components.DeskListPreference android:key="@string/key_func_app_scroll_setting"
+			android:title="@string/func_app_flip_horizontal" 
+			android:summary="@string/func_app_flip_horizontal_hint"
+			android:entries="@array/scroll_list_title" 
+			android:entryValues="@array/scroll_list_value"
+			android:negativeButtonText="@string/cancle" />	
+		<com.jiubang.ggheart.components.DeskListPreference android:key="@string/key_func_app_grid_setting"
+			android:title="@string/func_app_grid_setting" 
+			android:summary="@string/func_app_grid_setting_hint"
+			android:entries="@array/grid_list_title" 
+			android:entryValues="@array/grid_list_value"
+			android:negativeButtonText="@string/cancle" />	
+		<com.jiubang.ggheart.components.DeskCheckBoxPreference android:key="@string/key_func_app_show_tab_row"
+			android:title="@string/func_app_show_tab_row" 
+			android:defaultValue="true" />
+		
+		<!--  <com.jiubang.ggheart.components.DeskCheckBoxPreference android:key="@string/key_func_app_show_search"
+			android:title="@string/func_app_show_search" 
+			android:defaultValue="false" />-->
+		
+			
+		<com.jiubang.ggheart.components.DeskCheckBoxPreference android:key="@string/key_func_app_show_app_name"
+			android:title="@string/func_app_show_app_name" 
+			android:defaultValue="true" />
+			
+
+		<com.jiubang.ggheart.components.DeskCheckBoxPreference android:key="@string/key_func_app_update_info"
+			android:title="@string/func_app_update_info" 
+			android:summary="@string/appfunc_show_app_update"
+			android:defaultValue="true" />
+			
+		<com.jiubang.ggheart.components.DeskCheckBoxPreference android:key="@string/key_func_app_show_action_bar"
+			android:title="@string/func_app_show_action_bar"
+			android:defaultValue="true" />
+		
+		<com.jiubang.ggheart.components.DeskCheckBoxPreference android:key="@string/key_func_app_show_home_key_only"
+			android:title="@string/func_app_show_home_key_only"
+			android:defaultValue="false" />
+	</com.jiubang.ggheart.components.DeskPreferenceCategory>
+	
+		<!-- com.jiubang.ggheart.components.DeskPreferenceCategory android:title="@string/func_app_screen_transition">			
+		<com.jiubang.ggheart.components.DeskCheckBoxPreference android:key="@string/key_func_app_scroll_loop_setting"
+			android:title="@string/func_app_screen_looping" 
+			android:summary="@string/func_app_screen_looping_summary"
+			android:defaultValue="false" />
+		
+		<com.jiubang.ggheart.components.DeskListPreference android:key="@string/key_func_app_icon_effect_setting"
+			android:title="@string/func_app_icon_effect_setting" 
+			android:summary="@string/func_app_icon_effect_setting_hint"
+			android:entries="@array/func_app_icon_effect_entris" 
+			android:entryValues="@array/func_app_icon_effect_entry_values" />
+			
+		<com.jiubang.ggheart.components.DeskListPreference android:key="@string/key_func_app_inout_setting"
+			android:title="@string/func_app_inout_setting" 
+			android:summary="@string/func_app_inout_setting_hint"
+			android:entries="@array/inout_list_title" 
+			android:entryValues="@array/inout_list_value" />
+					
+	</com.jiubang.ggheart.components.DeskPreferenceCategory-->
+	
+	<com.jiubang.ggheart.components.DeskPreferenceCategory android:title="@string/func_app_running"
+	    android:key="@string/key_func_app_running">
+		<com.jiubang.ggheart.components.DeskPreference android:key="@string/key_func_app_lock_list" 
+			android:title="@string/func_app_lock_list"
+			android:summary="@string/func_app_lock_list_hint" />
+			
+		<com.jiubang.ggheart.components.DeskCheckBoxPreference android:key="@string/key_func_app_show_neglect_app"
+			android:title="@string/func_app_show_neglect_app" 
+			android:defaultValue="true" />
+		
+	</com.jiubang.ggheart.components.DeskPreferenceCategory>
+		<com.jiubang.ggheart.components.DeskPreferenceCategory
+	    android:key="@string/key_func_app_gesture"
+	    android:title="@string/func_app_gesture" >
+	    <com.jiubang.ggheart.components.DeskCheckBoxPreference
+	        android:defaultValue="false"
+	        android:key="@string/key_func_app_glide_up"
+	        android:summary="@string/func_app_glide_up_summary"
+	        android:title="@string/func_app_glide_up" />
+	    <com.jiubang.ggheart.components.DeskCheckBoxPreference
+	        android:defaultValue="false"
+	        android:key="@string/key_func_app_glide_down"
+	        android:summary="@string/func_app_glide_down_summary"
+	        android:title="@string/func_app_glide_down" />
+	</com.jiubang.ggheart.components.DeskPreferenceCategory>
+	
+    <com.jiubang.ggheart.components.DeskPreferenceCategory 
+   		android:key="@string/key_func_app_effects" 
+		android:title="@string/pref_effects_app">	
+		<com.jiubang.ggheart.components.DeskListPreference android:key="@string/key_func_app_inout_setting"
+			android:title="@string/func_app_inout_setting" 
+			android:summary="@string/func_app_inout_setting_hint"
+			android:entries="@array/inout_list_title" 
+			android:entryValues="@array/inout_list_value"
+			android:negativeButtonText="@string/cancle" />
+		
+		<com.jiubang.ggheart.components.DeskListPreference android:key="@string/key_func_app_icon_effect_setting"
+			android:title="@string/func_app_icon_effect_setting" 
+			android:summary="@string/func_app_icon_effect_setting_hint"
+			android:entries="@array/func_app_icon_effect_entris" 
+			android:entryValues="@array/func_app_icon_effect_entry_values"
+			android:negativeButtonText="@string/cancle" />
+		
+		<com.jiubang.ggheart.components.DeskListPreference android:key="@string/key_func_app_vertical_scroll_effect_setting"
+			android:title="@string/func_app_vertical_scroll_effect_setting" 
+			android:summary="@string/func_app_vertical_scroll_effect_setting_hint"
+			android:entries="@array/func_app_vertical_scroll_effect_entris" 
+			android:entryValues="@array/func_app_vertical_scroll_effect_entry_values"
+			android:negativeButtonText="@string/cancle" />
+	</com.jiubang.ggheart.components.DeskPreferenceCategory>		
+</PreferenceScreen>

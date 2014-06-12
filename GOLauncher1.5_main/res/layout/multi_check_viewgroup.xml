@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:ggheart="http://schemas.android.com/apk/res/com.gau.go.launcherex"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" 
+	android:id="@+id/contentview">
+    <com.jiubang.ggheart.apps.desks.diy.frames.screen.DesktopIndicator
+	android:id="@+id/folder_indicator"
+	android:layout_width="wrap_content"
+	android:layout_height="@dimen/folder_edit_indicator_hight"
+	/>
+ 	<com.jiubang.ggheart.components.MutilCheckGridView
+		android:id="@+id/gridview"
+        android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:layout_below="@id/folder_indicator"
+		android:layout_marginTop="5dip"
+	/>
+</RelativeLayout>

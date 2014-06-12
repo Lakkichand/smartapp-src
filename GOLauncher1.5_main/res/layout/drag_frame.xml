@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.apps.desks.diy.frames.drag.DragLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/bgframe"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+	<include android:id="@+id/trash_area_stub" layout="@layout/trash_area" />
+</com.jiubang.ggheart.apps.desks.diy.frames.drag.DragLayout>

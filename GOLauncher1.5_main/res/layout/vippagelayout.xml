@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/messagecenter_webview_bg"
+    android:orientation="vertical" >
+    <LinearLayout 
+    android:id="@+id/titlegroup"
+    android:layout_width="match_parent"
+    android:layout_height="48dip" 
+    android:background="@drawable/message_center_topbar_bg"
+    >    
+    <com.jiubang.ggheart.components.DeskTextView
+	    android:id="@+id/topbar_title"
+	    android:layout_width="match_parent"
+	    android:layout_height="50dip"
+	    android:textSize="17sp"
+	    android:textColor="#DCDCDC"
+	    android:gravity="center_vertical"
+	    android:text="@string/vip_page_title"
+	    android:paddingLeft="8dip"
+	    />
+    </LinearLayout>
+    <WebView 
+        android:layout_below="@id/titlegroup"
+        android:id="@+id/vippage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+ <LinearLayout
+            android:id="@+id/progressbar_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            >
+
+             <ProgressBar
+	            android:id="@+id/progress"
+	            android:layout_width="29.3dip"
+	            android:layout_height="29.3dip"
+	            android:indeterminateDrawable="@drawable/go_progress_green"
+	            android:scrollbarStyle="outsideOverlay"
+	            android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/progress_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dip"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
+</RelativeLayout>

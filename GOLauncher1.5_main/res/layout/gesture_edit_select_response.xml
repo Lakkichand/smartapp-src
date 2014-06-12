@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/gesture_ui_layout_height"
+        android:background="@drawable/gesture_recogniser_draw_bg"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+          >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingBottom="45dip" >
+
+                <com.jiubang.ggheart.components.DeskTextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="48dip"
+                    android:gravity="center"
+                    android:text="@string/gesture_change_response"
+                    android:textColor="#727272"
+                    android:textSize="@dimen/gesture_title_text_size" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gesture_line_top" />
+
+                <com.jiubang.ggheart.components.diygesture.gesturemanageview.DiyGestureSelectRespondView
+                    android:id="@+id/selectRespondView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                </com.jiubang.ggheart.components.diygesture.gesturemanageview.DiyGestureSelectRespondView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="45dip"
+                android:layout_marginTop="-45dip"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/folder_button_line" />
+
+                <Button
+                    android:id="@+id/cancelBtn"
+                    style="@style/DiyGestureButton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/cancel" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 选择响应界面__end -->
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/apps_management_search_quantity_layout"
+    android:layout_width="match_parent"
+    android:layout_height="21.33dp" >
+
+    <TextView
+        android:id="@+id/appfunc_search_header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="9.33dp"
+        android:textColor="#787878"
+        android:textSize="14.67dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appfunc_search_header_text"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/appfunc_search_header_line"
+        android:contentDescription="@string/app_name" />
+
+</RelativeLayout>

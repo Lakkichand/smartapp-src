@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/folder_button_line"
+        android:contentDescription="@string/app_name" />
+
+    <LinearLayout
+        android:id="@+id/seekbar1_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <com.jiubang.ggheart.components.DeskTextView
+            android:id="@+id/seekbar1_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="6dp"
+            android:paddingLeft="12dp"
+            android:paddingTop="8dp"
+            android:textColor="#343434" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:gravity="center_vertical" >
+
+            <com.jiubang.ggheart.components.DeskTextView
+                android:id="@+id/seekbar1_min_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="12dp"
+                android:paddingRight="0dp"
+                android:textColor="#8C8C8C"
+                android:textSize="16sp" />
+
+            <com.jiubang.ggheart.components.DeskTextView
+                android:id="@+id/seekbar1_max_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="0dp"
+                android:paddingRight="12dp"
+                android:textColor="#8C8C8C"
+                android:textSize="16sp" />
+
+            <SeekBar
+                android:id="@+id/desk_setting_dialog_seekbar1"
+                style="@style/DeskSettingDialogSeekBarStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/seekbar1_max_value"
+                android:layout_toRightOf="@id/seekbar1_min_value"
+                android:thumb="@drawable/desk_setting_dialog_seekbar_thumb_selector" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/seekbar1_baseline"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/folder_button_line"
+        android:contentDescription="@string/app_name" />
+
+    <LinearLayout
+        android:id="@+id/seekbar2_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <com.jiubang.ggheart.components.DeskTextView
+            android:id="@+id/seekbar2_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="6dp"
+            android:paddingLeft="12dp"
+            android:paddingTop="8dp"
+            android:textColor="#343434" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:gravity="center_vertical" >
+
+            <com.jiubang.ggheart.components.DeskTextView
+                android:id="@+id/seekbar2_min_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="12dp"
+                android:paddingRight="0dp"
+                android:textColor="#8C8C8C"
+                android:textSize="16sp" />
+
+            <com.jiubang.ggheart.components.DeskTextView
+                android:id="@+id/seekbar2_max_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="0dp"
+                android:paddingRight="12dp"
+                android:textColor="#8C8C8C"
+                android:textSize="16sp" />
+
+            <SeekBar
+                android:id="@+id/desk_setting_dialog_seekbar2"
+                style="@style/DeskSettingDialogSeekBarStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/seekbar2_max_value"
+                android:layout_toRightOf="@id/seekbar2_min_value"
+                android:thumb="@drawable/desk_setting_dialog_seekbar_thumb_selector" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/seekbar2_baseline"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/folder_button_line"
+        android:contentDescription="@string/app_name" />
+
+</LinearLayout>

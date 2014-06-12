@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/dialog_layout"
+        android:layout_width="@dimen/folder_edit_view_width"
+        android:layout_height="wrap_content"
+        android:background="@drawable/folder_edit_bg"
+        android:orientation="vertical" >
+
+        <com.jiubang.ggheart.components.DeskTextView
+            android:id="@+id/dialog_title"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/folder_edit_top_bottom_hight"
+            android:background="@drawable/folder_top_bg"
+            android:paddingLeft="11.33dp"
+            android:paddingTop="10dp"
+            android:textColor="#2C2C2C"
+            android:textSize="16sp" 
+            android:text="@string/font_scan"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffffff"
+            android:paddingLeft="12dip"
+            android:paddingTop="16dip" 
+            android:paddingBottom="16dip"
+            android:orientation="vertical"
+            >
+
+            <com.jiubang.ggheart.components.DeskTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/font_scan_package"
+                android:textColor="#343434"
+                android:textSize="16sp" 
+                android:layout_marginBottom="6.6dip"/>
+
+            <com.jiubang.ggheart.components.DeskTextView
+                android:id="@+id/scan_folder"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:textColor="#343434"
+                android:textSize="12sp" 
+                android:layout_marginTop="6.6dip"
+                android:layout_marginBottom="6.6dip"/>
+
+            <com.jiubang.ggheart.components.DeskTextView
+                android:id="@+id/scan_result"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#71A901"
+                android:textSize="12sp" 
+                android:layout_marginTop="6.6dip"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <com.jiubang.ggheart.components.DeskButton
+                android:id="@+id/dialog_ok"
+                android:layout_width="fill_parent"
+                android:layout_height="40.67dp"
+                android:layout_weight="1"
+                android:background="@drawable/folder_button_selector"
+                android:gravity="center"
+                android:text="@string/ok"
+                android:textColor="#2C2C2C"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/folder_button_line" />
+
+            <com.jiubang.ggheart.components.DeskButton
+                android:id="@+id/dialog_cancel"
+                android:layout_width="fill_parent"
+                android:layout_height="40.67dp"
+                android:layout_weight="1"
+                android:background="@drawable/folder_button_selector"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textColor="#2C2C2C"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

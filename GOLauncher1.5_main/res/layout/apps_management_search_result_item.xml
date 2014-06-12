@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="69.33333dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/search_download_relativelayout"
+        android:background="@drawable/recomm_app_list_item_selector"
+        android:paddingRight="18.66667dp" >
+
+        <ImageSwitcher
+            android:id="@+id/search_switcher"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:inAnimation="@anim/appgame_fade_in"
+        	android:outAnimation="@anim/appgame_fade_out"
+            android:layout_marginLeft="6.666dp" >
+
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/search_icon_another"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="fitXY" />
+        </ImageSwitcher>
+
+        <!-- android:layout_alignParentTop="true" 
+        	android:layout_marginTop="12dp" -->
+        <TextView
+            android:id="@+id/search_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/search_switcher"
+            android:layout_marginLeft="6.6666667dp"
+            android:layout_toRightOf="@+id/search_switcher"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxWidth="121.6666667dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#FF393939"
+            android:textSize="14dp" />
+
+        <!-- android:layout_alignParentBottom="true"
+            android:layout_marginBottom="12dp" -->
+          <TextView 
+            android:id="@+id/search_typeinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/search_app_name"
+            android:layout_below="@+id/search_app_name"
+            android:text=""
+            android:textColor="#FF909090"
+            android:textSize="12.5dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxWidth="60dp"
+            android:singleLine="true"></TextView>
+         
+        <RatingBar
+            android:id="@+id/search_rating"
+            style="@style/specialRatineBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/search_app_name"
+            android:layout_alignBottom="@+id/search_switcher"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="3.5"
+            android:stepSize="0.5" />
+
+        <TextView
+            android:id="@+id/search_app_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search_app_name"
+            android:layout_alignParentRight="true"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxWidth="65dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#FF909090"
+            android:textSize="12.5dp" />
+
+        <!-- android:layout_alignBottom="@+id/search_rating"
+         -->
+        <TextView
+            android:id="@+id/search_download_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:maxWidth="100dp"
+            android:layout_marginBottom="7dp"
+            android:singleLine="true"
+           	android:text=""
+            android:textColor="#FF909090"
+            android:textSize="12.5dp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/search_download_relativelayout"
+        android:src="@drawable/appsmanagement_line_right" />
+
+    <RelativeLayout
+        android:id="@+id/search_download_relativelayout"
+        android:layout_width="60dp"
+        android:layout_height="69.33333dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/search_button"
+                android:layout_width="34.6666667dp"
+                android:layout_height="34.6666667dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/appgame_download_selector"
+                android:clickable="false"
+                android:focusable="false"
+                android:visibility="visible" >
+            </Button>
+
+            <TextView
+                android:id="@+id/search_button_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:singleLine="true"
+                android:textColor="#FF909090"
+                android:textSize="12dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

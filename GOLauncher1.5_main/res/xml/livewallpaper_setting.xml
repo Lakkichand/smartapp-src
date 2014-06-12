@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/livewallpaper_setting_title" >
+        <PreferenceScreen
+            android:key="livewallpaper_goto_launcher" 
+            android:title="@string/livewallpaper_setting_start_golauncher">
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+</PreferenceScreen>

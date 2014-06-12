@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.appgame.appcenter.component.AppsUpdateInfoListItem xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <!--
+    <ImageView
+        android:id="@+id/operation_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center" >
+    </ImageView>
+    -->
+
+
+    <!--
+         <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/operation_button"
+        android:background="@drawable/appsmanagement_line_right" />
+    -->
+
+    <RelativeLayout
+        android:id="@+id/content_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="69.33dp"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/update_progress_layout"
+        android:background="@color/center_background" >
+
+        <!-- <com.jiubang.ggheart.apps.gowidget.gostore.component.SimpleImageView
+            android:id="@+id/app_image_view"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp" /> -->
+        
+        <ImageSwitcher
+            android:id="@+id/app_update_image_switcher"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:inAnimation="@anim/appgame_fade_in"
+            android:outAnimation="@anim/appgame_fade_out"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp" >
+
+            <com.jiubang.ggheart.apps.gowidget.gostore.component.SimpleImageView
+                android:id="@+id/update_app_icon"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY" />
+            
+             <com.jiubang.ggheart.apps.gowidget.gostore.component.SimpleImageView
+                android:id="@+id/update_app_another_icon"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY" />
+        </ImageSwitcher>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/app_update_image_switcher" >
+
+            <TextView
+                android:id="@+id/app_name_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:maxWidth="170dp"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/app_size_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/app_name_view"
+                android:singleLine="true"
+                android:textColor="#696969"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/update_datetime_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/app_size_view"
+                android:layout_toRightOf="@+id/app_image_view"
+                android:singleLine="true"
+                android:textColor="#696969"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/update_progress_layout"
+        android:layout_width="60dp"
+        android:layout_height="70.67dp"
+        android:layout_alignParentRight="true" >
+
+        <RelativeLayout
+            android:id="@+id/update_operation_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible" >
+
+            <ImageView
+                android:id="@+id/update_operation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/appsgame_update_selector" />
+
+            <TextView
+                android:id="@+id/update_operation_status"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/update_operation"
+                android:gravity="center_horizontal"
+                android:text="@string/update"
+                android:textColor="#787878"
+                android:textSize="11sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/update_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:text=""
+            android:textColor="#787878"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/update_divider_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/update_progress_layout"
+        android:background="@drawable/appsmanagement_line_right" />
+
+    <LinearLayout
+        android:id="@+id/intro"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/update_progress_layout"
+        android:orientation="vertical" 
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="7.32dp"
+            android:layout_marginLeft="26dp"
+            android:background="@drawable/pop_update_point" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/recomm_update_detail_thumdails_backrepeat" >
+
+            <LinearLayout
+                android:id="@+id/up"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16.66dp"
+                android:layout_marginRight="16.66dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/detail_page"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55.86dp"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="30.66dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginRight="13.33dp"
+                        android:layout_marginTop="13.2dp"
+                        android:background="@drawable/update_detail_selector_new"
+                        android:gravity="center"
+                        android:text="@string/app_update_detail_app"
+                        android:textColor="#ffffff"
+                        android:textSize="14.66dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/noUpdate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55.86dp"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="30.66dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="13.33dp"
+                        android:layout_marginTop="13.2dp"
+                        android:background="@drawable/update_detail_selector_new"
+                        android:gravity="center"
+                        android:text="@string/app_no_update_app"
+                        android:textColor="#ffffff"
+                        android:textSize="14.66dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/context_intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/up"
+                android:layout_below="@+id/up"
+                android:layout_marginLeft="1dp"
+                android:paddingBottom="13.2dp" >
+
+                <TextView
+                    android:id="@+id/update_intro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_update_intro"
+                    android:textColor="#ffffff"
+                    android:textSize="14.66dp" />
+
+                <TextView
+                    android:id="@+id/update_intro_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/update_intro"
+                    android:layout_marginLeft="13.33dp"
+                    android:textColor="#ffffff"
+                    android:textSize="13.2dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</com.jiubang.ggheart.appgame.appcenter.component.AppsUpdateInfoListItem>

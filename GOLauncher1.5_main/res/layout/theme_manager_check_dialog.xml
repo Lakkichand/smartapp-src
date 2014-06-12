@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/folder_edit_bg" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/folder_top_bg" >
+
+            <TextView
+                android:id="@+id/appgame_download_delete_dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/theme_manager_activation_dialog_title"
+                android:textColor="#383737"
+                android:textSize="17.3dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/theme_manager_dialog_check_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout1"
+            android:paddingBottom="26.667dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/theme_manager_dialog_check_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21.333dp"
+                android:gravity="left"
+                android:text="@string/theme_manager_activation_dialog_tip"
+                android:textColor="#525252"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:id="@+id/theme_manager_dialog_edit_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/theme_manager_dialog_check_tip"
+                android:layout_marginTop="16dp" >
+
+                <EditText
+                    android:id="@+id/theme_manager_dialog_check_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="33.333dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10.666667dp"
+                    android:background="@drawable/ui2_search_edittext_bg"
+                    android:drawableLeft="@android:color/transparent"
+                    android:drawablePadding="10dp"
+                    android:imeOptions="actionSearch"
+                    android:paddingRight="35dp"
+                    android:singleLine="true"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/theme_manager_dialog_check_clear_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignRight="@+id/theme_manager_dialog_check_input"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/apps_management_search_delete_select" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/folder_edit_top_bottom_hight"
+            android:layout_below="@+id/theme_manager_dialog_check_layout"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/appgame_download_delete_dialog_ok"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/folder_button_selector"
+                android:gravity="center"
+                android:text="@string/theme_manager_activation_dialog_get_code"
+                android:textColor="#535353"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/folder_button_line" />
+
+            <Button
+                android:id="@+id/appgame_download_delete_dialog_cancel"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/folder_button_selector"
+                android:gravity="center"
+                android:text="@string/theme_manager_activation_dialog_confirm"
+                android:textColor="#535353"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal"
+    android:background="#F2F2F2"
+    >
+	 <ImageView  
+	    android:id="@+id/readtag"
+	    android:layout_width="wrap_content"
+	    android:layout_height="60dp"
+	    android:background="@drawable/message_center_unread"
+	  />  
+	  
+	 
+	 <LinearLayout 
+	    android:id="@+id/newtag"
+	    android:layout_width="48dip"
+	    android:layout_height="60dip"
+	    android:gravity="center"
+	    android:orientation="horizontal"
+	    android:layout_alignParentRight="true">	  
+		<ImageView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:background="@drawable/message_center_newtag"
+		    android:layout_gravity="center"
+		    />     
+   
+      </LinearLayout>
+
+	 <LinearLayout 
+	    android:layout_width="wrap_content"
+	    android:layout_height="60dp"
+	    android:paddingLeft="13dp"
+	    android:orientation="vertical"
+	    android:gravity="center_vertical"
+	    android:layout_toRightOf="@id/readtag"
+	    android:layout_toLeftOf="@id/newtag"
+	   android:layout_alignParentLeft="true"
+	    >
+	    
+	      <TextView
+		      android:id="@+id/messagetitle"
+			  android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:textSize="15sp"
+		      android:textColor="#1B1A1A"
+		      android:maxLines="2"
+		      android:singleLine="false"
+		   />
+		  
+		  <TextView
+		      android:id="@+id/messagestamp"
+		      android:layout_width="wrap_content" 
+		      android:layout_height="wrap_content"
+		      android:textSize="11sp"
+		      android:textColor="#5E5D5D"
+		      android:paddingTop="5dip"
+		   />
+	</LinearLayout>
+
+	     
+   
+        
+</RelativeLayout>

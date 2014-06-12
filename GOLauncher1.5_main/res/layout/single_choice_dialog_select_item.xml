@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@drawable/appfunc_search_result_list_selector"
+    android:clickable="true"
+    android:addStatesFromChildren="false"
+    android:minHeight="48dp" 
+    android:id="@+id/single_choice_relativelayout">
+
+    <TextView
+        android:id="@+id/single_choice_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="9.33dp"
+        android:layout_toLeftOf="@+id/single_choice_select"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textSize="16dp" />
+
+    <RadioButton
+        android:id="@+id/single_choice_select"
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:gravity="center"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:button="@drawable/radio_selector"
+        />
+        
+    <ImageButton
+        android:id="@+id/single_choice_btn"
+        android:layout_width="30dip"
+        android:layout_height="30dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical" 
+        android:background="@drawable/language_down_dialog_selector"/>        
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#DCDCDC" />
+
+</RelativeLayout>

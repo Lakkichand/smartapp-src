@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@color/desk_setting_bg_color"    
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myAndroid="http://schemas.android.com/apk/res/com.gau.go.launcherex"
+    >
+    
+    <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingPageTitleView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        myAndroid:titleText="@string/facebook_setting" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/desk_setting_view_padding"
+            android:paddingRight="@dimen/desk_setting_view_padding" >
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingTitleView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:titleText="@string/facebook_setting" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemBaseView
+                android:id="@+id/login_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/desk_setting_gosetting_item_height"
+                myAndroid:titleText="@string/facebook_shareus_on_facebook" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemCheckBoxView
+                android:id="@+id/track_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:isBtnCheckBox="true"              
+                myAndroid:summaryText="@string/facebook_theme_track_explain"
+                myAndroid:titleText="@string/facebook_theme_track" />
+
+            <com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemBaseView
+                android:id="@+id/logout_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                myAndroid:summaryText="@string/facebook_logout"
+                myAndroid:titleText="@string/facebook_logout" />
+         </LinearLayout>   
+	</ScrollView>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jiubang.ggheart.components.DeskTextView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:text="@string/theme_pages_mythemetitle"
+  android:background="@drawable/mytheme_title_bg"
+  android:gravity="center_vertical"
+  android:paddingLeft="14dp"
+  android:textColor="@android:color/white"
+  android:textSize="17sp">
+    
+</com.jiubang.ggheart.components.DeskTextView>

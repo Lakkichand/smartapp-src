@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="32dip"
+    android:orientation="vertical" >
+
+    <com.jiubang.ggheart.components.DeskTextView
+        android:id="@+id/title_name"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/desk_setting_title_padding_left"
+        android:textColor="@color/desk_setting_title_color"
+        android:textSize="@dimen/desk_setting_item_title_text_default_size" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/desk_setting_gree_line" />
+
+</RelativeLayout>

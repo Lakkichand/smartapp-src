@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+	<LinearLayout android:id="@+id/title" android:orientation="horizontal"
+		android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<com.jiubang.ggheart.components.DeskTextView
+			android:id="@+id/select_text" android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="right"
+			android:textColor="#ffffff"
+			android:textSize="20dip"
+			android:text="@string/select_icon_theme" />
+			
+			<Spinner android:id="@+id/Spinner" 
+			android:layout_weight="1"
+           android:layout_width="wrap_content"  
+           android:layout_height="wrap_content"/>
+	</LinearLayout>
+
+</RelativeLayout>
