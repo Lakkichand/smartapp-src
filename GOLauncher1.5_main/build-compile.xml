@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project name="go_launcher_ex" default="-custom-compile">
+    
+    <!-- 因为涉及环境的检查及变量赋值,需要首先执行 -set-release-mode 和 -release-obfuscation-check -->
+    <target name="-custom-compile" depends="-set-release-mode, -release-obfuscation-check, -dex, -package-resources"/>
+    
+    <!-- version-tag: custom -->
+    <import file="build.xml" />
+
+</project>

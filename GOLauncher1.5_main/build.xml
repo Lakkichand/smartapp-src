@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2011 Google Inc.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<project name="go_launcher_ex" default="release">
+
+    <!-- The local.properties file is created and updated by the 'android' tool.
+         It contains the path to the SDK. It should *NOT* be checked into
+         Version Control Systems. -->
+    <property file="local.properties" />
+
+    <!-- The ant.properties file can be created by you. It is only edited by the
+         'android' tool to add properties to it.
+         This is the place to change some Ant specific build properties.
+         Here are some properties you may want to change/update:
+
+         source.dir
+             The name of the source directory. Default is 'src'.
+         out.dir
+             The name of the output directory. Default is 'bin'.
+
+         For other overridable properties, look at the beginning of the rules
+         files in the SDK, at tools/ant/build.xml
+
+         Properties related to the SDK location or the project target should
+         be updated using the 'android' tool with the 'update' action.
+
+         This file is an integral part of the build system for your
+         application and should be checked into Version Control Systems.
+
+         -->
+    <property file="ant.properties" />
+                
+    <!-- The project.properties file is created and updated by the 'android'
+         tool, as well as ADT.
+
+         This contains project specific properties such as project target, and library
+         dependencies. Lower level build properties are stored in ant.properties
+         (or in .classpath for Eclipse projects).
+
+         This file is an integral part of the build system for your
+         application and should be checked into Version Control Systems. -->
+    <loadproperties srcFile="project.properties" />
+
+    <!-- quick check on sdk.dir -->
+    <fail
+            message="sdk.dir is missing. Make sure to generate local.properties using 'android update project' or to inject it through an env var"
+            unless="sdk.dir"
+    />
+    
+    <target name="-dex" depends="-compile, -post-compile, -obfuscate">
+        <do-only-if-manifest-hasCode elseText="hasCode = false. Skipping...">
+            <!-- only convert to dalvik bytecode is *not* a library -->
+            <do-only-if-not-library elseText="Library project: do not convert bytecode..." >
+                <!-- special case for instrumented builds: need to use no-locals and need
+                     to pass in the emma jar. -->
+                <if condition="${build.is.instrumented}">
+                    <then>
+                        <dex-helper nolocals="true">
+                            <external-libs>
+                                <fileset file="${emma.dir}/emma_device.jar" />
+                                <fileset file="${android-support-v4.jar.file}" />
+                            </external-libs>
+                        </dex-helper>
+                    </then>
+                    <else>
+                         <dex-helper nolocals="true">
+                            <external-libs>
+                                <fileset file="${android-support-v4.jar.file}" />
+                            </external-libs>
+                         </dex-helper>
+                    </else>
+                </if>
+            </do-only-if-not-library>
+        </do-only-if-manifest-hasCode>
+    </target>
+    
+    <target name="-obfuscate">
+        <if condition="${proguard.enabled}">
+            <then>
+                <property name="obfuscate.absolute.dir" location="${out.absolute.dir}/proguard" />
+                <property name="preobfuscate.jar.file" value="${obfuscate.absolute.dir}/original.jar" />
+                <property name="obfuscated.jar.file" value="${obfuscate.absolute.dir}/obfuscated.jar" />
+                <!-- input for dex will be proguard's output -->
+                <property name="out.dex.input.absolute.dir" value="${obfuscated.jar.file}" />
+                
+                <!-- 定义android-support-v4.jar的绝对路径，facebooksdk.dir需要在locale.properties中定义 -->
+                <condition property="android-support-v4.jar.file" value="${facebooksdk.dir}\${jar.libs.dir}\android-support-v4.jar" 
+                    else="${facebooksdk.dir}/${jar.libs.dir}/android-support-v4.jar">
+					<os family="windows" />
+				</condition>
+    
+                <!-- 
+                <echo>### obfuscate.absolute.dir:${obfuscate.absolute.dir}</echo>
+                <echo>### preobfuscate.jar.file:${preobfuscate.jar.file}</echo>
+                <echo>### obfuscated.jar.file:${obfuscated.jar.file}</echo>
+                -->
+
+                <echo>### FacebookSDK project path = ${facebooksdk.dir}</echo>
+                <echo>### android-support-v4.jar.file = ${android-support-v4.jar.file}</echo>
+                                
+                <!-- Add Proguard Tasks -->
+                <property name="proguard.jar" location="${android.tools.dir}/proguard/lib/proguard.jar" />
+                <taskdef name="proguard" classname="proguard.ant.ProGuardTask" classpath="${proguard.jar}" />
+
+                <!-- Set the android classpath Path object into a single property. It'll be
+                     all the jar files separated by a platform path-separator.
+                     Each path must be quoted if it contains spaces.
+                -->
+                
+                <pathconvert property="project.target.classpath.value" refid="project.target.class.path">
+                    <firstmatchmapper>
+                        <regexpmapper from='^([^ ]*)( .*)$$' to='"\1\2"'/>
+                        <identitymapper/>
+                    </firstmatchmapper>
+                </pathconvert>
+                
+                <!-- 定义out.dex.jar.input.ref 指向项目引用的所有jar包 --> 
+                <property name="project.all.jars.ref" refid="project.all.jars.path"/> 
+            
+                <echo>### project.all.jars.ref ## ${project.all.jars.ref} </echo>
+
+                <!-- Build a path object with all the jar files that must be obfuscated.
+                     This include the project compiled source code and any 3rd party jar
+                     files. -->
+                <path id="project.all.classes.path">
+                    <pathelement location="${preobfuscate.jar.file}" />
+                    <path refid="project.all.jars.path" />
+                </path>
+                
+                <!-- Set the project jar files Path object into a single property. It'll be
+                     all the jar files separated by a platform path-separator.
+                     Each path must be quoted if it contains spaces.
+                -->
+                
+                <pathconvert property="exclude.support-v4.path" refid="project.all.classes.path">
+                     <!-- 从proguard的-injars中过滤掉android-support-v4.jar，
+                        再在-dex阶段里面以external-libs形式传入，避免对jar包的重新编译 -->
+                    <!-- <map from="${android-support-v4.jar.file}" to=""/> -->
+                    <filtermapper>
+                        <replacestring from="${android-support-v4.jar.file}" to=""/>
+                    </filtermapper>
+                </pathconvert>
+                
+                <path id="project.all.classes.path.no.support_v4" >
+                     <pathelement path="${exclude.support-v4.path}"/>
+                </path>
+                
+                <pathconvert property="project.all.classes.value" refid="project.all.classes.path.no.support_v4">
+                    <firstmatchmapper>
+                        <regexpmapper from='^([^ ]*)( .*)$$' to='"\1\2"'/>
+                        <identitymapper/>
+                    </firstmatchmapper>
+                </pathconvert>
+
+                <!-- Turn the path property ${proguard.config} from an A:B:C property
+                     into a series of includes: -include A -include B -include C
+                     suitable for processing by the ProGuard task. Note - this does
+                     not include the leading '-include "' or the closing '"'; those
+                     are added under the <proguard> call below.
+                -->
+                <path id="proguard.configpath">
+                    <pathelement path="${proguard.config}"/>
+                </path>
+                <pathconvert pathsep='" -include "' property="proguard.configcmd" refid="proguard.configpath"/>
+
+                <mkdir   dir="${obfuscate.absolute.dir}" />
+                <delete file="${preobfuscate.jar.file}"/>
+                <delete file="${obfuscated.jar.file}"/>
+                <jar basedir="${out.classes.absolute.dir}"
+                    destfile="${preobfuscate.jar.file}" />
+                
+                <echo>### proguard params: </echo>
+                <echo>  -include proguard.configcmd=${proguard.configcmd} </echo>
+                <echo>  -include out.absolute.dir=${out.absolute.dir}/proguard.txt </echo>
+                <echo>  -injars  project.all.classes.value=${project.all.classes.value} </echo>
+                <echo>  -outjars obfuscated.jar.file=${obfuscated.jar.file} </echo>
+                <echo>  -libraryjars project.target.classpath.value=${project.target.classpath.value} </echo>
+                <!-- 
+                <echo>  -dump ${obfuscate.absolute.dir}/dump.txt </echo>
+                <echo>  -printseeds ${obfuscate.absolute.dir}/seeds.txt </echo>
+                <echo>  -printusage ${obfuscate.absolute.dir}/usage.txt </echo>
+                <echo>  -printmapping ${obfuscate.absolute.dir}/mapping.txt </echo>
+                -->
+                                
+                <proguard>
+                    -include      "${proguard.configcmd}"
+                    -include      "${out.absolute.dir}/proguard.txt"
+                    -injars       ${project.all.classes.value}
+                    -outjars      "${obfuscated.jar.file}"
+                    -libraryjars  ${project.target.classpath.value}
+                    -libraryjars  ${android-support-v4.jar.file}
+                    -dump         "${obfuscate.absolute.dir}/dump.txt"
+                    -printseeds   "${obfuscate.absolute.dir}/seeds.txt"
+                    -printusage   "${obfuscate.absolute.dir}/usage.txt"
+                    -printmapping "${obfuscate.absolute.dir}/mapping.txt"
+                </proguard>
+            </then>
+        </if>
+    </target>
+    
+    <!-- version-tag: custom -->
+    <import file="${sdk.dir}/tools/ant/build.xml" />
+
+</project>

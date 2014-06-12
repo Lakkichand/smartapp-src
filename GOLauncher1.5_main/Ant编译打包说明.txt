@@ -1,0 +1,10 @@
+1.将build.xml拷贝到项目工程下
+2.修改JAVA_HOME, SDK_HOME, Andorid编译版本, keystore路径、密码和alias
+3.将我们自己开发的库放到lib目录下，其他开源或第三方的库房如libs(例如libGoogleAnalytics)
+4.如果有新加入的我们自己封装的jar包，需要在
+	<target name="obfuscate" depends="compile">
+  下面添加一条记录，例如
+	<unzip src="${go-lib}\Net.jar" dest="${outdir-classes}" overwrite="true"/>
+ 目的是确保我们自己的jar会再次和项目中的代码进一步混淆，保证库的安全
+5.proguard配置文件为proguard.cfg，新加的混淆规则添加到文件末尾，使用#可注释当前行
+6.右键运行build.xml

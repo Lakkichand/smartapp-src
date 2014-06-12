@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project name="go_launcher_ex" default="release">
+    
+    <!-- 过滤掉这些已经在build-compile.xml中执行过的任务 -->
+    <target name="-obfuscate" />
+    <target name="-code-gen" />
+    <target name="-compile" depends="-build-setup, -pre-build, -code-gen, -pre-compile" />
+    <target name="-dex" depends="-compile, -post-compile, -obfuscate" />
+    <target name="-crunch" />
+    
+    <target name="-package-resources" depends="-crunch">
+        <property name="uid.file" value="res/raw/uid.txt" />
+        <property name="gostore.uid.file" value="res/raw/gostore_uid.txt" />
+
+        <echo>remove ${uid.file} from ${out.dir}/${resource.package.file.name}</echo>
+        <!-- 删除uid文件 -->
+        <exec executable="${aapt}" failonerror="true">
+            <arg value="r" />
+            <arg value="-v" />
+            <arg value="${out.dir}/${resource.package.file.name}" />
+            <arg value="${uid.file}" />
+        </exec>
+        
+        <echo>remove ${gostore.uid.file} from ${out.dir}/${resource.package.file.name}</echo>
+        <exec executable="${aapt}" failonerror="true">
+            <arg value="r" />
+            <arg value="-v" />
+            <arg value="${out.dir}/${resource.package.file.name}" />
+            <arg value="${gostore.uid.file}" />
+        </exec>
+        
+        <!-- 添加更改后的uid文件 -->
+        <echo>add ${uid.file} to ${out.dir}/${resource.package.file.name}</echo>
+        <exec executable="${aapt}" failonerror="true">
+            <arg value="a" />
+            <arg value="-v" />
+            <arg value="${out.dir}/${resource.package.file.name}" />
+            <arg value="${uid.file}" />
+        </exec>
+        
+        <echo>remove ${gostore.uid.file} to ${out.dir}/${resource.package.file.name}</echo>
+        <exec executable="${aapt}" failonerror="true">
+            <arg value="a" />
+            <arg value="-v" />
+            <arg value="${out.dir}/${resource.package.file.name}" />
+            <arg value="${gostore.uid.file}" />
+        </exec>
+    </target>
+    
+    <!-- version-tag: custom -->
+    <import file="build.xml" />
+    
+</project>
