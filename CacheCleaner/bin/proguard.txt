@@ -1,0 +1,12 @@
+# view AndroidManifest.xml #generated:37
+-keep class com.escape.cachecleaner.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:34
+-keep class com.google.android.gms.ads.AdActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:24
+-keep class com.ta.TAApplication { <init>(...); }
+
+# view AndroidManifest.xml #generated:49
+-keep class com.ta.util.netstate.TANetworkStateReceiver { <init>(...); }
+

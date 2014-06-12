@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CacheCleaner</string>
+    <string name="title">CacheCleaner</string>
+    <string name="nocontent">No Cache!</string>
+    <string name="allcache">All Cache:</string>
+    <string name="akey">Clean Up</string>
+    <string name="scanning">Scanning...</string>
+    <string name="clear">Clear</string>
+    <string name="clickclear">Please click on the "Clear Cache"</string>
+    <string name="tip1">Total&#160;</string>
+    <string name="tip2">&#160;cache garbage&#160;</string>
+
+</resources>

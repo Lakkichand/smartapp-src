@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">緩存清理</string>
+    <string name="title">緩存清理</string>
+    <string name="nocontent">贊！沒有應用占用內存！</string>
+    <string name="allcache">全部緩存：</string>
+    <string name="akey">一鍵清理</string>
+    <string name="scanning">正在掃描</string>
+    <string name="clear">清理</string>
+    <string name="clickclear">請點擊"清除緩存"進行清理</string>
+    <string name="tip1">共</string>
+    <string name="tip2">個緩存垃圾，清理可節省空間</string>
+
+</resources>
