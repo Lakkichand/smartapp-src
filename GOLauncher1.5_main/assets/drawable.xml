@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<version>1</version>
+<item drawable="apps_4_def3" />
+<item drawable="calculator_4_def3" />
+<item drawable="calendar_4_def3" />
+<item drawable="camera_4_def3" />
+<item drawable="clock_4_def3" />
+<item drawable="browser_4_def3" />
+<item drawable="contacts_4_def3" />
+<item drawable="downloads_4_def3" />
+<item drawable="settings_4_def3" />
+<item drawable="email_4_def3" />
+<item drawable="phone_4_def3" />
+<item drawable="maps_4_def3" />
+<item drawable="market_4_def3" />
+<item drawable="messaging_4_def3" />
+<item drawable="gallery_4_def3" />
+<item drawable="gmail_4_def3" />
+<item drawable="gtalk_4_def3" />
+<item drawable="gosmspro_4_def3" />
+<item drawable="go_widget_4_def3" />
+<item drawable="gostore_4_def3" />
+<item drawable="google_latitude_4_def3" />
+<item drawable="music_4_def3" />
+<item drawable="change_theme_4_def3" />
+<item drawable="netqin_logo_4_def3" />
+<item drawable="dedender2_4_def3" />
+
+<!-- 
+<item drawable="gochat_4_def3" />
+<item drawable="goime_4_def3" />
+<item drawable="golauncherex_4_def3" />
+<item drawable="googlebook_4_def3" />
+<item drawable="googledocs_4_def3" />
+<item drawable="googlesearch_4_def3" />
+<item drawable="googletranslate_4_def3" />
+<item drawable="gosmspro_4_def3" />
+<item drawable="gtasks_4_def3" />
+<item drawable="handcent_4_def3" />
+<item drawable="kakaotalk_4_def3" />
+<item drawable="kikmessenger_4_def3" />
+<item drawable="navigation_4_def3" />
+<item drawable="opera_4_def3" />
+<item drawable="pdf_4_def3" />
+<item drawable="evernote_4_def3" />
+<item drawable="es_4_def3" />
+<item drawable="facebook_4_def3" />
+<item drawable="foursquare_4_def3" />
+<item drawable="picplz_4_def3" />
+<item drawable="picsay_4_def3" />
+<item drawable="places_4_def3" />
+<item drawable="pulse_4_def3" />
+<item drawable="readitlater_4_def3" />
+<item drawable="renren_4_def3" />
+<item drawable="simtoolkit_4_def3" />
+<item drawable="skype_4_def3" />
+<item drawable="superuser_4_def3" />
+<item drawable="twitter_4_def3" />
+<item drawable="weibo_4_def3" />
+<item drawable="worldnewspapers_4_def3" />
+<item drawable="yahoomail_4_def3" />
+<item drawable="yahoomessenger_4_def3" />
+<item drawable="youtube_4_def3" />
+<item drawable="browser_4_def3" />
+<item drawable="compass_4_def3" />
+<item drawable="dropbox_4_def3" />
+ -->
+</resources>

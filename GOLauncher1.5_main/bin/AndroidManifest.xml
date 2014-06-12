@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.gau.go.launcherex" 
+	android:versionCode="186"
+	android:versionName="3.31"
+	android:installLocation="internalOnly"> 
+	
+	<!--  launcher uses permission -->
+	
+	<!-- 此权限用于桌面拨号快捷方式功能 -->
+	<uses-permission android:name="android.permission.CALL_PHONE" />
+	<!-- 此权限用于访问Internet功能 -->
+	<uses-permission android:name="android.permission.INTERNET" />
+	<!-- 此权限用于展开通知栏功能 -->
+	<uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+	<!-- 此权限用于实现功能表 -->
+	<uses-permission android:name="android.permission.GET_TASKS" />
+	<!-- 此权限用于联系人插件功能 -->
+	<uses-permission android:name="android.permission.READ_CONTACTS" />
+	<!-- 此权限用于设置桌面壁纸功能 -->
+	<uses-permission android:name="android.permission.SET_WALLPAPER" />
+	<!-- 此权限用于设置桌面壁纸提示功能 -->
+	<uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
+	<!-- 此权限用于实现震动功能 -->
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<!-- 此权限用于修改手机设置功能 -->
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<!-- 此权限用于使GO桌面绑定各种Widget的功能 -->
+	<uses-permission android:name="android.permission.BIND_APPWIDGET"  />
+	<!-- 此权限用于重启GO桌面功能 -->
+	<uses-permission android:name="android.permission.RESTART_PACKAGES" />
+	<!-- 此权限用于GO桌面将某些信息写入SD卡功能 -->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<!-- 此权限用于常驻内存功能 -->
+	<uses-permission android:name="android.permission.PERSISTENT_ACTIVITY"/>
+	<!-- 此权限用于获取关于网络状态信息的功能 --> 
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<!-- 此权限用于安装桌面快捷方式功能 --> 
+	<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+	<!-- 此权限用于清除GO桌面为默认桌面的功能 --> 
+	<uses-permission android:name="android.permission.SET_PREFERRED_APPLICATIONS"/>
+	<!-- 此权限用于防止设备进入休眠状态时，系统对GO音乐播放器进行干扰 -->
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	 <!-- 此权限用于IAP付费 --> 
+	<uses-permission android:name="com.android.vending.BILLING" />
+	<!--
+	 此权限用于设置后台不保留活动功能  
+	<uses-permission android:name="android.permission.SET_ALWAYS_FINISH"/>
+	-->
+	<!-- 读LogCat信息的权限 -->
+	<!--
+	<uses-permission android:name="android.permission.READ_LOGS" />  
+	-->
+	<!-- 此权限用于获得应用程序大小
+	<uses-permission android:name="android.permission.GET_PACKAGE_SIZE"></uses-permission>
+	 --> 
+	 <!-- 此权限用于获取用户是否绑定gmail -->
+	 <!-- <uses-permission android:name="android.permission.GET_ACCOUNTS" /> -->
+	
+
+	<application android:icon="@drawable/icon"
+		android:label="@string/app_name"
+		android:name="com.jiubang.ggheart.launcher.GOLauncherApp"
+		android:process="android.process.acore"
+	>
+
+<!-- 		android:largeHeap="true" -->
+
+<!-- 		android:ha
+rdwareAccelerated="false" -->
+<!--
+  	<application android:icon="@drawable/icon"
+  		android:debuggable="true" 
+		android:label="@string/app_name"
+		android:name="com.jiubang.ggheart.launcher.GOLauncherApp"
+	>
+-->
+
+		<!-- activity declare here -->
+		<activity android:name="com.jiubang.ggheart.apps.desks.diy.GoLauncher"
+			android:label="@string/app_name" 
+			android:launchMode="singleTask"
+			android:configChanges="keyboardHidden|orientation|locale"
+			android:clearTaskOnLaunch="true" 
+			android:stateNotNeeded="true"
+			android:windowSoftInputMode="stateUnspecified|adjustPan"
+			android:theme="@android:style/Theme.Wallpaper.NoTitleBar">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.HOME" />
+				<category android:name="android.intent.category.MONKEY" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="com.gau.go.launcherex.MAIN" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<!-- 图片/音乐播放设置 add by yangbing 2012-06-28-->
+	    <activity android:name="com.jiubang.ggheart.plugin.mediamanagement.MediaOpenSettingActivity"
+	       		  android:theme="@android:style/Theme.NoTitleBar">	        
+	    </activity>
+		<activity android:name="org.acra.CrashReportDialog"
+			android:theme="@android:style/Theme.Dialog" 
+			android:launchMode="singleInstance"
+			android:excludeFromRecents="true" 
+			android:finishOnTaskLaunch="true">
+		</activity> 
+		
+		<activity android:name="com.jiubang.ggheart.data.ForegroundDialog"
+			android:theme="@android:style/Theme.Dialog" 
+			android:launchMode="singleInstance"
+			android:excludeFromRecents="true" 
+			android:finishOnTaskLaunch="true">
+		</activity> 
+			
+		<!-- setting activity -->
+		<activity android:name="com.jiubang.ggheart.apps.desks.settings.AppList" />
+		<activity android:name="com.jiubang.ggheart.apps.desks.settings.AppListMultiple" 
+			android:configChanges="orientation"/>
+		<activity android:name="com.jiubang.ggheart.apps.appfunc.setting.AppFuncUISetting" />
+		<activity android:name="com.jiubang.ggheart.apps.desks.settings.LauncherActionList"
+			android:configChanges="orientation"/>
+		<activity android:name="com.jiubang.ggheart.apps.desks.diy.frames.screen.ScreenModifyFolderActivity" 
+			android:configChanges="orientation"
+			android:theme="@style/msg_dialog"/>
+		
+				<activity android:name="com.jiubang.ggheart.apps.desks.diy.frames.screen.ScreenEditAddGoLauncher" 
+			android:configChanges="orientation"
+			android:theme="@style/msg_dialog"/>
+		<activity android:name="com.jiubang.ggheart.apps.desks.diy.frames.screeneditbox.WallpaperCutModeSettting"
+		     android:screenOrientation="portrait" android:theme="@style/msg_dialog"/>
+		
+		<activity
+			android:name="com.jiubang.ggheart.apps.desks.imagepreview.ImagePreviewActivity"
+			android:label="@string/select_icon" android:theme="@android:style/Theme.Wallpaper">
+			<intent-filter>
+				<action android:name="com.jiubang.ggheart.apps.desks.imagepreview.ImagePreviewEx" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		
+		<activity
+			android:name="com.jiubang.ggheart.apps.desks.imagepreview.ThemeImagePreviewActivity"
+			android:label="@string/select_icon" android:theme="@android:style/Theme.Wallpaper">
+			<intent-filter>
+				<action android:name="com.jiubang.ggheart.apps.desks.imagepreview.ThemeImagePreviewActivity" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+	
+		<activity android:name="com.jiubang.ggheart.apps.desks.appfunc.LockList" 
+		     	  android:exported="true"
+		    	  android:launchMode="singleTop"
+				  android:theme="@style/msg_dialog"
+				  android:configChanges="keyboardHidden|orientation"
+				  />
+		<activity android:name="com.jiubang.ggheart.apps.desks.appfunc.AllFoldersActivity" android:configChanges="orientation"/>
+		<activity android:name="com.go.launcher.cropimage.CropImageActivity" />
+		<activity android:name="com.jiubang.ggheart.apps.desks.appfunc.AppFuncNewFolderActivity" android:configChanges="orientation"/>
+		<activity android:name="com.jiubang.ggheart.apps.desks.appfunc.HideAppActivity" android:configChanges="orientation"
+		    android:theme="@style/msg_dialog"/>
+		<activity android:name="com.jiubang.ggheart.apps.desks.appfunc.AppFuncModifyFolderActivity" android:configChanges="orientation"
+			android:theme="@style/msg_dialog"
+		/>	
+		<activity
+		    android:name="com.jiubang.ggheart.plugin.shell.folder.GLAppFolderModifyActivity"
+		    android:configChanges="orientation"
+		    android:theme="@style/msg_dialog" />
+		
+		<activity android:name="com.jiubang.ggheart.apps.desks.appfunc.NotificationSettingActivity" android:configChanges="orientation"
+			android:theme="@style/msg_dialog"
+		/>
+		<activity android:name="com.jiubang.ggheart.components.renamewindow.RenameActivity" 
+			android:configChanges="orientation"
+			android:theme="@style/msg_dialog"/>
+		
+	    <activity
+            android:name="com.jiubang.ggheart.apps.desks.golauncherwallpaper.ChooseWallpaper"
+            android:label="@string/go_wallpaper"
+            android:configChanges="keyboardHidden|orientation"
+            android:icon="@drawable/icon"
+            android:finishOnCloseSystemDialogs="true"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:process=":ChooseWallpaper">
+            <intent-filter>
+                <action android:name="android.intent.action.SET_WALLPAPER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>      
+	    <activity
+            android:enabled="false"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:name="com.go.util.ClL">
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+		<!-- 
+		<receiver android:name="com.jiubang.ggheart.apps.desks.dock.DockNotificationReceiver">
+			<intent-filter>
+				<action android:name="com.gau.golauncherex.notification.countunreadsms" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="com.gau.golauncherex.notification.countunreadcall" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="com.gau.golauncherex.notification.countunreadgmail" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="com.gau.golauncherex.notification.destroy" />
+			</intent-filter>
+		</receiver>
+		-->
+	        
+		<!-- 
+			<receiver android:name="com.jiubang.ggheart.apps.desks.diy.DiyScheduler$InstallShortcutReceiver"
+			android:permission="com.android.launcher.permission.INSTALL_SHORTCUT">
+			<intent-filter>
+				<action android:name="com.android.launcher.action.INSTALL_SHORTCUT" />
+			</intent-filter>
+		</receiver>
+		-->
+		<!-- service declare here -->
+		<service android:enabled="true" android:name="com.jiubang.ggheart.data.AppService"></service>
+		<service android:name="com.jiubang.ggheart.apps.download.DownloadService"/>
+		<!-- 应用中心后台获取数据用的Service -->
+		<service android:name="com.jiubang.ggheart.appgame.base.service.DataService"/>
+		
+		<service android:name="com.gau.util.unionprotocol.UnionProtocolDownloadService"/>
+		<service android:name="com.jiubang.ggheart.apps.gowidget.gostore.services.GoStoreUpdateInstallService"/>
+		<!-- provider declare here -->
+		<provider android:name="com.jiubang.ggheart.data.statistics.StatisticsProvider" 
+				  android:authorities="com.gau.go.launcherex.statistics.provider"/>
+		
+		<provider android:name="com.jiubang.ggheart.appgame.base.database.AppGameContentProvider" 
+				  android:authorities="com.jiubang.ggheart.appgame.base.database.AppGameContentProvider"/>
+		
+		<!-- GoStore -->
+        <activity android:name="com.jiubang.ggheart.apps.gowidget.gostore.SoftManagerActivity" >
+        </activity>
+        <activity android:name="com.jiubang.ggheart.apps.gowidget.gostore.WallpaperDetailActivity" 
+            	  android:configChanges="keyboardHidden|orientation"
+            	  android:screenOrientation="portrait"
+            	  android:process=":gostore">
+        </activity>
+        <activity
+            android:name="com.jiubang.ggheart.apps.gowidget.gostore.ImageScanActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:process=":gostore"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.jiubang.ggheart.appgame.gostore.base.component.AppsThemeDetailActivity" 
+				  android:configChanges="keyboardHidden|orientation"
+				  android:windowSoftInputMode="adjustPan"
+				  android:process=":appcenter"
+				  android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.jiubang.ggheart.appgame.gostore.base.component.AppsThemeDetailActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+		</activity> 
+		<activity android:name="com.jiubang.ggheart.appgame.gostore.base.component.WallpaperDetailActivity" 
+				  android:configChanges="keyboardHidden|orientation"
+				  android:windowSoftInputMode="adjustPan"
+				  android:process=":appcenter"
+				  android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.jiubang.ggheart.appgame.gostore.base.component.WallpaperDetailActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+		</activity> 
+		
+		<!-- 检测是否覆盖安装桌面 -->
+		<receiver android:name="com.jiubang.ggheart.appgame.base.utils.SelfCoverInstallReceiver">
+         <intent-filter android:priority="2147483647">
+             <action android:name="android.intent.action.PACKAGE_REMOVED" />
+             <data android:scheme="package" />
+            </intent-filter>
+	    </receiver>
+        
+        
+        <activity android:name="com.jiubang.ggheart.appgame.base.component.AppInstallActivity" 
+            		android:launchMode="singleTop"
+					android:configChanges="keyboardHidden|orientation"
+					android:theme="@style/TransparentActivity"
+					android:windowSoftInputMode="adjustPan"
+					android:process=":DownloadService"
+					 android:screenOrientation="portrait"/> 
+		<!-- 应用游戏中心反馈的Activity -->
+		<activity android:name="com.jiubang.ggheart.appgame.base.feedback.AppFeedbackActivity"
+		    android:windowSoftInputMode = "adjustResize" 
+		    android:process=":appcenter"
+		    android:screenOrientation="portrait"/>
+		<activity android:name="com.jiubang.ggheart.appgame.base.component.AppDetailImageActivity" 
+					android:configChanges="keyboardHidden|orientation"
+				    android:process=":appcenter"
+					android:screenOrientation="portrait"/>  
+		<activity android:name="com.jiubang.ggheart.apps.desks.diy.GoGuideActivity" 
+					android:configChanges="keyboardHidden|orientation" 
+					 android:theme="@android:style/Theme.Translucent"
+					 android:launchMode="singleTop"
+					 android:screenOrientation="portrait"/>
+		
+		<activity android:name="com.jiubang.ggheart.apps.desks.diy.UserAgreementActivity" 
+					android:configChanges="keyboardHidden|orientation" 
+					 android:launchMode="singleTop"
+					 android:screenOrientation="portrait"/>
+				
+		<receiver android:name="com.jiubang.ggheart.apps.gowidget.gostore.brocastreceiver.GoStoreInstalledBrocastReceiver">
+		    <intent-filter android:priority="2147483647">
+              <action android:name="android.intent.action.PACKAGE_ADDED" />
+              <data android:scheme="package" />
+            </intent-filter>
+		</receiver>	
+		<!-- 用于外部获取GO桌面IMEI号的广播接收器，目前是与木瓜移动合作交换数据所需 -->
+		<receiver android:name="com.jiubang.ggheart.data.statistics.StatisticsBroadcastReceiver">
+		    <intent-filter>
+              <action android:name="com.papayamobile.ACTION_GET_VIRTUAL_ID" />
+            </intent-filter>
+		</receiver>	
+		
+		<receiver android:name="com.jiubang.ggheart.apps.desks.diy.NotificationBarReceiver">
+		    <intent-filter>
+              <action android:name="com.gau.go.launcherex.action.open_GGmenu" />
+            </intent-filter>
+		</receiver>
+		<receiver android:name="com.jiubang.ggheart.apps.download.DownloadBrocastReceiver">
+		    <intent-filter>
+              <action android:name="com.jiubang.ggheart.apps.download.DownloadBrocastReceiver.GOSTORE_DOWNLOAD_STOP" />
+              <action android:name="com.jiubang.ggheart.apps.download.DownloadBrocastReceiver.GOSTORE_DOWNLOAD_RESTART" />
+              <action android:name="com.jiubang.ggheart.apps.download.DownloadBrocastReceiver.GOSTORE_DOWNLOAD_START" />
+              <action android:name="com.jiubang.ggheart.apps.download.DownloadBrocastReceiver.GOSTORE_DOWNLOAD_DELETE" />
+              <action android:name="com.jiubang.ggheart.apps.download.DownloadBrocastReceiver.ACTION_GET_ALL_DOWNLOAD_TASK" />
+              <data android:scheme="download" />
+            </intent-filter>
+		</receiver>	
+		<!-- End for GOStore -->
+		
+		<!-- 桌面默认动态壁纸服务 -->
+		 <service
+            android:name="com.jiubang.ggheart.screen.livewallpaper.LauncherWallpaperService"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_WALLPAPER" >
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/livewallpaper"/>
+        </service>
+        
+		<!-- 桌面默认动态壁纸设置 --> 
+		<activity android:name="com.jiubang.ggheart.screen.livewallpaper.LiveWallpaperSettingActivity" android:exported="true"/> 
+		
+		 <!--ThemeManageActivity -->
+        <activity
+            android:name="com.jiubang.ggheart.apps.desks.diy.themescan.ThemeManageActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"
+		    android:process=":MyThemes">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.gau.go.launcherex.MyThemes" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.jiubang.ggheart.apps.desks.share.ShareActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:process=":MyThemes"
+             />
+        
+        <!-- ThemeDetailActivity -->
+        <activity
+            android:name="com.jiubang.ggheart.apps.desks.diy.themescan.ThemeDetailActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:process=":MyThemes">     
+        </activity>
+        <activity
+            android:name="com.jiubang.ggheart.apps.desks.diy.themescan.BannerDetailActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:process=":MyThemes">     
+        </activity>
+        <activity
+            android:name="com.jiubang.ggheart.apps.desks.diy.themescan.ThemePreviewFullScreenViewActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:process=":MyThemes"
+            android:screenOrientation="portrait"
+           />
+      <!-- 
+         <receiver android:name="com.jiubang.ggheart.data.theme.broadcastReceiver.ThemeChangeReceiver"
+                   android:process=":MyThemes">  
+            <intent-filter android:priority="2147483647">  
+              <action android:name="android.intent.action.PACKAGE_ADDED" />  
+              <action android:name="android.intent.action.PACKAGE_REMOVED" />  
+              <data android:scheme="package" />  
+            </intent-filter>  
+        </receiver>  
+        -->
+        <receiver android:name="com.jiubang.ggheart.data.theme.broadcastReceiver.MyThemeReceiver">
+		    <intent-filter>
+              <action android:name="com.gau.go.launcherex.MyThemes.mythemeaction" />
+            </intent-filter>
+            <intent-filter>
+              <action android:name="com.gau.go.launcherex.action.start_my_themes" />
+            </intent-filter>
+		</receiver>	
+		
+        <receiver android:name="com.jiubang.ggheart.analytic.ReferrerInfoReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <!-- GoWidgetActionReceiver -->
+        <receiver android:name="com.jiubang.ggheart.apps.gowidget.GoWidgetActionReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.gau.gowidget_action_change_widgets_theme" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.gau.gowidget_action_goto_gowidget_frame" />
+            </intent-filter>
+        </receiver>
+        <!-- END GoWidgetActionReceiver -->
+        
+		
+	
+        <activity
+            android:name="com.jiubang.ggheart.apps.desks.diy.messagecenter.MessageCenterActivity"
+            android:configChanges="keyboardHidden|orientation"/>
+        <activity
+            android:name="com.jiubang.ggheart.apps.desks.diy.messagecenter.MessageContentActivity"
+            android:launchMode="singleTask"
+            android:configChanges="keyboardHidden|orientation"/>
+        <activity
+            android:name="com.jiubang.ggheart.apps.desks.diy.messagecenter.MessageDialogContentActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@style/msg_dialog"/>
+        <activity
+            android:name="com.jiubang.ggheart.apps.desks.diy.messagecenter.MsgNotifyActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@style/Transparent"/>    
+            
+            
+            
+        
+		<provider android:name="com.jiubang.ggheart.data.model.WhirteListProvider" 
+        		android:authorities="com.jiubang.ggheart.data.model.wirteprovider"/>
+        <receiver android:name="com.jiubang.ggheart.apps.desks.settings.BackUpSettingReceiver">
+			<intent-filter >
+				<action android:name="com.jiubang.ggheart.apps.desks.settings.BackReceiver"/>
+			</intent-filter>
+		</receiver>
+		<activity
+		    android:name="com.jiubang.ggheart.apps.appmanagement.component.AppsManagementActivity"
+		    android:configChanges="keyboardHidden|orientation"
+		    android:label="@string/app_name"
+		    android:launchMode="singleTask"
+		    android:theme="@android:style/Theme.NoTitleBar">
+			<intent-filter>
+                <action android:name="com.gau.go.launcherex.appmanagement.cn" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+		</activity>
+		<service
+	    android:name="com.jiubang.ggheart.appgame.download.DownloadService"
+	    android:process=":DownloadService"
+	    android:exported="true" >
+	    <intent-filter>
+	        <action android:name="com.jiubang.ggheart.appgame.download.DownloadService" />
+	    </intent-filter>
+		</service>
+		<activity
+		    android:name="com.jiubang.ggheart.appgame.appcenter.component.AppsManagementActivity"
+		    android:configChanges="keyboardHidden|orientation"
+		    android:label="@string/appcenter_title"
+		    android:launchMode="singleTask"
+		    android:screenOrientation="portrait"
+		    android:windowSoftInputMode="adjustPan"
+		    android:process=":appcenter"
+		    android:theme="@android:style/Theme.NoTitleBar">
+			<intent-filter>
+                <action android:name="com.gau.go.launcherex.appmanagement" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+		</activity>
+		<activity
+		    android:name="com.jiubang.ggheart.appgame.base.setting.AppGameSettingActivity"
+		    android:screenOrientation="portrait"
+		    android:process=":appcenter"
+		    android:theme="@android:style/Theme.NoTitleBar">
+		</activity>
+        <activity
+            android:name="com.jiubang.ggheart.apps.desks.imagepreview.ChangeIconPreviewActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@android:style/Theme.Wallpaper"/>
+        
+        <!-- 我的手势Activity -->
+        <activity 
+            android:name="com.jiubang.ggheart.components.diygesture.gesturemanageview.MyGesture"
+            android:launchMode="singleTask"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+        
+        <activity 
+            android:name="com.jiubang.ggheart.components.diygesture.gesturemanageview.DiyGestureRecogniser"
+            android:launchMode="singleTop"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@style/Dialog">
+        </activity>
+        <activity 
+            android:name="com.jiubang.ggheart.components.diygesture.gesturemanageview.DiyGestureAddActivity"
+            android:launchMode="singleTask"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@style/Dialog">
+        </activity>
+		
+         <activity 
+            android:name="com.jiubang.ggheart.components.diygesture.gesturemanageview.DiyGestureEditActivity"
+            android:launchMode="singleTask"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@style/Dialog">
+        </activity>
+        <!-- 我的手势Activity__end -->
+		
+	<activity android:name="com.jiubang.ggheart.appgame.recommend.AppKitsActivity"
+	     android:configChanges="keyboardHidden|orientation"
+	     android:screenOrientation="portrait"
+	     android:launchMode="singleTask"/>
+	<activity android:name="com.jiubang.ggheart.appgame.base.downloadmanager.AppsDownloadActivity"
+	     android:configChanges="keyboardHidden|orientation"
+	     android:theme="@android:style/Theme.NoTitleBar"
+	     android:screenOrientation="portrait"
+	     android:launchMode="singleTask"/>
+	<activity android:name="com.jiubang.ggheart.appgame.base.component.MoreAppsActivity"
+	     android:configChanges="keyboardHidden|orientation"
+	     android:theme="@android:style/Theme.NoTitleBar"
+	     android:screenOrientation="portrait"
+	     android:launchMode="singleTask"/>
+	<!-- 更多相关推荐应用Activity -->
+	<activity android:name="com.jiubang.ggheart.appgame.base.component.MoreRecommendedAppsActivity"
+	     android:configChanges="keyboardHidden|orientation"
+	     android:theme="@android:style/Theme.NoTitleBar"
+	     android:screenOrientation="portrait"
+	     android:process=":appcenter"
+	     android:launchMode="singleTask"/>
+	
+	<service android:name="com.jiubang.ggheart.billing.base.BillingService" />
+
+    <receiver android:name="com.jiubang.ggheart.billing.base.BillingReceiver">
+        <intent-filter>
+           <action android:name="com.android.vending.billing.IN_APP_NOTIFY" />
+           <action android:name="com.android.vending.billing.RESPONSE_CODE" />
+           <action android:name="com.android.vending.billing.PURCHASE_STATE_CHANGED" />     
+        </intent-filter>
+    </receiver>
+    
+     <receiver android:name="com.jiubang.ggheart.billing.AppInBillingRequestReceiver">
+        <intent-filter>
+           <action android:name="go.launcherex.purchase.state.REQUEST" />
+           <action android:name="go.launcherex.purchase.supported.REQUEST" />
+        </intent-filter>
+    </receiver>
+    
+     <!-- GO手册 -->
+   	<activity 
+		android:name="com.jiubang.ggheart.components.gohandbook.GoHandBookMainActivity"
+        android:screenOrientation="portrait"
+        android:process=":goHandBook"
+        >
+    </activity>
+    
+	<activity 
+		android:name="com.jiubang.ggheart.components.gohandbook.GoHandBookContentActivity"
+        android:screenOrientation="portrait"
+        android:process=":goHandBook"
+        >
+    </activity>
+
+	<receiver android:name="com.jiubang.ggheart.components.gohandbook.GoHandBookUseNowReceiver">
+		<intent-filter >
+			<action android:name="com.gau.go.launcherex.action.goHandBook.useNow"/>
+		</intent-filter>
+	</receiver>
+	<!-- GO手册_end -->
+	<activity 
+		android:name="com.jiubang.ggheart.data.DBImport.LauncherSelectorActivity"
+		android:screenOrientation="portrait"/>
+	<receiver android:name="com.jiubang.ggheart.data.DBImport.DataBaseReceiver">
+		     <intent-filter>
+              <action android:name="com.gau.go.launcherex.action.ADD_DB_READ_PERMISSION" />
+              <action android:name="com.gau.go.launcherex.action.REMOVE_DB_READ_PERMISSION" />
+              <action android:name="com.gau.go.launcherex.action.REMOTE_DB_READ_PERMISSION" />
+            </intent-filter>
+	</receiver>
+	
+	<!-- BEGIN 桌面设置activity -->
+	<activity android:name="com.jiubang.ggheart.apps.desks.Preferences.DeskSettingMainActivity"
+	    android:theme="@android:style/Theme.NoTitleBar"
+		android:configChanges="keyboardHidden|orientation"/>
+	
+	<activity android:name="com.jiubang.ggheart.apps.desks.Preferences.DeskSettingVisualActivity"
+		android:theme="@android:style/Theme.NoTitleBar"
+		android:configChanges="keyboardHidden|orientation"/>
+	
+	<activity android:name="com.jiubang.ggheart.apps.desks.Preferences.DeskSettingScreenActivity"
+	    android:theme="@android:style/Theme.NoTitleBar"
+		android:configChanges="keyboardHidden|orientation"/>
+	
+	<activity android:name="com.jiubang.ggheart.apps.desks.Preferences.DeskSettingAppActivity"
+	    android:theme="@android:style/Theme.NoTitleBar"
+		android:configChanges="keyboardHidden|orientation"/>
+	
+	<activity android:name="com.jiubang.ggheart.apps.desks.Preferences.DeskSettingAdvancedActivity"
+	    android:theme="@android:style/Theme.NoTitleBar"
+		android:configChanges="keyboardHidden|orientation"/>
+	
+		<activity android:name="com.jiubang.ggheart.apps.desks.Preferences.DeskSettingBackupActivity"
+	    android:theme="@android:style/Theme.NoTitleBar"
+		android:configChanges="keyboardHidden|orientation"/>
+	
+	<activity android:name="com.jiubang.ggheart.apps.desks.Preferences.DeskSettingAboutActivity"
+	    android:theme="@android:style/Theme.NoTitleBar"
+		android:configChanges="keyboardHidden|orientation"/>
+	
+	<activity android:name="com.jiubang.ggheart.apps.desks.Preferences.DeskSettingGestureFunctionActivity"
+	    android:theme="@android:style/Theme.NoTitleBar"
+		android:configChanges="keyboardHidden|orientation"/>
+	
+	<activity android:name="com.jiubang.ggheart.apps.desks.Preferences.DeskSettingGestureScreenActivity"
+	    android:theme="@android:style/Theme.NoTitleBar"
+		android:configChanges="keyboardHidden|orientation"/>
+	
+	<activity android:name="com.jiubang.ggheart.apps.desks.Preferences.DeskSettingQaTutorialActivity"
+	    android:theme="@android:style/Theme.NoTitleBar"
+		android:configChanges="keyboardHidden|orientation"/>
+	<activity android:name="com.jiubang.ggheart.apps.desks.Preferences.DeskSettingFacebookActivity"
+	    android:theme="@android:style/Theme.NoTitleBar"
+		android:configChanges="keyboardHidden|orientation"/>
+	
+	<!-- END 桌面设置activity -->
+	
+	<!-- 功能表设置activity 开始 -->
+	<activity android:name="com.jiubang.ggheart.apps.desks.Preferences.FunAppUISettingMainActivity" 
+		android:theme="@android:style/Theme.NoTitleBar"/>
+	<activity android:name="com.jiubang.ggheart.apps.desks.Preferences.FunAppUISettingVisualActivity" 
+		android:theme="@android:style/Theme.NoTitleBar"/>
+	<activity android:name="com.jiubang.ggheart.apps.desks.Preferences.FunAppUISettingAppActivity"
+	    android:theme="@android:style/Theme.NoTitleBar"
+		android:configChanges="keyboardHidden|orientation"/>
+	
+	
+	<!-- 功能表设置activity 结束 -->
+	
+	<activity
+            android:name="com.jiubang.ggheart.apps.desks.diy.RateDialogContentActivity"
+            android:launchMode="singleTask"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@style/msg_dialog"/>
+	
+	<receiver
+	    android:name="com.jiubang.ggheart.apps.systemwidget.GoLauncherexWidgetProvider"
+	    android:icon="@drawable/change_theme_4_def3"
+	    android:label="@string/golauncherex_widget_title" >
+
+	    <intent-filter>
+	        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+	    </intent-filter>
+
+	    <meta-data
+	        android:name="android.appwidget.provider"
+	        android:resource="@xml/launcherex_widget_info" />
+	</receiver>
+	<!-- 截图预览Activity -->
+	<activity
+            android:name="com.jiubang.ggheart.apps.desks.snapshot.SnapShotPreviewer"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@style/Transparent"
+            android:taskAffinity=".snapshotpreviewer"/> 
+            
+	<!-- START facebook分享相关 -->
+	<activity
+            android:name="com.facebook.LoginActivity"
+            android:label="@string/facebook_login_title" >
+    </activity>
+    <activity 
+	    	android:name="com.jiubang.ggheart.components.facebook.FacebookConnectActivity" 
+	    	android:configChanges="keyboardHidden|orientation"
+	    	/>
+    <!-- END facebook -->
+    <!-- 付费推广应用的激活弹框activity -->
+    <activity
+		    android:name="com.jiubang.ggheart.appgame.base.component.AppRecommendDialogActivity"
+		    android:screenOrientation="portrait"
+		    android:theme="@style/msg_dialog"/>
+  	
+  	<!-- 15广告8小时提示广播打开应用 -->
+	<receiver android:name="com.jiubang.ggheart.components.advert.AdvertOpenAppReceive">
+		<intent-filter>
+			<action android:name="open_app_broadcast" />
+		</intent-filter>
+    </receiver>
+     <activity
+		    android:name="com.jiubang.ggheart.components.advert.AdvertOpenTipDailog"
+		    android:theme="@style/msg_dialog"/>
+     
+     <receiver android:name="com.jiubang.ggheart.appgame.base.utils.WifiStateReceiver">
+		    <intent-filter>
+              <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+		</receiver>
+		
+     <activity
+		    android:name="com.jiubang.ggheart.apps.desks.diy.themescan.ThemeVipPage" android:configChanges="keyboardHidden|orientation"
+            android:process=":MyThemes"  />
+     <activity
+		    android:name="com.jiubang.ggheart.screen.touchhelper.TouchHelperDownloadGuideActivity" android:configChanges="keyboardHidden|orientation"
+           android:screenOrientation="portrait"
+           android:excludeFromRecents="true"
+           android:launchMode="singleTask"
+           android:theme="@android:style/Theme.Translucent.NoTitleBar"  />
+    </application>
+   
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false" />
+	<uses-sdk android:minSdkVersion="5"></uses-sdk>       
+	     <!--android:targetSdkVersion="11" -->
+	<supports-screens
+		android:anyDensity="true"
+		android:smallScreens="true"
+		android:normalScreens="true"
+		android:largeScreens="true"
+		>
+	</supports-screens>
+<!-- 		android:xlargeScreens="true" -->
+</manifest>

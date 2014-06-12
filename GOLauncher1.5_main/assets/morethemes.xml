@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<morethemes>
+<version version="1" />
+<recommend recommend="3" />
+<item preview="store">go_store</item>
+<item preview="logo_google_market" themeInfo="market://details?id=go theme">downDialog_downForMarket</item>
+<item preview="logo_com_fish" themeInfo="http://theme.3g.cn/xuan/xuanList.aspx?fr=golauncherxuan">downDialog_downForGoLauncher</item>
+</morethemes>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Widget样式
+		 对应array.xml文件中的： 
+		<integer-array name="styletypelist">
+		 <item>0</item>
+	    </integer-array>
+	    在本Widget中代表4*3的样式
+	 -->
+	<widget_style style1="1" style2="3" />
+	<!-- 主题包type -->
+	<widget_theme_type type1="1" type2="3"/>
+	<!-- 主题预览图 -->
+	<theme_preview  img1="gostorewidget41_preview"  img2 = "gostorewidget_new41_preview"/>
+	<!-- 主题预览的名字 -->
+	<theme_title  title1="gostorewidget_default_theme"  title2 = "gostorewidget_default_theme"/> 
+	
+
+	<!-- GOStorewidget 4x1 -->
+	<widget41 style_name="gostorewidget41" theme_id="1">
+	
+	<!-- widget背景 -->
+	<widget41background drawable="gostorewidget41_bg"></widget41background>
+	<!-- widget icon -->
+	<icon drawable="gostorewidget41_icon"></icon>
+	<!-- 更多按钮 -->
+	<morebutton drawable="gostorewidget41_more_selector"></morebutton>
+	<!-- 更多按钮的右边距 -->
+	<morebutton_paddingright padding_right="0"></morebutton_paddingright>
+	<!-- 内容部分背景 -->
+	<recommandbackground drawable="gostorewidget41_recommend_area"></recommandbackground>
+	<!-- 内容部分的上边距 -->
+	<recommandarea_margintop margin_top="0"></recommandarea_margintop>
+	<!-- 内容部分的内边距（上） -->
+	<recommandarea_paddingtop padding_top="1"></recommandarea_paddingtop>
+	<!-- 弹出框背景 -->
+	<popup_bg drawable="gostorewidget41_bg"></popup_bg>
+	<!-- 弹出框标题 -->
+	<popup_title drawable="gostorewidget41_popup_icon"></popup_title>
+	<!-- 弹出框按钮 -->
+	<popup_button drawable="gostorewidget41_popup_button_selector"></popup_button>
+	<!-- 弹出框内容背景图 -->
+	<popup_recommand_bg drawable="gostorewidget41_recommend_area"></popup_recommand_bg>
+	</widget41>
+	
+	<!-- GOStorewidget 4x1 new-->
+	<widget41 style_name="gostore41widget" theme_id="3">
+
+	<!-- widget背景 -->
+	<widget41newbackground drawable="gostore_41_widget_bg"></widget41newbackground>
+	<!-- widget icon 背景-->
+	<widget41newiconbg drawable="gostore_41_widget_icon_bg"></widget41newiconbg>
+	<!--罩子 -->
+	<widget41newlistcover drawable="gostore_41_widget_list_cover"></widget41newlistcover>
+	<!-- 底部Tab栏分隔线 -->
+	<widget41newtabdivide drawable="gostore_41_widget_separator"></widget41newtabdivide>
+	<!-- 左箭头 -->
+	<widget41newleftarrows drawable="gostore_41_widget_arrows_left"></widget41newleftarrows>
+	<!-- 左箭头，选中 -->
+	<widget41newleftarrowslight drawable="gostore_41_widget_arrows_left_sel"></widget41newleftarrowslight>
+	<!-- 右箭头 -->
+	<widget41newrightarrows drawable="gostore_41_widget_arrows_right"></widget41newrightarrows>
+	<!-- 右箭头，选中 -->
+	<widget41newrightarrowslight drawable="gostore_41_widget_arrows_right_sel"></widget41newrightarrowslight>
+	</widget41>
+</resources>

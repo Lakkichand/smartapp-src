@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paidtheme>
+<version version="1" />
+<recommend recommend="2" />
+<item pkgname="com.gau.go.launcherex.theme.thank.getjar" preview="paidtheme_thanks">thanks_title</item>
+<item pkgname="com.gau.go.launcherex.theme.lover.getjar" preview="paidtheme_puppylove">puppylove_title</item>
+<item pkgname="com.gau.go.launcherex.theme.FuzzyBirdy.getjar" preview="paidtheme_fuzzybirdy">fuzzybirdy_title</item>
+<item pkgname="com.gau.go.launcherex.theme.sketcht.getjar" preview="paidtheme_sketch">sketch_title</item>
+<item pkgname="com.gau.go.launcherex.theme.Dark.getjar" preview="paidtheme_dark">dark_title</item>
+<item pkgname="com.gau.go.launcherex.theme.club.getjar" preview="paidtheme_club">club_title</item>
+</paidtheme>

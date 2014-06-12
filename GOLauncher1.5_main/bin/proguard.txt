@@ -1,0 +1,1504 @@
+# view res/layout/gesture_add.xml #generated:103
+# view res/layout/gesture_edit.xml #generated:51
+# view res/layout/gesture_recogniser.xml #generated:95
+-keep class android.gesture.GestureOverlayView { <init>(...); }
+
+# view AndroidManifest.xml #generated:703
+-keep class com.facebook.LoginActivity { <init>(...); }
+
+# view res/layout/com_facebook_usersettingsfragment.xml #generated:48
+-keep class com.facebook.widget.LoginButton { <init>(...); }
+
+# view AndroidManifest.xml #generated:235
+-keep class com.gau.util.unionprotocol.UnionProtocolDownloadService { <init>(...); }
+
+# view AndroidManifest.xml #generated:160
+-keep class com.go.launcher.cropimage.CropImageActivity { <init>(...); }
+
+# view res/layout/cropimage.xml #generated:12
+-keep class com.go.launcher.cropimage.CropImageView { <init>(...); }
+
+# view AndroidManifest.xml #generated:192
+-keep class com.go.util.ClL { <init>(...); }
+
+# view AndroidManifest.xml #generated:430
+-keep class com.jiubang.ggheart.analytic.ReferrerInfoReceiver { <init>(...); }
+
+# view res/layout/app_migration_container.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.appcenter.appmigration.AppMigrationContainer { <init>(...); }
+
+# view res/layout/apps_management_advancedmanagement_layout.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.appcenter.component.AdvancedManagementContainer { <init>(...); }
+
+# view AndroidManifest.xml #generated:493
+-keep class com.jiubang.ggheart.appgame.appcenter.component.AppsManagementActivity { <init>(...); }
+
+# view res/layout/recomm_appsmanagement_no_upate_list_item.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.appcenter.component.AppsNoUpdateInfoListItem { <init>(...); }
+
+# view res/layout/recomm_appsmanagement_update_list_container.xml #generated:162
+-keep class com.jiubang.ggheart.appgame.appcenter.component.AppsNoUpdateViewContainer { <init>(...); }
+
+# view res/layout/recomm_apps_management_appsuninstall_layout.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.appcenter.component.AppsUninstallContainer { <init>(...); }
+
+# view res/layout/appcenter_update_list_header.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.appcenter.component.AppsUpdateInfoListHeaderItem { <init>(...); }
+
+# view res/layout/recomm_appsmanagement_upate_list_item.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.appcenter.component.AppsUpdateInfoListItem { <init>(...); }
+
+# view res/layout/recomm_appsmanagement_update_list_container.xml #generated:151
+-keep class com.jiubang.ggheart.appgame.appcenter.component.AppsUpdateView { <init>(...); }
+
+# view res/layout/recomm_appsmanagement_update_list_container.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.appcenter.component.AppsUpdateViewContainer { <init>(...); }
+
+# view res/layout/recomm_apps_management_myapps_layout.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.appcenter.component.MyAppsContainer { <init>(...); }
+
+# view res/layout/recomm_apps_management_appsuninstall_layout.xml #generated:96
+# view res/layout/recomm_apps_management_myapps_layout.xml #generated:70
+-keep class com.jiubang.ggheart.appgame.appcenter.component.MyAppsView { <init>(...); }
+
+# view res/layout/apps_management_packagemanagement_layout.xml #generated:1
+-keep class com.jiubang.ggheart.appgame.appcenter.component.PackageManagementView { <init>(...); }
+
+# view res/layout/app_migration_container.xml #generated:15
+# view res/layout/appgame_download_control_view.xml #generated:59
+# view res/layout/appgame_download_delete_view.xml #generated:99
+# view res/layout/appgame_price_alert_container.xml #generated:15
+# view res/layout/appkits_layout.xml #generated:62
+# view res/layout/apps_management_packagemanagement_layout.xml #generated:121
+-keep class com.jiubang.ggheart.appgame.appcenter.component.PinnedHeaderListView { <init>(...); }
+
+# view res/layout/appsuninstall_list_item.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.appcenter.component.SoftInforListItem { <init>(...); }
+
+# view AndroidManifest.xml #generated:300
+-keep class com.jiubang.ggheart.appgame.base.component.AppDetailImageActivity { <init>(...); }
+
+# view res/layout/layout_app_management_detail.xml #generated:261
+-keep class com.jiubang.ggheart.appgame.base.component.AppDetailIndicators { <init>(...); }
+
+# view res/layout/layout_app_management_detail.xml #generated:507
+-keep class com.jiubang.ggheart.appgame.base.component.AppDetailProgressBar { <init>(...); }
+
+# view res/layout/layout_app_management_detail.xml #generated:87
+-keep class com.jiubang.ggheart.appgame.base.component.AppDetailScrollViewSlowSpeed { <init>(...); }
+
+# view AndroidManifest.xml #generated:288
+-keep class com.jiubang.ggheart.appgame.base.component.AppInstallActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:713
+-keep class com.jiubang.ggheart.appgame.base.component.AppRecommendDialogActivity { <init>(...); }
+
+# view res/layout/appcenter_clean_search_history_view.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.base.component.AppsManagementCleanHistoryView { <init>(...); }
+
+# view res/layout/apps_management_search_loading_layout.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.base.component.AppsManagementSearchFooterView { <init>(...); }
+
+# view res/layout/apps_management_search_headerview.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.base.component.AppsManagementSearchHeaderView { <init>(...); }
+
+# view res/layout/apps_management_search.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.base.component.AppsManagementSearchView { <init>(...); }
+
+# view res/layout/appgame_new_extra_item.xml #generated:25
+# view res/layout/appgame_new_extra_item.xml #generated:31
+# view res/layout/appgame_price_alert_item.xml #generated:24
+# view res/layout/appgame_price_alert_item.xml #generated:31
+# view res/layout/apps_mgr_feature_iphonestyle_twocell.xml #generated:10
+# view res/layout/apps_mgr_feature_twocell_child.xml #generated:25
+# view res/layout/apps_mgr_feature_twocell_child.xml #generated:31
+-keep class com.jiubang.ggheart.appgame.base.component.BurningIcon { <init>(...); }
+
+# view res/layout/apps_mgr_game_categories.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.base.component.CategoriesContainer { <init>(...); }
+
+# view res/layout/appgame_common_progress.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.base.component.CommonProgress { <init>(...); }
+
+# view res/layout/appgame_container_summary.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.base.component.ContainerSummaryView { <init>(...); }
+
+# view res/layout/appgame_editor_favorite.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.base.component.EditorFavoriteContainer { <init>(...); }
+
+# view res/layout/apps_mgr_game_extra.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.base.component.ExtraContainer { <init>(...); }
+
+# view res/layout/apps_mgr_game_grid.xml #generated:12
+# view res/layout/apps_mgr_wallpaper_grid.xml #generated:12
+-keep class com.jiubang.ggheart.appgame.base.component.FeatureListView { <init>(...); }
+
+# view res/layout/apps_mgr_game_feature.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.base.component.FeaturedContainer { <init>(...); }
+
+# view res/layout/layout_app_management_detail.xml #generated:270
+-keep class com.jiubang.ggheart.appgame.base.component.GoStoreDetailScrollViewGroup { <init>(...); }
+
+# view AndroidManifest.xml #generated:556
+-keep class com.jiubang.ggheart.appgame.base.component.MoreAppsActivity { <init>(...); }
+
+# view res/layout/more_apps_view.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.base.component.MoreAppsView { <init>(...); }
+
+# view AndroidManifest.xml #generated:562
+-keep class com.jiubang.ggheart.appgame.base.component.MoreRecommendedAppsActivity { <init>(...); }
+
+# view res/layout/more_recommended_apps_view.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.base.component.MoreRecommendedAppsView { <init>(...); }
+
+# view res/layout/appgame_new_extra_container.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.base.component.NewExtraContainer { <init>(...); }
+
+# view res/layout/appgame_price_alert_container.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.base.component.PriceAlertContainer { <init>(...); }
+
+# view res/layout/layout_app_management_detail.xml #generated:56
+-keep class com.jiubang.ggheart.appgame.base.component.ScrollForeverTextView { <init>(...); }
+
+# view res/layout/appgame_search_container.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.base.component.SearchContainer { <init>(...); }
+
+# view res/layout/apps_mgr_game_extra.xml #generated:12
+-keep class com.jiubang.ggheart.appgame.base.component.SpecialSubjectListView { <init>(...); }
+
+# view AndroidManifest.xml #generated:241
+-keep class com.jiubang.ggheart.appgame.base.database.AppGameContentProvider { <init>(...); }
+
+# view AndroidManifest.xml #generated:551
+-keep class com.jiubang.ggheart.appgame.base.downloadmanager.AppsDownloadActivity { <init>(...); }
+
+# view res/layout/appgame_download_control_view.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.base.downloadmanager.DownloadControllView { <init>(...); }
+
+# view res/layout/appgame_download_delete_view.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.base.downloadmanager.DownloadDeleteView { <init>(...); }
+
+# view AndroidManifest.xml #generated:296
+-keep class com.jiubang.ggheart.appgame.base.feedback.AppFeedbackActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:233
+-keep class com.jiubang.ggheart.appgame.base.service.DataService { <init>(...); }
+
+# view AndroidManifest.xml #generated:507
+-keep class com.jiubang.ggheart.appgame.base.setting.AppGameSettingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:280
+-keep class com.jiubang.ggheart.appgame.base.utils.SelfCoverInstallReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:728
+-keep class com.jiubang.ggheart.appgame.base.utils.WifiStateReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:485
+-keep class com.jiubang.ggheart.appgame.download.DownloadService { <init>(...); }
+
+# view res/layout/apps_mgr_game_my_games.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.gamecenter.component.MyGameContainer { <init>(...); }
+
+# view AndroidManifest.xml #generated:258
+-keep class com.jiubang.ggheart.appgame.gostore.base.component.AppsThemeDetailActivity { <init>(...); }
+
+# view res/layout/gostore_theme_detail_gallery_item_image_new.xml #generated:2
+# view res/layout/gostore_theme_detail_gallery_item_image_noneicons.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.gostore.base.component.GoStoreDetailGalleryImage { <init>(...); }
+
+# view res/layout/gostore_theme_detail_view_new.xml #generated:13
+# view res/layout/gostore_theme_detail_view_new_noneicons.xml #generated:14
+-keep class com.jiubang.ggheart.appgame.gostore.base.component.GoStoreDetailHorizontalScrollView { <init>(...); }
+
+# view res/layout/apps_mgr_game_gridsort.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.gostore.base.component.GridSortContainer { <init>(...); }
+
+# view res/layout/apps_mgr_game_grid.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.gostore.base.component.GridViewContainer { <init>(...); }
+
+# view res/layout/gostore_wallpaper_detail_view.xml #generated:20
+-keep class com.jiubang.ggheart.appgame.gostore.base.component.WallPaperDetailHorizontalScrollView { <init>(...); }
+
+# view AndroidManifest.xml #generated:268
+-keep class com.jiubang.ggheart.appgame.gostore.base.component.WallpaperDetailActivity { <init>(...); }
+
+# view res/layout/apps_mgr_wallpaper_grid.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.gostore.base.component.WallpaperGridContainer { <init>(...); }
+
+# view AndroidManifest.xml #generated:547
+-keep class com.jiubang.ggheart.appgame.recommend.AppKitsActivity { <init>(...); }
+
+# view res/layout/appgamewidget41.xml #generated:2
+-keep class com.jiubang.ggheart.appgame.widget.AppGameWidget { <init>(...); }
+
+# view res/layout/appgamewidget41.xml #generated:31
+-keep class com.jiubang.ggheart.appgame.widget.AppGameWidgetIconContainer { <init>(...); }
+
+# view AndroidManifest.xml #generated:122
+-keep class com.jiubang.ggheart.apps.appfunc.setting.AppFuncUISetting { <init>(...); }
+
+# view AndroidManifest.xml #generated:474
+-keep class com.jiubang.ggheart.apps.appmanagement.component.AppsManagementActivity { <init>(...); }
+
+# view res/layout/appsmanagement_no_upate_list_item.xml #generated:2
+-keep class com.jiubang.ggheart.apps.appmanagement.component.AppsNoUpdateInfoListItem { <init>(...); }
+
+# view res/layout/apps_management_appsuninstall_layout.xml #generated:2
+-keep class com.jiubang.ggheart.apps.appmanagement.component.AppsUninstallContainer { <init>(...); }
+
+# view res/layout/appsmanagement_upate_list_item.xml #generated:2
+-keep class com.jiubang.ggheart.apps.appmanagement.component.AppsUpdateInfoListItem { <init>(...); }
+
+# view res/layout/appsmanagement_tab.xml #generated:22
+-keep class com.jiubang.ggheart.apps.appmanagement.component.AppsUpdateTab { <init>(...); }
+
+# view res/layout/appsmanagement_update_list_container.xml #generated:61
+-keep class com.jiubang.ggheart.apps.appmanagement.component.AppsUpdateView { <init>(...); }
+
+# view res/layout/appsmanagement_update_list_container.xml #generated:2
+-keep class com.jiubang.ggheart.apps.appmanagement.component.AppsUpdateViewContainer { <init>(...); }
+
+# view res/layout/apps_management_myapps_layout.xml #generated:2
+-keep class com.jiubang.ggheart.apps.appmanagement.component.MyAppsContainer { <init>(...); }
+
+# view res/layout/apps_management_appsuninstall_layout.xml #generated:93
+# view res/layout/apps_management_myapps_layout.xml #generated:192
+-keep class com.jiubang.ggheart.apps.appmanagement.component.MyAppsView { <init>(...); }
+
+# view res/layout/apps_management_recomm_layout.xml #generated:33
+-keep class com.jiubang.ggheart.apps.appmanagement.component.RecommendedAppListView { <init>(...); }
+
+# view res/layout/apps_management_recomm_layout.xml #generated:2
+-keep class com.jiubang.ggheart.apps.appmanagement.component.RecommendedAppsContainer { <init>(...); }
+
+# view res/layout/appsmanagement_recomm_list_item.xml #generated:2
+-keep class com.jiubang.ggheart.apps.appmanagement.component.RecommendedAppsUpdateListItem { <init>(...); }
+
+# view AndroidManifest.xml #generated:643
+-keep class com.jiubang.ggheart.apps.desks.Preferences.DeskSettingAboutActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:635
+-keep class com.jiubang.ggheart.apps.desks.Preferences.DeskSettingAdvancedActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:631
+-keep class com.jiubang.ggheart.apps.desks.Preferences.DeskSettingAppActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:639
+-keep class com.jiubang.ggheart.apps.desks.Preferences.DeskSettingBackupActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:658
+-keep class com.jiubang.ggheart.apps.desks.Preferences.DeskSettingFacebookActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:647
+-keep class com.jiubang.ggheart.apps.desks.Preferences.DeskSettingGestureFunctionActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:651
+-keep class com.jiubang.ggheart.apps.desks.Preferences.DeskSettingGestureScreenActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:619
+-keep class com.jiubang.ggheart.apps.desks.Preferences.DeskSettingMainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:655
+-keep class com.jiubang.ggheart.apps.desks.Preferences.DeskSettingQaTutorialActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:627
+-keep class com.jiubang.ggheart.apps.desks.Preferences.DeskSettingScreenActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:623
+-keep class com.jiubang.ggheart.apps.desks.Preferences.DeskSettingVisualActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:669
+-keep class com.jiubang.ggheart.apps.desks.Preferences.FunAppUISettingAppActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:665
+-keep class com.jiubang.ggheart.apps.desks.Preferences.FunAppUISettingMainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:667
+-keep class com.jiubang.ggheart.apps.desks.Preferences.FunAppUISettingVisualActivity { <init>(...); }
+
+# view res/layout/desk_setting_about.xml #generated:25
+# view res/layout/desk_setting_about.xml #generated:32
+# view res/layout/desk_setting_about.xml #generated:39
+# view res/layout/desk_setting_about.xml #generated:46
+# view res/layout/desk_setting_about.xml #generated:53
+# view res/layout/desk_setting_about.xml #generated:60
+# view res/layout/desk_setting_about.xml #generated:67
+# view res/layout/desk_setting_about.xml #generated:75
+# view res/layout/desk_setting_advanced.xml #generated:58
+# view res/layout/desk_setting_advanced.xml #generated:65
+# view res/layout/desk_setting_advanced.xml #generated:77
+# view res/layout/desk_setting_advanced.xml #generated:84
+# view res/layout/desk_setting_advanced.xml #generated:92
+# view res/layout/desk_setting_app_of_desk.xml #generated:81
+# view res/layout/desk_setting_app_of_function.xml #generated:70
+# view res/layout/desk_setting_backup.xml #generated:30
+# view res/layout/desk_setting_backup.xml #generated:37
+# view res/layout/desk_setting_backup.xml #generated:44
+# view res/layout/desk_setting_backup.xml #generated:58
+# view res/layout/desk_setting_backup.xml #generated:65
+# view res/layout/desk_setting_backup.xml #generated:84
+# view res/layout/desk_setting_facebook_set.xml #generated:31
+# view res/layout/desk_setting_facebook_set.xml #generated:45
+# view res/layout/desk_setting_main.xml #generated:103
+# view res/layout/desk_setting_main.xml #generated:33
+# view res/layout/desk_setting_main.xml #generated:41
+# view res/layout/desk_setting_main.xml #generated:49
+# view res/layout/desk_setting_main.xml #generated:57
+# view res/layout/desk_setting_main.xml #generated:71
+# view res/layout/desk_setting_main.xml #generated:79
+# view res/layout/desk_setting_main.xml #generated:87
+# view res/layout/desk_setting_main.xml #generated:95
+# view res/layout/desk_setting_visual_tab_font.xml #generated:18
+# view res/layout/desk_setting_visual_tab_font.xml #generated:37
+# view res/layout/fun_app_ui_setting_main.xml #generated:27
+# view res/layout/fun_app_ui_setting_main.xml #generated:35
+# view res/layout/fun_app_ui_setting_main.xml #generated:43
+# view res/layout/fun_app_ui_setting_main.xml #generated:51
+-keep class com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemBaseView { <init>(...); }
+
+# view res/layout/appfunc_setting_ui_include.xml #generated:19
+# view res/layout/appfunc_setting_ui_include.xml #generated:25
+# view res/layout/appfunc_setting_ui_include.xml #generated:31
+# view res/layout/appfunc_setting_ui_include.xml #generated:37
+# view res/layout/appfunc_setting_ui_include.xml #generated:43
+# view res/layout/desk_setting_advanced.xml #generated:30
+# view res/layout/desk_setting_advanced.xml #generated:37
+# view res/layout/desk_setting_advanced.xml #generated:44
+# view res/layout/desk_setting_advanced.xml #generated:51
+# view res/layout/desk_setting_app_of_desk.xml #generated:107
+# view res/layout/desk_setting_app_of_desk.xml #generated:113
+# view res/layout/desk_setting_app_of_desk.xml #generated:52
+# view res/layout/desk_setting_app_of_function.xml #generated:31
+# view res/layout/desk_setting_facebook_set.xml #generated:37
+# view res/layout/desk_setting_gesture_function.xml #generated:23
+# view res/layout/desk_setting_gesture_function.xml #generated:30
+# view res/layout/desk_setting_screen.xml #generated:54
+# view res/layout/desk_setting_screen.xml #generated:60
+# view res/layout/desk_setting_screen.xml #generated:66
+# view res/layout/desk_setting_screen.xml #generated:90
+# view res/layout/desk_setting_visual_tab_background.xml #generated:30
+# view res/layout/desk_setting_visual_tab_background.xml #generated:79
+# view res/layout/desk_setting_visual_tab_icon.xml #generated:51
+# view res/layout/fun_app_ui_setting_visual_view.xml #generated:47
+-keep class com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemCheckBoxView { <init>(...); }
+
+# view res/layout/appfunc_setting_ui_include.xml #generated:8
+# view res/layout/desk_setting_app_of_desk.xml #generated:27
+# view res/layout/desk_setting_app_of_desk.xml #generated:59
+# view res/layout/desk_setting_app_of_desk.xml #generated:70
+# view res/layout/desk_setting_app_of_function.xml #generated:20
+# view res/layout/desk_setting_app_of_function.xml #generated:37
+# view res/layout/desk_setting_app_of_function.xml #generated:48
+# view res/layout/desk_setting_app_of_function.xml #generated:59
+# view res/layout/desk_setting_gesture_screen.xml #generated:25
+# view res/layout/desk_setting_gesture_screen.xml #generated:36
+# view res/layout/desk_setting_gesture_screen.xml #generated:47
+# view res/layout/desk_setting_gesture_screen.xml #generated:58
+# view res/layout/desk_setting_screen.xml #generated:42
+# view res/layout/desk_setting_screen.xml #generated:79
+# view res/layout/desk_setting_visual_tab_background.xml #generated:45
+# view res/layout/desk_setting_visual_tab_background.xml #generated:62
+# view res/layout/desk_setting_visual_tab_background.xml #generated:84
+# view res/layout/desk_setting_visual_tab_font.xml #generated:24
+# view res/layout/desk_setting_visual_tab_font.xml #generated:43
+# view res/layout/desk_setting_visual_tab_icon.xml #generated:41
+# view res/layout/desk_setting_visual_tab_icon.xml #generated:57
+# view res/layout/desk_setting_visual_tab_icon.xml #generated:69
+# view res/layout/desk_setting_visual_tab_icon.xml #generated:77
+# view res/layout/desk_setting_visual_tab_icon.xml #generated:85
+# view res/layout/desk_setting_visual_tab_icon.xml #generated:93
+# view res/layout/desk_setting_visual_tab_indicator.xml #generated:15
+# view res/layout/desk_setting_visual_tab_indicator.xml #generated:23
+# view res/layout/desk_setting_visual_tab_indicator.xml #generated:31
+# view res/layout/fun_app_ui_setting_visual_view.xml #generated:30
+# view res/layout/fun_app_ui_setting_visual_view.xml #generated:52
+# view res/layout/mediamanagement_media_open_setting.xml #generated:25
+-keep class com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingItemListView { <init>(...); }
+
+# view res/layout/appfunc_setting_effectorsetting.xml #generated:10
+# view res/layout/appfunc_setting_ui_setting.xml #generated:9
+# view res/layout/desk_setting_about.xml #generated:9
+# view res/layout/desk_setting_advanced.xml #generated:9
+# view res/layout/desk_setting_app.xml #generated:9
+# view res/layout/desk_setting_backup.xml #generated:9
+# view res/layout/desk_setting_facebook_set.xml #generated:10
+# view res/layout/desk_setting_gesture_function.xml #generated:8
+# view res/layout/desk_setting_gesture_screen.xml #generated:9
+# view res/layout/desk_setting_main.xml #generated:10
+# view res/layout/desk_setting_screen.xml #generated:9
+# view res/layout/desk_setting_visual_view.xml #generated:10
+# view res/layout/facebook_conncet.xml #generated:9
+# view res/layout/fun_app_ui_setting_main.xml #generated:9
+# view res/layout/fun_app_ui_setting_visual_view.xml #generated:9
+# view res/layout/mediamanagement_media_open_setting.xml #generated:9
+-keep class com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingPageTitleView { <init>(...); }
+
+# view res/layout/desk_setting_multidialog_item.xml #generated:2
+# view res/layout/desk_setting_singledialog_item.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingSingleDialogItemView { <init>(...); }
+
+# view res/layout/desk_setting_advanced.xml #generated:25
+# view res/layout/desk_setting_advanced.xml #generated:72
+# view res/layout/desk_setting_app_of_desk.xml #generated:22
+# view res/layout/desk_setting_app_of_desk.xml #generated:90
+# view res/layout/desk_setting_backup.xml #generated:25
+# view res/layout/desk_setting_backup.xml #generated:52
+# view res/layout/desk_setting_backup.xml #generated:79
+# view res/layout/desk_setting_facebook_set.xml #generated:26
+# view res/layout/desk_setting_main.xml #generated:28
+# view res/layout/desk_setting_main.xml #generated:66
+# view res/layout/desk_setting_screen.xml #generated:111
+# view res/layout/desk_setting_screen.xml #generated:37
+# view res/layout/desk_setting_screen.xml #generated:74
+# view res/layout/desk_setting_visual_tab_background.xml #generated:15
+# view res/layout/desk_setting_visual_tab_background.xml #generated:36
+# view res/layout/desk_setting_visual_tab_background.xml #generated:57
+# view res/layout/desk_setting_visual_tab_font.xml #generated:14
+# view res/layout/desk_setting_visual_tab_font.xml #generated:33
+# view res/layout/desk_setting_visual_tab_icon.xml #generated:36
+# view res/layout/desk_setting_visual_tab_icon.xml #generated:64
+# view res/layout/fun_app_ui_setting_visual_view.xml #generated:26
+-keep class com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingTitleView { <init>(...); }
+
+# view res/layout/desk_setting_visual_tab_background.xml #generated:7
+-keep class com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingVisualBackgroundTabView { <init>(...); }
+
+# view res/layout/desk_setting_visual_tab_font.xml #generated:7
+-keep class com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingVisualFontTabView { <init>(...); }
+
+# view res/layout/desk_setting_visual_tab_icon.xml #generated:7
+-keep class com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingVisualIconTabView { <init>(...); }
+
+# view res/layout/desk_setting_visual_tab_indicator.xml #generated:7
+-keep class com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingVisualIndicatorTabView { <init>(...); }
+
+# view res/layout/desk_setting_visual_view.xml #generated:3
+-keep class com.jiubang.ggheart.apps.desks.Preferences.view.DeskSettingVisualView { <init>(...); }
+
+# view res/layout/recomm_apps_management_tab.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.Preferences.view.TitlePagerActionBar { <init>(...); }
+
+# view AndroidManifest.xml #generated:159
+-keep class com.jiubang.ggheart.apps.desks.appfunc.AllFoldersActivity { <init>(...); }
+
+# view res/layout/appfuncmenuguide.xml #generated:9
+-keep class com.jiubang.ggheart.apps.desks.appfunc.AppFuncMenuGuideView { <init>(...); }
+
+# view AndroidManifest.xml #generated:164
+-keep class com.jiubang.ggheart.apps.desks.appfunc.AppFuncModifyFolderActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:161
+-keep class com.jiubang.ggheart.apps.desks.appfunc.AppFuncNewFolderActivity { <init>(...); }
+
+# view res/layout/appfuncfolderguide.xml #generated:9
+-keep class com.jiubang.ggheart.apps.desks.appfunc.AppfuncCreateFolderGuideView { <init>(...); }
+
+# view res/layout/appfuncdragguide.xml #generated:9
+-keep class com.jiubang.ggheart.apps.desks.appfunc.AppfuncDragGuideView { <init>(...); }
+
+# view AndroidManifest.xml #generated:162
+-keep class com.jiubang.ggheart.apps.desks.appfunc.HideAppActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:153
+-keep class com.jiubang.ggheart.apps.desks.appfunc.LockList { <init>(...); }
+
+# view AndroidManifest.xml #generated:172
+-keep class com.jiubang.ggheart.apps.desks.appfunc.NotificationSettingActivity { <init>(...); }
+
+# view land\res/layout-land/widgetchoosestyle.xml #generated:21
+# view res/layout/widgetchoosestyle.xml #generated:21
+-keep class com.jiubang.ggheart.apps.desks.appfunc.WidgetStyleChooseView { <init>(...); }
+
+# view res/layout/app_func_all_app_menu.xml #generated:7
+-keep class com.jiubang.ggheart.apps.desks.appfunc.menu.AppFuncMenuItemView { <init>(...); }
+
+# view res/layout/appfunc_search_result_list_item.xml #generated:10
+-keep class com.jiubang.ggheart.apps.desks.appfunc.search.AppFuncSearchImageView { <init>(...); }
+
+# view land\res/layout-land/appfunc_search_main.xml #generated:2
+# view res/layout/appfunc_search_main.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.appfunc.search.AppFuncSearchView { <init>(...); }
+
+# view land\res/layout-land/appfunc_search_result_list.xml #generated:68
+# view res/layout/appfunc_search_result_list.xml #generated:68
+-keep class com.jiubang.ggheart.apps.desks.appfunc.search.SearchNavigationbar { <init>(...); }
+
+# view land\res/layout-land/appfunc_search_result_list.xml #generated:60
+# view res/layout/appfunc_search_result_list.xml #generated:60
+-keep class com.jiubang.ggheart.apps.desks.appfunc.search.SearchNavigationbarIcon { <init>(...); }
+
+# view res/layout/main.xml #generated:8
+-keep class com.jiubang.ggheart.apps.desks.diy.DiyFrameLayout { <init>(...); }
+
+# view AndroidManifest.xml #generated:304
+-keep class com.jiubang.ggheart.apps.desks.diy.GoGuideActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:80
+-keep class com.jiubang.ggheart.apps.desks.diy.GoLauncher { <init>(...); }
+
+# view res/layout/guide_layout.xml #generated:54
+# view res/layout/guide_layout_m9.xml #generated:54
+-keep class com.jiubang.ggheart.apps.desks.diy.GuideImageScroller { <init>(...); }
+
+# view res/layout/guide_cn_lastpage.xml #generated:204
+# view res/layout/guide_lastpage.xml #generated:204
+-keep class com.jiubang.ggheart.apps.desks.diy.GuideSlideView { <init>(...); }
+
+# view res/layout/guide_cn_lastpage.xml #generated:2
+# view res/layout/guide_lastpage.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.diy.GuideTipsView { <init>(...); }
+
+# view AndroidManifest.xml #generated:328
+-keep class com.jiubang.ggheart.apps.desks.diy.NotificationBarReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:676
+-keep class com.jiubang.ggheart.apps.desks.diy.RateDialogContentActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:310
+-keep class com.jiubang.ggheart.apps.desks.diy.UserAgreementActivity { <init>(...); }
+
+# view res/layout/dock_add_icon_app_view.xml #generated:44
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.dock.DefaultStyle.autofit.DockAddIconCheckViewGroup { <init>(...); }
+
+# view res/layout/diy_dock.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.dock.DefaultStyle.autofit.DockView { <init>(...); }
+
+# view res/layout/diy_dock_unfit.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.dock.DefaultStyle.unfit.UnfitDockView { <init>(...); }
+
+# view land\res/layout-land/relpacedrag_frame.xml #generated:2
+# view port\res/layout-port/relpacedrag_frame.xml #generated:2
+# view res/layout/drag_frame.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.drag.DragLayout { <init>(...); }
+
+# view res/layout/sense_screen.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.preview.SenseLayout { <init>(...); }
+
+# view res/layout/sensetutoria.xml #generated:7
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.preview.SensePriviewTutorial { <init>(...); }
+
+# view res/layout/sense_screen.xml #generated:10
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.preview.SenseWorkspace { <init>(...); }
+
+# view land\res/layout-land/workspace_screen.xml #generated:3
+# view port\res/layout-port/workspace_screen.xml #generated:3
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.screen.CellLayout { <init>(...); }
+
+# view res/layout/apps_mgr_game_add_games.xml #generated:25
+# view res/layout/desk_user_folder.xml #generated:37
+# view res/layout/diy_screen.xml #generated:22
+# view res/layout/dock_add_icon_multi_check_viewgroup.xml #generated:9
+# view res/layout/go_handbook_content.xml #generated:60
+# view res/layout/guide_layout.xml #generated:61
+# view res/layout/guide_layout_m9.xml #generated:61
+# view res/layout/lock_list.xml #generated:20
+# view res/layout/multi_check_viewgroup.xml #generated:8
+# view res/layout/mytheme_themescan.xml #generated:16
+# view res/layout/screen_edit_large_tab.xml #generated:127
+# view res/layout/screen_edit_tab.xml #generated:161
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.screen.DesktopIndicator { <init>(...); }
+
+# view res/layout/desk_user_folder.xml #generated:44
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.screen.FolderGridView { <init>(...); }
+
+# view land\res/layout-land/folder_icon.xml #generated:3
+# view land\res/layout-land/folder_icon_large.xml #generated:3
+# view port\res/layout-port/folder_icon.xml #generated:3
+# view port\res/layout-port/folder_icon_large.xml #generated:3
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.screen.FolderIcon { <init>(...); }
+
+# view res/layout/desk_user_folder.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.screen.FolderRelativeLayout { <init>(...); }
+
+# view res/layout/gowidget_detail_scan.xml #generated:14
+# view res/layout/theme_detail_scan.xml #generated:16
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.screen.InfoScreenIndicator { <init>(...); }
+
+# view land\res/layout-land/live_folder_grid.xml #generated:3
+# view port\res/layout-port/live_folder_grid.xml #generated:3
+# view res/layout/live_folder_list.xml #generated:3
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.screen.LiveFolder { <init>(...); }
+
+# view AndroidManifest.xml #generated:129
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.screen.ScreenEditAddGoLauncher { <init>(...); }
+
+# view res/layout/sense_screen.xml #generated:21
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.screen.ScreenIndicator { <init>(...); }
+
+# view res/layout/diy_screen.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.screen.ScreenLayout { <init>(...); }
+
+# view AndroidManifest.xml #generated:125
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.screen.ScreenModifyFolderActivity { <init>(...); }
+
+# view res/layout/widget_search.xml #generated:3
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.screen.Search { <init>(...); }
+
+# view res/layout/diy_screen.xml #generated:16
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.screen.Workspace { <init>(...); }
+
+# view res/layout/screen_edit_tab.xml #generated:145
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.screeneditbox.ScreenEditBoxContainer { <init>(...); }
+
+# view res/layout/screen_edit_large_tab.xml #generated:104
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.screeneditbox.ScreenEditBoxContainerForApps { <init>(...); }
+
+# view res/layout/screen_edit_large_tab.xml #generated:110
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.screeneditbox.ScreenEditBoxContainerForGoWidgets { <init>(...); }
+
+# view res/layout/screen_edit_large_tab.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.screeneditbox.ScreenEditLargeTabView { <init>(...); }
+
+# view res/layout/screen_edit_layout.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.screeneditbox.ScreenEditLayout { <init>(...); }
+
+# view res/layout/screen_edit_tab.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.screeneditbox.ScreenEditTabView { <init>(...); }
+
+# view AndroidManifest.xml #generated:132
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.screeneditbox.WallpaperCutModeSettting { <init>(...); }
+
+# view res/layout/guide_for_custom_gesture.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.tipsforgl.GuideCustomGestureView { <init>(...); }
+
+# view land\res/layout-land/guide_for_dock_bar_icon.xml #generated:2
+# view res/layout/guide_for_dock_bar_icon.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.tipsforgl.GuideDockBarIconView { <init>(...); }
+
+# view res/layout/guideforscreeneffectsecond.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.tipsforgl.GuideForScreenEffectSecondTipView { <init>(...); }
+
+# view res/layout/guideforscreeneffect.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.diy.frames.tipsforgl.GuideForScreenEffectView { <init>(...); }
+
+# view res/layout/message_dialog_content.xml #generated:9
+-keep class com.jiubang.ggheart.apps.desks.diy.messagecenter.BackgroundView { <init>(...); }
+
+# view AndroidManifest.xml #generated:448
+-keep class com.jiubang.ggheart.apps.desks.diy.messagecenter.MessageCenterActivity { <init>(...); }
+
+# view res/layout/message_content_webview.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.diy.messagecenter.MessageCenterWebView { <init>(...); }
+
+# view AndroidManifest.xml #generated:451
+-keep class com.jiubang.ggheart.apps.desks.diy.messagecenter.MessageContentActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:455
+-keep class com.jiubang.ggheart.apps.desks.diy.messagecenter.MessageDialogContentActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:459
+-keep class com.jiubang.ggheart.apps.desks.diy.messagecenter.MsgNotifyActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:397
+-keep class com.jiubang.ggheart.apps.desks.diy.themescan.BannerDetailActivity { <init>(...); }
+
+# view land\res/layout-land/widgetchoosestyle.xml #generated:16
+# view res/layout/widgetchoosestyle.xml #generated:16
+-keep class com.jiubang.ggheart.apps.desks.diy.themescan.DotProgressBar { <init>(...); }
+
+# view res/layout/item_lock_theme_view.xml #generated:2
+# view res/layout/item_theme_view.xml #generated:2
+# view res/layout/theme_item_view.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.diy.themescan.ItemThemeView { <init>(...); }
+
+# view res/layout/singletheme.xml #generated:2
+# view res/layout/theme_detail_singletheme.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.diy.themescan.SingleThemeView { <init>(...); }
+
+# view res/layout/theme_banner_detailview.xml #generated:44
+-keep class com.jiubang.ggheart.apps.desks.diy.themescan.SpecThemelistViewLayout { <init>(...); }
+
+# view res/layout/theme_manage_container_layout.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.diy.themescan.ThemeContainer { <init>(...); }
+
+# view AndroidManifest.xml #generated:390
+-keep class com.jiubang.ggheart.apps.desks.diy.themescan.ThemeDetailActivity { <init>(...); }
+
+# view res/layout/theme_detail_scan.xml #generated:9
+-keep class com.jiubang.ggheart.apps.desks.diy.themescan.ThemeDetailScan { <init>(...); }
+
+# view res/layout/theme_detail.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.diy.themescan.ThemeDetailView { <init>(...); }
+
+# view res/layout/theme_list_item.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.diy.themescan.ThemeListItemView { <init>(...); }
+
+# view res/layout/theme_manage_container_layout.xml #generated:80
+-keep class com.jiubang.ggheart.apps.desks.diy.themescan.ThemeListView { <init>(...); }
+
+# view AndroidManifest.xml #generated:363
+-keep class com.jiubang.ggheart.apps.desks.diy.themescan.ThemeManageActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:404
+-keep class com.jiubang.ggheart.apps.desks.diy.themescan.ThemePreviewFullScreenViewActivity { <init>(...); }
+
+# view res/layout/mytheme_themescan.xml #generated:9
+-keep class com.jiubang.ggheart.apps.desks.diy.themescan.ThemeScan { <init>(...); }
+
+# view AndroidManifest.xml #generated:734
+-keep class com.jiubang.ggheart.apps.desks.diy.themescan.ThemeVipPage { <init>(...); }
+
+# view res/layout/ggmenu_default.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.ggmenu.GGMenuGridView { <init>(...); }
+
+# view res/layout/ggmenu_item_default.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.ggmenu.GGMenuItem { <init>(...); }
+
+# view res/layout/glmenu.xml #generated:104
+-keep class com.jiubang.ggheart.apps.desks.ggmenu.GlMenuGridViewsContainer { <init>(...); }
+
+# view res/layout/glmenu.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.ggmenu.GlMenuTabView { <init>(...); }
+
+# view AndroidManifest.xml #generated:179
+-keep class com.jiubang.ggheart.apps.desks.golauncherwallpaper.ChooseWallpaper { <init>(...); }
+
+# view AndroidManifest.xml #generated:513
+-keep class com.jiubang.ggheart.apps.desks.imagepreview.ChangeIconPreviewActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:135
+-keep class com.jiubang.ggheart.apps.desks.imagepreview.ImagePreviewActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:144
+-keep class com.jiubang.ggheart.apps.desks.imagepreview.ThemeImagePreviewActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:119
+-keep class com.jiubang.ggheart.apps.desks.settings.AppList { <init>(...); }
+
+# view AndroidManifest.xml #generated:120
+-keep class com.jiubang.ggheart.apps.desks.settings.AppListMultiple { <init>(...); }
+
+# view AndroidManifest.xml #generated:469
+-keep class com.jiubang.ggheart.apps.desks.settings.BackUpSettingReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:123
+-keep class com.jiubang.ggheart.apps.desks.settings.LauncherActionList { <init>(...); }
+
+# view AndroidManifest.xml #generated:381
+-keep class com.jiubang.ggheart.apps.desks.share.ShareActivity { <init>(...); }
+
+# view res/layout/share_layout.xml #generated:50
+-keep class com.jiubang.ggheart.apps.desks.share.ShareContainer { <init>(...); }
+
+# view res/layout/share_layout.xml #generated:2
+-keep class com.jiubang.ggheart.apps.desks.share.ShareLayout { <init>(...); }
+
+# view AndroidManifest.xml #generated:696
+-keep class com.jiubang.ggheart.apps.desks.snapshot.SnapShotPreviewer { <init>(...); }
+
+# view AndroidManifest.xml #generated:333
+-keep class com.jiubang.ggheart.apps.download.DownloadBrocastReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:231
+-keep class com.jiubang.ggheart.apps.download.DownloadService { <init>(...); }
+
+# view AndroidManifest.xml #generated:436
+-keep class com.jiubang.ggheart.apps.gowidget.GoWidgetActionReceiver { <init>(...); }
+
+# view res/layout/widget_error.xml #generated:2
+-keep class com.jiubang.ggheart.apps.gowidget.WidgetErrorView { <init>(...); }
+
+# view AndroidManifest.xml #generated:252
+-keep class com.jiubang.ggheart.apps.gowidget.gostore.ImageScanActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:245
+-keep class com.jiubang.ggheart.apps.gowidget.gostore.SoftManagerActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:247
+-keep class com.jiubang.ggheart.apps.gowidget.gostore.WallpaperDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:315
+-keep class com.jiubang.ggheart.apps.gowidget.gostore.brocastreceiver.GoStoreInstalledBrocastReceiver { <init>(...); }
+
+# view res/layout/gostore_theme_detail_gallery_item.xml #generated:11
+# view res/layout/gostore_theme_detail_gallery_item_new.xml #generated:15
+# view res/layout/gostore_theme_detail_gallery_item_new_noneicons.xml #generated:7
+-keep class com.jiubang.ggheart.apps.gowidget.gostore.component.GoStoreDetailScrollView { <init>(...); }
+
+# view res/layout/gostore_theme_detail_activity_view.xml #generated:34
+# view res/layout/gostore_theme_detail_view_new.xml #generated:162
+# view res/layout/gostore_theme_detail_view_new_noneicons.xml #generated:163
+-keep class com.jiubang.ggheart.apps.gowidget.gostore.component.GoStoreDetailScrollViewGroup { <init>(...); }
+
+# view res/layout/gostore_theme_detail_activity_view.xml #generated:5
+# view res/layout/gostore_theme_detail_view_new.xml #generated:41
+# view res/layout/gostore_theme_detail_view_new_noneicons.xml #generated:43
+-keep class com.jiubang.ggheart.apps.gowidget.gostore.component.GoStoreIndicators { <init>(...); }
+
+# view res/layout/wallpaper_detail_layout.xml #generated:13
+-keep class com.jiubang.ggheart.apps.gowidget.gostore.component.MyScrollView { <init>(...); }
+
+# view land\res/layout-land/wallpaper_grid_item.xml #generated:9
+# view res/layout/apps_mgr_detail_another_child.xml #generated:10
+# view res/layout/appsmanagement_no_upate_list_item.xml #generated:7
+# view res/layout/appsmanagement_upate_list_item.xml #generated:7
+# view res/layout/appsuninstall_list_item.xml #generated:33
+# view res/layout/appsuninstall_list_item.xml #generated:39
+# view res/layout/banner_item.xml #generated:6
+# view res/layout/gostore_main_list_item.xml #generated:6
+# view res/layout/image_item.xml #generated:7
+# view res/layout/layout_app_management_detail.xml #generated:46
+# view res/layout/layout_apps_download_delete_item.xml #generated:15
+# view res/layout/layout_apps_download_item.xml #generated:16
+# view res/layout/recomm_appsmanagement_no_upate_list_item.xml #generated:42
+# view res/layout/recomm_appsmanagement_no_upate_list_item.xml #generated:48
+# view res/layout/recomm_appsmanagement_upate_list_item.xml #generated:59
+# view res/layout/recomm_appsmanagement_upate_list_item.xml #generated:65
+# view res/layout/themestore_itemdetailactivity_view.xml #generated:30
+# view res/layout/themestore_main_sort_list_item.xml #generated:11
+# view res/layout/themestore_themes_grid_item.xml #generated:18
+# view res/layout/themestore_themes_list_item.xml #generated:8
+# view res/layout/wallpaper_grid_item.xml #generated:9
+# view res/layout/wallpaper_sort_item.xml #generated:38
+# view zh\res/layout-zh/gostore_main_list_item.xml #generated:6
+# view zh\res/layout-zh/themestore_themes_list_item.xml #generated:8
+-keep class com.jiubang.ggheart.apps.gowidget.gostore.component.SimpleImageView { <init>(...); }
+
+# view land\res/layout-land/appfunc_search_result_list.xml #generated:18
+# view res/layout/appfunc_search_btmprogress.xml #generated:2
+# view res/layout/appfunc_search_result_list.xml #generated:18
+# view res/layout/appfunc_search_web_result_list.xml #generated:18
+# view res/layout/appfunc_search_web_result_list.xml #generated:60
+# view res/layout/appgame_btmprogress.xml #generated:2
+# view res/layout/apps_management_myapps_layout.xml #generated:201
+# view res/layout/apps_mgr_listview_foot_more.xml #generated:12
+# view res/layout/gostore_theme_detail_icon_progress.xml #generated:2
+# view res/layout/recomm_apps_management_myapps_layout.xml #generated:56
+# view res/layout/share_layout.xml #generated:83
+# view res/layout/theme_manage_container_layout.xml #generated:53
+# view res/layout/themestore_btmprogress.xml #generated:2
+# view res/layout/wallpapergirdview_btmprogress.xml #generated:2
+# view res/layout/wallpapersort_btmprogress.xml #generated:2
+-keep class com.jiubang.ggheart.apps.gowidget.gostore.component.ThemeStoreProgressBar { <init>(...); }
+
+# view res/layout/themestore_tabs.xml #generated:2
+-keep class com.jiubang.ggheart.apps.gowidget.gostore.component.ThemeTabsBar { <init>(...); }
+
+# view res/layout/themestore_toptitle.xml #generated:2
+-keep class com.jiubang.ggheart.apps.gowidget.gostore.component.ThemeTitle { <init>(...); }
+
+# view AndroidManifest.xml #generated:236
+-keep class com.jiubang.ggheart.apps.gowidget.gostore.services.GoStoreUpdateInstallService { <init>(...); }
+
+# view res/layout/gostore_theme_detail_gallery_item_image.xml #generated:2
+-keep class com.jiubang.ggheart.apps.gowidget.gostore.views.GoStoreDetailGalleryImage { <init>(...); }
+
+# view res/layout/gostore_main_list_item.xml #generated:2
+# view zh\res/layout-zh/gostore_main_list_item.xml #generated:2
+-keep class com.jiubang.ggheart.apps.gowidget.gostore.views.MainListItem { <init>(...); }
+
+# view res/layout/themestore_main_sort_list_item.xml #generated:2
+-keep class com.jiubang.ggheart.apps.gowidget.gostore.views.MainSortListItem { <init>(...); }
+
+# view res/layout/desk_setting_screen.xml #generated:18
+-keep class com.jiubang.ggheart.apps.gowidget.gostore.views.ScrollerViewGroup { <init>(...); }
+
+# view res/layout/simple_theme_grid_view.xml #generated:2
+-keep class com.jiubang.ggheart.apps.gowidget.gostore.views.SimpleThemesGridView { <init>(...); }
+
+# view res/layout/simple_theme_list_view.xml #generated:2
+-keep class com.jiubang.ggheart.apps.gowidget.gostore.views.SimpleThemesListView { <init>(...); }
+
+# view res/layout/themestore_themes_grid_item.xml #generated:2
+-keep class com.jiubang.ggheart.apps.gowidget.gostore.views.ThemesGridItem { <init>(...); }
+
+# view res/layout/themestore_themes_list_item.xml #generated:2
+# view zh\res/layout-zh/themestore_themes_list_item.xml #generated:2
+-keep class com.jiubang.ggheart.apps.gowidget.gostore.views.ThemesListItem { <init>(...); }
+
+# view res/layout/wallpaper_grid_view.xml #generated:2
+-keep class com.jiubang.ggheart.apps.gowidget.gostore.views.WallpaperDataGridView { <init>(...); }
+
+# view res/layout/gostorewidget41.xml #generated:2
+-keep class com.jiubang.ggheart.apps.gowidget.gostorewidget.GoStoreWidget41 { <init>(...); }
+
+# view res/layout/gostorewidget41.xml #generated:40
+-keep class com.jiubang.ggheart.apps.gowidget.gostorewidget.GoStoreWidget41GridView { <init>(...); }
+
+# view res/layout/content_recommend_item.xml #generated:9
+-keep class com.jiubang.ggheart.apps.gowidget.gostorewidget.SimpleImageView { <init>(...); }
+
+# view res/layout/gowidget_detail_scan.xml #generated:8
+-keep class com.jiubang.ggheart.apps.gowidget.manager.GoWidgetDetailScan { <init>(...); }
+
+# view land\res/layout-land/task_running_1_1content.xml #generated:19
+# view res/layout/task_running_1_1content.xml #generated:20
+-keep class com.jiubang.ggheart.apps.gowidget.taskmanager.PointerView { <init>(...); }
+
+# view res/layout/task_running_1_1.xml #generated:3
+-keep class com.jiubang.ggheart.apps.gowidget.taskmanager.TaskRunning11Widget { <init>(...); }
+
+# view res/layout/task_running_4_1.xml #generated:3
+-keep class com.jiubang.ggheart.apps.gowidget.taskmanager.TaskRunning41Widget { <init>(...); }
+
+# view res/layout/task_running_4_2.xml #generated:2
+-keep class com.jiubang.ggheart.apps.gowidget.taskmanager.TaskRunning42Widget { <init>(...); }
+
+# view res/layout/task_running_style_4_1.xml #generated:3
+-keep class com.jiubang.ggheart.apps.gowidget.taskmanager.TaskRunningStyle41Widget { <init>(...); }
+
+# view AndroidManifest.xml #generated:682
+-keep class com.jiubang.ggheart.apps.systemwidget.GoLauncherexWidgetProvider { <init>(...); }
+
+# view AndroidManifest.xml #generated:579
+-keep class com.jiubang.ggheart.billing.AppInBillingRequestReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:571
+-keep class com.jiubang.ggheart.billing.base.BillingReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:569
+-keep class com.jiubang.ggheart.billing.base.BillingService { <init>(...); }
+
+# view land\res/layout-land/application_boxed.xml #generated:2
+# view land\res/layout-land/application_boxed_large.xml #generated:2
+# view large-land-hdpi\res/layout-large-land-hdpi/application_boxed.xml #generated:2
+# view large-land-hdpi\res/layout-large-land-hdpi/application_boxed_large.xml #generated:2
+# view large-land-mdpi\res/layout-large-land-mdpi/application_boxed.xml #generated:1
+# view large-land-mdpi\res/layout-large-land-mdpi/application_boxed_large.xml #generated:2
+# view large-port-hdpi\res/layout-large-port-hdpi/application_boxed.xml #generated:3
+# view large-port-hdpi\res/layout-large-port-hdpi/application_boxed_large.xml #generated:2
+# view large-port-mdpi\res/layout-large-port-mdpi/application_boxed.xml #generated:3
+# view large-port-mdpi\res/layout-large-port-mdpi/application_boxed_large.xml #generated:2
+# view port\res/layout-port/application_boxed.xml #generated:3
+# view port\res/layout-port/application_boxed_large.xml #generated:3
+# view res/layout/application_land.xml #generated:2
+# view res/layout/application_large_land.xml #generated:3
+# view res/layout/application_large_port.xml #generated:2
+# view res/layout/application_port.xml #generated:2
+# view xlarge-land-mdpi\res/layout-xlarge-land-mdpi/application_boxed.xml #generated:2
+# view xlarge-land-mdpi\res/layout-xlarge-land-mdpi/application_boxed_large.xml #generated:2
+# view xlarge-port-mdpi\res/layout-xlarge-port-mdpi/application_boxed.xml #generated:3
+# view xlarge-port-mdpi\res/layout-xlarge-port-mdpi/application_boxed_large.xml #generated:2
+-keep class com.jiubang.ggheart.components.BubbleTextView { <init>(...); }
+
+# view land\res/layout-land/app_func_new_folder_list.xml #generated:33
+# view land\res/layout-land/app_func_new_folder_list.xml #generated:38
+# view land\res/layout-land/appfunc_search_main.xml #generated:145
+# view land\res/layout-land/appfunc_search_main.xml #generated:152
+# view land\res/layout-land/appfunc_search_main.xml #generated:158
+# view land\res/layout-land/appfunc_search_main.xml #generated:42
+# view land\res/layout-land/guide_for_dock_bar_icon.xml #generated:32
+# view land\res/layout-land/live_folder_grid.xml #generated:7
+# view port\res/layout-port/live_folder_grid.xml #generated:6
+# view res/layout/advert_activte_tip_dialog.xml #generated:103
+# view res/layout/advert_activte_tip_dialog.xml #generated:86
+# view res/layout/app_func_hide_app_list.xml #generated:27
+# view res/layout/app_func_hide_app_list.xml #generated:43
+# view res/layout/app_func_modify_folder_list.xml #generated:52
+# view res/layout/app_func_modify_folder_list.xml #generated:68
+# view res/layout/app_func_new_folder_list.xml #generated:33
+# view res/layout/app_func_new_folder_list.xml #generated:38
+# view res/layout/appfunc_folderlist.xml #generated:23
+# view res/layout/appfunc_folderlist.xml #generated:28
+# view res/layout/appfunc_search_main.xml #generated:149
+# view res/layout/appfunc_search_main.xml #generated:157
+# view res/layout/appfunc_search_main.xml #generated:164
+# view res/layout/appfunc_search_main.xml #generated:40
+# view res/layout/applist_multiple.xml #generated:25
+# view res/layout/applist_multiple.xml #generated:33
+# view res/layout/apps_management_recomm_layout.xml #generated:18
+# view res/layout/apps_mgr_game_add_games.xml #generated:36
+# view res/layout/apps_mgr_game_add_games.xml #generated:50
+# view res/layout/desk_setting_color_select_view.xml #generated:143
+# view res/layout/desk_setting_color_select_view.xml #generated:159
+# view res/layout/desk_setting_color_select_view.xml #generated:175
+# view res/layout/desk_setting_dialog_for_singleormulti_choice.xml #generated:66
+# view res/layout/desk_setting_dialog_for_singleormulti_choice.xml #generated:82
+# view res/layout/desk_setting_font_scan_dialog.xml #generated:70
+# view res/layout/desk_setting_font_scan_dialog.xml #generated:86
+# view res/layout/desk_setting_normal_dialog.xml #generated:68
+# view res/layout/desk_setting_normal_dialog.xml #generated:85
+# view res/layout/dialog_go_shortcut_view.xml #generated:35
+# view res/layout/dialog_go_shortcut_view.xml #generated:51
+# view res/layout/dialog_language_select.xml #generated:56
+# view res/layout/gesture_add.xml #generated:165
+# view res/layout/gesture_add.xml #generated:190
+# view res/layout/gesture_add.xml #generated:203
+# view res/layout/gesture_add.xml #generated:319
+# view res/layout/gesture_add.xml #generated:332
+# view res/layout/gesture_add.xml #generated:501
+# view res/layout/gesture_add.xml #generated:514
+# view res/layout/gesture_edit.xml #generated:150
+# view res/layout/gesture_edit.xml #generated:157
+# view res/layout/gesture_edit.xml #generated:183
+# view res/layout/gesture_edit.xml #generated:196
+# view res/layout/gesture_recogniser.xml #generated:128
+# view res/layout/gesture_recogniser.xml #generated:153
+# view res/layout/gesture_recogniser.xml #generated:166
+# view res/layout/gesture_recogniser.xml #generated:224
+# view res/layout/gesture_recogniser.xml #generated:292
+# view res/layout/gowidget_detail_button.xml #generated:20
+# view res/layout/gowidget_done_button.xml #generated:10
+# view res/layout/guide_for_custom_gesture.xml #generated:43
+# view res/layout/guide_for_dock_bar_icon.xml #generated:32
+# view res/layout/guide_full_screen_widget.xml #generated:43
+# view res/layout/guideforscreeneffect.xml #generated:39
+# view res/layout/guideforscreeneffectsecond.xml #generated:48
+# view res/layout/guideforscreeneffectsecond.xml #generated:57
+# view res/layout/launcher_action.xml #generated:25
+# view res/layout/launcher_action.xml #generated:33
+# view res/layout/live_folder_list.xml #generated:7
+# view res/layout/lock_list.xml #generated:34
+# view res/layout/lock_list.xml #generated:50
+# view res/layout/messagecentermain.xml #generated:72
+# view res/layout/mytheme_button.xml #generated:10
+# view res/layout/mytheme_button.xml #generated:21
+# view res/layout/rename_box.xml #generated:35
+# view res/layout/rename_box.xml #generated:44
+# view res/layout/rename_box_recommendedname.xml #generated:50
+# view res/layout/rename_box_recommendedname.xml #generated:59
+# view res/layout/screen_edit_wallpaper_cut_setting.xml #generated:36
+# view res/layout/screen_edit_wallpaper_cut_setting.xml #generated:53
+# view res/layout/screen_modify_folder_list.xml #generated:32
+# view res/layout/screen_modify_folder_list.xml #generated:37
+# view res/layout/screen_modify_grid.xml #generated:50
+# view res/layout/screen_modify_grid.xml #generated:67
+# view res/layout/screenedit_gowidget_info_page.xml #generated:66
+# view res/layout/screenedit_gowidget_info_page.xml #generated:76
+# view res/layout/screenedit_gowidget_info_page_small.xml #generated:67
+# view res/layout/screenedit_gowidget_info_page_small.xml #generated:77
+# view res/layout/snapshot_layout.xml #generated:17
+# view res/layout/snapshot_layout.xml #generated:27
+# view res/layout/snapshot_layout.xml #generated:37
+# view res/layout/snapshot_layout.xml #generated:47
+# view res/layout/snapshot_root_require_dialog.xml #generated:45
+# view res/layout/snapshot_root_require_dialog.xml #generated:62
+# view res/layout/snapshot_root_require_dialog.xml #generated:79
+# view res/layout/theme_detail_button.xml #generated:17
+# view res/layout/theme_detail_button.xml #generated:34
+# view res/layout/theme_detail_title_new.xml #generated:71
+# view res/layout/wallpaper_chooser.xml #generated:18
+-keep class com.jiubang.ggheart.components.DeskButton { <init>(...); }
+
+# view res/layout/appfunc_custom_grid_dialog_view.xml #generated:12
+-keep class com.jiubang.ggheart.components.DeskCheckBox { <init>(...); }
+
+# view res/xml/appfunc_menu_setting.xml #generated:18
+# view res/xml/appfunc_menu_setting.xml #generated:24
+# view res/xml/appfunc_menu_setting.xml #generated:46
+# view res/xml/appfunc_menu_setting.xml #generated:51
+# view res/xml/appfunc_menu_setting.xml #generated:6
+# view res/xml/function_menu_setting.xml #generated:20
+# view res/xml/function_menu_setting.xml #generated:29
+# view res/xml/function_menu_setting.xml #generated:34
+# view res/xml/function_menu_setting.xml #generated:39
+# view res/xml/function_menu_setting.xml #generated:43
+# view res/xml/function_menu_setting.xml #generated:74
+# view res/xml/function_menu_setting.xml #generated:83
+# view res/xml/function_menu_setting.xml #generated:88
+# view res/xml/function_menu_setting001.xml #generated:41
+# view res/xml/function_menu_setting001.xml #generated:45
+# view res/xml/function_menu_setting001.xml #generated:49
+# view res/xml/function_menu_setting001.xml #generated:80
+# view res/xml/gesture_setting.xml #generated:50
+# view res/xml/gesture_setting.xml #generated:55
+-keep class com.jiubang.ggheart.components.DeskCheckBoxPreference { <init>(...); }
+
+# view res/layout/desk_select_dialog_singlechoice.xml #generated:3
+-keep class com.jiubang.ggheart.components.DeskCheckedTextView { <init>(...); }
+
+# view land\res/layout-land/app_func_new_folder_list.xml #generated:13
+# view land\res/layout-land/appfunc_search_main.xml #generated:28
+# view res/layout/app_func_new_folder_list.xml #generated:13
+# view res/layout/appfunc_search_main.xml #generated:26
+# view res/layout/rename_box.xml #generated:19
+# view res/layout/rename_box_recommendedname.xml #generated:19
+# view res/layout/screen_modify_folder_list.xml #generated:13
+# view res/layout/themestore_search_view.xml #generated:45
+-keep class com.jiubang.ggheart.components.DeskEditText { <init>(...); }
+
+# view res/layout/folder_grid_item_large.xml #generated:9
+-keep class com.jiubang.ggheart.components.DeskIcon { <init>(...); }
+
+# view res/xml/appfunc_menu_setting.xml #generated:30
+# view res/xml/appfunc_menu_setting.xml #generated:38
+# view res/xml/appfunc_menu_setting.xml #generated:61
+# view res/xml/appfunc_menu_setting.xml #generated:68
+# view res/xml/appfunc_menu_setting.xml #generated:75
+# view res/xml/function_menu_setting.xml #generated:105
+# view res/xml/function_menu_setting.xml #generated:112
+# view res/xml/function_menu_setting.xml #generated:14
+# view res/xml/function_menu_setting.xml #generated:8
+# view res/xml/function_menu_setting.xml #generated:98
+# view res/xml/function_menu_setting001.xml #generated:29
+# view res/xml/function_menu_setting001.xml #generated:35
+# view res/xml/gesture_setting.xml #generated:19
+# view res/xml/gesture_setting.xml #generated:26
+# view res/xml/gesture_setting.xml #generated:33
+# view res/xml/gesture_setting.xml #generated:40
+# view res/xml/indicator_setting.xml #generated:13
+# view res/xml/indicator_setting.xml #generated:20
+# view res/xml/indicator_setting.xml #generated:6
+-keep class com.jiubang.ggheart.components.DeskListPreference { <init>(...); }
+
+# view res/xml/function_menu_setting.xml #generated:70
+# view res/xml/function_menu_setting001.xml #generated:76
+-keep class com.jiubang.ggheart.components.DeskPreference { <init>(...); }
+
+# view res/xml/appfunc_menu_setting.xml #generated:5
+# view res/xml/appfunc_menu_setting.xml #generated:58
+# view res/xml/function_menu_setting.xml #generated:6
+# view res/xml/function_menu_setting.xml #generated:68
+# view res/xml/function_menu_setting.xml #generated:80
+# view res/xml/function_menu_setting.xml #generated:95
+# view res/xml/function_menu_setting001.xml #generated:27
+# view res/xml/function_menu_setting001.xml #generated:75
+# view res/xml/gesture_setting.xml #generated:16
+# view res/xml/gesture_setting.xml #generated:47
+-keep class com.jiubang.ggheart.components.DeskPreferenceCategory { <init>(...); }
+
+# view land\res/layout-land/app_func_new_folder_list.xml #generated:10
+# view land\res/layout-land/app_func_new_folder_list.xml #generated:18
+# view land\res/layout-land/appfunc_search_main.xml #generated:106
+# view land\res/layout-land/appfunc_search_main.xml #generated:76
+# view land\res/layout-land/guide_for_dock_bar_icon.xml #generated:103
+# view land\res/layout-land/guide_for_dock_bar_icon.xml #generated:20
+# view land\res/layout-land/guide_for_dock_bar_icon.xml #generated:70
+# view land\res/layout-land/guide_for_dock_bar_icon.xml #generated:78
+# view land\res/layout-land/guide_for_dock_bar_icon.xml #generated:8
+# view land\res/layout-land/guide_for_dock_bar_icon.xml #generated:95
+# view land\res/layout-land/task_running_1_1content.xml #generated:12
+# view land\res/layout-land/task_running_4_1_content.xml #generated:27
+# view land\res/layout-land/widgetchoosestyle.xml #generated:45
+# view land\res/layout-land/widgetchoosestyle.xml #generated:6
+# view land\res/layout-land/widgetchoosesubview.xml #generated:44
+# view land\res/layout-land/widgetchoosesubview.xml #generated:50
+# view land\res/layout-land/widgetchoosesubview.xml #generated:69
+# view port\res/layout-port/gowidget_choosepre_subview.xml #generated:31
+# view res/layout/advert_activte_tip_dialog.xml #generated:15
+# view res/layout/advert_activte_tip_dialog.xml #generated:40
+# view res/layout/advert_activte_tip_dialog.xml #generated:64
+# view res/layout/app_func_hide_app_list.xml #generated:8
+# view res/layout/app_func_modify_folder_list.xml #generated:16
+# view res/layout/app_func_new_folder_list.xml #generated:10
+# view res/layout/app_func_new_folder_list.xml #generated:18
+# view res/layout/appfunc_folderlist.xml #generated:5
+# view res/layout/appfunc_search_main.xml #generated:106
+# view res/layout/appfunc_search_main.xml #generated:75
+# view res/layout/appfunc_seekbar_double.xml #generated:23
+# view res/layout/appfunc_seekbar_double.xml #generated:38
+# view res/layout/application_list.xml #generated:28
+# view res/layout/application_list.xml #generated:38
+# view res/layout/applist_multiple.xml #generated:7
+# view res/layout/apps_mgr_game_add_games.xml #generated:14
+# view res/layout/desk_setting_color_select_view.xml #generated:22
+# view res/layout/desk_setting_color_select_view.xml #generated:52
+# view res/layout/desk_setting_color_select_view.xml #generated:67
+# view res/layout/desk_setting_color_select_view.xml #generated:78
+# view res/layout/desk_setting_dialog_for_seekbar.xml #generated:100
+# view res/layout/desk_setting_dialog_for_seekbar.xml #generated:111
+# view res/layout/desk_setting_dialog_for_seekbar.xml #generated:22
+# view res/layout/desk_setting_dialog_for_seekbar.xml #generated:37
+# view res/layout/desk_setting_dialog_for_seekbar.xml #generated:48
+# view res/layout/desk_setting_dialog_for_seekbar.xml #generated:85
+# view res/layout/desk_setting_dialog_for_singleormulti_choice.xml #generated:23
+# view res/layout/desk_setting_font_scan_dialog.xml #generated:15
+# view res/layout/desk_setting_font_scan_dialog.xml #generated:36
+# view res/layout/desk_setting_font_scan_dialog.xml #generated:44
+# view res/layout/desk_setting_font_scan_dialog.xml #generated:55
+# view res/layout/desk_setting_item_base_view.xml #generated:42
+# view res/layout/desk_setting_item_base_view.xml #generated:47
+# view res/layout/desk_setting_normal_dialog.xml #generated:15
+# view res/layout/desk_setting_normal_dialog.xml #generated:28
+# view res/layout/desk_setting_normal_dialog.xml #generated:54
+# view res/layout/desk_setting_page_title_view.xml #generated:28
+# view res/layout/desk_setting_tab_title.xml #generated:16
+# view res/layout/desk_setting_tab_title.xml #generated:42
+# view res/layout/desk_setting_title_view.xml #generated:7
+# view res/layout/desk_setting_visual_tab_icon_showpic.xml #generated:35
+# view res/layout/desk_setting_visual_tab_icon_showpic.xml #generated:40
+# view res/layout/desk_setting_visual_tab_icon_showpic.xml #generated:45
+# view res/layout/desk_setting_visual_tab_icon_showpic.xml #generated:50
+# view res/layout/desk_setting_visual_tab_icon_showpic.xml #generated:57
+# view res/layout/desk_setting_visual_tab_icon_showpic.xml #generated:64
+# view res/layout/desk_simple_spinner_item.xml #generated:3
+# view res/layout/desk_user_folder.xml #generated:14
+# view res/layout/dialog_go_shortcut_view.xml #generated:13
+# view res/layout/dialog_language_select.xml #generated:24
+# view res/layout/facebook_conncet.xml #generated:23
+# view res/layout/facebook_conncet.xml #generated:48
+# view res/layout/font_scan.xml #generated:11
+# view res/layout/font_scan.xml #generated:17
+# view res/layout/font_scan.xml #generated:26
+# view res/layout/foregound.xml #generated:13
+# view res/layout/foregound.xml #generated:28
+# view res/layout/gesture_add.xml #generated:132
+# view res/layout/gesture_add.xml #generated:237
+# view res/layout/gesture_add.xml #generated:247
+# view res/layout/gesture_add.xml #generated:36
+# view res/layout/gesture_add.xml #generated:366
+# view res/layout/gesture_add.xml #generated:376
+# view res/layout/gesture_add.xml #generated:46
+# view res/layout/gesture_add.xml #generated:466
+# view res/layout/gesture_dialog_item.xml #generated:17
+# view res/layout/gesture_edit.xml #generated:117
+# view res/layout/gesture_edit.xml #generated:29
+# view res/layout/gesture_edit_select_response.xml #generated:25
+# view res/layout/gesture_menu_item.xml #generated:14
+# view res/layout/gesture_recogniser.xml #generated:194
+# view res/layout/gesture_recogniser.xml #generated:256
+# view res/layout/gesture_recogniser.xml #generated:44
+# view res/layout/gesture_recogniser.xml #generated:67
+# view res/layout/ggmenu_item_default.xml #generated:21
+# view res/layout/glmenu.xml #generated:12
+# view res/layout/glmenu.xml #generated:29
+# view res/layout/glmenu.xml #generated:49
+# view res/layout/gowidget_title.xml #generated:2
+# view res/layout/guide_for_custom_gesture.xml #generated:20
+# view res/layout/guide_for_custom_gesture.xml #generated:8
+# view res/layout/guide_for_dock_bar_icon.xml #generated:102
+# view res/layout/guide_for_dock_bar_icon.xml #generated:110
+# view res/layout/guide_for_dock_bar_icon.xml #generated:20
+# view res/layout/guide_for_dock_bar_icon.xml #generated:74
+# view res/layout/guide_for_dock_bar_icon.xml #generated:8
+# view res/layout/guide_for_dock_bar_icon.xml #generated:82
+# view res/layout/guide_full_screen_widget.xml #generated:20
+# view res/layout/guide_full_screen_widget.xml #generated:8
+# view res/layout/guideforscreeneffect.xml #generated:10
+# view res/layout/guideforscreeneffectsecond.xml #generated:10
+# view res/layout/guideforscreeneffectsecond.xml #generated:68
+# view res/layout/hideapp_grid_item.xml #generated:10
+# view res/layout/launcher_action.xml #generated:7
+# view res/layout/layout_app_management_detail.xml #generated:137
+# view res/layout/layout_app_management_detail.xml #generated:385
+# view res/layout/layout_app_management_detail.xml #generated:449
+# view res/layout/message_content.xml #generated:34
+# view res/layout/message_dialog_content.xml #generated:43
+# view res/layout/messagecentermain.xml #generated:21
+# view res/layout/messagecentermain.xml #generated:33
+# view res/layout/messagecentermain.xml #generated:51
+# view res/layout/messagecentermain.xml #generated:62
+# view res/layout/messagecontentlistitem.xml #generated:7
+# view res/layout/messagedialoglistitem.xml #generated:8
+# view res/layout/modify_success_tip.xml #generated:13
+# view res/layout/modify_success_tip.xml #generated:22
+# view res/layout/morethemes.xml #generated:9
+# view res/layout/my_gesture.xml #generated:25
+# view res/layout/my_gesture.xml #generated:76
+# view res/layout/mytheme_title.xml #generated:2
+# view res/layout/qahelplisthead.xml #generated:7
+# view res/layout/qahelptutorial.xml #generated:22
+# view res/layout/quickactionitem.xml #generated:2
+# view res/layout/rename_box.xml #generated:7
+# view res/layout/rename_box_recommendedname.xml #generated:32
+# view res/layout/rename_box_recommendedname.xml #generated:7
+# view res/layout/report.xml #generated:13
+# view res/layout/report.xml #generated:28
+# view res/layout/screen_edit_gowidget_choosepre_subview.xml #generated:30
+# view res/layout/screen_edit_gowidget_skin_list_item.xml #generated:2
+# view res/layout/screen_edit_item.xml #generated:27
+# view res/layout/screen_edit_item_effect.xml #generated:24
+# view res/layout/screen_edit_item_theme.xml #generated:26
+# view res/layout/screen_edit_large_tab.xml #generated:39
+# view res/layout/screen_edit_tab.xml #generated:106
+# view res/layout/screen_edit_tab.xml #generated:25
+# view res/layout/screen_edit_tab.xml #generated:41
+# view res/layout/screen_edit_tab.xml #generated:57
+# view res/layout/screen_edit_tab.xml #generated:73
+# view res/layout/screen_edit_wallpaper_cut_setting.xml #generated:125
+# view res/layout/screen_edit_wallpaper_cut_setting.xml #generated:16
+# view res/layout/screen_edit_wallpaper_cut_setting.xml #generated:86
+# view res/layout/screen_modify_folder_list.xml #generated:10
+# view res/layout/screen_modify_folder_list.xml #generated:18
+# view res/layout/screen_modify_grid.xml #generated:16
+# view res/layout/screenedit_gowidget_info_page.xml #generated:18
+# view res/layout/screenedit_gowidget_info_page.xml #generated:26
+# view res/layout/screenedit_gowidget_info_page.xml #generated:33
+# view res/layout/screenedit_gowidget_info_page.xml #generated:41
+# view res/layout/screenedit_gowidget_info_page.xml #generated:49
+# view res/layout/screenedit_gowidget_info_page_small.xml #generated:19
+# view res/layout/screenedit_gowidget_info_page_small.xml #generated:27
+# view res/layout/screenedit_gowidget_info_page_small.xml #generated:34
+# view res/layout/screenedit_gowidget_info_page_small.xml #generated:42
+# view res/layout/screenedit_gowidget_info_page_small.xml #generated:50
+# view res/layout/screentrans_seekbar.xml #generated:18
+# view res/layout/screentrans_seekbar.xml #generated:31
+# view res/layout/screentrans_seekbar.xml #generated:40
+# view res/layout/screentrans_seekbar.xml #generated:53
+# view res/layout/seekbar.xml #generated:17
+# view res/layout/seekbar.xml #generated:29
+# view res/layout/seekbar_diy_icon_size.xml #generated:18
+# view res/layout/seekbar_diy_icon_size.xml #generated:31
+# view res/layout/seekbar_double.xml #generated:23
+# view res/layout/seekbar_double.xml #generated:37
+# view res/layout/seekbar_double.xml #generated:46
+# view res/layout/seekbar_double.xml #generated:60
+# view res/layout/snapshot_root_require_dialog.xml #generated:14
+# view res/layout/snapshot_root_require_dialog.xml #generated:27
+# view res/layout/snapshot_watting_for_require_root_dialog.xml #generated:15
+# view res/layout/task_running_1_1content.xml #generated:12
+# view res/layout/task_running_4_1_content.xml #generated:27
+# view res/layout/task_running_4_2_content_horizontal.xml #generated:24
+# view res/layout/task_running_4_2_content_vertical.xml #generated:44
+# view res/layout/theme_banner_detailview.xml #generated:31
+# view res/layout/theme_detail_alertdialog.xml #generated:9
+# view res/layout/theme_detail_title_new.xml #generated:25
+# view res/layout/theme_gostore.xml #generated:20
+# view res/layout/theme_icon_select.xml #generated:8
+# view res/layout/theme_info_text.xml #generated:17
+# view res/layout/theme_manage_container_layout.xml #generated:29
+# view res/layout/theme_manage_container_layout.xml #generated:42
+# view res/layout/theme_manage_container_layout.xml #generated:68
+# view res/layout/theme_manage_no_golocker_h.xml #generated:37
+# view res/layout/theme_manage_no_golocker_h.xml #generated:59
+# view res/layout/theme_manage_no_golocker_v.xml #generated:15
+# view res/layout/theme_manage_no_golocker_v.xml #generated:30
+# view res/layout/theme_manage_tab2_h.xml #generated:48
+# view res/layout/theme_manage_tab2_h.xml #generated:77
+# view res/layout/theme_manage_tab2_v.xml #generated:49
+# view res/layout/theme_manage_tab2_v.xml #generated:80
+# view res/layout/theme_manage_tab_h.xml #generated:113
+# view res/layout/theme_manage_tab_h.xml #generated:49
+# view res/layout/theme_manage_tab_h.xml #generated:80
+# view res/layout/theme_manage_tab_v.xml #generated:114
+# view res/layout/theme_manage_tab_v.xml #generated:49
+# view res/layout/theme_manage_tab_v.xml #generated:81
+# view res/layout/theme_manage_top.xml #generated:25
+# view res/layout/theme_manage_top.xml #generated:53
+# view res/layout/themestore_itemdetailactivity_view.xml #generated:206
+# view res/layout/themestore_itemdetailactivity_view.xml #generated:226
+# view res/layout/themestore_itemdetailactivity_view.xml #generated:256
+# view res/layout/themestore_itemdetailactivity_view.xml #generated:286
+# view res/layout/themestore_nodata_tip.xml #generated:7
+# view res/layout/themestore_nodata_tip_full.xml #generated:16
+# view res/layout/themestore_nodata_tip_full.xml #generated:28
+# view res/layout/themestore_search_view.xml #generated:62
+# view res/layout/vippagelayout.xml #generated:13
+# view res/layout/widget_search.xml #generated:22
+# view res/layout/widgetchoosestyle.xml #generated:46
+# view res/layout/widgetchoosestyle.xml #generated:6
+# view res/layout/widgetchoosesubview.xml #generated:52
+# view res/layout/widgetchoosesubview.xml #generated:58
+# view res/layout/widgetchoosesubview.xml #generated:76
+-keep class com.jiubang.ggheart.components.DeskTextView { <init>(...); }
+
+# view res/layout/app_func_hide_app_list.xml #generated:69
+# view res/layout/app_func_modify_folder_list.xml #generated:80
+# view res/layout/diy_screen.xml #generated:47
+# view res/layout/dock_add_icon_app_view.xml #generated:51
+# view res/layout/go_handbook_item_webview.xml #generated:20
+# view res/layout/lock_list.xml #generated:69
+# view res/layout/progressbar.xml #generated:2
+# view res/layout/screen_edit_large_tab.xml #generated:88
+# view res/layout/screen_edit_tab.xml #generated:129
+# view res/layout/screen_modify_grid.xml #generated:79
+-keep class com.jiubang.ggheart.components.GoProgressBar { <init>(...); }
+
+# view res/layout/themestore_imagescanactivity.xml #generated:97
+-keep class com.jiubang.ggheart.components.IndicatorView { <init>(...); }
+
+# view res/layout/app_func_hide_app_list.xml #generated:62
+-keep class com.jiubang.ggheart.components.ModifySuccessTipView { <init>(...); }
+
+# view res/layout/app_func_hide_app_list.xml #generated:55
+# view res/layout/app_func_modify_folder_list.xml #generated:37
+# view res/layout/dialog_go_shortcut_view.xml #generated:24
+# view res/layout/screen_modify_grid.xml #generated:37
+-keep class com.jiubang.ggheart.components.MultiCheckViewGroup { <init>(...); }
+
+# view res/layout/apps_mgr_game_add_games.xml #generated:61
+# view res/layout/dock_add_icon_multi_check_viewgroup.xml #generated:18
+# view res/layout/lock_list.xml #generated:62
+# view res/layout/multi_check_viewgroup.xml #generated:13
+-keep class com.jiubang.ggheart.components.MutilCheckGridView { <init>(...); }
+
+# view res/layout/main2.xml #generated:16
+-keep class com.jiubang.ggheart.components.SortTabView { <init>(...); }
+
+# view AndroidManifest.xml #generated:719
+-keep class com.jiubang.ggheart.components.advert.AdvertOpenAppReceive { <init>(...); }
+
+# view AndroidManifest.xml #generated:724
+-keep class com.jiubang.ggheart.components.advert.AdvertOpenTipDailog { <init>(...); }
+
+# view AndroidManifest.xml #generated:532
+-keep class com.jiubang.ggheart.components.diygesture.gesturemanageview.DiyGestureAddActivity { <init>(...); }
+
+# view res/layout/gesture_add.xml #generated:437
+# view res/layout/gesture_edit.xml #generated:88
+-keep class com.jiubang.ggheart.components.diygesture.gesturemanageview.DiyGestureConflictView { <init>(...); }
+
+# view AndroidManifest.xml #generated:539
+-keep class com.jiubang.ggheart.components.diygesture.gesturemanageview.DiyGestureEditActivity { <init>(...); }
+
+# view res/layout/gesture_add.xml #generated:111
+# view res/layout/gesture_edit.xml #generated:59
+# view res/layout/gesture_recognise_search_result_item.xml #generated:12
+# view res/layout/gesture_recogniser.xml #generated:103
+-keep class com.jiubang.ggheart.components.diygesture.gesturemanageview.DiyGestureItemView { <init>(...); }
+
+# view AndroidManifest.xml #generated:526
+-keep class com.jiubang.ggheart.components.diygesture.gesturemanageview.DiyGestureRecogniser { <init>(...); }
+
+# view land\res/layout-land/gesture_edit_select_response.xml #generated:38
+# view res/layout/gesture_add.xml #generated:298
+# view res/layout/gesture_edit_select_response.xml #generated:38
+# view res/layout/gesture_recogniser.xml #generated:207
+-keep class com.jiubang.ggheart.components.diygesture.gesturemanageview.DiyGestureSelectRespondView { <init>(...); }
+
+# view AndroidManifest.xml #generated:519
+-keep class com.jiubang.ggheart.components.diygesture.gesturemanageview.MyGesture { <init>(...); }
+
+# view AndroidManifest.xml #generated:707
+-keep class com.jiubang.ggheart.components.facebook.FacebookConnectActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:594
+-keep class com.jiubang.ggheart.components.gohandbook.GoHandBookContentActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:587
+-keep class com.jiubang.ggheart.components.gohandbook.GoHandBookMainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:601
+-keep class com.jiubang.ggheart.components.gohandbook.GoHandBookUseNowReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:175
+-keep class com.jiubang.ggheart.components.renamewindow.RenameActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:230
+-keep class com.jiubang.ggheart.data.AppService { <init>(...); }
+
+# view AndroidManifest.xml #generated:610
+-keep class com.jiubang.ggheart.data.DBImport.DataBaseReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:607
+-keep class com.jiubang.ggheart.data.DBImport.LauncherSelectorActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:111
+-keep class com.jiubang.ggheart.data.ForegroundDialog { <init>(...); }
+
+# view AndroidManifest.xml #generated:467
+-keep class com.jiubang.ggheart.data.model.WhirteListProvider { <init>(...); }
+
+# view AndroidManifest.xml #generated:322
+-keep class com.jiubang.ggheart.data.statistics.StatisticsBroadcastReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:238
+-keep class com.jiubang.ggheart.data.statistics.StatisticsProvider { <init>(...); }
+
+# view AndroidManifest.xml #generated:421
+-keep class com.jiubang.ggheart.data.theme.broadcastReceiver.MyThemeReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:61
+-keep class com.jiubang.ggheart.launcher.GOLauncherApp { <init>(...); }
+
+# view AndroidManifest.xml #generated:101
+-keep class com.jiubang.ggheart.plugin.mediamanagement.MediaOpenSettingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:167
+-keep class com.jiubang.ggheart.plugin.shell.folder.GLAppFolderModifyActivity { <init>(...); }
+
+# view res/layout/diy_screen.xml #generated:10
+-keep class com.jiubang.ggheart.screen.back.BackWorkspace { <init>(...); }
+
+# view AndroidManifest.xml #generated:346
+-keep class com.jiubang.ggheart.screen.livewallpaper.LauncherWallpaperService { <init>(...); }
+
+# view AndroidManifest.xml #generated:360
+-keep class com.jiubang.ggheart.screen.livewallpaper.LiveWallpaperSettingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:737
+-keep class com.jiubang.ggheart.screen.touchhelper.TouchHelperDownloadGuideActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:104
+-keep class org.acra.CrashReportDialog { <init>(...); }
+

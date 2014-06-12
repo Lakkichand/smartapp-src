@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Desk Version="1.0" VersionCode="1" Wallpaper="default_wallpaper" ScollWallpaper="false" WallpaperFill="0">
+	<!-- 共用样式，目前的只有图标 -->
+	<!-- <Indicator Source="indicator.xml"> -->
+		<!-- 指示器项 -->
+		<!--<IndicatorStyles ShowMode="1" WhenScreenCount="" > -->
+			<!-- 点状指示器，共用模块：桌面、预览 -->
+			<!--<IndicatorItem Identity="Dots" Margins="{1,1,0,0}" Width="24" Height="24" >
+				<Wallpaper Identity="Selected" Color="" Image="screennow_4_def3" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+				<Wallpaper Identity="UnSelected" Color="" Image="screenother_4_def3" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+			</IndicatorItem>
+			-->
+			<!-- 滑块指示器 -->
+			<!--
+			<IndicatorItem Identity="Slide" Margins="{1,1,0,0}" Width="" Height="" >
+				<Wallpaper Identity="Selected" Color="" Image="screennow_4_def3" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+			</IndicatorItem>
+		</IndicatorStyles>
+	</Indicator>
+	-->
+	
+	<Screen Source="screen.xml">
+		<!-- 屏幕样式 -->
+		<ScreenStyles>
+			<FolderStyle>
+				<Wallpaper Color="" Image="appfunc_folderback_4_def3" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+				<Wallpaper Identity="OpenFolder" Color="" Image="appfunc_folder_open_4_def3" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+				<Wallpaper Identity="ColseFolder" Color="" Image="appfunc_folder_close_up_4_def3" Fill="1" Border="1" BorderColor="" BorderLine="" Margins=""/>
+			</FolderStyle>
+		</ScreenStyles>
+	</Screen>
+
+</Desk>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gowidget>
+<version version="1" />
+<recommend recommend="2" />
+<item pkgname="com.gau.go.launcherex.gowidget.switchwidget" preview="onoff" themeInfo="http://down.goforandroid.com/soft/3GHeart/golauncher/widget/FTP/Switch.apk">onoff</item>
+<item pkgname="com.gau.go.launcherex.gowidget.calendarwidget" preview="calendar" themeInfo="http://smsftp.3g.cn/soft/3GHeart/golauncher/widget/FTP/Calendar.apk">calendar</item>
+<item pkgname="com.gau.go.launcherex.gowidget.clockwidget" preview="clock" themeInfo="http://down.goforandroid.com/soft/3GHeart/golauncher/widget/FTP/clock.apk">clock</item>
+<item pkgname="com.gau.go.launcherex.gowidget.notewidget" preview="note" themeInfo="http://down.goforandroid.com/soft/3GHeart/golauncher/widget/FTP/Note.apk">note</item>
+<item pkgname="com.gau.go.launcherex.gowidget.contactwidget" preview="contact" themeInfo="http://smsftp.3g.cn/soft/3GHeart/golauncher/widget/FTP/Contact.apk">contact</item>
+<item pkgname="com.gau.go.launcherex.gowidget.emailwidget" preview="email" themeInfo="http://down.goforandroid.com/soft/3GHeart/golauncher/widget/FTP/Email.apk">email</item>
+<item pkgname="com.gau.go.launcherex.gowidget.fbwidget" preview="facebook" themeInfo="http://smsftp.3g.cn/soft/3GHeart/golauncher/widget/FTP/Facebook.apk">facebook</item>
+<item pkgname="com.gau.go.launcherex.gowidget.twitterwidget" preview="twitter" themeInfo="http://smsftp.3g.cn/soft/3GHeart/golauncher/widget/FTP/Twitter.apk">twitter</item>
+<item pkgname="com.gau.go.launcherex.gowidget.searchwidget" preview="search" themeInfo="http://smsftp.3g.cn/soft/3GHeart/golauncher/widget/FTP/Search.apk">search</item>
+<item pkgname="com.gau.go.launcherex.gowidget.bookmark" preview="bookmark" themeInfo="http://smsftp.3g.cn/soft/3GHeart/golauncher/widget/FTP/Bookmark.apk">bookmark</item>
+<item pkgname="com.gau.go.launcherex.gowidget.taskmanagerex" preview="task_managerex" themeInfo="http://down.goforandroid.com/soft/GoTaskManagerEX/GoTaskManagerEX.apk">task_killer</item>
+<item pkgname="com.gau.go.launcherex.gowidget.weatherwidget" preview="goweatherex_4_def3" themeInfo="http://down.goforandroid.com/soft/3GHeart/golauncher/widget/FTP/Weather.apk">weather</item>
+<item pkgname="com.jb.gosms" preview="gosmswidget" themeInfo="http://smsftp.3g.cn/soft/gosms/hutui/GOSmsLauncherwidget.apk">gosms</item>
+<!-- <item pkgname="com.gau.go.launcherex.gowidget.smswidget" preview="sms" themeInfo="http://smsftp.3g.cn/soft/3GHeart/golauncher/widget/FTP/SMS.apk">sms</item>
+ -->
+</gowidget> 

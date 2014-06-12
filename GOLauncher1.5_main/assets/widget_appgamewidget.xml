@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Widget样式
+		 对应array.xml文件中的： 
+		<integer-array name="styletypelist">
+		 <item>0</item>
+	    </integer-array>
+	    在本Widget中代表4*3的样式
+	 -->
+	<widget_style style1="1" />
+	<!-- 主题包type -->
+	<widget_theme_type type1="1" />
+	<!-- 主题预览图 -->
+	<theme_preview img1="appgame_widget_preview41" />
+	<!-- 主题预览的名字 -->
+	<theme_title title1="appgame_widget_title"/>
+	
+
+</resources>
