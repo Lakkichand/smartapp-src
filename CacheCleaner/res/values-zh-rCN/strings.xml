@@ -3,7 +3,7 @@
 
     <string name="app_name">缓存清理</string>
     <string name="title">缓存清理</string>
-    <string name="nocontent">赞！没有应用占用内存！</string>
+    <string name="nocontent">赞！没有应用占用缓存！</string>
     <string name="allcache">全部缓存：</string>
     <string name="akey">一键清理</string>
     <string name="scanning">正在扫描</string>
