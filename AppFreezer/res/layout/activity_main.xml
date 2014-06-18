@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/black"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            layout="@layout/main_title_bar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="#ff33b5e5" />
+
+        <FrameLayout
+            android:id="@+id/tabbar_frame"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+        </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:id="@+id/operation_frame"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <com.smartapp.appfreezer.ui.ScrollerViewGroup
+                android:id="@+id/scrollerPageView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <include layout="@layout/main_view1" />
+
+                <include layout="@layout/main_view2" />
+            </com.smartapp.appfreezer.ui.ScrollerViewGroup>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

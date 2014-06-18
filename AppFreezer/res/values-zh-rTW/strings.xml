@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">程序凍結器</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="enable">已啟用</string>
+    <string name="disable">已禁用</string>
+    <string name="wait">請稍等...</string>
+    <string name="freeze">凍結</string>
+    <string name="unfreeze">解凍</string>
+</resources>
