@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">卸載專家</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="userapp">用戶應用</string>
+    <string name="systemapp">系統應用</string>
+    <string name="recyclebin">回收站</string>
+    <string name="uninstall">卸載</string>
+    <string name="disable">禁用</string>
+    <string name="restore">恢復</string>
+    <string name="remove">清除</string>
+    <string name="backprocess">後臺進程</string>
+    <string name="readingapps">正在讀取應用列表</string>
+
+</resources>
