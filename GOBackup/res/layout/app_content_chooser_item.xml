@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_weight="1"
+        android:paddingLeft="8dp" >
+
+        <TextView
+            android:id="@+id/text"
+            style="?android:attr/spinnerDropDownItemStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/purchase_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/purchase_icon_red" />
+
+    </LinearLayout>
+
+    <RadioButton
+        android:id="@+id/radio_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0"
+        android:focusable="false"
+        android:clickable="false"
+        android:button="?android:attr/listChoiceIndicatorSingle" />
+
+</LinearLayout>

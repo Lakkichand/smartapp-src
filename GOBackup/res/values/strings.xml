@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    
+    <!--  备份包可编辑-->
+    <string name="title_selection"><xliff:g id="COUNT">%1$d</xliff:g> selected</string>
+    <!--  备份包可编辑-->
+
+     <!-- 整合备份 -->    
+    <string name="beginmerge">Start to merge</string>
+    <!-- 整合备份end -->
+    
+    
+    <!-- appwidget -->
+    <string name="widget_name">GO Backup(4x1)</string>
+    <string name="nobackupentriesselected">Please select backup contents</string>
+    <string name="backupcontents">Contents:</string>
+    <string name="msg_backup_failed">Backup failed</string>
+    <string name="msg_backuping">Backup is in progress, please try again later</string>    
+    <string name="last_backup_time">Last backup :\u0020</string>
+    <!-- end  appwidget -->
+
+
+    <!-- 帮助文档 -->
+    <string name="setting">Settings</string>
+    <string name="help">Help</string>
+    <string name="feedback">Feedback</string>
+    <string name="about">About</string>
+    <string name="senior">Premium Version</string>
+    <string name="help_name">Help</string>
+    <string name="notes">Rules</string>
+    <string name="problems">Q&#38;A</string>
+    <!-- 注意事项 -->
+    <string name="attentions">Rules</string>
+    <string name="attentions_one">1. Normal backups</string>
+    <string name="attentions_one_content">10 normal backups are supported for general user . If the number has reached to 10, you
+need to delete some before you do a new backup.</string>
+    <string name="attentions_two">2. Rules of merging backups</string>
+    <string name="attentions_two_content">All backups are merged to a comprehensive backup through \'Merging\' operation.Backups can\'t be merged when you only have one backup.</string>
+    <string name="attentions_three">3. Scheduled backup</string>
+    <string name="attentions_three_content">There is only one scheduled backup, old one would be covered by the new one.</string>
+    <string name="attentions_four">4. Cloud backup</string>
+    <string name="attentions_four_content">Dropbox and Google Drive are supported in cloud backup. And you can choose any one to
+sync your backup files.</string>
+    <string name="attentions_four_content_two">If the same file has already been uploaded, it will be replaced with the new one.</string>
+    <string name="attentions_five">5. Backup path</string>
+    <string name="attentions_five_content">Backups can be saved to built-in storage or external storage, and external storage is the
+default. If current path is removed or damaged, it would be switched to another path automatically.</string>
+    <string name="attentions_six">6. Calendar account</string>
+    <string name="attentions_six_content">If guests are included in calendar, they would receive an email during the restoration of
+ calendar.</string>
+	<string name="help_title_freeze_app">7. Freeze apps</string>
+  	<string name="help_freeze_app">A frozen app is disabled completely – it won’t appear in your app drawer and be started in the background automatically. A frozen app cannot run in any way until you “defrost” it. Recommend to freeze lower usage apps to reduce power and memory consumption.</string>
+
+    <!-- root -->
+    <string name="root_one">1. Why need ROOT permission?</string>
+    <string name="root_function_one">To backup app data</string>
+    <string name="root_function_two">To backup system settings</string>
+    <string name="root_function_three">Hide installation interface when restoring apps</string>
+    <string name="root_more_information">More information:</string>
+    <string name="root_two">2. How to restore my data and apps with GO Backup after flashing a ROM?</string>
+    <string name="root_function_two_one">Install GO Backup again after flashing a ROM, and you can find the backups in your phone
+when you open GO Backup. Then, choose the one you need to restore.</string>
+    <string name="root_three">3. I don\'t want to receive contacts notification, what can I do?</string>
+    <string name="root_function_three_one">You can close contacts notification through the operation below: GO Backup->More-
+>setting, close the contacts notification.</string>
+    <string name="root_four">4. Backups can\'t be found after the phone upgraded to Android 4.2, what can I do?</string>
+    <string name="root_function_four_one">When you upgrade your phone to android 4.2, all files included the backups were moved to
+a new\‘0\’folder, so GO Backup can\'t find them. You can move the old backups to the
+backup path you are using now, then they can be found.</string>
+    <string name="root_five">5. I have purchased GO Backup, can I use premium features after re-installation?</string>
+    <string name="root_function_five_one">When you re-install GO Backup, there is no information about your payment. And when you
+purchase again , Google Play would update your account info and recognize the payment
+record. Then you can use premium version without paying for it again.</string>
+    <!-- 帮助文档 end -->
+
+    <string name="app_name">GO Backup</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+    <string name="restore">Restore</string>
+    <string name="ok">OK</string>
+    <string name="sure">Yes</string>
+    <string name="finish">Finish</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="save">Save</string>
+    <string name="discard">Discard</string>
+    <string name="attention">Attention</string>
+    <string name="msg_loading">Loading…</string>
+    <string name="msg_no_record_to_merge">Less than 2 backups,merage operation cannot be continued.</string>
+    <string name="msg_no_record_to_delete">No backup exists</string>
+    <string name="msg_delete_record">Delete Backup?</string>
+    <string name="alert_dialog_title">Tip</string>
+    <string name="contacts">Contacts</string>
+    <string name="sms">SMS</string>
+    <string name="mms">MMS</string>
+    <string name="bookmark">Browser Bookmark</string>
+    <string name="call_log">Call Log</string>
+    <string name="calendar">Calendar</string>
+    <string name="user_dictionary">User Dictionary</string>
+    <string name="wifi_access_points">Wi-Fi Access Points</string>
+    <string name="golauncher_setting">GO Launcher EX Preferences</string>
+    <string name="launcher_layout">Built-in Launcher Layout</string>
+    <string name="wallpaper">Wallpaper</string>
+    <string name="ringtone">Ringtone</string>
+    <string name="applications">App</string>
+    <string name="group_system_data">System Setting</string>
+    <string name="group_system_app">System Applications</string>
+    <string name="image">images</string>
+    <string name="group_user_image">Image</string>
+    <string name="group_user_data">User Data</string>
+    <string name="group_user_app">User Applications</string>
+    <string name="database_file">Backup Database File</string>
+    <string name="export_contacts">Export contacts</string>
+    <string name="export_sms">Export messages</string>
+    <string name="root">ROOTED</string>
+    <string name="unroot">UNROOT</string>
+    <string name="unavailable">Unavailable</string>
+    <string name="dropbox_backup_path">Apps/GO Backup<xliff:g id="PATH">%1$s</xliff:g></string>
+    <string name="dropbox">Dropbox</string>
+    <string name="google_drive">Google Drive</string>
+    <!-- 启动页面 -->
+    <string name="feature_introductioin_1">Data protection &amp; security</string>
+    <string name="feature_introductioin_2">Stable and fast</string>
+    <string name="feature_introductioin_3">Any time, any where</string>
+    <string name="btn_create_account">Create GO Account</string>
+    <string name="btn_login">Sign In</string>
+    <string name="copy_right_info">Copyright © 2004-2012 All Rights Reserved\n3G.cn</string>
+    <string name="product_feature">Simple Fast Safe Stable</string>
+    <!-- 主界面 -->
+    <string name="btn_new_backup">New Backup</string>
+    <string name="btn_restore">Restore</string>
+    <string name="main_label_current_user">Current user: </string>
+    <string name="sd_card_unavailable">SD card unavailable</string>
+    <string name="dialog_title_operation">Operation</string>
+    <string name="no_backup_record_prompt">No backup</string>
+    <string name="prompt_tap_to_backup">Tap to start backup</string>
+    <string name="prompt_tap_to_restore">Tap to restore</string>
+    <string name="root_tab_prompt">"UNROOT mode" is running...</string>
+    <string name="title_confirm_export">Confirm export</string>
+    <string name="msg_export_contacts">Export your contacts list to file</string>
+    <string name="msg_export_sms">Export your messages to file</string>
+    <string name="msg_export_successfully">Export successfully</string>
+    <string name="msg_export_failed">Failed to export!</string>
+    <string name="msg_last_backup_time">Last backup :\u0020</string>
+    <string name="msg_backup_nums">\u0020backups</string>
+    <string name="title_backup_path">Path :\u0020</string>
+    <string name="title_sd_card_storage">SD card :\u0020</string>
+    <string name="msg_no_backups">No Backups</string>
+    <string name="msg_sd_card_unmounted">Unmounted</string>
+    <string name="title_backup_time">Backup Time :\u0020</string>
+    <string name="msg_root_user_alert">! Device State : <xliff:g id="STATE">%1$s</xliff:g>\n\nWith ROOT permission granted, you can : \n\n1.Backup data of apps\n2.Backup/restore protected apps\n3.Restore apps silently</string>
+    <string name="msg_unroot_user_alert">! Device State : <xliff:g id="STATE">%1$s</xliff:g>\n\nNow you can:\n1.Backup/restore contacts, messages, call logs, etc\n2.Backup/restore apps\' installation packages\n\nYou cannot:\n1.Backup data of apps\n2.Backup/restore protected apps\n3.Restore apps silently</string>
+    <string name="msg_backup_merged">Merged Backup</string>
+    <string name="msg_update_old_backup">Please wait for updating old backups...</string>
+    <string name="msg_limit_record">Reach the limit of backups(<xliff:g id="COUNT">%1$d</xliff:g> backups)</string>
+    <string name="btn_limit_record_manage_record">Manage backups</string>
+    <string name="btn_web_new_backup">New Cloud Backup</string>
+    <string name="btn_web_restore">Restore</string>
+    <string name="cloud_backup_tip">The backups will be uploaded to <xliff:g id="SERVICE">%1$s</xliff:g></string>
+    <string name="local_backup">Local Backup</string>
+    <string name="cloud_backup">Cloud Backup</string>
+    <string name="msg_dropbox_loged_in">You had connected with Dropbox</string>
+    <string name="main_net_no_data">No data</string>
+    <string name="sign_in">Sign in</string>
+    <string name="account_error">Error with your account, please sign in again</string>
+    <!-- 新建备份页面 -->
+    <string name="title_select_app_backup_type">Choose app backup content</string>
+    <string name="title_select_app_restore_type">Choose app restore content</string>
+    <string name="title_sort_apps">Sorting mode for apps</string>
+    <string name="title_new_backup">New Backup</string>
+    <string name="msg_backup_authorize_root">ROOT permission needed to backup system/app data</string>
+    <string name="btn_authorize">Allow</string>
+    <string name="btn_refuse">Deny</string>
+    <string name="msg_backup_unsupport_su">Failed to get ROOT permission. Cannot backup app data, please try to root your device again</string>
+    <string name="msg_backup_unauthorize_root">Failed to get ROOT permission, system/app data will NOT be backed up</string>
+    <string name="msg_backup_root_failed">Be forbidden to get ROOT permission, system/app data will NOT be backed up</string>
+    <string name="btn_start_backup">Start Backup</string>
+    <!-- 恢复备份页面 -->
+    <string name="title_restore">Restore</string>
+    <string name="btn_start_restore">Restore</string>
+    <string name="msg_restore_authorize_root">ROOT permission needed to restore system/app data</string>
+    <string name="msg_restore_unsupport_su">Failed to get ROOT permission. Cannot restore system/app data, Please try to root your device again</string>
+    <string name="msg_restore_unauthorize_root">Failed to get ROOT permission, system/app data will NOT be restored!</string>
+    <string name="msg_restore_root_failed">Be forbidden to get ROOT permission, system/app data will NOT be restored!</string>
+    <string name="entry_state_only_app">only app</string>
+    <string name="entry_state_app_and_data">app + data</string>
+    <string name="entry_state_only_app_data">only data</string>
+    <string name="apk_corruption">Apk file corrupted</string>
+    <string name="app_data_corruption">App data file corrupted</string>
+    <string name="not_restorable">Not support this ROM</string>
+    <string name="no_app_data_to_backup">No app data</string>
+    <string name="data_unrestorable_without_root">App data not restorable without ROOT</string>
+    <string name="data_unrestorable_without_app">App data not restorable without app</string>
+    <string name="app_uninstalled">Uninstalled</string>
+    <string name="app_installed">Installed</string>
+    <string name="app_updatable">Updatable</string>
+    <string name="corrupted">corrupted</string>
+    <string name="parenthesized_msg">(<xliff:g id="msg">%1$s</xliff:g>)</string>
+    <string name="merged_backup">Merged Backup</string>
+    <string name="schedule_backup">Schedule Backup</string>
+    <string name="normal_backup">Normal Backup</string>
+    <string name="menu_app_select">Select app</string>
+    <string name="menu_app_sort">Sort app</string>
+    <!-- 备份/恢复进度页面 -->
+    <string name="msg_record_corrupted">Backup failed!</string>
+    <string name="msg_backup_exception_occurred">Exception occurred, the task will be aborted</string>
+    <string name="msg_restore_exception_occurred">Exception occurred, the task will be aborted</string>
+    <string name="title_backing_up">Backing up……</string>
+    <string name="title_restoring">Restoring……</string>
+    <string name="title_stop_backup">Attention</string>
+    <string name="title_stop_restore">Attention</string>
+    <string name="msg_backup_finished">Completed</string>
+    <string name="msg_restore_finished">Completed</string>
+    <string name="msg_discard_backuping">Cancel the backup task?</string>
+    <string name="msg_discard_restoring">Restore not yet completed, cancel this task?</string>
+    <string name="msg_preparing">Preparing</string>
+    <string name="msg_backing_up">Backing up\u0020<xliff:g id="DESC">%1$s</xliff:g><xliff:g id="EXTRA">%2$s</xliff:g>……</string>
+    <string name="msg_restoring">Restoring\u0020<xliff:g id="DESC">%1$s</xliff:g><xliff:g id="EXTRA">%2$s</xliff:g>……</string>
+    <string name="backup_restore_prompt">Please do not shutdown or reboot your phone to avoid the corruption of data</string>
+    <string name="btn_stop_backup">Stop</string>
+    <string name="btn_stop_restore">Stop</string>
+    <string name="dialog_title_stopping">Stopping...</string>
+    <string name="msg_stopping_operation">Please wait until current operation completed...</string>
+    <string name="contacts_restore_result">\u0025d contacts inserted, \u0025d duplicate contacts aborted</string>
+    <string name="progress_detail"><xliff:g id="INDEX">%1$d</xliff:g>/<xliff:g id="COUNT">%2$d</xliff:g></string>
+    <string name="msg_mms_updating_msm_conversation">Updating thread:<xliff:g id="INDEX">%1$d</xliff:g>/<xliff:g id="COUNT">%2$d</xliff:g></string>
+    <string name="msg_sms_inserting">Inserting : <xliff:g id="INDEX">%1$d</xliff:g>/<xliff:g id="COUNT">%2$d</xliff:g></string>
+    <string name="msg_updating_sms_conversation">Updating thread : <xliff:g id="INDEX">%1$d</xliff:g>/<xliff:g id="COUNT">%2$d</xliff:g></string>
+    <string name="progress_format"><xliff:g id="progress">%1$s</xliff:g>%%</string>
+    <string name="backup_size_explanation">Compressed backup size <xliff:g id="size">%1$s</xliff:g></string>
+    <!-- 整合备份进度页面 -->
+    <string name="title_merging">Merging......</string>
+    <string name="title_stop_merge">Stop Merging</string>
+    <string name="btn_stop_merge">Stop</string>
+    <string name="msg_merging">Merging\u0020<xliff:g id="DESC">%1$s</xliff:g><xliff:g id="EXTRA">%2$s</xliff:g>……</string>
+    <string name="msg_merge_finished">Smart Merging Completed</string>
+    <string name="msg_start_smart_merge">Sure to merge selected backups to a comprehensive backup?</string>
+    <string name="msg_discard_merging">Cancel the merging task?</string>
+    <string name="msg_dont_merge_app_without_apk">Only support to merge app+data now</string>
+    <!-- 新建、恢复网络备份页面 -->
+    <string name="title_new_cloud_backup">New Cloud Backup</string>
+    <string name="title_restore_cloud_backup">Restore Cloud Backup</string>
+    <string name="local_count">Local : <xliff:g id="COUNT">%1$d</xliff:g></string>
+    <string name="online_count">Online : <xliff:g id="COUNT">%1$d</xliff:g></string>
+    <string name="app_not_backuped">Unbacked-up</string>
+    <string name="app_backuped">Backed-up</string>
+    <string name="title_select_apps">Select Apps</string>
+    <string name="tip_failed_to_get_cloud_backup_info">Failed to get cloud backup info, please try later</string>
+    <string name="tip_failed_to_download_cloud_db">Failed to download cloud backup database file</string>
+    <string name="tip_loging_in">Signing up, please wait...</string>
+    <string name="tip_fetching_cloud_backup_info">Getting cloud backup info<xliff:g id="EXTRA">%1$s</xliff:g>...</string>
+    <string name="tip_authorized_out_of_date">Your authorization has expired, please sign out and login again.</string>
+    <!-- 云端备份页面 -->
+    <string name="btn_start_upload">Start Upload</string>
+    <string name="msg_uploading_backup">Uploading <xliff:g id="DESC">%1$s</xliff:g><xliff:g id="EXTRA">%2$s</xliff:g>……</string>
+    <string name="msg_downloading">Downloading <xliff:g id="BODY">%1$s</xliff:g><xliff:g id="EXTRA">%2$s</xliff:g></string>
+    <string name="work_progress_detail"><xliff:g id="ENTRY">%1$s</xliff:g><xliff:g id="OPERTATION">%2$s</xliff:g><xliff:g id="STATE">%3$s</xliff:g></string>
+    <string name="state_backingup">Backing up <xliff:g id="DESC">%1$s</xliff:g>……</string>
+    <string name="state_uploading">Uploading <xliff:g id="DESC">%1$s</xliff:g>……</string>
+    <string name="state_restoring">Restoring <xliff:g id="DESC">%1$s</xliff:g>……</string>
+    <string name="state_downloading">Downloading <xliff:g id="DESC">%1$s</xliff:g>……</string>
+    <string name="state_waiting">Waiting</string>
+    <string name="state_finished">Completed</string>
+    <string name="state_failed">Failed</string>
+    <string name="neterror">Network Interrupted</string>
+    <string name="msg_restore_successful">Successfully restore <xliff:g id="COUNT">%1$s</xliff:g><xliff:g id="ENTRY">%2$s</xliff:g></string>
+    <string name="msg_restore_failed">Failed to restore <xliff:g id="COUNT">%1$s</xliff:g><xliff:g id="ENTRY">%2$s</xliff:g></string>
+    <string name="msg_restore_canceled">Cancel restoring <xliff:g id="COUNT">%1$s</xliff:g><xliff:g id="ENTRY">%2$s</xliff:g></string>
+    <string name="count_format"><xliff:g id="COUNT">%1$d</xliff:g></string>
+    <string name="msg_upload_successful">Successfully upload <xliff:g id="COUNT">%1$s</xliff:g><xliff:g id="ENTRY">%2$s</xliff:g></string>
+    <string name="msg_upload_failed">Failed to upload <xliff:g id="COUNT">%1$s</xliff:g><xliff:g id="ENTRY">%2$s</xliff:g></string>
+    <string name="msg_upload_canceled">Cancel uploading <xliff:g id="COUNT">%1$s</xliff:g><xliff:g id="ENTRY">%2$s</xliff:g></string>
+    <string name="msg_upload_backup_finished">Cloud backup completed</string>
+    <string name="msg_restore_online_backup_finished">Cloud recovery completed</string>
+    <string name="msg_no_cloud_backup_or_error">No cloud backup or network error</string>
+    <string name="login_failed">Cannot connect to <xliff:g id="SERVICE">%1$s</xliff:g></string>
+    <string name="no_browser_to_login">Cannot sign in without browser</string>
+    <!-- 备份/恢复结果报告页面 -->
+    <string name="title_backup_result_report">Report</string>
+    <string name="title_restore_result_report">Report</string>
+    <string name="title_merge_result_report">Report</string>
+    <string name="msg_result_canceled">Canceled</string>
+    <string name="msg_result_unknown_error">Error occurred</string>
+    <string name="msg_result_data_corrupted">Data corrupted</string>
+    <string name="msg_result_handle_contacts_failed">No contacts or no permission to read</string>
+    <string name="msg_result_handle_sms_failed">No SMS or no permission to read</string>
+    <string name="msg_result_handle_mms_failed">No MMS or no permission to read</string>
+    <string name="msg_result_handle_ringtone_failed">No ringtone or no permission to read</string>
+    <string name="msg_result_handle_call_log_failed">No call logs or no permission to read</string>
+    <string name="msg_result_handle_calendar_failed">No calendar or no permission to read</string>
+    <string name="msg_result_handle_dictionary_failed">No words in user dictionary</string>
+    <string name="btn_reboot">Reboot</string>
+    <string name="msg_reboot_info">You should reboot the device for the change of launcher layout and widgets to take effect</string>
+    <string name="dialog_msg_reboot">The restoration of launcher layout and widgets may not be effective without rebooting immediately, continue?</string>
+    <string name="msg_need_reboot">Reboot device for the change to take effect</string>
+    <!-- 批量删除页面 -->
+    <string name="title_batch_delete">Batch Delete</string>
+    <string name="menu_item_batch_delete">Batch delete backups</string>
+    <string name="msg_delete_records">Sure to delete the selected backups?</string>
+    <string name="msg_wait">Please wait...</string>
+    <string name="select_all">Select All</string>
+    <string name="unselect_all">Unselect</string>
+    <!-- 定时备份页面 -->
+    <string name="title_scheduled_backup">Schedules</string>
+    <string name="msg_no_schedules">No schedules</string>
+    <string name="msg_no_active_action">No active action</string>
+    <string name="msg_next_backup_time">Next action at :\u0020</string>
+    <string name="btn_new_backup_plan">Add new schedule</string>
+    <string name="title_edit_plan">Edit schedule</string>
+    <string name="title_backup_content">Action</string>
+    <string name="title_backup_start_time">Time</string>
+    <string name="title_repeat_mode">Repetition</string>
+    <string name="title_advance_remind">Reminders</string>
+    <string name="scheduled_plan_date_format"><xliff:g id="YEAR">%1$s</xliff:g>-<xliff:g id="MONTH">%2$s</xliff:g>-<xliff:g id="DAY">%3$s</xliff:g><xliff:g id="DAY_OF_WEEK">%4$s</xliff:g></string>
+    <string name="scheduled_plan_time_format"><xliff:g id="HOUR">%1$s</xliff:g>:<xliff:g id="MINUTES">%2$s</xliff:g></string>
+    <string name="scheduled_plan_full_date_format"><xliff:g id="YEAR">%1$s</xliff:g>-<xliff:g id="MONTH">%2$s</xliff:g>-<xliff:g id="DAY">%3$s</xliff:g><xliff:g id="HOUR">%4$s</xliff:g>:<xliff:g id="MINUTES">%5$s</xliff:g></string>
+    <string name="msg_delete_plan">Sure to delete this plan?</string>
+    <string name="msg_schedule_expired">This schedule has expired!</string>
+    <string name="msg_plan_time_conflict">Time conflicts with other schedules, please modify</string>
+    <string name="backup_type_user_data">User Data</string>
+    <string name="backup_type_user_app">User App</string>
+    <string name="backup_type_system_data">System Data</string>
+    <string name="backup_type_content">Backup <xliff:g id="BACKUP_CONTENT">%1$s</xliff:g></string>
+    <string name="choose_backup_content">Select backup content</string>
+    <!-- Root权限说明页 -->
+    <string name="root_introduction_title">Root Introduction</string>
+    <string name="root_desc_title">Why need ROOT permission?</string>
+    <string name="root_desc_summary">1.To backup app data\n\n2.Hide installation interface when restoring apps</string>
+    <string name="introduction_what_is_root">What is Root？</string>
+    <string name="introduction_how_to_get_root">How to get root permission?</string>
+    <string name="root_state_rooted">Device has been ROOTED</string>
+    <string name="root_state_unrooted">UNROOT</string>
+    <!-- 检查更新 -->
+    <string name="title_update">Update</string>
+    <string name="title_update_info">Update Info</string>
+    <string name="msg_checking_update">Checking update...</string>
+    <string name="msg_update_latest_version">GO Backup is up to date</string>
+    <string name="msg_update_net_error">Network error occurred</string>
+    <string name="btn_update_now">Update</string>
+    <string name="btn_update_later">Later</string>
+    <string name="btn_exit_app">Exit App</string>
+    <!-- 设置页面 -->
+    <string name="title_setting">Settings</string>
+    <string name="category_title_update_advanced">Premium Version</string>
+    <string name="category_title_delete_backup">Delete Backup</string>
+    <string name="category_title_contacts_backup_setting">Contacts Backup Setting</string>
+    <string name="entry_title_batch_delete_records">Batch Delete Backups</string>
+    <string name="entry_title_delte_cloud_backup">Delete Cloud Backup</string>
+    <string name="entry_title_contacts_backup_setting">Contacts Backup Setting</string>
+    <string name="entry_summary_on_contacts">Only backup contacts with phone number</string>
+    <string name="entry_summary_off_contacts">Backup all contacts</string>
+    <string name="entry_title_merge_dup_contacts">Merge Duplicate Contacts</string>
+    <string name="entry_title_contact_change_push">Contacts Modify Notice</string>
+    <string name="entry_summary_merge_on">Discard duplicate contacts when restore</string>
+    <string name="entry_summary_contact_change_push">Inform me to backup when contacts changed</string>
+    <string name="entry_summary_merge_off">Restore normally</string>
+    <string name="entry_title_backup_contacts_icon">Backup Contacts Icon</string>
+    <string name="entry_summary_occupied">Space occupation: </string>
+    <string name="category_title_root_relevant">About ROOT Permission</string>
+    <string name="entry_title_root_introduction">ROOT introduction</string>
+    <string name="entry_title_backup_restore_app_data">Backup App Data</string>
+    <string name="entry_title_silently_install_app">Hide app installation interface</string>
+    <string name="entry_summary_backup_app_data">Backup and restore apps\' data</string>
+    <string name="entry_summary_silently_install_app">Hide app installation interface when restore apps</string>
+    <string name="entry_summary_not_root">Unsupported without ROOT permission</string>
+    <string name="entry_summary_root_not_supported">Unsupported  Android 3.0 or above</string>
+    <string name="entry_summary_device_unsupported">Unsupported in this device</string>
+    <string name="category_title_other_setting">More settings</string>
+    <string name="entry_title_logout">Sign Out</string>
+    <string name="entry_title_user_center">Account Info</string>
+    <string name="entry_title_feedback">Feedback</string>
+    <string name="entry_title_advanced_update">Upgrade to Premium Version</string>
+    <string name="entry_title_about">About GO Backup</string>
+    <string name="entry_title_version_info">Version</string>
+    <string name="entry_title_soft_rate">Rate GO Backup</string>
+    <string name="entry_title_copyright_info">Copyright</string>
+    <string name="category_title_network_backup">Cloud Sync Account Manage</string>
+    <string name="entry_title_dropbox_backup">Dropbox Account</string>
+    <string name="entry_summary_unlogin_dropbox">Tap to sign in</string>
+    <string name="entry_summary_currentAccount_dropbox">Current Account:</string>
+    <string name="entry_summary_change_dropbox_account">Change account</string>
+    <string name="entry_summary_soft_rate">Rate GO Backup in Android Market</string>
+    <string name="entry_summary_copyright_info">Copyright © 2004-2012 All Rights Reserved\n3G.cn</string>
+    <string name="go_backup_noEmailApplication">No email client！</string>
+    <string name="title_logout">Sign Out</string>
+    <string name="msg_logout">Sure to sign out?</string>
+    <string name="msg_account_has_logouted">Account has been signed out</string>
+    <string name="msg_account_logout_successfully">Succeed to sign out</string>
+    <string name="msg_account_logout_failed">Failed to sign out</string>
+    <string name="msg_delete_cloud_backup">It will clear all backups on Dropbox, sure to continue?</string>
+    <string name="msg_failed_to_delete_cloud_backup">Failed to delete cloud backup !</string>
+    <string name="msg_delete_cloud_backup_successfully">Delete cloud backup successfully !</string>
+    <string name="msg_cloud_backup_had_been_deleted">Cloud backup had been deleted!</string>
+    <string name="msg_is_advanced">on Functions</string>
+    <string name="title_select_cloud_service_provider">Choose netdisk for cloud backup</string>
+    <string name="cloud_service_description">Cloud backup supports Dropbox and Google Drive</string>
+    <string name="preference_text_format"><xliff:g id="TEXT">%1$s</xliff:g> ></string>
+    <string name="click_to_login">Tap to connect to your <xliff:g id="ACCOUNT_TYPE">%1$s</xliff:g></string>
+    <string name="cloud_service_account"><xliff:g id="ACCOUNT_TYPE">%1$s</xliff:g> Account</string>
+    <string name="title_logout_from_cloud_service">Sure to logout?</string>
+    <string name="category_title_setting_backup_path">Set up backup path</string>
+    <string name="entry_title_setting_backup_path">Choose path for local backup</string>
+    <string name="entry_summary_delete_all_backup">Bach delete local backups of all paths</string>
+    <string name="entry_summary_select_path_no_sd">Unable to detect <xliff:g id="INTERNAL_STORAGE">%1$s</xliff:g> or <xliff:g id="EXTERNAL_STORAGE">%2$s</xliff:g></string>
+    <string name="entry_summary_select_path_both">Bakup to <xliff:g id="INTERNAL_STORAGE">%1$s</xliff:g> or <xliff:g id="EXTERNAL_STORAGE">%2$s</xliff:g></string>
+    <string name="entry_summary_select_path_internal_storage">Internl\u003E</string>
+    <string name="entry_summary_select_path_external_storage">External\u003E</string>
+    <string name="msg_setting_select_path_title">Local backup path</string>
+    <string name="msg_internal_storage">Internl USB storage</string>
+    <string name="msg_external_storage">External SD card</string>
+    <!-- BaseActivity -->
+    <string name="msg_no_sd">Current path has been removed or corrupted</string>
+    <string name="msg_backup_path_change_tips"><xliff:g id="OLD_STORAGE">%1$s</xliff:g> has been removed or corrupted, now switch to <xliff:g id="NEW_STORAGE">%2$s</xliff:g></string>
+    <string name="msg_reset_backup_path_tips">Backup path has been swithed to <xliff:g id="RESET_STORAGE">%1$s</xliff:g></string>
+    <!-- 错误报告 -->
+    <string name="crash_subject">Feedback</string>
+    <string name="crash_notif_ticker_text">Oops! GO Backup crashed, you can help us to improve by sending feedback now.</string>
+    <string name="crash_notif_title">Unexpected error occurs</string>
+    <string name="crash_notif_text">Click to help GO Backup dev team</string>
+    <string name="crash_dialog_title">GO Backup Error Feedback</string>
+    <string name="crash_dialog_text">GO Backup unexpected error occurs. You can help us to make it better by sending us feedback now. NO Personal info shall be collected.</string>
+    <string name="crash_yes">Contact US</string>
+    <string name="crash_no">Cancel</string>
+    <string name="crash_mailtt">GO Backup Error Report :ver_name:<xliff:g id="VER_NAME">%1$s</xliff:g> ver_code:<xliff:g id="VER_CODE">%2$d</xliff:g></string>
+    <string name="crash_error_reportemail">gobackupbugreport@gmail.com</string>
+    <string name="crash_root_dir">GOBackup</string>
+    <!-- 引导页 -->
+    <string name="tutorial_merge_title">Merge backups</string>
+    <string name="tutorial_merge_tips1">Merge selected backups to a comprehensive backup</string>
+    <string name="tutorial_merge_tips2">it will NOT change or delete your old backups but discard duplicate items when merging</string>
+    <string name="tutorial_ok">Got it</string>
+    <!-- 收费升级页 -->
+    <string name="pay_update_title">Premium Version</string>
+    <string name="help_url" formatted="false">http://market.android.com/support/bin/answer.py?answer=1050566&amp;hl=%lang%&amp;dl=%region%</string>
+    <string name="pay_title_1">Cloud Backup</string>
+    <string name="pay_title_2">Unlimited Backup</string>
+    <string name="pay_title_3">More Backup Content</string>
+    <string name="pay_title_4">Backup APP DATA alone</string>
+    <string name="pay_title_5">Backups editable</string>
+    <string name="pay_title_6">Freeze apps</string>
+    <string name="pay_detail_1">Sync backups to netdisk, safe and convenient</string>
+    <string name="pay_detail_2">No limit of 200MB for local backup</string>
+    <string name="pay_detail_3">Backup system settings, e.g. rings, wallpapers. Satisfy Your personal requirements</string>
+    <string name="pay_detail_4">Support to backup DATA separately, need ROOT</string>
+    <string name="pay_detail_5">Edit and manage your backup content as you like</string>
+    <string name="pay_detail_6">Support to freeze applications, reduce memory and battery consumption</string>
+    <string name="learn_more">Learn more</string>
+    <string name="cannot_connect_title">fail to connect to market</string>
+    <string name="cannot_connect_message">Your device is unable to connect to Google play</string>
+    <string name="billing_not_supported_title">fail to purchase</string>
+    <string name="billing_not_supported_message">Payment within app is not supported on Your device</string>
+    <string name="response_code_fail_title">request fails</string>
+    <string name="btn_upgrade">Upgrade</string>
+    <!-- 这个测试用的 -->
+    <string name="response_code_fail_message">fail to connect to google market</string>
+    <string name="cannot_bind_to_service_title">unable to bound Google play</string>
+    <string name="cannot_bind_to_service_message">Please confirm you have installed the latest version of the Google market on your device</string>
+    <string name="purchase_tip_title">upgrade to premium version?</string>
+    <string name="purchase_tip_message">1.Cloud backup. Sync your backup to Dropbox, safe and convenient\n \n 2.
+         unlimited backup. No limit of backup size</string>
+    <string name="fail_market_connect">Cannot connect to GoogleMarket or fail to pay, please try again later.</string>
+    <string name="pay_validate">validating your paying status</string>
+    <string name="purchase_success_title">Successfully purchase</string>
+    <string name="purchase_success_message">You have got functions below:\n \n ● cloud backup  \n ● unlimited backup \n ● more backup contents: wallpaper, rings, Built-in Launcher Layout, Wi-Fi Access Points</string>
+    <string name="refunded_success_title">successfully refund</string>
+    <string name="refunded_success_message">Functions below have been canceled:\n \n ● cloud backup  \n ● Unlimited Backup \n ● more backup contents: wallpaper, rings, Built-in Launcher Layout, Wi-Fi Access Points</string>
+    <string name="summit">confirm</string>
+    <string name="advanced_explain">● cloud backup  \n ●  Unlimited Backup \n ● more backup contents: wallpaper, rings, Built-in Launcher Layout, Wi-Fi Access Points</string>
+    <string name="completed_request">completed RestoreTransactions request</string>
+    <string name="msg_redo_cloud_backup_task">Unfinished cloud backup, continue uploading?</string>
+    <string name="msg_redo_cloud_restore_task">Unfinished cloud backup, continue restoring?</string>
+    <string name="continue_last_task">Continue unfinished task</string>
+    <string name="too_large_need_pay">Backup is over 200M, need to purchase premium version. Purchase now?</string>
+    <string name="backup_system_need_pay">Backup "system settings" is for premium version. Purchase now?</string>
+    <string name="restore_system_need_pay">Restore "system settings" is for premium version. Purchase now?</string>
+    <string name="purchase_title">Purchase tips</string>
+    <string name="open_wifi">Use wifi</string>
+    <string name="backup_advice_of_wifi"> Cloud backup consumes net traffic data, suggest to use Wi-Fi</string>
+    <string name="restore_advice_of_wifi">Cloud restoration consumes net traffic data, suggest to use Wi-Fi</string>
+    <string name="direct_upload">upload directly</string>
+    <string name="direct_restore">restore directly</string>
+    <string name="uploading_choose_to_stop">Backups are still uploading, sure to cancel?</string>
+    <string name="download_choose_to_stop">Backups are still downloading, sure to cancel??</string>
+    <string name="function_need_to_purchase">Purchase advanced features now?</string>
+    <string name="system_data_need_to_puchase">Backup "system settings" is advanced features, purchase now?</string>
+    <string name="timing_large_need_pay">Scheduled backup is over 200M, need to be paid. Purchase now?</string>
+    <string name="free_user_limit">free users limited</string>
+    <string name="advanced_of_function">Premium Feature</string>
+    <string name="purchase_yes_or_no">Your scheduled backup is over 200M, need to be paid. Purchase now? \n .Temporarily for you to close scheduled backup when you cancel</string>
+    <string name="notification_contacts_changed_title">Your contacts had been modified</string>
+    <string name="notification_contacts_changed_message">backup now?</string>
+    <!-- 应用程序冻结页面 -->
+    <string name="app_tools">App Tools</string>
+    <string name="freezable_app_info"><xliff:g id="COUNT">%1$d</xliff:g>\u0020app(s) can freeze</string>
+    <string name="unfreezable_app_info"><xliff:g id="COUNT">%1$d</xliff:g>\u0020app(s) frozen</string>
+    <string name="msg_caculating">Caculating...</string>
+    <string name="msg_no_app_to_freeze">No avaliable app to freeze</string>
+    <string name="msg_no_app_to_unfreeze">No avaliable app to defrost</string>
+    <string name="title_freeze_app">Freeze Apps</string>
+    <string name="title_unfreeze_app">Defrost Apps</string>
+    <string name="freezing_apps">Freezing...</string>
+    <string name="unfreezing_apps">Defrosting...</string>
+    <string name="msg_sorting">Sorting apps...</string>
+    <string name="msg_refresh_app_list">Rrefreshing app list...</string>
+    <string name="btn_freeze_app">Freeze<xliff:g id="EXTRA">%1$s</xliff:g></string>
+    <string name="btn_unfreeze_app">Defrost<xliff:g id="EXTRA">%1$s</xliff:g></string>
+    <string name="freeze_app_result">Successfully froze\u0020<xliff:g id="COUNT">%1$d</xliff:g>\u0020app(s)</string>
+    <string name="unfreeze_app_result">Successfully defrost\u0020<xliff:g id="COUNT">%1$d</xliff:g>\u0020app(s)</string>
+    <string name="help_short_freeze_app">Recommend to freeze lower usage apps to reduce power and memory consumption</string>
+    <string name="tutorial_freeze_app">A frozen app won\'t appear in your app drawer and it won\'t auto start in the background. Recommend to freeze lower usage apps.</string>
+
+    <string-array name="months">
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>Aug</item>
+        <item>Sep</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dec</item>
+    </string-array>
+    <string-array name="week">
+        <item>Saturday</item>
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+    </string-array>
+    <string-array name="week_short">
+        <item>SAT</item>
+        <item>SUN</item>
+        <item>MON</item>
+        <item>TUE</item>
+        <item>WED</item>
+        <item>THU</item>
+        <item>FRI</item>
+    </string-array>
+    <string-array name="backup_sort_type_desc">
+        <item>Sort by app name</item>
+        <item>Sort by app size</item>
+        <item>Sort by installation date</item>
+    </string-array>
+    <string-array name="online_backup_sort_type_desc">
+        <item>Sort by app name</item>
+        <item>Sort by app size</item>
+    </string-array>
+    <string-array name="restore_sort_type_desc">
+        <item>Sort by app name</item>
+        <item>Sort by app size</item>
+        <item>Sort by installation status</item>
+    </string-array>
+    <string-array name="schduled_backup_content_paid">
+        <item>Backup user data</item>
+        <item>Backup user app</item>
+        <item>Backup system data</item>
+    </string-array>
+    <string-array name="schduled_backup_content_free">
+        <item>Backup user data</item>
+        <item>Backup user app</item>
+    </string-array>
+    <string-array name="repeat_modes">
+        <item>one-off</item>
+        <item>every day</item>
+        <item>every week</item>
+        <item>every month</item>
+    </string-array>
+    <string-array name="repeat_modes_details">
+        <item>One-time event</item>
+        <item>Daily</item>
+        <item>Weekly(every <xliff:g id="DAY_OF_WEEK">%1$s</xliff:g>)</item>
+        <item>Monthly(on day <xliff:g id="DAY_OF_MONTH">%2$s</xliff:g>)</item>
+    </string-array>
+    <string-array name="advance_remind_time">
+        <item>0 minutes</item>
+        <item>1 minute</item>
+        <item>5 minutes</item>
+        <item>10 minutes</item>
+        <item>15 minutes</item>
+        <item>20 minutes</item>
+        <item>25 minutes</item>
+        <item>30 minutes</item>
+        <item>45 minutes</item>
+        <item>1 hour</item>
+    </string-array>
+    <string-array name="advance_remind_time_toast">
+        <item>This schedule is set for less than 1 minute from now</item>
+        <item>This schedule is set for <xliff:g id="DAYS">%1$s</xliff:g> from now</item>
+        <item>This schedule is set for <xliff:g id="HOURS">%2$s</xliff:g> from now</item>
+        <item>This schedule is set for <xliff:g id="DAYS">%1$s</xliff:g> and <xliff:g id="HOURS">%2$s</xliff:g> from now</item>
+        <item>This schedule is set for <xliff:g id="MINUTES">%3$s</xliff:g> from now</item>
+        <item>This schedule is set for <xliff:g id="DAYS">%1$s</xliff:g> and <xliff:g id="MINUTES">%3$s</xliff:g> from now</item>
+        <item>This schedule is set for <xliff:g id="HOURS">%2$s</xliff:g> and <xliff:g id="MINUTES">%3$s</xliff:g> from now</item>
+        <item>This schedule is set for <xliff:g id="DAYS">%1$s</xliff:g>, <xliff:g id="HOURS">%2$s</xliff:g> and <xliff:g id="MINUTES">%3$s</xliff:g> from now</item>
+    </string-array>
+    <string-array name="backupable_app_state">
+        <item>Unbacked-up</item>
+        <item>Backup updatable</item>
+        <item>Backed-up</item>
+    </string-array>
+    <string-array name="app_install_state">
+        <item>Uninstalled</item>
+        <item>Updatable</item>
+        <item>Installed</item>
+    </string-array>
+    <string-array name="app_state">
+        <item>Uninstalled</item>
+        <item>Installed</item>
+    </string-array>
+
+    <string name="one_day">"1 day"</string>
+    <string name="days">"<xliff:g id="DAYS">%s</xliff:g> days"</string>
+    <string name="one_hour">"1 hour"</string>
+    <string name="hours">"<xliff:g id="HOURS">%s</xliff:g> hours"</string>
+    <string name="one_minute">"1 minute"</string>
+    <string name="minutes">"<xliff:g id="MINUTES">%s</xliff:g> minutes"</string>
+
+    <string-array name="cloud_service_provider">
+        <item>invalid</item>
+        <item>Dropbox</item>
+        <item>Google Drive</item>
+    </string-array>
+    <string-array name="cloud_service">
+        <item>Dropbox</item>
+        <item>Google Drive</item>
+    </string-array>
+    <string-array name="cloud_service_backup_path">
+        <item></item>
+        <item>Apps/GO Backup<xliff:g id="PATH">%1$s</xliff:g></item>
+        <item>GO Backup/BackupContents/</item>
+    </string-array>
+    
+    <string-array name="app_backup_type">
+        <item>Backup apk and data</item>
+        <item>Backup apk only</item>
+        <item>Backup app data only</item>
+    </string-array>
+    
+    <string-array name="app_restore_type">
+        <item>Restore app and data</item>
+        <item>Restore app only</item>
+        <item>Restore app data only</item>
+    </string-array>
+    
+    <string-array name="restore_activity_menu">
+        <item>@string/menu_app_select</item>
+        <item>@string/menu_app_sort</item>
+    </string-array>
+    
+    <string-array name="freeze_app_sort_types">
+       <item>Sort by app name</item>
+       <item>Sort by installation date</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/tab_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/local_backup"
+        android:textColor="@color/main_tab_text_unfocus"
+        android:textSize="16sp"
+        android:singleLine="true"
+        android:ellipsize="end" />
+
+    <ImageView
+        android:id="@+id/tab_indicator"
+        android:layout_width="@dimen/mainview_tabbar_indicator_width"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/theme_tab_light" />
+
+    <ImageView
+        android:id="@+id/tab_purchase_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/purchase_icon_red"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/local_function_frame"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingBottom="20dp" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/local_function_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingRight="17dp" >
+
+        <TextView
+            android:id="@+id/attentions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/attentions_one"
+            android:textColor="@color/root_help_text_color"
+            android:textSize="18sp" >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            android:text="@string/attentions_one_content"
+            android:textColor="@color/root_introduction_rooted_text_color"
+            android:textSize="15sp" >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/attentions_two"
+            android:textColor="@color/root_help_text_color"
+            android:textSize="18sp" >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            android:text="@string/attentions_two_content"
+            android:textColor="@color/root_introduction_rooted_text_color"
+            android:textSize="15sp" >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/attentions_three"
+            android:textColor="@color/root_help_text_color"
+            android:textSize="18sp" >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            android:text="@string/attentions_three_content"
+            android:textColor="@color/root_introduction_rooted_text_color"
+            android:textSize="15sp" >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/attentions_four"
+            android:textColor="@color/root_help_text_color"
+            android:textSize="18sp" >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            android:text="@string/attentions_four_content"
+            android:textColor="@color/root_introduction_rooted_text_color"
+            android:textSize="15sp" >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            android:text="@string/attentions_four_content_two"
+            android:textColor="@color/root_introduction_rooted_text_color"
+            android:textSize="15sp" >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/attentions_five"
+            android:textColor="@color/root_help_text_color"
+            android:textSize="18sp" >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            android:text="@string/attentions_five_content"
+            android:textColor="@color/root_introduction_rooted_text_color"
+            android:textSize="15sp" >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/attentions_six"
+            android:textColor="@color/root_help_text_color"
+            android:textSize="18sp" >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            android:text="@string/attentions_six_content"
+            android:textColor="@color/root_introduction_rooted_text_color"
+            android:textSize="15sp" >
+        </TextView>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/help_title_freeze_app"
+            android:textColor="@color/root_help_text_color"
+            android:textSize="18sp" >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27dp"
+            android:text="@string/help_freeze_app"
+            android:textColor="@color/root_introduction_rooted_text_color"
+            android:textSize="15sp" >
+        </TextView>
+    </LinearLayout>
+
+</ScrollView>

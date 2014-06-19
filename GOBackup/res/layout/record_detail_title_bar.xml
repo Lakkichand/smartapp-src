@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_bar"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/title_bar_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        layout="@layout/title_bar_common_part" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/delete_item_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_weight="0"
+            android:background="@drawable/tab_btn_bg"
+            android:scaleType="centerInside"
+            android:src="@drawable/edit_record_btn"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/pay_flag_edit_backup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_gravity="right|top"
+            android:src="@drawable/alert_red_point"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/app_content_chooser"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_weight="0"
+            android:background="@drawable/tab_btn_bg"
+            android:scaleType="centerInside"
+            android:src="@drawable/app_content_chooser"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/pay_flag_app_data_only"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="3dp"
+            android:src="@drawable/alert_red_point"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/sort_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="right|center_vertical"
+        android:layout_weight="0"
+        android:background="@drawable/tab_btn_bg"
+        android:scaleType="centerInside"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/app_selector"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="right|center_vertical"
+        android:layout_weight="0"
+        android:background="@drawable/tab_btn_bg"
+        android:scaleType="centerInside"
+        android:src="@drawable/app_selector"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/menu_more_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="right|center_vertical"
+        android:layout_weight="0"
+        android:background="@drawable/tab_btn_bg"
+        android:scaleType="centerInside"
+        android:src="@drawable/more_setting"
+        android:visibility="gone" />
+
+</LinearLayout>

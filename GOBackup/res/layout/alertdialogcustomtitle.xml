@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="48dp" >
+
+    <!-- android:background="#fffeeeee" -->
+
+    <ImageView
+        android:id="@+id/Icon"
+        android:layout_width="25dp"
+        android:layout_height="19dp"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/dictitle" />
+
+    <TextView
+        android:id="@+id/folderName"
+        style="@style/AlertDialogTitleColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/Icon"
+        android:gravity="center_horizontal"
+        android:maxWidth="200dp"
+        android:singleLine="true"
+        android:textSize="20dp" />
+    <!-- android:textColor="@color/alertdialog_title_color" -->
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="10dp"
+        android:button="@drawable/checkbox"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="right" />
+
+</RelativeLayout>

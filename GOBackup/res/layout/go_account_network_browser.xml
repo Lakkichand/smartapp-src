@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:background="#e6e6e6"
+	android:gravity="center_vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<RelativeLayout android:id="@+id/go_account_network_brower_top"
+		android:orientation="horizontal" android:layout_width="fill_parent"
+		android:layout_height="48dip" android:layout_alignParentTop="true"
+		android:gravity="left" android:layout_gravity="center_horizontal"
+		android:background="@drawable/go_account_tab">
+		<TextView android:id="@+id/go_account_network_brower_top_msg"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginLeft="20dip" android:textColor="#ececec"
+			android:textSize="17.3sp" android:layout_centerVertical="true" />
+	</RelativeLayout>
+
+	<WebView android:id="@+id/go_account_network_brower_webview"
+		android:layout_below="@+id/go_account_network_brower_top"
+		android:layout_width="fill_parent" android:layout_height="fill_parent" />
+
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffe6e6e6"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/title_bar_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            layout="@layout/title_bar_common_part" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:id="@+id/prompt_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/prompt_drawable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:src="@drawable/no_schedules_drawable"/>
+
+            <TextView
+                android:id="@+id/prompt_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="#99535353"
+                android:textSize="20sp"
+                android:text="@string/msg_no_schedules" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/schedules_list_frame"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/next_plan_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:background="@drawable/tab_info_bar_bg"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="12dp"
+                android:text="@string/msg_next_backup_time"
+                android:textColor="#ff7bac01"
+                android:textSize="15sp" />
+
+            <ListView
+                android:id="@+id/plan_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:cacheColorHint="#00000000"
+                android:divider="@drawable/listview_divider"
+                android:drawSelectorOnTop="false"
+                android:listSelector="@null" />
+        </LinearLayout>
+    </FrameLayout>
+
+   <!--  <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@drawable/main_footer_bar_bg"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp" >
+
+        <Button
+            android:id="@+id/btn_new_plan"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/stateful_green_btn"
+            android:gravity="center"
+            android:minHeight="0dp"
+            android:text="@string/btn_new_backup_plan"
+            android:textColor="@color/stateful_btn_text_color"
+            android:textSize="17sp" />
+    </LinearLayout> -->
+
+</LinearLayout>

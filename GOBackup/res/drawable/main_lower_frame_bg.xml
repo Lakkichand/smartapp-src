@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+		<nine-patch
+    		android:src="@drawable/main_lower_frame_under_bg"
+    		android:dither="true" />
+    </item>
+    
+   <item>
+       <bitmap android:src="@drawable/diagonal_bg"
+           android:dither="true"
+           android:antialias="true"/>
+   </item>
+
+</layer-list>

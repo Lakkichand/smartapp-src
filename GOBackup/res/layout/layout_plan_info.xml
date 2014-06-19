@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/record_entry_bg"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="14dp"
+    android:paddingTop="10dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" 
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:layout_gravity="left|top"
+            android:singleLine="true"
+            android:textColor="#ff535353"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="marquee"
+            android:gravity="left"
+            android:layout_gravity="left|bottom"
+            android:singleLine="true"
+            android:textColor="#cc535353"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_gravity="right|center_vertical"
+        android:layout_weight="0"
+        android:gravity="center">
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/customized_switcher"
+            android:button="@null"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" />
+        
+        <ImageView 
+            android:id="@+id/pay_marker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/purchase_icon_red"
+            android:layout_gravity="center"/>
+    </FrameLayout>    
+</LinearLayout>

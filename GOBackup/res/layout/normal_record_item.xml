@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/time_line_bg"> <!-- android:background="#e1e1e1" -->
+
+        <TextView
+            android:id="@+id/day_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|bottom"
+            android:textColor="#535353"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/time_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|top"
+            android:textColor="#535353"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="0"
+        android:background="@drawable/time_line" /> -->
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:paddingBottom="9dp"
+        android:paddingTop="9dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/normal_record_view_bg"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#535353"
+                    android:textSize="16sp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/size_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dip"
+                    android:layout_weight="0"
+                    android:textColor="#535353"
+                    android:textSize="16sp" 
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <com.jiubang.go.backup.pro.ui.StretchRecordItemView
+                android:id="@+id/record_content_info"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" />
+        </LinearLayout>
+        
+        <ImageView
+            android:id="@+id/new_feature_tag" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:src="@drawable/new_feature_indicator"/>
+    </FrameLayout>
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="2dp"
+        android:button="@drawable/checkbox"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:visibility="gone" >
+    </CheckBox>
+
+</LinearLayout>

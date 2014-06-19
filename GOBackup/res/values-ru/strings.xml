@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+     <!-- 整合备份 -->    
+    <string name="beginmerge">Начать</string>
+    <!-- 整合备份end -->
+    
+    <!-- widget -->
+    <string name="widget_name">GO Backup(4x1)</string>
+    <string name="nobackupentriesselected">Выберите содержимое резервного копирования </string>
+    <string name="backupcontents">Содержимое:</string>
+    <string name="msg_backup_failed">Резервировать не успешно</string>
+    <string name="msg_backuping">езервное копирование выполняется, повторите попытку позже</string>
+    <string name="last_backup_time">Последняя копия：</string>
+    <!-- widget end -->
+
+
+    <!-- 设置 -->
+    <string name="setting">настройка</string>
+    <string name="help">помощь</string>
+    <string name="feedback">обратная связь</string>
+    <string name="about">про</string>
+    <string name="senior">Премиум версия</string>
+    <string name="help_name">помощь</string>
+    <!-- 设置 -->
+
+    <string name="app_name">GO Backup</string>
+    <string name="delete">Удалить</string>
+    <string name="cancel">Отменить</string>
+    <string name="pause">Пауза</string>
+    <string name="resume">Продолжить</string>
+    <string name="restore">Восстановить</string>
+    <string name="ok">Окей</string>
+    <string name="sure">Подтвердить</string>
+    <string name="finish">Совершить</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="save">Сохранить</string>
+    <string name="discard">Бросить</string>
+    <string name="attention">Подсказка</string>
+    <string name="msg_loading">Загрузка…</string>
+    <string name="msg_no_record_to_merge">Пакета копии меньше 2, объединение не доступно</string>
+    <string name="msg_no_record_to_delete">Нет резервных копий</string>
+    <string name="msg_delete_record">Удалить?</string>
+    <string name="alert_dialog_title">Подсказка</string>
+    <string name="contacts">Контакты</string>
+    <string name="sms">СМС</string>
+    <string name="mms">ММС</string>
+    <string name="call_log">Звонки</string>
+    <string name="image">фотография</string>
+    <string name="group_user_image">фотография</string>
+    <string name="user_dictionary">Словарь</string>
+    <string name="wifi_access_points">Wi-Fi</string>
+    <string name="golauncher_setting">GO интерфейс</string>
+    <string name="launcher_layout">Ланчер системы</string>
+    <string name="wallpaper">Обои</string>
+    <string name="ringtone">Рингтоны</string>
+    <string name="applications">Приложения</string>
+    <string name="bookmark">Закладки</string>
+    <string name="group_system_data">Системные данные</string>
+    <string name="group_system_app">Системные приложения</string>
+    <string name="group_user_data">Данные пользователя</string>
+    <string name="group_user_app">Приложения пользователя</string>
+    <string name="database_file">Резервные копии данных</string>
+    <string name="export_contacts">Экспорт контанктов</string>
+    <string name="export_sms">Экспорт СМС</string>
+    <string name="root">ROOT</string>
+    <string name="unroot">UNROOT</string>
+    <string name="unavailable">Не доступно</string>
+    <string name="dropbox_backup_path">App/GO Backup<xliff:g id="PATH">%1$s</xliff:g></string>
+    <!-- 启动页面 -->
+    <string name="feature_introductioin_1">Обеспечивание безопасности данных в реальном времени</string>
+    <string name="feature_introductioin_2">Стабильные и быстрые резервные копии данных</string>
+    <string name="feature_introductioin_3">Свободные облачные резервные копии</string>
+    <string name="btn_create_account">Создать GO аккаунт</string>
+    <string name="btn_login">Вход</string>
+    <!-- 主界面 -->
+    <string name="btn_new_backup">Новая копия</string>
+    <string name="btn_restore">Восстановить</string>
+    <string name="main_label_current_user">Текущий пользователь: </string>
+    <string name="sd_card_unavailable">SD карта не доступна</string>
+    <string name="dialog_title_operation">Операции</string>
+    <string name="no_backup_record_prompt">Нет записей резервных копий</string>
+    <string name="prompt_tap_to_backup">Новая резервная копия</string>
+    <string name="prompt_tap_to_restore">Нажать здесь и восстановить данные и приложения</string>
+    <string name="root_tab_prompt">"UNROOT mode" действует……</string>
+    <string name="title_confirm_export">Подтвердить экспорт</string>
+    <string name="msg_export_contacts">Контакты уже экспортированы в файл</string>
+    <string name="msg_export_sms">Сообщения уже экспортированы в файл</string>
+    <string name="msg_export_successfully">Удачно!</string>
+    <string name="msg_export_failed">Неудачно!</string>
+    <string name="msg_last_backup_time">Последняя копия：</string>
+    <string name="msg_backup_nums"> копий</string>
+    <string name="title_backup_path">Путь:</string>
+    <string name="title_sd_card_storage">SD карта: </string>
+    <string name="msg_no_backups">Нет копий</string>
+    <string name="msg_sd_card_unmounted">Удалено</string>
+    <string name="title_backup_time">Время копии：</string>
+    <string name="msg_root_user_alert">! Статус мобильника: <xliff:g id="STATE">%1$s</xliff:g>\n\n Получив права ROOT Вы можете: \n\n1. копировать данные приложений\n2.копировать/восстановить платные приложения (защищенные приложения)\n3.восстановить приложения молча</string>
+    <string name="msg_unroot_user_alert">! Статус мобильника: <xliff:g id="STATE">%1$s</xliff:g>\n\n Вы можете:\n1. копировать/восстановить контакты, сообщения, звонки и т.д.\n2. копировать/восстановить установленные приложения\n\n Вы не можете:\n1. копировать данные приложений\n2.копировать/восстановить платные приложения (защищенные приложения)\n3.восстановить приложения молча</string>
+    <string name="msg_backup_merged">Объединённые копии</string>
+    <string name="msg_update_old_backup">Обновляются резервные копии старой версии, ждите...</string>
+    <string name="msg_limit_record">Максимальное количество местного пакета резервных копий является 5, для создания новых копий не должно больше 5</string>
+    <string name="btn_limit_record_manage_record">Управление резервными копиями</string>
+    <string name="btn_web_new_backup">Новая копия</string>
+    <string name="btn_web_restore">Восстановить</string>
+    <string name="cloud_backup_tip">Облачные копии загружаются в <xliff:g id="SERVICE">%1$s</xliff:g></string>
+    <string name="local_backup">Местные копии</string>
+    <string name="cloud_backup">Облачные копии</string>
+    <string name="msg_dropbox_loged_in">Было подключено к Dropbox</string>
+    <string name="main_net_no_data">Нет данных</string>
+    <string name="sign_in">вход</string>
+    <string name="account_error">Ненормальный аккаунт, входите ешё раз после списания</string>
+    <!-- 新建备份页面 -->
+    <string name="title_sort_apps">Сортировка приложений</string>
+    <string name="title_new_backup">Новая резервная копия</string>
+    <string name="msg_backup_authorize_root">Для резервных копий системы/функционирования программы необходимы права Root пользователя</string>
+    <string name="btn_authorize">Вручить</string>
+    <string name="btn_refuse">Отказать</string>
+    <string name="msg_backup_unsupport_su">Неудачно получать права Root, попробуйте Root устройство ещё раз</string>
+    <string name="msg_backup_unauthorize_root">Неудачно получать права Root, резервные копии/данных приложений не доступны!</string>
+    <string name="msg_backup_root_failed">Получение прав Root запрещено, резервные копии системы/данных приложений не доступны!</string>
+    <string name="btn_start_backup">Начать копию</string>
+    <!-- 恢复备份页面 -->
+    <string name="title_restore">Восстановить</string>
+    <string name="btn_start_restore">Начать восстановление</string>
+    <string name="msg_restore_authorize_root">Для восстановления системы/функционирования программы необходимы права Root пользователя</string>
+    <string name="msg_restore_unsupport_su">Неудачно получать права Root, попробуйте Root устройство ещё раз</string>
+    <string name="msg_restore_unauthorize_root">Неудачно получать права Root, резервные копии системы/данных приложений не доступны!</string>
+    <string name="msg_restore_root_failed">Получение прав Root запрещено, резервные копии системы/данных приложений не доступны!</string>
+    <string name="entry_state_only_app">Пакет установки</string>
+    <string name="entry_state_app_and_data">Программа + данные</string>
+    <string name="entry_state_only_app_data">данные</string>
+    <string name="not_restorable">Не поддерживается данная система</string>
+    <string name="app_uninstalled">Не установить</string>
+    <string name="app_installed">Установлено</string>
+    <string name="app_updatable">Можно обновлять</string>
+    <string name="corrupted">Испорчено</string>
+    <string name="parenthesized_msg">(<xliff:g id="msg">%1$s</xliff:g>)</string>
+    <string name="merged_backup">Объединённые копии</string>
+    <string name="schedule_backup">Резервные копии по времени</string>
+    <string name="normal_backup">Обычные копии</string>
+    <!-- 备份/恢复进度页面 -->
+    <string name="msg_record_corrupted">Резервные копии испорчены!</string>
+    <string name="msg_backup_exception_occurred">Задача прекращена, данная копия испорчена</string>
+    <string name="msg_restore_exception_occurred">Задача прекращена, восстановление прекращено</string>
+    <string name="title_backing_up">Копия идёт……</string>
+    <string name="title_restoring">Восстанавливается……</string>
+    <string name="title_stop_backup">Стоп</string>
+    <string name="title_stop_restore">Стоп</string>
+    <string name="msg_backup_finished">Совершено</string>
+    <string name="msg_restore_finished">Совершено</string>
+    <string name="msg_discard_backuping">Отменить копию?</string>
+    <string name="msg_discard_restoring">Восстановление не завершено, отменить?</string>
+    <string name="msg_preparing">Подготовка</string>
+    <string name="msg_backing_up">Копия идёт<xliff:g id="DESC">%1$s</xliff:g><xliff:g id="EXTRA">%2$s</xliff:g>……</string>
+    <string name="msg_restoring">Восстановление идёт<xliff:g id="DESC">%1$s</xliff:g><xliff:g id="EXTRA">%2$s</xliff:g>……</string>
+    <string name="backup_restore_prompt">Для сохранения данных не перепускайте или выключите мобильник</string>
+    <string name="btn_stop_backup">Стоп</string>
+    <string name="btn_stop_restore">Стоп</string>
+    <string name="dialog_title_stopping">Стоп…</string>
+    <string name="msg_stopping_operation">Идут операции, подождите…</string>
+    <string name="contacts_restore_result">Восстановлены \u0025d контактов, удалены \u0025d повторных контактов</string>
+    <string name="progress_detail"><xliff:g id="INDEX">%1$d</xliff:g>/<xliff:g id="COUNT">%2$d</xliff:g></string>
+    <string name="msg_mms_updating_msm_conversation">Обновление ММС:<xliff:g id="INDEX">%1$d</xliff:g>/<xliff:g id="COUNT">%2$d</xliff:g></string>
+    <string name="msg_sms_inserting">Вставить:<xliff:g id="INDEX">%1$d</xliff:g>/<xliff:g id="COUNT">%2$d</xliff:g></string>
+    <string name="msg_updating_sms_conversation">Обновление СМС:<xliff:g id="INDEX">%1$d</xliff:g>/<xliff:g id="COUNT">%2$d</xliff:g></string>
+    <string name="progress_format"><xliff:g id="progress">%1$s</xliff:g>%%</string>
+    <string name="backup_size_explanation">Размер сжатых копий <xliff:g id="size">%1$s</xliff:g></string>
+    <!-- 整合备份进度页面 -->
+    <string name="title_merging">Идёт объединение ......</string>
+    <string name="title_stop_merge">Стоп</string>
+    <string name="btn_stop_merge">Стоп</string>
+    <string name="msg_merging">Идёт объединение <xliff:g id="DESC">%1$s</xliff:g><xliff:g id="EXTRA">%2$s</xliff:g>……</string>
+    <string name="msg_merge_finished">Совершено</string>
+    <string name="msg_start_smart_merge">Объединить все копии на один пакет?</string>
+    <string name="msg_discard_merging">Объединение не совершено, отменить?</string>
+    <!-- 新建、恢复网络备份页面 -->
+    <string name="title_new_cloud_backup">Новая облачная копия</string>
+    <string name="title_restore_cloud_backup">Восстановить облачную копию</string>
+    <string name="local_count">Местная:<xliff:g id="COUNT">%1$d</xliff:g></string>
+    <string name="online_count">Облачная:<xliff:g id="COUNT">%1$d</xliff:g></string>
+    <string name="app_not_backuped">Не копированные</string>
+    <string name="app_backuped">Копированные</string>
+    <string name="title_select_apps">Выбрать приложение</string>
+    <string name="tip_failed_to_get_cloud_backup_info">Неудачно получить информацию облачных копий, попробуйте позже</string>
+    <string name="tip_failed_to_download_cloud_db">Неудачно загрузить данные облачных копий</string>
+    <string name="tip_loging_in">Вход...</string>
+    <string name="tip_fetching_cloud_backup_info">Загрузка информации облачных копий<xliff:g id="EXTRA">%1$s</xliff:g>...</string>
+    <!-- 云端备份页面 -->
+    <string name="btn_start_upload">Начать загрузку</string>
+    <string name="msg_uploading_backup">Загрузка<xliff:g id="DESC">%1$s</xliff:g><xliff:g id="EXTRA">%2$s</xliff:g>……</string>
+    <string name="msg_downloading">Скачивается<xliff:g id="BODY">%1$s</xliff:g><xliff:g id="EXTRA">%2$s</xliff:g></string>
+    <string name="work_progress_detail"><xliff:g id="ENTRY">%1$s</xliff:g><xliff:g id="OPERTATION">%2$s</xliff:g><xliff:g id="STATE">%3$s</xliff:g></string>
+    <string name="state_backingup"><xliff:g id="DESC">%1$s</xliff:g>Идёт копия……</string>
+    <string name="state_restoring"><xliff:g id="DESC">%1$s</xliff:g>Восстанавливается……</string>
+    <string name="state_uploading"><xliff:g id="DESC">%1$s</xliff:g>Загрузка……</string>
+    <string name="state_downloading"><xliff:g id="DESC">%1$s</xliff:g>Скачивается……</string>
+    <string name="state_waiting">Ждать</string>
+    <string name="state_finished">Совершено</string>
+    <string name="state_failed">Неудачно</string>
+    <string name="msg_restore_successful">Удачно восстановлено<xliff:g id="COUNT">%1$s</xliff:g><xliff:g id="ENTRY">%2$s</xliff:g></string>
+    <string name="msg_restore_failed">Неудачно восстановлено<xliff:g id="COUNT">%1$s</xliff:g><xliff:g id="ENTRY">%2$s</xliff:g></string>
+    <string name="msg_restore_canceled">Отмена<xliff:g id="COUNT">%1$s</xliff:g><xliff:g id="ENTRY">%2$s</xliff:g></string>
+    <string name="count_format"><xliff:g id="COUNT">%1$d</xliff:g></string>
+    <string name="msg_upload_successful">Удачно загружено<xliff:g id="COUNT">%1$s</xliff:g><xliff:g id="ENTRY">%2$s</xliff:g></string>
+    <string name="msg_upload_failed">Неудачно загружено<xliff:g id="COUNT">%1$s</xliff:g><xliff:g id="ENTRY">%2$s</xliff:g></string>
+    <string name="msg_upload_canceled">Отмена<xliff:g id="COUNT">%1$s</xliff:g><xliff:g id="ENTRY">%2$s</xliff:g></string>
+    <string name="msg_upload_backup_finished">Облачные копии совершены</string>
+    <string name="msg_restore_online_backup_finished">Восстановление облачных копий совершены</string>
+    <string name="msg_no_cloud_backup_or_error">Невозможно найти облачные копии или ошибка сети</string>
+    <string name="login_failed">Неудачно подключено к <xliff:g id="SERVICE">%1$s</xliff:g></string>
+    <!-- 备份报告页面 -->
+    <string name="title_backup_result_report">Доклад</string>
+    <string name="title_restore_result_report">Восстановление</string>
+    <string name="title_merge_result_report">Объединение</string>
+    <string name="msg_result_canceled">Отмено</string>
+    <string name="msg_result_unknown_error">Ошибка</string>
+    <string name="msg_result_data_corrupted">Данные испорчены</string>
+    <string name="msg_result_handle_contacts_failed">Нет контактов или у Вас нет прав читать контакты</string>
+    <string name="msg_result_handle_sms_failed">Нет СМС или у Вас нет прав читать сообщения</string>
+    <string name="msg_result_handle_mms_failed">Нет ММС или у Вас нет прав читать сообщения</string>
+    <string name="msg_result_handle_ringtone_failed">Нет Рингтонов или у Вас нет прав читать рингтоны</string>
+    <string name="msg_result_handle_call_log_failed">Нет звонок или у Вас нет прав читать звонки</string>
+    <string name="msg_result_handle_dictionary_failed">Не слов в словаре пользователя</string>
+    <string name="btn_reboot">Перезапустить мобильник</string>
+    <string name="msg_reboot_info">Нужно перезапускать мобильник для восстановления лаучена и элементов интерфейса</string>
+    <string name="dialog_msg_reboot">Прекратить перезапуск мобильника и восстановление лаучена и элементов интерфейса?</string>
+    <string name="msg_need_reboot">Необходимо перезапускать мобильник</string>
+    <!-- 批量删除页面 -->
+    <string name="title_batch_delete">Удалить партию</string>
+    <string name="menu_item_batch_delete">Удалить партию копий</string>
+    <string name="msg_delete_records">Удалить выбранные копии?</string>
+    <string name="msg_wait">Ждите...</string>
+    <string name="select_all">Выбрать всё</string>
+    <string name="unselect_all">Отменить</string>
+    <!-- 定时备份页面 -->
+    <string name="title_scheduled_backup">Копия по времени</string>
+    <string name="msg_no_schedules">Нет задач</string>
+    <string name="msg_no_active_action">Нет действующих задач</string>
+    <string name="msg_next_backup_time">Время следующей копии:</string>
+    <string name="btn_new_backup_plan">Новая задача</string>
+    <string name="title_edit_plan">Править</string>
+    <string name="title_backup_content">Операции</string>
+    <string name="title_backup_start_time">Время</string>
+    <string name="title_repeat_mode">Повторить</string>
+    <string name="title_advance_remind">Досрочное напоминание</string>
+    <string name="scheduled_plan_date_format"><xliff:g id="YEAR">%1$s</xliff:g>-<xliff:g id="MONTH">%2$s</xliff:g>-<xliff:g id="DAY">%3$s</xliff:g><xliff:g id="DAY_OF_WEEK">%4$s</xliff:g></string>
+    <string name="scheduled_plan_time_format"><xliff:g id="HOUR">%1$s</xliff:g>:<xliff:g id="MINUTES">%2$s</xliff:g></string>
+    <string name="scheduled_plan_full_date_format"><xliff:g id="YEAR">%1$s</xliff:g>-<xliff:g id="MONTH">%2$s</xliff:g>-<xliff:g id="DAY">%3$s</xliff:g><xliff:g id="HOUR">%4$s</xliff:g>:<xliff:g id="MINUTES">%5$s</xliff:g></string>
+    <string name="msg_delete_plan">Удалить эту задачу</string>
+    <string name="msg_schedule_expired">Просроченная задача!</string>
+    <string name="msg_plan_time_conflict">Конфликт времени, измените время</string>
+    <string name="backup_type_user_data"> Данные</string>
+    <string name="backup_type_user_app">Приложения пользователя</string>
+    <string name="backup_type_system_data">Системные данные</string>
+    <string name="backup_type_content">Копия <xliff:g id="BACKUP_CONTENT">%1$s</xliff:g></string>
+    <!-- Root权限说明页 -->
+    <string name="root_introduction_title">Права Root</string>
+    <string name="root_desc_title">Почему нужны права Root?</string>
+    <string name="root_desc_summary">1.для копирования данных приложений\n\n2.для включения модели восстановления молча и скрывания процесса установки приложений</string>
+    <string name="introduction_what_is_root">Что такое права Root?</string>
+    <string name="introduction_how_to_get_root">Как получать права Root?</string>
+    <string name="root_state_rooted">Мобильник уже вручен права Root</string>
+    <string name="root_state_unrooted">Мобильник пока не вручен права Root</string>
+    <!-- 检查更新 -->
+    <string name="title_update">Проверка обновлений</string>
+    <string name="title_update_info">Подсказака по обновлениям</string>
+    <string name="msg_checking_update">Идёт проверка обновлений, подождите……</string>
+    <string name="msg_update_latest_version">Последняя версия!</string>
+    <string name="msg_update_net_error">Ошибка сети</string>
+    <string name="btn_update_now">Загрузить новую версию</string>
+    <string name="btn_update_later">Позже продолжать</string>
+    <string name="btn_exit_app">Выход</string>
+    <!-- 设置页面 -->
+    <string name="title_setting">Настройки</string>
+    <string name="category_title_update_advanced">Премиум версия</string>
+    <string name="category_title_delete_backup">Удалить копию</string>
+    <string name="category_title_contacts_backup_setting">Копия контактов</string>
+    <string name="entry_title_batch_delete_records">Удалить партию местных копий</string>
+    <string name="entry_title_delte_cloud_backup">Удалить облачные копии</string>
+    <string name="entry_title_contacts_backup_setting">Копии контактов</string>
+    <string name="entry_summary_on_contacts">Только копировать контакты с мобильными номерами</string>
+    <string name="entry_summary_off_contacts">Копировать все</string>
+    <string name="entry_title_merge_dup_contacts">Объединить повторные контакты</string>
+    <string name="entry_title_contact_change_push">Напоминание о изменении контактов</string>
+    <string name="entry_summary_merge_on">Автоматически отбросить повторные контакты во время восстановления</string>
+    <string name="entry_summary_contact_change_push">Напоминание о изменении контактов</string>
+    <string name="entry_summary_merge_off">Восстанавливается, будут повторные контакты</string>
+    <string name="entry_title_backup_contacts_icon">Копия иконок контактов</string>
+    <string name="entry_summary_occupied">Содержание копии занятое</string>
+    <string name="category_title_root_relevant">О правах Root</string>
+    <string name="entry_title_root_introduction">Описание прав Root</string>
+    <string name="entry_title_backup_restore_app_data">Копия данных приложений</string>
+    <string name="entry_title_silently_install_app">Молчая установка приложений</string>
+    <string name="entry_summary_backup_app_data">Резервные копии и восстановление пакета установки и данных</string>
+    <string name="entry_summary_silently_install_app">Подсказка по установке не появится во время восстановления приложений</string>
+    <string name="entry_summary_not_root">Неудачно получать права Root, такая функция не доступна</string>
+    <string name="entry_summary_root_not_supported">Устройства с ОС выше Android 3.0 не поддерживает эту функцию</string>
+    <string name="entry_summary_device_unsupported">Данное устройство не поддерживает эту функцию</string>
+    <string name="category_title_other_setting">Другие настройки</string>
+    <string name="entry_title_logout">Выход</string>
+    <string name="entry_title_user_center">Центр пользователя</string>
+    <string name="entry_title_feedback">Обратная связь</string>
+    <string name="entry_title_advanced_update">Обновляет в премиум версию</string>
+    <string name="entry_title_about">О GO Backup</string>
+    <string name="entry_title_version_info">Версия</string>
+    <string name="entry_title_soft_rate">Оценка</string>
+    <string name="entry_title_copyright_info">Авторское право</string>
+    <string name="category_title_network_backup">Облачное синхронное управление аккаунтом</string>
+    <string name="entry_title_dropbox_backup">Dropbox аккаунт</string>
+    <string name="entry_summary_unlogin_dropbox">Вход</string>
+    <string name="entry_summary_currentAccount_dropbox">Текущий аккаунт:</string>
+    <string name="entry_summary_change_dropbox_account">Изменить аккаунт:</string>
+    <string name="entry_summary_soft_rate">Оценить GO Backup в рынке Android</string>
+    <string name="entry_summary_copyright_info">Все права © 2004-2011 защищены 3G.cn</string>
+    <string name="go_backup_noEmailApplication">Нет программы для отправления писем!</string>
+    <string name="title_logout">Выход</string>
+    <string name="msg_logout">Выходить?</string>
+    <string name="msg_account_has_logouted">соединение аккаунта уже отключено</string>
+    <string name="msg_account_logout_successfully">Удачно прерывать соединение аккаунта</string>
+    <string name="msg_account_logout_failed">Неудачно прерывать соединение аккаунта</string>
+    <string name="title_logout_from_dropbox">Отключить соединение к Dropbox?</string>
+    <string name="msg_delete_cloud_backup">Удалить все облачные копии?</string>
+    <string name="msg_failed_to_delete_cloud_backup">Неудачно удалить облачные копии!</string>
+    <string name="msg_delete_cloud_backup_successfully">Удачно удалить облачные копии!</string>
+    <string name="msg_cloud_backup_had_been_deleted">Облачные копии уже удалёлы!</string>
+    <string name="msg_is_advanced">Премиум версия</string>
+    <string name="title_select_cloud_service_provider">Выберите сетевой диск</string>
+    <string name="cloud_service_description">Облачные копии синхронизированы вDropbox и Google Drive</string>
+    <string name="click_to_login">Нажать для входа<xliff:g id="ACCOUNT_TYPE">%1$s</xliff:g> Аккаунт</string>
+    <string name="cloud_service_account"><xliff:g id="ACCOUNT_TYPE">%1$s</xliff:g> Аккаунт</string>
+    <string name="title_logout_from_cloud_service">Выходить?</string>
+    <string name="category_title_setting_backup_path">Путь</string>
+    <string name="entry_title_setting_backup_path">Выберите путь</string>
+    <string name="entry_summary_delete_all_backup">Удалить все местные пакеты копий</string>
+    <string name="entry_summary_select_path_no_sd">нет данных <xliff:g id="INTERNAL_STORAGE">%1$s</xliff:g> или <xliff:g id="EXTERNAL_STORAGE">%2$s</xliff:g></string>
+    <string name="entry_summary_select_path_both">Копии в <xliff:g id="INTERNAL_STORAGE">%1$s</xliff:g> или <xliff:g id="EXTERNAL_STORAGE">%2$s</xliff:g></string>
+    <string name="entry_summary_select_path_internal_storage">встроенное сохранение\u003E</string>
+    <string name="entry_summary_select_path_external_storage">внешнее сохранение\u003E</string>
+    <string name="msg_setting_select_path_title">путь местных копий</string>
+    <string name="msg_internal_storage">USB флешка в мобильнике</string>
+    <string name="msg_external_storage">SD карта</string>
+    <string name="msg_no_sd">нет SD карты</string>
+    <string name="msg_backup_path_change_tips"><xliff:g id="OLD_STORAGE">%1$s</xliff:g> путь удалена или испорчена, копии сохраняются в <xliff:g id="NEW_STORAGE">%2$s</xliff:g></string>
+    <string name="msg_reset_backup_path_tips">путь сохранения переключена в <xliff:g id="RESET_STORAGE">%1$s</xliff:g></string>
+    <!-- 错误报告 -->
+    <string name="crash_subject">Обратная связь</string>
+    <string name="crash_notif_ticker_text">Ошибка! Отправьте обратную связь...</string>
+    <string name="crash_notif_title">Ошибка...</string>
+    <string name="crash_notif_text">Нажмите здесь и помогите нам решать эту проблему</string>
+    <string name="crash_dialog_title">Ошибка GO Backup</string>
+    <string name="crash_dialog_text">Неожиданная ошибка прекратит программу. Нам нужна Ваша обратная связь для улучшения GO Backup. Ваши личные информации не включены в обратной связи.</string>
+    <string name="crash_yes">Свяжитесь с нами</string>
+    <string name="crash_no">Отменить</string>
+    <string name="crash_mailtt">GO Backup Error Report :ver_name:<xliff:g id="VER_NAME">%1$s</xliff:g> ver_code:<xliff:g id="VER_CODE">%2$d</xliff:g></string>
+    <string name="crash_error_reportemail">gobackupbugreport@gmail.com</string>
+    <string name="crash_root_dir">GOBackup</string>
+    <!-- 引导页 -->
+    <string name="tutorial_merge_title">Объединить копии</string>
+    <string name="tutorial_merge_tips1">Объединить выбранные копии и получить самые полные копии </string>
+    <string name="tutorial_merge_tips2">Во время объединения не удалить текущие копии, только удалить повторные опции</string>
+    <string name="tutorial_ok">Я знаю</string>
+    <!-- 收费升级页 -->
+    <string name="pay_update_title">Премиум версия</string>
+    <string name="help_url" formatted="false">http://market.android.com/support/bin/answer.py?answer=1050566&amp;hl=%lang%&amp;dl=%region%</string>
+    <string name="pay_title_1">Облачные копии</string>
+    <string name="pay_title_2">Безграничные копии</string>
+    <string name="pay_title_3">Больше содержаний</string>
+    <string name="pay_detail_1">Синхронизация копий в сетевой диск, более удобно и безопасно</string>
+    <string name="pay_detail_2">Нет ограничения размера пакета копий</string>
+    <string name="pay_detail_3">Настройки резервных копий системы, например рингтоны, обои для удовлетворения Ваших особых требований</string>
+    <string name="learn_more">Подробнее</string>
+    <string name="cannot_connect_title">Неудачно подключить к рынке</string>
+    <string name="cannot_connect_message">Ваш мобильник не может подключать к Google рынке</string>
+    <string name="billing_not_supported_title">Неудачно покупать</string>
+    <string name="billing_not_supported_message">Ваш мобильник не поддерживает способ платёжа приложений</string>
+    <string name="response_code_fail_title">Ошибка просьбы</string>
+    <string name="btn_upgrade">Обновить в премиум версию</string>
+    <!-- 这个测试用的 -->
+    <string name="response_code_fail_message">Неудачно подключать к Google рынке</string>
+    <string name="cannot_bind_to_service_title">Неудачно подключать к Google рынке</string>
+    <string name="cannot_bind_to_service_message">Необходимо установить последний Google рынок</string>
+    <string name="purchase_tip_title">Обновить в премиум версию?</string>
+    <string name="purchase_tip_message">1.облачные копии для синхронизации копий на Dropbox, более удобно и безопасно\n \n 2.
+         Безграниченный пакет, нет ограничения размера</string>
+    <string name="fail_market_connect">Неудачно подключать к рынке или неудачно покупать, попробуйте позже.</string>
+    <string name="pay_validate">Просмотр статуса платёжа</string>
+    <string name="purchase_success_title">Удачно покупать</string>
+    <string name="purchase_success_message">Вы получите следующие функции: ：\n \n ● Облачные копии  \n ● безграниченный пакет копий \n ● больше содержаний копий, например обои, рингтоны, интерфейс, точки Wi-Fi</string>
+    <string name="refunded_success_title">Удачно возвратить деньги</string>
+    <string name="refunded_success_message">Следующие функции отменены:\n \n ● Облачные копии  \n ● безграниченный пакет копий \n ● больше содержаний копий, например обои, рингтоны, интерфейс, точки Wi-Fi</string>
+    <string name="summit">Окей</string>
+    <string name="advanced_explain">● Облачные копии  \n ● нет ограничения размера \n ● больше содержаний копий, например обои, рингтоны, интерфейс, точки Wi-Fi</string>
+    <string name="completed_request">Восстановление совершено</string>
+    <string name="msg_redo_cloud_backup_task">Существует несовершенная облачная копия, продолжать?</string>
+    <string name="msg_redo_cloud_restore_task">Существует несовершенное облачное восстановление, продолжать?</string>
+    <string name="continue_last_task">Продолжать несовершенную задачу</string>
+    <string name="too_large_need_pay">Пакет копии по времени больше чем 200М, нужно покупать премиум версию, продолжаете?</string>
+    <string name="backup_system_need_pay">Копия системных данных является премиум функцией. Нужно платить, продолжаете?</string>
+    <string name="restore_system_need_pay">Восстановление системных данных является премиум функцией. Нужно платить, продолжаете?</string>
+    <string name="purchase_title">Подсказка по покупке</string>
+    <string name="open_wifi">Включить wifi</string>
+    <string name="backup_advice_of_wifi">Для облачных копий нужно пользовать сетевой трафик, советуем использовать Wi-Fi</string>
+    <string name="restore_advice_of_wifi">Для облачного восстановления нужно пользовать сетевой трафик, советуем использовать Wi-Fi</string>
+    <string name="direct_upload">Загрузить прямо</string>
+    <string name="direct_restore">Восстановить прямо</string>
+    <string name="uploading_choose_to_stop">Резервные копии загружаются, отменить?</string>
+    <string name="download_choose_to_stop">Резервные копии скачиваются, отменить?</string>
+    <string name="function_need_to_purchase">Для использования премиум функций нужно платить, продолжаете?</string>
+    <string name="system_data_need_to_puchase">Копия системных данных является премиум функцией. Нужно платить, продолжаете?</string>
+    <string name="timing_large_need_pay">Пакет копии по времени больше чем 200М, нужно платить, продолжаете?</string>
+    <string name="free_user_limit">Ограничение бесплатного пользователя</string>
+    <string name="advanced_of_function">Функция премиум версии</string>
+    <string name="purchase_yes_or_no">Пакет копии по времени больше чем 200М, нужно покупать премиум версию, продолжаете? \n\n* Если отменяете копия по времени будет включена</string>
+    <string name="contact_change_push_tips">Контакты изменены, нужно копировать?</string>
+
+    <!-- 定时备份 -->
+    <string name="choose_backup_content">Выберите содержание копий</string>
+
+    <string-array name="months">
+        <item>Январь</item>
+        <item>Февраль</item>
+        <item>Март</item>
+        <item>Апрель</item>
+        <item>Май</item>
+        <item>Июнь</item>
+        <item>Июль</item>
+        <item>Август</item>
+        <item>Сентябрь</item>
+        <item>Октябрь</item>
+        <item>Ноябрь</item>
+        <item>Декабрь</item>
+    </string-array>
+    <string-array name="week">
+        <item>Суббота</item>
+        <item>Воскресенье</item>
+        <item>Понедельник</item>
+        <item>Вторник</item>
+        <item>Среда</item>
+        <item>Четверг</item>
+        <item>Пятница</item>
+    </string-array>
+    <string-array name="week_short">
+        <item>Суб</item>
+        <item>Вос</item>
+        <item>Пон</item>
+        <item>Вто</item>
+        <item>Сре</item>
+        <item>Чет</item>
+        <item>Пят</item>
+    </string-array>
+    <string-array name="backup_sort_type_desc">
+        <item>По имени приложений</item>
+        <item>По размеру приложений</item>
+        <item>По времени установки</item>
+    </string-array>
+    <string-array name="online_backup_sort_type_desc">
+        <item>По имени приложений</item>
+        <item>По размеру приложений</item>
+    </string-array>
+    <string-array name="restore_sort_type_desc">
+        <item>По имени приложений</item>
+        <item>По размеру приложений</item>
+        <item>По статусу установки</item>
+    </string-array>
+    <string-array name="schduled_backup_content_paid">
+        <item>копия данных пользователя</item>
+        <item>копия приложений пользователя</item>
+        <item>копия системных данных</item>
+    </string-array>
+    <string-array name="schduled_backup_content_free">
+        <item>копия данных пользователя</item>
+        <item>копия приложений пользователя</item>
+    </string-array>
+    <string-array name="repeat_modes">
+        <item>одноразовая</item>
+        <item>каждый день</item>
+        <item>каждая неделя</item>
+        <item>каждый месяц</item>
+    </string-array>
+    <string-array name="repeat_modes_details">
+        <item>одноразовая</item>
+        <item>каждый день</item>
+        <item>каждая неделя(<xliff:g id="DAY_OF_WEEK">%1$s</xliff:g>)</item>
+        <item>каждый месяц(<xliff:g id="DAY_OF_MONTH">%2$s</xliff:g> ого)</item>
+    </string-array>
+    <string-array name="advance_remind_time">
+        <item>0 мин</item>
+        <item>1 мин</item>
+        <item>5 мин</item>
+        <item>10 мин</item>
+        <item>15 мин</item>
+        <item>20 мин</item>
+        <item>25 мин</item>
+        <item>30 мин</item>
+        <item>45 мин</item>
+        <item>1 час</item>
+    </string-array>
+    <string-array name="advance_remind_time_toast">
+        <item>Начинается копия по времени через не больше 1 мин</item>
+        <item>Через <xliff:g id="DAYS">%1$s</xliff:g> начинается копия по времени</item>
+        <item>Через <xliff:g id="HOURS">%2$s</xliff:g> начинается копия по времени</item>
+        <item>Через <xliff:g id="DAYS">%1$s</xliff:g><xliff:g id="HOURS">%2$s</xliff:g> начинается копия по времени</item>
+        <item>Через <xliff:g id="MINUTES">%3$s</xliff:g> начинается копия по времени</item>
+        <item>Через <xliff:g id="DAYS">%1$s</xliff:g><xliff:g id="MINUTES">%3$s</xliff:g> начинается копия по времени</item>
+        <item>Через <xliff:g id="HOURS">%2$s</xliff:g><xliff:g id="MINUTES">%3$s</xliff:g> начинается копия по времени</item>
+        <item>Через <xliff:g id="DAYS">%1$s</xliff:g><xliff:g id="HOURS">%2$s</xliff:g><xliff:g id="MINUTES">%3$s</xliff:g> начинается копия по времени</item>
+    </string-array>
+    <string-array name="backupable_app_state">
+        <item>Unbacked-up</item>
+        <item>Backup updatable</item>
+        <item>Backed-up</item>
+    </string-array>
+    <string-array name="app_install_state">
+        <item>Uninstalled</item>
+        <item>Updatable</item>
+        <item>Installed</item>
+    </string-array>
+    <string-array name="app_state">
+        <item>Uninstalled</item>
+        <item>Installed</item>
+    </string-array>
+
+    <string name="one_day">1 день</string>
+    <string name="days"><xliff:g id="DAYS">%s</xliff:g> дней</string>
+    <string name="one_hour">1 час</string>
+    <string name="hours"><xliff:g id="HOURS">%s</xliff:g> часов</string>
+    <string name="one_minute">1 мин</string>
+    <string name="minutes"><xliff:g id="MINUTES">%s</xliff:g> минутов</string>
+
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PageIndicator">
+        <attr format="reference" name="normal_drawable" />
+        <attr format="reference" name="high_light_drawable" />
+        <attr format="dimension" name="indicator_spacing" />
+    </declare-styleable>
+
+</resources>

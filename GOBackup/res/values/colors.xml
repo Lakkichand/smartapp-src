@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <drawable name="transparent_background">#2b000000</drawable>
+    <!-- 主页面Tab控件字体颜色 -->
+    <color name="main_tab_text_focused">#559217</color>
+    <color name="main_tab_text_unfocus">#9a9a9a</color>
+    <!-- Root权限介绍页Root状态字体颜色 -->
+    <color name="root_introduction_rooted_text_color">#535353</color>
+    <color name="root_introduction_unroot_text_color">#e43535</color>
+    <color name="root_help_text_color">#6ba200</color>
+    <color name="help_body_text_color">#535353</color>
+    <!-- 广告页高亮字体颜色 -->
+    <color name="pay_activity_title_highlight">#669b01</color>
+    <color name="pay_activity_title_normal">#535353</color>
+
+</resources>

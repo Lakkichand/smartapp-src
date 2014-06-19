@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="false">
+        <layer-list>
+            <item android:drawable="@drawable/switcher_off_bg"/>
+            <item android:drawable="@drawable/switcher_off_fg"/>
+        </layer-list>
+    </item>
+    
+    <item android:state_checked="true">
+        <layer-list>
+            <item android:drawable="@drawable/switcher_on_bg"/>
+            <item android:drawable="@drawable/switcher_on_fg"/>
+        </layer-list>
+    </item>
+</selector>

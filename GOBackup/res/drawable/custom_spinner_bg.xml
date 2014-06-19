@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <selector>
+            <item
+                android:drawable="@drawable/spinner_btn_bg_pressed"
+                android:state_pressed="true"/>
+            <item android:drawable="@drawable/spinner_btn_bg_normal"/>
+        </selector>
+    </item>
+    
+    <item android:right="10dp">
+        <bitmap
+            android:gravity="right|center_vertical"
+            android:src="@drawable/arrow" />
+    </item>
+
+</layer-list>

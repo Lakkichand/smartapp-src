@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- preference key -->
+    <string name="key_delete_backuped_records">delete_backuped_records</string>
+    <string name="key_delete_cloud_backup">delete_cloud_backup</string>
+    <string name="key_only_backup_contacts_which_has_number">only_backup_contacts_which_has_number</string>
+    <string name="key_merge_duplicate_contacts">merge_duplicate_contacts</string>
+    <string name="key_contact_change_push">contact_change_push</string>
+    <string name="key_root_introduction">root_introduction</string>
+    <string name="key_backup_restore_app_data">backup_restore_app_data</string>
+    <string name="key_silently_install_app">silently_install_app</string>
+    <string name="key_logout">logout</string>
+    <string name="key_user_center">user_center</string>
+    <string name="key_feedback">feedback</string>
+    <string name="key_advanced_update">update_app</string>
+    <string name="key_setting_backup_path">setting_backup_path</string>
+    <string name="key_about_GOBackup">about_GOBackup</string>
+    <string name="key_network_backup">Account Manager</string>
+    <string name="key_dropbox_backup">Dropbox_Account_Manager</string>
+    <string name="key_version_info">version_info</string>
+    <string name="key_soft_rate">soft_rate</string>
+    <string name="key_copyright_info">copyright_info</string>
+    <string name="key_backup_contacts_avatar">backup_contacts_avatar</string>
+    <string name="key_cloud_service_selector">cloud_service_selector</string>
+	<string name="key_cloud_service_account_manager">cloud_service_account_manager</string>
+</resources>

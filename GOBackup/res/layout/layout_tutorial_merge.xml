@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tutorial_merge_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    > <!-- android:background="#cc000000" -->
+    
+    <TextView android:id="@+id/tutorial_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#ff77ce2c"
+        android:textSize="21sp"
+        android:text="@string/tutorial_merge_title"/>
+    <TextView
+        android:id="@+id/tutorial_tips1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tutorial_title"
+        android:layout_alignParentLeft="false"
+        android:layout_below="@id/tutorial_title"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="13dp"
+        android:text="@string/tutorial_merge_tips1"
+        android:textColor="#ffffffff"
+        android:textSize="17sp" />
+    
+    <TextView
+        android:id="@+id/tutorial_tips2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tutorial_title"
+        android:layout_alignParentLeft="false"
+        android:layout_below="@id/tutorial_tips1"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/tutorial_merge_tips2"
+        android:textColor="#ffffffff"
+        android:textSize="17sp" />
+    
+    <Button
+	    android:id="@+id/tutorial_ok"
+	    android:layout_width="110dp"
+	    android:layout_height="33dp"
+	    android:background="@drawable/tutorial_btn"
+	    android:gravity="center"
+	    android:minHeight="0dp"
+	    android:layout_alignLeft="@id/tutorial_title"
+	    android:layout_below="@id/tutorial_tips2"
+	    android:layout_marginTop="20dp"
+	    android:text="@string/tutorial_ok"
+	    android:textColor="#ffffffff"
+	    android:textSize="17sp" />
+</RelativeLayout>

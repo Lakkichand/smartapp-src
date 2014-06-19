@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffe6e6e6"
+    android:orientation="vertical" >
+
+ 	<include layout="@layout/delete_record_activity_title_bar"
+ 	    android:layout_width="fill_parent"
+ 	    android:layout_height="wrap_content"/>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+
+        <com.jiubang.go.backup.pro.selfdef.ui.PinnedHeaderListView
+            android:id="@+id/listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/listview_divider"
+            android:drawSelectorOnTop="false" />
+
+        <!--
+        <LinearLayout
+            android:id="@+id/prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/no_backup_record_prompt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/no_backup_record_prompt"
+                android:textColor="#99535353"
+                android:textSize="20sp" />
+        </LinearLayout>
+        -->
+    </FrameLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@drawable/footer_bar_bg"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="8dp" >
+
+        <Button
+            android:id="@+id/delete_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/delete_btn"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="@string/delete"
+            android:textColor="@color/stateful_btn_text_color"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+             android:minHeight="0dp"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/light_round_button"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="#ff535353"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+</LinearLayout>

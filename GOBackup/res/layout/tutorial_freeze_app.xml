@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tutorial_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_freeze_app"
+            android:textColor="#ff77ce2c"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/tutorial_tips1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text="@string/tutorial_freeze_app"
+            android:textColor="#ffffffff"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/tutorial_ok"
+            android:layout_width="110dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/tutorial_btn"
+            android:gravity="center"
+            android:minHeight="0dp"
+            android:text="@string/tutorial_ok"
+            android:textColor="#ffffffff"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+</RelativeLayout>

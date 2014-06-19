@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="42dp"
+    android:orientation="horizontal" >
+
+    <!-- 本地 -->
+
+    <RelativeLayout
+        android:id="@+id/local_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/local_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/problems"
+            android:textColor="@color/main_tab_text_focused"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/local_image"
+            android:layout_width="@dimen/mainview_tabbar_indicator_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/theme_tab_light"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <!-- 竖线 -->
+
+    <ImageView
+        android:id="@+id/theme_line"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0"
+        android:background="@drawable/theme_line" />
+
+    <!-- 云端 -->
+
+    <RelativeLayout
+        android:id="@+id/web_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center_horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/web_backup_com"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true" >
+
+            <TextView
+                android:id="@+id/web_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/notes"
+                android:textColor="@color/main_tab_text_unfocus"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/tab_purchase_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/web_text"
+                android:src="@drawable/purchase_icon_red"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/web_image"
+            android:layout_width="@dimen/mainview_tabbar_indicator_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/theme_tab_light"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+</LinearLayout>

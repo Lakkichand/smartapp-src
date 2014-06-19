@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:PageIndicator="http://schemas.android.com/apk/res/com.jiubang.go.backup.ex"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/home_page_bg"
+    android:orientation="vertical" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
+        android:gravity="center"
+       /> <!--  android:background="#7fff0000" -->
+
+    <com.jiubang.go.backup.pro.selfdef.ui.PageIndicator
+        android:id="@+id/page_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal"
+        PageIndicator:indicator_spacing="5dp"
+        PageIndicator:high_light_drawable="@drawable/page_indicator_highlight"
+        PageIndicator:normal_drawable="@drawable/page_indicator_normal" />
+    
+    <Button 
+        android:id="@+id/register"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="17dp"
+        android:textColor="#ffffffff"
+        android:textSize="18.5sp"
+        android:gravity="center"
+        android:background="@drawable/login_btn_bg"
+        android:text="@string/btn_create_account"/>
+    
+    <Button 
+        android:id="@+id/login"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="17dp"
+        android:textColor="#ffffffff"
+        android:textSize="18.5sp"
+        android:gravity="center"
+        android:background="@drawable/login_btn_bg"
+        android:text="@string/btn_login"/>
+
+</LinearLayout>

@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+     <!--  备份包可编辑-->
+    <string name="title_selection">已选中<xliff:g id="COUNT">%1$d</xliff:g>个</string>
+    <!--  备份包可编辑-->
+    
+    <!-- 整合备份 -->    
+    <string name="beginmerge">开始整合</string>
+    <!-- 整合备份end -->
+    
+    <!-- widget -->
+    <string name="widget_name">GO备份(4x1)</string>
+    <string name="nobackupentriesselected">请先选择备份内容</string>
+    <string name="backupcontents">备份内容:</string>
+    <string name="msg_backup_failed">备份失败</string>
+    <string name="msg_backuping">正在进行备份,请稍后再试</string>
+    <string name="last_backup_time">上次备份：</string>
+    <!-- widget end -->
+
+
+    <!-- 帮助文档 -->
+    <string name="setting">设置</string>
+    <string name="help">帮助</string>
+    <string name="feedback">反馈</string>
+    <string name="about">关于</string>
+    <string name="senior">高级版</string>
+    <string name="help_name">帮助</string>
+    <string name="notes">规则说明</string>
+    <string name="problems">常见问题</string>
+    <!-- 注意事项 -->
+    <string name="attentions">规则说明</string>
+    <string name="attentions_one">1. 普通备份</string>
+    <string name="attentions_one_content">普通备份包最多只能有 10 个。当已经存在 10 个备份包时,必须删除一部分备份包后才可新建。</string>
+    <string name="attentions_two">2. 整合备份规则</string>
+    <string name="attentions_two_content">整合备份将所有备份包的内容合并为一个最新最全的备份包。当备份包个数少于 2 个时无法进行整合。</string>
+    <string name="attentions_three">3. 定时备份</string>
+    <string name="attentions_three_content">定时备份包只有一个,旧的定时备份包将被新的覆盖。</string>
+    <string name="attentions_four">4. 云端备份</string>
+    <string name="attentions_four_content">云端备份支持 Dropbox 和 Google Drive,您可以选择任何一个进行同步。</string>
+    <string name="attentions_four_content_two">进行云端备份时,每个网盘内相同备份项的内容将被覆盖,保留其最新的一份。</string>
+    <string name="attentions_five">5. 备份路径切换</string>
+    <string name="attentions_five_content">GO 备份支持备份到手机内置存储和外置 SD 卡,默认存储到外置 SD 卡。当前备份路径损坏或被移除时,将自动切换到另一路径。</string>
+    <string name="attentions_six">6. 日历备份的账户</string>
+    <string name="attentions_six_content">当备份的日历中包含邀请对象时,恢复日历时邀请对象将会收到邮件通知。</string>
+    <string name="help_title_freeze_app">7. 应用程序冻结</string>
+  	<string name="help_freeze_app">被冻结的应用会被隐藏并无法使用，不会在后台自动启动，但仍会占用存储空间，解冻后可完全恢复。建议将较少使用的应用冻结，可减少耗电和内存占用。</string>
+    <!-- root -->
+    <string name="root_one">1. ROOT权限有什么用？</string>
+    <string name="root_function_one">备份应用程序数据</string>
+    <string name="root_function_two">备份系统设置</string>
+    <string name="root_function_three">开启静默恢复模式,隐藏应用程序安装过程</string>
+    <string name="root_more_information">更多信息:</string>
+    <string name="root_two">2. 怎样在刷机后通过 GO 备份恢复数据和应用程序?</string>
+    <string name="root_function_two_one">刷机后重新下载并安装 GO 备份,打开 GO 备份可查看手机或 SD 卡中的备份包,选择相应的备份包并进行恢复即可</string>
+    <string name="root_three">3. 我不想收到联系人变更提醒,怎么办?</string>
+    <string name="root_function_three_one">您可以通过以下操作关闭联系人变更提醒。GO 备份->更多->设置,取消勾选联系人提醒。</string>
+    <string name="root_four">4. 为什么升级到 Android4.2 后找不到备份包了?</string>
+    <string name="root_function_four_one">升级到 4.2 后,原来存储器内的备份包被移动到新存储根路径下的“ 0”目录,导致 GO 备份程序无法识别出来。您可以将原来的备份包移动到新的备份路径下,备份包即可被识别出来。</string>
+    <string name="root_five">5. 已经购买 GO 备份,刷机后重新安装是否能继续使用高级版功能?</string>
+    <string name="root_function_five_one">Google Play 是通过您的付费账户判断您是否购买过该应用。当您再次安装 GO 备份时,选择升级购买后,Google 会检测到您的账户已购买过此应用,因此不会再次扣费。</string>
+    <!-- 帮助文档 end -->
+
+    <string name="app_name">GO备份</string>
+    <string name="delete">删除</string>
+    <string name="cancel">取消</string>
+    <string name="pause">暂停</string>
+    <string name="resume">继续</string>
+    <string name="restore">恢复</string>
+    <string name="ok">确定</string>
+    <string name="sure">确定</string>
+    <string name="finish">完成</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="save">保存</string>
+    <string name="discard">舍弃</string>
+    <string name="attention">提示</string>
+    <string name="msg_loading">正在加载…</string>
+    <string name="msg_no_record_to_merge">备份包少于两个，无法进行整合</string>
+    <string name="msg_no_record_to_delete">当前无可删除的备份记录</string>
+    <string name="msg_delete_record">确定删除此记录？</string>
+    <string name="alert_dialog_title">提示</string>
+    <string name="contacts">联系人</string>
+    <string name="sms">短信</string>
+    <string name="mms">彩信</string>
+    <string name="bookmark">浏览器书签</string>
+    <string name="call_log">通话记录</string>
+    <string name="calendar">日历</string>
+    <string name="user_dictionary">用户词典</string>
+    <string name="wifi_access_points">Wi-Fi接入点</string>
+    <string name="golauncher_setting">GO桌面设置</string>
+    <string name="launcher_layout">系统桌面布局</string>
+    <string name="wallpaper">壁纸</string>
+    <string name="ringtone">铃声</string>
+    <string name="applications">应用程序</string>
+    <string name="group_system_data">系统设置</string>
+    <string name="group_system_app">系统应用</string>
+    <string name="group_user_data">用户数据</string>
+    <string name="group_user_app">用户程序</string>
+    <string name="database_file">备份数据库文件</string>
+    <string name="export_contacts">导出联系人</string>
+    <string name="image">照片</string>
+    <string name="group_user_image">照片</string>
+    <string name="export_sms">导出短信</string>
+    <string name="root">ROOT</string>
+    <string name="unroot">非ROOT</string>
+    <string name="unavailable">不可用</string>
+    <string name="dropbox_backup_path">App/GO Backup<xliff:g id="PATH">%1$s</xliff:g></string>
+    <!-- 启动页面 -->
+    <string name="feature_introductioin_1">实时保证数据安全</string>
+    <string name="feature_introductioin_2">稳定快速备份数据</string>
+    <string name="feature_introductioin_3">云端备份，随时随地</string>
+    <string name="btn_create_account">创建GO帐号</string>
+    <string name="btn_login">登录</string>
+    <string name="copy_right_info">3G门户 Copyright © 2004-2011\n版权所有</string>
+    <string name="product_feature">简单 快速 安全 稳定</string>
+    <!-- 主界面 -->
+    <string name="btn_new_backup">新建备份</string>
+    <string name="btn_restore">恢复备份</string>
+    <string name="main_label_current_user">当前用户: </string>
+    <string name="sd_card_unavailable">SD卡不可用</string>
+    <string name="dialog_title_operation">操作</string>
+    <string name="no_backup_record_prompt">当前无备份</string>
+    <string name="prompt_tap_to_backup">点击新建备份</string>
+    <string name="prompt_tap_to_restore">点击此处恢复数据和应用程序</string>
+    <string name="root_tab_prompt">”非ROOT用户模式“正在运行……</string>
+    <string name="title_confirm_export">导出确认</string>
+    <string name="msg_export_contacts">已备份的联系人将导出至</string>
+    <string name="msg_export_sms">已备份的短信将导出至</string>
+    <string name="msg_export_successfully">导出成功</string>
+    <string name="msg_export_failed">导出失败！</string>
+    <string name="msg_last_backup_time">上次备份时间：</string>
+    <string name="msg_backup_nums">个备份</string>
+    <string name="title_backup_path">备份目录：</string>
+    <string name="title_sd_card_storage">SD卡：</string>
+    <string name="msg_no_backups">无备份</string>
+    <string name="msg_sd_card_unmounted">已移除</string>
+    <string name="title_backup_time">备份时间：</string>
+    <string name="msg_root_user_alert">！手机当前状态：<xliff:g id="STATE">%1$s</xliff:g>\n\n授予GO备份ROOT权限后，您可以：\n\n1.备份应用程序数据\n2.备份/恢复付费下载应用（受保护应用程序）\n3.静默恢复应用程序</string>
+    <string name="msg_unroot_user_alert">！手机当前状态：<xliff:g id="STATE">%1$s</xliff:g>\n\n您可以：\n1.备份/恢复联系人、短信、通话记录等\n2.备份/恢复已安装的应用\n\n您无法：\n1.备份应用程序数据\n2.备份/恢复付费下载应用（受保护应用程序）\n3.静默恢复应用程序</string>
+    <string name="msg_backup_merged">整合备份</string>
+    <string name="msg_update_old_backup">正在升级旧版本备份记录，请稍候...</string>
+    <string name="msg_limit_record">本地备份包个数上限为<xliff:g id="COUNT">%1$d</xliff:g>个，需要删除少于<xliff:g id="COUNT">%1$d</xliff:g>个才可新建备份</string>
+    <string name="btn_limit_record_manage_record">管理备份包</string>
+    <string name="btn_web_new_backup">新建云端备份</string>
+    <string name="btn_web_restore">恢复云端备份</string>
+    <string name="cloud_backup_tip">云端备份内容将上传到<xliff:g id="SERVICE">%1$s</xliff:g></string>
+    <string name="local_backup">本地备份</string>
+    <string name="cloud_backup">云端备份</string>
+    <string name="msg_dropbox_loged_in">已经连接Dropbox</string>
+    <string name="main_net_no_data">暂无数据</string>
+    <string name="sign_in">登录</string>
+    <string name="account_error">账号出错，请重新登录</string>
+    <!-- 新建备份页面 -->
+    <string name="title_select_app_backup_type">选择应用程序备份内容</string>
+    <string name="title_select_app_restore_type">选择应用程序恢复内容</string>
+    <string name="title_sort_apps">应用排序方式</string>
+    <string name="title_new_backup">新建备份</string>
+    <string name="msg_backup_authorize_root">备份系统/应用数据需要您授予Root权限</string>
+    <string name="btn_authorize">授予</string>
+    <string name="btn_refuse">不授予</string>
+    <string name="msg_backup_unsupport_su">获取Root权限出现问题，无法备份系统/应用数据，请尝试重新Root您的设备</string>
+    <string name="msg_backup_unauthorize_root">无法获取Root权限，仅能备份应用程序安装包，无法备份系统/应用数据！</string>
+    <string name="msg_backup_root_failed">已被禁止获取Root权限，仅能备份应用程序安装包，无法备份系统/应用数据！</string>
+    <string name="btn_start_backup">开始备份</string>
+    <!-- 恢复备份页面 -->
+    <string name="title_restore">恢复备份</string>
+    <string name="btn_start_restore">开始恢复</string>
+    <string name="msg_restore_authorize_root">恢复系统/应用数据需要您授予Root权限</string>
+    <string name="msg_restore_unsupport_su">获取Root权限出现问题，恢复系统/应用数据，请尝试重新Root您的设备</string>
+    <string name="msg_restore_unauthorize_root">无法获取Root权限，恢复系统/应用数据！</string>
+    <string name="msg_restore_root_failed">已被禁止获取Root权限，无法恢复系统/应用数据！</string>
+    <string name="entry_state_only_app">安装包</string>
+    <string name="entry_state_app_and_data">程序 + 数据</string>
+    <string name="entry_state_only_app_data">数据</string>
+    <string name="apk_corruption">安装包已损坏</string>
+    <string name="app_data_corruption">数据文件已损坏</string>
+    <string name="not_restorable">不支持本系统</string>
+    <string name="no_app_data_to_backup">应用程序没有数据</string>
+    <string name="data_unrestorable_without_root">没有ROOT权限无法恢复数据</string>
+    <string name="data_unrestorable_without_app">未安装此程序无法恢复数据</string>
+    <string name="app_uninstalled">未安装</string>
+    <string name="app_installed">已安装</string>
+    <string name="app_updatable">可更新</string>
+    <string name="corrupted">已损坏</string>
+    <string name="parenthesized_msg">(<xliff:g id="msg">%1$s</xliff:g>)</string>
+    <string name="merged_backup">整合备份</string>
+    <string name="schedule_backup">定时备份</string>
+    <string name="normal_backup">普通备份</string>
+    <string name="menu_app_select">应用程序筛选</string>
+    <string name="menu_app_sort">应用程序排序</string>
+    <!-- 备份/恢复进度页面 -->
+    <string name="msg_record_corrupted">备份记录损坏！</string>
+    <string name="msg_backup_exception_occurred">任务异常终止，本次备份记录已损坏</string>
+    <string name="msg_restore_exception_occurred">任务异常终止，无法继续恢复</string>
+    <string name="title_backing_up">备份中……</string>
+    <string name="title_restoring">恢复中……</string>
+    <string name="title_stop_backup">停止备份</string>
+    <string name="title_stop_restore">停止恢复</string>
+    <string name="msg_backup_finished">备份完成</string>
+    <string name="msg_restore_finished">恢复完成</string>
+    <string name="msg_discard_backuping">备份尚未完成，确定停止本次备份？</string>
+    <string name="msg_discard_restoring">恢复尚未完成，点击确定舍弃本次恢复</string>
+    <string name="msg_preparing">正在准备</string>
+    <string name="msg_backing_up">正在备份<xliff:g id="DESC">%1$s</xliff:g><xliff:g id="EXTRA">%2$s</xliff:g>……</string>
+    <string name="msg_restoring">正在恢复<xliff:g id="DESC">%1$s</xliff:g><xliff:g id="EXTRA">%2$s</xliff:g>……</string>
+    <string name="backup_restore_prompt">请勿重启或关闭手机，以免造成数据损坏</string>
+    <string name="btn_stop_backup">停止备份</string>
+    <string name="btn_stop_restore">停止恢复</string>
+    <string name="dialog_title_stopping">正在停止…</string>
+    <string name="msg_stopping_operation">等待当前操作完成，请稍候…</string>
+    <string name="contacts_restore_result">共恢复\u0025d个联系人，舍弃\u0025d个重复联系人</string>
+    <string name="progress_detail"><xliff:g id="INDEX">%1$d</xliff:g>/<xliff:g id="COUNT">%2$d</xliff:g></string>
+    <string name="msg_mms_updating_msm_conversation">更新彩信会话:<xliff:g id="INDEX">%1$d</xliff:g>/<xliff:g id="COUNT">%2$d</xliff:g></string>
+    <string name="msg_sms_inserting">正在插入:<xliff:g id="INDEX">%1$d</xliff:g>/<xliff:g id="COUNT">%2$d</xliff:g></string>
+    <string name="msg_updating_sms_conversation">更新短信会话:<xliff:g id="INDEX">%1$d</xliff:g>/<xliff:g id="COUNT">%2$d</xliff:g></string>
+    <string name="progress_format"><xliff:g id="progress">%1$s</xliff:g>%%</string>
+    <string name="backup_size_explanation">压缩后备份包大小<xliff:g id="size">%1$s</xliff:g></string>
+    <!-- 整合备份进度页面 -->
+    <string name="title_merging">正在合并......</string>
+    <string name="title_stop_merge">停止合并</string>
+    <string name="btn_stop_merge">停止合并</string>
+    <string name="msg_merging">正在合并<xliff:g id="DESC">%1$s</xliff:g><xliff:g id="EXTRA">%2$s</xliff:g>……</string>
+    <string name="msg_merge_finished">整合备份完成</string>
+    <string name="msg_start_smart_merge">所选备份包将被整合为一个备份包。是否确认整合?</string>
+    <string name="msg_discard_merging">整合备份尚未完成，点击确定停止本次整合操作</string>
+    <string name="msg_dont_merge_app_without_apk">暂不支持整合只有应用程序数据的备份包</string>
+    <!-- 新建、恢复网络备份页面 -->
+    <string name="title_new_cloud_backup">新建云端备份</string>
+    <string name="title_restore_cloud_backup">恢复云端备份</string>
+    <string name="local_count">本地：<xliff:g id="COUNT">%1$d</xliff:g></string>
+    <string name="online_count">云端：<xliff:g id="COUNT">%1$d</xliff:g></string>
+    <string name="app_not_backuped">未备份</string>
+    <string name="app_backuped">已备份</string>
+    <string name="title_select_apps">选择应用</string>
+    <string name="tip_failed_to_get_cloud_backup_info">获取云端备份信息失败，请稍后再试</string>
+    <string name="tip_failed_to_download_cloud_db">下载云端备份数据失败</string>
+    <string name="tip_loging_in">登录中，请稍候...</string>
+    <string name="tip_fetching_cloud_backup_info">获取云端备份信息<xliff:g id="EXTRA">%1$s</xliff:g>...</string>
+    <string name="tip_authorized_out_of_date">您的登录已过期，请注销后重新登录</string>
+    <!-- 云端备份页面 -->
+    <string name="btn_start_upload">开始上传</string>
+    <string name="msg_uploading_backup">正在上传<xliff:g id="DESC">%1$s</xliff:g><xliff:g id="EXTRA">%2$s</xliff:g>……</string>
+    <string name="msg_downloading">正在下载<xliff:g id="BODY">%1$s</xliff:g><xliff:g id="EXTRA">%2$s</xliff:g></string>
+    <string name="work_progress_detail"><xliff:g id="ENTRY">%1$s</xliff:g><xliff:g id="OPERTATION">%2$s</xliff:g><xliff:g id="STATE">%3$s</xliff:g></string>
+    <string name="state_backingup"><xliff:g id="DESC">%1$s</xliff:g>备份中……</string>
+    <string name="state_restoring"><xliff:g id="DESC">%1$s</xliff:g>恢复中……</string>
+    <string name="state_uploading"><xliff:g id="DESC">%1$s</xliff:g>上传中……</string>
+    <string name="state_downloading"><xliff:g id="DESC">%1$s</xliff:g>下载中……</string>
+    <string name="state_waiting">等待中</string>
+    <string name="state_finished">已完成</string>
+    <string name="state_failed">失败</string>
+    <string name="neterror"> 网络中断</string>
+    <string name="msg_restore_successful">成功恢复<xliff:g id="COUNT">%1$s</xliff:g><xliff:g id="ENTRY">%2$s</xliff:g></string>
+    <string name="msg_restore_failed">未能恢复<xliff:g id="COUNT">%1$s</xliff:g><xliff:g id="ENTRY">%2$s</xliff:g></string>
+    <string name="msg_restore_canceled">取消恢复<xliff:g id="COUNT">%1$s</xliff:g><xliff:g id="ENTRY">%2$s</xliff:g></string>
+    <string name="count_format"><xliff:g id="COUNT">%1$d</xliff:g>个</string>
+    <string name="msg_upload_successful">成功上传<xliff:g id="COUNT">%1$s</xliff:g><xliff:g id="ENTRY">%2$s</xliff:g></string>
+    <string name="msg_upload_failed">未能上传<xliff:g id="COUNT">%1$s</xliff:g><xliff:g id="ENTRY">%2$s</xliff:g></string>
+    <string name="msg_upload_canceled">取消上传<xliff:g id="COUNT">%1$s</xliff:g><xliff:g id="ENTRY">%2$s</xliff:g></string>
+    <string name="msg_upload_backup_finished">云端备份完成</string>
+    <string name="msg_restore_online_backup_finished">云端恢复完成</string>
+    <string name="msg_no_cloud_backup_or_error">没有找到云端备份或者网络出错</string>
+    <string name="login_failed">未能连接到<xliff:g id="SERVICE">%1$s</xliff:g></string>
+    <string name="no_browser_to_login">没有浏览器，无法登录</string>
+    <!-- 备份报告页面 -->
+    <string name="title_backup_result_report">备份报告</string>
+    <string name="title_restore_result_report">恢复报告</string>
+    <string name="title_merge_result_report">合并报告</string>
+    <string name="msg_result_canceled">已取消</string>
+    <string name="msg_result_unknown_error">错误发生</string>
+    <string name="msg_result_data_corrupted">数据损坏</string>
+    <string name="msg_result_handle_contacts_failed">联系人为空或您未授予GO备份读取联系人权限</string>
+    <string name="msg_result_handle_sms_failed">短信为空或您未授予GO备份读取短信权限</string>
+    <string name="msg_result_handle_mms_failed">彩信为空或您未授予Go备份读取彩信权限</string>
+    <string name="msg_result_handle_ringtone_failed">铃声为空或您未授予Go备份读取铃声权限</string>
+    <string name="msg_result_handle_call_log_failed">通话记录为空或您未授予GO备份读取通话记录权限</string>
+    <string name="msg_result_handle_calendar_failed">日历为空或您未授予GO备份读取日历权限</string>
+    <string name="msg_result_handle_dictionary_failed">用户词典为空</string>
+    <string name="btn_reboot">重启手机</string>
+    <string name="msg_reboot_info">为了正常恢复系统桌面布局及小部件，需要立即重启您的设备</string>
+    <string name="dialog_msg_reboot">放弃立即重启设备可能导致系统桌面布局及小部件无法正常恢复，确定继续？</string>
+    <string name="msg_need_reboot">需重启设备以生效</string>
+    <!-- 批量删除页面 -->
+    <string name="title_batch_delete">批量删除</string>
+    <string name="menu_item_batch_delete">批量删除备份</string>
+    <string name="msg_delete_records">确定删除选中的记录？</string>
+    <string name="msg_wait">请稍候...</string>
+    <string name="select_all">全选</string>
+    <string name="unselect_all">取消选择</string>
+    <!-- 定时备份页面 -->
+    <string name="title_scheduled_backup">定时备份</string>
+    <string name="msg_no_schedules">无计划任务</string>
+    <string name="msg_no_active_action">无激活的计划任务</string>
+    <string name="msg_next_backup_time">下次运行时间：</string>
+    <string name="btn_new_backup_plan">新建任务</string>
+    <string name="title_edit_plan">编辑任务</string>
+    <string name="title_backup_content">动作</string>
+    <string name="title_backup_start_time">时间</string>
+    <string name="title_repeat_mode">重复</string>
+    <string name="title_advance_remind">提前提醒</string>
+    <string name="scheduled_plan_date_format"><xliff:g id="YEAR">%1$s</xliff:g>-<xliff:g id="MONTH">%2$s</xliff:g>-<xliff:g id="DAY">%3$s</xliff:g><xliff:g id="DAY_OF_WEEK">%4$s</xliff:g></string>
+    <string name="scheduled_plan_time_format"><xliff:g id="HOUR">%1$s</xliff:g>:<xliff:g id="MINUTES">%2$s</xliff:g></string>
+    <string name="scheduled_plan_full_date_format"><xliff:g id="YEAR">%1$s</xliff:g>-<xliff:g id="MONTH">%2$s</xliff:g>-<xliff:g id="DAY">%3$s</xliff:g><xliff:g id="HOUR">%4$s</xliff:g>:<xliff:g id="MINUTES">%5$s</xliff:g></string>
+    <string name="msg_delete_plan">确定删除此计划任务？</string>
+    <string name="msg_schedule_expired">该计划任务已过期！</string>
+    <string name="msg_plan_time_conflict">与其他计划任务时间冲突，请重新修改时间</string>
+    <string name="backup_type_user_data">用户数据</string>
+    <string name="backup_type_user_app">用户程序</string>
+    <string name="backup_type_system_data">系统设置</string>
+    <string name="backup_type_content">备份<xliff:g id="BACKUP_CONTENT">%1$s</xliff:g></string>
+    <string name="choose_backup_content">选择备份内容</string>
+    <!-- Root权限说明页 -->
+    <string name="root_introduction_title">Root权限说明</string>
+    <string name="root_desc_title">为什么要Root？</string>
+    <string name="root_desc_summary">1.备份应用程序数据\n\n2.可以开启静默恢复模式，隐藏应用程序安装过程</string>
+    <string name="introduction_what_is_root">Root权限是什么？</string>
+    <string name="introduction_how_to_get_root">怎样获取Root权限？</string>
+    <string name="root_state_rooted">当前手机已Root</string>
+    <string name="root_state_unrooted">当前手机未Root</string>
+    <!-- 检查更新 -->
+    <string name="title_update">检查更新</string>
+    <string name="title_update_info">更新提示</string>
+    <string name="msg_checking_update">正在检查更新，请稍候……</string>
+    <string name="msg_update_latest_version">当前已是最新版本，无需更新</string>
+    <string name="msg_update_net_error">网络错误</string>
+    <string name="btn_update_now">下载新版</string>
+    <string name="btn_update_later">以后再说</string>
+    <string name="btn_exit_app">退出应用</string>
+    <!-- 设置页面 -->
+    <string name="title_setting">GO备份设置</string>
+    <string name="category_title_update_advanced">高级版</string>
+    <string name="category_title_delete_backup">删除备份</string>
+    <string name="category_title_contacts_backup_setting">联系人备份设置</string>
+    <string name="entry_title_batch_delete_records">批量删除本地备份</string>
+    <string name="entry_title_delte_cloud_backup">删除云端备份</string>
+    <string name="entry_title_contacts_backup_setting">联系人备份设置</string>
+    <string name="entry_summary_on_contacts">只备份有电话号码的联系人</string>
+    <string name="entry_summary_off_contacts">备份所有联系人</string>
+    <string name="entry_title_merge_dup_contacts">合并重复联系人</string>
+    <string name="entry_title_contact_change_push">联系人变更提醒</string>
+    <string name="entry_summary_merge_on">恢复联系人时自动舍弃重复联系人</string>
+    <string name="entry_summary_contact_change_push">联系人有变更时提醒备份</string>
+    <string name="entry_summary_merge_off">正常恢复，可能会产生重复联系人</string>
+    <string name="entry_title_backup_contacts_icon">备份联系人头像</string>
+    <string name="entry_summary_occupied">备份内容已占用</string>
+    <string name="category_title_root_relevant">Root权限相关</string>
+    <string name="entry_title_root_introduction">Root权限说明</string>
+    <string name="entry_title_backup_restore_app_data">备份应用程序数据</string>
+    <string name="entry_title_silently_install_app">应用程序静默恢复模式</string>
+    <string name="entry_summary_backup_app_data">备份和恢复应用程序安装包及数据</string>
+    <string name="entry_summary_silently_install_app">恢复应用程序时不弹出繁琐的安装提示</string>
+    <string name="entry_summary_not_root">获取Root权限失败，无法支持此功能</string>
+    <string name="entry_summary_root_not_supported">Android 3.0以上的机器暂不支持此功能</string>
+    <string name="entry_summary_device_unsupported">该设备暂不支持此功能</string>
+    <string name="category_title_other_setting">其他设置</string>
+    <string name="entry_title_logout">注销GO帐号</string>
+    <string name="entry_title_user_center">个人中心</string>
+    <string name="entry_title_feedback">反馈问题</string>
+    <string name="entry_title_advanced_update">升级到高级版</string>
+    <string name="entry_title_about">关于GO备份</string>
+    <string name="entry_title_version_info">版本信息</string>
+    <string name="entry_title_soft_rate">软件评分</string>
+    <string name="entry_title_copyright_info">版权信息</string>
+    <string name="category_title_network_backup">网络同步账号管理</string>
+    <string name="entry_title_dropbox_backup">Dropbox账户</string>
+    <string name="entry_summary_unlogin_dropbox">点击登录</string>
+    <string name="entry_summary_currentAccount_dropbox">当前账号:</string>
+    <string name="entry_summary_change_dropbox_account">更换账户</string>
+    <string name="entry_summary_soft_rate">在电子市场上为GO备份评分</string>
+    <string name="entry_summary_copyright_info">3G门户 Copyright © 2004-2011 版权所有</string>
+    <string name="go_backup_noEmailApplication">未找到邮件发送程序！</string>
+    <string name="title_logout">注销</string>
+    <string name="msg_logout">确定注销GO帐号？</string>
+    <string name="msg_account_has_logouted">账号已经注销了</string>
+    <string name="msg_account_logout_successfully">账号注销成功</string>
+    <string name="msg_account_logout_failed">账号注销失败</string>
+    <string name="title_logout_from_dropbox">确认与Dropbox断开连接？</string>
+    <string name="msg_delete_cloud_backup">将清除所有云端备份，确认继续？</string>
+    <string name="msg_failed_to_delete_cloud_backup">删除云端备份失败 !</string>
+    <string name="msg_delete_cloud_backup_successfully">成功删除云端备份 !</string>
+    <string name="msg_cloud_backup_had_been_deleted">云端备份已删除!</string>
+    <string name="msg_is_advanced">当前已为高级版</string>
+    <string name="title_select_cloud_service_provider">选择同步网盘</string>
+    <string name="cloud_service_description">云端备份支持Dropbox和Google Drive</string>
+    <string name="preference_text_format"><xliff:g id="TEXT">%1$s</xliff:g> ></string>
+    <string name="click_to_login">点击登录<xliff:g id="ACCOUNT_TYPE">%1$s</xliff:g></string>
+    <string name="cloud_service_account"><xliff:g id="ACCOUNT_TYPE">%1$s</xliff:g> 账号</string>
+    <string name="title_logout_from_cloud_service">确定注销登录？</string>
+    <string name="category_title_setting_backup_path">备份路径设置</string>
+    <string name="entry_title_setting_backup_path">选择本地备份路径</string>
+    <string name="entry_summary_delete_all_backup">批量删除本地所有备份路径下的备份包</string>
+    <string name="entry_summary_select_path_no_sd">无法检测到<xliff:g id="INTERNAL_STORAGE">%1$s</xliff:g>或<xliff:g id="EXTERNAL_STORAGE">%2$s</xliff:g></string>
+    <string name="entry_summary_select_path_both">选择备份到<xliff:g id="INTERNAL_STORAGE">%1$s</xliff:g>或<xliff:g id="EXTERNAL_STORAGE">%2$s</xliff:g></string>
+    <string name="entry_summary_select_path_internal_storage">内置存储\u003E</string>
+    <string name="entry_summary_select_path_external_storage">外置存储\u003E</string>
+    <string name="msg_setting_select_path_title">本地备份路径</string>
+    <string name="msg_internal_storage">手机内置USB存储器</string>
+    <string name="msg_external_storage">外置SD卡</string>
+
+    <!-- BaseActivity -->
+    <string name="msg_no_sd">当前备份路径已被移除或损坏，请检查</string>
+    <string name="msg_backup_path_change_tips"><xliff:g id="OLD_STORAGE">%1$s</xliff:g>被移除或已损坏，备份路径已被切换到<xliff:g id="NEW_STORAGE">%2$s</xliff:g></string>
+    <string name="msg_reset_backup_path_tips">备份路径已被切换到<xliff:g id="RESET_STORAGE">%1$s</xliff:g></string>
+    <!-- 错误报告 -->
+    <string name="crash_subject">GO备份错误反馈</string>
+    <string name="crash_notif_ticker_text">GO备份意外错误, 请发送一个错误报告...</string>
+    <string name="crash_notif_title">GO备份发生意外错误...</string>
+    <string name="crash_notif_text">请单击这里帮助我们修复这个问题</string>
+    <string name="crash_dialog_title">GO备份错误报告</string>
+    <string name="crash_dialog_text">意外错误导致程序停止，我们需要您的反馈让GO备份变得更好，您的反馈不会包含个人信息</string>
+    <string name="crash_yes">告诉我们</string>
+    <string name="crash_no">取消操作</string>
+    <string name="crash_mailtt">GO备份错误报告:ver_name:<xliff:g id="VER_NAME">%1$s</xliff:g> ver_code:<xliff:g id="VER_CODE">%2$d</xliff:g></string>
+    <string name="crash_error_reportemail">gobackupbugreport@gmail.com</string>
+    <string name="crash_root_dir">GOBackup</string>
+    <!-- 引导页 -->
+    <string name="tutorial_merge_title">整合备份</string>
+    <string name="tutorial_merge_tips1">整合您所选的备份包，轻松拥有最新最全的备份记录</string>
+    <string name="tutorial_merge_tips2">整合过程不删除现有备份记录，并自动去除重复项</string>
+    <string name="tutorial_ok">我知道了</string>
+    <!-- 收费升级页 -->
+    <string name="pay_update_title">高级版介绍</string>
+    <string name="help_url" formatted="false">http://market.android.com/support/bin/answer.py?answer=1050566&amp;hl=%lang%&amp;dl=%region%</string>
+    <string name="pay_title_1">云端备份</string>
+    <string name="pay_title_2">超大备份包</string>
+    <string name="pay_title_3">更多备份项</string>
+    <string name="pay_title_4">可单独备份程序数据</string>
+    <string name="pay_title_5">备份包可编辑</string>
+    <string name="pay_title_6">冻结程序</string>
+    <string name="pay_detail_1">将备份内容同步至网盘，安全便捷</string>
+    <string name="pay_detail_2">本地备份包无200M限制</string>
+    <string name="pay_detail_3">备份系统设置，如铃声、壁纸，满足您的个性化需求</string>
+    <string name="pay_detail_4">Root模式下，可单独备份应用程序的数据</string>
+    <string name="pay_detail_5">本地备份包内容可编辑，更自由地管理您的备份包</string>
+    <string name="pay_detail_6">支持冻结程序，减少耗电和内存占用。</string>
+    <string name="learn_more">了解更多</string>
+    <string name="cannot_connect_title">无法连接市场</string>
+    <string name="cannot_connect_message">您的装置无法连接上谷歌市场</string>
+    <string name="billing_not_supported_title">无法购买</string>
+    <string name="billing_not_supported_message">您的装置不支持应用内支付机制</string>
+    <string name="response_code_fail_title">请求失败</string>
+    <string name="btn_upgrade">升级到高级版</string>
+    <!-- 这个测试用的 -->
+    <string name="response_code_fail_message">连接电子市场失败。</string>
+    <string name="cannot_bind_to_service_title">不能绑定到谷歌市场</string>
+    <string name="cannot_bind_to_service_message">请确认你的设备上已经安装或者是最新版本的谷歌市场</string>
+    <string name="purchase_tip_title">升级到高级版?</string>
+    <string name="purchase_tip_message">1.云端备份。将您手机中的资料同步至Dropbox，确保安全。方便随时找回。\n\n 2。
+         超大备份包。本地备份包大小无限制</string>
+    <string name="fail_market_connect">连接电子市场失败或者购买失败，请稍后重试</string>
+    <string name="pay_validate">正在验证你的付费状态</string>
+    <string name="purchase_success_title">购买成功</string>
+    <string name="purchase_success_message">您已获得以下功能：\n \n ● 云端备份功能  \n ● 备份包大小无限制 \n ● 更多的备份项：壁纸,铃声,系统桌面布局,Wi-Fi接入点</string>
+    <string name="refunded_success_title">退款成功</string>
+    <string name="refunded_success_message">以下功能已被取消：\n \n ● 云端备份功能  \n ● 备份包大小无限制 \n ● 更多的备份项：壁纸,铃声,系统桌面布局,Wi-Fi接入点</string>
+    <string name="summit">确定</string>
+    <string name="advanced_explain">● 云端备份功能  \n ● 备份包大小无限制 \n ● 更多的备份项：壁纸,铃声,系统桌面布局,Wi-Fi接入点</string>
+    <string name="completed_request">恢复完成</string>
+    <string name="msg_redo_cloud_backup_task">上次还有未完成的网络备份任务，是否继续？</string>
+    <string name="msg_redo_cloud_restore_task">上次还有未完成的网络恢复任务，是否继续？</string>
+    <string name="continue_last_task">继续上次未完成任务</string>
+    <string name="too_large_need_pay">备份包大小超过200M，需要购买高级版。是否需要购买？</string>
+    <string name="backup_system_need_pay">备份系统设置是高级版功能，是否购买？</string>
+    <string name="restore_system_need_pay">恢复系统设置是高级版功能，是否购买？</string>
+    <string name="purchase_title">购买提示</string>
+    <string name="open_wifi">开启wifi</string>
+    <string name="backup_advice_of_wifi">云端备份需要消耗流量，建议使用wifi</string>
+    <string name="restore_advice_of_wifi">云端恢复需要消耗流量，建议使用wifi</string>
+    <string name="direct_upload">直接上传</string>
+    <string name="direct_restore">直接恢复</string>
+    <string name="uploading_choose_to_stop">备份记录仍在上传中，是否停止上传？</string>
+    <string name="download_choose_to_stop">备份记录仍在下载中，是否停止下载 ?</string>
+    <string name="function_need_to_purchase">使用高级功能，需要付费，是否购买？</string>
+    <string name="system_data_need_to_puchase">备份系统数据是高级功能，需要付费，是否购买？</string>
+    <string name="timing_large_need_pay">定时备份大小超过200M，需要付费，是否购买？</string>
+    <string name="free_user_limit">免费用户限制</string>
+    <string name="advanced_of_function">高级版功能</string>
+    <string name="purchase_yes_or_no">您的定时备份包大小超过200M，需要购买高级版，是否确认购买？ \n\n*取消后将暂时为您关闭定时备份</string>
+    <string name="notification_contacts_changed_title">您的联系人有修改</string>
+    <string name="notification_contacts_changed_message">是否备份？</string>
+    <!-- 应用程序冻结页面 -->
+    <string name="app_tools">工具箱</string>
+    <string name="freezable_app_info"><xliff:g id="COUNT">%1$d</xliff:g>个应用可冻结</string>
+    <string name="unfreezable_app_info">已冻结<xliff:g id="COUNT">%1$d</xliff:g>个应用</string>
+    <string name="msg_caculating">正在计算...</string>
+    <string name="msg_no_app_to_freeze">没有可冻结的应用程序</string>
+    <string name="msg_no_app_to_unfreeze">没有可解冻的应用程序</string>
+    <string name="title_freeze_app">冻结应用程序</string>
+    <string name="title_unfreeze_app">解冻应用程序</string>
+    <string name="freezing_apps">正在冻结...</string>
+    <string name="unfreezing_apps">正在解冻...</string>
+    <string name="msg_sorting">正在排序...</string>
+    <string name="msg_refresh_app_list">正在刷新应用程序列表...</string>
+    <string name="btn_freeze_app">冻结<xliff:g id="EXTRA">%1$s</xliff:g></string>
+    <string name="btn_unfreeze_app">解冻<xliff:g id="EXTRA">%1$s</xliff:g></string>
+    <string name="freeze_app_result">成功冻结应用程序<xliff:g id="COUNT">%1$d</xliff:g>个</string>
+    <string name="unfreeze_app_result">成功解冻应用程序<xliff:g id="COUNT">%1$d</xliff:g>个</string>
+    <string name="help_short_freeze_app">建议将较少使用的应用程序冻结，以减少耗电和内存占用</string>
+    <string name="tutorial_freeze_app">被冻结的应用会被隐藏并无法使用，不会在后台自动启动，但仍会占用存储空间，解冻后可完全恢复。</string>
+
+    <string-array name="months">
+        <item>一月</item>
+        <item>二月</item>
+        <item>三月</item>
+        <item>四月</item>
+        <item>五月</item>
+        <item>六月</item>
+        <item>七月</item>
+        <item>八月</item>
+        <item>九月</item>
+        <item>十月</item>
+        <item>十一月</item>
+        <item>十二月</item>
+    </string-array>
+    <string-array name="week">
+        <item>星期六</item>
+        <item>星期天</item>
+        <item>星期一</item>
+        <item>星期二</item>
+        <item>星期三</item>
+        <item>星期四</item>
+        <item>星期五</item>
+    </string-array>
+    <string-array name="week_short">
+        <item>周六</item>
+        <item>周日</item>
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+    </string-array>
+    <string-array name="backup_sort_type_desc">
+        <item>按应用名称排序</item>
+        <item>按应用大小排序</item>
+        <item>按安装时间排序</item>
+    </string-array>
+    <string-array name="online_backup_sort_type_desc">
+        <item>按应用名称排序</item>
+        <item>按应用大小排序</item>
+    </string-array>
+    <string-array name="restore_sort_type_desc">
+        <item>按应用名称排序</item>
+        <item>按应用大小排序</item>
+        <item>按安装状态排序</item>
+    </string-array>
+    <string-array name="schduled_backup_content_paid">
+        <item>备份用户数据</item>
+        <item>备份用户程序</item>
+        <item>备份系统设置</item>
+    </string-array>
+    <string-array name="schduled_backup_content_free">
+        <item>备份用户数据</item>
+        <item>备份用户程序</item>
+    </string-array>
+    <string-array name="repeat_modes">
+        <item>一次性</item>
+        <item>每天</item>
+        <item>每周</item>
+        <item>每月</item>
+    </string-array>
+    <string-array name="repeat_modes_details">
+        <item>一次性活动</item>
+        <item>每天</item>
+        <item>每周（每周的<xliff:g id="DAY_OF_WEEK">%1$s</xliff:g>）</item>
+        <item>每月（<xliff:g id="DAY_OF_MONTH">%2$s</xliff:g>日）</item>
+    </string-array>
+    <string-array name="advance_remind_time">
+        <item>0分钟</item>
+        <item>1分钟</item>
+        <item>5分钟</item>
+        <item>10分钟</item>
+        <item>15分钟</item>
+        <item>20分钟</item>
+        <item>25分钟</item>
+        <item>30分钟</item>
+        <item>45分钟</item>
+        <item>1小时</item>
+    </string-array>
+    <string-array name="advance_remind_time_toast">
+        <item>从现在起不到1分钟后执行定时备份操作</item>
+        <item>从现在起<xliff:g id="DAYS">%1$s</xliff:g>后执行定时备份操作</item>
+        <item>从现在起<xliff:g id="HOURS">%2$s</xliff:g>后执行定时备份操作</item>
+        <item>从现在起<xliff:g id="DAYS">%1$s</xliff:g><xliff:g id="HOURS">%2$s</xliff:g>后执行定时备份操作</item>
+        <item>从现在起<xliff:g id="MINUTES">%3$s</xliff:g>后执行定时备份操作</item>
+        <item>从现在起<xliff:g id="DAYS">%1$s</xliff:g><xliff:g id="MINUTES">%3$s</xliff:g>后执行定时备份操作</item>
+        <item>从现在起<xliff:g id="HOURS">%2$s</xliff:g><xliff:g id="MINUTES">%3$s</xliff:g>后执行定时备份操作</item>
+        <item>从现在起<xliff:g id="DAYS">%1$s</xliff:g><xliff:g id="HOURS">%2$s</xliff:g><xliff:g id="MINUTES">%3$s</xliff:g>后执行定时备份操作</item>
+    </string-array>
+    <string-array name="backupable_app_state">
+        <item>未备份</item>
+        <item>可更新</item>
+        <item>已备份</item>
+    </string-array>
+    <string-array name="app_install_state">
+        <item>未安装</item>
+        <item>可更新</item>
+        <item>已安装</item>
+    </string-array>
+    <string-array name="app_state">
+        <item>未安装</item>
+        <item>已安装</item>
+    </string-array>
+    
+    <string-array name="app_backup_type">
+        <item>备份安装包+数据</item>
+        <item>仅备份安装包</item>
+        <item>仅备份数据</item>
+    </string-array>
+    
+    <string-array name="app_restore_type">
+        <item>恢复程序+数据</item>
+        <item>仅恢复程序</item>
+        <item>仅恢复数据</item>
+    </string-array>
+    
+    <string-array name="freeze_app_sort_types">
+       <item>按应用名称排序</item>
+       <item>按安装时间排序</item>
+    </string-array>
+
+    <string name="one_day">1 天</string>
+    <string name="days"><xliff:g id="DAYS">%s</xliff:g> 天</string>
+    <string name="one_hour">1 小时</string>
+    <string name="hours"><xliff:g id="HOURS">%s</xliff:g> 小时</string>
+    <string name="one_minute">1 分钟</string>
+    <string name="minutes"><xliff:g id="MINUTES">%s</xliff:g> 分钟</string>
+
+</resources>

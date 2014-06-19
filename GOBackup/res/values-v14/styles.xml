@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AdaptiveTheme" parent="@android:style/Theme.Holo"></style>
+
+    <style name="AdaptiveTheme.NoTitleBar" parent="@android:style/Theme.Holo.NoActionBar" />
+
+    <style name="AdaptiveLightTheme.NoTitleBar" parent="@android:style/Theme.Holo.Light.NoActionBar" />
+
+    <style name="AdaptiveProgressBarStyleHorizontal" parent="@android:style/Widget.Holo.ProgressBar.Horizontal"></style>
+
+    <style name="AdaptiveActivityTheme" parent="@android:style/Theme.Holo.Light.Panel"></style>
+
+    <style name="AlertDialogTitleColor" parent="@android:attr/windowTitleStyle">
+        <item name="android:textColor">@color/alertdialog_title_color</item>
+    </style>
+    
+    <style name="ProgressDialogText" parent="@android:style/TextAppearance.Holo.Widget.TextView"></style>
+
+</resources>

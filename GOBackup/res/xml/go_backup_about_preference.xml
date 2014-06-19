@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/entry_title_about" >
+<!--  
+    <PreferenceCategory android:title="@string/entry_title_about" >
+ -->       <Preference
+            android:key="@string/key_version_info"
+            android:title="@string/entry_title_version_info" />
+        <Preference
+            android:key="@string/key_soft_rate"
+            android:summary="@string/entry_summary_soft_rate"
+            android:title="@string/entry_title_soft_rate" />
+        <Preference
+            android:key="@string/key_copyright_info"
+            android:summary="@string/entry_summary_copyright_info"
+            android:title="@string/entry_title_copyright_info" />
+  <!--    </PreferenceCategory>
+-->
+</PreferenceScreen>

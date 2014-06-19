@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff3f3f3"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/record_detail_title_bar" />
+
+    <ExpandableListView
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000"
+        android:childDivider="@drawable/listview_divider"
+        android:divider="@drawable/listview_divider"
+        android:drawSelectorOnTop="false"
+        android:groupIndicator="@drawable/expander_group"
+        android:indicatorLeft="8dp"
+        android:indicatorRight="30dp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@drawable/footer_bar_bg"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp" >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/operation_btn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stateful_green_btn"
+                android:gravity="center"
+                android:minHeight="0dp"
+                android:textColor="@color/stateful_btn_text_color"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/tag_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="3dp"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

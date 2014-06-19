@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" 
+        android:layout_marginTop="29.3dip" android:src="@drawable/go_account_launcher"
+        android:layout_marginLeft="28dip" android:layout_marginRight="28dip"/>
+    
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" 
+        android:layout_marginTop="76.6dip" android:textSize="20sp" 
+        android:layout_marginLeft="20dip" android:layout_marginRight="20dip"
+        android:text="@string/advanced_explain"/>
+    
+    <Button android:id="@+id/advanced_submit" android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" android:text="@string/summit"
+        android:layout_gravity="center|bottom"
+        />
+
+</LinearLayout>

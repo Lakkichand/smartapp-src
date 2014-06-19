@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AdaptiveTheme" parent="@android:style/Theme"></style>
+
+    <style name="AdaptiveTheme.NoTitleBar" parent="@android:style/Theme.NoTitleBar" />
+
+    <style name="AdaptiveLightTheme.NoTitleBar" parent="@android:style/Theme.Light.NoTitleBar" />
+
+    <style name="AdaptiveProgressBarStyleHorizontal" parent="@android:style/Widget.ProgressBar.Horizontal"></style>
+
+    <style name="AdaptiveTheme.Translucent" parent="android:style/Theme.Translucent">
+        <item name="android:windowBackground">@drawable/transparent_background</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AdaptiveActivityTheme" parent="@android:style/Theme.Translucent.NoTitleBar"></style>
+
+    <!-- 通知栏2.2系统字体颜色 -->
+
+    <style name="NotificationText">
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+    </style>
+
+    <style name="NotificationTitle">
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AlertDialogTitleColor" parent="@android:attr/windowTitleStyle">
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+    </style>
+    
+    <style name="ProgressDialogText" parent="@android:style/TextAppearance.Medium.Inverse"></style>
+
+</resources>

@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="71dp"
+    android:background="@drawable/widget_backgroup" >
+
+    <LinearLayout
+        android:id="@+id/cloud_function_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <!-- 备份时间与备份内容 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/allbackup"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/backupinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:text="@string/msg_no_backups"
+                    android:textColor="#585757"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/separator"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/widget_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="0"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp" >
+
+                    <TextView
+                        android:id="@+id/backupinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/backupcontents"
+                        android:textColor="#585757"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <ImageView
+                            android:id="@+id/contacts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/widget_contact" />
+
+                        <ImageView
+                            android:id="@+id/sms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/widget_sms" />
+
+                        <ImageView
+                            android:id="@+id/call_log"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/widget_call_log" />
+
+                        <ImageView
+                            android:id="@+id/mms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="1"
+                            android:paddingLeft="5dp"
+                            android:src="@drawable/widget_mms" />
+
+                        <ImageView
+                            android:id="@+id/widget_more"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="2dp"
+                            android:src="@drawable/widget_more" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 一键备份 -->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0" >
+
+            <ImageView
+                android:id="@+id/indicate_line"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0"
+                android:background="@drawable/widget_indicate_line" />
+
+            <FrameLayout
+                android:id="@+id/fastOperatrionbackupView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="6" >
+
+                <ImageView
+                    android:id="@+id/fast_operation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/light_wideget_backup" />
+
+                <LinearLayout
+                    android:id="@+id/progressbarView"
+                    android:layout_width="42dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <ProgressBar
+                        android:id="@+id/myProgressBar1"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="8dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/widget_progress"
+                        android:max="100"
+                        android:orientation="horizontal"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progresshorizontaldrawable" />
+
+                    <TextView
+                        android:id="@+id/progeressValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="4dp"
+                        android:textColor="#6b6a6a"
+                        android:textSize="15sp" >
+                    </TextView>
+                </LinearLayout>
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/breakline"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0"
+                android:src="@drawable/breakline" />
+        </LinearLayout>
+
+        <!-- 箭头 -->
+
+        <LinearLayout
+            android:id="@+id/netbackup"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/widget_backup" />
+        </LinearLayout>
+        <!--
+      android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+        -->
+
+    </LinearLayout>
+
+    <!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cloud_function_frame"
+    android:layout_width="fill_parent"
+    android:layout_height="59dp"
+    android:background="@drawable/widget_backgroup"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="7dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/allbackup"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/backupinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:text="上次备份时间"
+                android:textColor="#585757"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:id="@+id/separator"
+                android:layout_width="170dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/widget_line" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="31dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/backupinfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:text="备份内容："
+                    android:textColor="#585757"
+                    android:textSize="13sp" />
+
+                <RelativeLayout
+                    android:id="@+id/allbackupContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/backupinfo"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/contacts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:src="@drawable/widget_contact" />
+
+                    <ImageView
+                        android:id="@+id/sms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toRightOf="@+id/contacts"
+                        android:paddingLeft="5dp"
+                        android:src="@drawable/widget_sms" />
+
+                    <ImageView
+                        android:id="@+id/call_log"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toRightOf="@+id/sms"
+                        android:paddingLeft="5dp"
+                        android:src="@drawable/widget_call_log" />
+
+                    <ImageView
+                        android:id="@+id/mms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toRightOf="@+id/call_log"
+                        android:paddingLeft="5dp"
+                        android:src="@drawable/widget_mms" />
+
+                    <ImageView
+                        android:id="@+id/widget_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/mms"
+                        android:layout_toRightOf="@+id/mms"
+                        android:paddingLeft="2dp"
+                        android:src="@drawable/widget_more" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/indicate_line"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:src="@drawable/widget_indicate_line" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fastOperatrionbackupView"
+        android:layout_width="54dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0" >
+
+        <ImageView
+            android:id="@+id/fast_operation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/widget_fast_operater" />
+
+        <LinearLayout
+            android:id="@+id/progressbarView"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ProgressBar
+                android:id="@+id/myProgressBar1"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/widget_progress"
+                android:max="100"
+                android:orientation="horizontal"
+                android:progress="0"
+                android:progressDrawable="@drawable/progresshorizontaldrawable" />
+
+            <TextView
+                android:id="@+id/progeressValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:textColor="#6b6a6a"
+                android:textSize="15sp" >
+            </TextView>
+        </LinearLayout>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/breakline"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="0"
+        android:src="@drawable/breakline" />
+
+    <ImageView
+        android:id="@+id/netbackup"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="0"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/widget_backup" />
+    -->
+    <!--
+      android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+   
+
+</LinearLayout>
+    -->
+
+</FrameLayout>

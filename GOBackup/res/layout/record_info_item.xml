@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingRight="10dp" >
+
+    <!-- icon -->
+
+<!--     <ImageView
+        android:id="@+id/info_icon_ellipsis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_ellipsis"
+        android:scaleType="center"
+        android:visibility="gone" /> -->
+
+    <ImageView
+        android:id="@+id/info_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_contacts"
+        android:scaleType="center" />
+
+    <!-- data -->
+
+    <TextView
+        android:id="@+id/info_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_marginLeft="1dp"
+        android:textColor="#e5535353"
+        android:textSize="14sp" />
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="go_account_user_authority">应用需要使用到以下权限：</string>
+    <string name="go_account_ok">确定</string>
+    <string name="go_account_cancel">取消</string>
+    
+    <!-- 错误信息 -->
+    <string name="go_account_server_error">连接网络超时，请稍后重试</string>
+    <string name="go_account_json_parse_error">登陆已过期，请重新登陆</string>
+    <string name="go_account_another_error">其他错误</string>
+    <string name="go_account_password_error">用户名密码错误</string>
+    <string name="go_account_existed_error">账号已存在</string>
+    <string name="go_account_accountNot_exist_error">账户不存在</string>
+    <string name="go_account_accountMail_notSet_error">账户未设置邮箱信息</string>
+    <string name="go_account_permission_fail_error">授权失败</string>
+    <string name="go_account_notPermission_error">没有权限</string>
+    <string name="go_account_email_incorrect">邮箱格式不正确</string>
+    <string name="go_account_resetpassword_error">尚未登录GO账号,不能修改密码</string>
+    <string name="go_account_resetpassword_fail">密码重置失败</string>
+    <string name="go_account_resetpassword_success">密码重置成功，请查收您注册邮箱中重置后的密码</string>
+
+    <!-- 登录界面 -->
+    <string name="go_account_backText">返回</string>
+    <string name="go_account_loginEmail">账号邮箱</string>
+    <string name="go_account_loginPassword">密码</string>
+    <string name="go_account_login">登录</string>
+    <string name="go_account_forgetPassword">忘记密码?</string>
+    <string name="go_account_email_null">请输入邮箱</string>
+    <string name="go_account_password_null">请输入密码!</string>
+    <string name="go_acount_no_account">没有GO账号?</string>
+    <string name="go_account_account_msg">请输入您的账号邮箱</string>
+    <string name="go_account_password_msg">请输入您的密码</string>
+    
+    <!-- 忘记密码 -->
+    <string name="go_account_get_password">找回密码</string>
+	
+	<!-- 注册界面 -->
+	<string name="go_account_login_sys">登录</string>
+    <string name="go_account_register_email_null">您没有输入邮箱地址!</string>
+    <string name="go_account_register">GO账号注册</string>
+    <string name="go_account_register_email">注册邮箱</string>
+    <string name="go_account_register_petname">用户名</string>
+    <string name="go_account_register_password">密码(6-16位字符)</string>
+    <string name="go_account_register_show_password">显示密码</string>
+    <string name="go_account_button">注册</string>
+    <string name="go_account_register_email_msg">请输入您常用的邮箱</string>
+    <string name="go_account_register_petname_msg">您的昵称</string>
+    <string name="go_account_register_password_msg">6-16位,数字,大小写字母</string>
+    <string name="go_account_register_user_tip">创建账号表明您同意并遵守</string>
+    <string name="go_account_register_and">和</string>
+    <string name="go_account_brower_user">用户协议</string>
+    <string name="go_account_brower_privacy">隐私策略</string>
+    <string name="go_account_have_account">已有账号?</string>
+    <string name="go_account_register_password_null">您没有输入密码</string>
+    <string name="go_account_register_password_less_than_six">密码字数少于6个字符</string>
+    <string name="go_account_register_password_lang_than_limit">密码的字数超过了字符限制!</string>
+    <string name="go_account_register_petname_null">您没有输入昵称</string>
+    <string name="go_account_register_petname_long_than_limit">昵称的字数超过了字符限制!</string>
+    <string name="go_account_network_not_available">没有可用网络!</string>
+    
+    <!-- 修改密码 -->
+    <string name="go_account_modify_password">修改密码</string>
+    <string name="go_account_modify_password_null">尚未登录GO账号,不能修改密码!</string>
+    
+    <!-- 加载框 -->
+    <string name="go_account_loading_title">正在加载......</string>
+    <string name="go_account_loading_text_register">正在为您注册...</string>
+    <string name="go_account_loading_text_login">正在为您登录...</string>
+    
+    <!-- 个人中心  -->
+    <string name="go_account_usercenter">个人中心</string>
+    <string name="go_account_emailvalidate">验证邮箱</string>
+    <string name="go_account_emailreset">修改邮箱</string>
+    <string name="go_account_logout">注销</string>
+    <string name="network_setting">网络设置</string>
+</resources>

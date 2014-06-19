@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- 整合备份 -->
+    <string name="beginmerge">Start to merge</string>
+    <!-- 整合备份end -->
+
+
+    <!-- widget -->
+    <string name="widget_name">GOバックアップ(4x1)</string>
+    <string name="nobackupentriesselected">バックアップする内容を選択してください</string>
+    <string name="backupcontents">内容:</string>
+    <string name="msg_backup_failed">バックアップ失敗</string>
+    <string name="msg_backuping">バックアップしているところから、後で再試行してください</string>
+    <string name="last_backup_time">前回のバックアップ：</string>
+    <!-- widget end -->
+
+
+    <!-- 设置 -->
+    <string name="setting">設定</string>
+    <string name="help">ヘルプ</string>
+    <string name="feedback">フィードバック</string>
+    <string name="about">関連情報</string>
+    <string name="senior">高級バージョン</string>
+    <string name="help_name">ヘルプ</string>
+    <!-- 设置 -->
+
+    <string name="app_name">GOバックアップ</string>
+    <string name="delete">削除</string>
+    <string name="cancel">キャンセル</string>
+    <string name="pause">ポーズ</string>
+    <string name="resume">続ける</string>
+    <string name="restore">復元</string>
+    <string name="ok">はい</string>
+    <string name="sure">確認</string>
+    <string name="finish">完了</string>
+    <string name="yes">はい</string>
+    <string name="no">いいえ</string>
+    <string name="save">保存</string>
+    <string name="discard">捨てる</string>
+    <string name="attention">通知</string>
+    <string name="msg_loading">読み込み中…</string>
+    <string name="msg_no_record_to_merge">バックアップパッケージは２つ未満です。マージすることができません。</string>
+    <string name="msg_no_record_to_delete">削除されるバックアップレコードはありません</string>
+    <string name="msg_delete_record">このレコードを削除しますか。</string>
+    <string name="alert_dialog_title">アラート</string>
+    <string name="contacts">連絡先</string>
+    <string name="sms">ショートメール</string>
+    <string name="mms">カラーメール</string>
+    <string name="call_log">通話履歴</string>
+    <string name="image">写真</string>
+    <string name="group_user_image">写真</string>
+    <string name="calendar">カレンダ</string>
+    <string name="user_dictionary">ユーザー辞書</string>
+    <string name="wifi_access_points">wifiアクセスポイント</string>
+    <string name="golauncher_setting">GOランチャー設定</string>
+    <string name="launcher_layout">システムレイアウト</string>
+    <string name="wallpaper">壁紙</string>
+    <string name="ringtone">サウンド</string>
+    <string name="applications">アプリ</string>
+    <string name="bookmark">ブラウザーしおり</string>
+    <string name="group_system_data">システム設定</string>
+    <string name="group_system_app">システムアプリ</string>
+    <string name="group_user_data">ユーザーデータ</string>
+    <string name="group_user_app">ユーザーアプリ</string>
+    <string name="database_file">データベースファイル</string>
+    <string name="export_contacts">連絡先エクスポート</string>
+    <string name="export_sms">メッセージエクスポート</string>
+    <string name="root">ルート</string>
+    <string name="unroot">アンルート</string>
+    <string name="unavailable">利用できません</string>
+    <string name="dropbox_backup_path">App/GO Backup<xliff:g id="PATH">%1$s</xliff:g></string>
+    <!-- 启动页面 -->
+    <string name="feature_introductioin_1">リアルタイムでデータの安全を保証</string>
+    <string name="feature_introductioin_2">安定で早くデータをバックアップ</string>
+    <string name="feature_introductioin_3">クラウドバックアップ、いつでもどこでも</string>
+    <string name="btn_create_account">GOアカウントを新規作成</string>
+    <string name="btn_login">ログオン</string>
+    <!-- 主界面 -->
+    <string name="btn_new_backup">バックアップを新規作成</string>
+    <string name="btn_restore">バックアップを復元</string>
+    <string name="main_label_current_user">カレントユーザー: </string>
+    <string name="sd_card_unavailable">SDカードは利用できません</string>
+    <string name="dialog_title_operation">操作</string>
+    <string name="no_backup_record_prompt">当面アプリはありません</string>
+    <string name="prompt_tap_to_backup">タップしてバックアップを新規作成</string>
+    <string name="prompt_tap_to_restore">タップしてデータやアプリを復元</string>
+    <string name="root_tab_prompt">”アンルートユーザーモード実行中</string>
+    <string name="title_confirm_export">エクスポート確認</string>
+    <string name="msg_export_contacts">にバックアップされた連絡先をエクスポート</string>
+    <string name="msg_export_sms">にバックアップされたメッセージをエクスポート</string>
+    <string name="msg_export_successfully">エクスポート成功</string>
+    <string name="msg_export_failed">エクスポート失敗！</string>
+    <string name="msg_last_backup_time">前回のバックアップの日時：</string>
+    <string name="msg_backup_nums">つのバックアップ</string>
+    <string name="title_backup_path">バックアップパス：</string>
+    <string name="title_sd_card_storage">SDカード：</string>
+    <string name="msg_no_backups">バックアップはありません</string>
+    <string name="msg_sd_card_unmounted">SDカードはアンマウント</string>
+    <string name="title_backup_time">バックアップ日時：</string>
+    <string name="msg_root_user_alert">！目下携帯の状態： <xliff:g id="STATE">%1$s</xliff:g>\n\n GOバックアップにルート権を授与した後：\n\n1.アプリデータをバックアップできる\n2.有料ダウンロードアプリをバックアップ/復元（保護されたアプリ）\n3.消音アプリ</string>
+    <string name="msg_unroot_user_alert">！目下携帯の状態：<xliff:g id="STATE">%1$s</xliff:g>\n\n以下のことができる \n1.連絡先、メッセージ、通話履歴などをバックアップ/復元\n2.インストールされたアプリをバックアップ/復元\n\n以下のことができない\n1.アプリデータをバックアップ\n2. 有料ダウンロードアプリをバックアップ/復元（保護されたアプリ）\n3.消音アプリ</string>
+    <string name="msg_backup_merged">バックアップをマージ</string>
+    <string name="msg_update_old_backup">バックアップアップデート中...</string>
+    <string name="msg_limit_record">バックアップの上限は5つ。5つ以下を削除してからバックアップを新規作成できる</string>
+    <string name="btn_limit_record_manage_record">バックアップ管理</string>
+    <string name="btn_web_new_backup">クラウドバックアップを新規作成</string>
+    <string name="btn_web_restore">クラウドバックアップを復元</string>
+    <string name="cloud_backup_tip">クラウドバックアップの内容を<xliff:g id="SERVICE">%1$s</xliff:g>にアップロード</string>
+    <string name="local_backup">本地バックアップ</string>
+    <string name="cloud_backup">雲バックアップ</string>
+    <string name="msg_dropbox_loged_in">Dropboxはログオン</string>
+    <string name="main_net_no_data">データはありません</string>
+    <string name="sign_in">ログオン</string>
+    <string name="account_error">アカウントはログオン時エラーが起こりました。ログオフしてから、再度ログオンしてみてください。</string>
+    <!-- 新建备份页面 -->
+    <string name="title_sort_apps">アプリのソート方式</string>
+    <string name="title_new_backup">バックアップを新規作成</string>
+    <string name="msg_backup_authorize_root">バックアップシステム/アプリデータにルート権の授与が必要です。</string>
+    <string name="btn_authorize">許可</string>
+    <string name="btn_refuse">拒絶</string>
+    <string name="msg_backup_unsupport_su">ルート権取得に問題があります。バックアップできません。改めてルートしてみてください。</string>
+    <string name="msg_backup_unauthorize_root">ルート権取得ができません。アプリパッケージのみバックアップできます。システム/アプリデータはバックアップできません。</string>
+    <string name="msg_backup_root_failed">ルート権取得が禁止されます。アプリパッケージのみバックアップできます。システム/アプリデータはバックアップできません。</string>
+    <string name="btn_start_backup">バックアップ開始</string>
+    <!-- 恢复备份页面 -->
+    <string name="title_restore">バックアップを復元</string>
+    <string name="btn_start_restore">復元開始</string>
+    <string name="msg_restore_authorize_root">システム/アプリデータの復元にルート権の授与が必要です。</string>
+    <string name="msg_restore_unsupport_su">ルート権取得に問題があります。システム/アプリデータを復元します。改めてルートしてみてください。</string>
+    <string name="msg_restore_unauthorize_root">ルート権取得ができません。システム/アプリデータを復元します。</string>
+    <string name="msg_restore_root_failed">ルート権取得が禁止されます。システム/アプリデータは復元できません。</string>
+    <string name="entry_state_only_app">パッケージ</string>
+    <string name="entry_state_app_and_data">アプリ + データ</string>
+    <string name="entry_state_only_app_data">データ</string>
+    <string name="not_restorable">本システムに対応しません</string>
+    <string name="app_uninstalled">インストールされない</string>
+    <string name="app_installed">インストールされた</string>
+    <string name="app_updatable">更新可能</string>
+    <string name="corrupted">壊れた</string>
+    <string name="parenthesized_msg">(<xliff:g id="msg">%1$s</xliff:g>)</string>
+    <string name="merged_backup">バックアップをマージ</string>
+    <string name="schedule_backup">スケジュールをバックアップ</string>
+    <string name="normal_backup">普通のバックアップ</string>
+    <!-- 备份/恢复进度页面 -->
+    <string name="msg_record_corrupted">バックアップレコードが壊れた</string>
+    <string name="msg_backup_exception_occurred">タスクは異常で停止。今回のバックアップレコードは壊れた。</string>
+    <string name="msg_restore_exception_occurred">タスクは異常で停止。復元し続けられない。</string>
+    <string name="title_backing_up">バックアップ中</string>
+    <string name="title_restoring">復元中</string>
+    <string name="title_stop_backup">バックアップを停止</string>
+    <string name="title_stop_restore">復元を停止</string>
+    <string name="msg_backup_finished">バックアップ完了</string>
+    <string name="msg_restore_finished">復元完了</string>
+    <string name="msg_discard_backuping">バックアップはまだ終了していません。今回のバックアップを停止しますか。</string>
+    <string name="msg_discard_restoring">復元はまだ終了していません。タップして今回の復元を捨てます。</string>
+    <string name="msg_preparing">準備中</string>
+    <string name="msg_backing_up">バックアップ中<xliff:g id="DESC">%1$s</xliff:g><xliff:g id="EXTRA">%2$s</xliff:g>……</string>
+    <string name="msg_restoring">復元中<xliff:g id="DESC">%1$s</xliff:g><xliff:g id="EXTRA">%2$s</xliff:g>……</string>
+    <string name="backup_restore_prompt">データの破損にならないために、再起動やシャットダウンをしないでください。</string>
+    <string name="btn_stop_backup">バックアップを停止</string>
+    <string name="btn_stop_restore">復元を停止</string>
+    <string name="dialog_title_stopping">停止中</string>
+    <string name="msg_stopping_operation">当面の操作は実行していますので、少々お待ちください。</string>
+    <string name="contacts_restore_result">\u0025dの連絡先が復元された。\u0025dの重ねた連絡先が捨てられた。</string>
+    <string name="progress_detail"><xliff:g id="INDEX">%1$d</xliff:g>/<xliff:g id="COUNT">%2$d</xliff:g></string>
+    <string name="msg_mms_updating_msm_conversation">カラーメール会話更新:<xliff:g id="INDEX">%1$d</xliff:g>/<xliff:g id="COUNT">%2$d</xliff:g></string>
+    <string name="msg_sms_inserting">挿入中:<xliff:g id="INDEX">%1$d</xliff:g>/<xliff:g id="COUNT">%2$d</xliff:g></string>
+    <string name="msg_updating_sms_conversation">ショートメール会話更新:<xliff:g id="INDEX">%1$d</xliff:g>/<xliff:g id="COUNT">%2$d</xliff:g></string>
+    <string name="progress_format"><xliff:g id="progress">%1$s</xliff:g>%%</string>
+    <string name="backup_size_explanation">圧縮されたバックアップのサイズ<xliff:g id="size">%1$s</xliff:g></string>
+    <!-- 整合备份进度页面 -->
+    <string name="title_merging">マージ中......</string>
+    <string name="title_stop_merge">マージを停止</string>
+    <string name="btn_stop_merge">マージを停止</string>
+    <string name="msg_merging">マージ中<xliff:g id="DESC">%1$s</xliff:g><xliff:g id="EXTRA">%2$s</xliff:g>……</string>
+    <string name="msg_merge_finished">バックアップマージ完了</string>
+    <string name="msg_start_smart_merge">Sure to merge selected backups to a comprehensive backup?</string>
+    <string name="msg_discard_merging">バックアップマージはまだ終了していません。タップして今回のマージを停止することをご確認ください。</string>
+    <!-- 新建、恢复网络备份页面 -->
+    <string name="title_new_cloud_backup">クラウドバックアップを新規作成</string>
+    <string name="title_restore_cloud_backup">クラウドバックアップを復元</string>
+    <string name="local_count">ローカル：<xliff:g id="COUNT">%1$d</xliff:g></string>
+    <string name="online_count">クラウド：<xliff:g id="COUNT">%1$d</xliff:g></string>
+    <string name="app_not_backuped">バックアップされない</string>
+    <string name="app_backuped">バックアップされた</string>
+    <string name="title_select_apps">アプリを選択</string>
+    <string name="tip_failed_to_get_cloud_backup_info">クラウドバックアップ情報の取得に失敗しました。後でまた試してください。</string>
+    <string name="tip_failed_to_download_cloud_db">クラウドバックアップデータのダウンロードに失敗しました。</string>
+    <string name="tip_loging_in">ログオン中。少々お待ちください。</string>
+    <string name="tip_fetching_cloud_backup_info">クラウドバックアップ情報を取得<xliff:g id="EXTRA">%1$s</xliff:g></string>
+    <!-- 云端备份页面 -->
+    <string name="btn_start_upload">アップロード開始</string>
+    <string name="msg_uploading_backup">アップロード中<xliff:g id="DESC">%1$s</xliff:g><xliff:g id="EXTRA">%2$s</xliff:g>……</string>
+    <string name="msg_downloading">ダウンロード中<xliff:g id="BODY">%1$s</xliff:g><xliff:g id="EXTRA">%2$s</xliff:g></string>
+    <string name="work_progress_detail"><xliff:g id="ENTRY">%1$s</xliff:g><xliff:g id="OPERTATION">%2$s</xliff:g><xliff:g id="STATE">%3$s</xliff:g></string>
+    <string name="state_backingup"><xliff:g id="DESC">%1$s</xliff:g>バックアップ中……</string>
+    <string name="state_restoring"><xliff:g id="DESC">%1$s</xliff:g>復元中……</string>
+    <string name="state_uploading"><xliff:g id="DESC">%1$s</xliff:g>アップロード中……</string>
+    <string name="state_downloading"><xliff:g id="DESC">%1$s</xliff:g>ダウンロード中……</string>
+    <string name="state_waiting">少々お待ちください</string>
+    <string name="state_finished">完了</string>
+    <string name="state_failed">失败</string>
+    <string name="msg_restore_successful">復元成功<xliff:g id="COUNT">%1$s</xliff:g><xliff:g id="ENTRY">%2$s</xliff:g></string>
+    <string name="msg_restore_failed">復元失敗<xliff:g id="COUNT">%1$s</xliff:g><xliff:g id="ENTRY">%2$s</xliff:g></string>
+    <string name="msg_restore_canceled">復元をキャンセル<xliff:g id="COUNT">%1$s</xliff:g><xliff:g id="ENTRY">%2$s</xliff:g></string>
+    <string name="count_format"><xliff:g id="COUNT">%1$d</xliff:g>个</string>
+    <string name="msg_upload_successful">アップロード成功<xliff:g id="COUNT">%1$s</xliff:g><xliff:g id="ENTRY">%2$s</xliff:g></string>
+    <string name="msg_upload_failed">アップロード失敗<xliff:g id="COUNT">%1$s</xliff:g><xliff:g id="ENTRY">%2$s</xliff:g></string>
+    <string name="msg_upload_canceled">アップロードキャンセル<xliff:g id="COUNT">%1$s</xliff:g><xliff:g id="ENTRY">%2$s</xliff:g></string>
+    <string name="msg_upload_backup_finished">クラウドバックアップ完了</string>
+    <string name="msg_restore_online_backup_finished">クラウド復元完了</string>
+    <string name="msg_no_cloud_backup_or_error">クラウドバックアップ/ネットエラーはありません</string>
+    <string name="login_failed"><xliff:g id="SERVICE">%1$s</xliff:g> にアクセスできません</string>
+    <!-- 备份报告页面 -->
+    <string name="title_backup_result_report">バックアップレポート</string>
+    <string name="title_restore_result_report">復元レポート</string>
+    <string name="title_merge_result_report">マージレポート</string>
+    <string name="msg_result_canceled">キャンセルした</string>
+    <string name="msg_result_unknown_error">未知のエラー</string>
+    <string name="msg_result_data_corrupted">データが壊れた</string>
+    <string name="msg_result_handle_contacts_failed">連絡先なし。或はＧOバックアップが連絡先の取得権を授与されない。</string>
+    <string name="msg_result_handle_sms_failed">ショートメッセージなし。或はＧOバックアップがショートメッセージの取得権を授与されない。</string>
+    <string name="msg_result_handle_mms_failed">カラーメッセージなし。或はＧOバックアップがカラーメッセージの取得権を授与されない。</string>
+    <string name="msg_result_handle_ringtone_failed">サウンドなし。或はＧOバックアップがサウンドの取得権を授与されない。</string>
+    <string name="msg_result_handle_call_log_failed">通話履歴なし。或はＧOバックアップが通話履歴の取得権を授与されない。</string>
+    <string name="msg_result_handle_dictionary_failed">ユーザー辞書なし</string>
+    <string name="msg_result_handle_calendar_failed">カレンダなし。或はGOバックアップがカレンダの取得権を授与されない。</string>
+    <string name="btn_reboot">再起動</string>
+    <string name="msg_reboot_info">システムレイアウトとウィジェットを正常に復元するために、直ちに設備を再起動します。</string>
+    <string name="dialog_msg_reboot">直ちに設備を再起動することを捨てると、システムレイアウトと小物は正常に復元できない恐れがあります。続けますか。</string>
+    <string name="msg_need_reboot">有効にするために、設備を再起動することが必要です。</string>
+    <!-- 批量删除页面 -->
+    <string name="title_batch_delete">バッチ削除</string>
+    <string name="menu_item_batch_delete">バックアップをバッチ削除</string>
+    <string name="msg_delete_records">選択されたレコードを削除しますか。</string>
+    <string name="msg_wait">少々お待ちください。</string>
+    <string name="select_all">全選択</string>
+    <string name="unselect_all">選択解除</string>
+    <!-- 定时备份页面 -->
+    <string name="title_scheduled_backup">バックアップの定期実行</string>
+    <string name="msg_no_schedules">スケジュールなし</string>
+    <string name="msg_no_active_action">アクティベーションのスケジュールなし</string>
+    <string name="msg_next_backup_time">次回の実行日時：</string>
+    <string name="btn_new_backup_plan">新規タスクを作成</string>
+    <string name="title_edit_plan">タスク編集</string>
+    <string name="title_backup_content">内容</string>
+    <string name="title_backup_start_time">開始日時</string>
+    <string name="title_repeat_mode">繰り返しモード</string>
+    <string name="title_advance_remind">早めのリマインダー</string>
+    <string name="scheduled_plan_date_format"><xliff:g id="YEAR">%1$s</xliff:g>-<xliff:g id="MONTH">%2$s</xliff:g>-<xliff:g id="DAY">%3$s</xliff:g><xliff:g id="DAY_OF_WEEK">%4$s</xliff:g></string>
+    <string name="scheduled_plan_time_format"><xliff:g id="HOUR">%1$s</xliff:g>:<xliff:g id="MINUTES">%2$s</xliff:g></string>
+    <string name="scheduled_plan_full_date_format"><xliff:g id="YEAR">%1$s</xliff:g>-<xliff:g id="MONTH">%2$s</xliff:g>-<xliff:g id="DAY">%3$s</xliff:g><xliff:g id="HOUR">%4$s</xliff:g>:<xliff:g id="MINUTES">%5$s</xliff:g></string>
+    <string name="msg_delete_plan">このスケジュールを削除しますか。</string>
+    <string name="msg_schedule_expired">このスケジュールは期限が切れた</string>
+    <string name="msg_plan_time_conflict">このスケジュールと他のがかち合うので、改めて日時を編集してください。</string>
+    <string name="backup_type_user_data">ユーザーデータ</string>
+    <string name="backup_type_user_app">ユーザーアプリ</string>
+    <string name="backup_type_system_data">システムデータ</string>
+    <string name="backup_type_content">バックアップ内容<xliff:g id="BACKUP_CONTENT">%1$s</xliff:g></string>
+    <!-- Root权限说明页 -->
+    <string name="root_introduction_title">ルート権の説明</string>
+    <string name="root_desc_title">なぜルートが必要ですか。</string>
+    <string name="root_desc_summary">1.アプリデータをバックアップすることができます。2.消音モードを開きましてから、アプリのインストール過程を隠すことができます。</string>
+    <string name="introduction_what_is_root">ルート権は何でしょうか。</string>
+    <string name="introduction_how_to_get_root">どのような方法でルート権を取得しますか。</string>
+    <string name="root_state_rooted">この携帯はもうルートされた</string>
+    <string name="root_state_unrooted">この携帯はまだルートされない。</string>
+    <!-- 检查更新 -->
+    <string name="title_update">更新検査</string>
+    <string name="title_update_info">更新通知</string>
+    <string name="msg_checking_update">更新検査中、少々お待ちください。</string>
+    <string name="msg_update_latest_version">これは最新のバージョンなので、更新することはありません。</string>
+    <string name="msg_update_net_error">ネットエラー</string>
+    <string name="btn_update_now">新版をダウンロード</string>
+    <string name="btn_update_later">後で行う</string>
+    <string name="btn_exit_app">アプリ終了</string>
+    <!-- 设置页面 -->
+    <string name="title_setting">GOバックアップ設定</string>
+    <string name="category_title_update_advanced">高級バージョン</string>
+    <string name="category_title_delete_backup">バックアップを削除</string>
+    <string name="category_title_contacts_backup_setting">連絡先バックアップ設定</string>
+    <string name="entry_title_batch_delete_records">バックアップレコードをバッチ削除</string>
+    <string name="entry_title_delte_cloud_backup">クラウドバックアップを削除</string>
+    <string name="entry_title_contacts_backup_setting">連絡先バックアップ設定</string>
+    <string name="entry_summary_on_contacts">電話番号がある連絡先のみバックアップ</string>
+    <string name="entry_summary_off_contacts">すべての連絡先をバックアップ</string>
+    <string name="entry_title_merge_dup_contacts">重ねた連絡先をマージ</string>
+    <string name="entry_title_contact_change_push">連絡先変更通知</string>
+    <string name="entry_summary_merge_on">連絡先を復元しながら、重ねた連絡先を自動で捨てる</string>
+    <string name="entry_summary_contact_change_push">連絡先が変更する時バックアップを通知</string>
+    <string name="entry_summary_merge_off">正常に復元。重ねた連絡先があるかもしれない。</string>
+    <string name="entry_title_backup_contacts_icon">連絡先のアイコンをバックアップ</string>
+    <string name="entry_summary_occupied">バックアップの内容は使用された</string>
+    <string name="category_title_root_relevant">ルート権関連</string>
+    <string name="entry_title_root_introduction">ルート権説明</string>
+    <string name="entry_title_backup_restore_app_data">アプリデータをバックアップ</string>
+    <string name="entry_title_silently_install_app">アプリ消音モード</string>
+    <string name="entry_summary_backup_app_data">アプリパッケージをバックアップ/復元</string>
+    <string name="entry_summary_silently_install_app">アプリを復元する時、煩瑣なインストールヒントが現れません。</string>
+    <string name="entry_summary_not_root">ルート権取得に失敗しました。この機能に対応しません。</string>
+    <string name="entry_summary_root_not_supported">Android 3.0以上の携帯はまだこの機能に対応しません。</string>
+    <string name="entry_summary_device_unsupported">本設備はまだこの機能に対応しません。</string>
+    <string name="category_title_other_setting">他の設定</string>
+    <string name="entry_title_logout">GOアカウントをログオフ</string>
+    <string name="entry_title_user_center">ユーザーセンター</string>
+    <string name="entry_title_feedback">フィードバック</string>
+    <string name="entry_title_advanced_update">高級バージョンにアップデート</string>
+    <string name="entry_title_about">GOバックアップについて</string>
+    <string name="entry_title_version_info">バージョン情報</string>
+    <string name="entry_title_soft_rate">ソフト採点</string>
+    <string name="entry_title_copyright_info">著作権情報</string>
+    <string name="category_title_network_backup">ネット同期アカウント管理</string>
+    <string name="entry_title_dropbox_backup">Dropboxアカウント</string>
+    <string name="entry_summary_unlogin_dropbox">タップしてログイン</string>
+    <string name="entry_summary_currentAccount_dropbox">カレントアカウント:</string>
+    <string name="entry_summary_change_dropbox_account">アカウントを切り替える</string>
+    <string name="entry_summary_soft_rate">ネットマーケットでGOバックアップを採点</string>
+    <string name="entry_summary_copyright_info">3G Copyright © 2004-2011著作権を所有しております</string>
+    <string name="go_backup_noEmailApplication">イーメール送信アプリは見つけません。</string>
+    <string name="title_logout">ログオフ</string>
+    <string name="msg_logout">GOアカウントをログオフしますか。</string>
+    <string name="msg_account_has_logouted">アカウントはログオフした。</string>
+    <string name="msg_account_logout_successfully">アカウントログオフ成功</string>
+    <string name="msg_account_logout_failed">アカウントログオフ失敗</string>
+    <string name="title_logout_from_dropbox">Dropboxからログオフしますか。</string>
+    <string name="msg_delete_cloud_backup">クラウドバックアップをすべてクリアします。続けますか。</string>
+    <string name="msg_failed_to_delete_cloud_backup">クラウドバックアップ削除失敗!</string>
+    <string name="msg_delete_cloud_backup_successfully">クラウドバックアップ削除成功 !</string>
+    <string name="msg_cloud_backup_had_been_deleted">クラウドバックアップは削除された!</string>
+    <string name="msg_is_advanced">カレントはすでに高級バージョン</string>
+    <string name="title_select_cloud_service_provider">同期ディスクを選択</string>
+    <string name="cloud_service_description">クラウドバックアップはDropboxとGoogle Driveに同期することができる</string>
+    <string name="click_to_login">タップしてあなたのアカウントをログオン<xliff:g id="ACCOUNT_TYPE">%1$s</xliff:g></string>
+    <string name="cloud_service_account"><xliff:g id="ACCOUNT_TYPE">%1$s</xliff:g> アカウント</string>
+    <string name="title_logout_from_cloud_service">ログオフしますか。?</string>
+    <string name="category_title_setting_backup_path">バックアップパス設定</string>
+    <string name="entry_title_setting_backup_path">本機バックアップパス選択</string>
+    <string name="entry_summary_delete_all_backup">べての本機バックアップのパスにあるバックアップパッケージをバッチ削除</string>
+    <string name="entry_summary_select_path_no_sd">バックアップパス<xliff:g id="INTERNAL_STORAGE">%1$s</xliff:g>や<xliff:g id="EXTERNAL_STORAGE">%2$s</xliff:g>が見つかりませんでした</string>
+    <string name="entry_summary_select_path_both">バックアップパスは<xliff:g id="INTERNAL_STORAGE">%1$s</xliff:g>や<xliff:g id="EXTERNAL_STORAGE">%2$s</xliff:g></string>
+    <string name="entry_summary_select_path_internal_storage">内部メモリ\u003E</string>
+    <string name="entry_summary_select_path_external_storage">外部メモリ\u003E</string>
+    <string name="msg_setting_select_path_title">本機バックアップパス</string>
+    <string name="msg_internal_storage">スマホにUSBストレージが内蔵された</string>
+    <string name="msg_external_storage">外付けのSDカード</string>
+    <string name="msg_no_sd">目下のバックアップパスなし、或は壊れました。ご確認ください。</string>
+    <string name="msg_backup_path_change_tips"><xliff:g id="OLD_STORAGE">%1$s</xliff:g>取り外された、或は壊れた。バックアップパスはここに切替えられた：<xliff:g id="NEW_STORAGE">%2$s</xliff:g></string>
+    <string name="msg_reset_backup_path_tips">バックアップパスはここに切替えられた：<xliff:g id="RESET_STORAGE">%1$s</xliff:g></string>
+    <!-- 错误报告 -->
+    <string name="crash_subject">GOバックアップエラーフィードバック</string>
+    <string name="crash_notif_ticker_text">GOバックアップエラー。エラーレポートをお送りください。</string>
+    <string name="crash_notif_title">GOバックアップエラー</string>
+    <string name="crash_notif_text">ここにタップして、この問題を修復してください。</string>
+    <string name="crash_dialog_title">GOバックアップエラーレポート</string>
+    <string name="crash_dialog_text">エラーでアプリを停止させました。GOバックアップがよくなるために、あなたのフィードバックは重要です。あなたのフィードバックには個人情報が入れません。</string>
+    <string name="crash_yes">はい</string>
+    <string name="crash_no">キャンセル</string>
+    <string name="crash_mailtt">GO Backup Error Report :ver_name:<xliff:g id="VER_NAME">%1$s</xliff:g> ver_code:<xliff:g id="VER_CODE">%2$d</xliff:g></string>
+    <string name="crash_error_reportemail">gobackupbugreport@gmail.com</string>
+    <string name="crash_root_dir">GOBackup</string>
+    <!-- 引导页 -->
+    <string name="tutorial_merge_title">バックアップマージ</string>
+    <string name="tutorial_merge_tips1">Merge selected backups to a comprehensive backup</string>
+    <string name="tutorial_merge_tips2">マージ中既存のバックアップレコードは削除しません。それに重ねた項目が自動で削除されます。</string>
+    <string name="tutorial_ok">了解</string>
+    <!-- 收费升级页 -->
+    <string name="pay_update_title">高級バージョン紹介</string>
+    <string name="help_url" formatted="false">http://market.android.com/support/bin/answer.py?answer=1050566&amp;hl=%lang%&amp;dl=%region%</string>
+    <string name="pay_title_1">クラウドバックアップ</string>
+    <string name="pay_title_2">スーパーバックアップパッケージ</string>
+    <string name="pay_title_3">もっとバックアップ項目</string>
+    <string name="pay_detail_1">バックアップの内容をディスクに同期します。安全で便利です</string>
+    <string name="pay_detail_2">バックアップパッケージには制限がありません</string>
+    <string name="pay_detail_3">システム設定をバックアップします。例えば、サウンド、壁紙など。あなたの個性的な需要を満たします。</string>
+    <string name="learn_more">もっと知る</string>
+    <string name="cannot_connect_title">マーケットにアクセスできない。</string>
+    <string name="cannot_connect_message">あなたの装置はグーグルマーケットにアクセスできない</string>
+    <string name="billing_not_supported_title">購入できない</string>
+    <string name="billing_not_supported_message">あなたの装置はアプリの支給システムに対応しない</string>
+    <string name="response_code_fail_title">リクエスト失敗</string>
+    <string name="btn_upgrade">高級バージョンにアップデート</string>
+    <!-- 这个测试用的 -->
+    <string name="response_code_fail_message">ネットマーケットにアクセスできない</string>
+    <string name="cannot_bind_to_service_title">グーグルマーケットにバインドできない</string>
+    <string name="cannot_bind_to_service_message">あなたの設備には最新のグーグルマーケットがインストールされたかご確認ください</string>
+    <string name="purchase_tip_title">高級バージョンにアップデートしますか。</string>
+    <string name="purchase_tip_message">1.クラウドバックアップ。あなたの携帯の中の資料をDropboxに同期します。安全で、いつでも見つけられます。2．スーパーバックアップパッケージ。ローカルバックアップパッケージには制限がありません。</string>
+    <string name="fail_market_connect">ネットマーケットにアクセスできません。或は購入できません。あとで改めてお試しください。</string>
+    <string name="pay_validate">あなたの有料状態を検証しています。</string>
+    <string name="purchase_success_title">購入成功</string>
+    <string name="purchase_success_message">以下の機能が取得した。● クラウドバックアップ機能● バックアップパッケージサイズ無限● もっとバックアップ項目：壁紙、サウンド、システムレイアウト、Wi-Fiアクセス</string>
+    <string name="refunded_success_title">払い戻しに成功</string>
+    <string name="refunded_success_message">以下の機能はキャンセルされた● クラウドバックアップ機能  ● クラウドバックアップ機能● バックアップパッケージサイズ無限● もっとバックアップ項目：壁紙、サウンド、システムレイアウト、Wi-Fiアクセス</string>
+    <string name="summit">確認</string>
+    <string name="advanced_explain">● クラウドバックアップ機能● バックアップパッケージサイズ無限● もっとバックアップ項目：壁紙、サウンド、システムレイアウト、Wi-Fiアクセス</string>
+    <string name="completed_request">復元完了</string>
+    <string name="msg_redo_cloud_backup_task">前回ネットバックアップの残りがありますが、続けますか。</string>
+    <string name="msg_redo_cloud_restore_task">前回ネットバックアップの残りがありますが、続けますか。</string>
+    <string name="continue_last_task">前回の残りを続けます。</string>
+    <string name="too_large_need_pay">バックアップパッケージのサイズは200M上回ります。高級バージョンを購入する必要があります。購入しますか。</string>
+    <string name="backup_system_need_pay">バックアップシステム設定は高級バージョンの機能です。購入しますか。</string>
+    <string name="restore_system_need_pay">復元システム設定は高級バージョンの機能です。購入しますか。</string>
+    <string name="purchase_title">購入ヒント</string>
+    <string name="open_wifi">wifi開</string>
+    <string name="backup_advice_of_wifi">クラウドバックアップにはトラフィックがかかります。Wifiはおすすめです。</string>
+    <string name="restore_advice_of_wifi">クラウド復元にはトラフィックがかかります。Wifiはおすすめです。</string>
+    <string name="direct_upload">直接アップロード</string>
+    <string name="direct_restore">直接復元</string>
+    <string name="uploading_choose_to_stop">バックアップレコードはまだアップロード中、停止しますか。</string>
+    <string name="download_choose_to_stop">バックアップレコードはまだダウンロード中、停止しますか。</string>
+    <string name="function_need_to_purchase">高級機能の使用は有料です。購入しますか。</string>
+    <string name="system_data_need_to_puchase">システムデータバックアップは高級機能なので、有料です。購入しますか。</string>
+    <string name="timing_large_need_pay">定期バックアップのサイズは200Mを上回りますので、有料です。購入しますか。</string>
+    <string name="free_user_limit">無料ユーザー制限</string>
+    <string name="advanced_of_function">高級バージョン機能</string>
+    <string name="purchase_yes_or_no">定期バックアップのサイズは200Mを上回りますので、有料です。購入しますか。 \n\n*キャンセルした後、暫く定期バックアップを閉じます。</string>
+    <string name="contact_change_push_tips">連絡先は変更されました。バックアップしますか。</string>
+
+    <!-- 定时备份 -->
+    <string name="choose_backup_content">バックアップの内容を選択</string>
+
+    <string-array name="months">
+        <item>一月</item>
+        <item>二月</item>
+        <item>三月</item>
+        <item>四月</item>
+        <item>五月</item>
+        <item>六月</item>
+        <item>七月</item>
+        <item>八月</item>
+        <item>九月</item>
+        <item>十月</item>
+        <item>十一月</item>
+        <item>十二月</item>
+    </string-array>
+    <string-array name="week">
+        <item>土曜日</item>
+        <item>日曜日</item>
+        <item>月曜日</item>
+        <item>火曜日</item>
+        <item>水曜日</item>
+        <item>木曜日</item>
+        <item>金曜日</item>
+    </string-array>
+    <string-array name="week_short">
+        <item>土曜日</item>
+        <item>日曜日</item>
+        <item>月曜日</item>
+        <item>火曜日</item>
+        <item>水曜日</item>
+        <item>木曜日</item>
+        <item>金曜日</item>
+    </string-array>
+    <string-array name="backup_sort_type_desc">
+        <item>アプリ名前でソート</item>
+        <item>アプリサイズでソート</item>
+        <item>アプリ日時でソート</item>
+    </string-array>
+    <string-array name="online_backup_sort_type_desc">
+        <item>アプリ名前でソート</item>
+        <item>アプリサイズでソート</item>
+    </string-array>
+    <string-array name="restore_sort_type_desc">
+        <item>アプリ名前でソート</item>
+        <item>アプリサイズでソート</item>
+        <item>アプリ状態でソート</item>
+    </string-array>
+    <string-array name="schduled_backup_content_paid">
+        <item>バックアップユーザーデータ</item>
+        <item>バックアップユーザーアプリ</item>
+        <item>バックアップシステム設定</item>
+    </string-array>
+    <string-array name="schduled_backup_content_free">
+        <item>バックアップユーザーデータ</item>
+        <item>バックアップユーザーアプリ</item>
+    </string-array>
+    <string-array name="repeat_modes">
+        <item>一回性</item>
+        <item>每日</item>
+        <item>每週</item>
+        <item>每月</item>
+    </string-array>
+    <string-array name="repeat_modes_details">
+        <item>一回性の活动</item>
+        <item>每日</item>
+        <item>每週（每周的<xliff:g id="DAY_OF_WEEK">%1$s</xliff:g>）</item>
+        <item>每月（<xliff:g id="DAY_OF_MONTH">%2$s</xliff:g>日）</item>
+    </string-array>
+    <string-array name="advance_remind_time">
+        <item>0分間</item>
+        <item>1分間</item>
+        <item>5分間</item>
+        <item>10分間</item>
+        <item>15分間</item>
+        <item>20分間</item>
+        <item>25分間</item>
+        <item>30分間</item>
+        <item>45分間</item>
+        <item>1時間</item>
+    </string-array>
+    <string-array name="advance_remind_time_toast">
+        <item>これから1分以内定期的に自動でバックアップを実行します。</item>
+        <item>これから<xliff:g id="DAYS">%1$s</xliff:g>以内定期的に自動でバックアップを実行します。</item>
+        <item>これから<xliff:g id="HOURS">%2$s</xliff:g>以内定期的に自動でバックアップを実行します。</item>
+        <item>これから<xliff:g id="DAYS">%1$s</xliff:g><xliff:g id="HOURS">%2$s</xliff:g>以内定期的に自動でバックアップを実行します。</item>
+        <item>これから<xliff:g id="MINUTES">%3$s</xliff:g>以内定期的に自動でバックアップを実行します。</item>
+        <item>これから<xliff:g id="DAYS">%1$s</xliff:g><xliff:g id="MINUTES">%3$s</xliff:g>以内定期的に自動でバックアップを実行します。</item>
+        <item>これから<xliff:g id="HOURS">%2$s</xliff:g><xliff:g id="MINUTES">%3$s</xliff:g>以内定期的に自動でバックアップを実行します。</item>
+        <item>これから<xliff:g id="DAYS">%1$s</xliff:g><xliff:g id="HOURS">%2$s</xliff:g><xliff:g id="MINUTES">%3$s</xliff:g>以内定期的に自動でバックアップを実行します。</item>
+    </string-array>
+    <string-array name="backupable_app_state">
+        <item>バックアップされない</item>
+        <item>更新可能</item>
+        <item>バックアップされた</item>
+    </string-array>
+    <string-array name="app_install_state">
+        <item>インストールされない</item>
+        <item>更新可能</item>
+        <item>インストールされた</item>
+    </string-array>
+    <string-array name="app_state">
+        <item>インストールされない</item>
+        <item>インストールされた</item>
+    </string-array>
+
+    <string name="one_day">1 日</string>
+    <string name="days"><xliff:g id="DAYS">%s</xliff:g> 日</string>
+    <string name="one_hour">1 時間</string>
+    <string name="hours"><xliff:g id="HOURS">%s</xliff:g>時間</string>
+    <string name="one_minute">1 分間</string>
+    <string name="minutes"><xliff:g id="MINUTES">%s</xliff:g> 分間</string>
+
+</resources>

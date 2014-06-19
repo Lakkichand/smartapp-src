@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/record_group_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="3dp"
+    android:paddingLeft="32dp"
+    android:paddingTop="3dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical|left"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/group_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical|left"
+                android:singleLine="true"
+                android:textColor="#cc535353"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/group_extra_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="0"
+                android:gravity="center_vertical|left"
+                android:singleLine="true"
+                android:textColor="#ff499e01"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/image_marker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/purchase_icon_red"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginRight="6dp"
+        android:layout_weight="0"
+        android:button="@drawable/checkbox"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center" />
+    <!-- android:background="@drawable/checkbox_transparent_bg" -->
+
+</LinearLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/title_setting" >
+
+  <!--  
+    <PreferenceCategory android:title="@string/category_title_update_advanced" >
+        <Preference
+            android:key="@string/key_advanced_update"
+            android:title="@string/entry_title_advanced_update" />
+    </PreferenceCategory>
+ -->  
+
+    <PreferenceCategory android:title="@string/category_title_setting_backup_path" >
+        <com.jiubang.go.backup.pro.ui.ExtraTextPreference
+            android:key="@string/key_setting_backup_path"
+            android:title="@string/entry_title_setting_backup_path"
+            android:widgetLayout="@layout/layout_single_extra_text_preference" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/category_title_delete_backup" >
+        <Preference
+            android:key="@string/key_delete_backuped_records"
+            android:title="@string/entry_title_batch_delete_records" />
+        <Preference
+            android:key="@string/key_delete_cloud_backup"
+            android:title="@string/entry_title_delte_cloud_backup" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/category_title_contacts_backup_setting" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/key_only_backup_contacts_which_has_number"
+            android:summaryOff="@string/entry_summary_off_contacts"
+            android:title="@string/entry_summary_on_contacts" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/key_merge_duplicate_contacts"
+            android:summaryOff="@string/entry_summary_merge_off"
+            android:summaryOn="@string/entry_summary_merge_on"
+            android:title="@string/entry_title_merge_dup_contacts" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/key_backup_contacts_avatar"
+            android:title="@string/entry_title_backup_contacts_icon" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/key_contact_change_push"
+            android:summaryOff="@string/entry_summary_contact_change_push"
+            android:summaryOn="@string/entry_summary_contact_change_push"
+            android:title="@string/entry_title_contact_change_push" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="@string/key_network_backup"
+        android:title="@string/category_title_network_backup" >
+        <com.jiubang.go.backup.pro.ui.SingleChoicePreference
+            android:defaultValue="1"
+            android:dialogTitle="@string/title_select_cloud_service_provider"
+            android:entries="@array/cloud_service"
+            android:entryValues="@array/cloud_service_provider_codes_string"
+            android:key="@string/key_cloud_service_selector"
+            android:summary="@string/cloud_service_description"
+            android:title="@string/title_select_cloud_service_provider"
+            android:widgetLayout="@layout/preference_display_text" />
+
+        <com.jiubang.go.backup.pro.ui.SingleButtonPreference
+            android:key="@string/key_cloud_service_account_manager"
+            android:title="@string/click_to_login"
+            android:widgetLayout="@layout/preference_logout_button" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/category_title_root_relevant" >
+        <Preference
+            android:key="@string/key_root_introduction"
+            android:title="@string/entry_title_root_introduction" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/key_backup_restore_app_data"
+            android:summary="@string/entry_summary_backup_app_data"
+            android:title="@string/entry_title_backup_restore_app_data" />
+    </PreferenceCategory>
+
+<!--     <PreferenceCategory android:title="@string/category_title_other_setting" > -->
+    <!-- 暂时屏蔽注销功能 -->
+    <!--
+        <Preference
+            android:key="@string/key_logout"
+            android:title="@string/entry_title_logout" />
+    -->
+    <!-- 暂时屏蔽个人中心 -->
+    <!--
+        <Preference
+            android:key="@string/key_user_center"
+            android:title="@string/entry_title_user_center"/>
+    -->
+    <!--
+        <Preference
+            android:key="@string/key_feedback"
+            android:title="@string/entry_title_feedback" />
+    -->
+    <!--
+        <PreferenceScreen
+            android:key="@string/key_about_GOBackup"
+            android:title="@string/entry_title_about" >
+            <Preference
+                android:key="@string/key_version_info"
+                android:title="@string/entry_title_version_info" />
+            
+            <Preference
+                android:key="@string/key_soft_rate"
+                android:summary="@string/entry_summary_soft_rate"
+                android:title="@string/entry_title_soft_rate" />
+            
+            <Preference
+                android:key="@string/key_copyright_info"
+                android:summary="@string/entry_summary_copyright_info"
+                android:title="@string/entry_title_copyright_info" />
+        </PreferenceScreen>
+         
+    </PreferenceCategory>
+    -->
+
+</PreferenceScreen>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="#e6e6e6">
+
+	<RelativeLayout android:layout_width="fill_parent"
+		android:background="@drawable/go_account_tab" android:layout_height="48dip">
+		<TextView android:layout_width="wrap_content" android:id="@+id/go_account_login_tip"
+			android:layout_height="wrap_content" android:text="@string/go_account_login"
+			android:textSize="16.33sp" android:paddingLeft="20dip"
+			android:layout_alignParentLeft="true" android:textColor="#ececec"
+			android:gravity="center_vertical" android:layout_marginTop="12.67dip" />
+		<TextView android:id="@+id/go_account_login_top_right_button"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:background="@drawable/go_account_top_right_button"
+			android:gravity="center_vertical" android:text="@string/go_account_button"
+			android:textSize="16.33sp" android:layout_marginRight="13.33dip"
+			android:textColor="#ececec" android:layout_alignParentRight="true"
+			android:layout_marginTop="6dip" />
+	</RelativeLayout>
+
+	<ScrollView android:id="@+id/go_account_user_scrollview_login"
+		android:orientation="vertical" android:layout_width="fill_parent"
+		android:fadingEdge="none" android:layout_height="fill_parent"
+		android:layout_below="@+id/go_account_login_tip">
+
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="fill_parent" android:layout_height="fill_parent">
+			<!-- android:layout_marginTop="17dip" 当替换成Go省电的图，将该距离TAB的大小去掉，Go省电图相对比较大 -->
+			<ImageView android:id="@+id/go_account_image"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:background="@drawable/go_account_launcher" />
+
+			<FrameLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+				<RelativeLayout android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:focusable="true"
+					android:focusableInTouchMode="true">
+
+
+					<!-- 登陆邮箱部分 -->
+					<AutoCompleteTextView android:id="@+id/go_account_accountInput"
+						android:background="@drawable/go_account_edittext"
+						android:inputType="textEmailAddress" android:layout_width="fill_parent"
+						android:layout_height="40dip" android:layout_marginLeft="20dip"
+						android:layout_marginRight="20dip" android:textSize="16sp"
+						android:textColor="#7d7d7d" android:hint="@string/go_account_loginEmail"
+						android:singleLine="true" android:layout_toRightOf="@+id/go_account_login_emailInput" />
+					<FrameLayout android:id="@+id/go_account_login_email_icon"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:layout_marginRight="25dip"
+						android:layout_alignParentRight="true" android:layout_marginTop="7dip">
+						<ImageView android:id="@+id/go_account_login_email_right"
+							android:layout_width="wrap_content" android:layout_height="wrap_content"
+							android:background="@drawable/go_account_right_hint"
+							android:visibility="gone" />
+						<ImageView android:id="@+id/go_account_login_email_error"
+							android:layout_width="wrap_content" android:layout_height="wrap_content"
+							android:background="@drawable/go_account_error_hint"
+							android:visibility="gone" />
+					</FrameLayout>
+					<!-- 登录密码部分 -->
+					<EditText android:id="@+id/go_account_passwordInput"
+						android:background="@drawable/go_account_edittext"
+						android:password="true" android:layout_width="fill_parent"
+						android:layout_height="40dip" android:layout_marginLeft="20dip"
+						android:layout_marginRight="20dip" android:layout_marginTop="13.33dip"
+						android:textSize="16sp" android:textColor="#7d7d7d"
+						android:hint="@string/go_account_loginPassword" 
+						android:layout_below="@+id/go_account_accountInput" 
+						android:layout_toRightOf="@+id/go_account_login_passwordInput" 
+						android:inputType="textPassword"/>
+					<ImageView android:id="@+id/go_account_login_password_error"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:background="@drawable/go_account_error_hint"
+						android:visibility="gone" android:layout_marginRight="25dip"
+						android:layout_alignParentRight="true" android:layout_marginTop="61dip" />
+
+					<!-- 登录邮箱错误提示框 -->
+					<TextView android:id="@+id/go_account_login_email_errorbox"
+						android:layout_below="@+id/go_account_login_email_icon"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:layout_marginRight="14dip" android:background="@drawable/go_account_error_box"
+						android:layout_alignParentRight="true" android:visibility="gone"
+						android:textColor="#535353" android:gravity="center_vertical" />
+
+					<!-- 登录按钮部分 -->
+					<Button android:id="@+id/go_account_loginBtn"
+						android:background="@drawable/go_account_button"
+						android:layout_below="@+id/go_account_passwordInput"
+						android:layout_width="fill_parent" android:layout_height="40dip"
+						android:text="@string/go_account_login" android:layout_marginLeft="20dip"
+						android:layout_marginRight="20dip" android:layout_marginTop="13.33dip"
+
+						android:textSize="17.33sp" android:textColor="#f4f4f5" />
+					<!-- 登录密码错误提示框 -->
+					<TextView android:id="@+id/go_account_login_password_errorbox"
+						android:layout_below="@+id/go_account_login_password_error"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:layout_marginRight="14dip" android:background="@drawable/go_account_error_box"
+						android:layout_alignParentRight="true" android:visibility="gone"
+						android:textColor="#535353" android:gravity="center_vertical" />
+
+					<!-- 忘记密码部分 -->
+					<TextView android:id="@+id/go_account_toForgetPassword"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:layout_alignParentRight="true"
+						android:text="@string/go_account_forgetPassword"
+						android:layout_marginTop="16.6dip" android:textSize="13.33sp"
+						android:layout_marginRight="20dip" android:background="@drawable/go_account_textview"
+						android:textColor="#B230a314" android:layout_below="@+id/go_account_loginBtn" />
+				</RelativeLayout>
+			</FrameLayout>
+
+		</LinearLayout>
+
+	</ScrollView>
+</LinearLayout>

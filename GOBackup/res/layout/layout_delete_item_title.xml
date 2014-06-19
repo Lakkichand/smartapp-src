@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_bar"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/delete_title_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical|left"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/cancle_btn"
+            android:layout_width="54dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:layout_weight="0"
+            android:background="@drawable/tab_btn_bg"
+            android:scaleType="centerInside"
+            android:src="@drawable/sure" />
+
+        <ImageButton
+            android:id="@+id/breakline"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:layout_weight="0"
+            android:background="@drawable/tab_btn_bg"
+            android:scaleType="centerInside"
+            android:src="@drawable/breakline" />
+
+        <TextView
+            android:id="@+id/selectCount"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:gravity="center"
+            android:text="选中10个"
+            android:textColor="#292828"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginRight="6dp"
+        android:layout_weight="0"
+        android:button="@drawable/checkbox"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center" />
+
+</LinearLayout>

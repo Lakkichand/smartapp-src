@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 去gostore下载bar高度 -->	
+	<dimen name="theme_gostore_bar_height">48dip</dimen>
+	<dimen name="theme_list_item_height">165dip</dimen>
+	<dimen name="theme_top_height">48dip</dimen>
+	<dimen name="theme_tab_height">56dip</dimen>	
+	<dimen name="theme_list_item_padding_eachother">23dip</dimen>
+	<dimen name="theme_list_item_padding_edge">15dip</dimen>
+	<!-- Listview的item间距 -->
+	<dimen name="theme_list_item_divider_height">13dip</dimen>
+	<!-- 主题名和主题缩略图之间的间距 -->
+	<dimen name="theme_list_item_text_padding">4dip</dimen>
+	<dimen name="singletheme_detail_pic_width">214dip</dimen>
+	<dimen name="singletheme_detail_pic_height">346dip</dimen>
+	<!-- 主题详情界面更多菜单宽 -->
+	<dimen name="theme_detail_menu_width">148dip</dimen>
+	<dimen name="commom_dialog_item_heigh">45dip</dimen>
+	
+	<dimen name="mainview_topbar_height">48dip</dimen>
+	<dimen name="mainview_tabbar_height">41dip</dimen>
+	<dimen name="mainview_tabbar_midline_height">35dip</dimen>
+	<dimen name="mainview_tabbar_indicator_width">107dip</dimen>
+	<dimen name="mainview_bottombar_height">61dip</dimen>
+	<dimen name="mainview_button_width">48dip</dimen>
+	
+	<dimen name="preference_child_item_padding_left">20dp</dimen>
+</resources>

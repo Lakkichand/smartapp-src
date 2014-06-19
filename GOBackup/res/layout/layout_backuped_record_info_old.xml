@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:background="@drawable/record_entry_bg" android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical|left"
+        android:paddingLeft="14dp"
+        android:paddingTop="7dp" 
+        android:paddingBottom="7dp">
+
+        <TextView
+            android:id="@+id/record_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:textColor="#ff535353"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/record_description"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:textColor="#a5535353"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"        
+        android:layout_weight="0" 
+        android:gravity="center">
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:paddingRight="6dp"   
+            android:focusable="false"
+       	 	android:focusableInTouchMode="false"
+            android:button="@drawable/checkbox"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone"/> <!-- android:background="@drawable/checkbox_transparent_bg" -->
+
+        <ImageView
+            android:id="@+id/tag_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:paddingRight="12dp"
+            android:src="@drawable/expander_group_indicator_shrinked"/>
+    </FrameLayout>
+
+</LinearLayout>

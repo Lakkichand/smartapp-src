@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="go_account_user_authority">Request for Permission：</string>
+    <string name="go_account_ok">Allow</string>
+    <string name="go_account_cancel">Don\'t Allow</string>
+    
+    <!-- 错误信息 -->
+    <string name="go_account_server_error">Connection timed out, please try again</string>
+    <string name="go_account_json_parse_error">Your session has expired, please sign in again</string>
+    <string name="go_account_another_error">Unknown error occurred, please try again later.</string>
+    <string name="go_account_password_error">Invalid username or password</string>
+    <string name="go_account_existed_error">Account has already exist</string>
+    <string name="go_account_accountNot_exist_error">Account doesn\'t exist</string>
+    <string name="go_account_accountMail_notSet_error">Email needed for GO account</string>
+    <string name="go_account_permission_fail_error">Authorization failed</string>
+    <string name="go_account_notPermission_error">No permission</string>
+    <string name="go_account_email_incorrect">Invalid mailbox</string>
+    <string name="go_account_resetpassword_error">Please sign in first</string>
+    <string name="go_account_resetpassword_fail">Failed to reset password</string>
+    <string name="go_account_resetpassword_success">Password reset successfully, please check your mailbox</string>
+
+    <!-- 登录界面 -->
+    <string name="go_account_backText">Back</string>
+    <string name="go_account_loginEmail">Email Account</string>
+    <string name="go_account_loginPassword">Password</string>
+    <string name="go_account_login">Sign In</string>
+    <string name="go_account_forgetPassword">Forgot your password?</string>
+    <string name="go_account_email_null">Please enter email address</string>
+    <string name="go_account_password_null">Please enter password</string>
+    <string name="go_acount_no_account">Don\'t have GO account?</string>
+    <string name="go_account_account_msg">Please enter email address</string>
+    <string name="go_account_password_msg">Please enter password</string>
+    
+     <!-- 忘记密码 -->
+    <string name="go_account_get_password">Reset password</string>
+    
+	<!-- 注册界面 -->
+	<string name="go_account_login_sys">Sign In</string>
+    <string name="go_account_register_email_null">Please enter email address</string>
+    <string name="go_account_register">Create GO account</string>
+    <string name="go_account_register_email">Email address</string>
+    <string name="go_account_register_petname">Username</string>
+    <string name="go_account_register_password">Password(6-16 characters)</string>
+    <string name="go_account_register_show_password">Show password</string>
+    <string name="go_account_button">Sign Up</string>
+    <string name="go_account_register_email_msg">Please enter email address</string>
+    <string name="go_account_register_petname_msg">Username</string>
+    <string name="go_account_register_password_msg">6-16 chars</string>
+    <string name="go_account_register_user_tip">By signing up,you accepted</string>
+    <string name="go_account_register_and">and</string>
+    <string name="go_account_brower_user">User terms</string>
+    <string name="go_account_brower_privacy">Privacy Policy</string>
+    <string name="go_account_have_account">Already have GO Account?</string>
+    <string name="go_account_register_password_null">Please enter password</string>
+    <string name="go_account_register_password_less_than_six">Password is shorter than 6 chars</string>
+    <string name="go_account_register_password_lang_than_limit">Password exceeds the limit of 16 chars</string>
+    <string name="go_account_register_petname_null">Please enter username</string>
+    <string name="go_account_register_petname_long_than_limit">Username exceeds the limit of 24 chars</string>
+    <string name="go_account_network_not_available">No network connection</string>
+    
+    <!-- 修改密码 -->
+    <string name="go_account_modify_password">Change password</string>
+    <string name="go_account_modify_password_null">Please sign in first</string>
+    
+    <!-- 加载框 -->
+    <string name="go_account_loading_title">Loading…</string>
+    <string name="go_account_loading_text_register">Creating account...</string>
+    <string name="go_account_loading_text_login">Signing in...</string>
+    
+    <!-- 个人中心  -->
+    <string name="go_account_usercenter">Account Info</string>
+    <string name="go_account_emailvalidate">Verify email account</string>
+    <string name="go_account_emailreset">Modify email account</string>
+    <string name="go_account_logout">Sign out</string>
+    <string name="network_setting">Network Setting</string>
+</resources>

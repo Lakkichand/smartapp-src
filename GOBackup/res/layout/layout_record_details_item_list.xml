@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <include
+        android:id="@+id/contacts_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_record_details_item" />
+
+    <include
+        android:id="@+id/sms_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_record_details_item" />
+    
+    <include
+        android:id="@+id/mms_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_record_details_item" />
+
+    <include
+        android:id="@+id/call_log_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_record_details_item" />
+    
+    <include
+        android:id="@+id/apps_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_record_details_item" />
+    
+   <include android:id="@+id/dictionary_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_record_details_item" />   
+    
+    <include
+        android:id="@+id/wifi_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_record_details_item" />
+
+    <include
+        android:id="@+id/setting_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_record_details_item" />
+    
+    <include android:id="@+id/launcher_setting_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_record_details_item" />
+    
+    <include android:id="@+id/wallpaper_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_record_details_item" />
+    
+    <include android:id="@+id/ringtone_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_record_details_item" />
+    
+    <include android:id="@+id/calendar_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_record_details_item" />
+    
+     <include android:id="@+id/bookmark_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_record_details_item" />
+
+    <include
+        android:id="@+id/ellipsis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_record_details_item" />
+
+</LinearLayout>

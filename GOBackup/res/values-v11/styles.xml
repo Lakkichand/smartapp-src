@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AdaptiveTheme" parent="@android:style/Theme.Holo"></style>
+
+    <style name="AdaptiveTheme.NoTitleBar" parent="@android:style/Theme.Holo.NoActionBar" />
+
+    <style name="AdaptiveLightTheme.NoTitleBar" parent="@android:style/Theme.Holo.Light.NoActionBar" />
+
+    <style name="AdaptiveProgressBarStyleHorizontal" parent="@android:style/Widget.Holo.ProgressBar.Horizontal"></style>
+
+    <style name="AdaptiveActivityTheme" parent="@android:style/Theme.Holo.Light.Panel"></style>
+
+</resources>
