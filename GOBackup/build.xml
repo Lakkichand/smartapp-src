@@ -1,0 +1,403 @@
+<?xml version="1.0" ?>
+<project name="GoBackup" default="zipalign">
+	<!-- Android SDK的位置，请根据实际情况进行设置 -->
+	<property name="JDK_HOME" value="C:\Program Files\Java\jdk1.6.0_25" />
+	<property name="SDK_HOME" value="D:\Android\android-sdk-windows" />
+	<property name="PLATFORM8_HOME" value="${SDK_HOME}\platforms\android-15" />
+
+	<!-- keystore路径 -->
+	<property name="keystore" value="C:\workspace\GOBackup\3g.keystore" />
+	<property name="password" value="androidheart" />
+	<property name="keystore.name" value="androidheart" />
+	
+	<!-- 程序包名，请根据实际情况进行设置 -->
+	<property name="application-package" value="com.jiubang.go.backup.pro" />
+
+
+	<!-- ************************************************************************************* -->
+	<!-- 以下代码可以不用做修改 -->
+
+	<!-- 设置输出目录。Eclipse用bin作为输出目录，这里与Eclipse保持统一-->
+	<property name="outdir" value="bin" />
+	
+	<property name="tools.dir" value="${SDK_HOME}\tools" />
+	<property name="platform.tools.dir" value="${SDK_HOME}\platform-tools" />
+
+	<!-- Proguard的路径 -->
+	<property name="PROGUARD_HOME" value="${SDK_HOME}\tools\proguard\lib" />
+
+	<property name="android-framework" value="${PLATFORM8_HOME}/framework.aidl" />
+
+	<!-- Android的工程结构目录 -->
+	<property name="resource-dir" value="res" />
+	<property name="asset-dir" value="assets" />
+	<property name="srcdir" value="src" />
+	<condition property="srcdir-ospath" value="${basedir}\${srcdir}" else="${basedir}/${srcdir}">
+		<os family="windows" />
+	</condition>
+
+	<property name="external-libs" value="libs" />
+	<property name="external-so-dir" value="libs" />
+	<condition property="external-libs-ospath" value="${basedir}\${external-libs}" else="${basedir}\${external-libs}">
+		<os family="windows" />
+	</condition>
+	<condition property="external-so-ospath" value="${basedir}\${external-so-dir}" else="${basedir}\${external-so-dir}">
+		<os family="windows" />
+	</condition>
+
+	<!-- 输出目录结构 -->
+	<property name="outdir-classes" value="${outdir}/classes" />
+	<condition property="outdir-classes-ospath" value="${basedir}\${outdir-classes}" else="${basedir}\${outdir-classes}">
+		<os family="windows" />
+	</condition>
+
+	<!-- outdir-r 参数用于指定R.java文件的输出位置，这里我们将它输出到src -->
+	<property name="outdir-r" value="gen" />
+
+	<!-- dex的中间文件  -->
+	<property name="dex-file" value="classes.dex" />
+	<property name="intermediate-dex" value="${outdir}/${dex-file}" />
+	<condition property="intermediate-dex-ospath" value="${basedir}\${intermediate-dex}" else="${basedir}/${intermediate-dex}">
+		<os family="windows" />
+	</condition>
+
+	<!-- 最终包的文件结构  -->
+	<property name="resources-package" value="${outdir}/${ant.project.name}.ap_" />
+	<condition property="resources-package-ospath" value="${basedir}\${resources-package}" else="${basedir}/${resources-package}">
+		<os family="windows" />
+	</condition>
+
+	<property name="out-debug-package" value="${outdir}/${ant.project.name}-debug.apk" />
+	<condition property="out-debug-package-ospath" value="${basedir}\${out-debug-package}" else="${basedir}/${out-debug-package}">
+		<os family="windows" />
+	</condition>
+
+	<property name="out-unsigned-package" value="${outdir}/${ant.project.name}-unsigned.apk" />
+	<condition property="out-unsigned-package-ospath" value="${basedir}\${out-unsigned-package}" else="${basedir}/${out-unsigned-package}">
+		<os family="windows" />
+	</condition>
+
+	<!-- 打包过程使用的工具 -->
+	<condition property="aapt" value="${platform.tools.dir}/aapt.exe" else="${tools.dir}/aapt">
+		<os family="windows" />
+	</condition>
+	<condition property="aidl" value="${platform.tools.dir}/aidl.exe" else="${tools.dir}/aidl">
+		<os family="windows" />
+	</condition>
+	<condition property="adb" value="${tools.dir}/adb.exe" else="${tools.dir}/adb">
+		<os family="windows" />
+	</condition>
+	<condition property="zipalign" value="${tools.dir}/zipalign.exe" else="${apk.tools}/zipalign">
+		<os family="windows" />
+	</condition>
+	<condition property="dx" value="${platform.tools.dir}/dx.bat" else="${tools.dir}/dx">
+		<os family="windows" />
+	</condition>
+	<condition property="apk-builder" value="${tools.dir}/apkbuilder.bat" else="${tools.dir}/apkbuilder">
+		<os family="windows" />
+	</condition>
+	<condition property="jarsigner" value="${JDK_HOME}\bin\jarsigner.exe" else="${JDK_HOME}/bin/jarsigner">
+		<os family="windows" />
+	</condition>
+	<condition property="zipalign-package-ospath" value="${basedir}\${outdir}\${ant.project.name}_release.apk" else="${basedir}/${outdir}">
+		<os family="windows" />
+	</condition>
+	<property name="out-unsigned-package" value="${outdir}/${ant.project.name}-unsigned.apk" />
+	<property name="out-signed-package" value="${outdir}/${ant.project.name}-signed.apk" />
+	<condition property="out-unsigned-package-ospath" value="${basedir}\${out-unsigned-package}" else="${basedir}/${out-unsigned-package}">
+		<os family="windows" />
+	</condition>
+	<condition property="out-signed-package-ospath" value="${basedir}\${out-signed-package}" else="${basedir}/${out-signed-package}">
+		<os family="windows" />
+	</condition>
+
+	<property name="android-jar" value="${PLATFORM8_HOME}\android.jar" />
+
+	<!-- Rules -->
+
+	<!-- 创建输出目录 -->
+	<target name="dirs">
+		<echo>Creating output directories if needed...</echo>
+		<delete dir="${outdir}" />
+		<delete dir="${outdir-classes}" />
+		<mkdir dir="${outdir}" />
+		<mkdir dir="${outdir-classes}" />
+	</target>
+
+	<!-- 生成 R.java -->
+	<target name="resource-src" depends="dirs">
+		<echo>Generating R.java / Manifest.java from the resources...</echo>
+		<exec executable="${aapt}" failonerror="true">
+			<arg value="package" />
+			<arg value="-m" />
+			<arg value="-J" />
+			<arg value="${outdir-r}" />
+			<arg value="-M" />
+			<arg value="AndroidManifest.xml" />
+			<arg value="-S" />
+			<arg value="${resource-dir}" />
+			<arg value="-I" />
+			<arg value="${android-jar}" />
+		</exec>
+	</target>
+
+	<!-- 根据.aidl文件创建java类 -->
+	<target name="aidl" depends="dirs">
+		<echo>Compiling aidl files into Java classes...</echo>
+		<apply executable="${aidl}" failonerror="true">
+			<arg value="-p${android-framework}" />
+			<arg value="-I${srcdir}" />
+			<arg value="-o${outdir-r}"/>
+			<fileset dir="${srcdir}">
+				<include name="**/*.aidl" />
+			</fileset>
+		</apply>
+	</target>
+
+	<!-- 编译java文件 -->
+	<target name="compile" depends="dirs, resource-src, aidl">
+		<echo>Compile .java files into .class files...</echo>
+		<javac encoding="utf-8" target="1.5" debug="true" extdirs="" srcdir="." destdir="${outdir-classes}" bootclasspath="${android-jar}">
+			<classpath>
+				<fileset dir="${external-libs}" includes="*.jar" />
+			</classpath>
+		</javac>
+	</target>
+
+	<!-- 混淆-->
+	<target name="obfuscate" depends="compile">
+		<!--解压GO帐号jar包一起混淆-->
+		<unzip src="${external-libs}\GOAccountSDK.jar" dest="${outdir-classes}" overwrite="true"/>
+		
+		<jar basedir="${outdir-classes}" destfile="temp.jar" />
+		<java jar="${PROGUARD_HOME}/proguard.jar" fork="true" failonerror="true">
+			<jvmarg value="-Dmaximum.inlined.code.length=32" />
+			<arg value="-injars temp.jar" />
+			<arg value="-outjars optimized.jar" />
+			<arg value="-libraryjars ${android-jar}" />
+			<arg value="-libraryjars ${external-so-dir}" />
+			<arg value="-dontpreverify" />
+			<arg value="-dontoptimize" />
+			<arg value="-dontusemixedcaseclassnames" />
+			<arg value="-keepattributes Exceptions,SourceFile,LineNumberTable" />
+			<arg value="-overloadaggressively" />
+			<arg value="-optimizationpasses 7" />
+			<arg value="-verbose" />
+			<arg value="-dontskipnonpubliclibraryclasses" />
+			<arg value="-dontskipnonpubliclibraryclassmembers" />
+			
+			<!-- <arg value="-keep public class **{ public *; }" />-->		
+			<!-- 外部jar包不混淆-->
+			<arg value="-libraryjars ${android-jar};
+			            ./libs/android-support-v4.jar"/>
+
+			
+			<!-- View通过xml生成视图，四大组件需要与manifest.xml注册的组件映射，均不混淆 -->
+			<arg value="-keep public class * extends android.app.Activity" />
+			<arg value="-keep public class * extends android.app.Application" />
+			<arg value="-keep public class * extends android.app.Service" />
+			<arg value="-keep public class * extends android.content.ContentProvider" />
+			<arg value="-keep public class * extends android.content.BroadcastReceiver" />
+			<arg value="-keep public class * extends android.view.View" />
+			<arg value="-keep public class * extends android.preference.Preference" />
+
+			<!-- jni接口不混淆-->
+			<arg value="-keepclasseswithmembernames class * {
+			    native &lt;methods&gt;;
+			}" />
+
+			<!-- AttributeSet 不混淆-->
+			<arg value="-keepclasseswithmembers class * {
+			    public &lt;init&gt;(android.content.Context, android.util.AttributeSet);
+			}" />
+			<arg value="-keepclasseswithmembers class * {
+			    public &lt;init&gt;(android.content.Context, android.util.AttributeSet, int);
+			}" />
+
+			<arg value="-keepclassmembers class * extends android.app.Activity {
+				   public void *(android.view.View);
+				}" />
+
+			<!-- 枚举 不混淆-->
+			<arg value="-keepclassmembers enum * {
+			    public static **[] values();
+			    public static ** valueOf(java.lang.String);
+			}" />
+
+			<!-- android.os.Parcelable不混淆-->
+			<arg value="-keep class * implements android.os.Parcelable {
+				  public static final android.os.Parcelable$Creator *;
+				}" />
+
+			<!-- java.io.Serializable不混淆-->
+			<arg value="-keep class * implements java.io.Serializable{public *;}" />
+			
+			<!-- 应用备份项使用了反射，不混淆-->
+			<arg value="-keep class com.jiubang.go.backup.pro.data.AppBackupEntry{public *;}"/>
+			<arg value="-keep class android.content.pm.IPackageStatsObserver{public *;}"/>
+			<!--个人中心中javascript的代码回调了本地java代码，不混淆-->
+			<arg value="-keep class com.jiubang.go.account.usercenter.UserCenterJavaScript{public *;}"/>
+			<arg value="-keep class com.jiubang.go.account.usercenter.NetworkSettingJS{public *;}"/>
+			
+		</java>
+		<delete file="temp.jar" />
+		<delete dir="${outdir-classes}" />
+		<mkdir dir="${outdir-classes}" />
+		<unzip src="optimized.jar" dest="${outdir-classes}" />
+		<delete file="optimized.jar" />
+	</target>
+
+	<!-- 将class文件打包成dex文本 -->
+	<target name="dex" depends="compile,obfuscate">
+		<echo>Converting compiled files and external libraries into ${outdir}/${dex-file}...</echo>
+		<apply executable="${dx}" failonerror="true" parallel="true">
+			<arg value="--dex" />
+			<arg value="--output=${intermediate-dex-ospath}" />
+			<arg path="${outdir-classes-ospath}" />
+		<!--	<fileset dir="${external-libs}" includes="*.jar" /> -->
+			<fileset dir="${external-libs}" includes="android-support-v4.jar"/>
+			<fileset dir="${external-libs}" includes="dropbox-android-sdk-1.3.1.jar"/>
+			<fileset dir="${external-libs}" includes="json_simple-1.1.jar"/>
+		</apply>
+	</target>
+
+	<!-- 将资源文件打包进来，包括assets目录中的资源 -->
+	<target name="package-res-and-assets">
+		<echo>Packaging resources and assets...</echo>
+		<exec executable="${aapt}" failonerror="true">
+			<arg value="package" />
+			<arg value="-f" />
+			<arg value="-M" />
+			<arg value="AndroidManifest.xml" />
+			<arg value="-S" />
+			<arg value="${resource-dir}" />
+			<arg value="-A" />
+			<arg value="${asset-dir}" />
+			<arg value="-I" />
+			<arg value="${android-jar}" />
+			<arg value="-F" />
+			<arg value="${resources-package}" />
+		</exec>
+	</target>
+	
+	<!-- 将资源文件打包进来，不包括assets目录中的资源 -->
+	<target name="package-res-no-assets">
+		<echo>Packaging resources without assets...</echo>
+		<exec executable="${aapt}" failonerror="true">
+			<arg value="package" />
+			<arg value="-f" />
+			<arg value="-M" />
+			<arg value="AndroidManifest.xml" />
+			<arg value="-S" />
+			<arg value="${resource-dir}" />
+			<!-- 户列assets目录 -->
+			<arg value="-I" />
+			<arg value="${android-jar}" />
+			<arg value="-F" />
+			<arg value="${resources-package}" />
+		</exec>
+		<echo>adding so files to apk...</echo>
+	</target>
+
+	<!-- 此处需要根据情况选择是否打包进assets目录 -->
+	<target name="package-res">
+		<echo>Packaging resources...</echo>
+		<available file="${asset-dir}" type="dir" property="res-target" value="and-assets" />
+		<property name="res-target" value="no-assets" />
+		<antcall target="package-res-${res-target}" />
+	</target>
+
+	<!-- 构建程序安装包，并用debug key进行签名。用于测试。 -->
+	<target name="debug" depends="dex, package-res">
+		<echo>Packaging ${out-debug-package}, and signing it with a debug key...</echo>
+		<exec executable="${apk-builder}" failonerror="true">
+			<arg value="${out-debug-package-ospath}" />
+			<arg value="-z" />
+			<arg value="${resources-package-ospath}" />
+			<arg value="-f" />
+			<arg value="${intermediate-dex-ospath}" />
+			<arg value="-rf" />
+			<arg value="${srcdir-ospath}" />
+			<arg value="-rj" />
+			<arg value="${external-libs-ospath}" />
+			<arg value="-nf" />
+			<arg value="${external-so-ospath}" />
+		</exec>
+	</target>
+
+	<!-- 构建程序安装包，暂不进行签名。发布前要先进行签名。 -->
+	<target name="release" depends="dex, package-res">
+		<echo>Packaging ${out-unsigned-package} for release...</echo>
+		<exec executable="${apk-builder}" failonerror="true">
+			<arg value="${out-unsigned-package-ospath}" />
+			<arg value="-u" />
+			<arg value="-z" />
+			<arg value="${resources-package-ospath}" />
+			<arg value="-f" />
+			<arg value="${intermediate-dex-ospath}" />
+			<arg value="-rf" />
+			<arg value="${srcdir-ospath}" />
+			<arg value="-rj" />
+			<arg value="${external-libs-ospath}" />
+			<arg value="-nf" />
+			<arg value="${external-so-ospath}" />
+		</exec>
+		<echo>It will need to be signed with jarsigner before being published.</echo>
+	</target>
+
+	<!--进行签名-->
+	<target name="sign" depends="release">
+		<exec executable="${jarsigner}" failonerror="true">
+			<arg value="-verbose" />
+			<arg value="-keypass" />
+			<arg value="${password}" />
+			<arg value="-keystore" />
+			<arg value="${keystore}" />
+			<arg value="-storepass" />
+			<arg value="${password}" />
+			<arg value="-signedjar" />
+			<arg value="${out-signed-package-ospath}" />
+			<arg value="${out-unsigned-package-ospath}" />
+			<arg value="${keystore.name}" />
+		</exec>
+	</target>
+
+	<!--进行优化-->
+	<target name="zipalign" depends="sign">
+		<exec executable="${zipalign}" failonerror="true">
+			<arg value="-v" />
+			<arg value="-f" />
+			<arg value="4" />
+			<arg value="${out-signed-package-ospath}" />
+			<arg value="${zipalign-package-ospath}" />
+		</exec>
+	</target>
+
+	<!-- 安装APK到模拟器 -->
+	<target name="install" depends="debug">
+		<echo>Installing ${out-debug-package} onto default emulator...</echo>
+		<exec executable="${adb}" failonerror="true">
+			<arg value="install" />
+			<arg value="${out-debug-package}" />
+		</exec>
+	</target>
+
+	<target name="reinstall" depends="debug">
+		<echo>Installing ${out-debug-package} onto default emulator...</echo>
+		<exec executable="${adb}" failonerror="true">
+			<arg value="install" />
+			<arg value="-r" />
+			<arg value="${out-debug-package}" />
+		</exec>
+	</target>
+
+	<!-- 卸载APK -->
+	<target name="uninstall">
+		<echo>Uninstalling ${application-package} from the default emulator...</echo>
+		<exec executable="${adb}" failonerror="true">
+			<arg value="uninstall" />
+			<arg value="${application-package}" />
+		</exec>
+	</target>
+
+</project>
