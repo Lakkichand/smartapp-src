@@ -94,6 +94,7 @@ public class MainController extends TACommand {
 								bean.mIsSysApp = false;
 							}
 							bean.mBootReceiver.add(rinfo);
+							map.put(packname, bean);
 						} catch (Exception e) {
 							e.printStackTrace();
 						}
@@ -125,6 +126,7 @@ public class MainController extends TACommand {
 								bean.mIsSysApp = false;
 							}
 							bean.mBackgroundReceiver.add(rinfo);
+							map.put(packname, bean);
 						} catch (Exception e) {
 							e.printStackTrace();
 						}
