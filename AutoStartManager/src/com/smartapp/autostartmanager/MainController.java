@@ -176,14 +176,17 @@ public class MainController extends TACommand {
 						break;
 					}
 				}
-				for (ResolveInfo rinfo : xb.mBackgroundReceiver) {
-					ComponentName mComponentName = new ComponentName(
-							rinfo.activityInfo.packageName,
-							rinfo.activityInfo.name);
-					int state = pm.getComponentEnabledSetting(mComponentName);
-					if (state != PackageManager.COMPONENT_ENABLED_STATE_DISABLED) {
-						xb.mIsForbid = false;
-						break;
+				if (xb.mIsForbid) {
+					for (ResolveInfo rinfo : xb.mBackgroundReceiver) {
+						ComponentName mComponentName = new ComponentName(
+								rinfo.activityInfo.packageName,
+								rinfo.activityInfo.name);
+						int state = pm
+								.getComponentEnabledSetting(mComponentName);
+						if (state != PackageManager.COMPONENT_ENABLED_STATE_DISABLED) {
+							xb.mIsForbid = false;
+							break;
+						}
 					}
 				}
 			}

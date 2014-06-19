@@ -32,6 +32,10 @@ public class DataBean implements Comparable<DataBean> {
 	 */
 	public boolean mIsForbid;
 	/**
+	 * 第一个没有禁用或者已经禁用的应用
+	 */
+	public boolean mIsFirst = false;
+	/**
 	 * 这个应用的开机启动receiver
 	 */
 	public List<ResolveInfo> mBootReceiver = new ArrayList<ResolveInfo>();

@@ -4,8 +4,8 @@ import java.util.List;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.FrameLayout;
+import android.widget.ListView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
@@ -19,6 +19,9 @@ public class MainActivity extends Activity {
 
 	private AdView adView;
 
+	private ListView mListView;
+	private MainAdapter mAdapter;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -28,7 +31,6 @@ public class MainActivity extends Activity {
 		adView = new AdView(this);
 		adView.setAdUnitId("ca-app-pub-6335053266754945/7051389713");
 		adView.setAdSize(AdSize.BANNER);
-
 		FrameLayout layout = (FrameLayout) findViewById(R.id.adcontianer);
 		// 在其中添加adView。
 		layout.addView(adView);
@@ -36,6 +38,10 @@ public class MainActivity extends Activity {
 		AdRequest adRequest = new AdRequest.Builder().build();
 		// 在adView中加载广告请求。
 		adView.loadAd(adRequest);
+
+		mListView = (ListView) findViewById(R.id.listview);
+		mAdapter = new MainAdapter();
+		mListView.setAdapter(mAdapter);
 
 		// 获取运行应用列表
 		TAApplication.getApplication().doCommand("maincontroller",
@@ -50,16 +56,7 @@ public class MainActivity extends Activity {
 					public void onSuccess(TAResponse response) {
 						List<DataBean> retList = (List<DataBean>) response
 								.getData();
-						for (DataBean bean : retList) {
-							Log.e("",
-									bean.mName
-											+ (bean.mBootReceiver.size() <= 0 ? ""
-													: "  开机启动")
-											+ (bean.mBackgroundReceiver.size() <= 0 ? ""
-													: "  后台启动")
-											+ (bean.mIsForbid ? "  已禁用"
-													: "  未禁用"));
-						}
+						mAdapter.update(retList);
 					}
 
 					@Override
@@ -75,5 +72,23 @@ public class MainActivity extends Activity {
 					}
 				}, true, false);
 
+	}
+
+	@Override
+	protected void onResume() {
+		adView.resume();
+		super.onResume();
+	}
+
+	@Override
+	public void onPause() {
+		adView.pause();
+		super.onPause();
+	}
+
+	@Override
+	public void onDestroy() {
+		adView.destroy();
+		super.onDestroy();
 	}
 }
