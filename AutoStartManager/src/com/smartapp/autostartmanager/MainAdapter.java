@@ -3,13 +3,19 @@ package com.smartapp.autostartmanager;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
+import com.ta.TAApplication;
+
 public class MainAdapter extends BaseAdapter {
 
 	private List<DataBean> mList = new ArrayList<>();
+
+	private LayoutInflater mInflater = LayoutInflater.from(TAApplication
+			.getApplication());
 
 	@Override
 	public int getCount() {
@@ -28,7 +34,11 @@ public class MainAdapter extends BaseAdapter {
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		return null;
+		if (convertView == null) {
+			convertView = mInflater.inflate(R.layout.process_item, null);
+		}
+		DataBean bean = mList.get(position);
+		return convertView;
 	}
 
 	/**
