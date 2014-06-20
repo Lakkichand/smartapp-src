@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">程序凍結器</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="enable">已啟用</string>
+    <string name="disable">已禁用</string>
+    <string name="wait">請稍等...</string>
+    <string name="freeze">凍結</string>
+    <string name="unfreeze">解凍</string>
+    <string name="refresh">刷新</string>
+    <string name="feedback">反饋</string>
+    <string name="mart">評分</string>
+    <string name="share">分享</string>
+    <string name="other">其他應用</string>
+    <string name="requestroot">請求root權限</string>
+    <string name="noroottitle">錯誤</string>
+    <string name="norootmsg">獲取root權限失敗，不能凍結/解凍應用！</string>
+    <string name="norootbtn">好的</string>
+    <string name="freezing_apps">凍結。。。</string>
+    <string name="unfreezing_apps">解凍。。。</string>
+    <string name="cancel">取消</string>
+    <string name="freeze_app_result">成功凍結</string>
+    <string name="unfreeze_app_result">成功解凍</string>
+    <string name="apps">個應用</string>
+    <string name="running">正在運行</string>
+
+</resources>

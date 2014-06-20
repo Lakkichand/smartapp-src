@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AppFreezer</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="enable">Enable</string>
+    <string name="disable">Disable</string>
+    <string name="wait">Please wait...</string>
+    <string name="freeze">Freeze</string>
+    <string name="unfreeze">Unfreeze</string>
+    <string name="refresh">Refresh</string>
+    <string name="feedback">Feedback</string>
+    <string name="mart">Give a review</string>
+    <string name="share">Share</string>
+    <string name="other">Other Apps</string>
+    <string name="requestroot">Request Root Permission</string>
+    <string name="noroottitle">Error</string>
+    <string name="norootmsg">Failed to get root access!You need to have a rooted device and allow Superuser privileges to this app!</string>
+    <string name="norootbtn">OK</string>
+    <string name="freezing_apps">Freezing...</string>
+    <string name="unfreezing_apps">UnFreezing...</string>
+    <string name="cancel">cancel</string>
+    <string name="freeze_app_result">Successfully froze</string>
+    <string name="unfreeze_app_result">Successfully defrost</string>
+    <string name="apps">app(s)</string>
+    <string name="running">Running</string>
+
+</resources>

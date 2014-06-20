@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="setting_more">
+        <item>@string/refresh</item>
+        <item>@string/running</item>
+        <item>@string/feedback</item>
+        <item>@string/mart</item>
+        <item>@string/share</item>
+        <item>@string/other</item>
+    </string-array>
+
+</resources>
