@@ -223,15 +223,15 @@ public class FileUtil {
 	 */
 	public static String convertFileSize(long size) {
 		if (size > 1073741824) {
-			return (new BigDecimal(size / 1073741824.0)).setScale(2,
+			return (new BigDecimal(size / 1073741824.0)).setScale(1,
 					BigDecimal.ROUND_HALF_UP).doubleValue()
 					+ "TB";
 		} else if (size > 1048576) {
-			return (new BigDecimal(size / 1048576.0)).setScale(2,
+			return (new BigDecimal(size / 1048576.0)).setScale(1,
 					BigDecimal.ROUND_HALF_UP).doubleValue()
 					+ "GB";
 		} else if (size > 1024) {
-			return (new BigDecimal(size / 1024.0)).setScale(2,
+			return (new BigDecimal(size / 1024.0)).setScale(1,
 					BigDecimal.ROUND_HALF_UP).doubleValue()
 					+ "MB";
 		} else {

@@ -14,6 +14,7 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:color/white"
         android:paddingBottom="4dp"
         android:paddingLeft="7dp"
         android:paddingTop="4dp"

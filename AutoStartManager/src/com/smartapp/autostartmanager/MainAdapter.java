@@ -2,9 +2,9 @@ package com.smartapp.autostartmanager;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import android.graphics.Bitmap;
-import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -184,6 +184,22 @@ public class MainAdapter extends BaseAdapter {
 				}
 				mList.add(bean);
 				hasAddFirst = true;
+			}
+		}
+		notifyDataSetChanged();
+	}
+
+	/**
+	 * 更新CPU使用率
+	 */
+	public void updateCPU(Map<String, Float> retRate) {
+		for (DataBean bean : mList) {
+			if (retRate.containsKey(bean.mInfo.packageName)) {
+				float rate = retRate.get(bean.mInfo.packageName);
+				rate = ((int) (rate * 10.0f + 0.5f)) / 10.0f;
+				bean.mCpuRate = "CPU:" + rate + "%";
+			} else {
+				bean.mCpuRate = "CPU:0%";
 			}
 		}
 		notifyDataSetChanged();
