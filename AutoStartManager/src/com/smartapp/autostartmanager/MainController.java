@@ -46,7 +46,20 @@ public class MainController extends TACommand {
 			"android.intent.action.MEDIA_CHECKING",
 			"android.intent.action.PACKAGE_REPLACED",
 			"android.intent.action.NEW_OUTGOING_CALL",
-			"android.bluetooth.adapter.action.STATE_CHANGED" };
+			"android.bluetooth.adapter.action.STATE_CHANGED",
+			"android.intent.action.TIME_SET",
+			"android.intent.action.TIME_TICK",
+			"android.intent.action.TIMEZONE_CHANGED",
+			"android.intent.action.PACKAGE_DATA_CLEARED",
+			"android.intent.action.UID_REMOVED",
+			"android.intent.action.BATTERY_CHANGED",
+			"android.intent.action.BATTERY_LOW",
+			"android.intent.action.BATTERY_OKAY",
+			"android.intent.action.ACTION_POWER_CONNECTED",
+			"android.intent.action.ACTION_POWER_DISCONNECTED",
+			"android.intent.action.ACTION_SHUTDOWN",
+			"android.intent.action.CAMERA_BUTTON",
+			"android.intent.action.MEDIA_MOUNTED" };
 
 	/**
 	 * 扫描自启动和后台启动项

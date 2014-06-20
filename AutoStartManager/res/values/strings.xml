@@ -2,5 +2,13 @@
 <resources>
 
     <string name="app_name">AutoStartManager</string>
+    <string name="sysapp">(System App)</string>
+    <string name="bootstart">BootStart</string>
+    <string name="backgroundstart">AutoStart</string>
+    <string name="title1">BootStart/AutoStart</string>
+    <string name="title2">Disabled&#160;BootStart/AutoStart</string>
+    <string name="accept">Allow</string>
+    <string name="forbid">Forbid</string>
+    <string name="ram">RAM:</string>
 
 </resources>

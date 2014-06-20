@@ -3,12 +3,18 @@ package com.smartapp.autostartmanager;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.graphics.Bitmap;
+import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.ta.TAApplication;
+import com.zhidian3g.wifibox.imagemanager.AsyncImageManager;
+import com.zhidian3g.wifibox.imagemanager.AsyncImageManager.AsyncImageLoadedCallBack;
 
 public class MainAdapter extends BaseAdapter {
 
@@ -38,6 +44,93 @@ public class MainAdapter extends BaseAdapter {
 			convertView = mInflater.inflate(R.layout.process_item, null);
 		}
 		DataBean bean = mList.get(position);
+		View gap = convertView.findViewById(R.id.gap);
+		TextView title = (TextView) convertView.findViewById(R.id.title);
+		if (bean.mIsFirst) {
+			if (position == 0) {
+				gap.setVisibility(View.GONE);
+			} else {
+				gap.setVisibility(View.VISIBLE);
+			}
+			title.setVisibility(View.VISIBLE);
+			if (!bean.mIsForbid) {
+				title.setText(TAApplication.getApplication().getString(
+						R.string.title1)
+						+ "(" + getEnableCount() + ")");
+			} else {
+				title.setText(TAApplication.getApplication().getString(
+						R.string.title2)
+						+ "(" + getDisableCount() + ")");
+			}
+		} else {
+			gap.setVisibility(View.GONE);
+			title.setVisibility(View.GONE);
+		}
+		final ImageView icon = (ImageView) convertView.findViewById(R.id.icon);
+		icon.setTag(bean.mInfo.packageName);
+		Bitmap bm = AsyncImageManager.getInstance().loadIcon(
+				bean.mInfo.packageName, true, new AsyncImageLoadedCallBack() {
+
+					@Override
+					public void imageLoaded(Bitmap imageBitmap, String imgUrl) {
+						if (imageBitmap != null && icon.getTag().equals(imgUrl)) {
+							icon.setImageBitmap(imageBitmap);
+						}
+					}
+				});
+		if (bm != null) {
+			icon.setImageBitmap(bm);
+		} else {
+			icon.setImageBitmap(DrawUtil.sDefaultIcon);
+		}
+		TextView name = (TextView) convertView.findViewById(R.id.name);
+		name.setText(bean.mName);
+		TextView tag = (TextView) convertView.findViewById(R.id.tag);
+		if (bean.mIsSysApp) {
+			tag.setVisibility(View.VISIBLE);
+		} else {
+			tag.setVisibility(View.GONE);
+		}
+		View appInfo = convertView.findViewById(R.id.app_info);
+		if (bean.mIsForbid) {
+			appInfo.setVisibility(View.GONE);
+		} else {
+			appInfo.setVisibility(View.VISIBLE);
+		}
+		TextView ram = (TextView) convertView.findViewById(R.id.ram);
+		ram.setText(TAApplication.getApplication().getString(R.string.ram)
+				+ FileUtil.convertFileSize(bean.mMemory));
+		TextView cpu = (TextView) convertView.findViewById(R.id.cpu);
+		cpu.setText(bean.mCpuRate);
+		TextView permission = (TextView) convertView
+				.findViewById(R.id.permission);
+		if (bean.mIsForbid) {
+			permission.getPaint().setStrikeThruText(true);
+		} else {
+			permission.getPaint().setStrikeThruText(false);
+		}
+		String action = "";
+		if (bean.mBootReceiver.size() > 0) {
+			action += TAApplication.getApplication().getString(
+					R.string.bootstart)
+					+ "  ";
+		}
+		if (bean.mBackgroundReceiver.size() > 0) {
+			action += TAApplication.getApplication().getString(
+					R.string.backgroundstart);
+		}
+		permission.setText(action);
+		ImageView operaimg = (ImageView) convertView
+				.findViewById(R.id.operator_img);
+		TextView operatxt = (TextView) convertView
+				.findViewById(R.id.operator_txt);
+		if (bean.mIsForbid) {
+			operaimg.setImageResource(R.drawable.accept);
+			operatxt.setText(R.string.accept);
+		} else {
+			operaimg.setImageResource(R.drawable.forbid);
+			operatxt.setText(R.string.forbid);
+		}
 		return convertView;
 	}
 
@@ -93,5 +186,33 @@ public class MainAdapter extends BaseAdapter {
 				hasAddFirst = true;
 			}
 		}
+		notifyDataSetChanged();
 	}
+
+	/**
+	 * 自启动应用个数
+	 */
+	private int getEnableCount() {
+		int ret = 0;
+		for (DataBean bean : mList) {
+			if (!bean.mIsForbid) {
+				ret++;
+			}
+		}
+		return ret;
+	}
+
+	/**
+	 * 已禁用个数
+	 */
+	private int getDisableCount() {
+		int ret = 0;
+		for (DataBean bean : mList) {
+			if (bean.mIsForbid) {
+				ret++;
+			}
+		}
+		return ret;
+	}
+
 }

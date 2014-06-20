@@ -51,6 +51,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center_vertical"
                 android:orientation="horizontal" >
 
                 <TextView
@@ -60,18 +61,18 @@
                     android:maxWidth="150dp"
                     android:singleLine="true"
                     android:text="齐天大圣"
-                    android:textColor="@android:color/black"
-                    android:textSize="16dip"
-                    android:textStyle="bold" />
+                    android:textColor="#FF3b3b3b"
+                    android:textSize="17dip" />
 
                 <TextView
                     android:id="@+id/tag"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
                     android:singleLine="true"
-                    android:text="(系统应用)"
-                    android:textColor="@android:color/black"
-                    android:textSize="13dip" />
+                    android:text="@string/sysapp"
+                    android:textColor="#FFFF0000"
+                    android:textSize="14dip" />
             </LinearLayout>
 
             <LinearLayout
@@ -90,7 +91,7 @@
                     android:singleLine="true"
                     android:text="内存：12MB"
                     android:textColor="#FF9e9e9e"
-                    android:textSize="13.5dp" />
+                    android:textSize="12.5dp" />
 
                 <TextView
                     android:id="@+id/cpu"
@@ -100,7 +101,7 @@
                     android:singleLine="true"
                     android:text="CPU：0.2%"
                     android:textColor="#FF9e9e9e"
-                    android:textSize="13.5dp" />
+                    android:textSize="12.5dp" />
             </LinearLayout>
 
             <TextView
@@ -111,7 +112,7 @@
                 android:singleLine="true"
                 android:text="开机自启动  后台自启动"
                 android:textColor="#FF9e9e9e"
-                android:textSize="13.5dp" />
+                android:textSize="12.5dp" />
         </LinearLayout>
 
         <View
@@ -124,10 +125,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="3dp"
             android:orientation="vertical"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp" >
+            android:paddingLeft="11dp"
+            android:paddingRight="11dp" >
 
             <ImageView
                 android:id="@+id/operator_img"

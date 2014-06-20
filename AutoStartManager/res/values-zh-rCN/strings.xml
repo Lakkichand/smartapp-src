@@ -2,5 +2,13 @@
 <resources>
 
     <string name="app_name">自启动管理</string>
+    <string name="sysapp">(系统应用)</string>
+    <string name="bootstart">开机自启动</string>
+    <string name="backgroundstart">后台自启动</string>
+    <string name="title1">自启动应用</string>
+    <string name="title2">已禁用自启动应用</string>
+    <string name="accept">允许</string>
+    <string name="forbid">禁止</string>
+    <string name="ram">内存:</string>
 
 </resources>
