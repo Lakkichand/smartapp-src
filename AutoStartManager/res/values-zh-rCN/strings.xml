@@ -10,5 +10,6 @@
     <string name="accept">允许</string>
     <string name="forbid">禁止</string>
     <string name="ram">内存:</string>
+    <string name="scaning">正在扫描</string>
 
 </resources>

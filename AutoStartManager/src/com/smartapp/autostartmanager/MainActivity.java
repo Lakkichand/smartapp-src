@@ -4,11 +4,15 @@ import java.util.List;
 import java.util.Map;
 
 import android.app.Activity;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
@@ -21,6 +25,10 @@ import com.ta.mvc.common.TAResponse;
 public class MainActivity extends Activity {
 
 	private AdView adView;
+	private View mContentLayout;
+	private View mProgressLayout;
+	private ImageView mProgress;
+	private TextView mProgressText;
 
 	private ListView mListView;
 	private MainAdapter mAdapter;
@@ -94,6 +102,17 @@ public class MainActivity extends Activity {
 		mAdapter = new MainAdapter();
 		mListView.setAdapter(mAdapter);
 
+		mContentLayout = findViewById(R.id.content);
+		mProgressLayout = findViewById(R.id.progress_layout);
+		mProgress = (ImageView) findViewById(R.id.progress);
+		mProgressText = (TextView) findViewById(R.id.progress_text);
+
+		mContentLayout.setVisibility(View.GONE);
+		mProgressLayout.setVisibility(View.VISIBLE);
+		Drawable drawable = new PageProgressBitmapDrawable(getResources(),
+				DrawUtil.sPageProgressBitmap, 0);
+		mProgress.setImageDrawable(drawable);
+
 		// 获取运行应用列表
 		TAApplication.getApplication().doCommand("maincontroller",
 				new TARequest(MainController.SCAN_COMMAND, null),
@@ -105,6 +124,8 @@ public class MainActivity extends Activity {
 
 					@Override
 					public void onSuccess(TAResponse response) {
+						mProgressLayout.setVisibility(View.GONE);
+						mContentLayout.setVisibility(View.VISIBLE);
 						List<DataBean> retList = (List<DataBean>) response
 								.getData();
 						mAdapter.update(retList);
@@ -116,6 +137,15 @@ public class MainActivity extends Activity {
 
 					@Override
 					public void onRuning(TAResponse response) {
+						Object obj = response.getData();
+						if (obj != null && obj instanceof Integer) {
+							int progress = (Integer) obj;
+							Drawable drawable = new PageProgressBitmapDrawable(
+									getResources(),
+									DrawUtil.sPageProgressBitmap, progress);
+							mProgress.setImageDrawable(drawable);
+							mProgressText.setText(progress + "%");
+						}
 					}
 
 					@Override

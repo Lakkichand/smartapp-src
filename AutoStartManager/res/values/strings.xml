@@ -10,5 +10,6 @@
     <string name="accept">Allow</string>
     <string name="forbid">Forbid</string>
     <string name="ram">RAM:</string>
+    <string name="scaning">Scaning...</string>
 
 </resources>

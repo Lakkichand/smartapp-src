@@ -21,6 +21,13 @@ public class DrawUtil {
 			.getDrawable(R.drawable.default_logo)).getBitmap();
 
 	/**
+	 * 页面圆形进度背景
+	 */
+	public static final Bitmap sPageProgressBitmap = ((BitmapDrawable) TAApplication
+			.getApplication().getResources()
+			.getDrawable(R.drawable.progress_bg)).getBitmap();
+
+	/**
 	 * 根据手机的分辨率从 dp 的单位 转成为 px(像素)
 	 */
 	public static int dip2px(Context context, float dpValue) {

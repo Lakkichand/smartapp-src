@@ -66,8 +66,7 @@
             android:id="@+id/progress_layout"
             android:layout_width="250dp"
             android:layout_height="250dp"
-            android:layout_gravity="center"
-            android:visibility="gone" >
+            android:layout_gravity="center" >
 
             <View
                 android:id="@+id/dian"
@@ -98,7 +97,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/progress_text"
                 android:layout_centerHorizontal="true"
-                android:text="正在扫描"
+                android:text="@string/scaning"
                 android:textColor="#FFa0a0a0"
                 android:textSize="12dp" />
         </RelativeLayout>
