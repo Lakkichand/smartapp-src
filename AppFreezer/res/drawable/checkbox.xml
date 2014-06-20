@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <!-- checked -->
-    <item android:drawable="@drawable/checkbox_light" android:state_checked="true"/>
-    <!-- default -->
-    <item android:drawable="@drawable/checkbox_gray" android:state_checked="false"/>
-
-</selector>
