@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Uninstall Expert</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="userapp">User App</string>
+    <string name="systemapp">System App</string>
+    <string name="recyclebin">Disabled</string>
+    <string name="uninstall">Uninstall</string>
+    <string name="disable">Disable</string>
+    <string name="restore">Restore</string>
+    <string name="remove">Remove</string>
+    <string name="backprocess">Background Process</string>
+    <string name="readingapps">Reading the list of applications</string>
+    <string name="refresh">Refresh</string>
+    <string name="feedback">Feedback</string>
+    <string name="mart">Give a review</string>
+    <string name="share">Share</string>
+    <string name="other">Other Apps</string>
+    <string name="sortbyname">Sort by name</string>
+    <string name="sortbysize">Sort by size</string>
+    <string name="sortbydate">Sort by date</string>
+    <string name="sortbymemory">Sort by Running memory</string>
+    <string name="sort">Sort</string>
+    <string name="freezing_apps">Disabling...</string>
+    <string name="unfreezing_apps">restoring...</string>
+    <string name="cancel">Cancel</string>
+    <string name="freeze_app_result">Successfully disabled</string>
+    <string name="unfreeze_app_result">Successful recovery of</string>
+    <string name="apps">app(s)</string>
+    <string name="selectitem">Please select some items</string>
+    <string name="requestroot">Request Root Permission</string>
+    <string name="noroottitle">Error</string>
+    <string name="norootmsg">Failed to get root access!You need to have a rooted device and allow Superuser privileges to this app!</string>
+    <string name="norootbtn">OK</string>
+    <string name="tips">Tips</string>
+    <string name="disabletips">After the application is disabled, you can not re-start it and it will not run in the background. If you want to re-enable the application, go to the Disabled page, select the application and restore it.</string>
+    <string name="goon">Go on</string>
+    <string name="uninstalling">Uninstall...</string>
+    <string name="uninstall_app_result">Successfully uninstall</string>
+    <string name="sysappuninstalltips">Warning: Uninstall system apps may cause the system to not function properly, we recommend you to use disable feature. (After the app is disabled,it can not start and it will not run in the background)</string>
+    <string name="systemappnorootmsg">Failed to get root access!You need to have a rooted device and allow Superuser privileges to this app!</string>
+    <string name="warning">Warning</string>
+    <string name="goonuninstall">Go on uninstall</string>
+    <string name="gonow">GO Now!</string>
+    <string name="exittitlemsg">If you like this application, please give us a review!</string>
+    <string name="nexttime">Maybe Next Time</string>
+    <string name="remain">remain</string>
+    <string name="silentuninstalltip">Apps can not be restored after uninstalling, whether continue to uninstall?</string>
+    <string name="systemappuninstallwarning">Warning: Uninstall system apps may cause the system to not function properly</string>
+    <string name="contineuninstalluserapp">Failure to obtain root privileges, you can only uninstall the user apps, whether to continue?</string>
+
+</resources>

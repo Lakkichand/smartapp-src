@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:PagerActionBar="http://schemas.android.com/apk/res/com.smartapp.rootuninstaller"
+    xmlns:TitlePagerActionBar="http://schemas.android.com/apk/res/com.smartapp.rootuninstaller"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_weight="0"
+        android:background="@drawable/top_title_bg" >
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:src="@drawable/ic_launcher" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@+id/icon"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="#ffffffff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/rom"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:textColor="#ffffffff"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/setting"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/item_bg"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:src="@drawable/more_setting" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@id/setting"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="fill_parent"
+                android:background="#ff000000" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="fill_parent"
+                android:background="#ff3e3e3e" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.smartapp.rootuninstaller.ui.TitlePagerActionBar
+        android:id="@+id/pager_action_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0"
+        PagerActionBar:footer_padding="10dp"
+        PagerActionBar:footer_separator_color="#ff289cf4"
+        PagerActionBar:footer_separator_line_weight="1dp"
+        PagerActionBar:header_padding="10dp"
+        PagerActionBar:selected_title_text_color="#ff289cf4"
+        PagerActionBar:selector_color="#bf0f6bb0"
+        PagerActionBar:title_text_color="#ffffffff"
+        PagerActionBar:title_text_size="14dp"
+        TitlePagerActionBar:footer_underline_color="#ff289cf4"
+        TitlePagerActionBar:footer_underline_padding="12dp"
+        TitlePagerActionBar:footer_underline_weight="5dp"
+        android:background="#ff4a4a4a" >
+    </com.smartapp.rootuninstaller.ui.TitlePagerActionBar>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" />
+
+</LinearLayout>

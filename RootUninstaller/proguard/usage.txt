@@ -1,0 +1,63 @@
+android.content.pm.IPackageStatsObserver
+android.content.pm.IPackageStatsObserver$Stub
+android.content.pm.IPackageStatsObserver$Stub$Proxy
+com.smartapp.rootuninstaller.AppTaskThread:
+    public static final int ACTION_FREEZE_APPS
+    public static final int ACTION_UNFREEZE_APPS
+com.smartapp.rootuninstaller.BuildConfig
+com.smartapp.rootuninstaller.IListAdapter:
+    public static final int ADAPTER_TYPE_USERAPP
+    public static final int ADAPTER_TYPE_SYSTEMAPP
+    public static final int ADAPTER_TYPE_DISABLEAPP
+com.smartapp.rootuninstaller.ListDataBean:
+    public long mCacheSize
+    public long mDataSize
+    public long mCodeSize
+com.smartapp.rootuninstaller.MainActivity:
+    public static final int REFRESH_LIST
+    public static final int RELOAD_LIST
+    public static final int REFRESH_BTN
+com.smartapp.rootuninstaller.R:
+    10:10:public R()
+com.smartapp.rootuninstaller.R$array
+com.smartapp.rootuninstaller.R$attr
+com.smartapp.rootuninstaller.R$dimen
+com.smartapp.rootuninstaller.R$drawable
+com.smartapp.rootuninstaller.R$id
+com.smartapp.rootuninstaller.R$layout
+com.smartapp.rootuninstaller.R$string
+com.smartapp.rootuninstaller.R$style
+com.smartapp.rootuninstaller.R$styleable:
+    public static final int PagerActionBar_footer_padding
+    public static final int PagerActionBar_footer_separator_color
+    public static final int PagerActionBar_footer_separator_line_weight
+    public static final int PagerActionBar_header_padding
+    public static final int PagerActionBar_selected_title_text_color
+    public static final int PagerActionBar_selector_color
+    public static final int PagerActionBar_title_text_color
+    public static final int PagerActionBar_title_text_size
+    public static final int TitlePagerActionBar_footer_underline_color
+    public static final int TitlePagerActionBar_footer_underline_padding
+    public static final int TitlePagerActionBar_footer_underline_weight
+    275:275:public R$styleable()
+com.smartapp.rootuninstaller.util.AppFreezer:
+    14:14:public AppFreezer()
+com.smartapp.rootuninstaller.util.AppUninstaller:
+    18:18:public AppUninstaller()
+com.smartapp.rootuninstaller.util.MainDataController:
+    27:27:public MainDataController()
+com.smartapp.rootuninstaller.util.RootShell:
+    private static final int MAX_WAIT_TIME
+    private static final java.lang.String CMD_TOKEN
+    private static final int STATE_ROOT_TIME_OUT
+    private static final int STATE_ROOT_DENIED
+    private static final int STATE_ROOTED
+    106:109:public static synchronized boolean isInit()
+com.smartapp.rootuninstaller.util.RootShell$Command:
+    public static final int EXIT_CODE_NORMAL
+    public static final int EXIT_CODE_EXCEPTIOIN
+    public static final int TIME_OUT
+    378:378:public int getExitCode()
+com.smartapp.rootuninstaller.util.Util:
+    13:13:public Util()
+    21:22:public static int px2dip(android.content.Context,float)

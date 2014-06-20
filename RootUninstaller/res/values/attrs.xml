@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PagerActionBar">
+        <attr name="footer_separator_color" format="color" />
+        <attr name="title_text_color" format="color" />
+        <attr name="selected_title_text_color" format="color" />
+        <attr name="selector_color" format="color" />
+        <attr name="title_text_size" format="dimension" />
+        <attr name="header_padding" format="dimension" />
+        <attr name="footer_padding" format="dimension" />
+        <attr name="footer_separator_line_weight" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="TitlePagerActionBar">
+        <attr name="footer_underline_weight" format="dimension" />
+        <attr name="footer_underline_padding" format="dimension" />
+        <attr name="footer_underline_color" format="color" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">卸载专家</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="userapp">用户应用</string>
+    <string name="systemapp">系统应用</string>
+    <string name="recyclebin">回收站(已禁用)</string>
+    <string name="uninstall">卸载</string>
+    <string name="disable">禁用</string>
+    <string name="restore">恢复</string>
+    <string name="remove">清除</string>
+    <string name="backprocess">后台进程</string>
+    <string name="readingapps">正在读取应用列表</string>
+    <string name="refresh">刷新</string>
+    <string name="feedback">反馈</string>
+    <string name="mart">评分</string>
+    <string name="share">分享</string>
+    <string name="other">其他应用</string>
+    <string name="sortbyname">按名字排序</string>
+    <string name="sortbysize">按大小排序</string>
+    <string name="sortbydate">按安装日期排序</string>
+    <string name="sortbymemory">按使用内存排序</string>
+    <string name="sort">排序</string>
+    <string name="freezing_apps">禁用...</string>
+    <string name="unfreezing_apps">恢复...</string>
+    <string name="cancel">取消</string>
+    <string name="freeze_app_result">成功禁用</string>
+    <string name="unfreeze_app_result">成功恢复</string>
+    <string name="apps">个应用</string>
+    <string name="selectitem">请选择要操作的项目</string>
+    <string name="requestroot">请求root权限</string>
+    <string name="noroottitle">错误</string>
+    <string name="norootmsg">获取root权限失败，不能禁用/恢复应用！</string>
+    <string name="norootbtn">好的</string>
+    <string name="tips">提示</string>
+    <string name="disabletips">应用被禁用后，不能再启动，也不会在后台运行。如果要重新启用应用，请到回收站选择应用并恢复</string>
+    <string name="goon">继续</string>
+    <string name="uninstalling">卸载...</string>
+    <string name="uninstall_app_result">成功卸载</string>
+    <string name="sysappuninstalltips">警告：卸载系统程序可能引起系统无法正常运行，建议使用禁用功能.(程序被禁用后不能启动，也不会在后台运行)</string>
+    <string name="systemappnorootmsg">获取root权限失败，不能卸载系统应用！</string>
+    <string name="warning">警告</string>
+    <string name="goonuninstall">继续卸载</string>
+    <string name="gonow">现在就去！</string>
+    <string name="exittitlemsg">如果你喜欢这个应用，请给我们一个评论吧！</string>
+    <string name="nexttime">下次再说</string>
+    <string name="remain">剩余</string>
+    <string name="silentuninstalltip">应用卸载后不能恢复，是否继续卸载？</string>
+    <string name="systemappuninstallwarning">警告：卸载系统程序可能引起系统无法正常运行</string>
+    <string name="contineuninstalluserapp">获取root权限失败，只能卸载用户应用，是否继续卸载？</string>
+
+</resources>
