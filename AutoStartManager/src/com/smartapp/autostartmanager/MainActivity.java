@@ -140,6 +140,12 @@ public class MainActivity extends Activity {
 						Object obj = response.getData();
 						if (obj != null && obj instanceof Integer) {
 							int progress = (Integer) obj;
+							if (progress < 0) {
+								progress = 0;
+							}
+							if (progress > 100) {
+								progress = 100;
+							}
 							Drawable drawable = new PageProgressBitmapDrawable(
 									getResources(),
 									DrawUtil.sPageProgressBitmap, progress);

@@ -14,6 +14,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Debug;
+import android.util.Log;
 
 import com.ta.TAApplication;
 import com.ta.mvc.command.TACommand;
@@ -113,8 +114,10 @@ public class MainController extends TACommand {
 						}
 					}
 				}
+				sendRuntingMessage((int) (20.0 / (BACKGROUNDACTION.length + 1)));
 			}
-			for (String action : BACKGROUNDACTION) {
+			for (int i = 0; i < BACKGROUNDACTION.length; i++) {
+				String action = BACKGROUNDACTION[i];
 				Intent intent = new Intent(action);
 				List<ResolveInfo> resolveInfoList = TAApplication
 						.getApplication()
@@ -145,6 +148,7 @@ public class MainController extends TACommand {
 						}
 					}
 				}
+				sendRuntingMessage((int) ((i + 2) * 20.0 / (BACKGROUNDACTION.length + 1)));
 			}
 			// 计算应用内存占用
 			ActivityManager activityManager = (ActivityManager) TAApplication
@@ -172,6 +176,8 @@ public class MainController extends TACommand {
 						bean.mMemory += aMemSize;
 					}
 				}
+				int index = list.indexOf(info);
+				sendRuntingMessage((int) ((index + 1) * 80.0 / list.size()) + 20);
 			}
 			// 移除自己
 			map.remove(TAApplication.getApplication().getPackageName());
