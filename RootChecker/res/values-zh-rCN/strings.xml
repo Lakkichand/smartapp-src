@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Root检查器</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="device">设备：</string>
+    <string name="version">安卓版本：</string>
+    <string name="tips">按下按钮检查root</string>
+    <string name="buttontext">检查root</string>
+    <string name="wait">请稍等。。。</string>
+
+</resources>

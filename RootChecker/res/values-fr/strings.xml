@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RootChecker</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="device">Device:</string>
+    <string name="version">Android Version:</string>
+    <string name="tips">Press the button to check root access</string>
+    <string name="buttontext">Check root access</string>
+    <string name="wait">Please wait...</string>
+
+</resources>
