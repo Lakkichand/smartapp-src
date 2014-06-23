@@ -1359,61 +1359,61 @@ public class MainActivity extends Activity {
 		}
 	}
 
-	@Override
-	public void onBackPressed() {
-		SharedPreferences sharedPreferences = getSharedPreferences(
-				getPackageName(), Context.MODE_PRIVATE);
-		boolean b = sharedPreferences.getBoolean("notshowdialog", false);
-		if (b) {
-			super.onBackPressed();
-		} else {
-			SpannableString text = new SpannableString(getResources()
-					.getString(R.string.gonow));
-			text.setSpan(new ForegroundColorSpan(0xbb0000ff), 0, text.length(),
-					0);
-
-			new AlertDialog.Builder(MainActivity.this)
-					.setTitle(getResources().getString(R.string.app_name))
-					.setCancelable(true)
-					.setMessage(getResources().getString(R.string.exittitlemsg))
-					.setPositiveButton(text,
-							new DialogInterface.OnClickListener() {
-
-								@Override
-								public void onClick(DialogInterface dialog,
-										int which) {
-									SharedPreferences sharedPreferences = getSharedPreferences(
-											getPackageName(),
-											Context.MODE_PRIVATE);
-									Editor editor = sharedPreferences.edit();
-									editor.putBoolean("notshowdialog", true);
-									editor.commit();
-
-									try {
-										Uri uri = Uri
-												.parse("market://details?id="
-														+ getPackageName());
-										Intent it = new Intent(
-												Intent.ACTION_VIEW, uri);
-										startActivity(it);
-									} catch (Exception e) {
-										e.printStackTrace();
-										finish();
-									}
-								}
-							})
-					.setNegativeButton(
-							getResources().getString(R.string.nexttime),
-							new DialogInterface.OnClickListener() {
-
-								@Override
-								public void onClick(DialogInterface dialog,
-										int which) {
-									finish();
-								}
-							}).show();
-		}
-	}
+//	@Override
+//	public void onBackPressed() {
+//		SharedPreferences sharedPreferences = getSharedPreferences(
+//				getPackageName(), Context.MODE_PRIVATE);
+//		boolean b = sharedPreferences.getBoolean("notshowdialog", false);
+//		if (b) {
+//			super.onBackPressed();
+//		} else {
+//			SpannableString text = new SpannableString(getResources()
+//					.getString(R.string.gonow));
+//			text.setSpan(new ForegroundColorSpan(0xbb0000ff), 0, text.length(),
+//					0);
+//
+//			new AlertDialog.Builder(MainActivity.this)
+//					.setTitle(getResources().getString(R.string.app_name))
+//					.setCancelable(true)
+//					.setMessage(getResources().getString(R.string.exittitlemsg))
+//					.setPositiveButton(text,
+//							new DialogInterface.OnClickListener() {
+//
+//								@Override
+//								public void onClick(DialogInterface dialog,
+//										int which) {
+//									SharedPreferences sharedPreferences = getSharedPreferences(
+//											getPackageName(),
+//											Context.MODE_PRIVATE);
+//									Editor editor = sharedPreferences.edit();
+//									editor.putBoolean("notshowdialog", true);
+//									editor.commit();
+//
+//									try {
+//										Uri uri = Uri
+//												.parse("market://details?id="
+//														+ getPackageName());
+//										Intent it = new Intent(
+//												Intent.ACTION_VIEW, uri);
+//										startActivity(it);
+//									} catch (Exception e) {
+//										e.printStackTrace();
+//										finish();
+//									}
+//								}
+//							})
+//					.setNegativeButton(
+//							getResources().getString(R.string.nexttime),
+//							new DialogInterface.OnClickListener() {
+//
+//								@Override
+//								public void onClick(DialogInterface dialog,
+//										int which) {
+//									finish();
+//								}
+//							}).show();
+//		}
+//	}
 
 	@Override
 	protected void onDestroy() {
