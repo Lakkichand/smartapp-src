@@ -3523,7 +3523,7 @@ com.smartapp.rootuninstaller.R$styleable:
     public static final int WalletFragmentStyle_maskedWalletDetailsLogoImageType
     public static final int WalletFragmentStyle_maskedWalletDetailsLogoTextColor
     public static final int WalletFragmentStyle_maskedWalletDetailsTextAppearance
-    788:788:public R$styleable()
+    790:790:public R$styleable()
 com.smartapp.rootuninstaller.util.AppFreezer:
     14:14:public AppFreezer()
 com.smartapp.rootuninstaller.util.AppUninstaller:

@@ -1046,8 +1046,8 @@ public class MainActivity extends Activity {
 			Collections.sort(list, new MemoryAscendingComparator());
 		} else {
 			// 默认名字升序
-			sortType = NAME_ASCENDING;
-			Collections.sort(list, new NameAscendingComparator());
+			sortType = DATE_DESCENDING;
+			Collections.sort(list, new DateDescendingComparator());
 		}
 		SharedPreferences preferences = getSharedPreferences(getPackageName(),
 				MODE_PRIVATE);

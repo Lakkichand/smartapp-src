@@ -12325,245 +12325,254 @@ com.smartapp.rootuninstaller.MainActivity -> com.smartapp.rootuninstaller.MainAc
     android.os.Handler mHandler -> L
     boolean mNeedToReLoadListWhenResume -> M
     com.google.android.gms.ads.AdView adView -> N
-    244:456:void onCreate(android.os.Bundle) -> onCreate
-    460:467:void onResume() -> onResume
-    474:506:void refreshBtn() -> l
-    513:651:void uninstallRecycleApp(java.util.List) -> a
-    658:740:void uninstallUserApp(java.util.List) -> b
-    747:822:void uninstallSystemApp(java.util.List) -> c
-    829:877:void unfreezeApp(java.util.List) -> d
-    884:949:void freezeApp(java.util.List) -> e
-    955:967:void noRootError(int) -> a
-    974:1024:void showSortDialog(java.lang.String,java.util.List,com.smartapp.rootuninstaller.IListAdapter) -> a
-    1030:1059:void sortList(java.lang.String,java.util.List,int) -> a
-    1065:1131:void refreshList() -> m
-    1137:1180:int measurePopupMenuWidth(android.widget.ListView) -> a
-    1187:1334:android.widget.PopupWindow buildMenu() -> n
-    1338:1342:void hideMenu() -> o
-    1345:1360:void showOrHideMenu() -> p
-    1420:1424:void onDestroy() -> onDestroy
-    1428:1430:void onPause() -> onPause
-    86:86:com.smartapp.rootuninstaller.IListAdapter access$0(com.smartapp.rootuninstaller.MainActivity) -> a
-    98:98:com.smartapp.rootuninstaller.IListAdapter access$1(com.smartapp.rootuninstaller.MainActivity) -> b
-    109:109:com.smartapp.rootuninstaller.IListAdapter access$2(com.smartapp.rootuninstaller.MainActivity) -> c
-    472:472:void access$3(com.smartapp.rootuninstaller.MainActivity) -> d
-    1064:1064:void access$4(com.smartapp.rootuninstaller.MainActivity) -> e
-    656:656:void access$5(com.smartapp.rootuninstaller.MainActivity,java.util.List) -> a
-    882:882:void access$6(com.smartapp.rootuninstaller.MainActivity,java.util.List) -> b
-    745:745:void access$7(com.smartapp.rootuninstaller.MainActivity,java.util.List) -> c
-    827:827:void access$8(com.smartapp.rootuninstaller.MainActivity,java.util.List) -> d
-    511:511:void access$9(com.smartapp.rootuninstaller.MainActivity,java.util.List) -> e
-    1344:1344:void access$10(com.smartapp.rootuninstaller.MainActivity) -> f
-    160:160:java.lang.String access$11() -> a
-    173:173:java.util.List access$12(com.smartapp.rootuninstaller.MainActivity) -> g
-    972:972:void access$13(com.smartapp.rootuninstaller.MainActivity,java.lang.String,java.util.List,com.smartapp.rootuninstaller.IListAdapter) -> a
-    164:164:java.lang.String access$14() -> b
-    177:177:java.util.List access$15(com.smartapp.rootuninstaller.MainActivity) -> h
-    168:168:java.lang.String access$16() -> c
-    181:181:java.util.List access$17(com.smartapp.rootuninstaller.MainActivity) -> i
-    186:186:boolean access$18(com.smartapp.rootuninstaller.MainActivity) -> j
-    190:190:void access$19(com.smartapp.rootuninstaller.MainActivity,boolean) -> a
-    186:186:void access$20(com.smartapp.rootuninstaller.MainActivity,boolean) -> b
-    190:190:boolean access$21(com.smartapp.rootuninstaller.MainActivity) -> k
-    235:235:void access$22(com.smartapp.rootuninstaller.MainActivity,boolean) -> c
-    205:205:android.os.Handler access$23(com.smartapp.rootuninstaller.MainActivity) -> l
-    954:954:void access$24(com.smartapp.rootuninstaller.MainActivity,int) -> a
-    127:127:int access$25() -> d
-    131:131:int access$26() -> e
-    1029:1029:void access$27(com.smartapp.rootuninstaller.MainActivity,java.lang.String,java.util.List,int) -> a
-    135:135:int access$28() -> f
-    139:139:int access$29() -> g
-    143:143:int access$30() -> h
-    147:147:int access$31() -> i
-    151:151:int access$32() -> j
-    155:155:int access$33() -> k
-    118:118:android.widget.TextView access$34(com.smartapp.rootuninstaller.MainActivity) -> m
-    173:173:void access$35(com.smartapp.rootuninstaller.MainActivity,java.util.List) -> f
-    177:177:void access$36(com.smartapp.rootuninstaller.MainActivity,java.util.List) -> g
-    181:181:void access$37(com.smartapp.rootuninstaller.MainActivity,java.util.List) -> h
-    1337:1337:void access$38(com.smartapp.rootuninstaller.MainActivity) -> n
+    242:454:void onCreate(android.os.Bundle) -> onCreate
+    458:465:void onResume() -> onResume
+    472:504:void refreshBtn() -> l
+    511:649:void uninstallRecycleApp(java.util.List) -> a
+    656:738:void uninstallUserApp(java.util.List) -> b
+    745:820:void uninstallSystemApp(java.util.List) -> c
+    827:875:void unfreezeApp(java.util.List) -> d
+    882:947:void freezeApp(java.util.List) -> e
+    953:965:void noRootError(int) -> a
+    972:1022:void showSortDialog(java.lang.String,java.util.List,com.smartapp.rootuninstaller.IListAdapter) -> a
+    1028:1057:void sortList(java.lang.String,java.util.List,int) -> a
+    1063:1182:void refreshList() -> m
+    1188:1231:int measurePopupMenuWidth(android.widget.ListView) -> a
+    1238:1385:android.widget.PopupWindow buildMenu() -> n
+    1389:1393:void hideMenu() -> o
+    1396:1411:void showOrHideMenu() -> p
+    1471:1475:void onDestroy() -> onDestroy
+    1479:1481:void onPause() -> onPause
+    84:84:com.smartapp.rootuninstaller.IListAdapter access$0(com.smartapp.rootuninstaller.MainActivity) -> a
+    96:96:com.smartapp.rootuninstaller.IListAdapter access$1(com.smartapp.rootuninstaller.MainActivity) -> b
+    107:107:com.smartapp.rootuninstaller.IListAdapter access$2(com.smartapp.rootuninstaller.MainActivity) -> c
+    470:470:void access$3(com.smartapp.rootuninstaller.MainActivity) -> d
+    1062:1062:void access$4(com.smartapp.rootuninstaller.MainActivity) -> e
+    654:654:void access$5(com.smartapp.rootuninstaller.MainActivity,java.util.List) -> a
+    880:880:void access$6(com.smartapp.rootuninstaller.MainActivity,java.util.List) -> b
+    743:743:void access$7(com.smartapp.rootuninstaller.MainActivity,java.util.List) -> c
+    825:825:void access$8(com.smartapp.rootuninstaller.MainActivity,java.util.List) -> d
+    509:509:void access$9(com.smartapp.rootuninstaller.MainActivity,java.util.List) -> e
+    1395:1395:void access$10(com.smartapp.rootuninstaller.MainActivity) -> f
+    158:158:java.lang.String access$11() -> a
+    171:171:java.util.List access$12(com.smartapp.rootuninstaller.MainActivity) -> g
+    970:970:void access$13(com.smartapp.rootuninstaller.MainActivity,java.lang.String,java.util.List,com.smartapp.rootuninstaller.IListAdapter) -> a
+    162:162:java.lang.String access$14() -> b
+    175:175:java.util.List access$15(com.smartapp.rootuninstaller.MainActivity) -> h
+    166:166:java.lang.String access$16() -> c
+    179:179:java.util.List access$17(com.smartapp.rootuninstaller.MainActivity) -> i
+    184:184:boolean access$18(com.smartapp.rootuninstaller.MainActivity) -> j
+    188:188:void access$19(com.smartapp.rootuninstaller.MainActivity,boolean) -> a
+    184:184:void access$20(com.smartapp.rootuninstaller.MainActivity,boolean) -> b
+    188:188:boolean access$21(com.smartapp.rootuninstaller.MainActivity) -> k
+    233:233:void access$22(com.smartapp.rootuninstaller.MainActivity,boolean) -> c
+    203:203:android.os.Handler access$23(com.smartapp.rootuninstaller.MainActivity) -> l
+    952:952:void access$24(com.smartapp.rootuninstaller.MainActivity,int) -> a
+    125:125:int access$25() -> d
+    129:129:int access$26() -> e
+    1027:1027:void access$27(com.smartapp.rootuninstaller.MainActivity,java.lang.String,java.util.List,int) -> a
+    133:133:int access$28() -> f
+    137:137:int access$29() -> g
+    141:141:int access$30() -> h
+    145:145:int access$31() -> i
+    149:149:int access$32() -> j
+    153:153:int access$33() -> k
+    116:116:android.widget.TextView access$34(com.smartapp.rootuninstaller.MainActivity) -> m
+    171:171:void access$35(com.smartapp.rootuninstaller.MainActivity,java.util.List) -> f
+    175:175:void access$36(com.smartapp.rootuninstaller.MainActivity,java.util.List) -> g
+    179:179:void access$37(com.smartapp.rootuninstaller.MainActivity,java.util.List) -> h
+    1388:1388:void access$38(com.smartapp.rootuninstaller.MainActivity) -> n
 com.smartapp.rootuninstaller.MainActivity$1 -> com.smartapp.rootuninstaller.m:
     com.smartapp.rootuninstaller.MainActivity this$0 -> a
-    207:229:void handleMessage(android.os.Message) -> handleMessage
+    205:227:void handleMessage(android.os.Message) -> handleMessage
 com.smartapp.rootuninstaller.MainActivity$10 -> com.smartapp.rootuninstaller.n:
     com.smartapp.rootuninstaller.MainActivity this$0 -> a
-    367:368:void onClick(android.view.View) -> onClick
+    365:366:void onClick(android.view.View) -> onClick
 com.smartapp.rootuninstaller.MainActivity$11 -> com.smartapp.rootuninstaller.o:
     com.smartapp.rootuninstaller.MainActivity this$0 -> a
-    402:403:void onClick(android.view.View) -> onClick
+    400:401:void onClick(android.view.View) -> onClick
 com.smartapp.rootuninstaller.MainActivity$12 -> com.smartapp.rootuninstaller.p:
     com.smartapp.rootuninstaller.MainActivity this$0 -> a
-    414:416:void onClick(android.view.View) -> onClick
+    412:414:void onClick(android.view.View) -> onClick
 com.smartapp.rootuninstaller.MainActivity$13 -> com.smartapp.rootuninstaller.q:
     com.smartapp.rootuninstaller.MainActivity this$0 -> a
-    426:428:void onClick(android.view.View) -> onClick
+    424:426:void onClick(android.view.View) -> onClick
 com.smartapp.rootuninstaller.MainActivity$14 -> com.smartapp.rootuninstaller.r:
     com.smartapp.rootuninstaller.MainActivity this$0 -> a
-    438:440:void onClick(android.view.View) -> onClick
+    436:438:void onClick(android.view.View) -> onClick
 com.smartapp.rootuninstaller.MainActivity$15 -> com.smartapp.rootuninstaller.s:
     com.smartapp.rootuninstaller.MainActivity this$0 -> a
     android.app.ProgressDialog val$dialog -> b
     java.util.List val$list -> c
-    548:647:void run() -> run
-    544:544:com.smartapp.rootuninstaller.MainActivity access$0(com.smartapp.rootuninstaller.MainActivity$15) -> a
+    546:645:void run() -> run
+    542:542:com.smartapp.rootuninstaller.MainActivity access$0(com.smartapp.rootuninstaller.MainActivity$15) -> a
 com.smartapp.rootuninstaller.MainActivity$15$1 -> com.smartapp.rootuninstaller.t:
     com.smartapp.rootuninstaller.MainActivity$15 this$1 -> a
     android.app.ProgressDialog val$dialog -> b
     boolean val$root_ -> c
     java.util.List val$list -> d
-    561:645:void run() -> run
-    559:559:com.smartapp.rootuninstaller.MainActivity$15 access$0(com.smartapp.rootuninstaller.MainActivity$15$1) -> a
+    559:643:void run() -> run
+    557:557:com.smartapp.rootuninstaller.MainActivity$15 access$0(com.smartapp.rootuninstaller.MainActivity$15$1) -> a
 com.smartapp.rootuninstaller.MainActivity$15$1$1 -> com.smartapp.rootuninstaller.u:
     com.smartapp.rootuninstaller.MainActivity$15$1 this$2 -> a
     java.util.List val$list -> b
-    577:595:void onClick(android.content.DialogInterface,int) -> onClick
+    575:593:void onClick(android.content.DialogInterface,int) -> onClick
 com.smartapp.rootuninstaller.MainActivity$15$1$2 -> com.smartapp.rootuninstaller.v:
     com.smartapp.rootuninstaller.MainActivity$15$1 this$2 -> a
-    605:606:void onClick(android.content.DialogInterface,int) -> onClick
+    603:604:void onClick(android.content.DialogInterface,int) -> onClick
 com.smartapp.rootuninstaller.MainActivity$15$1$3 -> com.smartapp.rootuninstaller.w:
     com.smartapp.rootuninstaller.MainActivity$15$1 this$2 -> a
     java.util.List val$list -> b
-    624:630:void onClick(android.content.DialogInterface,int) -> onClick
+    622:628:void onClick(android.content.DialogInterface,int) -> onClick
 com.smartapp.rootuninstaller.MainActivity$15$1$4 -> com.smartapp.rootuninstaller.x:
     com.smartapp.rootuninstaller.MainActivity$15$1 this$2 -> a
-    640:641:void onClick(android.content.DialogInterface,int) -> onClick
+    638:639:void onClick(android.content.DialogInterface,int) -> onClick
 com.smartapp.rootuninstaller.MainActivity$16 -> com.smartapp.rootuninstaller.y:
     com.smartapp.rootuninstaller.MainActivity this$0 -> a
     android.app.ProgressDialog val$dialog -> b
     java.util.List val$list -> c
-    677:737:void run() -> run
-    673:673:com.smartapp.rootuninstaller.MainActivity access$0(com.smartapp.rootuninstaller.MainActivity$16) -> a
+    675:735:void run() -> run
+    671:671:com.smartapp.rootuninstaller.MainActivity access$0(com.smartapp.rootuninstaller.MainActivity$16) -> a
 com.smartapp.rootuninstaller.MainActivity$16$1 -> com.smartapp.rootuninstaller.z:
     com.smartapp.rootuninstaller.MainActivity$16 this$1 -> a
     android.app.ProgressDialog val$dialog -> b
     boolean val$root_ -> c
     java.util.List val$list -> d
-    690:735:void run() -> run
-    688:688:com.smartapp.rootuninstaller.MainActivity$16 access$0(com.smartapp.rootuninstaller.MainActivity$16$1) -> a
+    688:733:void run() -> run
+    686:686:com.smartapp.rootuninstaller.MainActivity$16 access$0(com.smartapp.rootuninstaller.MainActivity$16$1) -> a
 com.smartapp.rootuninstaller.MainActivity$16$1$1 -> com.smartapp.rootuninstaller.aa:
     com.smartapp.rootuninstaller.MainActivity$16$1 this$2 -> a
     java.util.List val$list -> b
-    714:720:void onClick(android.content.DialogInterface,int) -> onClick
+    712:718:void onClick(android.content.DialogInterface,int) -> onClick
 com.smartapp.rootuninstaller.MainActivity$16$1$2 -> com.smartapp.rootuninstaller.ab:
     com.smartapp.rootuninstaller.MainActivity$16$1 this$2 -> a
-    730:731:void onClick(android.content.DialogInterface,int) -> onClick
+    728:729:void onClick(android.content.DialogInterface,int) -> onClick
 com.smartapp.rootuninstaller.MainActivity$17 -> com.smartapp.rootuninstaller.ac:
     com.smartapp.rootuninstaller.MainActivity this$0 -> a
     android.app.ProgressDialog val$dialog -> b
     java.util.List val$list -> c
-    766:819:void run() -> run
-    762:762:com.smartapp.rootuninstaller.MainActivity access$0(com.smartapp.rootuninstaller.MainActivity$17) -> a
+    764:817:void run() -> run
+    760:760:com.smartapp.rootuninstaller.MainActivity access$0(com.smartapp.rootuninstaller.MainActivity$17) -> a
 com.smartapp.rootuninstaller.MainActivity$17$1 -> com.smartapp.rootuninstaller.ad:
     com.smartapp.rootuninstaller.MainActivity$17 this$1 -> a
     android.app.ProgressDialog val$dialog -> b
     boolean val$root_ -> c
     java.util.List val$list -> d
-    779:817:void run() -> run
-    777:777:com.smartapp.rootuninstaller.MainActivity$17 access$0(com.smartapp.rootuninstaller.MainActivity$17$1) -> a
+    777:815:void run() -> run
+    775:775:com.smartapp.rootuninstaller.MainActivity$17 access$0(com.smartapp.rootuninstaller.MainActivity$17$1) -> a
 com.smartapp.rootuninstaller.MainActivity$17$1$1 -> com.smartapp.rootuninstaller.ae:
     com.smartapp.rootuninstaller.MainActivity$17$1 this$2 -> a
     java.util.List val$list -> b
-    796:802:void onClick(android.content.DialogInterface,int) -> onClick
+    794:800:void onClick(android.content.DialogInterface,int) -> onClick
 com.smartapp.rootuninstaller.MainActivity$17$1$2 -> com.smartapp.rootuninstaller.af:
     com.smartapp.rootuninstaller.MainActivity$17$1 this$2 -> a
-    812:813:void onClick(android.content.DialogInterface,int) -> onClick
+    810:811:void onClick(android.content.DialogInterface,int) -> onClick
 com.smartapp.rootuninstaller.MainActivity$18 -> com.smartapp.rootuninstaller.ag:
     com.smartapp.rootuninstaller.MainActivity this$0 -> a
     android.app.ProgressDialog val$dialog -> b
     java.util.List val$list -> c
-    848:874:void run() -> run
-    844:844:com.smartapp.rootuninstaller.MainActivity access$0(com.smartapp.rootuninstaller.MainActivity$18) -> a
+    846:872:void run() -> run
+    842:842:com.smartapp.rootuninstaller.MainActivity access$0(com.smartapp.rootuninstaller.MainActivity$18) -> a
 com.smartapp.rootuninstaller.MainActivity$18$1 -> com.smartapp.rootuninstaller.ah:
     com.smartapp.rootuninstaller.MainActivity$18 this$1 -> a
     android.app.ProgressDialog val$dialog -> b
     boolean val$root_ -> c
     java.util.List val$list -> d
-    861:872:void run() -> run
+    859:870:void run() -> run
 com.smartapp.rootuninstaller.MainActivity$19 -> com.smartapp.rootuninstaller.ai:
     com.smartapp.rootuninstaller.MainActivity this$0 -> a
     android.app.ProgressDialog val$dialog -> b
     java.util.List val$list -> c
-    903:946:void run() -> run
-    899:899:com.smartapp.rootuninstaller.MainActivity access$0(com.smartapp.rootuninstaller.MainActivity$19) -> a
+    901:944:void run() -> run
+    897:897:com.smartapp.rootuninstaller.MainActivity access$0(com.smartapp.rootuninstaller.MainActivity$19) -> a
 com.smartapp.rootuninstaller.MainActivity$19$1 -> com.smartapp.rootuninstaller.aj:
     com.smartapp.rootuninstaller.MainActivity$19 this$1 -> a
     android.app.ProgressDialog val$dialog -> b
     boolean val$root_ -> c
     java.util.List val$list -> d
-    916:944:void run() -> run
-    914:914:com.smartapp.rootuninstaller.MainActivity$19 access$0(com.smartapp.rootuninstaller.MainActivity$19$1) -> a
+    914:942:void run() -> run
+    912:912:com.smartapp.rootuninstaller.MainActivity$19 access$0(com.smartapp.rootuninstaller.MainActivity$19$1) -> a
 com.smartapp.rootuninstaller.MainActivity$19$1$1 -> com.smartapp.rootuninstaller.ak:
     com.smartapp.rootuninstaller.MainActivity$19$1 this$2 -> a
     java.util.List val$list -> b
-    932:939:void onClick(android.content.DialogInterface,int) -> onClick
+    930:937:void onClick(android.content.DialogInterface,int) -> onClick
 com.smartapp.rootuninstaller.MainActivity$2 -> com.smartapp.rootuninstaller.al:
     com.smartapp.rootuninstaller.MainActivity this$0 -> a
-    262:270:void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+    260:268:void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
 com.smartapp.rootuninstaller.MainActivity$20 -> com.smartapp.rootuninstaller.am:
     com.smartapp.rootuninstaller.MainActivity this$0 -> a
-    963:964:void onClick(android.content.DialogInterface,int) -> onClick
+    961:962:void onClick(android.content.DialogInterface,int) -> onClick
 com.smartapp.rootuninstaller.MainActivity$21 -> com.smartapp.rootuninstaller.an:
     com.smartapp.rootuninstaller.MainActivity this$0 -> a
     int val$sortType -> b
     java.lang.String val$key -> c
     java.util.List val$list -> d
     com.smartapp.rootuninstaller.IListAdapter val$adapter -> e
-    983:1021:void onClick(android.content.DialogInterface,int) -> onClick
+    981:1019:void onClick(android.content.DialogInterface,int) -> onClick
 com.smartapp.rootuninstaller.MainActivity$22 -> com.smartapp.rootuninstaller.ao:
     com.smartapp.rootuninstaller.MainActivity this$0 -> a
-    1071:1079:void run() -> run
+    1069:1077:void run() -> run
 com.smartapp.rootuninstaller.MainActivity$23 -> com.smartapp.rootuninstaller.ap:
     com.smartapp.rootuninstaller.MainActivity this$0 -> a
     android.app.ProgressDialog val$dialog -> b
-    1093:1129:void run() -> run
-    1089:1089:com.smartapp.rootuninstaller.MainActivity access$0(com.smartapp.rootuninstaller.MainActivity$23) -> a
+    1091:1180:void run() -> run
+    1087:1087:com.smartapp.rootuninstaller.MainActivity access$0(com.smartapp.rootuninstaller.MainActivity$23) -> a
 com.smartapp.rootuninstaller.MainActivity$23$1 -> com.smartapp.rootuninstaller.aq:
     com.smartapp.rootuninstaller.MainActivity$23 this$1 -> a
     android.app.ProgressDialog val$dialog -> b
-    1119:1127:void run() -> run
-com.smartapp.rootuninstaller.MainActivity$24 -> com.smartapp.rootuninstaller.ar:
+    1117:1178:void run() -> run
+    1113:1113:com.smartapp.rootuninstaller.MainActivity$23 access$0(com.smartapp.rootuninstaller.MainActivity$23$1) -> a
+com.smartapp.rootuninstaller.MainActivity$23$1$1 -> com.smartapp.rootuninstaller.ar:
+    com.smartapp.rootuninstaller.MainActivity$23$1 this$2 -> a
+    1129:1176:void run() -> run
+    1126:1126:com.smartapp.rootuninstaller.MainActivity$23$1 access$0(com.smartapp.rootuninstaller.MainActivity$23$1$1) -> a
+com.smartapp.rootuninstaller.MainActivity$23$1$1$1 -> com.smartapp.rootuninstaller.as:
+    com.smartapp.rootuninstaller.MainActivity$23$1$1 this$3 -> a
+    java.util.Map val$map -> b
+    1134:1174:void run() -> run
+com.smartapp.rootuninstaller.MainActivity$24 -> com.smartapp.rootuninstaller.at:
     com.smartapp.rootuninstaller.MainActivity this$0 -> a
-    1226:1231:boolean onKey(android.view.View,int,android.view.KeyEvent) -> onKey
-com.smartapp.rootuninstaller.MainActivity$25 -> com.smartapp.rootuninstaller.as:
+    1277:1282:boolean onKey(android.view.View,int,android.view.KeyEvent) -> onKey
+com.smartapp.rootuninstaller.MainActivity$25 -> com.smartapp.rootuninstaller.au:
     com.smartapp.rootuninstaller.MainActivity this$0 -> a
-    1240:1331:void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.smartapp.rootuninstaller.MainActivity$3 -> com.smartapp.rootuninstaller.at:
+    1291:1382:void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.smartapp.rootuninstaller.MainActivity$3 -> com.smartapp.rootuninstaller.av:
     com.smartapp.rootuninstaller.MainActivity this$0 -> a
-    280:281:void onClick(android.view.View) -> onClick
-com.smartapp.rootuninstaller.MainActivity$4 -> com.smartapp.rootuninstaller.au:
+    278:279:void onClick(android.view.View) -> onClick
+com.smartapp.rootuninstaller.MainActivity$4 -> com.smartapp.rootuninstaller.aw:
     com.smartapp.rootuninstaller.MainActivity this$0 -> a
-    288:289:void onClick(android.view.View) -> onClick
-com.smartapp.rootuninstaller.MainActivity$5 -> com.smartapp.rootuninstaller.av:
+    286:287:void onClick(android.view.View) -> onClick
+com.smartapp.rootuninstaller.MainActivity$5 -> com.smartapp.rootuninstaller.ax:
     com.smartapp.rootuninstaller.MainActivity this$0 -> a
-    300:308:void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.smartapp.rootuninstaller.MainActivity$6 -> com.smartapp.rootuninstaller.aw:
+    298:306:void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.smartapp.rootuninstaller.MainActivity$6 -> com.smartapp.rootuninstaller.ay:
     com.smartapp.rootuninstaller.MainActivity this$0 -> a
-    318:319:void onClick(android.view.View) -> onClick
-com.smartapp.rootuninstaller.MainActivity$7 -> com.smartapp.rootuninstaller.ax:
+    316:317:void onClick(android.view.View) -> onClick
+com.smartapp.rootuninstaller.MainActivity$7 -> com.smartapp.rootuninstaller.az:
     com.smartapp.rootuninstaller.MainActivity this$0 -> a
-    327:328:void onClick(android.view.View) -> onClick
-com.smartapp.rootuninstaller.MainActivity$8 -> com.smartapp.rootuninstaller.ay:
+    325:326:void onClick(android.view.View) -> onClick
+com.smartapp.rootuninstaller.MainActivity$8 -> com.smartapp.rootuninstaller.ba:
     com.smartapp.rootuninstaller.MainActivity this$0 -> a
-    339:347:void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-com.smartapp.rootuninstaller.MainActivity$9 -> com.smartapp.rootuninstaller.az:
+    337:345:void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.smartapp.rootuninstaller.MainActivity$9 -> com.smartapp.rootuninstaller.bb:
     com.smartapp.rootuninstaller.MainActivity this$0 -> a
-    358:359:void onClick(android.view.View) -> onClick
-com.smartapp.rootuninstaller.PopAdapter -> com.smartapp.rootuninstaller.ba:
+    356:357:void onClick(android.view.View) -> onClick
+com.smartapp.rootuninstaller.PopAdapter -> com.smartapp.rootuninstaller.bc:
     java.util.List mPopList -> a
     android.view.LayoutInflater mInflater -> b
     23:23:int getCount() -> getCount
     28:28:java.lang.Object getItem(int) -> getItem
     33:33:long getItemId(int) -> getItemId
     38:43:android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
-com.smartapp.rootuninstaller.R -> com.smartapp.rootuninstaller.bb:
-com.smartapp.rootuninstaller.R$styleable -> com.smartapp.rootuninstaller.bc:
+com.smartapp.rootuninstaller.R -> com.smartapp.rootuninstaller.bd:
+com.smartapp.rootuninstaller.R$styleable -> com.smartapp.rootuninstaller.be:
     int[] AdsAttrs -> a
     int[] MapAttrs -> b
     int[] PagerActionBar -> c
     int[] TitlePagerActionBar -> d
     int[] WalletFragmentOptions -> e
     int[] WalletFragmentStyle -> f
-com.smartapp.rootuninstaller.SilentUninstallTaskThread -> com.smartapp.rootuninstaller.bd:
+com.smartapp.rootuninstaller.SilentUninstallTaskThread -> com.smartapp.rootuninstaller.bf:
     android.content.Context mContext -> a
     java.util.List mList -> b
     int mSuccessfulTaskCount -> c
@@ -12592,14 +12601,14 @@ com.smartapp.rootuninstaller.SilentUninstallTaskThread -> com.smartapp.rootunins
     61:61:void access$8(com.smartapp.rootuninstaller.SilentUninstallTaskThread,boolean) -> a
     28:28:android.content.Context access$9(com.smartapp.rootuninstaller.SilentUninstallTaskThread) -> h
     37:37:int access$10(com.smartapp.rootuninstaller.SilentUninstallTaskThread) -> i
-com.smartapp.rootuninstaller.SilentUninstallTaskThread$1 -> com.smartapp.rootuninstaller.be:
+com.smartapp.rootuninstaller.SilentUninstallTaskThread$1 -> com.smartapp.rootuninstaller.bg:
     com.smartapp.rootuninstaller.SilentUninstallTaskThread this$0 -> a
     int val$index -> b
     108:127:void run() -> run
-com.smartapp.rootuninstaller.SilentUninstallTaskThread$2 -> com.smartapp.rootuninstaller.bf:
+com.smartapp.rootuninstaller.SilentUninstallTaskThread$2 -> com.smartapp.rootuninstaller.bh:
     com.smartapp.rootuninstaller.SilentUninstallTaskThread this$0 -> a
     144:145:void onClick(android.content.DialogInterface,int) -> onClick
-com.smartapp.rootuninstaller.SilentUninstallTaskThread$3 -> com.smartapp.rootuninstaller.bg:
+com.smartapp.rootuninstaller.SilentUninstallTaskThread$3 -> com.smartapp.rootuninstaller.bi:
     com.smartapp.rootuninstaller.SilentUninstallTaskThread this$0 -> a
     165:170:void run() -> run
 com.smartapp.rootuninstaller.comparator.DateAscendingComparator -> com.smartapp.rootuninstaller.a.a:
