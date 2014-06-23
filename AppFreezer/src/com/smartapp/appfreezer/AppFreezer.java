@@ -49,7 +49,7 @@ public class AppFreezer {
 		for (PackageInfo info : packageInfos) {
 			String packageName = info.packageName;
 			if (packageName != null
-					&& packageName.equals("com.smartapp.appfreezer")) {
+					&& packageName.equals(context.getPackageName())) {
 				// 过滤掉自己
 				continue;
 			}
