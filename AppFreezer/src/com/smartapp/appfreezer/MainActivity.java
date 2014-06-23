@@ -442,8 +442,8 @@ public class MainActivity extends Activity implements ScreenScrollerListener {
 	protected void onDestroy() {
 		adView.destroy();
 		super.onDestroy();
-		// 杀掉进程
-		android.os.Process.killProcess(android.os.Process.myPid());
+//		// 杀掉进程
+//		android.os.Process.killProcess(android.os.Process.myPid());
 	}
 
 	@Override
