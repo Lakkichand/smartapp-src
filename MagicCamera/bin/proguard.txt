@@ -1,0 +1,18 @@
+# view AndroidManifest.xml #generated:43
+-keep class com.google.ads.AdActivity { <init>(...); }
+
+# view res/layout/camera_preview.xml #generated:51
+-keep class com.slidinglayer.SlidingLayer { <init>(...); }
+
+# view AndroidManifest.xml #generated:29
+-keep class com.smartapp.magiccamera.CameraPreview { <init>(...); }
+
+# view res/layout/camera_preview.xml #generated:7
+-keep class com.smartapp.magiccamera.Preview { <init>(...); }
+
+# view AndroidManifest.xml #generated:39
+-keep class com.smartapp.magiccamera.ShowActivity { <init>(...); }
+
+# view res/layout/camera_preview.xml #generated:18
+-keep class com.smartapp.magiccamera.view.PhotoView { <init>(...); }
+
