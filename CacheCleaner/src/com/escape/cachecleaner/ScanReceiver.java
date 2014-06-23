@@ -8,6 +8,7 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.widget.RemoteViews;
 
 import com.ta.TAApplication;
@@ -25,9 +26,10 @@ public class ScanReceiver extends BroadcastReceiver {
 	@Override
 	public void onReceive(Context context, Intent intent) {
 		mContext = context;
-		if (MainActivity.sIsClosed) {
+		if (!MainActivity.sIsClosed) {
 			return;
 		}
+		Log.e("", "获取应用缓存列表");
 		// 获取应用缓存列表
 		TAApplication.getApplication().doCommand("cachecleanercontroller",
 				new TARequest(CacheCleanerController.CACHE_APP, null),
@@ -50,16 +52,19 @@ public class ScanReceiver extends BroadcastReceiver {
 									.getSystemService(Context.NOTIFICATION_SERVICE);
 							Notification notification = new Notification();
 							notification.icon = R.drawable.ic_launcher;
-							notification.tickerText = "应用缓存超过100M";
+							notification.tickerText = mContext
+									.getString(R.string.text1);
 							notification.when = System.currentTimeMillis();
 
 							notification.contentView = new RemoteViews(mContext
 									.getPackageName(),
 									R.layout.notification_apps);
 							notification.contentView.setTextViewText(
-									R.id.decription_state_tv, "应用缓存超过100M");
+									R.id.decription_state_tv,
+									mContext.getString(R.string.text1));
 							notification.contentView.setTextViewText(
-									R.id.apps_state_tv, "点击进行清理");
+									R.id.apps_state_tv,
+									mContext.getString(R.string.text2));
 
 							Intent intent = new Intent(mContext,
 									MainActivity.class);
