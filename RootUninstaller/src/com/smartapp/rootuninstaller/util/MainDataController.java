@@ -48,7 +48,10 @@ public class MainDataController {
 			Debug.MemoryInfo[] memoryInfo = mActivityManager
 					.getProcessMemoryInfo(myMempid);
 			// 获取进程占内存用信息 kb单位
-			int memSize = memoryInfo[0].dalvikPrivateDirty;
+			int memSize = memoryInfo[0].dalvikPrivateDirty
+					+ memoryInfo[0].dalvikSharedDirty
+					+ memoryInfo[0].nativePrivateDirty
+					+ memoryInfo[0].otherPrivateDirty;
 			// 每个包名平均内存值
 			int perMemSize = memSize / pkgNameList.length;
 
@@ -121,29 +124,6 @@ public class MainDataController {
 					+ (new File(info.applicationInfo.dataDir)).length();
 			bean.mTotalSize = totalSize;
 			bean.mFileSize = Formatter.formatFileSize(context, bean.mTotalSize);
-			// try {
-			// Method getPackageSizeInfo = pm.getClass().getMethod(
-			// "getPackageSizeInfo", String.class,
-			// IPackageStatsObserver.class);
-			// getPackageSizeInfo.invoke(pm, packageName,
-			// new IPackageStatsObserver.Stub() {
-			// @Override
-			// public void onGetStatsCompleted(
-			// PackageStats pStats, boolean succeeded)
-			// throws RemoteException {
-			// bean.mCacheSize = pStats.cacheSize;
-			// bean.mDataSize = pStats.dataSize;
-			// bean.mCodeSize = pStats.codeSize;
-			// bean.mTotalSize = pStats.dataSize
-			// + pStats.codeSize /* + pStats.cacheSize */;
-			// bean.mFileSize = Formatter.formatFileSize(
-			// context, bean.mTotalSize);
-			// handler.sendEmptyMessage(MainActivity.REFRESH_LIST);
-			// }
-			// });
-			// } catch (Exception e) {
-			// e.printStackTrace();
-			// }
 			// 获取应用最后更新时间
 			Date date = new Date(
 					new File(info.applicationInfo.sourceDir).lastModified());

@@ -44,9 +44,9 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
 import com.smartapp.rootuninstaller.comparator.DateAscendingComparator;
 import com.smartapp.rootuninstaller.comparator.DateDescendingComparator;
 import com.smartapp.rootuninstaller.comparator.MemoryAscendingComparator;
@@ -69,8 +69,6 @@ import com.smartapp.rootuninstaller.util.Util;
  * 
  */
 public class MainActivity extends Activity {
-	// TODO 加上使用频率显示和使用频率排序
-	// TODO 修改UI
 	private TitlePagerActionBar mPagerActionBar;
 
 	private ViewPager mViewPager;
@@ -443,12 +441,16 @@ public class MainActivity extends Activity {
 		});
 
 		// 添加广告条
-		adView = new AdView(this, AdSize.BANNER, "a1525fbe772c434");
+		adView = new AdView(this);
+		adView.setAdUnitId("ca-app-pub-6335053266754945/4337732515");
+		adView.setAdSize(AdSize.BANNER);
 		LinearLayout layout = (LinearLayout) findViewById(R.id.root);
 		// 在其中添加 adView
 		layout.addView(adView);
-		// 启动一般性请求并在其中加载广告
-		adView.loadAd(new AdRequest());
+		// 启动一般性请求。
+		AdRequest adRequest = new AdRequest.Builder().build();
+		// 在adView中加载广告请求。
+		adView.loadAd(adRequest);
 
 		refreshList();
 	}
@@ -461,6 +463,7 @@ public class MainActivity extends Activity {
 			refreshList();
 			mNeedToReLoadListWhenResume = false;
 		}
+		adView.resume();
 	}
 
 	/**
@@ -1418,5 +1421,11 @@ public class MainActivity extends Activity {
 		super.onDestroy();
 		// 杀掉进程
 		android.os.Process.killProcess(android.os.Process.myPid());
+	}
+
+	@Override
+	public void onPause() {
+		adView.pause();
+		super.onPause();
 	}
 }
