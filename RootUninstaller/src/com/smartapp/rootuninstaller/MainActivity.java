@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -21,9 +21,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.ViewPager;
-import android.text.SpannableString;
 import android.text.format.Formatter;
-import android.text.style.ForegroundColorSpan;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -1124,6 +1122,59 @@ public class MainActivity extends Activity {
 						mSystemAppAdapter.update(mSystemListDataBean);
 
 						mRecycleBinAdapter.update(mRecycleListDataBean);
+
+						new Thread() {
+							public void run() {
+								final Map<String, Integer> map = MainDataController
+										.getRunningAppMemory(MainActivity.this);
+								runOnUiThread(new Runnable() {
+
+									@Override
+									public void run() {
+										if (mUserListDataBean != null) {
+											for (ListDataBean bean : mUserListDataBean) {
+												String pkgName = bean.mInfo.packageName;
+												if (map.containsKey(pkgName)
+														&& map.get(pkgName) > 0) {
+													int size = map.get(pkgName);
+													bean.mRunningMemoryInt = size;
+													if (size >= 1024) {
+														bean.mRunningMemory = ((int) (map
+																.get(pkgName) / 1024.0f * 100.0f))
+																/ 100.0f + "MB";
+													} else {
+														bean.mRunningMemory = size
+																+ "KB";
+													}
+												}
+											}
+										}
+										if (mSystemListDataBean != null) {
+											for (ListDataBean bean : mSystemListDataBean) {
+												String pkgName = bean.mInfo.packageName;
+												if (map.containsKey(pkgName)
+														&& map.get(pkgName) > 0) {
+													int size = map.get(pkgName);
+													bean.mRunningMemoryInt = size;
+													if (size >= 1024) {
+														bean.mRunningMemory = ((int) (map
+																.get(pkgName) / 1024.0f * 100.0f))
+																/ 100.0f + "MB";
+													} else {
+														bean.mRunningMemory = size
+																+ "KB";
+													}
+												}
+											}
+										}
+										// 展示列表
+										mUserAppAdapter.notifyDataSetChanged();
+										mSystemAppAdapter
+												.notifyDataSetChanged();
+									}
+								});
+							};
+						}.start();
 					}
 				});
 			};
@@ -1359,68 +1410,68 @@ public class MainActivity extends Activity {
 		}
 	}
 
-//	@Override
-//	public void onBackPressed() {
-//		SharedPreferences sharedPreferences = getSharedPreferences(
-//				getPackageName(), Context.MODE_PRIVATE);
-//		boolean b = sharedPreferences.getBoolean("notshowdialog", false);
-//		if (b) {
-//			super.onBackPressed();
-//		} else {
-//			SpannableString text = new SpannableString(getResources()
-//					.getString(R.string.gonow));
-//			text.setSpan(new ForegroundColorSpan(0xbb0000ff), 0, text.length(),
-//					0);
-//
-//			new AlertDialog.Builder(MainActivity.this)
-//					.setTitle(getResources().getString(R.string.app_name))
-//					.setCancelable(true)
-//					.setMessage(getResources().getString(R.string.exittitlemsg))
-//					.setPositiveButton(text,
-//							new DialogInterface.OnClickListener() {
-//
-//								@Override
-//								public void onClick(DialogInterface dialog,
-//										int which) {
-//									SharedPreferences sharedPreferences = getSharedPreferences(
-//											getPackageName(),
-//											Context.MODE_PRIVATE);
-//									Editor editor = sharedPreferences.edit();
-//									editor.putBoolean("notshowdialog", true);
-//									editor.commit();
-//
-//									try {
-//										Uri uri = Uri
-//												.parse("market://details?id="
-//														+ getPackageName());
-//										Intent it = new Intent(
-//												Intent.ACTION_VIEW, uri);
-//										startActivity(it);
-//									} catch (Exception e) {
-//										e.printStackTrace();
-//										finish();
-//									}
-//								}
-//							})
-//					.setNegativeButton(
-//							getResources().getString(R.string.nexttime),
-//							new DialogInterface.OnClickListener() {
-//
-//								@Override
-//								public void onClick(DialogInterface dialog,
-//										int which) {
-//									finish();
-//								}
-//							}).show();
-//		}
-//	}
+	// @Override
+	// public void onBackPressed() {
+	// SharedPreferences sharedPreferences = getSharedPreferences(
+	// getPackageName(), Context.MODE_PRIVATE);
+	// boolean b = sharedPreferences.getBoolean("notshowdialog", false);
+	// if (b) {
+	// super.onBackPressed();
+	// } else {
+	// SpannableString text = new SpannableString(getResources()
+	// .getString(R.string.gonow));
+	// text.setSpan(new ForegroundColorSpan(0xbb0000ff), 0, text.length(),
+	// 0);
+	//
+	// new AlertDialog.Builder(MainActivity.this)
+	// .setTitle(getResources().getString(R.string.app_name))
+	// .setCancelable(true)
+	// .setMessage(getResources().getString(R.string.exittitlemsg))
+	// .setPositiveButton(text,
+	// new DialogInterface.OnClickListener() {
+	//
+	// @Override
+	// public void onClick(DialogInterface dialog,
+	// int which) {
+	// SharedPreferences sharedPreferences = getSharedPreferences(
+	// getPackageName(),
+	// Context.MODE_PRIVATE);
+	// Editor editor = sharedPreferences.edit();
+	// editor.putBoolean("notshowdialog", true);
+	// editor.commit();
+	//
+	// try {
+	// Uri uri = Uri
+	// .parse("market://details?id="
+	// + getPackageName());
+	// Intent it = new Intent(
+	// Intent.ACTION_VIEW, uri);
+	// startActivity(it);
+	// } catch (Exception e) {
+	// e.printStackTrace();
+	// finish();
+	// }
+	// }
+	// })
+	// .setNegativeButton(
+	// getResources().getString(R.string.nexttime),
+	// new DialogInterface.OnClickListener() {
+	//
+	// @Override
+	// public void onClick(DialogInterface dialog,
+	// int which) {
+	// finish();
+	// }
+	// }).show();
+	// }
+	// }
 
 	@Override
 	protected void onDestroy() {
 		adView.destroy();
 		super.onDestroy();
-		// 杀掉进程
-		android.os.Process.killProcess(android.os.Process.myPid());
+		// // 杀掉进程
+		// android.os.Process.killProcess(android.os.Process.myPid());
 	}
 
 	@Override

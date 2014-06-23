@@ -12,7 +12,7 @@
         <item>@string/sortbyname</item>
         <item>@string/sortbysize</item>
         <item>@string/sortbydate</item>
-        <item>@string/sortbymemory</item>
+<!--         <item>@string/sortbymemory</item> -->
     </string-array>
 
 </resources>

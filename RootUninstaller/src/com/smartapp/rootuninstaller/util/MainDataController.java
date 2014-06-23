@@ -88,7 +88,7 @@ public class MainDataController {
 			return;
 		}
 		// 获取正在运行的应用的运行内存大小
-		Map<String, Integer> map = getRunningAppMemory(context);
+//		Map<String, Integer> map = getRunningAppMemory(context);
 
 		for (PackageInfo info : packageInfos) {
 			String packageName = info.packageName;
@@ -136,19 +136,19 @@ public class MainDataController {
 			bean.mLastModified = (date.getYear() + 1900) + "-" + month + "-"
 					+ day;
 			// 获取程序运行内存大小
-			if (map.containsKey(packageName) && map.get(packageName) > 0) {
-				int size = map.get(packageName);
-				bean.mRunningMemoryInt = size;
-				if (size >= 1024) {
-					bean.mRunningMemory = ((int) (map.get(packageName) / 1024.0f * 100.0f))
-							/ 100.0f + "MB";
-				} else {
-					bean.mRunningMemory = size + "KB";
-				}
-			} else {
+//			if (map.containsKey(packageName) && map.get(packageName) > 0) {
+//				int size = map.get(packageName);
+//				bean.mRunningMemoryInt = size;
+//				if (size >= 1024) {
+//					bean.mRunningMemory = ((int) (map.get(packageName) / 1024.0f * 100.0f))
+//							/ 100.0f + "MB";
+//				} else {
+//					bean.mRunningMemory = size + "KB";
+//				}
+//			} else {
 				bean.mRunningMemoryInt = 0;
 				bean.mRunningMemory = null;
-			}
+//			}
 
 			int state = pm.getApplicationEnabledSetting(packageName);
 			if (state != PackageManager.COMPONENT_ENABLED_STATE_DISABLED
