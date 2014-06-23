@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -45,6 +49,8 @@ public class MainActivity extends Activity {
 	private FrameLayout mADFrame;
 	private AdView adView;
 
+	public static boolean sIsClosed = false;
+
 	/**
 	 * 界面在onresume时需要检查是否已清理缓存的应用
 	 */
@@ -65,6 +71,7 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		sIsClosed = false;
 		setContentView(R.layout.activity_main);
 
 		ImageButton btnBack = (ImageButton) findViewById(R.id.header_title_back);
@@ -204,6 +211,16 @@ public class MainActivity extends Activity {
 		// 在adView中加载广告请求。
 		adView.loadAd(adRequest);
 
+		// 检查
+		AlarmManager am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+		Intent scanIntent = new Intent(TAApplication.getApplication(),
+				ScanReceiver.class);
+		scanIntent.setAction("alarm.scan.action.smartapp");
+		PendingIntent scanIntentPi = PendingIntent.getBroadcast(
+				TAApplication.getApplication(), 0, scanIntent, 0);
+		am.cancel(scanIntentPi);
+		am.setRepeating(AlarmManager.RTC, System.currentTimeMillis(),
+				4 * 60 * 60 * 1000, scanIntentPi);// 一小时检查一次
 	}
 
 	@Override
@@ -284,6 +301,7 @@ public class MainActivity extends Activity {
 
 	@Override
 	public void onDestroy() {
+		sIsClosed = true;
 		adView.destroy();
 		super.onDestroy();
 	}

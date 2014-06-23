@@ -11,5 +11,7 @@
     <string name="clickclear">請點擊"清除緩存"進行清理</string>
     <string name="tip1">共</string>
     <string name="tip2">個緩存垃圾，清理可節省空間</string>
+    <string name="text1">應用緩存超過100M</string>
+    <string name="text2">點擊進行清理</string>
 
 </resources>

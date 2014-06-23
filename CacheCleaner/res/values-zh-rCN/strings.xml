@@ -11,5 +11,7 @@
     <string name="clickclear">请点击"清除缓存"进行清理</string>
     <string name="tip1">共</string>
     <string name="tip2">个缓存垃圾，清理可节省空间</string>
+    <string name="text1">应用缓存超过100M</string>
+    <string name="text2">点击进行清理</string>
 
 </resources>

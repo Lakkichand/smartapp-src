@@ -11,5 +11,7 @@
     <string name="clickclear">Please click on the "Clear Cache"</string>
     <string name="tip1">Total&#160;</string>
     <string name="tip2">&#160;cache garbage&#160;</string>
+    <string name="text1">Application cache lager than 100M</string>
+    <string name="text2">Click to clean up</string>
 
 </resources>
