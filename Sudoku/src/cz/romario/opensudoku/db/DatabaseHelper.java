@@ -564,6 +564,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		insertSudoku(db, 7, 488, "GVeryHard98", "872000000064000009000800230080900560700608003096002070048003000100000890000000341");
 		insertSudoku(db, 7, 489, "GVeryHard99", "090005007800070001010890040070040006008967200200010070020059060400080003500400010");
 		insertSudoku(db, 7, 490, "GVeryHard100", "300020058000570360000003001600300085001806400480002006200100000014065000850030007");
+		
+		addDirectly(db);
+		addFromeFile(db);
+		
+		createIndexes(db);
+	}
+	
+	private void addDirectly(SQLiteDatabase db) {
 		insertFolder(db, 8, "The No-Trick Ponies Collection");
 		insertSudoku(db, 8, 491, "noponies1", "004020005070080090002000000000690000069007058200005000490050801007030060008100000");
 		insertSudoku(db, 8, 492, "noponies2", "000500020000003004930400060100700000080300000000096050000000005821000000400020807");
@@ -3878,12 +3886,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		insertSudoku(db, 11, 3798, "nightmare398", "060000200003004006000060180030100800600070005007009020071030000300700500002000090");
 		insertSudoku(db, 11, 3799, "nightmare399", "900007030000050700008400005046090000000205000000030850600002900003070000070100002");
 		insertSudoku(db, 11, 3800, "nightmare400", "000000010065009000302060000034502008008000500500603470000020803000900140040000000");
-		add(db);
-		
-		createIndexes(db);
 	}
 	
-	private void add(SQLiteDatabase db) {
+	private void addFromeFile(SQLiteDatabase db) {
 		try {
 			insertFolder(db, 12, "100 Snowflake Puzzles");
 			BufferedReader reader = new BufferedReader(new InputStreamReader(
