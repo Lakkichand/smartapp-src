@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">自啟動管理</string>
+    <string name="sysapp">(系統應用)</string>
+    <string name="bootstart">開機自啟動</string>
+    <string name="backgroundstart">後臺自啟動</string>
+    <string name="title1">自啟動應用</string>
+    <string name="title2">已禁用自啟動應用</string>
+    <string name="accept">允許</string>
+    <string name="forbid">禁止</string>
+    <string name="ram">內存:</string>
+    <string name="scaning">正在掃描</string>
+
+</resources>

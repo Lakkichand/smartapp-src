@@ -60,7 +60,8 @@ public class MainController extends TACommand {
 			"android.intent.action.ACTION_POWER_DISCONNECTED",
 			"android.intent.action.ACTION_SHUTDOWN",
 			"android.intent.action.CAMERA_BUTTON",
-			"android.intent.action.MEDIA_MOUNTED" };
+			"android.intent.action.MEDIA_MOUNTED",
+			"android.intent.action.ANY_DATA_STATE" };
 
 	/**
 	 * 扫描自启动和后台启动项
