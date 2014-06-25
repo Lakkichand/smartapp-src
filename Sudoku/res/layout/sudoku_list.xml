@@ -15,7 +15,8 @@
         android:id="@id/android:list"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@+id/mainLayout" />
+        android:layout_below="@+id/mainLayout"
+        android:fastScrollEnabled="true" />
 
     <TextView
         android:id="@+id/filter_status"
