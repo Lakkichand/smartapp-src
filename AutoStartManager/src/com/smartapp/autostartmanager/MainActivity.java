@@ -47,6 +47,7 @@ public class MainActivity extends Activity {
 						.show(MainActivity.this, null,
 								getString(R.string.processing));
 				dialog.setCancelable(false);
+				final Object obj = msg.obj;
 				// 禁用组件
 				TAApplication.getApplication().doCommand("maincontroller",
 						new TARequest(MainController.DISABLE_APP, msg.obj),
@@ -67,7 +68,7 @@ public class MainActivity extends Activity {
 									return;
 								}
 								// 更新列表
-								DataBean b = (DataBean) msg.obj;
+								DataBean b = (DataBean) obj;
 								b.mIsForbid = true;
 								mAdapter.updateSelf();
 							}
@@ -92,6 +93,7 @@ public class MainActivity extends Activity {
 						.show(MainActivity.this, null,
 								getString(R.string.processing));
 				dialog.setCancelable(false);
+				final Object obj = msg.obj;
 				// 启用组件
 				TAApplication.getApplication().doCommand("maincontroller",
 						new TARequest(MainController.ENABLE_APP, msg.obj),
@@ -112,7 +114,7 @@ public class MainActivity extends Activity {
 									return;
 								}
 								// 更新列表
-								DataBean b = (DataBean) msg.obj;
+								DataBean b = (DataBean) obj;
 								b.mIsForbid = false;
 								mAdapter.updateSelf();
 							}
