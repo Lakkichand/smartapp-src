@@ -9,12 +9,12 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
@@ -38,14 +38,15 @@ public class MainActivity extends Activity {
 	public static final int MSG_DISABLE = 11001;
 	public static final int MSG_ENABLE = 11002;
 	private Handler mHandler = new Handler(Looper.getMainLooper()) {
-		public void handleMessage(android.os.Message msg) {
+		public void handleMessage(final android.os.Message msg) {
 			switch (msg.what) {
 			case MSG_DISABLE: {
 				// TODO 如果是系统应用，提示用户有风险
-				// TODO 翻译
 				// TODO 在2.3和4.X机器上测试
-				final ProgressDialog dialog = ProgressDialog.show(
-						MainActivity.this, null, "处理中...");
+				final ProgressDialog dialog = ProgressDialog
+						.show(MainActivity.this, null,
+								getString(R.string.processing));
+				dialog.setCancelable(false);
 				// 禁用组件
 				TAApplication.getApplication().doCommand("maincontroller",
 						new TARequest(MainController.DISABLE_APP, msg.obj),
@@ -58,8 +59,17 @@ public class MainActivity extends Activity {
 							@Override
 							public void onSuccess(TAResponse response) {
 								dialog.dismiss();
-								Log.e("", "" + response.getData());
-								// TODO 更新列表
+								Boolean ret = (Boolean) response.getData();
+								if (!ret) {
+									Toast.makeText(MainActivity.this,
+											R.string.operafail,
+											Toast.LENGTH_SHORT).show();
+									return;
+								}
+								// 更新列表
+								DataBean b = (DataBean) msg.obj;
+								b.mIsForbid = true;
+								mAdapter.updateSelf();
 							}
 
 							@Override
@@ -78,8 +88,10 @@ public class MainActivity extends Activity {
 				break;
 			}
 			case MSG_ENABLE: {
-				final ProgressDialog dialog = ProgressDialog.show(
-						MainActivity.this, null, "处理中...");
+				final ProgressDialog dialog = ProgressDialog
+						.show(MainActivity.this, null,
+								getString(R.string.processing));
+				dialog.setCancelable(false);
 				// 启用组件
 				TAApplication.getApplication().doCommand("maincontroller",
 						new TARequest(MainController.ENABLE_APP, msg.obj),
@@ -92,8 +104,17 @@ public class MainActivity extends Activity {
 							@Override
 							public void onSuccess(TAResponse response) {
 								dialog.dismiss();
-								Log.e("", "" + response.getData());
-								// TODO 更新列表
+								Boolean ret = (Boolean) response.getData();
+								if (!ret) {
+									Toast.makeText(MainActivity.this,
+											R.string.operafail,
+											Toast.LENGTH_SHORT).show();
+									return;
+								}
+								// 更新列表
+								DataBean b = (DataBean) msg.obj;
+								b.mIsForbid = false;
+								mAdapter.updateSelf();
 							}
 
 							@Override

@@ -168,6 +168,15 @@ public class MainAdapter extends BaseAdapter {
 	}
 
 	/**
+	 * 对已有的数据进行刷新
+	 */
+	public void updateSelf() {
+		List<DataBean> list = new ArrayList<DataBean>();
+		list.addAll(mList);
+		update(list);
+	}
+
+	/**
 	 * 更新数据
 	 */
 	public void update(List<DataBean> list) {

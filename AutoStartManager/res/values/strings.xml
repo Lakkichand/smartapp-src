@@ -11,5 +11,7 @@
     <string name="forbid">Forbid</string>
     <string name="ram">RAM:</string>
     <string name="scaning">Scaning...</string>
+    <string name="processing">Processing...</string>
+    <string name="operafail">Operation fails, need ROOT permission</string>
 
 </resources>

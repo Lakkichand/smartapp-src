@@ -11,5 +11,7 @@
     <string name="forbid">禁止</string>
     <string name="ram">內存:</string>
     <string name="scaning">正在掃描</string>
+    <string name="processing">處理中...</string>
+    <string name="operafail">操作失敗，需要ROOT權限</string>
 
 </resources>
