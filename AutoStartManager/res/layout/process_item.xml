@@ -132,8 +132,8 @@
 
             <ImageView
                 android:id="@+id/operator_img"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
                 android:layout_gravity="center_horizontal"
                 android:src="@drawable/accept" />
 

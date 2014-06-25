@@ -4,10 +4,12 @@ import java.util.List;
 import java.util.Map;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -32,7 +34,88 @@ public class MainActivity extends Activity {
 
 	private ListView mListView;
 	private MainAdapter mAdapter;
-	private Handler mHandler = new Handler(Looper.getMainLooper());
+
+	public static final int MSG_DISABLE = 11001;
+	public static final int MSG_ENABLE = 11002;
+	private Handler mHandler = new Handler(Looper.getMainLooper()) {
+		public void handleMessage(android.os.Message msg) {
+			switch (msg.what) {
+			case MSG_DISABLE: {
+				// TODO 如果是系统应用，提示用户有风险
+				// TODO 翻译
+				// TODO 在2.3和4.X机器上测试
+				final ProgressDialog dialog = ProgressDialog.show(
+						MainActivity.this, null, "处理中...");
+				// 禁用组件
+				TAApplication.getApplication().doCommand("maincontroller",
+						new TARequest(MainController.DISABLE_APP, msg.obj),
+						new TAIResponseListener() {
+
+							@Override
+							public void onStart() {
+							}
+
+							@Override
+							public void onSuccess(TAResponse response) {
+								dialog.dismiss();
+								Log.e("", "" + response.getData());
+								// TODO 更新列表
+							}
+
+							@Override
+							public void onRuning(TAResponse response) {
+							}
+
+							@Override
+							public void onFailure(TAResponse response) {
+								dialog.dismiss();
+							}
+
+							@Override
+							public void onFinish() {
+							}
+						}, true, false);
+				break;
+			}
+			case MSG_ENABLE: {
+				final ProgressDialog dialog = ProgressDialog.show(
+						MainActivity.this, null, "处理中...");
+				// 启用组件
+				TAApplication.getApplication().doCommand("maincontroller",
+						new TARequest(MainController.ENABLE_APP, msg.obj),
+						new TAIResponseListener() {
+
+							@Override
+							public void onStart() {
+							}
+
+							@Override
+							public void onSuccess(TAResponse response) {
+								dialog.dismiss();
+								Log.e("", "" + response.getData());
+								// TODO 更新列表
+							}
+
+							@Override
+							public void onRuning(TAResponse response) {
+							}
+
+							@Override
+							public void onFailure(TAResponse response) {
+								dialog.dismiss();
+							}
+
+							@Override
+							public void onFinish() {
+							}
+						}, true, false);
+				break;
+			}
+			default:
+				break;
+			}
+		};
+	};
 	/**
 	 * activity 是否结束
 	 */
@@ -85,7 +168,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
+		mIsFinish = false;
 		// 创建adView。
 		adView = new AdView(this);
 		adView.setAdUnitId("ca-app-pub-6335053266754945/7051389713");
@@ -99,7 +182,7 @@ public class MainActivity extends Activity {
 		adView.loadAd(adRequest);
 
 		mListView = (ListView) findViewById(R.id.listview);
-		mAdapter = new MainAdapter();
+		mAdapter = new MainAdapter(mHandler);
 		mListView.setAdapter(mAdapter);
 
 		mContentLayout = findViewById(R.id.content);

@@ -14,7 +14,6 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Debug;
-import android.util.Log;
 
 import com.ta.TAApplication;
 import com.ta.mvc.command.TACommand;
@@ -75,6 +74,10 @@ public class MainController extends TACommand {
 	 * 禁用某个软件的开机启动和后台启动
 	 */
 	public static final String DISABLE_APP = "DISABLE_APP";
+	/**
+	 * 启用某个软件的开机启动和后台启动
+	 */
+	public static final String ENABLE_APP = "ENABLE_APP";
 
 	@Override
 	protected void executeCommand() {
@@ -293,7 +296,99 @@ public class MainController extends TACommand {
 			}
 			retRate.remove(TAApplication.getApplication().getPackageName());
 			sendSuccessMessage(retRate);
+		} else if (command.equals(DISABLE_APP)) {
+			DataBean bean = (DataBean) request.getData();
+			for (ResolveInfo info : bean.mBootReceiver) {
+				AppFreezer.disableClass(info.activityInfo.packageName,
+						info.activityInfo.name);
+			}
+			for (ResolveInfo info : bean.mBackgroundReceiver) {
+				AppFreezer.disableClass(info.activityInfo.packageName,
+						info.activityInfo.name);
+			}
+			PackageManager pm = TAApplication.getApplication()
+					.getPackageManager();
+			boolean ret = true;
+			for (ResolveInfo rinfo : bean.mBootReceiver) {
+				ComponentName mComponentName = new ComponentName(
+						rinfo.activityInfo.packageName, rinfo.activityInfo.name);
+				int state = pm.getComponentEnabledSetting(mComponentName);
+				if (state != PackageManager.COMPONENT_ENABLED_STATE_DISABLED) {
+					ret = false;
+					break;
+				}
+			}
+			if (ret) {
+				for (ResolveInfo rinfo : bean.mBackgroundReceiver) {
+					ComponentName mComponentName = new ComponentName(
+							rinfo.activityInfo.packageName,
+							rinfo.activityInfo.name);
+					int state = pm.getComponentEnabledSetting(mComponentName);
+					if (state != PackageManager.COMPONENT_ENABLED_STATE_DISABLED) {
+						ret = false;
+						break;
+					}
+				}
+			}
+			if (ret) {
+				// TODO 禁用成功，杀死程序进程
+				ActivityManager activityManager = (ActivityManager) TAApplication
+						.getApplication().getSystemService(
+								Context.ACTIVITY_SERVICE);
+				List<ActivityManager.RunningAppProcessInfo> list = activityManager
+						.getRunningAppProcesses();
+				for (ActivityManager.RunningAppProcessInfo info : list) {
+					String[] pkgNames = info.pkgList;
+					for (String pkg : pkgNames) {
+						if (bean.mInfo.packageName.equals(pkg)) {
+							RootShell rootShell = null;
+							try {
+								rootShell = RootShell.startShell();
+							} catch (Exception e) {
+								e.printStackTrace();
+							}
+							final String cmd = "kill -9 " + info.pid;
+							new RootShell.Command(cmd).execute(rootShell);
+						}
+					}
+				}
+			}
+			sendSuccessMessage(ret);
+		} else if (command.equals(ENABLE_APP)) {
+			DataBean bean = (DataBean) request.getData();
+			for (ResolveInfo info : bean.mBootReceiver) {
+				AppFreezer.enableClass(info.activityInfo.packageName,
+						info.activityInfo.name);
+			}
+			for (ResolveInfo info : bean.mBackgroundReceiver) {
+				AppFreezer.enableClass(info.activityInfo.packageName,
+						info.activityInfo.name);
+			}
+			PackageManager pm = TAApplication.getApplication()
+					.getPackageManager();
+			boolean ret = true;
+			for (ResolveInfo rinfo : bean.mBootReceiver) {
+				ComponentName mComponentName = new ComponentName(
+						rinfo.activityInfo.packageName, rinfo.activityInfo.name);
+				int state = pm.getComponentEnabledSetting(mComponentName);
+				if (state != PackageManager.COMPONENT_ENABLED_STATE_ENABLED) {
+					ret = false;
+					break;
+				}
+			}
+			if (ret) {
+				for (ResolveInfo rinfo : bean.mBackgroundReceiver) {
+					ComponentName mComponentName = new ComponentName(
+							rinfo.activityInfo.packageName,
+							rinfo.activityInfo.name);
+					int state = pm.getComponentEnabledSetting(mComponentName);
+					if (state != PackageManager.COMPONENT_ENABLED_STATE_ENABLED) {
+						ret = false;
+						break;
+					}
+				}
+			}
+			sendSuccessMessage(ret);
 		}
-
 	}
 }

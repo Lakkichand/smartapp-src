@@ -5,8 +5,10 @@ import java.util.List;
 import java.util.Map;
 
 import android.graphics.Bitmap;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
@@ -22,6 +24,32 @@ public class MainAdapter extends BaseAdapter {
 
 	private LayoutInflater mInflater = LayoutInflater.from(TAApplication
 			.getApplication());
+
+	private Handler mHandler;
+
+	private OnClickListener mDisableListener = new OnClickListener() {
+
+		@Override
+		public void onClick(View v) {
+			// 禁用
+			mHandler.obtainMessage(MainActivity.MSG_DISABLE, v.getTag())
+					.sendToTarget();
+		}
+	};
+
+	private OnClickListener mEnableListener = new OnClickListener() {
+
+		@Override
+		public void onClick(View v) {
+			// 启用
+			mHandler.obtainMessage(MainActivity.MSG_ENABLE, v.getTag())
+					.sendToTarget();
+		}
+	};
+
+	public MainAdapter(Handler handler) {
+		mHandler = handler;
+	}
 
 	@Override
 	public int getCount() {
@@ -124,12 +152,17 @@ public class MainAdapter extends BaseAdapter {
 				.findViewById(R.id.operator_img);
 		TextView operatxt = (TextView) convertView
 				.findViewById(R.id.operator_txt);
+		convertView.findViewById(R.id.operator).setTag(bean);
 		if (bean.mIsForbid) {
 			operaimg.setImageResource(R.drawable.accept);
 			operatxt.setText(R.string.accept);
+			convertView.findViewById(R.id.operator).setOnClickListener(
+					mEnableListener);
 		} else {
 			operaimg.setImageResource(R.drawable.forbid);
 			operatxt.setText(R.string.forbid);
+			convertView.findViewById(R.id.operator).setOnClickListener(
+					mDisableListener);
 		}
 		return convertView;
 	}
