@@ -13,5 +13,9 @@
     <string name="scaning">正在扫描</string>
     <string name="processing">处理中...</string>
     <string name="operafail">操作失败，需要ROOT权限</string>
+    <string name="wtitle">警告</string>
+    <string name="wmsg">警告：禁止系统应用可能会导致系统无法正常运行，是否要继续操作？</string>
+    <string name="wyes">继续禁用</string>
+    <string name="wno">取消</string>
 
 </resources>

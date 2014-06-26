@@ -1,6 +1,7 @@
 package com.smartapp.autostartmanager;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -173,6 +174,7 @@ public class MainAdapter extends BaseAdapter {
 	public void updateSelf() {
 		List<DataBean> list = new ArrayList<DataBean>();
 		list.addAll(mList);
+		Collections.sort(list);
 		update(list);
 	}
 

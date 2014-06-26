@@ -332,26 +332,30 @@ public class MainController extends TACommand {
 			}
 			if (ret) {
 				// TODO 禁用成功，杀死程序进程
-				ActivityManager activityManager = (ActivityManager) TAApplication
-						.getApplication().getSystemService(
-								Context.ACTIVITY_SERVICE);
-				List<ActivityManager.RunningAppProcessInfo> list = activityManager
-						.getRunningAppProcesses();
-				for (ActivityManager.RunningAppProcessInfo info : list) {
-					String[] pkgNames = info.pkgList;
-					for (String pkg : pkgNames) {
-						if (bean.mInfo.packageName.equals(pkg)) {
-							RootShell rootShell = null;
-							try {
-								rootShell = RootShell.startShell();
-							} catch (Exception e) {
-								e.printStackTrace();
-							}
-							final String cmd = "kill -9 " + info.pid;
-							new RootShell.Command(cmd).execute(rootShell);
-						}
-					}
-				}
+//				ActivityManager activityManager = (ActivityManager) TAApplication
+//						.getApplication().getSystemService(
+//								Context.ACTIVITY_SERVICE);
+//				List<ActivityManager.RunningAppProcessInfo> list = activityManager
+//						.getRunningAppProcesses();
+//				for (ActivityManager.RunningAppProcessInfo info : list) {
+//					String[] pkgNames = info.pkgList;
+//					for (String pkg : pkgNames) {
+//						if (bean.mInfo.packageName.equals(pkg)) {
+//							RootShell rootShell = null;
+//							try {
+//								rootShell = RootShell.startShell();
+//							} catch (Exception e) {
+//								e.printStackTrace();
+//							}
+//							final String cmd = "kill -9 " + info.pid;
+//							new RootShell.Command(cmd).execute(rootShell);
+//						}
+//					}
+//				}
+				AppFreezer.disablePackage(TAApplication.getApplication(),
+						bean.mInfo.packageName);
+				AppFreezer.enablePackage(TAApplication.getApplication(),
+						bean.mInfo.packageName);
 			}
 			sendSuccessMessage(ret);
 		} else if (command.equals(ENABLE_APP)) {

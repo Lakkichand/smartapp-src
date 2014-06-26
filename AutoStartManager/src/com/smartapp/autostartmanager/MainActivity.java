@@ -4,7 +4,11 @@ import java.util.List;
 import java.util.Map;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -41,51 +45,34 @@ public class MainActivity extends Activity {
 		public void handleMessage(final android.os.Message msg) {
 			switch (msg.what) {
 			case MSG_DISABLE: {
-				// TODO 如果是系统应用，提示用户有风险
-				// TODO 在2.3和4.X机器上测试
-				final ProgressDialog dialog = ProgressDialog
-						.show(MainActivity.this, null,
-								getString(R.string.processing));
-				dialog.setCancelable(false);
-				final Object obj = msg.obj;
-				// 禁用组件
-				TAApplication.getApplication().doCommand("maincontroller",
-						new TARequest(MainController.DISABLE_APP, msg.obj),
-						new TAIResponseListener() {
-
-							@Override
-							public void onStart() {
-							}
-
-							@Override
-							public void onSuccess(TAResponse response) {
-								dialog.dismiss();
-								Boolean ret = (Boolean) response.getData();
-								if (!ret) {
-									Toast.makeText(MainActivity.this,
-											R.string.operafail,
-											Toast.LENGTH_SHORT).show();
-									return;
+				final DataBean bean = (DataBean) msg.obj;
+				// 如果是系统应用，提示用户有风险
+				if (bean.mIsSysApp) {
+					AlertDialog.Builder builder = new Builder(MainActivity.this);
+					builder.setMessage(getText(R.string.wmsg));
+					builder.setTitle(getText(R.string.wtitle));
+					builder.setPositiveButton(getText(R.string.wyes),
+							new OnClickListener() {
+								@Override
+								public void onClick(DialogInterface dialog,
+										int which) {
+									dialog.dismiss();
+									disableApp(bean);
 								}
-								// 更新列表
-								DataBean b = (DataBean) obj;
-								b.mIsForbid = true;
-								mAdapter.updateSelf();
-							}
-
-							@Override
-							public void onRuning(TAResponse response) {
-							}
-
-							@Override
-							public void onFailure(TAResponse response) {
-								dialog.dismiss();
-							}
-
-							@Override
-							public void onFinish() {
-							}
-						}, true, false);
+							});
+					builder.setNegativeButton(getText(R.string.wno),
+							new OnClickListener() {
+								@Override
+								public void onClick(DialogInterface dialog,
+										int which) {
+									dialog.dismiss();
+								}
+							});
+					builder.create().show();
+				} else {
+					disableApp(bean);
+				}
+				// TODO 在2.3和4.X机器上测试
 				break;
 			}
 			case MSG_ENABLE: {
@@ -186,6 +173,50 @@ public class MainActivity extends Activity {
 					}, true, false);
 		}
 	};
+
+	private void disableApp(final DataBean bean) {
+		final ProgressDialog dialog = ProgressDialog.show(MainActivity.this,
+				null, getString(R.string.processing));
+		dialog.setCancelable(false);
+		// 禁用组件
+		TAApplication.getApplication().doCommand("maincontroller",
+				new TARequest(MainController.DISABLE_APP, bean),
+				new TAIResponseListener() {
+
+					@Override
+					public void onStart() {
+					}
+
+					@Override
+					public void onSuccess(TAResponse response) {
+						dialog.dismiss();
+						Boolean ret = (Boolean) response.getData();
+						if (!ret) {
+							Toast.makeText(MainActivity.this,
+									R.string.operafail, Toast.LENGTH_SHORT)
+									.show();
+							return;
+						}
+						// 更新列表
+						bean.mIsForbid = true;
+						bean.mMemory = 0;
+						mAdapter.updateSelf();
+					}
+
+					@Override
+					public void onRuning(TAResponse response) {
+					}
+
+					@Override
+					public void onFailure(TAResponse response) {
+						dialog.dismiss();
+					}
+
+					@Override
+					public void onFinish() {
+					}
+				}, true, false);
+	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
