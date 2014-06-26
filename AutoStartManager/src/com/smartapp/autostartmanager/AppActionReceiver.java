@@ -32,7 +32,9 @@ public class AppActionReceiver extends BroadcastReceiver {
 						DataBean bean = (DataBean) response.getData();
 						if (bean != null && !bean.mIsForbid) {
 							Log.e("", bean.mName + "自启动");
+							// TODO 保存到新应用列表
 						}
+						// TODO 从通知栏点进去才展示新应用
 					}
 
 					@Override

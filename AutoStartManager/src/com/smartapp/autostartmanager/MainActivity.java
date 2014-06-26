@@ -8,6 +8,7 @@ import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.DialogInterface.OnClickListener;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -220,9 +221,16 @@ public class MainActivity extends Activity {
 	}
 
 	@Override
+	protected void onNewIntent(Intent intent) {
+		super.onNewIntent(intent);
+		// TODO 清空新应用列表
+	}
+
+	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		// TODO 清空新应用列表
 		ImageButton btnBack = (ImageButton) findViewById(R.id.header_title_back);
 		btnBack.setOnClickListener(new View.OnClickListener() {
 
@@ -308,7 +316,6 @@ public class MainActivity extends Activity {
 					public void onFinish() {
 					}
 				}, true, false);
-
 	}
 
 	@Override

@@ -36,6 +36,10 @@ public class DataBean implements Comparable<DataBean> {
 	 */
 	public boolean mIsFirst = false;
 	/**
+	 * 是否新应用，新应用则展示在列表顶部
+	 */
+	public boolean mIsNew = false;
+	/**
 	 * 这个应用的开机启动receiver
 	 */
 	public List<ResolveInfo> mBootReceiver = new ArrayList<ResolveInfo>();
