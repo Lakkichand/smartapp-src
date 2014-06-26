@@ -12,6 +12,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.os.Debug;
 
@@ -78,6 +79,10 @@ public class MainController extends TACommand {
 	 * 启用某个软件的开机启动和后台启动
 	 */
 	public static final String ENABLE_APP = "ENABLE_APP";
+	/**
+	 * 检查某个应用是否开机自启动
+	 */
+	public static final String CHECK_APP = "CHECK_APP";
 
 	@Override
 	protected void executeCommand() {
@@ -332,26 +337,6 @@ public class MainController extends TACommand {
 			}
 			if (ret) {
 				// TODO 禁用成功，杀死程序进程
-//				ActivityManager activityManager = (ActivityManager) TAApplication
-//						.getApplication().getSystemService(
-//								Context.ACTIVITY_SERVICE);
-//				List<ActivityManager.RunningAppProcessInfo> list = activityManager
-//						.getRunningAppProcesses();
-//				for (ActivityManager.RunningAppProcessInfo info : list) {
-//					String[] pkgNames = info.pkgList;
-//					for (String pkg : pkgNames) {
-//						if (bean.mInfo.packageName.equals(pkg)) {
-//							RootShell rootShell = null;
-//							try {
-//								rootShell = RootShell.startShell();
-//							} catch (Exception e) {
-//								e.printStackTrace();
-//							}
-//							final String cmd = "kill -9 " + info.pid;
-//							new RootShell.Command(cmd).execute(rootShell);
-//						}
-//					}
-//				}
 				AppFreezer.disablePackage(TAApplication.getApplication(),
 						bean.mInfo.packageName);
 				AppFreezer.enablePackage(TAApplication.getApplication(),
@@ -393,6 +378,119 @@ public class MainController extends TACommand {
 				}
 			}
 			sendSuccessMessage(ret);
+		} else if (command.equals(CHECK_APP)) {
+			// 检查应用是否自启动
+			String pkgName = (String) request.getData();
+			PackageManager pm = TAApplication.getApplication()
+					.getPackageManager();
+			DataBean bean = new DataBean();
+			ApplicationInfo appInfo = null;
+			try {
+				appInfo = pm.getApplicationInfo(pkgName, 0);
+			} catch (NameNotFoundException e) {
+				return;
+			}
+			bean.mInfo = appInfo;
+			bean.mName = appInfo.loadLabel(pm).toString();
+			if ((appInfo.flags & ApplicationInfo.FLAG_SYSTEM) > 0) {
+				bean.mIsSysApp = true;
+			} else {
+				bean.mIsSysApp = false;
+			}
+			{
+				Intent intent = new Intent(BOOTACTION);
+				List<ResolveInfo> resolveInfoList = TAApplication
+						.getApplication()
+						.getPackageManager()
+						.queryBroadcastReceivers(intent,
+								PackageManager.GET_DISABLED_COMPONENTS);
+				for (ResolveInfo rinfo : resolveInfoList) {
+					String packname = rinfo.activityInfo.packageName;
+					if (packname.equals(pkgName)) {
+						bean.mBootReceiver.add(rinfo);
+					}
+				}
+			}
+			{
+				for (int i = 0; i < BACKGROUNDACTION.length; i++) {
+					String action = BACKGROUNDACTION[i];
+					Intent intent = new Intent(action);
+					List<ResolveInfo> resolveInfoList = TAApplication
+							.getApplication()
+							.getPackageManager()
+							.queryBroadcastReceivers(intent,
+									PackageManager.GET_DISABLED_COMPONENTS);
+					for (ResolveInfo rinfo : resolveInfoList) {
+						String packname = rinfo.activityInfo.packageName;
+						if (packname.equals(pkgName)) {
+							bean.mBackgroundReceiver.add(rinfo);
+						}
+					}
+				}
+			}
+			if (bean.mBootReceiver.size() <= 0
+					&& bean.mBackgroundReceiver.size() <= 0) {
+				return;
+			}
+			// 计算应用内存占用
+			ActivityManager activityManager = (ActivityManager) TAApplication
+					.getApplication()
+					.getSystemService(Context.ACTIVITY_SERVICE);
+			List<ActivityManager.RunningAppProcessInfo> list = activityManager
+					.getRunningAppProcesses();
+			for (ActivityManager.RunningAppProcessInfo info : list) {
+				boolean run = false;
+				for (String pkg : info.pkgList) {
+					if (pkg.equals(pkgName)) {
+						run = true;
+					}
+				}
+				if (!run) {
+					continue;
+				}
+				int pid = info.pid;
+				// 获得该进程占用的内存
+				int[] myMempid = new int[] { pid };
+				// 此MemoryInfo位于android.os.Debug.MemoryInfo包中，用来统计进程的内存信息
+				Debug.MemoryInfo[] memoryInfo = activityManager
+						.getProcessMemoryInfo(myMempid);
+				// 获取进程占内存用信息 kb单位
+				int memSize = memoryInfo[0].dalvikPrivateDirty
+						+ memoryInfo[0].dalvikSharedDirty
+						+ memoryInfo[0].nativePrivateDirty
+						+ memoryInfo[0].otherPrivateDirty;
+				String[] pkgs = info.pkgList;
+				int aMemSize = memSize / pkgs.length;
+				for (String pkg : pkgs) {
+					if (pkg.equals(pkgName)) {
+						bean.mMemory += aMemSize;
+					}
+				}
+			}
+			// 已经禁用的应用
+			bean.mIsForbid = true;
+			for (ResolveInfo rinfo : bean.mBootReceiver) {
+				ComponentName mComponentName = new ComponentName(
+						rinfo.activityInfo.packageName, rinfo.activityInfo.name);
+				int state = pm.getComponentEnabledSetting(mComponentName);
+				if (state != PackageManager.COMPONENT_ENABLED_STATE_DISABLED) {
+					bean.mIsForbid = false;
+					break;
+				}
+			}
+			if (bean.mIsForbid) {
+				for (ResolveInfo rinfo : bean.mBackgroundReceiver) {
+					ComponentName mComponentName = new ComponentName(
+							rinfo.activityInfo.packageName,
+							rinfo.activityInfo.name);
+					int state = pm.getComponentEnabledSetting(mComponentName);
+					if (state != PackageManager.COMPONENT_ENABLED_STATE_DISABLED) {
+						bean.mIsForbid = false;
+						break;
+					}
+				}
+			}
+			sendSuccessMessage(bean);
 		}
 	}
 }
