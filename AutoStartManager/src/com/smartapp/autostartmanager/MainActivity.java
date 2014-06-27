@@ -7,9 +7,12 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.DialogInterface.OnClickListener;
+import android.content.SharedPreferences.Editor;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -223,14 +226,30 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onNewIntent(Intent intent) {
 		super.onNewIntent(intent);
-		// TODO 清空新应用列表
+		// 清空新应用列表
+		SharedPreferences preferences = TAApplication.getApplication()
+				.getSharedPreferences(
+						TAApplication.getApplication().getPackageName(),
+						Context.MODE_PRIVATE);
+		Editor editor = preferences.edit();
+		editor.putString("newapps", "");
+		editor.commit();
+		// TODO 从intent获取需要标示为新的应用
 	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		// TODO 清空新应用列表
+		// 清空新应用列表
+		SharedPreferences preferences = TAApplication.getApplication()
+				.getSharedPreferences(
+						TAApplication.getApplication().getPackageName(),
+						Context.MODE_PRIVATE);
+		Editor editor = preferences.edit();
+		editor.putString("newapps", "");
+		editor.commit();
+		// TODO 从intent获取需要标示为新的应用
 		ImageButton btnBack = (ImageButton) findViewById(R.id.header_title_back);
 		btnBack.setOnClickListener(new View.OnClickListener() {
 

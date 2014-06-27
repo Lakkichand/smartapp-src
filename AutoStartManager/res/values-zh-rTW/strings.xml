@@ -17,5 +17,6 @@
     <string name="wmsg">警告：禁止系統應用可能會導致系統無法正常運行，是否要繼續操作？</string>
     <string name="wyes">繼續禁用</string>
     <string name="wno">取消</string>
+    <string name="notitick">開機自啟動/後臺自啟動</string>
 
 </resources>
