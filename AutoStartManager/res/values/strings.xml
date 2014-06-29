@@ -18,5 +18,7 @@
     <string name="wyes">Go on!</string>
     <string name="wno">Cancel</string>
     <string name="notitick">&#160;BootStart/AutoStart</string>
+    <string name="presstomanage">Click to manage</string>
+    <string name="nstart">&#160;apps BootStart/AutoStart</string>
 
 </resources>

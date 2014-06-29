@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.json.JSONArray;
+
 import android.app.ActivityManager;
 import android.content.ComponentName;
 import android.content.Context;
@@ -216,6 +218,19 @@ public class MainController extends TACommand {
 							break;
 						}
 					}
+				}
+			}
+			// 标记新应用
+			if (request.getData() != null) {
+				try {
+					JSONArray array = (JSONArray) request.getData();
+					for (int i = 0; i < array.length(); i++) {
+						String pkgName = array.getString(i);
+						if (map.containsKey(pkgName)) {
+							map.get(pkgName).mIsNew = true;
+						}
+					}
+				} catch (Exception e) {
 				}
 			}
 			// 根据使用内存多少进行排序

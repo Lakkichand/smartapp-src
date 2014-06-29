@@ -21,7 +21,7 @@ import com.zhidian3g.wifibox.imagemanager.AsyncImageManager.AsyncImageLoadedCall
 
 public class MainAdapter extends BaseAdapter {
 
-	private List<DataBean> mList = new ArrayList<>();
+	private List<DataBean> mList = new ArrayList<DataBean>();
 
 	private LayoutInflater mInflater = LayoutInflater.from(TAApplication
 			.getApplication());
@@ -112,6 +112,12 @@ public class MainAdapter extends BaseAdapter {
 		} else {
 			icon.setImageBitmap(DrawUtil.sDefaultIcon);
 		}
+		ImageView newicon = (ImageView) convertView.findViewById(R.id.newicon);
+		if (bean.mIsNew) {
+			newicon.setVisibility(View.VISIBLE);
+		} else {
+			newicon.setVisibility(View.GONE);
+		}
 		TextView name = (TextView) convertView.findViewById(R.id.name);
 		name.setText(bean.mName);
 		TextView tag = (TextView) convertView.findViewById(R.id.tag);
@@ -190,7 +196,7 @@ public class MainAdapter extends BaseAdapter {
 		boolean hasAddFirst = false;
 		// 排序
 		for (DataBean bean : list) {
-			if (!bean.mIsForbid && !bean.mIsSysApp) {
+			if (!bean.mIsForbid && !bean.mIsSysApp && bean.mIsNew) {
 				bean.mIsFirst = false;
 				if (!hasAddFirst) {
 					bean.mIsFirst = true;
@@ -200,7 +206,27 @@ public class MainAdapter extends BaseAdapter {
 			}
 		}
 		for (DataBean bean : list) {
-			if (!bean.mIsForbid && bean.mIsSysApp) {
+			if (!bean.mIsForbid && !bean.mIsSysApp && !bean.mIsNew) {
+				bean.mIsFirst = false;
+				if (!hasAddFirst) {
+					bean.mIsFirst = true;
+				}
+				mList.add(bean);
+				hasAddFirst = true;
+			}
+		}
+		for (DataBean bean : list) {
+			if (!bean.mIsForbid && bean.mIsSysApp && bean.mIsNew) {
+				bean.mIsFirst = false;
+				if (!hasAddFirst) {
+					bean.mIsFirst = true;
+				}
+				mList.add(bean);
+				hasAddFirst = true;
+			}
+		}
+		for (DataBean bean : list) {
+			if (!bean.mIsForbid && bean.mIsSysApp && !bean.mIsNew) {
 				bean.mIsFirst = false;
 				if (!hasAddFirst) {
 					bean.mIsFirst = true;

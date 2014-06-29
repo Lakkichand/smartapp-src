@@ -64,9 +64,10 @@ public class AppActionReceiver extends BroadcastReceiver {
 							editor.commit();
 							// 从通知栏点进去才展示新应用
 							if (array.length() == 1) {
-								// TODO 提示某个应用自启动
-								NotificationManager notificationManager = (NotificationManager) mContext
-										.getSystemService(Context.NOTIFICATION_SERVICE);
+								// 提示某个应用自启动
+								NotificationManager notificationManager = (NotificationManager) TAApplication
+										.getApplication().getSystemService(
+												Context.NOTIFICATION_SERVICE);
 								Notification notification = new Notification();
 								notification.icon = R.drawable.ic_launcher;
 								notification.tickerText = bean.mName
@@ -74,39 +75,75 @@ public class AppActionReceiver extends BroadcastReceiver {
 												.getString(R.string.notitick);
 								notification.when = System.currentTimeMillis();
 								notification.contentView = new RemoteViews(
-										mContext.getPackageName(),
+										TAApplication.getApplication()
+												.getPackageName(),
+										R.layout.notification_apps);
+								notification.contentView
+										.setTextViewText(
+												R.id.decription_state_tv,
+												bean.mName
+														+ TAApplication
+																.getApplication()
+																.getString(
+																		R.string.notitick));
+								notification.contentView
+										.setTextViewText(
+												R.id.apps_state_tv,
+												TAApplication
+														.getApplication()
+														.getString(
+																R.string.presstomanage));
+								Intent intent = new Intent(TAApplication
+										.getApplication(), MainActivity.class);
+								intent.putExtra("newapps", array.toString());
+								PendingIntent pendingIntent = PendingIntent.getActivity(
+										TAApplication.getApplication(), 0,
+										intent,
+										PendingIntent.FLAG_CANCEL_CURRENT);
+								notification.contentIntent = pendingIntent;
+								notification.flags |= Notification.FLAG_AUTO_CANCEL;
+								// 4.发送通知
+								notificationManager.notify(ID, notification);
+							} else {
+								// 提示N个应用自启动
+								NotificationManager notificationManager = (NotificationManager) TAApplication
+										.getApplication().getSystemService(
+												Context.NOTIFICATION_SERVICE);
+								Notification notification = new Notification();
+								notification.icon = R.drawable.ic_launcher;
+								notification.tickerText = array.length()
+										+ TAApplication.getApplication()
+												.getString(R.string.nstart);
+								notification.when = System.currentTimeMillis();
+								notification.contentView = new RemoteViews(
+										TAApplication.getApplication()
+												.getPackageName(),
 										R.layout.notification_apps);
 								notification.contentView.setTextViewText(
 										R.id.decription_state_tv,
-										mContext.getText(R.string.app_name));
-								notification.contentView.setTextViewText(
-										R.id.apps_state_tv,
-										"你有 " + appList.size() + "个应用更新");
-
-								Intent intent = new Intent(mContext,
-										MainActivity.class);
-								intent.putExtra(
-										MainActivity.JUMP_TO_UPDATECONTAINER,
-										true);
-								PendingIntent pendingIntent = PendingIntent
-										.getActivity(
-												mContext,
-												0,
-												intent,
-												PendingIntent.FLAG_CANCEL_CURRENT);
+										array.length()
+												+ TAApplication
+														.getApplication()
+														.getString(
+																R.string.nstart));
+								notification.contentView
+										.setTextViewText(
+												R.id.apps_state_tv,
+												TAApplication
+														.getApplication()
+														.getString(
+																R.string.presstomanage));
+								Intent intent = new Intent(TAApplication
+										.getApplication(), MainActivity.class);
+								intent.putExtra("newapps", array.toString());
+								PendingIntent pendingIntent = PendingIntent.getActivity(
+										TAApplication.getApplication(), 0,
+										intent,
+										PendingIntent.FLAG_CANCEL_CURRENT);
 								notification.contentIntent = pendingIntent;
 								notification.flags |= Notification.FLAG_AUTO_CANCEL;
-								Setting setting = new Setting(mContext);
-								long lasttime = setting
-										.getLong(Setting.OPEN_APP_TIME);
 								// 4.发送通知
-								if (System.currentTimeMillis() - lasttime >= 3.0
-										* 24 * 60 * 60 * 1000) {
-									notificationManager
-											.notify(ID, notification);
-								}
-							} else {
-								// TODO 提示N个应用自启动
+								notificationManager.notify(ID, notification);
 							}
 						}
 					}

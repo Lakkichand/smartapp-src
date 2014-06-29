@@ -18,5 +18,7 @@
     <string name="wyes">继续禁用</string>
     <string name="wno">取消</string>
     <string name="notitick">开机自启动/后台自启动</string>
+    <string name="presstomanage">点击进行管理</string>
+    <string name="nstart">个新应用开机自启动/后台自启动</string>
 
 </resources>

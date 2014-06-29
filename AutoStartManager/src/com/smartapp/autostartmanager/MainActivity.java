@@ -3,6 +3,8 @@ package com.smartapp.autostartmanager;
 import java.util.List;
 import java.util.Map;
 
+import org.json.JSONArray;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
@@ -108,6 +110,7 @@ public class MainActivity extends Activity {
 								// 更新列表
 								DataBean b = (DataBean) obj;
 								b.mIsForbid = false;
+								b.mIsNew = false;
 								mAdapter.updateSelf();
 							}
 
@@ -205,6 +208,7 @@ public class MainActivity extends Activity {
 						// 更新列表
 						bean.mIsForbid = true;
 						bean.mMemory = 0;
+						bean.mIsNew = false;
 						mAdapter.updateSelf();
 					}
 
@@ -234,7 +238,70 @@ public class MainActivity extends Activity {
 		Editor editor = preferences.edit();
 		editor.putString("newapps", "");
 		editor.commit();
-		// TODO 从intent获取需要标示为新的应用
+		// 从intent获取需要标示为新的应用
+		String apps = getIntent().getStringExtra("newapps");
+		JSONArray array = null;
+		try {
+			array = new JSONArray(apps);
+		} catch (Exception e) {
+		}
+		if (array != null) {
+			mContentLayout.setVisibility(View.GONE);
+			mProgressLayout.setVisibility(View.VISIBLE);
+			Drawable drawable = new PageProgressBitmapDrawable(getResources(),
+					DrawUtil.sPageProgressBitmap, 0);
+			mProgress.setImageDrawable(drawable);
+
+			// 获取运行应用列表
+			TAApplication.getApplication().doCommand("maincontroller",
+					new TARequest(MainController.SCAN_COMMAND, array),
+					new TAIResponseListener() {
+
+						@Override
+						public void onStart() {
+						}
+
+						@Override
+						public void onSuccess(TAResponse response) {
+							mProgressLayout.setVisibility(View.GONE);
+							mContentLayout.setVisibility(View.VISIBLE);
+							List<DataBean> retList = (List<DataBean>) response
+									.getData();
+							mAdapter.update(retList);
+							mHandler.removeCallbacks(mRunnable);
+							if (!mIsFinish) {
+								mHandler.post(mRunnable);
+							}
+						}
+
+						@Override
+						public void onRuning(TAResponse response) {
+							Object obj = response.getData();
+							if (obj != null && obj instanceof Integer) {
+								int progress = (Integer) obj;
+								if (progress < 0) {
+									progress = 0;
+								}
+								if (progress > 100) {
+									progress = 100;
+								}
+								Drawable drawable = new PageProgressBitmapDrawable(
+										getResources(),
+										DrawUtil.sPageProgressBitmap, progress);
+								mProgress.setImageDrawable(drawable);
+								mProgressText.setText(progress + "%");
+							}
+						}
+
+						@Override
+						public void onFailure(TAResponse response) {
+						}
+
+						@Override
+						public void onFinish() {
+						}
+					}, true, false);
+		}
 	}
 
 	@Override
@@ -249,7 +316,7 @@ public class MainActivity extends Activity {
 		Editor editor = preferences.edit();
 		editor.putString("newapps", "");
 		editor.commit();
-		// TODO 从intent获取需要标示为新的应用
+
 		ImageButton btnBack = (ImageButton) findViewById(R.id.header_title_back);
 		btnBack.setOnClickListener(new View.OnClickListener() {
 
@@ -286,9 +353,16 @@ public class MainActivity extends Activity {
 				DrawUtil.sPageProgressBitmap, 0);
 		mProgress.setImageDrawable(drawable);
 
+		// 从intent获取需要标示为新的应用
+		String apps = getIntent().getStringExtra("newapps");
+		JSONArray array = null;
+		try {
+			array = new JSONArray(apps);
+		} catch (Exception e) {
+		}
 		// 获取运行应用列表
 		TAApplication.getApplication().doCommand("maincontroller",
-				new TARequest(MainController.SCAN_COMMAND, null),
+				new TARequest(MainController.SCAN_COMMAND, array),
 				new TAIResponseListener() {
 
 					@Override
