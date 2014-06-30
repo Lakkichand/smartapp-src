@@ -226,7 +226,8 @@ public class MainController extends TACommand {
 					JSONArray array = (JSONArray) request.getData();
 					for (int i = 0; i < array.length(); i++) {
 						String pkgName = array.getString(i);
-						if (map.containsKey(pkgName)) {
+						if (map.containsKey(pkgName)
+								&& !map.get(pkgName).mIsForbid) {
 							map.get(pkgName).mIsNew = true;
 						}
 					}
