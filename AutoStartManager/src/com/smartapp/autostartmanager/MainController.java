@@ -506,7 +506,9 @@ public class MainController extends TACommand {
 					}
 				}
 			}
-			sendSuccessMessage(bean);
+			if (!bean.mIsForbid) {
+				sendSuccessMessage(bean);
+			}
 		}
 	}
 }

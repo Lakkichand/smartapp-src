@@ -11,9 +11,9 @@ import android.app.AlertDialog.Builder;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.DialogInterface.OnClickListener;
 import android.content.SharedPreferences.Editor;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -239,7 +239,7 @@ public class MainActivity extends Activity {
 		editor.putString("newapps", "");
 		editor.commit();
 		// 从intent获取需要标示为新的应用
-		String apps = getIntent().getStringExtra("newapps");
+		String apps = intent.getStringExtra("newapps");
 		JSONArray array = null;
 		try {
 			array = new JSONArray(apps);
