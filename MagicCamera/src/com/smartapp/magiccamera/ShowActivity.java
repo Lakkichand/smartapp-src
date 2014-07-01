@@ -15,9 +15,9 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
 
 public class ShowActivity extends Activity {
 
@@ -38,8 +38,10 @@ public class ShowActivity extends Activity {
 
 		setContentView(R.layout.show);
 
-		// 创建 adView
-		adView = new AdView(this, AdSize.BANNER, "a15294415d895c7");
+		// 创建adView。
+		adView = new AdView(this);
+		adView.setAdUnitId("ca-app-pub-6335053266754945/5814465712");
+		adView.setAdSize(AdSize.BANNER);
 
 		// 查找 LinearLayout，假设其已获得
 		// 属性 android:id="@+id/mainLayout"
@@ -48,8 +50,11 @@ public class ShowActivity extends Activity {
 		// 在其中添加 adView
 		layout.addView(adView);
 
-		// 启动一般性请求并在其中加载广告
-		adView.loadAd(new AdRequest());
+		// 启动一般性请求。
+		AdRequest adRequest = new AdRequest.Builder().build();
+
+		// 在adView中加载广告请求。
+		adView.loadAd(adRequest);
 
 		mImage = (ImageView) findViewById(R.id.image);
 		mShare = (ImageView) findViewById(R.id.share);
@@ -78,6 +83,18 @@ public class ShowActivity extends Activity {
 				startActivity(shareIntent);
 			}
 		});
+	}
+
+	@Override
+	public void onPause() {
+		adView.pause();
+		super.onPause();
+	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		adView.resume();
 	}
 
 	@Override
