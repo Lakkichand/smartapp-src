@@ -31,11 +31,10 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
 import com.smartapp.easyvpn.R;
-import com.tapjoy.TapjoyConnect;
 
 import fq.router2.adservice.ADService;
 import fq.router2.feedback.HandleAlertIntent;
@@ -71,8 +70,6 @@ public class MainActivity extends Activity implements LaunchedIntent.Handler,
 		IOUtils.createCommonDirs();
 	}
 
-	public static final String SHOW_OFFER_KEY = "SHOW_OFFER_KEY";
-
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -80,10 +77,6 @@ public class MainActivity extends Activity implements LaunchedIntent.Handler,
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 
 		setContentView(R.layout.main);
-
-		// TODO 修改app ID
-		TapjoyConnect.requestTapjoyConnect(this,
-				"45115e1c-423e-4b34-9cc6-be048ba4c12f", "GltP4s9SfMs9k33KCEPe");
 
 		PreferenceManager.setDefaultValues(this, R.xml.preferences, true);
 		setTitle(getString(R.string.app_name) + " "
@@ -124,14 +117,18 @@ public class MainActivity extends Activity implements LaunchedIntent.Handler,
 
 		initSetting();
 
-		// 创建 adView a152afc831ea222
-		adView = new AdView(this, AdSize.BANNER, "a152afc831ea222");
+		// 创建adView。
+		adView = new AdView(this);
+		adView.setAdUnitId("ca-app-pub-6335053266754945/8907532913");
+		adView.setAdSize(AdSize.BANNER);
 		// 查找 LinearLayout，假设其已获得
 		LinearLayout layout = (LinearLayout) findViewById(R.id.mainLayout);
 		// 在其中添加 adView
 		layout.addView(adView, 2);
-		// 启动一般性请求并在其中加载广告
-		adView.loadAd(new AdRequest());
+		// 启动一般性请求。
+		AdRequest adRequest = new AdRequest.Builder().build();
+		// 在adView中加载广告请求。
+		adView.loadAd(adRequest);
 
 		SharedPreferences sharedPreferences = getSharedPreferences(
 				getPackageName(), Context.MODE_PRIVATE);
@@ -141,24 +138,6 @@ public class MainActivity extends Activity implements LaunchedIntent.Handler,
 		editor.putInt("enterTime", enterTime);
 		editor.commit();
 
-		Intent intent = getIntent();
-		int key = intent.getIntExtra(SHOW_OFFER_KEY, 0);
-		if (key == 1) {
-			TapjoyConnect.getTapjoyConnectInstance().showOffers();
-		}
-
-	}
-
-	@Override
-	protected void onNewIntent(Intent intent) {
-		super.onNewIntent(intent);
-		int key = intent.getIntExtra(SHOW_OFFER_KEY, 0);
-		if (key == 1) {
-			TapjoyConnect.requestTapjoyConnect(this,
-					"45115e1c-423e-4b34-9cc6-be048ba4c12f",
-					"GltP4s9SfMs9k33KCEPe");
-			TapjoyConnect.getTapjoyConnectInstance().showOffers();
-		}
 	}
 
 	/**
@@ -193,7 +172,6 @@ public class MainActivity extends Activity implements LaunchedIntent.Handler,
 
 			@Override
 			public void onClick(View v) {
-				TapjoyConnect.getTapjoyConnectInstance().showOffers();
 			}
 		});
 		View shareFrame = findViewById(R.id.shareframe);
@@ -289,20 +267,20 @@ public class MainActivity extends Activity implements LaunchedIntent.Handler,
 
 	@Override
 	protected void onPause() {
+		adView.pause();
 		super.onPause();
 		if (isReady) {
 			CookieSyncManager.getInstance().sync();
 		}
-		TapjoyConnect.getTapjoyConnectInstance().appPause();
 	}
 
 	@Override
 	protected void onResume() {
 		super.onResume();
+		adView.resume();
 		if (isReady) {
 			CheckDnsPollutionService.execute(this);
 		}
-		TapjoyConnect.getTapjoyConnectInstance().appResume();
 	}
 
 	@Override
@@ -433,7 +411,7 @@ public class MainActivity extends Activity implements LaunchedIntent.Handler,
 		checkBox.setVisibility(View.VISIBLE);
 		checkBox.setChecked(false);
 		updateStatus(_(R.string.proxystatusclose), 0);
-		
+
 	}
 
 	@SuppressLint("NewApi")

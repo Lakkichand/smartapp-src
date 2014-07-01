@@ -292,13 +292,15 @@
                 android:text="@string/recommandtitle"
                 android:textColor="#ffbebebe"
                 android:textSize="17dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:visibility="gone" />
 
             <View
                 android:layout_width="fill_parent"
                 android:layout_height="2dp"
                 android:layout_marginTop="10dp"
-                android:background="#ff3d3c3e" />
+                android:background="#ff3d3c3e"
+                android:visibility="gone" />
 
             <RelativeLayout
                 android:id="@+id/recommandframe"
@@ -307,7 +309,8 @@
                 android:background="@drawable/item_bg"
                 android:paddingBottom="10dp"
                 android:paddingLeft="10dp"
-                android:paddingTop="10dp" >
+                android:paddingTop="10dp"
+                android:visibility="gone" >
 
                 <TextView
                     android:id="@+id/recommandtitle"
