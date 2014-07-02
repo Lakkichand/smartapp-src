@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.smartapp.calculator2"
+    android:versionCode="101"
+    android:versionName="1.0.1" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:icon="@mipmap/ic_launcher_calculator"
+        android:label="@string/app_name" >
+        <activity
+            android:name="com.android.calculator2.Calculator"
+            android:theme="@style/Theme.Calculator"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.android.calculator2.Preferences"
+            android:label="@string/settings"
+            android:theme="@style/Theme.Settings.Calculator" />
+
+        <receiver android:name="com.android.calculator2.CalculatorWidget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/calculator_widget_info" />
+        </receiver>
+    </application>
+
+</manifest>
