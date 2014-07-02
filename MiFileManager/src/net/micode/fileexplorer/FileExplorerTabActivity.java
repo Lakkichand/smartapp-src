@@ -41,9 +41,9 @@ import android.support.v4.view.ViewPager;
 import android.view.ActionMode;
 import android.widget.LinearLayout;
 
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
 import com.smartapp.fileexplorer.R;
 
 public class FileExplorerTabActivity extends Activity {
@@ -79,8 +79,10 @@ public class FileExplorerTabActivity extends Activity {
 				.getDefaultSharedPreferences(this).getInt(INSTANCESTATE_TAB,
 						Util.CATEGORY_TAB_INDEX));
 
-		// 创建 adView
-		adView = new AdView(this, AdSize.BANNER, "a152b7aaaddd6b9");
+		// 创建adView。
+		adView = new AdView(this);
+		adView.setAdUnitId("ca-app-pub-6335053266754945/1244665319");
+		adView.setAdSize(AdSize.BANNER);
 
 		// 查找 LinearLayout，假设其已获得
 		// 属性 android:id="@+id/mainLayout"
@@ -89,12 +91,22 @@ public class FileExplorerTabActivity extends Activity {
 		// 在其中添加 adView
 		layout.addView(adView);
 
-		// 启动一般性请求并在其中加载广告
-		adView.loadAd(new AdRequest());
+		// 启动一般性请求。
+		AdRequest adRequest = new AdRequest.Builder().build();
+
+		// 在adView中加载广告请求。
+		adView.loadAd(adRequest);
+	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		adView.resume();
 	}
 
 	@Override
 	protected void onPause() {
+		adView.pause();
 		super.onPause();
 		SharedPreferences.Editor editor = PreferenceManager
 				.getDefaultSharedPreferences(this).edit();
@@ -143,7 +155,8 @@ public class FileExplorerTabActivity extends Activity {
 				new AlertDialog.Builder(FileExplorerTabActivity.this)
 						.setTitle(getResources().getString(R.string.app_name))
 						.setCancelable(true)
-						.setMessage(getResources().getString(R.string.exittitlemsg))
+						.setMessage(
+								getResources().getString(R.string.exittitlemsg))
 						.setPositiveButton(
 								getResources().getString(R.string.gonow),
 								new DialogInterface.OnClickListener() {
@@ -154,7 +167,8 @@ public class FileExplorerTabActivity extends Activity {
 										SharedPreferences sharedPreferences = getSharedPreferences(
 												getPackageName(),
 												Context.MODE_PRIVATE);
-										Editor editor = sharedPreferences.edit();
+										Editor editor = sharedPreferences
+												.edit();
 										editor.putBoolean("notshowdialog", true);
 										editor.commit();
 
