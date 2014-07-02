@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                style="@style/like_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageView
+            android:id="@+id/gameIcon"
+            android:layout_width="@dimen/game_icon"
+            android:layout_height="@dimen/game_icon"/>
+
+    <RelativeLayout
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/gameIcon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/app_frampadding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/gameName"
+                style="@style/gameName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        <TextView
+                android:id="@+id/gift_t"
+                android:layout_alignLeft="@id/gameName"
+                android:layout_below="@id/gameName"
+                android:text="@string/gift_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</RelativeLayout>

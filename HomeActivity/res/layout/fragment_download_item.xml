@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:id="@+id/indicatorLayout"
+            android:background="@color/manager_indicator_bg"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+        <CheckBox
+                android:id="@+id/allcheck"
+                android:button="@null"
+                android:layout_marginLeft="@dimen/app_frampadding"
+                android:background="@drawable/check_box"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:text="@string/allCheck"
+                android:layout_toRightOf="@id/allcheck"
+                android:layout_centerVertical="true"
+                android:textColor="@color/left_menu_gray"
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/checkTip"
+                android:text="@string/allup"
+                android:layout_centerVertical="true"
+                android:background="@color/green"
+                android:padding="8dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/app_frampadding"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <ListView
+            android:id="@+id/updateListView"
+            style="@style/list_view_style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:background="@color/userinfo_bg"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+
+
+        <com.youle.gamebox.ui.view.RoundImageView
+                android:id="@+id/userinfo_photo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dip"
+                android:scaleType="centerCrop"
+                imagecontrol:border_inside_color="#112233"
+                imagecontrol:border_outside_color="#332211"
+                imagecontrol:border_thickness="2dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_launcher"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/userinfo_photo_modfy"
+                android:id="@+id/userinfo_photo_modfy"
+                android:layout_below="@+id/userinfo_photo"
+                android:layout_marginTop="20dip"
+                android:gravity="center_vertical"
+                android:drawablePadding="10sp"
+                android:layout_centerHorizontal="true"
+                android:drawableLeft="@drawable/face1"
+                />
+
+    </RelativeLayout>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:id="@+id/userinfo_item"
+            android:orientation="vertical"
+            ></LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

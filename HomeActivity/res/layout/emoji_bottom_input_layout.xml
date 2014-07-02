@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/emoji_bottom_edit_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:paddingBottom="5.0dip" >
+        
+        <Button
+            android:id="@+id/btn_let_me_send"
+            android:layout_width="fill_parent"
+            android:layout_height="34dip"
+            android:layout_gravity="right|center"
+            android:layout_marginTop="2.0dip"
+            android:layout_marginRight="10.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:background="@drawable/emoji_btn_bottom_send_selector"
+            android:text="我来说两句"
+            android:textColor="@color/white"
+            />
+		
+        <ImageButton
+            android:id="@+id/btn_emoji"  
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:layout_marginLeft="4.0dip"
+            android:layout_marginTop="2.0dip"
+            android:background="@drawable/emoji_btn_emoji_selector_bottom"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            />
+
+        <EditText
+            android:id="@+id/et_message_input"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.0dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/emoji_et_input_bg_selector"
+            android:gravity="center_vertical"
+            android:hint="我来说两句..."
+            android:textSize="14sp"
+            android:imeOptions="actionSend"
+            android:maxHeight="60.0dip"
+            android:maxLength="140"
+            android:paddingLeft="4.0dip"
+            android:paddingRight="5.0dip"
+           	android:layout_marginRight="4.0dip"
+          	android:layout_marginLeft="4.0dip"
+          	android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="60dip"
+            android:layout_height="34dip"
+            android:layout_gravity="right|center"
+            android:layout_marginTop="2.0dip"
+            android:layout_marginRight="6.0dip"
+            android:background="@drawable/emoji_btn_bottom_send_selector"
+            android:text="发送"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+    <com.emoji.EmojiView
+        android:id="@+id/emoji_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+</LinearLayout>

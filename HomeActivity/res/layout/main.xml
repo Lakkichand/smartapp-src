@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res/com.youle.gamebox.ui"
+              android:orientation="vertical"
+              android:background="#313fed"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+        >
+
+    <TextView
+            android:text="333234234"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:dividerHeight="5dp"
+            app:ptrMode="both"
+            android:layout_height="match_parent"></com.handmark.pulltorefresh.library.PullToRefreshListView>
+</LinearLayout>
+

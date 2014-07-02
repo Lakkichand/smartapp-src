@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/homepage_top_linear"
+            >
+    </LinearLayout>
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+        <LinearLayout android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:layout_weight="1"
+                      android:id="@+id/homepage_message_linear"
+                >
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                    android:text="留言板"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/homepage_message_title"
+                    />
+            <View android:layout_width="wrap_content" android:layout_height="1dp"
+                  android:id="@+id/homepage_message_line"
+                    android:background="@color/green"
+                    ></View>
+
+
+                </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:layout_weight="1"
+                      android:id="@+id/homepage_dymaic_linear"
+                >
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                      android:text="Ta的动态"
+                      android:gravity="center"
+                      android:layout_marginTop="10dp"
+                      android:layout_marginBottom="10dp"
+                      android:id="@+id/homepage_dymaic_title"
+                    />
+            <View android:layout_width="wrap_content" android:layout_height="1dp"
+                  android:id="@+id/homepage_dymaic_line"
+                  android:background="@color/green"
+                    ></View>
+
+
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:layout_weight="1"
+                      android:id="@+id/homepage_game_linear"
+                >
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content"
+                      android:text="Ta的游戏"
+                      android:gravity="center"
+                      android:layout_marginTop="10dp"
+                      android:layout_marginBottom="10dp"
+                      android:id="@+id/homepage_game_title"
+                    />
+            <View android:layout_width="wrap_content" android:layout_height="1dp"
+                  android:id="@+id/homepage_game_line"
+                  android:background="@color/green"
+                    ></View>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+        <android.support.v4.view.ViewPager android:layout_width="match_parent" android:layout_height="match_parent"
+                android:id="@+id/homepage_viewpage"
+                >
+        </android.support.v4.view.ViewPager>
+
+
+            </LinearLayout>
+
+
+</LinearLayout>

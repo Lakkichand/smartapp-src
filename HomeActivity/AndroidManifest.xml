@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.youle.gamebox.ui"
+          android:versionCode="1"
+          android:versionName="1.0"
+        >
+
+    <uses-sdk android:minSdkVersion="8"/>
+    <application
+            android:theme="@style/appthem"
+            android:label="@string/app_name" android:name=".YouleAplication" android:icon="@drawable/ic_launcher"
+            >
+        <activity
+                android:name=".activity.HomeActivity"
+                android:label="@string/app_name"
+                android:theme="@style/Theme.PageIndicatorDefaults"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.CommonActivity"
+                ></activity>
+        <activity android:name=".activity.WebViewActivity"
+                ></activity>
+        <activity android:name=".activity.DownLoadManagerActivity"
+                ></activity>
+        <activity
+                android:name=".activity.SettingActivity" android:screenOrientation="portrait"
+                ></activity>
+        <activity
+                android:name=".activity.MessageActivity" android:screenOrientation="portrait"
+                ></activity>
+        <activity
+                android:name=".activity.SearchActivity" android:screenOrientation="portrait"
+                ></activity>
+        <activity
+                android:name=".activity.GameListActivity" android:screenOrientation="portrait"
+                ></activity>
+        <activity
+                android:name=".activity.MyRelationActivity" android:screenOrientation="portrait"
+                ></activity>
+        <activity
+                android:name=".activity.GameDetailActivity" android:screenOrientation="portrait"
+                android:theme="@style/Theme.PageIndicatorDefaults"
+                ></activity>
+        <activity
+                android:name=".activity.GiftActivity" android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustUnspecified|stateHidden"
+                android:configChanges="orientation|keyboardHidden"
+                android:theme="@style/Theme.PageIndicatorDefaults"
+                ></activity>
+        <activity
+                android:name=".activity.GonglueActivity" android:screenOrientation="portrait"
+                android:theme="@style/Theme.PageIndicatorDefaults"
+                android:windowSoftInputMode="adjustUnspecified|stateHidden"
+                android:configChanges="orientation|keyboardHidden"
+                ></activity>
+        <activity android:name=".activity.AppDetailActivity"
+                ></activity>
+
+        <receiver android:name="com.ta.util.netstate.TANetworkStateReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+    </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Include next permission if you want to allow UIL to cache images on SD card -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+</manifest>
