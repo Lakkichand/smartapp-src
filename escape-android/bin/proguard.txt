@@ -1,0 +1,15 @@
+# view AndroidManifest.xml #generated:15
+-keep class com.escape.local.http.main.ProxyApplication { <init>(...); }
+
+# view AndroidManifest.xml #generated:32
+-keep class com.google.ads.AdActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:35
+-keep class com.smartapp.escape_android.LearnActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:21
+-keep class com.smartapp.escape_android.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:41
+-keep class com.smartapp.escape_android.service.ProxyService { <init>(...); }
+
