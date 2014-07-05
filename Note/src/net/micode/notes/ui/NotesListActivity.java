@@ -77,9 +77,9 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
 import com.smartapp.notes.R;
 
 public class NotesListActivity extends Activity implements OnClickListener,
@@ -148,8 +148,10 @@ public class NotesListActivity extends Activity implements OnClickListener,
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.note_list);
 
-		// 创建 adView
-		adView = new AdView(this, AdSize.BANNER, "a152b64a7978266");
+		// 创建adView。
+		adView = new AdView(this);
+		adView.setAdUnitId("ca-app-pub-6335053266754945/5954066512");
+		adView.setAdSize(AdSize.BANNER);
 
 		// 查找 LinearLayout，假设其已获得
 		// 属性 android:id="@+id/mainLayout"
@@ -158,9 +160,11 @@ public class NotesListActivity extends Activity implements OnClickListener,
 		// 在其中添加 adView
 		layout.addView(adView, 0);
 
-		// 启动一般性请求并在其中加载广告
-		adView.loadAd(new AdRequest());
+		// 启动一般性请求。
+		AdRequest adRequest = new AdRequest.Builder().build();
 
+		// 在adView中加载广告请求。
+		adView.loadAd(adRequest);
 		initResources();
 
 		/**
@@ -1021,6 +1025,18 @@ public class NotesListActivity extends Activity implements OnClickListener,
 			}
 		}
 		return false;
+	}
+
+	@Override
+	public void onPause() {
+		adView.pause();
+		super.onPause();
+	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		adView.resume();
 	}
 
 	@Override
