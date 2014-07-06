@@ -40,9 +40,9 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
 import com.smartapp.compass.R;
 
 public class CompassActivity extends Activity {
@@ -108,8 +108,10 @@ public class CompassActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
-		// 创建 adView
-		adView = new AdView(this, AdSize.BANNER, "a152b562a6a78ae");
+		// 创建adView。
+		adView = new AdView(this);
+		adView.setAdUnitId("ca-app-pub-6335053266754945/2721398510");
+		adView.setAdSize(AdSize.BANNER);
 
 		// 查找 LinearLayout，假设其已获得
 		// 属性 android:id="@+id/mainLayout"
@@ -118,8 +120,11 @@ public class CompassActivity extends Activity {
 		// 在其中添加 adView
 		layout.addView(adView);
 
-		// 启动一般性请求并在其中加载广告
-		adView.loadAd(new AdRequest());
+		// 启动一般性请求。
+		AdRequest adRequest = new AdRequest.Builder().build();
+
+		// 在adView中加载广告请求。
+		adView.loadAd(adRequest);
 
 		initResources();
 		initServices();
@@ -128,6 +133,7 @@ public class CompassActivity extends Activity {
 	@Override
 	protected void onResume() {
 		super.onResume();
+		 adView.resume();
 		if (mLocationProvider != null) {
 			updateLocation(mLocationManager
 					.getLastKnownLocation(mLocationProvider));
@@ -146,6 +152,7 @@ public class CompassActivity extends Activity {
 
 	@Override
 	protected void onPause() {
+		adView.pause();
 		super.onPause();
 		mStopDrawing = true;
 		if (mOrientationSensor != null) {

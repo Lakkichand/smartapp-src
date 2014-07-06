@@ -18,10 +18,10 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.smartapp.compass"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionCode="2"
+    android:versionName="1.1" >
 
-    <uses-sdk android:minSdkVersion="4" />
+    <uses-sdk android:minSdkVersion="9" />
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -32,6 +32,10 @@
         android:icon="@drawable/app_icon"
         android:label="@string/app_label"
         android:taskAffinity="com.smartapp.compass" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
         <activity
             android:name="net.micode.compass.CompassActivity"
             android:label="@string/app_label"
@@ -49,7 +53,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.google.ads.AdActivity"
+            android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
     </application>
 
