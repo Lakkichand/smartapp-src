@@ -48,7 +48,7 @@ public class MainActivity extends Activity {
 						String response = Util.connectHTTP(host, ip);
 						if (response != null) {
 							final String ret = host + "===>" + ip + "("
-									+ Util.connectHTTP(host, ip) + ")\n";
+									+ response + ")\n";
 							runOnUiThread(new Runnable() {
 
 								@Override

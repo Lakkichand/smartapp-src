@@ -4,9 +4,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringReader;
+import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.net.ssl.SSLSocket;
+import javax.net.ssl.SSLSocketFactory;
 
 import org.apache.http.ConnectionReuseStrategy;
 import org.apache.http.HttpHost;
@@ -67,6 +71,72 @@ public class Util {
 				conn.bind(socket, params);
 			}
 			BasicHttpRequest request = new BasicHttpRequest("GET", target);
+			request.setParams(params);
+			httpexecutor.preProcess(request, httpproc, context);
+			HttpResponse response = httpexecutor
+					.execute(request, conn, context);
+			response.setParams(params);
+			httpexecutor.postProcess(response, httpproc, context);
+
+			response.getStatusLine();
+			EntityUtils.toString(response.getEntity());
+			if (!connStrategy.keepAlive(response, context)) {
+				conn.close();
+			}
+			if (response.getStatusLine().getStatusCode() >= 200
+					&& response.getStatusLine().getStatusCode() < 400) {
+				return null;
+			} else {
+				return response.getStatusLine().toString();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			return e.getMessage();
+		} finally {
+			try {
+				conn.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	public static final String connectHTTPS(String hostStr, String ipStr) {
+		HttpParams params = new BasicHttpParams();
+		HttpProtocolParams.setVersion(params, HttpVersion.HTTP_1_1);
+		HttpProtocolParams.setContentCharset(params, "UTF-8");
+		HttpProtocolParams.setUserAgent(params, "HttpComponents/1.1");
+		HttpProtocolParams.setUseExpectContinue(params, true);
+
+		HttpProcessor httpproc = new ImmutableHttpProcessor(
+				new HttpRequestInterceptor[] { new RequestContent(),
+						new RequestTargetHost(), new RequestConnControl(),
+						new RequestUserAgent(), new RequestExpectContinue() });
+
+		HttpRequestExecutor httpexecutor = new HttpRequestExecutor();
+
+		HttpContext context = new BasicHttpContext(null);
+		HttpHost host = new HttpHost(hostStr, 443);
+
+		DefaultHttpClientConnection conn = new DefaultHttpClientConnection();
+		ConnectionReuseStrategy connStrategy = new DefaultConnectionReuseStrategy();
+
+		context.setAttribute(ExecutionContext.HTTP_CONNECTION, conn);
+		context.setAttribute(ExecutionContext.HTTP_TARGET_HOST, host);
+
+		try {
+			String targets = "/";
+			SSLSocketFactory factory = (SSLSocketFactory) SSLSocketFactory
+					.getDefault();
+			final long t1 = System.currentTimeMillis();
+			if (!conn.isOpen()) {
+				SSLSocket socket = (SSLSocket) factory.createSocket();
+				socket.connect(new InetSocketAddress(ipStr, 443));
+				String[] sup = socket.getSupportedCipherSuites();
+				socket.setEnabledCipherSuites(sup);
+				conn.bind(socket, params);
+			}
+			BasicHttpRequest request = new BasicHttpRequest("GET", targets);
 			request.setParams(params);
 			httpexecutor.preProcess(request, httpproc, context);
 			HttpResponse response = httpexecutor
