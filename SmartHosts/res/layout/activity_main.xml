@@ -23,4 +23,10 @@
         </LinearLayout>
     </ScrollView>
 
+    <TextView
+        android:id="@+id/host"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFF0000" />
+
 </RelativeLayout>

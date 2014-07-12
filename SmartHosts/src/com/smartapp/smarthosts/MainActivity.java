@@ -20,6 +20,8 @@ public class MainActivity extends Activity {
 
 	private ProgressBar mBar;
 
+	private TextView mHost;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -27,6 +29,7 @@ public class MainActivity extends Activity {
 		mScrollView = (ScrollView) findViewById(R.id.scrollerx);
 		mFrame = (LinearLayout) findViewById(R.id.frame);
 		mBar = (ProgressBar) findViewById(R.id.progressbar);
+		mHost = (TextView) findViewById(R.id.host);
 
 		new Thread() {
 			public void run() {
@@ -41,11 +44,18 @@ public class MainActivity extends Activity {
 						}
 						String[] array = line.split("\\s+");
 						String ip = array[0].trim();
-						String host = array[1].trim();
+						final String host = array[1].trim();
 						if (host.toLowerCase().equals("localhost")) {
 							continue;
 						}
-						String response = Util.connectHTTP(host, ip);
+						runOnUiThread(new Runnable() {
+
+							@Override
+							public void run() {
+								mHost.setText(host);
+							}
+						});
+						String response = Util.connectHTTPS(host, ip);
 						if (response != null) {
 							final String ret = host + "===>" + ip + "("
 									+ response + ")\n";
