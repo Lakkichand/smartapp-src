@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="0px"
+  android:layout_weight="1"
+  android:layout_height="fill_parent"
+  android:gravity="center"
+  android:focusable="true"
+  android:saveEnabled="true"
+  android:inputType="none"
+  android:includeFontPadding="false"
+  android:typeface="monospace"
+  android:textSize="@dimen/grid_view"/>
+

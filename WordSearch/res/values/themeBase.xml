@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="themeBase" parent="android:Theme">
+		<item name="android:windowNoTitle">true</item><!-- The Activity has no title -->
+		<item name="android:windowFullscreen">true</item> <!-- Hides the Status Bar-->
+	</style>
+</resources>

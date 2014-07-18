@@ -1,0 +1,129 @@
+Version 2.3.4 (125):
+new foodds word list
+update analytics code
+dialog dismiss crash hardening
+
+
+Version 2.3.3 (120):
+new seasonal word list
+
+Version 2.3.2 (115):
+new seasonal word list
+fix external install issue
+
+Version 2.3.1 (105):
+fix icon missing on Android 1.5
+
+Version 2.3 (100):
+change theme mid game
+improve performance and coding practices with handlers 
+improve accuracy of grid selection
+
+Version 2.2 (90):
+landscape mode
+
+Version 2.1.1 (80):
+new custom words export, import
+
+Version 2.1 (70):
+new Android 1.5 support
+add donate button 
+improved german i18n (thanks piquadrat)
+fix multi submit bug
+
+Version 2.0.1 (62):
+replay option (can't submit HS on a replay)
+fix crashes on game over async
+
+Version 2.0 (60):
+initial new set of theme options
+new icon (thanks Lindsey)
+remove phone identity permission
+allow 2.2 to install to sd card
+crash fixes for online score system
+improve performance when networking flaky
+
+Version 1.9 (42):
+add online high scores
+ - top 10 for past 7 days
+ - percentile within all scores
+expand high scores to 10 places
+
+Version 1.8.7 (31):
+remove flipperview to fix 2.1+ restore crashes
+
+Version 1.8.6 (30):
+default back to DRAG
+fix initials dialog crash
+add intro dialog
+
+Version 1.8.5 (27):
+fixed missing time at end of games, thanks Linda
+add 11x11 size
+fixed creation hack :)
+
+Version 1.8.4 (25):
+add SAT, kids word banks
+add repo steps to new crash dialog
+fixed game time not counting correctly
+
+Version 1.8.3 (23):
+fixed null pointer restore issue on high scores
+
+Version 1.8.2 (20):
+Add crash reporting; if you get a crash please choose send
+Add initial German word bank (requested by siegi4444)
+Add Spanish interface and fix to German/French
+
+Version 1.8.1 (15):
+fixes tap setting not persisting
+
+Version 1.8 (14):
+full screen game
+high score initials allow longer and numbers
+centralize settings
+add German and update French interfaces
+code base checkout fully compiles now
+
+Version 1.7 (13):
+greatly improves touch responsiveness
+can now toggle between existing drag interface and new tap interface (Thanks Adam/Arica)
+tutorial explains new tap interface
+
+Version 1.6 (12):
+new high score system with names and times
+
+Version 1.5 (11):
+moved word box and selected letter to top of window (thanks Andrea)
+selectable grid sizes (can choose between 7x7 up to normal 10x10)
+new tutorial
+initial internationalization attempt (French)
+regression fixed in game saving
+
+Version 1.4 (10):
+new custom category, with word list editor interface
+
+Version 1.3 (9):
+added new misc category with 67K words
+improved existing category list sizes
+added indication for selected category
+
+Version 1.2 (8):
+Game resuming improved
+Fixed typo (thanks IRF)
+Added two new categories for improved difficulty
+random category does not include new difficult categories
+
+
+Version 1.1.1 (7):
+Timer only counts while app is visible now
+Prevent words being added twice per game (thanks Alex)
+Fixed 10 misspelled words (thanks Jo)
+High Score reset option
+improve random category
+improve performance
+further improved touch accuracy
+
+Version 1.1.0:
+Touch accuracy improved
+minor bug fixes

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:gravity="left|center_vertical" 
+	android:textSize="@dimen/tutorial_message_font"
+	android:padding="@dimen/tutorial_message_padding"
+	android:background="@drawable/border"
+	android:layout_height="wrap_content" 
+	android:layout_marginTop="@dimen/tutorial_message_padding"
+	android:layout_marginBottom="@dimen/tutorial_message_padding"
+	android:layout_width="fill_parent" />

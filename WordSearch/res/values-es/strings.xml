@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources> 
+<string name="app_name"> Word Search </string> 
+
+<string name="places"> Lugares </string> 
+<string name="animals"> Animales </string> 
+<string name="people"> Popular </string> 
+<string name="adjectives"> Adjetivos </string> 
+<string name="german"> alemán </string> 
+<string name="misc"> Varios </string> 
+<string name="numbers"> Números </string> 
+<string name="custom"> personalizados </string> 
+<string name="insane"> Insane </string> 
+<string name="random"> azar </string> 
+
+<string name="custom_editor"> Custom Editor </string> 
+<string name="category"> Word Bank </string> 
+<string name="reset"> Perdí </string> 
+<string name="ok"> OK </string> 
+<string name="high_score"> Altos Puntajes </string> 
+<string name="new_game"> Nuevo </string> 
+<string name="quit"> Salir </string> 
+
+<string name="wordlist_name"> Palabra de búsqueda personalizado Categoría Editor </string> 
+<string name="custom_empty"> su categoría personalizada no tiene palabras. \nHaz clic en el menú a continuación, haga clic en la palabra nuevo </string> 
+<string name="no_words"> No se pudo encontrar palabras para esta red, por favor, elija un tamaño de cuadrícula o de una categoría diferente. </string> 
+<string name="no_words_custom"> No hay palabras disponibles en su categoría personalizada, por favor vaya al editor de categoría y añadir algunos wprds o elija una categoría diferente. </string> 
+<string name="wordlist_no_words"> No hay palabras en la actualidad en su categoría personalizada, por favor haga clic en el menú a continuación, añadir la palabra. </string> 
+<string name="new_word"> New Word </string> 
+<string name="edit_word"> Editar palabra </string> 
+<string name="delete"> Eliminar </string> 
+<string name="add_word"> Añadir Word </string> 
+<string name="invalid_word"> palabras deben ser de al menos 4 letras </string> 
+
+<string name="tutorial"> Tutorial </string> 
+<string name="tutorial_heading_touch"> Touch </string> 
+<string name="tutorial_heading_drag"> Arrastre </string> 
+<string name="tutorial_heading_tap"> Toque </string> 
+<string name="tutorial_heading_trackball"> Trackball </string> 
+<string name="tutorial_heading_tips"> Sugerencias </string> 
+<string name="tutorial_message"> En Sopa de Letras, su objetivo es encontrar todas las palabras en la lista de palabras. Hay dos maneras que usted puede encontrar las palabras: </string> 
+<string name="tutorial_message2"> Arrastre y Tap tanto el uso de la pantalla táctil. Arrastre y es seleccionado por defecto, pero puede cambiar entre Arrastre y Tap por ir al menú y elegir \"tipo de entrada. \" </string> 
+<string name="tutorial_message_drag1"> Con el dedo, tocar la primera letra de una palabra. </string> 
+<string name="tutorial_message_drag2"> sin levantar el dedo, arrastre por la pantalla hasta la última letra de la palabra. </string> 
+<string name="tutorial_message_drag3"> Al arrastrar el dedo alrededor, las letras que están destacando en la actualidad se vuelven amarillas. Usted puede ver la carta de su dedo se encuentra actualmente en en la esquina superior izquierda de la pantalla (donde la \"&lt;\" flecha por lo general es). </string> 
+<string name="tutorial_message_drag4"> Cuando se han puesto de relieve la palabra completa (y no más que la palabra completa), levante el dedo de la pantalla. La palabra cambiará a un color diferente en la red y se eliminará de la lista de palabras. </string> 
+<string name="tutorial_message_trackball1"> Roll la rueda de desplazamiento para encontrar la primera letra de una palabra. La carta que se encuentran actualmente en color verde. </string> 
+<string name="tutorial_message_trackball2"> Cuando usted está en la primera letra de una palabra, haga clic en la rueda de desplazamiento para comenzar destacando la palabra. </string> 
+<string name="tutorial_message_trackball3"> Roll la rueda de desplazamiento hasta la última letra de la palabra y haga clic en la rueda de desplazamiento para ver otra vez la palabra. La palabra cambia a un color diferente en la red y se eliminará de la lista de palabras. </string>
+<string name="tutorial_message_tap1"> Usando su dedo, pulse la primera letra de la palabra y levante el dedo. </string> 
+<string name="tutorial_message_tap2"> Usando su dedo, toque en la última letra de la palabra. La palabra entera se pondrá de relieve y la palabra será removido de la lista de palabras. </string> 
+<string name="tutorial_message_tap3"> La carta no se selecciona hasta que levante el dedo. Si, al intentar aprovechar, usted escoge la carta equivocada, no levantar el dedo - sólo tienes que arrastrar el dedo por la pantalla hasta encontrar la letra correcta (utilizar el buzón de la esquina superior izquierda si es necesario ayuda) y levantar el dedo cuando usted está sobre la letra correcta. </string> 
+<string name="tutorial_message_tip1"> También se puede destacar una palabra a partir de la última letra y termina en la primera. </string> 
+<string name="tutorial_message_tip2"> Utilice la \"&lt;\" y \"&gt;\" flechas para navegar a través de las palabras en la lista de palabras en curso. Para cambiar las listas de palabras, ir al menú y haz clic en \"Categorías. \" </string> 
+<string name="tutorial_message_tip3"> Usted puede encontrar cualquier palabra en la lista de palabras, no sólo el que se muestra actualmente </string> 
+<string name="tutorial_message_tip4"> Si tiene problemas para usar agua o arrastre para resaltar una palabra, vaya al menú, haga clic en \"Tamaño \" y elegir una red con menos letras (es decir, 7x7). Debido a que hay menos cartas, las cartas son más espaciados y más fácil de recoger con el dedo. </string> 
+<string name="tutorial_message_tip5"> Si está usando la rueda de desplazamiento, recuerde hacer clic en la rueda de desplazamiento para comenzar y terminar la búsqueda de una palabra. Si no, haga clic en la rueda de desplazamiento, el juego no sabe que usted está tratando de encontrar una palabra. </string> 
+<string name="tutorial_message_tip6"> Debido a que la red se genera aleatoriamente, puede ver algunas palabras que no son parte de la lista de palabras, no se puede poner de relieve y \"buscar \", estas palabras </string> 
+<string name="tutorial_message_tip7"> Si está utilizando arrastre para resaltar palabras, tenga cuidado de no arrastrar el dedo de la pantalla táctil. Salirse de la pantalla táctil es el mismo que levantar el dedo. </string> 
+<string name="tutorial_message_tip8"> Al seleccionar una palabra con el arrastre, el único juego que pondrá de relieve en letras amarillas en una línea recta que va directamente arriba, abajo, izquierda, derecha o en diagonal entre el lugar en que comenzó destacando y donde el dedo en la actualidad es . Si su dedo no está en línea directa de la carta de inicio, el punto culminante no seguirá su dedo hasta que retorne el dedo a una línea directa de la carta de inicio. El juego se encuentra la palabra que se destaca, sin importar donde el dedo cuando se lo levanta. </string> 
+
+<string name="size"> malla </string> 
+<string name="no_high_scores"> no hay calificaciones de alto </string> 
+
+<string name="input_type"> Tipo de entrada </string> 
+<string name="drag"> Arrastre </string> 
+<string name="tap"> Toque </string> 
+
+<string name="game_over"> ¿Desea iniciar un juego nuevo? </string> 
+
+<string name="options"> Preferencias </string> 
+
+<string name="prefs_size_summary"> actual tamaño de la cuadrícula: %replaceme </string> 
+<string name="prefs_category_summary"> actual Word Bank: %replaceme </string> 
+<string name="prefs_touch_mode_summary"> actual Tipo de entrada: %replaceme </string> 
+
+<string name="CRASH_MSG"> "Lo sentimos mucho, pero Wordsearch GRATIS ha estrellado de forma inesperada. \n \n Por favor ayúdenos a hacer nuestro mejor aplicación enviando seguimiento de la pila" </string> 
+<string name="CRASH_SENDING_WAIT"> Envío Por favor espere ...</string> 
+<string name="PREVIEW"> Preview </string> 
+<string name="SEND"> Enviar </string> 
+
+<string name="CRASH_DETAILS_HINT"> pasos para reproducir [opcional] </string>
+<string name="INTRO"> Puede cambiar el tamaño de la cuadrícula, banco de palabras, y cómo resaltar las palabras pulsando el \"Menú\" y seleccionar el botón \"preferencias.\" O bien, usted puede escoger cómo resaltar las palabras ahora.\n- \"Pulse\" significa que usted toque en la primera y la última letra, pero nada en medio.\n- \"Arrastre\" significa que resaltar la palabra entera sin levantar el dedo. </string>
+
+<string name="SCORE_CONGRATULATIONS"> \nFelicitaciones, ganaste! La puntuación fue replaceme%. </string>
+<string name="SCORE_LOCAL_HIGH"> \nLocal Puntuación  #replaceme% </string>
+<string name="SCORE_GLOBAL_HIGH"> \n Global Puntuación  #replaceme% </string>
+<string name="SCORE_GLOBAL_PERCENT"> \nPuntuación Global #replaceme% percentil </string>
+<string name="SCORE_INITIALS"> \nPor favor indica tu nombre / iniciales </string>
+<string name="SCORE_GLOBAL_ERROR"> \nError Ranking Mundial MIA </string>
+
+<string name="SAVE"> Guardar </string>
+<string name="SAVE_SUBMIT"> Guardar y Enviar </string>
+
+<string name="HIGH_SCORE_CALCULATING"> Cálculo Puntuación Récord </string>
+<string name="GLOBAL_HIGH_SCORES"> mejores puntuaciones globales </string>
+<string name="LOCAL_HIGH_SCORES"> Local mejores puntuaciones </string>
+<string name="GLOBAL">Global</string>
+<string name="LOCAL">Local</string>
+<string name="LOADING">Cargando</string>
+
+<string name="REPLAY">Repetir</string>
+
+</resources>

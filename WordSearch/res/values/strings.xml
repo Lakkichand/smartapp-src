@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Word Search</string>
+
+	<string name="foods">Foods</string>
+	<string name="seasonal">Seasonal</string>
+	<string name="christmas">Christmas</string>
+	<string name="places">Places</string>
+	<string name="animals">Animals</string>
+	<string name="people">People</string>
+	<string name="adjectives">Adjectives</string>
+	<string name="german">German</string>
+	<string name="kids">Kids</string>
+	<string name="sat">SAT</string>
+	<string name="misc">Misc</string>
+	<string name="numbers">Numbers</string>
+	<string name="custom">Custom</string>
+	<string name="insane">Insane</string>
+	<string name="random">Random</string>
+
+	<string name="custom_editor">Custom Editor</string>
+	<string name="category">Word Bank</string>
+	<string name="reset">Reset</string>
+	<string name="ok">OK</string>
+	<string name="high_score">High Scores</string>
+	<string name="new_game">New</string>
+	<string name="quit">Quit</string>
+
+	<string name="wordlist_name">Word Search Custom Word Bank Editor</string>
+	<string name="custom_empty">Your custom word bank has no words.\nClick menu then click new word</string>
+	<string name="no_words">No words could be found for this grid, please choose a different grid size or word bank.</string>
+	<string name="no_words_custom">There are no words available in your custom word bank, please go to the custom word bank editor and add some words or choose a different word bank.</string>
+	<string name="wordlist_no_words">There are no words currently in your custom word bank, please click menu then add word.</string>
+	<string name="new_word">New Word</string>
+	<string name="edit_word">Edit Word</string>
+	<string name="delete">Delete</string>
+	<string name="add_word">Add Word</string>
+	<string name="invalid_word">Words must be at least 4 letters</string>
+
+	<string name="tutorial">Tutorial</string>
+	<string name="tutorial_heading_touch">Touch</string>
+	<string name="tutorial_heading_drag">Drag</string>
+	<string name="tutorial_heading_tap">Tap</string>
+	<string name="tutorial_heading_trackball">Trackball</string>
+	<string name="tutorial_heading_tips">Tips</string>
+	<string name="tutorial_message">In WordSearch, your goal is to find all of the words in the word list.  There are two ways that you can find words:</string>
+	<string name="tutorial_message2">Drag and Tap both use the touchscreen. Drag is selected by default, but you can switch between Drag and Tap by going to the menu and picking \"Input Type.\"</string>
+	<string name="tutorial_message_drag1">Using your finger, touch the first letter of a word.</string>
+	<string name="tutorial_message_drag2">Without lifting your finger, drag across the screen to the last letter of the word.</string>
+	<string name="tutorial_message_drag3">As you drag your finger around, the letters you are currently highlighting will turn yellow.  You can see the letter your finger is currently on in the top left corner of the screen (where the \"&lt;\" arrow usually is).</string>
+	<string name="tutorial_message_drag4">When you have highlighted the entire word (and no more than the entire word), lift your finger off the screen.  The word will then change to a different color in the grid and will be removed from the word list.</string>
+	<string name="tutorial_message_trackball1">Roll the trackball around to find the first letter of a word.  The letter you are currently on is green.</string>
+	<string name="tutorial_message_trackball2">When you are on the first letter of a word, click the trackball to start highlighting the word.</string>
+	<string name="tutorial_message_trackball3">Roll the trackball to the last letter of the word and click the trackball again to find the word.  The word will change to a different color in the grid and will be removed from the word list.</string>
+	<string name="tutorial_message_tap1">Using your finger, tap the first letter of the word and lift your finger.</string>
+	<string name="tutorial_message_tap2">Using your finger, tap the last letter of the word.  The entire word will be highlighted and the word will be removed from the word list.</string>
+	<string name="tutorial_message_tap3">The letter is not selected until you lift your finger.  If, when you try to tap, you pick the wrong letter, don\'t lift up your finger--just drag your finger around the screen until you find the correct letter (use the letter box in the top-left corner if you need help) and lift your finger when you are over the correct letter.</string>
+	<string name="tutorial_message_tip1">You can also highlight a word starting from the last letter and ending on the first.</string>
+	<string name="tutorial_message_tip2">Use the \"&lt;\" and \"&gt;\" arrows to browse through the words in the current word list.  To change word lists, go to the menu and click on \"Word Bank.\"</string>
+	<string name="tutorial_message_tip3">You can find any word in the word list, not just the one that is currently displayed</string>
+	<string name="tutorial_message_tip4">If you are having trouble using tap or drag to highlight a word, go to the menu, click on \"Size\" and choose a grid with fewer letters (i.e. 7x7).  Because there are fewer letters, the letters are more spaced out and easier to pick with your finger.</string>
+	<string name="tutorial_message_tip5">If you are using the trackball, remember to click the trackball to begin and end finding a word.  if you do not click the trackball, the game does not know that you are trying to find a word.</string>
+	<string name="tutorial_message_tip6">Because the grid is randomly generated, you may see some words that are not part of the word list; you cannot highlight and \"find\" these words</string>
+	<string name="tutorial_message_tip7">If you are using drag to highlight words, be careful not to drag your finger off of the touch screen.  Going off the touch screen is the same as lifting your finger.</string>
+	<string name="tutorial_message_tip8">When selecting a word using drag, the game will only highlight in yellow letters in a straight line going directly above, below, left, right, or diagonally between where you started highlighting and where your finger currently is.  If your finger is not in a direct line from the start letter, the highlight will not follow your finger until your finger returns to a direct line from the start letter.  The game will find the word that is highlighted, regardless of where your finger is when you lift it.</string>
+
+	<string name="size">Grid Size</string>
+	<string name="no_high_scores">No High Scores</string>
+	
+	<string name="input_type">Input Type</string>
+	<string name="drag">Drag</string>
+	<string name="tap">Tap</string>
+
+	<string name="game_over">Would you like to start a new game?</string>
+	
+	<string name="options">Preferences</string>
+	
+	<string name="prefs_size_summary">Current Grid Size: %replaceme</string>
+	<string name="prefs_category_summary">Current Word Bank: %replaceme</string>
+	<string name="prefs_touch_mode_summary">Current Input Type: %replaceme</string>
+
+	<string name="CRASH_MSG">"We are very sorry but Open WordSearch has crashed unexpectedly.\n\nPlease help us make our application better by sending us stack trace"</string>
+	<string name="CRASH_SENDING_WAIT">Sending Please wait...</string>
+	<string name="PREVIEW">Preview</string>
+	<string name="SEND">Send</string>
+	
+	<string name="CRASH_DETAILS_HINT">steps to reproduce [optional]</string>
+	<string name="INTRO">You can change the grid size, word bank, and how you highlight words by pushing the \"menu\" button and selecting \"preferences.\"  Or, you can pick how you highlight words now.\n- \"Tap\" means you tap on the first and last letters but nothing in between.\n- \"Drag\" means you highlight the entire word without lifting your finger.</string>
+
+	<string name="SCORE_CONGRATULATIONS">Congratulations, you won!\nYour score was %replaceme.</string>
+	<string name="SCORE_LOCAL_HIGH">\nLocal High Score #%replaceme</string>
+	<string name="SCORE_GLOBAL_HIGH">\nRecent Global Score #%replaceme</string>
+	<string name="SCORE_GLOBAL_PERCENT">\nGlobal Score #%replaceme percentile</string>
+	<string name="SCORE_INITIALS">\nPlease enter your name/initials</string>
+	<string name="SCORE_GLOBAL_ERROR">\nError Global Ranking MIA</string>
+
+	<string name="SAVE">Save</string>
+	<string name="SAVE_SUBMIT">Save &amp; Submit</string>
+
+	<string name="HIGH_SCORE_CALCULATING">Calculating High Score</string>
+	<string name="GLOBAL_HIGH_SCORES">Global High Scores</string>
+	<string name="LOCAL_HIGH_SCORES">Local High Scores</string>
+	<string name="GLOBAL">Global</string>
+	<string name="LOCAL">Local</string>
+	<string name="LOADING">Loading</string>
+	
+	<string name="THEME">Theme</string>
+	<string name="PREFS_THEME_SUMMARY">Current Theme: %replaceme</string>
+	<string name="ORIGINAL">Original</string>
+	<string name="NIGHTSKY">Night Sky</string>
+	<string name="SKY">Sky</string>
+	<string name="PINK">Pink</string>
+	<string name="SEAGREEN">Sea Green</string>
+	
+	<string name="REPLAY">Replay</string>
+	<string name="DONATE">Donate</string>
+	
+	<string name="IMPORT">Import</string>
+	<string name="EXPORT">Export</string>
+	<string name="REPLACEALL">Replace All</string>
+	<string name="OVERWRITE">Overwrite</string>
+	<string name="IMPORT_OVERWRITE">Overwrite, Warning: this will remove existing custom words</string>
+	<string name="BROWSE">Browse</string>
+	<string name="DEFAULT">Default</string>
+	<string name="MISSING_FILE_MANAGER">Please install OI File Manager to pick a custom file location, else use the default location</string>
+
+	<string name="INTRO_DONATE_MSG">We, the developers, are glad you enjoy this game. Please consider donating to support this open source development.</string>
+	<string name="DONATE_MSG">Please consider donating to support this project\'s development. There is a donate app in the market, or you can use Paypal or Google Checkout through our website.</string>
+	<string name="DONATE_MARKET">Market Donation</string>
+	<string name="DONATE_WEB">Website Donation</string>
+	<string name="DONATE_NO">Maybe Later</string>
+</resources>

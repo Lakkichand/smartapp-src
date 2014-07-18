@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources> 
+<string name="app_name"> Word Search </string> 
+
+<string name="places">Orte</string>
+<string name="animals">Tiere</string>
+<string name="people">Personen</string>
+<string name="adjectives">Adjektive</string>
+<string name="german">Deutsch</string>
+<string name="misc">Verschiedenes</string>
+<string name="numbers">Zahlen</string>
+<string name="custom">Benutzerdefiniert</string>
+<string name="insane">Sauschwer</string>
+<string name="random">Zufällig</string>
+
+<string name="custom_editor">Kategorien-Editor</string>
+<string name="category">Kategorie</string>
+<string name="reset"> zurücksetzen </string> 
+<string name="ok"> OK </string> 
+<string name="high_score">Rangliste</string>
+<string name="new_game">Neu</string>
+<string name="quit">Beenden</string>
+
+<string name="wordlist_name">Kategorien-Editor</string>
+<string name="custom_empty">Ihre benutzerdefinierte Kategorie hat keine Worte. \nÖffnen Sie das Menü und wählen Sie "Neues Wort"</string>
+<string name="no_words">Keine Wörter für dieses Gitter gefunden. Wählen Sie bitte eine andere Gittergröße oder Kategorie.</string>
+<string name="no_words_custom"> Es gibt keine Worte in Ihrer benutzerdefinierten Kategorie, klicken Sie auf den Kategorien-Editor gehen und fügen Sie einige Wörter ein oder wählen Sie eine andere Kategorie.</string>
+<string name="wordlist_no_words">In Ihrer benutzerdefinierten Kategorie sind keine Wörter. Öffnen Sie das Menü und wählen Sie "Wort hinzufügen".</string>
+<string name="new_word">Neues Wort</string>
+<string name="edit_word">Wort bearbeiten</string>
+<string name="delete">Löschen</string>
+<string name="add_word">Wort hinzufügen</string>
+<string name="invalid_word">Wörter müssen min. 4 Buchstaben lang sein</string>
+
+<string name="tutorial">Tutorial</string>
+<string name="tutorial_heading_touch">Berühren</string>
+<string name="tutorial_heading_drag">Ziehen</string>
+<string name="tutorial_heading_tap">Antippen</string>
+<string name="tutorial_heading_trackball">Trackball</string>
+<string name="tutorial_heading_tips">Tipps</string>
+<string name="tutorial_message">In WordSearch ist Ihr Ziel, alle Wörter in der Wortliste zu finden. Es gibt zwei Möglichkeiten, wie Sie Wörter finden können:</string>
+<string name="tutorial_message2">"Ziehen" und "Antippen" verwenden beide den Touchscreen. "Ziehen" ist standardmäßig aktiviert, aber Sie können zwischen "Ziehen" und "Antippen" wechseln, indem Sie im Menü \"Input Type. \" wählen.</string>
+<string name="tutorial_message_drag1">Mit Ihrem Finger berühren Sie den ersten Buchstaben eines Wortes.</string>
+<string name="tutorial_message_drag2">Ohne Ihren Finger abzuheben ziehen Sie über den Bildschirm bis zum letzten Buchstaben des Wortes.</string>
+<string name="tutorial_message_drag3">Während Sie Ihre Finger bewegen, werden die gerade ausgewählten Buchstaben gelb markiert. Den Buchstaben unter Ihrem Finger sehen Sie inder linken oberen Ecke (wo der \"&lt;\"-Pfeil üblicherweise ist).</string>
+<string name="tutorial_message_drag4">Wenn Sie das ganze Wort (und nicht mehr als das ganze Wort) markiert haben, heben Sie Ihren Finger vom Bildschirm. Das Wort wechselt dann zu einer anderen Farbe und wird aus der Wortliste gestrichen.</string>
+<string name="tutorial_message_trackball1">Bewegen Sie die Auswahl mit Hilfe des Trackballs zum ersten Buchstaben eines Wortes. Der aktuell ausgewählte Buchstabe ist grün markiet.</string>
+<string name="tutorial_message_trackball2">Wenn die Auswahl aus dem ersten Buchstaben eines Wortes liegt, klicken Sie auf den Trackball.</string>
+<string name="tutorial_message_trackball3">Drehen Sie den Trackball, um den letzten Buchstaben des Wortes auszuwählen und klicken Sie auf den Trackball um das Wort auszuwählen. Das Wort wechselt dann zu einer anderen Farbe und wird aus der Wortliste gestrichen.</string>
+<string name="tutorial_message_tap1">Tippen Sie mit Ihrem Finger den ersten Buchstaben des Wortes an und heben Sie Ihren Finger.</string>
+<string name="tutorial_message_tap2">Tippen Sie auf den letzten Buchstaben des Wortes. Das gesamte Wort wird hervorgehoben und das Wort wird aus der Wortliste gestrichen.</string>
+<string name="tutorial_message_tap3">Der Buchstabe ist nicht ausgewählt, bevor Sie Ihren Finger anheben. Falls Sie den falschen Buchstaben antippen, heben Sie Ihren Finger nicht an, sondern ziehen Sie ihn vorher zum richtigen Buchstaben (die Anzeige in der linken oberen Ecke kann dabei hilfreich sein).</string>
+<string name="tutorial_message_tip1">Sie können auch ein Wort markieren, indem Sie zuerst den letzten Buchstaben und dann den ersten Buchstaben auswählen.</string>
+<string name="tutorial_message_tip2"> Verwenden Sie die \"&lt;\"- und \"&gt;\"-Pfeile, um durch die Wörter in der aktuellen Wortliste zu blättern. Um eine andere Wortliste zu öffnen, wählen Sie im Menü \"Kategorien\".</string>
+<string name="tutorial_message_tip3">Sie können jedes Wort in der Wortliste markieren, nicht nur das zurzeit angezeigt Wort.</string>
+<string name="tutorial_message_tip4">Wenn Sie Probleme mit der Auswahl der Buchstaben haben, gehen Sie ins Menü, klicken Sie auf \"Größe\" und wählen Sie ein Gitter mit weniger Buchstaben (z.B. 7x7). Weil weniger Buchstaben angezeigt werden, haben diese mehr Platz und sind einfacher mit dem Finger zu treffen.</string>
+<string name="tutorial_message_tip5">Wenn Sie den Trackball benutzen, denken Sie daran, mit dem Trackball am Anfang und Ende der Suche nach einem Wort zu klicken. Wenn Sie nicht mit dem Trackball klicken, merkt das Spiel nicht, dass Sie versuchen ein Wort zu markieren.</string>
+<string name="tutorial_message_tip6">Weil das Netz zufällig erzeugt wird, ist es möglich, dass Sie einige Wörter sehen, die nicht Teil der Wortliste sind. Diese Wörter können Sie nicht markieren.</string>
+<string name="tutorial_message_tip7">Wenn Sie den Modus "Ziehen" verwenden um Wörter zu markieren, achten Sie das Sie mit Ihrem Finger den Bildschirm nicht verlassen. Dies wird als Anheben des Fingers interpretiert.</string>
+<string name="tutorial_message_tip8">Bei der Auswahl eines Wortes durch "Ziehen" wird das Spiel nur gültige Buchstaben gelb markieren, d.h. solche, welche in einer waagrechten, senkrechten oder diagonalen Linie zum ersten ausgewählten Buchstaben sind. Wenn sich Ihr Finger nicht in einer solchen Linie befindet, folgt die gelbe Markierung Ihrem Finger nicht. Das Spiel erkennt das ausgewählte Wort aber unabhängig davon, wo Sie Ihren Finger anheben. </string>
+
+<string name="size">Gittergröße</string>
+<string name="no_high_scores">Keine Rangliste</string>
+
+<string name="input_type">Eingabetyp</string>
+<string name="drag">Ziehen</string>
+<string name="tap">Antippen</string>
+
+<string name="game_over">Möchten Sie ein neues Spiel starten?</string>
+
+<string name="options">Einstellungen</string>
+
+<string name="prefs_size_summary">Aktuelle Gittergröße: %replaceme </string>
+<string name="prefs_category_summary">Aktuelle Kategorie: %replaceme</string>
+<string name="prefs_touch_mode_summary">Aktueller Eingabetyp: %replaceme</string>
+
+<string name="CRASH_MSG">\"Es tut uns leid, aber WordSearch FREE ist abgestürzt. \n\nBitte helfen Sie uns, Wordsearch zu verbessern, indem Sie uns einen automatischen Fehlerbericht senden\"</string>
+<string name="CRASH_SENDING_WAIT">Sende, bitte warten...</string>
+<string name="PREVIEW">Vorschau</string>
+<string name="SEND">Senden</string>
+
+<string name="CRASH_DETAILS_HINT">Wie kann der Fehler reproduziert werden [optional] </string>
+<string name="INTRO"> Sie können die Gittergröße, Kategorie und den Bedienmodus ändern, indem Sie die \"Menü\"-Schaltfläche antippen und \"Einstellungen\" wählen. Sie können auch jetzt wählen, wie Sie Wörter markieren wollen.\n \"Antippen\" bedeutet, dass Sie auf der ersten und letzten Buchstaben tippen, aber nichts dazwischen.\n \"Ziehen\" bedeutet, dass Sie das ganze Wort markieren, ohne den Finger anzuheben.</string>
+
+<string name="SCORE_CONGRATULATIONS">Herzlichen Glückwunsch, Sie haben gewonnen!\nIhre Punktezahl ist %replaceme.</string>
+<string name="SCORE_LOCAL_HIGH">\nLokaler Rekord: #%replaceme</string>
+<string name="SCORE_GLOBAL_HIGH">\nAktueller globaler Rekord #%replaceme</string>
+<string name="SCORE_GLOBAL_PERCENT">\nAktueller globaler Rekord #%replaceme (Prozent)</string>
+<string name="SCORE_INITIALS">\nBitte geben Sie Ihren Namen/Initialen an</string>
+<string name="SCORE_GLOBAL_ERROR"> \nFehler Global Ranking MIA </string>
+
+<string name="SAVE">Speichern</string>
+<string name="SAVE_SUBMIT">Speichern &amp; Übermitteln</string>
+
+<string name="HIGH_SCORE_CALCULATING">Berechne Rangliste</string>
+<string name="GLOBAL_HIGH_SCORES">Global Rangliste</string>
+<string name="LOCAL_HIGH_SCORES">Lokale Rangliste</string>
+<string name="GLOBAL">Global</string>
+<string name="LOCAL">Lokal</string>
+<string name="LOADING">Lade</string>
+
+</resources>

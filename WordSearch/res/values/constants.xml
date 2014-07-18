@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- simple strings that are probably not nessasary to internationalize -->
+	<string name="prev">&lt;</string>
+	<string name="next">&gt;</string>
+
+	<!-- tutorial tip sets -->
+	<string-array name="tutorial_messages_drag">
+		<item>@string/tutorial_message_drag1</item>
+		<item>@string/tutorial_message_drag2</item>
+		<item>@string/tutorial_message_drag3</item>
+		<item>@string/tutorial_message_drag4</item>
+	</string-array>
+	<string-array name="tutorial_messages_trackball">
+		<item>@string/tutorial_message_trackball1</item>
+		<item>@string/tutorial_message_trackball2</item>
+		<item>@string/tutorial_message_trackball3</item>
+	</string-array>
+	<string-array name="tutorial_messages_tap">
+		<item>@string/tutorial_message_tap1</item>
+		<item>@string/tutorial_message_tap2</item>
+		<item>@string/tutorial_message_tap3</item>
+	</string-array>
+	<string-array name="tutorial_messages_tips">
+		<item>@string/tutorial_message_tip1</item>
+		<item>@string/tutorial_message_tip2</item>
+		<item>@string/tutorial_message_tip3</item>
+		<item>@string/tutorial_message_tip4</item>
+		<item>@string/tutorial_message_tip5</item>
+		<item>@string/tutorial_message_tip6</item>
+		<item>@string/tutorial_message_tip7</item>
+		<item>@string/tutorial_message_tip8</item>
+	</string-array>
+
+	<!-- input type preference choices -->
+	<string-array name="touch_mode_list_labels">
+		<item>@string/drag</item>
+		<item>@string/tap</item>
+	</string-array>
+	<string-array name="touch_mode_list_values">
+		<item>@string/DRAG</item>
+		<item>@string/TAP</item>
+	</string-array>
+	<string name="DRAG">DRAG</string>
+	<string name="TAP">TAP</string>
+	
+	<!-- size preference choices -->
+	<string-array name="sizes_list_labels">
+		<item>7x7</item>
+		<item>8x8</item>
+		<item>9x9</item>
+		<item>10x10</item>
+		<item>11x11</item>
+	</string-array>
+	<string-array name="sizes_list_values">
+		<item>7</item>
+		<item>8</item>
+		<item>9</item>
+		<item>10</item>
+		<item>11</item>
+	</string-array>
+	<string name="SIZE_DEFAULT">10</string>
+
+	<!-- category preference choices -->
+	<string-array name="categories_list_labels">
+		<item>@string/foods</item>
+		<item>@string/seasonal</item>
+		<item>@string/christmas</item>
+		<item>@string/places</item>
+		<item>@string/animals</item>
+		<item>@string/people</item>
+		<item>@string/adjectives</item>
+		<item>@string/german</item>
+		<item>@string/kids</item>
+		<item>@string/sat</item>
+		<item>@string/misc</item>
+		<item>@string/insane</item>
+		<item>@string/numbers</item>
+		<item>@string/custom</item>
+		<item>@string/random</item>
+	</string-array>
+	<string-array name="categories_list_values">
+		<item>@string/FOODS</item>
+		<item>@string/SEASONAL</item>
+		<item>@string/CHRISTMAS</item>
+		<item>@string/PLACES</item>
+		<item>@string/ANIMALS</item>
+		<item>@string/PEOPLE</item>
+		<item>@string/ADJECTIVES</item>
+		<item>@string/GERMAN</item>
+		<item>@string/KIDS</item>
+		<item>@string/SAT</item>
+		<item>@string/MISC</item>
+		<item>@string/INSANE</item>
+		<item>@string/NUMBERS</item>
+		<item>@string/CUSTOM</item>
+		<item>@string/RANDOM</item>
+	</string-array>
+
+	<!-- category preference choices -->
+	<string name="THEME_ORIGINAL">ORIGINAL</string>
+	<string name="THEME_NIGHTSKY">NIGHTSKY</string>
+	<string name="THEME_SKY">SKY</string>
+	<string name="THEME_PINK">PINK</string>
+	<string name="THEME_SEAGREEN">SEAGREEN</string>
+	<string-array name="THEME_VALUES">
+		<item>@string/THEME_ORIGINAL</item>
+		<item>@string/THEME_NIGHTSKY</item>
+		<item>@string/THEME_SKY</item>
+		<item>@string/THEME_PINK</item>
+		<item>@string/THEME_SEAGREEN</item>
+	</string-array>
+	<string-array name="THEME_LABELS">
+		<item>@string/ORIGINAL</item>
+		<item>@string/NIGHTSKY</item>
+		<item>@string/SKY</item>
+		<item>@string/PINK</item>
+		<item>@string/SEAGREEN</item>
+	</string-array>
+
+	<!-- DictionaryType Enum values -->
+	<string name="FOODS">FOODS</string>
+	<string name="SEASONAL">SEASONAL</string>
+	<string name="CHRISTMAS">CHRISTMAS</string>
+	<string name="PLACES">PLACES</string>
+	<string name="ANIMALS">ANIMALS</string>
+	<string name="PEOPLE">PEOPLE</string>
+	<string name="ADJECTIVES">ADJECTIVES</string>
+	<string name="GERMAN">GERMAN</string>
+	<string name="KIDS">KIDS</string>
+	<string name="SAT">SAT</string>
+	<string name="MISC">MISC</string>
+	<string name="NUMBERS">NUMBERS</string>
+	<string name="CUSTOM">CUSTOM</string>
+	<string name="INSANE">INSANE</string>
+	<string name="RANDOM">RANDOM</string>
+
+	<!-- stored preferences names -->
+	<string name="prefs_size">size4</string>
+	<string name="prefs_touch_mode">touch_mode1</string>
+	<string name="prefs_category">category1</string>
+	<string name="PREFS_THEME">theme</string>
+
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:id="@+id/menu_import" android:title="@string/IMPORT" android:alphabeticShortcut='i'/>
+  <item android:id="@+id/menu_export" android:title="@string/EXPORT" android:alphabeticShortcut='e'/>
+  <item android:id="@+id/menu_insert" android:title="@string/add_word" android:alphabeticShortcut='i'/>
+  <item android:id="@+id/menu_quit" android:title="@string/quit" android:alphabeticShortcut='q'/>
+</menu>
