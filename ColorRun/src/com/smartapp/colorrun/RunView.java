@@ -6,9 +6,12 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.GestureDetector.OnGestureListener;
 
-public class RunView extends View {
+public class RunView extends View implements OnGestureListener {
 
 	private final int mGap = Util.dip2px(getContext(), 0.5f);
 
@@ -57,7 +60,7 @@ public class RunView extends View {
 		for (int i = 0; i < mArray.length; i++) {
 			mArray[i] = Math.abs(Util.sRandom.nextInt()) % 4;
 		}
-		mHandler.postDelayed(mRolling, 50);
+		mHandler.postDelayed(mRolling, 1000);
 	}
 
 	@Override
@@ -98,5 +101,36 @@ public class RunView extends View {
 			canvas.drawRect(0, offset + mItemHeight - mGap, mScreenWidth,
 					offset + mItemHeight, mPaint);
 		}
+	}
+
+	@Override
+	public boolean onDown(MotionEvent e) {
+		return false;
+	}
+
+	@Override
+	public void onShowPress(MotionEvent e) {
+	}
+
+	@Override
+	public boolean onSingleTapUp(MotionEvent e) {
+		Log.e("", "");
+		return false;
+	}
+
+	@Override
+	public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX,
+			float distanceY) {
+		return false;
+	}
+
+	@Override
+	public void onLongPress(MotionEvent e) {
+	}
+
+	@Override
+	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
+			float velocityY) {
+		return false;
 	}
 }
