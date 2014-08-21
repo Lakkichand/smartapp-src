@@ -7,9 +7,10 @@ import android.graphics.Paint;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
+import android.view.GestureDetector;
+import android.view.GestureDetector.OnGestureListener;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.GestureDetector.OnGestureListener;
 
 public class RunView extends View implements OnGestureListener {
 
@@ -28,6 +29,11 @@ public class RunView extends View implements OnGestureListener {
 	private Paint mPaint = new Paint();
 
 	private int mScreenWidth;
+
+	/**
+	 * 手势滑动处理类
+	 */
+	private GestureDetector mDetector = new GestureDetector(getContext(), this);
 
 	private Runnable mRolling = new Runnable() {
 
@@ -104,7 +110,14 @@ public class RunView extends View implements OnGestureListener {
 	}
 
 	@Override
+	public boolean onTouchEvent(MotionEvent event) {
+		mDetector.onTouchEvent(event);
+		return super.onTouchEvent(event);
+	}
+
+	@Override
 	public boolean onDown(MotionEvent e) {
+		Log.e("", "onDown x = " + e.getX() + "  y = " + e.getY());
 		return false;
 	}
 
@@ -114,7 +127,6 @@ public class RunView extends View implements OnGestureListener {
 
 	@Override
 	public boolean onSingleTapUp(MotionEvent e) {
-		Log.e("", "");
 		return false;
 	}
 
