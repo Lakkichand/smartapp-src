@@ -1,0 +1,186 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    
+    <!-- 间距 统一样式 -->
+     <dimen name="activity_layout_marginLeftRight">7dip</dimen>
+     <dimen name="activity_layout_marginTop">20dip</dimen>
+     <dimen name="activity_layout_marginMinTop">10dip</dimen>
+     <dimen name="activity_layout_marginSmallTop">4dip</dimen>
+     <dimen name="activity_layout_marginMiddleTop">8dip</dimen>
+     <dimen name="activity_layout_marginBottom">10dip</dimen>
+     <dimen name="activity_layout_tarTitle_height">40dip</dimen>
+     
+      <dimen name="frame_largeHegiht">110dip</dimen>
+      <dimen name="frame_editHegiht">40dip</dimen>
+      <dimen name="frame_editPadingLeft">10dip</dimen>
+      <dimen name="frame_leftImageviewLeft">15dip</dimen>
+      <dimen name="frame_rightImageviewRight">15dip</dimen>
+      <dimen name="button_frame_top">20dip</dimen>
+      <dimen name="button_height">35dip</dimen>
+      <dimen name="button_dialog_height">30dip</dimen>
+     
+      
+      <dimen name="personal_photoSize">90dip</dimen>
+      <dimen name="personal_photoMiddleSize">60dip</dimen>
+      <dimen name="personal_photoSmallSize">26dip</dimen>
+      <dimen name="game_photoSize">55dip</dimen>
+      <dimen name="game_iconSize">55dip</dimen>
+      <dimen name="game_MinPhotoSize">30dip</dimen>
+     
+       
+      <dimen name="notice">15dip</dimen>
+      <dimen name="notice_time">18dip</dimen>
+
+     
+     <!-- 字体大小 统一样式 -->
+     <dimen name="button_textSize">18sp</dimen>
+     <dimen name="frame_editSize">15sp</dimen>
+     <dimen name="frame_titleLargeSize">18sp</dimen>
+     <dimen name="frame_titleSmallSize">15sp</dimen>
+     <dimen name="textSmallSize">15sp</dimen>
+     <dimen name="moretextSize">13sp</dimen>
+     <dimen name="top_textSize">18sp</dimen>
+     <dimen name="top_MaxtextSize">20sp</dimen>
+     <dimen name="textMinSize">10sp</dimen>
+     <dimen name="gameinfoText">13sp</dimen>
+     <dimen name="textSize">12sp</dimen>
+    
+    
+    <!-- 专题 统一样式 -->
+    <dimen name="subject_textSize">20sp</dimen>
+    <dimen name="subject_textSize_appsize">13sp</dimen>
+    <dimen name="subject_textview">90dip</dimen>
+    <dimen name="subject_button_width">120dip</dimen>
+    <dimen name="subject_button_height">38dip</dimen>
+    <dimen name="subject_button_textSize">18sp</dimen>
+    
+    <!-- 游戏分类统一样式 -->
+    <dimen name="categories_textSize">17sp</dimen>
+    
+    
+    <!-- 极速模式统一样式 -->
+    <dimen name="speed_one">10dip</dimen>
+    <dimen name="speed_two">11dip</dimen>
+    <dimen name="speed_view">10dip</dimen>
+    <dimen name="speed_button_weight">70dip</dimen>
+    <dimen name="speed_text_size_down">13sp</dimen>
+    
+    
+    <!-- 游戏排行榜统一样式 -->
+    <dimen name="ranking_item">55dip</dimen>
+    
+     
+     <dimen name="feature_textSize">16dip</dimen>          
+     <dimen name="rank_width">19dip</dimen>
+     
+    
+    
+    
+    
+    
+
+
+
+ 
+    <!-- 框统一样式 -->
+    <dimen name="frame_title_size">18sp</dimen>
+    <dimen name="frame_edit_size">18sp</dimen>
+    <dimen name="frame_edit_left">5dip</dimen>
+    <dimen name="mydialog_top">15dip</dimen>
+    <!-- personal-->
+    <dimen name="personal_top">10dip</dimen>
+    <dimen name="personal_login_left_right">30dip</dimen>
+    
+    <!-- login -->
+
+    <dimen name="login_height">35dip</dimen>
+    <dimen name="login_user_left">10dip</dimen>
+    <dimen name="login_check_top">15dip</dimen>
+    <dimen name="login_but_top">25dip</dimen>
+    <dimen name="login_check_size">15sp</dimen>
+    <dimen name="login_pwd_size">18sp</dimen>
+    <!-- photo -->
+    <dimen name="photo_image">95dip</dimen>
+    <dimen name="comment_photo">35dip</dimen>
+    <dimen name="photo_image_text_size">18sp</dimen>
+    <dimen name="photo_image_mar">5dip</dimen>
+    <dimen name="photo_frame_text">10dip</dimen>
+    <dimen name="photo_frame_iamge">35dip</dimen>
+    <!-- 标题栏 -->
+    <dimen name="top_text_size">16sp</dimen>
+
+    <!-- 间距 -->
+    <dimen name="login_margin">30dip</dimen>
+    <dimen name="login_margin_small">20dip</dimen>
+    <dimen name="edit_lfet">5dip</dimen>
+    <dimen name="linear_top">10dip</dimen>
+    <dimen name="linear_top_f">-10dip</dimen>
+    <dimen name="view_size">5sp</dimen>
+
+    <!-- main -->
+    <dimen name="main_sear_text_size">14sp</dimen>
+    <dimen name="main_frame_bottom">-10dip</dimen>
+    <dimen name="main_more_view_mar">5dip</dimen>
+    <dimen name="main_top_hegiht">50dip</dimen>
+
+    <!-- main_homeView -->
+    <dimen name="main_title_size">18sp</dimen>
+    <dimen name="main_title_mar_left">6dip</dimen>
+    <dimen name="main_title_more_size">16sp</dimen>
+
+    <!-- main_newView -->
+    <dimen name="main_view_flow_title_size">40sp</dimen>
+    <dimen name="main_view_flow_line_size">5sp</dimen>
+    <dimen name="main_view_title_size">16sp</dimen>
+    <dimen name="main_view_size">13sp</dimen>
+    <dimen name="main_view_mar">6dip</dimen>
+    <dimen name="main_view_mar_left">5dip</dimen>
+    <dimen name="main_view_width">100dip</dimen>
+    <dimen name="main_view_image">65dip</dimen>
+    <dimen name="main_view_mar_size_m">1dip</dimen>
+    <dimen name="main_view_mar_size_h">2dip</dimen>
+    <dimen name="main_view_line_size_h">70dip</dimen>
+
+    <!-- main__gameinfo -->
+    <dimen name="main_game_info_mar">5dip</dimen>
+    <dimen name="main_game_info_mar_top">5dip</dimen>
+    <dimen name="main_game_info_jr_more_size">15sp</dimen>
+    
+    
+     <!-- setting -->
+    <dimen name="setting_title_size">15sp</dimen>
+    <dimen name="left_main_textSize">13dp</dimen>
+
+    <!-- 字体大少 -->
+    <dimen name="register_size">9sp</dimen>
+    <dimen name="texts_size">14sp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="bottom_tab_font_size">11.0sp</dimen>
+    <dimen name="bottom_tab_padding_up">5.0dip</dimen>
+    <dimen name="bottom_tab_padding_drawable">2.0dip</dimen>
+    <dimen name="switch_logo_bottom_padding">30.0sp</dimen>
+    <dimen name="widget_height">100.0dip</dimen>
+    <dimen name="sta_height">48.0dip</dimen>
+    <dimen name="large_padding_length">20.0dip</dimen>
+    <dimen name="widget_write_margin_top">19.0dip</dimen>
+    <dimen name="widget_write_margin_left">10.0dip</dimen>
+    <dimen name="widget_content_margin_top">20.0dip</dimen>
+    <dimen name="widget_content_margin_left">10.0dip</dimen>
+    <dimen name="widget_logo_size">35.0dip</dimen>
+    <dimen name="title_height">74.0dip</dimen>
+    <dimen name="new_blog_size">70.0dip</dimen>
+    <dimen name="emotion_item_view_height">13.299988dip</dimen>
+    <dimen name="splash_test_top_margin_top">20.0dip</dimen>
+    <dimen name="splash_test_center_margin_right">0.0dip</dimen>
+    <dimen name="title_text_size">20.0sp</dimen>
+    <dimen name="normal_padding_length">10.0dip</dimen>
+    <dimen name="no_result_padding_length">50.0dip</dimen>
+
+    <!-- dynamic -->
+    <dimen name="dynamic_btn_font_size">9.0sp</dimen>
+    <!-- 安装包管理 -->
+    <dimen name="apk_btn_size">16.0dip</dimen>
+
+</resources>

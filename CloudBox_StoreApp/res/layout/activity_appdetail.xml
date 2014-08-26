@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/v2_navigation_bj_on"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/detail_back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/back_press_selector" />
+
+            <TextView
+                android:id="@+id/detail_app_name"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:paddingRight="48dip"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/tab_detail_radiobt_describe"
+                style="@style/detail_classify_title_style"
+                android:layout_width="wrap_content"
+                android:layout_height="35dip"
+                android:layout_weight="1"
+                android:background="@drawable/detail_classify_rbtn_selector"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="应用描述" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="35dip"
+                android:background="@drawable/line"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/tab_detail_radiobt_evaluate"
+                style="@style/detail_classify_title_style"
+                android:layout_width="wrap_content"
+                android:layout_height="35dip"
+                android:layout_weight="1"
+                android:background="@drawable/detail_classify_rbtn_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="用户评价" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="#f2f2f2" />
+
+        <com.zhidian.wifibox.view.MyViewPager
+            android:id="@+id/detail_vPager"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1.0"
+            android:flipInterval="30"
+            android:persistentDrawingCache="animation" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dip"
+            android:background="#e9e9e9" />
+
+        <LinearLayout
+            android:id="@+id/detail_show_dowbtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/search_bj"
+            android:gravity="center"
+            android:visibility="gone" >
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dip" >
+
+                <RelativeLayout
+                    android:id="@+id/detail_app_linear"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <com.zhidian.wifibox.view.TextProgressBar
+                        android:id="@+id/detail_app_down_progress"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="38dip"
+                        android:layout_centerVertical="true"
+                        android:progressDrawable="@drawable/textprogressbar_info_normal" >
+                    </com.zhidian.wifibox.view.TextProgressBar>
+
+                    <LinearLayout
+                        android:id="@+id/detail_show"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="45dip"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/detail_sign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/detail_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3.0dip"
+                            android:paddingTop="1.0dip"
+                            android:text="@string/btn_pause"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/detail_download_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dip"
+                    android:background="@drawable/btn_copy_selector"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/detail_btn_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/v2_btn_download_icon" />
+
+                    <TextView
+                        android:id="@+id/detail_btn_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2.0dip"
+                        android:text="@string/download"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

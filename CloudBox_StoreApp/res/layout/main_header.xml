@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@drawable/v2_navigation_bj_on" >
+
+    <RelativeLayout
+        android:layout_width="45dp"
+        android:layout_height="45dp" >
+
+        <ImageButton
+            android:id="@+id/mapSearchBtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/btn_index_left_selector" />
+
+        <ImageView
+            android:id="@+id/index_top_point"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="2.0dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/v2_red_point"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/index"
+        android:textColor="@color/white"
+        android:textSize="23dp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/search_btn"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dip"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/btn_speed_selector" />
+
+</RelativeLayout>

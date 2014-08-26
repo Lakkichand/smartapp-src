@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhidian.wifibox.view.SearchView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <include layout="@layout/header_main_drawer" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:layout_marginTop="17dip" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="34dip"
+                android:layout_toLeftOf="@+id/searchBtn"
+                android:background="@drawable/feedback_kuang"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/searchEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dip"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="搜您想要的应用"
+                    android:textColorHint="#B5B5B5"
+                    android:imeOptions="actionSearch"
+                    android:paddingLeft="3.0dip"
+                    android:singleLine="true"
+                    android:textColor="@color/left_menu_text2"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/deleteBtn"
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:layout_marginRight="5dip"
+                    android:visibility="gone"
+                    android:layout_weight="0"
+                    android:background="@drawable/delete_icon" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/searchBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="34dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="-1.0dip"
+                android:background="@drawable/btn_green_selector"
+                android:text="@string/search"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#f3f3f3" />
+
+            <GridView
+                android:id="@+id/appsNameGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:listSelector="#E0E0E0"
+                android:numColumns="3" >
+            </GridView>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#f3f3f3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/no_found_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/nothing_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="没有符合该关键词的搜索内容"
+                android:textColor="#88898A"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/loading_pb"
+            style="@style/progressBar_loading"
+            android:layout_width="97dp"
+            android:layout_height="97dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="120dp"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/keyword_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:layout_marginTop="3.0dip"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/personal_login_line_heng"
+            android:listSelector="#00000000"
+            android:scrollbars="none"
+            android:visibility="gone" />
+
+        <com.zhidian.wifibox.pulldownlistview.PullDownRefreshView
+            android:id="@+id/apps_list_refreshview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:cacheColorHint="#00000000"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0dp"
+                android:listSelector="#00000000"
+                android:scrollbars="none"
+                android:visibility="gone" />
+        </com.zhidian.wifibox.pulldownlistview.PullDownRefreshView>
+    </LinearLayout>
+
+</com.zhidian.wifibox.view.SearchView>
