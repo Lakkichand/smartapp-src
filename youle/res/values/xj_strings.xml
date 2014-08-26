@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="copy_text">复制的字</string>
+    <string name="dialog_check_login">登陆</string>
+    <string name="dialog_check_canle">取消</string>
+    <string name="pcenter_middle_mygame">我的游戏</string>
+    <string name="pcenter_middle_dymiac">我的动态</string>
+    <string name="pcenter_sign_falg">你还末登陆.</string>
+
+    <string name="pcenter_middle_message">留言板</string>
+    <string name="pcenter_middle_visitors">我的访客</string>
+    <string name="pcenter_mygame_option_gzone">专区</string>
+    <string name="pcenter_mygame_option_packs">礼包</string>
+    <string name="pcenter_mygame_option_radius">攻略</string>
+    <string name="pcenter_mygame_option_forum">论坛</string>
+    <string name="pcenter_mygame_option_uninstall">卸载</string>
+    <string name="pcenter_login_falg">登录</string>
+    <string name="pcenter_login_username_hiht">请输入账号</string>
+    <string name="pcenter_login_pwd_hiht">请输入密码</string>
+    <string name="pcenter_login_bootom_text">你没有游戏账号?</string>
+    <string name="pcenter_login_bootom_but">免费注册</string>
+    <string name="pcenter_login_falg_dec">登录后享受更多的特权</string>
+    <string name="pcenter_register_falg">注册</string>
+    <string name="pcenter_register_falg_dec">仅需一步快速注册</string>
+    <string name="pcenter_qd">签到  </string>
+    <string name="register_check_text">我已阅读并同意</string>
+    <string name="register_check_xieyi">用户协议</string>
+    <string name="register">注册</string>
+    <string name="register_login_text">已有游乐账号</string>
+    <string name="register_login">马上登录</string>
+    <string name="pcenter_asgreement_but">我已阅读并同意以上协议</string>
+    <string name="userinfo_photo_modfy">修改</string>
+    <string name="userinfo_photo_modfy_but">保存</string>
+    <string name="userinfo_photo_modfy_toast">不能是空值</string>
+    <string name="userinfo_photo_modfy_equels">修改的内容没有改变</string>
+    <string name="userinfo_photo_modfy_sucess">修改成功</string>
+    <string name="userinfo_photo_modfy_fail">修改失败</string>
+    <string name="userinfo_photo_modfy_but_pz">拍照</string>
+    <string name="userinfo_photo_modfy_but_bd">从本地选择</string>
+
+    <string name="pcenter_asgreement_text"><Data><![CDATA[ <font color="#000000"><b>1. 特别提示</b><br/></font> ]]> </Data>
+        ①广州指点网络科技有限公司(以下简称“指点”)同意按照本协议的条款提供互联网相关服务，为获得游乐GAME FUN平台(以下简称“游乐平台)提供的服务，服务使用人（以下称"用户"）应当同意本协议的全部条款并按照页面上的提示完成全部的注册程序。
+        用户在进行注册程序过程中选择"我已阅读并同意遵守"选项即表示用户完全接受本协议项下的全部条款。
+        <Data><![CDATA[ <br/><br/> ]]> </Data>
+<Data><![CDATA[ <font color="#000000"><b>2. 知识产权</b><br/></font> ]]> </Data>
+
+
+        ① 任何由指点研发的软件之著作权、商标权等一切知识产权均由指点公司合法享有，未经知识产权人书面授权，任何人不得擅自使用、修改、删减或对软件进行拆解、反向工程、反向编译或反汇编等。否则自行承担由此引发的一切法律后果。\n
+        <Data><![CDATA[ <br/> ]]> </Data>
+      ②游乐平台上所有内容及资料，其著作权、专利权、所有权或其他权利，均为指点或其权利人所有，除事先经指点或其权利之人合法授权外，用户不得擅自拷贝、重制、传播、改作、编辑或以其他任何形式、或基于任何目的的使用，违者应自负相关法律责任。\n
+        <Data><![CDATA[ <br/> ]]> </Data>
+       ③ 未经指点书面同意授权，任何第三方不得以盈利性或非盈利性的目的自行实施、利用、转让或许可任何三方实施、利用、转让上述知识产权，指点有权在不事先通知的情况下单方面终止第三方的使用资格同时保留追究责任的权利。\n
+        <Data><![CDATA[ <br/><br/> ]]> </Data>
+<Data><![CDATA[ <font color="#000000"><b>3. 服务内容</b><br/></font> ]]> </Data>
+
+    </string>
+
+</resources>

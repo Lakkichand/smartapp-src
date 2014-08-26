@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				xmlns:tools="http://schemas.android.com/tools"
+				android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+            android:id="@+id/titleLayout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    </LinearLayout>
+    <TabHost
+            android:id="@+id/tabHost"
+            android:layout_below="@id/titleLayout"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:id="@+id/tablayout"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/app_button_bg"
+                    android:weightSum="5"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/classfyLayout"
+                        android:layout_height="wrap_content">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:src="@drawable/classfy_icon"
+                            android:layout_height="wrap_content"/>
+
+                    <TextView
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            style="@style/home_tab_text"
+                            android:text="@string/classify"
+                            android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/rankLayout"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:src="@drawable/rank_icon"
+                            android:layout_height="wrap_content"/>
+
+                    <TextView
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            style="@style/home_tab_text"
+                            android:text="@string/ranking"
+                            android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:visibility="invisible"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:src="@drawable/classfy_icon"
+                            android:layout_height="wrap_content"/>
+
+                    <TextView
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            style="@style/home_tab_text"
+                            android:text="@string/home_page"
+                            android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/countryLayout"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:src="@drawable/cmmunity_icon"
+                            android:layout_height="wrap_content"/>
+
+                    <TextView
+                            android:layout_weight="1"
+                            android:layout_width="wrap_content"
+                            android:text="@string/country"
+                            style="@style/home_tab_text"
+                            android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/personLayout"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:layout_height="wrap_content">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:src="@drawable/persion_icon"
+                            android:layout_height="wrap_content"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/person"
+                            style="@style/home_tab_text"
+                            android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+            <FrameLayout
+                    android:layout_above="@id/tablayout"
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <fragment
+                        android:id="@+id/classfy"
+                        android:name="com.youle.gamebox.ui.fragment.ClassfyFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+						tools:layout="@layout/fragment_cassfy"></fragment>
+
+                <fragment
+                        android:id="@+id/rank"
+                        android:name="com.youle.gamebox.ui.fragment.RankFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"></fragment>
+
+                <fragment
+                        android:id="@+id/home"
+                        android:name="com.youle.gamebox.ui.fragment.IndexHomeFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"></fragment>
+
+                <fragment
+                        android:id="@+id/pCenter"
+                        android:name="com.youle.gamebox.ui.fragment.PersonCenterFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"></fragment>
+            </FrameLayout>
+
+        </RelativeLayout>
+
+        <TabWidget
+                android:visibility="gone"
+                android:id="@android:id/tabs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TabWidget>
+    </TabHost>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/homeLayout"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/home_icon"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                style="@style/home_tab_text"
+                android:gravity="bottom|center_horizontal"
+                android:layout_gravity="bottom"
+                android:text="@string/home_page"
+                android:layout_height="match_parent"/>
+    </LinearLayout>
+</RelativeLayout>

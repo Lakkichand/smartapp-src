@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.youle.gamebox.ui.view.SoftInputView xmlns:android="http://schemas.android.com/apk/res/android"
+                                         android:orientation="vertical"
+                                         android:id="@+id/softView"
+                                         android:layout_width="match_parent"
+                                         android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:id="@+id/messageborad_layout"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/app_frampadding"
+            android:paddingRight="@dimen/app_frampadding"
+            android:paddingBottom="8dp"
+            android:layout_height="48dp">
+
+
+        <EditText
+                android:layout_centerVertical="true"
+                android:id="@+id/message_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:focusable="true"
+                android:background="@drawable/rector_lingt_shap"
+                android:layout_toLeftOf="@+id/submit_button"/>
+
+        <Button
+                android:id="@+id/submit_button"
+                android:layout_width="64dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@color/green"
+                android:textColor="@color/white"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:text="发表"/>
+
+    </RelativeLayout>
+</com.youle.gamebox.ui.view.SoftInputView>

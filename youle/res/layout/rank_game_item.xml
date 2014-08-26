@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/app_frampadding"
+                android:paddingRight="@dimen/app_frampadding"
+                android:layout_width="match_parent"
+                android:paddingTop="5dp"
+                android:layout_height="match_parent">
+
+    <TextView
+            android:id="@+id/number"
+            android:background="@drawable/rank_grey_icon"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_height="wrap_content"/>
+
+
+    <RelativeLayout
+            android:id="@+id/gameIconLayout"
+            android:layout_toRightOf="@id/number"
+            android:layout_marginLeft="5dp"
+            android:layout_width="@dimen/game_icon_layout"
+            android:layout_height="@dimen/game_icon_layout">
+
+        <ImageView
+                android:id="@+id/gameIcon"
+                android:layout_width="@dimen/game_icon"
+                android:scaleType="centerCrop"
+                android:layout_centerInParent="true"
+                android:layout_height="@dimen/game_icon"/>
+
+        <ImageView
+                android:id="@+id/gift"
+                android:src="@drawable/gift_icon"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+    <com.youle.gamebox.ui.view.RoundProgressView
+            style="?android:progressBarStyleHorizontal"
+            android:max="100"
+            android:id="@+id/roundProgress"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    <ImageView
+            android:layout_width="@dimen/down_icon_w"
+            android:src="@drawable/down_icon"
+            android:layout_below="@id/roundProgress"
+            android:scaleType="centerCrop"
+            android:layout_toLeftOf="@id/downloadNumber"
+            android:layout_height="@dimen/down_icon_h"/>
+
+    <TextView
+            android:id="@+id/downloadNumber"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/roundProgress"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="2dp"
+            android:textColor="@color/down_load_number"
+            android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+            android:layout_toRightOf="@id/gameIconLayout"
+            android:layout_toLeftOf="@id/proLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/gameName"
+                style="@style/gameName"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <LinearLayout
+                android:id="@+id/gamedesLayout"
+                android:layout_alignLeft="@id/gameName"
+                android:gravity="center_vertical"
+                android:layout_below="@id/gameName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/gameSize"
+                    style="@style/gameNameType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:id="@+id/gameType"
+                    style="@style/gameNameType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <RatingBar
+                android:id="@+id/scro"
+                android:layout_below="@id/gamedesLayout"
+                style="@style/smallRatingBar"
+                android:layout_alignLeft="@id/gameName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+    <ImageView
+            android:src="@color/line_gray"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5dp"
+            android:layout_height="1px"/>
+</RelativeLayout>

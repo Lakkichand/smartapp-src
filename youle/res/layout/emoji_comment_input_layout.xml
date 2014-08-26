@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    style="@style/app_edge"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:paddingBottom="5.0dip" >
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/rector_lingt_shap"
+                android:layout_height="match_parent">
+
+            <EditText
+                    android:id="@+id/et_message_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:hint="我来说两句..."
+                    android:textSize="14sp"
+                    android:imeOptions="actionSend"
+                    android:background="@null"
+                    android:maxLength="140"
+                    android:layout_weight="1"
+                    android:layout_marginRight="4.0dip"
+                    android:layout_marginLeft="4.0dip"
+                    android:visibility="visible"/>
+
+            <ImageView
+                    android:id="@+id/btn_emoji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="right|center"
+                    android:background="@drawable/icon_icon"
+                    android:textColor="@color/white"
+                    />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btn_send"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:background="@color/green"
+            android:text="发送"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            />
+    </LinearLayout>
+
+    <com.emoji.EmojiView
+        android:id="@+id/emoji_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+</LinearLayout>

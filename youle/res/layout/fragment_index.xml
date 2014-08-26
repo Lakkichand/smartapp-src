@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res/com.youle.gamebox.ui"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+<com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/hotGame"
+        android:layout_width="match_parent"
+        app:ptrHeaderBackground="@color/white"
+        app:ptrHeaderTextColor="@color/home_text_gray"
+        app:ptrDrawableStart="@drawable/refresh_loading"
+        app:ptrRefreshableViewBackground="@color/white"
+        app:ptrAnimationStyle="flip"
+        style="@style/list_view_style"
+        android:layout_height="match_parent"></com.handmark.pulltorefresh.library.PullToRefreshListView>>
+</LinearLayout>

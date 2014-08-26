@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+    android:paddingTop="@dimen/app_frampadding"
+    android:paddingLeft="@dimen/app_frampadding"
+    android:paddingRight="@dimen/app_frampadding"
+>
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+
+		<ImageView
+			android:src="@drawable/dot"
+			android:id="@+id/dot_placer"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"/>
+
+		<TextView
+			android:id="@+id/gonglueTitle"
+            android:textColor="@color/black"
+			android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+			android:text="dddkdkk"
+			android:layout_toRightOf="@id/dot_placer"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/gamelistitem_marging"
+			/>
+	</RelativeLayout>
+
+	<TextView
+		android:maxLines="2"
+		android:id="@+id/gonglueContent"
+		android:layout_width="wrap_content"
+		android:text="dddkdkk"
+		android:ellipsize="end"
+        android:textColor="#676767"
+		android:layout_marginLeft="16dp"
+		android:layout_height="wrap_content"/>
+
+	<TextView
+		android:id="@+id/data"
+		android:layout_width="match_parent"
+		android:gravity="right"
+		android:text="dddkdkk"
+        android:textColor="#aaaaaa"
+		android:layout_below="@id/gonglueContent"
+		android:layout_height="wrap_content"/>
+    <ImageView
+            android:src="@color/line_gray"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            style="@style/app_edge"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5dp"
+            android:layout_height="1px"/>
+</LinearLayout>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="8dp"
+            >
+
+        <com.youle.gamebox.ui.view.RoundImageView
+                android:id="@+id/dymaiclist_photo"
+                android:layout_width="@dimen/user_avatar"
+                android:layout_height="@dimen/user_avatar"
+                android:scaleType="centerCrop"
+                imagecontrol:border_inside_color="@color/dymaic_amount_bottom_land_line_color"
+                imagecontrol:border_thickness="2dp"
+                android:src="@drawable/pc_user_photo">
+        </com.youle.gamebox.ui.view.RoundImageView>
+
+        <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/dymaic_amount_bottom_land_line_color">
+        </View>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="8dp">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dymaiclist_nickName"
+                        android:textSize="18sp"
+                        android:text="eeeee"
+                        android:textColor="@color/dymaic_niackname_color"
+                        />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dymaiclist_publicTime"
+                        android:text="5分钟前"
+                        android:textSize="12sp"
+                        android:layout_marginTop="2dp"
+                        android:textColor="@color/dymaic_time_color"
+
+                        />
+            </LinearLayout>
+            <TextView
+                    android:id="@+id/delete"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="60dp"
+                    android:gravity="center"
+                    android:text="@string/delete"
+                    android:textColor="@color/text_blue"
+                    android:layout_height="30dp"/>
+        </RelativeLayout>
+
+
+        <com.youle.gamebox.ui.view.EmojiShowTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dymaiclist_content"
+                android:textSize="15sp"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/dymaic_connent_color"
+                />
+
+        <RelativeLayout
+                android:id="@+id/voiceLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dymaiclist_voiceSeconds"
+                    android:gravity="right|center_vertical"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="4dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:textSize="15sp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/country_dymaic_voice_dymiac_bg"
+                    android:textColor="@color/dymaic_voice_text_color"
+                    />
+
+            <com.youle.gamebox.ui.view.PlayVoiceBig
+                    android:id="@+id/playing_image"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/dymaiclist_imageUrl"
+                />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/country_shade_color"
+                android:layout_marginTop="5dp"
+                android:id="@+id/dymaiclist_game_linear">
+
+            <ImageView
+                    android:layout_width="@dimen/game_icon"
+                    android:layout_height="@dimen/game_icon"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/dymaiclist_gameIcon"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dymaiclist_gameContent"
+                    android:lines="2"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/dymaic_game_connent_color"
+                    android:text="好玩到极点的游戏，哈哈哈顶顶顶顶顶还等会等会等会等会等会当皇帝"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    />
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:id="@+id/dymaiclist_amount_linear"
+                >
+
+            <TextView
+                    style="@style/comunity_co_vo_par"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:id="@+id/dymaiclist_amount_laund"
+                    android:drawableLeft="@drawable/country_dymaic_land_icon"
+                    />
+
+            <TextView
+                    style="@style/comunity_co_vo_par"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/dymaiclist_amount_voice"
+                    android:drawableLeft="@drawable/country_dymaic_voice_icon"
+                    />
+
+            <TextView
+                    style="@style/comunity_co_vo_par"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/dymaiclist_amount_content"
+                    android:drawableLeft="@drawable/country_dymaic_comment_icon"
+                    android:layout_alignParentRight="true"
+                    />
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:id="@+id/dymaiclist_amount_line"
+                    android:layout_below="@+id/dymaiclist_amount_laund"
+                    android:visibility="gone"
+                    android:background="@color/dymaic_amount_line_color"></View>
+
+        </LinearLayout>
+
+        <ImageView
+                android:orientation="vertical"
+                android:src="@color/line_gray"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="2px"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="2dp"
+                android:id="@+id/dymaiclist_amount_laundLinear"
+                >
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/dymaiclist_amount_laundText"
+                    android:text="yous、sdsd、等23人点赞"
+                    android:textColor="@color/dymaic_amount_bottom_land_text_color"
+                    android:textSize="13sp"
+                    />
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:background="@color/dymaic_amount_bottom_land_line_color"></View>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/dymaiclist_comments_linear">
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/dymaiclist_comments_Botlinear"
+                >
+
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dymaiclist_comments_readAll"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="2dp"
+                    android:visibility="gone"
+                    android:textColor="@color/dymaic_comment_nickname_color"
+                    android:text="查看所有评论>>"
+                    />
+
+        </LinearLayout>
+
+        <ImageView
+                android:id="@+id/pair_line"
+                android:src="@color/line_gray"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+    </LinearLayout>
+
+</LinearLayout>

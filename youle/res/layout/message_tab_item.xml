@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"    
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/all_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"  
+        android:background="@drawable/title_selector"     
+        android:orientation="vertical"
+        android:paddingBottom="10dp" >
+
+        <ImageView
+            android:id="@+id/tabIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/message_sys_icon" />
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-10dp"
+            android:layout_toRightOf="@+id/tabIcon"
+            android:background="@drawable/title_num_text_bg"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tabTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tabIcon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3.0dp"
+            android:textStyle="bold"
+            android:text="系统"
+            android:textColor="@color/tag_indicator_theme" />
+    </RelativeLayout>
+
+</LinearLayout>

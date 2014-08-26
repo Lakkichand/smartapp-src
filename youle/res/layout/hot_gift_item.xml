@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/game_detail_provider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageView
+            android:id="@+id/hotGifitIcon"
+            android:layout_width="120dp"
+            android:scaleType="centerCrop"
+            android:layout_height="75dp"/>
+
+    <TextView
+            android:id="@+id/giftName"
+            android:layout_toRightOf="@id/hotGifitIcon"
+            style="@style/gameName"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_marginLeft="@dimen/app_frampadding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <LinearLayout
+            android:layout_alignLeft="@id/giftName"
+            android:layout_below="@id/giftName"
+            android:orientation="horizontal"
+            android:gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/app_frampadding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+                android:id="@+id/total"
+                android:textSize="13.5sp"
+                android:textColor="@color/left_menu_gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/haveAccount"
+                android:layout_toRightOf="@id/total"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/giftName"
+                android:textSize="13.5sp"
+                android:textColor="@color/left_menu_gray"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/getGift"
+            android:text="@string/lingqu"
+            android:layout_alignParentRight="true"
+            style="@style/goto_item_style"
+            android:layout_alignBottom="@+id/hotGifitIcon"
+            />
+    <ImageView
+            android:id="@+id/line"
+            android:src="@color/line_gray"
+            android:layout_below="@id/hotGifitIcon"
+            android:layout_marginTop="@dimen/game_detail_provider"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+</RelativeLayout>

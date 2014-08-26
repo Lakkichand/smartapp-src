@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res/com.youle.gamebox.ui"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+        <RelativeLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <android.support.v4.view.ViewPager
+                    android:id="@+id/pptViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:background="@drawable/home_text_bg"
+                android:layout_height="30dp">
+
+            <LinearLayout
+                    android:id="@+id/imageIndicator"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="match_parent">
+
+            </LinearLayout>
+            <TextView
+                    android:id="@+id/gameName"
+                    android:layout_toLeftOf="@id/imageIndicator"
+                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"
+                    android:textSize="16sp"
+                    style="@style/app_edge"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="4"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:id="@+id/news"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:src="@drawable/home_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:text="@string/news"
+                    style="@style/home_icon_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/gift"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:src="@drawable/home_gift"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:text="@string/gift"
+                    style="@style/home_icon_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/strategy"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:src="@drawable/home_stagry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:text="@string/strategy"
+                    android:layout_width="wrap_content"
+                    style="@style/home_icon_text"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/theme"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:src="@drawable/home_theme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:text="@string/theme"
+                    style="@style/home_icon_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+    <!--新闻头条-->
+    <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:layout_width="@dimen/home_flg_weight"
+                android:src="@color/line_yello"
+                android:layout_height="match_parent"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                style="@style/home_title"
+                android:text="@string/last_news"
+                android:layout_height="wrap_content"/>
+        <ImageView
+                android:src="@color/line_gray_home"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/newsLayout"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/home_blog_margin"
+            android:layout_marginBottom="@dimen/home_blog_margin"
+            android:layout_marginLeft="@dimen/app_frampadding"
+            android:layout_marginRight="@dimen/app_frampadding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></LinearLayout>
+    <!--每日推荐-->
+    <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:layout_width="@dimen/home_flg_weight"
+                android:src="@color/line_yello"
+                android:layout_height="match_parent"/>
+        <TextView
+                android:text="@string/week_choice"
+                style="@style/home_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <ImageView
+                android:src="@color/line_gray_home"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/dayRecomend"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/app_frampadding"
+            android:layout_marginTop="@dimen/home_blog_margin"
+            android:layout_marginBottom="@dimen/home_blog_margin"
+            android:layout_marginRight="@dimen/app_frampadding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></LinearLayout>
+
+    <!--最新专题-->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:layout_width="@dimen/home_flg_weight"
+                android:src="@color/line_yello"
+                android:layout_height="match_parent"/>
+        <TextView
+                android:text="@string/last_them"
+                style="@style/home_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <ImageView
+                android:src="@color/line_gray_home"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/themeLayout"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/home_blog_margin"
+            android:layout_marginLeft="@dimen/app_frampadding"
+            android:layout_marginBottom="@dimen/home_blog_margin"
+            android:layout_marginRight="@dimen/app_frampadding"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/home_blog_margin"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:layout_width="@dimen/home_flg_weight"
+                android:src="@color/line_yello"
+                android:layout_height="match_parent"/>
+        <TextView
+                android:text="@string/hot_game"
+                style="@style/home_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <ImageView
+                android:src="@color/line_gray_home"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+    </LinearLayout>
+</LinearLayout>
