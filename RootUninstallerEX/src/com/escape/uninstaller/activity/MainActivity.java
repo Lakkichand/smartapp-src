@@ -1,15 +1,20 @@
 package com.escape.uninstaller.activity;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+import com.escape.uninstaller.ui.ActionBarFrame;
 import com.escape.uninstaller.util.DrawUtil;
 import com.slidingmenu.lib.SlidingMenu;
 import com.slidingmenu.lib.app.SlidingFragmentActivity;
 import com.smartapp.rootuninstaller.R;
 
 public class MainActivity extends SlidingFragmentActivity {
+
+	private Handler mHandler = new Handler(Looper.getMainLooper());
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -26,6 +31,24 @@ public class MainActivity extends SlidingFragmentActivity {
 		sm.setFadeEnabled(true);
 		sm.setFadeDegree(0.5f);
 		sm.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+
+		final ActionBarFrame frame = (ActionBarFrame) findViewById(R.id.actionbarframe);
+
+		mHandler.postDelayed(new Runnable() {
+
+			@Override
+			public void run() {
+				frame.up();
+			}
+		}, 2000);
+
+		mHandler.postDelayed(new Runnable() {
+
+			@Override
+			public void run() {
+				frame.down();
+			}
+		}, 4000);
 
 	}
 
@@ -55,6 +78,8 @@ public class MainActivity extends SlidingFragmentActivity {
 
 	@Override
 	protected void onDestroy() {
+		ActionBarFrame frame = (ActionBarFrame) findViewById(R.id.actionbarframe);
+		frame.stop();
 		super.onDestroy();
 	}
 
