@@ -74,6 +74,13 @@ public class MainActivity extends SlidingFragmentActivity {
 				// TODO 分享
 			}
 		});
+		findViewById(R.id.sort).setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO 排序
+			}
+		});
 	}
 
 	@Override
