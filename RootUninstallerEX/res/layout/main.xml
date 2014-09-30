@@ -73,26 +73,17 @@
                 android:id="@+id/search"
                 android:layout_width="52dp"
                 android:layout_height="48dp"
-                android:layout_toLeftOf="@+id/share"
-                android:background="@drawable/background_selector"
-                android:padding="7dp"
-                android:src="@drawable/actionbar_search_icon" />
-
-            <ImageView
-                android:id="@+id/share"
-                android:layout_width="52dp"
-                android:layout_height="48dp"
                 android:layout_toLeftOf="@+id/sort"
                 android:background="@drawable/background_selector"
                 android:padding="7dp"
-                android:src="@drawable/abc_ic_menu_share_holo_dark" />
+                android:src="@drawable/actionbar_search_icon" />
 
             <LinearLayout
                 android:id="@+id/sort"
                 android:layout_width="52dp"
                 android:layout_height="48dp"
-                android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/share"
                 android:background="@drawable/background_selector"
                 android:gravity="center_vertical"
                 android:orientation="vertical"
@@ -100,22 +91,31 @@
                 android:paddingRight="0dp" >
 
                 <ImageView
-                    android:layout_width="32dp"
-                    android:layout_height="2.5dp"
+                    android:layout_width="28.8dp"
+                    android:layout_height="2.25dp"
                     android:background="@android:color/white" />
 
                 <ImageView
-                    android:layout_width="21dp"
-                    android:layout_height="2.5dp"
+                    android:layout_width="18.9dp"
+                    android:layout_height="2.25dp"
                     android:layout_marginTop="6.5dp"
                     android:background="@android:color/white" />
 
                 <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="2.5dp"
+                    android:layout_width="9dp"
+                    android:layout_height="2.25dp"
                     android:layout_marginTop="6.5dp"
                     android:background="@android:color/white" />
             </LinearLayout>
+
+            <ImageView
+                android:id="@+id/share"
+                android:layout_width="52dp"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/background_selector"
+                android:padding="7dp"
+                android:src="@drawable/abc_ic_menu_share_holo_dark" />
         </RelativeLayout>
     </com.escape.uninstaller.ui.ActionBarFrame>
 
