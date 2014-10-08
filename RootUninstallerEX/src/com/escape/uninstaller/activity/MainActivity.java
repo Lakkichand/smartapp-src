@@ -1,8 +1,6 @@
 package com.escape.uninstaller.activity;
 
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.view.View;
 import android.view.View.OnClickListener;
 
@@ -14,7 +12,7 @@ import com.smartapp.rootuninstaller.R;
 
 public class MainActivity extends SlidingFragmentActivity {
 
-	private Handler mHandler = new Handler(Looper.getMainLooper());
+	private ActionBarFrame mActionBarFrame;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -32,23 +30,7 @@ public class MainActivity extends SlidingFragmentActivity {
 		sm.setFadeDegree(0.5f);
 		sm.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
 
-		final ActionBarFrame frame = (ActionBarFrame) findViewById(R.id.actionbarframe);
-
-		mHandler.postDelayed(new Runnable() {
-
-			@Override
-			public void run() {
-				frame.up();
-			}
-		}, 2000);
-
-		mHandler.postDelayed(new Runnable() {
-
-			@Override
-			public void run() {
-				frame.down();
-			}
-		}, 4000);
+		mActionBarFrame = (ActionBarFrame) findViewById(R.id.actionbarframe);
 
 	}
 
@@ -75,7 +57,7 @@ public class MainActivity extends SlidingFragmentActivity {
 			}
 		});
 		findViewById(R.id.sort).setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
 				// TODO 排序
@@ -85,8 +67,7 @@ public class MainActivity extends SlidingFragmentActivity {
 
 	@Override
 	protected void onDestroy() {
-		ActionBarFrame frame = (ActionBarFrame) findViewById(R.id.actionbarframe);
-		frame.stop();
+		mActionBarFrame.stop();
 		super.onDestroy();
 	}
 
