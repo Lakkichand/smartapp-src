@@ -24,9 +24,11 @@
                 android:layout_toLeftOf="@+id/search"
                 android:background="@drawable/background_selector"
                 android:gravity="center_vertical"
-                android:orientation="horizontal" >
+                android:orientation="horizontal"
+                android:visibility="gone" >
 
                 <LinearLayout
+                    android:id="@+id/action_menu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical" >
@@ -76,7 +78,8 @@
                 android:layout_toLeftOf="@+id/sort"
                 android:background="@drawable/background_selector"
                 android:padding="7dp"
-                android:src="@drawable/actionbar_search_icon" />
+                android:src="@drawable/actionbar_search_icon"
+                android:visibility="gone" />
 
             <LinearLayout
                 android:id="@+id/sort"
@@ -88,7 +91,8 @@
                 android:gravity="center_vertical"
                 android:orientation="vertical"
                 android:paddingLeft="13dp"
-                android:paddingRight="0dp" >
+                android:paddingRight="0dp"
+                android:visibility="gone" >
 
                 <ImageView
                     android:layout_width="25.92dp"
@@ -116,6 +120,46 @@
                 android:background="@drawable/background_selector"
                 android:padding="10dp"
                 android:src="@drawable/ic_action_share" />
+
+            <LinearLayout
+                android:id="@+id/searchview"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_toLeftOf="@+id/share"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/action_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_selector"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="3dp" >
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/actionbar_up_indicator" />
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="2dp"
+                        android:src="@drawable/ic_launcher" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/input"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/edittext_bg_selector"
+                    android:textSize="18dp" />
+            </LinearLayout>
         </RelativeLayout>
     </com.escape.uninstaller.ui.ActionBarFrame>
 

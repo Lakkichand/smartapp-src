@@ -63,6 +63,14 @@ public class MainActivity extends SlidingFragmentActivity {
 				// TODO 排序
 			}
 		});
+		findViewById(R.id.action_back).setOnClickListener(
+				new OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+						// TODO 取消搜索
+					}
+				});
 	}
 
 	@Override
