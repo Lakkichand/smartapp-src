@@ -2,5 +2,6 @@
 <resources>
 
     <color name="common_press">#FF222526</color>
+    <color name="editcursor">#FF989a9b</color>
 
 </resources>
