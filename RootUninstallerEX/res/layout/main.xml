@@ -159,6 +159,7 @@
                     android:layout_marginLeft="2dp"
                     android:layout_marginRight="5dp"
                     android:background="@drawable/edittext_bg_selector"
+                    android:textColor="@android:color/white"
                     android:textCursorDrawable="@color/editcursor"
                     android:textSize="18dp" />
             </LinearLayout>
