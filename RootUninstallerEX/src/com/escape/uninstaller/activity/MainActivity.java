@@ -71,6 +71,13 @@ public class MainActivity extends SlidingFragmentActivity {
 						// TODO 取消搜索
 					}
 				});
+		findViewById(R.id.cleartext).setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO 清除
+			}
+		});
 	}
 
 	@Override
