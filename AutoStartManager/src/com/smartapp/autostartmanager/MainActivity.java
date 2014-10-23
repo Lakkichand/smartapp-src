@@ -409,6 +409,13 @@ public class MainActivity extends Activity {
 					public void onFinish() {
 					}
 				}, true, false);
+		findViewById(R.id.disabled_button).setOnClickListener(
+				new View.OnClickListener() {
+
+					@Override
+					public void onClick(View v) {
+					}
+				});
 	}
 
 	@Override
