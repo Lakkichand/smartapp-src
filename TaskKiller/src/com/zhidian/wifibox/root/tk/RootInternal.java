@@ -8,6 +8,7 @@ import android.util.Log;
 public class RootInternal {
 
 	public static void main(String[] args) {
+		// TODO 一次传多个pkg进来
 		if (args == null || args.length != 2) {
 			return;
 		}
