@@ -1,5 +1,7 @@
 package com.smartapp.autostartmanager;
 
+import info.hoang8f.widget.FButton;
+
 import java.util.List;
 import java.util.Map;
 
@@ -409,13 +411,18 @@ public class MainActivity extends Activity {
 					public void onFinish() {
 					}
 				}, true, false);
-		findViewById(R.id.disabled_button).setOnClickListener(
-				new View.OnClickListener() {
+		FButton disabledBtn = (FButton) findViewById(R.id.disabled_button);
+		disabledBtn.setButtonColor(getResources().getColor(
+				R.color.fbutton_color_concrete));
+		disabledBtn.setShadowEnabled(true);
+		disabledBtn.setShadowHeight(5);
+		disabledBtn.setCornerRadius(5);
+		disabledBtn.setOnClickListener(new View.OnClickListener() {
 
-					@Override
-					public void onClick(View v) {
-					}
-				});
+			@Override
+			public void onClick(View v) {
+			}
+		});
 	}
 
 	@Override

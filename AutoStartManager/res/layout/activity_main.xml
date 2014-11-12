@@ -7,24 +7,6 @@
     android:background="#FFF0F0F0"
     android:orientation="vertical" >
 
-    <info.hoang8f.widget.FButton
-        android:id="@+id/disabled_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="10dp"
-        android:drawablePadding="0dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:singleLine="true"
-        android:text="Disabled Button"
-        android:textColor="@android:color/white"
-        android:textSize="18dp"
-        fbutton:buttonColor="@color/fbutton_color_concrete"
-        fbutton:cornerRadius="3dp"
-        fbutton:shadowEnabled="true"
-        fbutton:shadowHeight="3dp" />
-
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="45dp"
@@ -81,6 +63,17 @@
                 android:listSelector="@android:color/transparent"
                 android:scrollbars="none" >
             </ListView>
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/disabled_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:minHeight="@dimen/demo_button_min_height"
+                android:minWidth="@dimen/demo_button_min_width"
+                android:text="Disabled Button"
+                android:textColor="@android:color/white" />
         </LinearLayout>
 
         <RelativeLayout
