@@ -1,6 +1,7 @@
 package com.escape.uninstaller.ui;
 
 import android.content.Context;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -11,6 +12,10 @@ import com.smartapp.rootuninstaller.R;
 public class TabManageView extends LinearLayout {
 
 	private ActionBarFrame mActionBarFrame;
+
+	private TitlePagerActionBar mTitlePagerActionBar;
+
+	private ViewPager mViewPager;
 
 	public TabManageView(Context context) {
 		super(context);
