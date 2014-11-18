@@ -1,7 +1,6 @@
 package com.escape.uninstaller.activity;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
 
 import com.escape.uninstaller.ui.MainViewGroup;
 import com.escape.uninstaller.util.DrawUtil;
@@ -17,8 +16,7 @@ public class MainActivity extends SlidingFragmentActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		LayoutInflater inflater = LayoutInflater.from(this);
-		mMainViewGroup = (MainViewGroup) inflater.inflate(R.layout.main, null);
+		mMainViewGroup = new MainViewGroup(this);
 		setContentView(mMainViewGroup);
 		setBehindContentView(R.layout.sliding);
 
