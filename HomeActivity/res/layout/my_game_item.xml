@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/app_frampadding"
+                android:paddingRight="@dimen/app_frampadding"
+                android:layout_width="match_parent"
+                android:paddingTop="5dp"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:id="@+id/gameIconLayout"
+            android:layout_toRightOf="@id/number"
+            android:layout_marginLeft="5dp"
+            android:layout_width="@dimen/game_icon_layout"
+            android:layout_height="@dimen/game_icon_layout">
+
+        <ImageView
+                android:id="@+id/gameIcon"
+                android:layout_width="@dimen/game_icon"
+                android:scaleType="centerCrop"
+                android:layout_centerInParent="true"
+                android:layout_height="@dimen/game_icon"/>
+
+        <ImageView
+                android:id="@+id/gift"
+                android:src="@drawable/gift_icon"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+    <com.youle.gamebox.ui.view.RoundProgressView
+            style="?android:progressBarStyleHorizontal"
+            android:max="100"
+            android:layout_alignParentRight="true"
+            android:id="@+id/roundProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    <ImageView
+            android:layout_width="@dimen/down_icon_w"
+            android:src="@drawable/down_icon"
+            android:scaleType="centerCrop"
+            android:layout_toLeftOf="@id/downloadNumber"
+            android:layout_below="@+id/roundProgress"
+            android:layout_height="@dimen/down_icon_h"/>
+
+    <TextView
+            android:id="@+id/downloadNumber"
+            android:layout_below="@+id/roundProgress"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="2dp"
+            android:textSize="@dimen/down_number_size"
+            android:textColor="@color/down_load_number"
+            android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+            android:layout_toRightOf="@id/gameIconLayout"
+            android:id="@+id/detailLayout"
+            android:layout_width="wrap_content"
+            android:layout_toLeftOf="@id/proLayout"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/gameName"
+                style="@style/gameName"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <LinearLayout
+                android:id="@+id/gamedesLayout"
+                android:layout_alignLeft="@id/gameName"
+                android:gravity="center_vertical"
+                android:layout_below="@id/gameName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/gameSize"
+                    style="@style/gameNameType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:id="@+id/gameType"
+                    style="@style/gameNameType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <RatingBar
+                android:id="@+id/scro"
+                android:layout_below="@id/gamedesLayout"
+                style="@style/smallRatingBar"
+                android:layout_alignLeft="@id/gameName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+    <LinearLayout
+            android:id="@+id/moreLayout"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            style="@style/app_edge"
+            android:background="@color/line_yello"
+            android:layout_below="@id/gameIconLayout"
+            android:weightSum="4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:id="@+id/detail"
+                style="@style/my_game_more_layout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/zhuang_qu_normal"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:text="@string/zhuang_qu"
+                    style="@style/my_game_more_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/gift_detail"
+                style="@style/my_game_more_layout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/gift_normal"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:text="@string/gift"
+                    android:layout_width="wrap_content"
+                    style="@style/my_game_more_text"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/stageryDetail"
+                style="@style/my_game_more_layout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/stagery_normal"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    style="@style/my_game_more_text"
+                    android:text="@string/strategy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/uninstall"
+                style="@style/my_game_more_layout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/uninstall_normal"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:text="@string/pcenter_mygame_option_uninstall"
+                    style="@style/my_game_more_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+            android:src="@color/line_gray"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_below="@+id/moreLayout"
+            android:layout_marginTop="5dp"
+            android:layout_height="1px"/>
+</RelativeLayout>

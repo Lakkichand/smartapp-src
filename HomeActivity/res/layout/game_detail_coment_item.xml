@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res/com.youle.gamebox.ui"
+	android:orientation="horizontal"
+	android:layout_width="match_parent"
+	android:paddingLeft="@dimen/app_frampadding"
+	android:paddingRight="@dimen/app_frampadding"
+	android:layout_height="match_parent">
+
+	<com.youle.gamebox.ui.view.RoundImageView
+		android:id="@+id/userAvatar"
+		android:layout_marginTop="8dp"
+        imagecontrol:border_outside_color="@color/dymaic_amount_bottom_land_line_color"
+        imagecontrol:border_thickness="2dp"
+		android:layout_width="@dimen/user_avatar"
+		android:layout_height="@dimen/user_avatar"/>
+
+	<LinearLayout
+		android:id="@+id/placer_name"
+		android:layout_width="wrap_content"
+		android:orientation="vertical"
+		android:layout_marginLeft="8dp"
+		android:layout_toRightOf="@+id/userAvatar"
+		android:layout_alignBottom="@+id/userAvatar"
+		android:layout_alignTop="@+id/userAvatar"
+		android:layout_height="wrap_content">
+
+		<TextView
+			android:id="@+id/userName"
+			android:textColor="@color/black"
+			android:textStyle="bold"
+			android:textSize="15sp"
+			android:text="吴清海"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+
+		<TextView
+			android:id="@+id/time"
+			android:text="5分钟前"
+			android:layout_marginTop="4dp"
+			android:textColor="@color/left_sdcard_gray"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+	</LinearLayout>
+
+	<com.youle.gamebox.ui.view.EmojiShowTextView
+		android:layout_below="@+id/placer_name"
+		android:layout_alignLeft="@+id/placer_name"
+		android:id="@+id/comment"
+		android:layout_marginTop="4dp"
+        android:textSize="13sp"
+		android:layout_marginBottom="8dp"
+		android:textColor="@color/gitf_a"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"/>
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_below="@+id/comment"
+		android:background="@color/line_gray"/>
+</RelativeLayout>

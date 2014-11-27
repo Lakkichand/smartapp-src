@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:background="@color/userinfo_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_margin="32dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <com.youle.gamebox.ui.view.EditRoundImageView
+                android:id="@+id/userinfo_photo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                imagecontrol:border_inside_color="@color/dymaic_amount_bottom_land_line_color"
+                imagecontrol:border_thickness="2dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/pc_user_photo"/>
+
+
+        <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="@string/userinfo_photo_modfy"
+                android:id="@+id/userinfo_photo_modfy"
+                android:gravity="center_horizontal"
+                android:paddingBottom="8dp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_alignBottom="@+id/userinfo_photo"
+                android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/userinfo_item"
+                android:orientation="vertical"
+                >
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/userinfo_item_bg_color"
+                    android:gravity="center_vertical"
+                    android:layout_height="48dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:textSize="18sp"
+                        android:textColor="@color/userinfo_title"
+                        android:layout_marginLeft="16dp"
+                        android:text="@string/account"/>
+
+                <TextView
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/userinfo_item_title"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/userName"
+                        android:textSize="18sp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/userinfo_title"
+                        />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/nickNameLayout"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_height="48dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:textSize="18sp"
+                        android:textColor="@color/userinfo_title"
+                        android:layout_marginLeft="16dp"
+                        android:text="@string/nick_name"/>
+
+                <TextView
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/userinfo_item_title"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/nickName"
+                        android:textSize="18sp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:layout_toLeftOf="@+id/userinfo_item_modfy"
+                        android:textColor="@color/userinfo_connent"
+                        />
+
+                <ImageView
+                        android:layout_marginRight="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/pc_userinfo_more"
+                        android:textSize="18sp"
+                        android:layout_centerVertical="true"
+                        />
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/emailLayout"
+                    android:gravity="center_vertical"
+                    android:background="@color/userinfo_item_bg_color"
+                    android:layout_height="48dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:textSize="18sp"
+                        android:textColor="@color/userinfo_title"
+                        android:layout_marginLeft="16dp"
+                        android:text="@string/email"/>
+
+                <TextView
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/userinfo_item_title"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/email"
+                        android:textSize="18sp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:layout_toLeftOf="@+id/userinfo_item_modfy"
+                        android:textColor="@color/userinfo_connent"
+                        />
+
+                <ImageView
+                        android:layout_marginRight="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/pc_userinfo_more"
+                        android:textSize="18sp"
+                        android:layout_centerVertical="true"
+                        />
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/qqLayout"
+                    android:gravity="center_vertical"
+                    android:layout_height="48dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:textSize="18sp"
+                        android:textColor="@color/userinfo_title"
+                        android:layout_marginLeft="16dp"
+                        android:text="QQ:"/>
+
+                <TextView
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/userinfo_item_title"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/qq"
+                        android:textSize="18sp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:layout_toLeftOf="@+id/userinfo_item_modfy"
+                        android:textColor="@color/userinfo_connent"
+                        />
+
+                <ImageView
+                        android:layout_marginRight="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/pc_userinfo_more"
+                        android:textSize="18sp"
+                        android:layout_centerVertical="true"
+                        />
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/safeLayout"
+                    android:background="@color/userinfo_item_bg_color"
+                    android:gravity="center_vertical"
+                    android:layout_height="48dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/userinfo_item_title"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:textSize="18sp"
+                        android:textColor="@color/userinfo_title"
+                        android:layout_marginLeft="16dp"
+                        android:text="@string/safe"/>
+
+                <TextView
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/userinfo_item_title"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/safe"
+                        android:textSize="18sp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:layout_toLeftOf="@+id/userinfo_item_modfy"
+                        android:textColor="@color/userinfo_connent"
+                        android:text="@string/modify_password"
+                        />
+
+                <ImageView
+                        android:layout_marginRight="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/pc_userinfo_more"
+                        android:textSize="18sp"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/userinfo_item_modfy"
+                        />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:paddingLeft="@dimen/app_frampadding"
+              android:paddingRight="@dimen/app_frampadding"
+              android:gravity="center_vertical"
+              android:background="@drawable/title_head_bg"
+              android:layout_height="50dp">
+
+    <RelativeLayout
+            android:id="@+id/rankShowLeft"
+            android:layout_width="45dp"
+            android:layout_height="45dp">
+
+        <ImageView
+                android:layout_centerInParent="true"
+                android:src="@drawable/left_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/notRead"
+                android:layout_alignParentRight="true"
+                style="@style/left_not_read"
+                android:background="@drawable/title_num_text_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <TextView
+            android:id="@+id/title"
+            style="@style/title_style"
+            android:text="游乐游戏中心"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:layout_toRightOf="@id/rankShowLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <ImageView
+            android:id="@+id/editImage"
+            android:layout_width="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/edit_icon"
+            android:visibility="gone"
+            android:layout_marginRight="8dp"
+            android:layout_height="wrap_content"/>
+    <LinearLayout
+            android:id="@+id/searchLayout"
+            android:layout_width="wrap_content"
+            android:gravity="right"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:id="@+id/titleSerch"
+                    android:src="@drawable/title_serch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                    android:id="@+id/downLoadManager"
+                    android:layout_width="45dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="45dp">
+
+                <ImageView
+                        android:src="@drawable/title_down_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        style="@style/left_not_read"
+                        android:id="@+id/downloadNumber"
+                        android:background="@drawable/title_num_text_bg"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

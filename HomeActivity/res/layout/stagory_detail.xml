@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <ScrollView
+            android:orientation="vertical"
+            android:layout_weight="1"
+            style="@style/list_view_style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <!--game layout-->
+                <RelativeLayout
+                        android:orientation="vertical"
+                        android:paddingRight="@dimen/app_frampadding"
+                        android:paddingLeft="@dimen/app_frampadding"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                            android:id="@+id/gameIconLayout"
+                            android:layout_width="@dimen/game_icon_layout"
+                            android:layout_height="@dimen/game_icon_layout">
+
+                        <ImageView
+                                android:id="@+id/gameIcon"
+                                android:layout_width="@dimen/game_icon"
+                                android:scaleType="centerCrop"
+                                android:layout_centerInParent="true"
+                                android:layout_height="@dimen/game_icon"/>
+
+                        <ImageView
+                                android:id="@+id/giftIcon"
+                                android:src="@drawable/gift_icon"
+                                android:layout_alignParentRight="true"
+                                android:layout_width="wrap_content"
+                                android:scaleType="centerCrop"
+                                android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_marginLeft="@dimen/app_frampadding"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/gameIconLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        <TextView
+                                android:id="@+id/gameName"
+                                style="@style/gameName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        <TextView
+                                android:id="@+id/gameType"
+                                style="@style/gameNameType"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        <RatingBar
+                                style="@style/smallRatingBar"
+                                android:id="@+id/score"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <TextView
+                            android:id="@+id/gameDetail"
+                            android:layout_width="wrap_content"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:background="@color/line_yello"
+                            android:text="@string/zhuang_qu"
+                            android:textColor="@color/white"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_height="wrap_content"/>
+                </RelativeLayout>
+
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:src="@color/line_gray"
+                        android:scaleType="centerCrop"
+                        android:layout_height="1px"/>
+
+                <TextView
+                        android:id="@+id/stagoryTitle"
+                        android:textColor="#333333"
+                        android:layout_marginTop="8dp"
+                        android:textStyle="bold"
+                        android:textSize="16.5sp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/data"
+                        android:layout_gravity="right"
+                        android:textColor="#999999"
+                        android:textSize="13sp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="@dimen/app_frampadding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                <WebView
+                        android:id="@+id/content"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+                android:id="@+id/downloadLayout"
+                android:layout_width="match_parent"
+                style="@style/app_edge"
+                android:layout_height="40dp">
+
+            <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:progressDrawable="@drawable/progress_draw"
+                    android:layout_height="match_parent"/>
+
+            <LinearLayout
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <ImageView
+                        android:id="@+id/downloadIcon"
+                        android:src="@drawable/detail_down_icon"
+                        android:layout_width="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/downloadText"
+                        android:text="@string/download"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+                android:id="@+id/openAndCommunity"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                style="@style/app_edge"
+                android:layout_marginBottom="5dp"
+                android:weightSum="2"
+                android:background="@drawable/rector_lingt_shap"
+                android:padding="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:id="@+id/openLayout"
+                    android:background="#20acdd"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/open_icon"
+                        android:scaleType="centerCrop"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:textColor="@color/white"
+                        android:text="@string/open"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/comunity"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/green_litte"
+                    android:textColor="@color/white"
+                    android:text="讨论区"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

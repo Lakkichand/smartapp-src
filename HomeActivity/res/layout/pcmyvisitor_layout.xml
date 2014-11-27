@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app ="http://schemas.android.com/apk/res/com.youle.gamebox.ui"
+			  android:orientation="vertical"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent">
+
+	<com.youle.gamebox.ui.view.PullRefreshAndLoadMoreListView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:numColumns="4"
+		android:id="@+id/pc_myvisitor_pullGridView"
+        style="@style/list_view_style"
+		/>
+
+	<RelativeLayout
+		android:id="@+id/no_message_tips_placer"
+		android:layout_width="match_parent"
+		android:visibility="gone"
+		android:background="@color/white"
+		android:layout_height="match_parent">
+
+		<ImageView
+			android:id="@+id/placer"
+			android:layout_centerInParent="true"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/no_data_icon"/>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+            style="@style/no_date_text"
+			android:layout_below="@+id/placer"
+			android:layout_marginTop="8dp"
+			android:text="暂无内容"/>
+
+	</RelativeLayout>
+</RelativeLayout>

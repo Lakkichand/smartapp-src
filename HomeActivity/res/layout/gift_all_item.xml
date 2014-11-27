@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:paddingRight="@dimen/app_frampadding"
+            android:paddingLeft="@dimen/app_frampadding"
+            android:paddingTop="10dp"
+            android:layout_height="match_parent">
+
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:id="@+id/titleLayout"
+                            android:gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        <ImageView
+                                android:id="@+id/titleDot"
+                                android:src="@drawable/dot"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        <TextView
+                                android:id="@+id/giftName"
+                                android:layout_toRightOf="@id/titleDot"
+                                style="@style/all_gift_title"
+                                android:singleLine="true"
+                                android:ellipsize="end"
+                                android:layout_marginLeft="@dimen/all_gift_title_left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_below="@id/titleLayout"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        <ImageView
+                                android:src="@drawable/dot"
+                                android:visibility="invisible"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        <TextView
+                                android:text="剩"
+                                style="@style/gift_all_item_lost"
+                                android:layout_marginLeft="@dimen/all_gift_title_left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        <TextView
+                                android:id="@+id/restNumber"
+                                android:textSize="15sp"
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/line_yello"
+                                android:layout_height="wrap_content"/>
+
+                        <TextView
+                                android:text="个/共"
+                                style="@style/gift_all_item_lost"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        <TextView
+                                android:id="@+id/totalNumber"
+                                android:layout_below="@id/giftName"
+                                android:textColor="@color/gitf_a"
+                                android:textSize="15sp"
+                                android:layout_toRightOf="@id/restNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        <TextView
+                                android:text="个"
+                                style="@style/gift_all_item_lost"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                        android:id="@+id/getGift"
+                        style="@style/goto_item_style"
+                        android:text="@string/lingqu"
+                        android:layout_alignParentRight="true"
+                        />
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@color/home_item_bg_1"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        android:src="@drawable/dot"
+                        android:visibility="invisible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/giftdesc"
+                        android:layout_marginLeft="@dimen/all_gift_title_left"
+                        android:textColor="@color/left_menu_gray"
+                        android:textSize="15sp"
+                        android:maxLines="2"
+                        android:lineSpacingExtra="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+        <ImageView
+                android:src="@color/line_gray"
+                style="@style/app_edge"
+                android:layout_marginTop="@dimen/game_detail_provider"
+                android:layout_width="match_parent"
+                android:layout_height="1px"/>
+</LinearLayout>

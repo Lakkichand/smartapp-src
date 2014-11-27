@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res/com.youle.gamebox.ui"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+   <!--  <com.youle.gamebox.ui.view.RoundProgressBar
+        android:id="@+id/roundProgressBar2"
+        android:layout_width="80dip"
+        android:layout_height="80dip"
+        android:layout_alignLeft="@+id/roundProgressBar1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="78dp"
+        
+        
+        android_custom:roundColor="#D1D1D1"
+        android_custom:roundProgressColor="@android:color/black"
+        android_custom:textColor="#9A32CD"
+        android_custom:roundWidth="10dip"
+        android_custom:textSize="18sp" />
+
+    <com.youle.gamebox.ui.view.RoundProgressBar
+        android:id="@+id/roundProgressBar4"
+        android_custom:style="FILL"
+        android:layout_width="80dip"
+        android:layout_height="80dip"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/roundProgressBar1"
+        android:layout_marginRight="32dp"
+        android_custom:roundWidth="1dip"
+        android_custom:roundProgressColor="#C2C2C2" />
+
+    <com.youle.gamebox.ui.view.RoundProgressBar
+        android:id="@+id/roundProgressBar3"
+        android:layout_width="80dip"
+        android:layout_height="80dip"
+        android:layout_alignLeft="@+id/roundProgressBar4"
+        android:layout_alignTop="@+id/roundProgressBar2"
+        android_custom:roundColor="#C6E2FF"
+        android_custom:roundWidth="10dip"
+        android_custom:roundProgressColor="#CD3333"
+        android_custom:textIsDisplayable="false" />
+
+    <com.youle.gamebox.ui.view.RoundProgressBar
+        android:id="@+id/roundProgressBar5"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_below="@+id/roundProgressBar1"
+        android:layout_marginLeft="22dp"
+        android:layout_toRightOf="@+id/roundProgressBar1" />
+    
+    
+        <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Button" />
+
+    <com.youle.gamebox.ui.view.RoundProgressBar
+        android:id="@+id/roundProgressBar1"
+        android:layout_width="80dip"
+        android:layout_height="80dip"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="40dp" />
+     <Button
+                android:id="@+id/but_download"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:drawable="@drawable/face10"
+                android:focusable="false"
+                android:layout_alignParentTop="true"
+                android:text=""
+                android:layout_below="@+id/roundProgressBar1"
+                android:textColor="#616161"
+                android:textSize="13sp" />
+     <ImageView
+                android:id="@+id/image_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:drawableTop="@drawable/face10"
+                android:focusable="false"
+                android:layout_alignParentTop="true"
+                android:textColor="#616161"
+                android:textSize="13sp" /> -->
+       <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Button" />
+     
+     <RelativeLayout 
+         android:id="@+id/relative"
+         android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+         >
+       
+         
+     </RelativeLayout>
+     
+     
+
+</RelativeLayout>

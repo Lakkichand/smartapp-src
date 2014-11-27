@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:paddingTop="2dp"
+        android:background="@drawable/comment_select"
+        android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dymaiclist_item_name"
+            style="@style/d_co_style"
+            android:text="333"
+            />
+
+    <RelativeLayout
+            android:id="@+id/voiceLayout"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:background="@drawable/country_dymaic_voice_comment_bg"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dymaiclist_item_voiceSeconds"
+                android:textSize="10sp"
+                android:text="10s"
+                android:layout_marginLeft="18dp"
+                android:layout_centerVertical="true"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textColor="@color/dymaic_voice_text_color"
+                />
+
+        <com.youle.gamebox.ui.view.PlayVoiceSmall
+                android:id="@+id/playing_image"
+                android:layout_marginLeft="8dp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</LinearLayout>

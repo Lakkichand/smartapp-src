@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="style_basedialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="smallRatingBar" parent="@android:style/Widget.RatingBar">
+    <item name="android:progressDrawable">@drawable/ratingbar_small_drawable</item>
+    <item name="android:minHeight">15dp</item>
+    <item name="android:maxHeight">18dp</item>
+    <item name="android:isIndicator">true</item>
+    </style>
+    <style name="bigRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar_small_drawable</item>
+        <item name="android:minHeight">18dp</item>
+        <item name="android:maxHeight">25dp</item>
+        <item name="android:isIndicator">false</item>
+</style>
+
+</resources>
