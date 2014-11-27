@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-
-
-    <com.youle.gamebox.ui.view.EmojiShowTextView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/commentText"
-            style="@style/d_co_style"
-            android:background="@drawable/comment_select"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
