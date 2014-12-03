@@ -9,7 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class TrashFragment extends Fragment {
+public class TrashFragment extends Fragment implements IFragment {
+
+	public static final String TAG = "TRASHFRAGMENT";
 
 	public static TrashFragment newInstance() {
 		TrashFragment fragment = new TrashFragment();
@@ -32,5 +34,9 @@ public class TrashFragment extends Fragment {
 	@Override
 	public void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
+	}
+
+	@Override
+	public void onAppAction(String packName) {
 	}
 }

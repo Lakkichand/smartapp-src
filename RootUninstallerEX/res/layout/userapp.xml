@@ -3,11 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <TextView
+    <ListView
+        android:id="@+id/tlistview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView>
+
+    <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="userapp"
-        android:textSize="25dp" />
+        android:text="Button" />
 
 </RelativeLayout>

@@ -9,7 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class SystemAppFragment extends Fragment {
+public class SystemAppFragment extends Fragment implements IFragment {
+
+	public static final String TAG = "SYSTEMAPPFRAGMENT";
 
 	public static SystemAppFragment newInstance() {
 		SystemAppFragment fragment = new SystemAppFragment();
@@ -32,5 +34,9 @@ public class SystemAppFragment extends Fragment {
 	@Override
 	public void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
+	}
+
+	@Override
+	public void onAppAction(String packName) {
 	}
 }

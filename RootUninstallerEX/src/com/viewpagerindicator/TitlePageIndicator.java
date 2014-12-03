@@ -227,6 +227,11 @@ public class TitlePageIndicator extends View implements PageIndicator {
         mPaintFooterIndicator.setColor(footerColor);
         invalidate();
     }
+    
+    public void setFooterLineColor(int footerColor) {
+        mPaintFooterLine.setColor(footerColor);
+        invalidate();
+    }
 
     public float getFooterLineHeight() {
         return mFooterLineHeight;

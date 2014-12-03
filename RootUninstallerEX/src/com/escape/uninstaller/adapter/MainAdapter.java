@@ -1,28 +1,32 @@
 package com.escape.uninstaller.adapter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.escape.uninstaller.ui.SystemAppFragment;
-import com.escape.uninstaller.ui.TrashFragment;
-import com.escape.uninstaller.ui.UserAppFragment;
+import com.escape.uninstaller.ui.IFragment;
 
 public class MainAdapter extends FragmentPagerAdapter {
+
+	private List<IFragment> mList = new ArrayList<IFragment>();
 
 	public MainAdapter(FragmentManager fm) {
 		super(fm);
 	}
 
+	public void setList(List<IFragment> list) {
+		mList.clear();
+		if (list != null) {
+			mList.addAll(list);
+		}
+	}
+
 	@Override
 	public Fragment getItem(int position) {
-		if (position == 0) {
-			return UserAppFragment.newInstance();
-		} else if (position == 1) {
-			return SystemAppFragment.newInstance();
-		} else {
-			return TrashFragment.newInstance();
-		}
+		return (Fragment) mList.get(position);
 	}
 
 	@Override
@@ -38,7 +42,7 @@ public class MainAdapter extends FragmentPagerAdapter {
 
 	@Override
 	public int getCount() {
-		return 3;
+		return mList.size();
 	}
 
 }
