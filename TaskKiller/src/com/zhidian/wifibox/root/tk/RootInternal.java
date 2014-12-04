@@ -8,17 +8,17 @@ import android.util.Log;
 public class RootInternal {
 
 	public static void main(String[] args) {
-		// TODO 一次传多个pkg进来
-		if (args == null || args.length != 2) {
+		// 一次传多个pkgName进来，第一个参数是userid，后面的都是包名
+		if (args == null || args.length < 2) {
 			return;
 		}
-		String pkg = args[0];
 		int userid = 0;
 		try {
-			userid = Integer.valueOf(args[1]);
+			userid = Integer.valueOf(args[0]);
 		} catch (Exception e) {
+			e.printStackTrace();
 		}
-		Log.e("", "pkg = " + pkg + "  userid = " + userid);
+		Log.e("", "userid = " + userid);
 		try {
 			Class serviceManager = Class.forName("android.os.ServiceManager",
 					false, Thread.currentThread().getContextClassLoader());
@@ -35,18 +35,22 @@ public class RootInternal {
 			Method[] methods = obj.getClass().getMethods();
 			for (Method m : methods) {
 				if ("forceStopPackage".equals(m.getName())) {
-					try {
-						m.invoke(obj, pkg);
-						Log.e("", "forceStopPackage 1");
-					} catch (Exception e) {
-						e.printStackTrace();
+					for (int i = 1; i < args.length; i++) {
+						String pkg = args[i];
+						try {
+							m.invoke(obj, pkg);
+							Log.e("", "forceStopPackage1 pkg = " + pkg);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+						try {
+							m.invoke(obj, pkg, userid);
+							Log.e("", "forceStopPackage2 pkg = " + pkg);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
 					}
-					try {
-						m.invoke(obj, pkg, userid);
-						Log.e("", "forceStopPackage 2");
-					} catch (Exception e) {
-						e.printStackTrace();
-					}
+					break;
 				}
 			}
 		} catch (Exception e) {
