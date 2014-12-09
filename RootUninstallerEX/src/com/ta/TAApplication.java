@@ -26,6 +26,7 @@ import android.os.Looper;
 import android.os.Message;
 
 import com.escape.uninstaller.controller.MainController;
+import com.escape.uninstaller.controller.UserAppController;
 import com.ta.exception.TAAppException;
 import com.ta.exception.TANoSuchCommandException;
 import com.ta.mvc.command.TACommandExecutor;
@@ -93,6 +94,8 @@ public class TAApplication extends Application implements TAIResponseListener
 		getAppManager();
 		TAApplication.getApplication().registerCommand(MainController.TAG,
 				MainController.class);
+		TAApplication.getApplication().registerCommand(UserAppController.TAG,
+				UserAppController.class);
 	}
 
 	private void doOncreate()
