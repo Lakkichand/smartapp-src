@@ -1,10 +1,15 @@
 package com.escape.uninstaller.controller;
 
 import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
+import android.app.ActivityManager;
 import android.content.Context;
 import android.content.pm.IPackageStatsObserver;
 import android.content.pm.PackageStats;
+import android.os.Debug;
 import android.os.RemoteException;
 import android.text.format.Formatter;
 
@@ -58,6 +63,49 @@ public class MainController extends TACommand {
 				}
 			}
 		} else if (command.equals(CALCULATERAM)) {
+			AppDataBean[] beans = (AppDataBean[]) request.getData();
+			if (beans == null || beans.length <= 0) {
+				return;
+			}
+			ActivityManager activityManager = (ActivityManager) TAApplication
+					.getApplication()
+					.getSystemService(Context.ACTIVITY_SERVICE);
+			List<ActivityManager.RunningAppProcessInfo> list = activityManager
+					.getRunningAppProcesses();
+			Map<String, AppDataBean> map = new HashMap<String, AppDataBean>();
+			for (final AppDataBean bean : beans) {
+				bean.ram = 0;
+				bean.ram_str = "";
+				map.put(bean.pkgName, bean);
+			}
+			for (ActivityManager.RunningAppProcessInfo info : list) {
+				boolean ca = false;
+				for (String pkg : info.pkgList) {
+					if (map.keySet().contains(pkg)) {
+						ca = true;
+						break;
+					}
+				}
+				if (ca) {
+					int[] myMempid = new int[] { info.pid };
+					Debug.MemoryInfo[] memoryInfo = activityManager
+							.getProcessMemoryInfo(myMempid);
+					int memSize = memoryInfo[0].dalvikPrivateDirty
+							+ memoryInfo[0].dalvikSharedDirty
+							+ memoryInfo[0].nativePrivateDirty
+							+ memoryInfo[0].otherPrivateDirty;
+					int aMemSize = memSize / info.pkgList.length;
+					for (String pkg : info.pkgList) {
+						AppDataBean bean = map.get(pkg);
+						if (bean != null) {
+							bean.ram = bean.ram + aMemSize;
+							bean.ram_str = Formatter.formatFileSize(mContext,
+									bean.ram);
+						}
+					}
+				}
+			}
+			sendSuccessMessage(beans);
 		}
 	}
 
