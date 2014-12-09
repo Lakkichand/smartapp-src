@@ -14,7 +14,6 @@ import com.escape.uninstaller.activity.MainActivity;
 import com.escape.uninstaller.adapter.MainAdapter;
 import com.escape.uninstaller.util.DrawUtil;
 import com.slidingmenu.lib.SlidingMenu;
-import com.slidingmenu.lib.app.SlidingFragmentActivity;
 import com.smartapp.rootuninstaller.R;
 import com.viewpagerindicator.TitlePageIndicator;
 

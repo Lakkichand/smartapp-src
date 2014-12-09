@@ -18,6 +18,14 @@ package com.ta;
 import java.lang.Thread.UncaughtExceptionHandler;
 import java.util.HashMap;
 import java.util.Stack;
+
+import android.app.Application;
+import android.content.Intent;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
+
+import com.escape.uninstaller.controller.MainController;
 import com.ta.exception.TAAppException;
 import com.ta.exception.TANoSuchCommandException;
 import com.ta.mvc.command.TACommandExecutor;
@@ -41,11 +49,6 @@ import com.ta.util.layoutloader.TALayoutLoader;
 import com.ta.util.netstate.TANetChangeObserver;
 import com.ta.util.netstate.TANetWorkUtil.netType;
 import com.ta.util.netstate.TANetworkStateReceiver;
-
-import android.app.Application;
-import android.content.Intent;
-import android.os.Handler;
-import android.os.Message;
 
 public class TAApplication extends Application implements TAIResponseListener
 {
@@ -88,6 +91,8 @@ public class TAApplication extends Application implements TAIResponseListener
 		doOncreate();
 		onAfterCreateApplication();
 		getAppManager();
+		TAApplication.getApplication().registerCommand(MainController.TAG,
+				MainController.class);
 	}
 
 	private void doOncreate()
@@ -292,55 +297,53 @@ public class TAApplication extends Application implements TAIResponseListener
 		}
 	}
 
-	public void doCommand(String commandKey, TARequest request,
-			TAIResponseListener listener, boolean record, boolean resetStack)
-	{
-		if (listener != null)
-		{
-			try
-			{
-				TACommandExecutor.getInstance().enqueueCommand(commandKey,
-						request, listener);
+	public void doCommand(final String commandKey, final TARequest request,
+			final TAIResponseListener listener, final boolean record,
+			final boolean resetStack) {
+		Runnable runnable = new Runnable() {
 
-			} catch (TANoSuchCommandException e)
-			{
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			@Override
+			public void run() {
+				if (listener != null) {
+					try {
+						TACommandExecutor.getInstance().enqueueCommand(
+								commandKey, request, listener);
+					} catch (TANoSuchCommandException e) {
+						e.printStackTrace();
+					}
+				} else {
+					TALogger.i(TAApplication.this, "go with cmdid="
+							+ commandKey + ", record: " + record + ",rs: "
+							+ resetStack + ", request: " + request);
+					if (resetStack) {
+						activityStack.clear();
+					}
+
+					currentNavigationDirection = NavigationDirection.Forward;
+
+					ActivityStackInfo info = new ActivityStackInfo(commandKey,
+							request, record, resetStack);
+					activityStack.add(info);
+
+					Object[] newTag = { request.getTag(), listener };
+					request.setTag(newTag);
+
+					TALogger.i(TAApplication.this, "Enqueue-ing command");
+					try {
+						TACommandExecutor.getInstance().enqueueCommand(
+								commandKey, request, TAApplication.this);
+					} catch (TANoSuchCommandException e) {
+						e.printStackTrace();
+					}
+					TALogger.i(TAApplication.this, "Enqueued command");
+				}
 			}
-		} else
-		{
-			TALogger.i(TAApplication.this, "go with cmdid=" + commandKey
-					+ ", record: " + record + ",rs: " + resetStack
-					+ ", request: " + request);
-			if (resetStack)
-			{
-				activityStack.clear();
-			}
-
-			currentNavigationDirection = NavigationDirection.Forward;
-
-			ActivityStackInfo info = new ActivityStackInfo(commandKey, request,
-					record, resetStack);
-			activityStack.add(info);
-
-			Object[] newTag =
-			{ request.getTag(), listener };
-			request.setTag(newTag);
-
-			TALogger.i(TAApplication.this, "Enqueue-ing command");
-			try
-			{
-				TACommandExecutor.getInstance().enqueueCommand(commandKey,
-						request, this);
-			} catch (TANoSuchCommandException e)
-			{
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			TALogger.i(TAApplication.this, "Enqueued command");
-
+		};
+		if (Thread.currentThread() != Looper.getMainLooper().getThread()) {
+			handler.post(runnable);
+		} else {
+			runnable.run();
 		}
-
 	}
 
 	public void back()
@@ -503,7 +506,7 @@ public class TAApplication extends Application implements TAIResponseListener
 		this.mFileCache = fileCache;
 	}
 
-	private Handler handler = new Handler()
+	private Handler handler = new Handler(Looper.getMainLooper())
 	{
 		public void handleMessage(Message msg)
 		{
