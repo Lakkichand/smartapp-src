@@ -1,6 +1,9 @@
 package com.escape.uninstaller.controller;
 
+import java.io.File;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import android.content.Context;
@@ -47,6 +50,17 @@ public class UserAppController extends TACommand {
 				}
 				AppDataBean bean = new AppDataBean();
 				bean.pkgName = info.packageName;
+				bean.name = info.applicationInfo.loadLabel(pm).toString()
+						.trim();
+				bean.date = new File(info.applicationInfo.sourceDir)
+						.lastModified();
+				SimpleDateFormat formatter = new SimpleDateFormat(
+						"yyyy-MM-dd HH:mm:ss");
+				Date curDate = new Date(bean.date);// 获取当前时间
+				bean.date_str = formatter.format(curDate);
+				bean.versionName = info.versionName;
+				bean.versionCode = info.versionCode;
+				ret.add(bean);
 			}
 			sendSuccessMessage(ret);
 		}

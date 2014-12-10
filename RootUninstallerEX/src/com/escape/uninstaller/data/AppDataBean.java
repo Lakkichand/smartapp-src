@@ -8,5 +8,9 @@ public class AppDataBean {
 	public String size_str;
 	public long ram;
 	public String ram_str;
+	public String versionName;
+	public int versionCode;
+	public long date;
+	public String date_str;
 
 }
