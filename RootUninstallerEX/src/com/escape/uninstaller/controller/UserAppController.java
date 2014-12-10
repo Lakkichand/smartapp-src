@@ -55,7 +55,7 @@ public class UserAppController extends TACommand {
 				bean.date = new File(info.applicationInfo.sourceDir)
 						.lastModified();
 				SimpleDateFormat formatter = new SimpleDateFormat(
-						"yyyy-MM-dd HH:mm:ss");
+						"yyyy-MM-dd");
 				Date curDate = new Date(bean.date);// 获取当前时间
 				bean.date_str = formatter.format(curDate);
 				bean.versionName = info.versionName;
