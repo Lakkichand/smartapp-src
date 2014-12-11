@@ -8,7 +8,7 @@ import android.util.Log;
 public class RootInternal {
 
 	public static void main(String[] args) {
-		// 一次传多个pkgName进来，第一个参数是userid，后面的都是包名
+		// 涓�娆′紶澶氫釜pkgName杩涙潵锛岀涓�涓弬鏁版槸userid锛屽悗闈㈢殑閮芥槸鍖呭悕
 		if (args == null || args.length < 2) {
 			return;
 		}
