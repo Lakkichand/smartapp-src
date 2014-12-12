@@ -262,12 +262,9 @@ public class ProcessManagerController extends TACommand {
 			long total = (long) (InfoUtil.getTotalRAM() / 1024.0 + 0.5);
 			int count1 = runningAppProcesses.size();
 			long used1 = total - avi;
-			createFile();
-			int userid = InfoUtil.getUserId();
+			Set<String> pset = new HashSet<String>();
 			PackageManager pm = TAApplication.getApplication()
 					.getPackageManager();
-			// 已经杀死的程序，不用重复再杀
-			Set<String> killedApp = new HashSet<String>();
 			for (ActivityManager.RunningAppProcessInfo runningAppProcessInfo : runningAppProcesses) {
 				String[] pkgs = runningAppProcessInfo.pkgList;
 				for (String pkg : pkgs) {
@@ -280,23 +277,24 @@ public class ProcessManagerController extends TACommand {
 					}
 					activityManager.restartPackage(pkg);
 					activityManager.killBackgroundProcesses(pkg);
+					if (pkg.equals("com.sohu.inputmethod.sogou")) {
+						continue;
+					}
+					if (pkg.equals("com.qihoo.permmgr")) {
+						continue;
+					}
 					try {
 						ApplicationInfo appInfo = pm.getApplicationInfo(pkg, 0);
 						if ((appInfo.flags & ApplicationInfo.FLAG_SYSTEM) > 0) {
-							// 系统进程不用强制杀死
 							continue;
 						}
-					} catch (Exception e) {
+					} catch (NameNotFoundException e) {
 						e.printStackTrace();
 					}
-					if (killedApp.contains(pkg)) {
-						continue;
-					}
-					// 强力杀进程
-					killApp(pkg, userid);
-					killedApp.add(pkg);
+					pset.add(pkg);
 				}
 			}
+			killApp(InfoUtil.getUserId(), pset);
 			// 重新获取当前运行的程序
 			List<ActivityManager.RunningAppProcessInfo> list = activityManager
 					.getRunningAppProcesses();
@@ -380,11 +378,12 @@ public class ProcessManagerController extends TACommand {
 			});
 		}
 	}
-
+	
 	/**
 	 * 杀进程
 	 */
-	private void killApp(String pkg, int userid) {
+	private void killApp(int userid, Set<String> pkgs) {
+		createFile();
 		try {
 			new RootShell.Command(String.format("export LD_LIBRARY_PATH=%s\n",
 					System.getenv("LD_LIBRARY_PATH")).replace("$", "\\$"))
@@ -397,15 +396,18 @@ public class ProcessManagerController extends TACommand {
 			e.printStackTrace();
 		}
 		try {
+			String cmd = "  " + userid;
+			for (String pkg : pkgs) {
+				cmd = cmd + "  " + pkg;
+			}
 			new RootShell.Command(
 					"/system/bin/app_process /system/bin com.zhidian.wifibox.root.tk.RootInternal  "
-							+ pkg + "  " + userid).execute(RootShell
-					.startShell());
+							+ cmd).execute(RootShell.startShell());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-
+	
 	/**
 	 * 创建jar文件
 	 */
@@ -413,7 +415,7 @@ public class ProcessManagerController extends TACommand {
 		InputStream inputStream = null;
 		try {
 			inputStream = TAApplication.getApplication().getResources()
-					.getAssets().open("protocol");
+					.getAssets().open("zhidian");
 			File file = TAApplication.getApplication().getFilesDir();
 			if (!file.exists()) {
 				file.mkdirs();
