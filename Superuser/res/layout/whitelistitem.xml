@@ -8,7 +8,6 @@
 		android:layout_width="fill_parent" android:layout_marginLeft="5sp"
 		android:layout_marginBottom="10sp" android:layout_marginTop="10sp">
 		<TextView android:layout_height="wrap_content"
-			xmlns:android="http://schemas.android.com/apk/res/android"
 			android:id="@+id/WhitelistItemText" android:text="Sample Application"
 			android:layout_width="fill_parent" android:textSize="24sp"></TextView>
 		<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Known Processes:" android:layout_marginLeft="5sp"></TextView><TextView android:layout_height="wrap_content" android:text="com.sample"
