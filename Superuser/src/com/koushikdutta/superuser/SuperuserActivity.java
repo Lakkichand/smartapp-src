@@ -172,6 +172,7 @@ public class SuperuserActivity extends ListActivity
 
 			File superuser = new File("/system/bin/superuser");
 
+			// TODO 先修改busybox为可执行
 			if (superuser.exists())
 			{
 				// return device to original state
