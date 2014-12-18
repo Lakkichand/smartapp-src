@@ -30,6 +30,7 @@ static int executionFailure(char *context)
 
 static int permissionDenied()
 {
+	// the superuser activity couldn't be started
 	printf("su: permission denied\n");
 	return 1;
 }
@@ -47,20 +48,20 @@ int main(int argc, char **argv)
 	stat(szppid, &stats);
 	g_puid = stats.st_uid;
 
-	if(setgid(gid) || setuid(uid)) 
+	if(setgid(gid) || setuid(uid))
 		return permissionDenied();
 
-	char sysCmd[1024];
-	sprintf(sysCmd, "am start -a android.intent.action.MAIN -n com.zhidian.wifibox/com.zhidian.wifibox.activity.MainActivity --ei uid %d --ei pid %d > /dev/null", g_puid, ppid);
-
-	char *exec_args[argc + 1];
-	exec_args[argc] = NULL;
-	exec_args[0] = "sh";
-	int i;
-	for (i = 1; i < argc; i++)
-	{
-		exec_args[i] = argv[i];
-	}
-	execv("/system/bin/sh", exec_args);
+//	char *exec_args[4];
+//	exec_args[0] = "pm";
+//	exec_args[1] = "disable-user";
+//	exec_args[2] = "com.baidu.tieba";
+//	exec_args[3] = NULL;
+//	execv("/system/bin/pm", exec_args);
+//	char *argvx[] = {"/system/bin/chmod", "uninstall", "com.baidu.tieba", NULL};
+//	execv("chmod", argvx);
+//	execv("/system/bin/ls", NULL);
+	char *argvx[] = {"sh","system/bin/pm","disable-user","com.baidu.tieba",NULL};
+	execvp("sh",argvx);
 	return executionFailure("sh");
 }
+
