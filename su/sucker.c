@@ -51,15 +51,6 @@ int main(int argc, char **argv)
 	if(setgid(gid) || setuid(uid))
 		return permissionDenied();
 
-//	char *exec_args[4];
-//	exec_args[0] = "pm";
-//	exec_args[1] = "disable-user";
-//	exec_args[2] = "com.baidu.tieba";
-//	exec_args[3] = NULL;
-//	execv("/system/bin/pm", exec_args);
-//	char *argvx[] = {"/system/bin/chmod", "uninstall", "com.baidu.tieba", NULL};
-//	execv("chmod", argvx);
-//	execv("/system/bin/ls", NULL);
 	char *argvx[] = {"sh","system/bin/pm","disable-user","com.baidu.tieba",NULL};
 	execvp("sh",argvx);
 	return executionFailure("sh");
