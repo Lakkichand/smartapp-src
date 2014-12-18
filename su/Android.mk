@@ -1,9 +1,9 @@
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
-LOCAL_SRC_FILES:= su.c
+LOCAL_SRC_FILES:= sucker.c
 
-LOCAL_MODULE:= su
+LOCAL_MODULE:= sucker
 
 LOCAL_STATIC_LIBRARIES := libc
 
