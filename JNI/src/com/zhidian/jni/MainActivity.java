@@ -24,10 +24,12 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				try {
 					Process process = Runtime.getRuntime().exec(
-							"sucker pm disable-user com.UCMobile\n");
+							"sucker pm disable-user com.zhidian.wifibox\n");
 					DataOutputStream os = new DataOutputStream(process
 							.getOutputStream());
 					os.flush();
+					process.waitFor();
+					process.destroy();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -39,10 +41,12 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				try {
 					Process process = Runtime.getRuntime().exec(
-							"sucker pm enable com.UCMobile\n");
+							"sucker pm enable com.zhidian.wifibox\n");
 					DataOutputStream os = new DataOutputStream(process
 							.getOutputStream());
 					os.flush();
+					process.waitFor();
+					process.destroy();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -52,6 +56,17 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
+				try {
+					Process process = Runtime.getRuntime().exec(
+							"sucker pm uninstall com.zhidian.wifibox\n");
+					DataOutputStream os = new DataOutputStream(process
+							.getOutputStream());
+					os.flush();
+					process.waitFor();
+					process.destroy();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 			}
 		});
 
