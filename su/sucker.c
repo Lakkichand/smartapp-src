@@ -43,7 +43,7 @@ int main(int argc, char **argv) {
 		strcat(cmd_t, argv[i]);
 		strcat(cmd_t, " ");
 	}
-	printf("%s\n",cmd_t);
+	printf("%s\n", cmd_t);
 	char *argvx[] = { "su", "-c", cmd_t, NULL };
 	execvp("su", argvx);
 	return executionFailure("sh");
