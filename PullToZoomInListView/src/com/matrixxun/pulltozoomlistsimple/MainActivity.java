@@ -2,7 +2,6 @@ package com.matrixxun.pulltozoomlistsimple;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 
@@ -23,13 +22,6 @@ public class MainActivity extends Activity {
 				android.R.layout.simple_list_item_1, adapterData));
 		listView.getHeaderView().setImageResource(R.drawable.splash01);
 		listView.getHeaderView().setScaleType(ImageView.ScaleType.CENTER_CROP);
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
 	}
 
 }
