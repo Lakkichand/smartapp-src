@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android" >
-    <item android:drawable="@color/rbtn_tab_pressd" android:state_checked="true"/>
-    <item android:drawable="@color/rbtn_tab_default" android:state_checked="false"/>
-
-</selector>
