@@ -1,0 +1,488 @@
+package com.zhidian.wifibox.adapter;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.os.Handler;
+import android.os.Looper;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.zhidian.wifibox.R;
+import com.zhidian.wifibox.data.FileDetailsBean;
+import com.zhidian.wifibox.file.other.OtherHelper;
+import com.zhidian.wifibox.file.other.OtherItem;
+import com.zhidian.wifibox.receiver.OtherCheckChangeReceiver;
+import com.zhidian.wifibox.util.DrawUtil;
+import com.zhidian.wifibox.util.FileUtil;
+import com.zhidian.wifibox.util.IntentUtils;
+import com.zhidian.wifibox.util.ToastUtils;
+import com.zhidian.wifibox.view.dialog.DeleteHintDialog;
+import com.zhidian.wifibox.view.dialog.DeleteHintDialog.GoonCallBackListener;
+import com.zhidian.wifibox.view.dialog.FileDetailsPopupWindow;
+import com.zhidian.wifibox.view.dialog.WaitingDialog;
+import com.zhidian3g.wifibox.imagemanager.AsyncImageManager;
+import com.zhidian3g.wifibox.imagemanager.AsyncImageManager.AsyncImageLoadedCallBack;
+
+/**
+ * 
+ * 视频列表适配器
+ * 
+ * @author shihuajian
+ *
+ */
+public class ManagerOtherAdapter extends BaseAdapter {
+	
+	private final static String TAG = ManagerOtherAdapter.class.getSimpleName();
+
+	private Context mContext;
+	private List<OtherItem> mDataList = new ArrayList<OtherItem>();
+	private List<OtherItem> mDataListDel = new ArrayList<OtherItem>();
+	/** 当前打开的下拉的Id */
+	private int mCurListOpenIndex;
+	/** 是否有列表被打开 */
+	private boolean mCurListIsOpen;
+	private OtherHelper mHelper;
+
+	private Handler mHandler = new Handler(Looper.getMainLooper());
+	
+	private FileDetailsPopupWindow pop;
+	
+	public ManagerOtherAdapter(Context context) {
+		this.mContext = context;
+		this.mDataList = new ArrayList<OtherItem>();
+		this.mDataListDel = new ArrayList<OtherItem>();
+		this.mCurListOpenIndex = -1;
+		this.mCurListIsOpen = false;
+		this.mHelper = OtherHelper.getInstance();
+		this.mHelper.init(context);
+	}
+	
+	public ManagerOtherAdapter(Context context, List<OtherItem> dataList, OtherHelper helper) {
+		this.mContext = context;
+		if (dataList != null) {
+			this.mDataList.addAll(dataList);
+		}
+		this.mHelper = helper;
+		this.mDataListDel = new ArrayList<OtherItem>();
+		this.mCurListOpenIndex = -1;
+		this.mCurListIsOpen = false;
+		this.pop = new FileDetailsPopupWindow((Activity)context);
+	}
+	
+	/** 刷新数据 */
+	public void refreshAdapter(List<OtherItem> FileList) {
+		mDataList = new ArrayList<OtherItem>();
+		if(FileList!=null){
+			mDataList.addAll(FileList);
+		}
+		mDataListDel.clear();
+		sendOtherBroadcast(false);
+		notifyDataSetChanged();
+	}
+	
+	/** 实现全选 */
+	public void chooseAll(boolean isAll) {
+		if (mDataList != null) {
+			for (OtherItem data : mDataList) {
+				data.setIsSelected(isAll);
+			}
+			
+			if (mDataListDel != null) {
+				if (isAll) {
+					mDataListDel.clear();
+					mDataListDel.addAll(mDataList);
+				} else {
+					mDataListDel.clear();
+				}
+			}
+			notifyDataSetChanged();
+			sendOtherBroadcast(false);
+		}
+	}
+	
+	/**
+	 * 发送选择广播
+	 */
+	private void sendOtherBroadcast(boolean isRefresh) {
+		Intent intent = new Intent(OtherCheckChangeReceiver.PATH_NAME);
+		intent.putExtra(OtherCheckChangeReceiver.CHOOSE_COUNT_FLAG, mDataListDel.size());
+		intent.putExtra(OtherCheckChangeReceiver.TOTAL_COUNT, getCount());
+		intent.putExtra(OtherCheckChangeReceiver.IS_REFRESH, isRefresh);
+		mContext.sendBroadcast(intent);
+	}
+	
+	/** 删除选择的数据 */
+	public void chooseDel() {
+		if (mDataListDel != null) {
+			String countTip = mContext.getString(R.string.delete_hint_other, mDataListDel.size() + "");
+			final WaitingDialog waiting = new WaitingDialog(mContext);
+			DeleteHintDialog dialog = new DeleteHintDialog(mContext, countTip);
+			dialog.setGoonCallBackListener(new GoonCallBackListener() {
+				
+				@Override
+				public void onClick() {
+					// 关闭打开的Item
+					setCurListIsOpen(-1);
+					waiting.show();
+					new Thread() {
+						@Override
+						public void run() {
+							final long startTime = System.currentTimeMillis();
+							final List<OtherItem> xData = new ArrayList<OtherItem>();
+							xData.addAll(mDataList);
+							for (int i = 0; i < mDataListDel.size(); i++) {
+								OtherItem data = mDataListDel.get(i);
+								if (FileUtil.DeleteFolder(data.getData())) {
+									mHelper.delete(data.getId() + "");
+									Log.e(TAG, "删除“" + data.getTitle() + "”成功");
+								} else {
+									Log.e(TAG, "删除“" + data.getTitle() + "”失败");
+								}
+							}
+							if (xData.removeAll(mDataListDel)) {
+								mDataListDel.clear();
+							}
+							FileUtil.scanSdCard(mContext);
+							mHandler.post(new Runnable() {
+								
+								@Override
+								public void run() {
+									long endTime = System.currentTimeMillis();
+									refreshAdapter(xData);
+									sendOtherBroadcast(true);
+									if ((endTime - startTime) < 1000) {
+										waiting.close();
+									} else {
+										waiting.dismiss();
+									}
+								}
+							});
+						}
+					}.start();
+					
+				}
+			});
+			dialog.show();
+			
+		}
+	}
+
+	public void clear() {
+		mDataList.clear();
+		notifyDataSetChanged();
+	}
+	
+	@Override
+	public int getCount() {
+		if (mDataList == null || mDataList.size() <= 0)
+			return 0;
+		return mDataList.size();
+	}
+
+	@Override
+	public Object getItem(int position) {
+		return mDataList.get(position);
+	}
+
+	@Override
+	public long getItemId(int position) {
+		return position;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		final ViewHolder holder;
+		if (convertView == null) {
+			holder = new ViewHolder();
+			convertView = LayoutInflater.from(mContext)
+					.inflate(R.layout.list_item_manager_other, parent, false);
+			holder.headerPadding = (LinearLayout) convertView.findViewById(R.id.headerPadding);
+			holder.bottomPadding = (LinearLayout) convertView.findViewById(R.id.bottomPadding);
+			holder.choose = (ImageButton) convertView.findViewById(R.id.choose);
+			holder.thumb = (ImageView) convertView.findViewById(R.id.thumb);
+			holder.fileName = (TextView) convertView.findViewById(R.id.fileName);
+			holder.fileSize = (TextView) convertView.findViewById(R.id.fileSize);
+			holder.handle = (ImageButton) convertView.findViewById(R.id.handle);
+			holder.hide = (LinearLayout) convertView.findViewById(R.id.hide);
+			holder.delete = (LinearLayout) convertView.findViewById(R.id.delete);
+			holder.details = (LinearLayout) convertView.findViewById(R.id.details);
+			holder.open = (LinearLayout) convertView.findViewById(R.id.open);
+			convertView.setTag(holder);
+		}else {
+			holder = (ViewHolder) convertView.getTag();
+		}
+		
+		if (getCount() > 0) {
+			// 设置头部间距
+			if (position == 0) {
+				holder.headerPadding.setVisibility(View.VISIBLE);
+			} else {
+				holder.headerPadding.setVisibility(View.GONE);
+			}
+			// 设置底部间距
+			if (position == (getCount() - 1)) {
+				holder.bottomPadding.setVisibility(View.VISIBLE);
+			} else {
+				holder.bottomPadding.setVisibility(View.GONE);
+			}
+			
+			String imgUrl = mDataList.get(position).getData();
+			String fileName = imgUrl.substring(imgUrl.lastIndexOf("/") +1);
+			int size = mDataList.get(position).getSize();
+			holder.fileName.setText(fileName);
+			holder.fileSize.setText(FileUtil.bytes2kb(size));
+			
+			boolean isChoose = mDataList.get(position).getIsSelected();
+			if (isChoose) {
+				holder.choose.setImageResource(R.drawable.cleanmaster_select);
+			} else {
+				holder.choose.setImageResource(R.drawable.cleanmaster_noselect);
+			}
+			
+			// 设置图片
+			boolean isCache = true;
+			holder.thumb.setTag(imgUrl);
+			Bitmap bm = AsyncImageManager.getInstance().loadResourceImage(imgUrl, isCache, 
+					new AsyncImageLoadedCallBack() {
+						
+						@Override
+						public void imageLoaded(Bitmap imageBitmap, String imgUrl) {
+							if (imageBitmap == null) {
+								return;
+							}
+							if (holder.thumb.getTag().equals(imgUrl)) {
+								holder.thumb.setImageBitmap(imageBitmap);
+							}
+							
+						}
+					});
+			if (bm != null) {
+				holder.thumb.setImageBitmap(bm);
+			} else {
+				// 默认
+				holder.thumb.setImageBitmap(DrawUtil.sDefaultIcon2);
+			}
+			
+			holder.choose.setTag(R.id.tag_position, position);
+			holder.choose.setTag(R.id.tag_object, mDataList.get(position));
+			holder.choose.setOnClickListener(chooseListener);
+			
+			// 操作按钮点击监听事件
+			holder.handle.setTag(position);
+			holder.handle.setOnClickListener(handleListener);
+			if (mCurListOpenIndex == position) {
+				holder.hide.setVisibility(View.VISIBLE);
+				holder.handle.setImageResource(R.drawable.arrow_rise);
+			} else {
+				holder.hide.setVisibility(View.GONE);
+				holder.handle.setImageResource(R.drawable.arrow_drop);
+			}
+			
+			// 删除按钮点击监听事件
+			holder.delete.setTag(position);
+			holder.delete.setOnClickListener(delListener);
+			
+			// 详情按钮点击监听事件
+			holder.details.setTag(position);
+			holder.details.setOnClickListener(detailsListener);
+			
+			// 打开按钮点击监听事件
+			holder.open.setTag(position);
+			holder.open.setOnClickListener(openListener);
+		}
+		return convertView;
+	}
+	
+	/** 操作监听 */
+	private OnClickListener handleListener = new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			int position = (Integer) v.getTag();
+			if (mCurListIsOpen) {
+				// 如果ID相等，则隐藏，反之显示另外一个
+				if (mCurListOpenIndex == position) {
+					setCurListIsOpen(-1);
+				} else {
+					setCurListIsOpen(position);
+				}
+			} else {
+				setCurListIsOpen(position);
+			}
+		}
+	};
+	
+	/**
+	 * 设置当前打开的Item
+	 * @param position -1:关闭, 其他整数则为打开
+	 */
+	private void setCurListIsOpen(int position) {
+		if (position == -1) {
+			mCurListIsOpen = false;
+			mCurListOpenIndex = -1;
+		} else {
+			mCurListIsOpen = true;
+			mCurListOpenIndex = position;
+		}
+		notifyDataSetChanged();
+
+	}
+	
+	/** 选择按钮监听 */
+	private OnClickListener chooseListener = new OnClickListener() {
+
+		@Override
+		public void onClick(View v) {
+			setCurListIsOpen(-1);
+			int position = (Integer) v.getTag(R.id.tag_position);
+			OtherItem mData = (OtherItem) v.getTag(R.id.tag_object);
+			boolean isChecked = mData.getIsSelected();
+			mDataList.get(position).setIsSelected(!isChecked);
+
+			if (mDataListDel != null) {
+				isChecked = mDataList.get(position).getIsSelected();
+				if (isChecked) {
+					mDataListDel.add(mDataList.get(position));
+				} else {
+					for (int i = 0; i < mDataListDel.size(); i++) {
+						if (mData.getId() == mDataListDel.get(i).getId()) {
+							mDataListDel.remove(i);
+							break;
+						}
+					}
+				}
+			}
+			notifyDataSetChanged();
+			sendOtherBroadcast(false);
+		}
+
+	};
+	
+	/** 选项删除监听 */
+	private OnClickListener delListener = new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			String countTip = mContext.getString(R.string.delete_hint_other, "1");
+			final int position = (Integer) v.getTag();
+			final WaitingDialog waiting = new WaitingDialog(mContext);
+			DeleteHintDialog dialog = new DeleteHintDialog(mContext, countTip);
+			dialog.setGoonCallBackListener(new GoonCallBackListener() {
+				
+				@Override
+				public void onClick() {
+					// 如果相等，关闭打开的Item
+					if (mCurListOpenIndex == position) {
+						setCurListIsOpen(-1);
+					}
+					waiting.show();
+					new Thread() {
+						@Override
+						public void run() {
+							final long startTime = System.currentTimeMillis();
+							final List<OtherItem> xData = new ArrayList<OtherItem>();
+							xData.addAll(mDataList);
+							OtherItem item = xData.get(position);
+							if (FileUtil.DeleteFolder(item.getData())) {
+								mHelper.delete(item.getId() + "");
+								Log.e(TAG, "删除" + item.getTitle() + "成功");
+								xData.remove(position);
+								
+								for (int i = 0; i < mDataListDel.size(); i++) {
+									if (item.getId() == mDataListDel.get(i).getId()) {
+										mDataListDel.remove(i);
+										return;
+									}
+								}
+								FileUtil.scanSdCard(mContext);
+								mHandler.post(new Runnable() {
+									@Override
+									public void run() {
+										refreshAdapter(xData);
+										sendOtherBroadcast(true);
+										long endTime = System.currentTimeMillis();
+										if ((endTime - startTime) < 1000) {
+											waiting.close();
+										} else {
+											waiting.dismiss();
+										}
+									}
+								});
+							} else {
+								Log.e(TAG, "删除" + item.getTitle() + "失败");
+							}
+						};
+					}.start();
+				}
+			});
+			dialog.show();
+			
+		}
+	};
+	
+	/** 详情按钮监听 */
+	private OnClickListener detailsListener = new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			int position = (Integer) v.getTag();
+			OtherItem item = mDataList.get(position);
+			FileDetailsBean bean = new FileDetailsBean();
+			bean.setFileName(item.getTitle());
+			bean.setFileDatetaken(item.getDateModified());
+			bean.setFileType(item.getMimeType());
+			bean.setFileSize(item.getSize());
+			bean.setFilePath(item.getData());
+			pop.setData(bean);
+			pop.showAtLocation(v);
+		}
+	};
+	
+	/** 打开按钮监听 */
+	private OnClickListener openListener = new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			int position = (Integer) v.getTag();
+			String path = mDataList.get(position).getData();
+			File file = new File(path);
+			Intent intent = IntentUtils.createFileOpenIntent(file);
+			try {
+				mContext.startActivity(intent);
+			} catch (Exception e) {
+				e.printStackTrace();
+				ToastUtils.showShortToast(mContext, mContext.getString(R.string.file_not_found));
+			}
+		}
+	};
+
+	class ViewHolder {
+		LinearLayout headerPadding;	// 头部边界
+		LinearLayout bottomPadding;	// 底部边界
+		ImageButton choose;	// 选择框
+		ImageView thumb; // 视频缩略图
+		TextView fileName; // 视频名
+		TextView fileSize; // 文件大小
+		ImageButton handle;	// 操作
+		LinearLayout hide; // 隐藏部分
+		LinearLayout delete; // 删除
+		LinearLayout details;	// 详情
+		LinearLayout open;	// 打开
+
+	}
+
+}
