@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhidian.wifibox.view.ManagerContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFf7f7f7"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/board"
+        android:layout_width="match_parent"
+        android:layout_height="202dp"
+        android:background="#FF32b27c" >
+
+        <LinearLayout
+            android:id="@+id/score_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="100"
+                android:textColor="@android:color/white"
+                android:textSize="75dp" />
+
+            <TextView
+                android:id="@+id/unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="25dp"
+                android:text="分"
+                android:textColor="#FFc3fee5"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/clean_up"
+            android:layout_width="151dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/score_frame"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/manager_clean_bg"
+            android:gravity="center"
+            android:text="清理加速"
+            android:textColor="@android:color/white"
+            android:textSize="22dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingTop="7dp" >
+
+            <RelativeLayout
+                android:id="@+id/download"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/manager_item_bg" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="50.6666667dp"
+                        android:layout_height="45.3333333dp"
+                        android:layout_gravity="center_horizontal" >
+
+                        <ImageView
+                            android:layout_width="50.6666667dp"
+                            android:layout_height="45.3333333dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/icon_download_manage" />
+
+                        <TextView
+                            android:id="@+id/download_text_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/footer_point_icon"
+                            android:gravity="center"
+                            android:text="6"
+                            android:textColor="@color/white"
+                            android:textSize="11dip"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:text="下载管理"
+                        android:textColor="#FF666666"
+                        android:textSize="14dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/appuninstall"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/manager_item_bg" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="50.6666667dp"
+                        android:layout_height="45.3333333dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/icon_uninstall_manage" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:text="应用卸载"
+                        android:textColor="#FF666666"
+                        android:textSize="14dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/appupdate"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/manager_item_bg" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="50.6666667dp"
+                        android:layout_height="45.3333333dp"
+                        android:layout_gravity="center_horizontal" >
+
+                        <ImageView
+                            android:layout_width="50.6666667dp"
+                            android:layout_height="45.3333333dp"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/icon_update_manage" />
+
+                        <TextView
+                            android:id="@+id/appupdate_text_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/footer_point_icon"
+                            android:gravity="center"
+                            android:text="6"
+                            android:textColor="@color/white"
+                            android:textSize="11dip"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:text="应用升级"
+                        android:textColor="#FF666666"
+                        android:textSize="14dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingBottom="7dp" >
+
+            <RelativeLayout
+                android:id="@+id/clearup"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/manager_item_bg" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="50.6666667dp"
+                        android:layout_height="45.3333333dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/icon_cleanmaster_manage" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:text="手机清理"
+                        android:textColor="#FF666666"
+                        android:textSize="14dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/deliver"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/manager_item_bg" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="50.6666667dp"
+                        android:layout_height="45.3333333dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/icon_filemanager_manage" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:text="文件管理"
+                        android:textColor="#FF666666"
+                        android:textSize="14dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/popularity"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/manager_item_bg" >
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</com.zhidian.wifibox.view.ManagerContainer>

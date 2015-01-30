@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/keyword_item" >
+
+    <TextView
+        android:id="@+id/keyword_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#323232"
+        android:textSize="15sp"
+        android:gravity="center" 
+        >
+    </TextView>
+
+</RelativeLayout>

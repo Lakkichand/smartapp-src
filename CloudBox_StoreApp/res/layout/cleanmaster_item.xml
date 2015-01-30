@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/gap1"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/game_photoSize"
+            android:layout_height="@dimen/game_photoSize"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/icon"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:singleLine="true"
+                android:text="360搜索"
+                android:textColor="#FF666666"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/info1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="可释放内存"
+                    android:textColor="#FF999999"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/info2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6.65M"
+                    android:textColor="#FFea7d00"
+                    android:textSize="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/select"
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="14dp"
+            android:padding="7dp"
+            android:src="@drawable/cleanmaster_select" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/gap2"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@android:color/white" />
+
+    <View
+        android:id="@+id/gap3"
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="#FFf5f5f5" >
+
+    <FrameLayout
+        android:id="@+id/drawer_open"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true" >
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:background="@drawable/v2_drawer_selector"
+            android:scaleType="fitXY" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/search_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="0dp"
+        android:layout_toLeftOf="@+id/downloadmanager"
+        android:layout_toRightOf="@+id/drawer_open"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="5dp"
+                android:text="搜索你感兴趣的内容"
+                android:textColor="#FFbcbcbc"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/header_search" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#FFe3e3e3" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/downloadmanager"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/back_icon_bg_selector" >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="24dp"
+            android:layout_height="28dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/header_downloadmanager" />
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_above="@+id/image"
+            android:layout_marginBottom="-10dp"
+            android:layout_marginLeft="-5dp"
+            android:layout_toRightOf="@+id/image"
+            android:background="@drawable/header_downloadmanager_dian"
+            android:gravity="center"
+            android:text="10"
+            android:textColor="@android:color/white"
+            android:textSize="10dp" />
+
+        <View
+            android:layout_width="36dp"
+            android:layout_height="10dp"
+            android:layout_toRightOf="@+id/image" >
+        </View>
+    </RelativeLayout>
+
+</RelativeLayout>

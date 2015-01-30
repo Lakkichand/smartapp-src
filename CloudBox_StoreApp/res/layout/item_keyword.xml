@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/keyword_avatar"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_marginLeft="10dip"
+            android:src="@drawable/icon" />
+
+        <TextView
+            android:id="@+id/keyword_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="忍者水果忍者"
+            android:textColor="#555555"
+            android:textSize="20dip" />
+        
+        <LinearLayout
+                android:id="@+id/download3"
+                android:layout_width="65dip"
+                android:layout_height="35dp"
+                android:layout_marginRight="10dip"
+                android:layout_weight="0"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:background="@drawable/homefeature_btn_selector"
+                    android:gravity="center"
+                    android:text="下载"
+                    android:focusable="false"
+                    android:textColor="#FF323232"
+                    android:textSize="15dp" />
+
+                <ProgressBar
+                    android:id="@+id/progress3"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="13dip"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="2dp"
+                    android:progress="50"
+                    android:progressDrawable="@drawable/home_progress_layer"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/progress_text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="50%"
+                    android:textColor="#FF5cbf15"
+                    android:textSize="15dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

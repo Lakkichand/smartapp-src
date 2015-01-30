@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/file_header_title_layout" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- Don't set background for ViewPager. It doesn't work because of page margin -->
+
+        <com.zhidian.wifibox.file.fragment.ui.ViewPagerCompat
+            android:id="@+id/pager"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:duplicateParentState="true" />
+
+        <LinearLayout
+            android:id="@+id/pagerindicatorlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:background="@drawable/appuninstall_title_bg"
+            android:layout_marginTop="10dp"
+            android:padding="0.5dp" >
+
+            <com.zhidian.wifibox.file.fragment.ui.TitleIndicator
+                android:id="@+id/pagerindicator"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:background="@color/transparent"
+                app:footerColor="@color/tab_indicator_text_selected"
+                app:footerLineHeight="2.0dp"
+                app:footerTriangleHeight="2.0dp"
+                app:textColor="@color/tab_indicator_text"
+                app:textSizeNormal="@dimen/common_text_size_middle_2"
+                app:textSizeSelected="@dimen/common_text_size_middle_2" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
