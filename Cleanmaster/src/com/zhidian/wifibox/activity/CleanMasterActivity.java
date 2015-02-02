@@ -21,6 +21,7 @@ import com.ta.TAApplication;
 import com.ta.mvc.common.TAIResponseListener;
 import com.ta.mvc.common.TARequest;
 import com.ta.mvc.common.TAResponse;
+import com.tapjoy.TapjoyConnect;
 import com.zhidian.wifibox.adapter.CleanMasterAdapter;
 import com.zhidian.wifibox.controller.CleanMasterController;
 import com.zhidian.wifibox.data.CleanMasterDataBean;
@@ -496,6 +497,9 @@ public class CleanMasterActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.cleanmaster);
 
+		TapjoyConnect.requestTapjoyConnect(this,
+				"45115e1c-423e-4b34-9cc6-be048ba4c12f", "GltP4s9SfMs9k33KCEPe");
+
 		findViewById(R.id.back).setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -568,11 +572,13 @@ public class CleanMasterActivity extends Activity {
 	@Override
 	protected void onResume() {
 		super.onResume();
+		TapjoyConnect.getTapjoyConnectInstance().appResume();
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
+		TapjoyConnect.getTapjoyConnectInstance().appPause();
 	}
 
 	@Override
