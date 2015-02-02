@@ -51,6 +51,7 @@ import com.ta.util.layoutloader.TAILayoutLoader;
 import com.ta.util.layoutloader.TALayoutLoader;
 import com.ta.util.netstate.TANetChangeObserver;
 import com.ta.util.netstate.TANetWorkUtil.netType;
+import com.zhidian.wifibox.controller.CleanMasterController;
 
 public class TAApplication extends Application implements TAIResponseListener {
 	/** 配置器 为Preference */
@@ -152,6 +153,10 @@ public class TAApplication extends Application implements TAIResponseListener {
 	 * 注册Command，所有Command都需要在这里注册
 	 */
 	private void registerCommand() {
+		// 注册CleanMasterController
+		TAApplication.getApplication().registerCommand(
+				CleanMasterController.class.getSimpleName(),
+				CleanMasterController.class);
 	}
 
 	private void doOncreate() {
