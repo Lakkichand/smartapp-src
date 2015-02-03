@@ -28,7 +28,7 @@ import com.ta.util.TALogger;
 public class TAThreadPool
 {
 	// 线程的最大数量
-	private static final int MAX_THREADS_COUNT = 5;
+	private static final int MAX_THREADS_COUNT = 2;
 	private TACommandThread threads[] = null;
 	private boolean started = false;
 	private static TAThreadPool instance;
