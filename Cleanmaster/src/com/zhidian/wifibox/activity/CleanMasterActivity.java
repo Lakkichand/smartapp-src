@@ -29,6 +29,7 @@ import com.zhidian.wifibox.adapter.CleanMasterAdapter;
 import com.zhidian.wifibox.controller.CleanMasterController;
 import com.zhidian.wifibox.data.CleanMasterDataBean;
 import com.zhidian.wifibox.data.CleanMasterDataBean.APKBean;
+import com.zhidian.wifibox.data.CleanMasterDataBean.BigFileBean;
 import com.zhidian.wifibox.data.CleanMasterDataBean.CacheBean;
 import com.zhidian.wifibox.data.CleanMasterDataBean.RAMBean;
 import com.zhidian.wifibox.data.CleanMasterDataBean.TrashBean;
@@ -42,6 +43,10 @@ import com.zhidian.wifibox.view.ScanView;
  * 
  */
 public class CleanMasterActivity extends Activity {
+	// TODO 选择大文件时弹框提示，只提示一次（退出清零）
+	// TODO 点击安装包，打开安装界面
+	// TODO 清理系统应用提示
+	// TODO 垃圾清理加入其它选项
 	private AdView adView;
 	/**
 	 * 停止扫描
@@ -63,19 +68,26 @@ public class CleanMasterActivity extends Activity {
 	 * 残留扫描完成
 	 */
 	public static final int MSG_TRASH = 14004;
+	/**
+	 * 大文件扫描完成
+	 */
+	public static final int MSG_BIG = 15005;
 
 	private long mSelectCache = 0;
 	private long mSelectAPK = 0;
 	private long mSelectRAM = 0;
 	private long mSelectTrash = 0;
+	private long mSelectBig = 0;
 	private long mTotalCache = 0;
 	private long mTotalAPK = 0;
 	private long mTotalRAM = 0;
 	private long mTotalTrash = 0;
+	private long mTotalBig = 0;
 	private long mCleanCache = 0;
 	private long mCleanAPK = 0;
 	private long mCleanRAM = 0;
 	private long mCleanTrash = 0;
+	private long mCleanBig = 0;
 
 	private ExpandableListView mListView;
 	private CleanMasterAdapter mAdapter;
@@ -86,12 +98,14 @@ public class CleanMasterActivity extends Activity {
 	private TextView mRAMSize;
 	private TextView mAPKSize;
 	private TextView mTrashSize;
+	private TextView mBigSize;
 	private TextView mScanResult;
 	private RotationView mTotalRotation;
 	private RotationView mCacheRotation;
 	private RotationView mAPKRotation;
 	private RotationView mRAMRotation;
 	private RotationView mTrashRotation;
+	private RotationView mBigRotation;
 	private CleanMasterDataBean mBean = new CleanMasterDataBean();
 	private LinearLayout mScanInfo;
 	private RelativeLayout mCancleFrame;
@@ -314,7 +328,7 @@ public class CleanMasterActivity extends Activity {
 			TextView size = (TextView) findViewById(R.id.title_size);
 			size.setText(Formatter.formatShortFileSize(
 					TAApplication.getApplication(), mTotalAPK + mTotalCache
-							+ mTotalRAM + mTotalTrash));
+							+ mTotalRAM + mTotalTrash + mTotalBig));
 		}
 
 		@Override
@@ -354,6 +368,11 @@ public class CleanMasterActivity extends Activity {
 					mTrashRotation
 							.setImageResource(R.drawable.scan_finish_icon);
 					mTrashRotation.setPadding(0, 0, 0, 0);
+				} else if (msg == MSG_BIG) {
+					mBigRotation.stop();
+					mBigRotation.setBackgroundDrawable(null);
+					mBigRotation.setImageResource(R.drawable.scan_finish_icon);
+					mBigRotation.setPadding(0, 0, 0, 0);
 				}
 			} else if (obj instanceof String) {
 				mScaning.setText("正在扫描：" + obj.toString());
@@ -482,6 +501,43 @@ public class CleanMasterActivity extends Activity {
 								+ Formatter.formatFileSize(
 										TAApplication.getApplication(), size)
 								+ ")");
+					} else if (item instanceof BigFileBean) {
+						// 大文件
+						List<BigFileBean> bList = (List<BigFileBean>) oarray[1];
+						if (index == 1) {
+							mBean.bigFileList1 = bList;
+						} else if (index == 2) {
+							mBean.bigFileList2 = bList;
+						} else if (index == 3) {
+							mBean.bigFileList3 = bList;
+						}
+						long size = 0;
+						long totalSize = 0;
+						for (BigFileBean big : mBean.bigFileList1) {
+							totalSize += big.size;
+							if (big.isSelect) {
+								size += big.size;
+							}
+						}
+						for (BigFileBean big : mBean.bigFileList2) {
+							totalSize += big.size;
+							if (big.isSelect) {
+								size += big.size;
+							}
+						}
+						for (BigFileBean big : mBean.bigFileList3) {
+							totalSize += big.size;
+							if (big.isSelect) {
+								size += big.size;
+							}
+						}
+						mSelectBig = size;
+						mTotalBig = totalSize;
+						updateScanResult();
+						mBigSize.setText("("
+								+ Formatter.formatFileSize(
+										TAApplication.getApplication(), size)
+								+ ")");
 					}
 				}
 			}
@@ -534,6 +590,7 @@ public class CleanMasterActivity extends Activity {
 		mAPKSize = (TextView) findViewById(R.id.size_apk);
 		mRAMSize = (TextView) findViewById(R.id.size_ram);
 		mTrashSize = (TextView) findViewById(R.id.size_trash);
+		mBigSize = (TextView) findViewById(R.id.size_big);
 		mScanResult = (TextView) findViewById(R.id.total_size);
 		mTotalRotation = (RotationView) findViewById(R.id.progress_total);
 		mTotalRotation.rotate();
@@ -545,6 +602,8 @@ public class CleanMasterActivity extends Activity {
 		mRAMRotation.rotate();
 		mTrashRotation = (RotationView) findViewById(R.id.progress_trash);
 		mTrashRotation.rotate();
+		mBigRotation = (RotationView) findViewById(R.id.progress_big);
+		mBigRotation.rotate();
 		mScanView = new ScanView(this);
 		RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
 				RelativeLayout.LayoutParams.MATCH_PARENT,
@@ -584,7 +643,7 @@ public class CleanMasterActivity extends Activity {
 	private void updateScanResult() {
 		mScanResult.setText(Formatter.formatShortFileSize(
 				TAApplication.getApplication(), mSelectAPK + mSelectCache
-						+ mSelectRAM + mSelectTrash));
+						+ mSelectRAM + mSelectTrash + mSelectBig));
 	}
 
 	@Override

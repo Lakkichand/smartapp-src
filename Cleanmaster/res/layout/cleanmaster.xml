@@ -305,6 +305,52 @@
                 android:textColor="#FF999999"
                 android:textSize="14dp" />
         </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="22dp"
+                android:background="#FFdddddd" />
+
+            <com.zhidian.wifibox.view.RotationView
+                android:id="@+id/progress_big"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/progress_bg"
+                android:padding="3.5dp"
+                android:src="@drawable/progress_icon" />
+
+            <TextView
+                android:id="@+id/title_big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/progress_big"
+                android:singleLine="true"
+                android:text="大文件扫描"
+                android:textColor="#FF666666"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/size_big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#FF999999"
+                android:textSize="14dp" />
+        </RelativeLayout>
     </LinearLayout>
 
     <View

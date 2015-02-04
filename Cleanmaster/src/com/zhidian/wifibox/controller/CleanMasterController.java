@@ -29,13 +29,16 @@ import android.os.Environment;
 import android.os.RemoteException;
 import android.os.StatFs;
 import android.text.format.Formatter;
+import android.util.Log;
 
+import com.smartapp.ex.cleanmaster.R;
 import com.ta.TAApplication;
 import com.ta.mvc.command.TACommand;
 import com.ta.mvc.common.TARequest;
 import com.zhidian.wifibox.activity.CleanMasterActivity;
 import com.zhidian.wifibox.data.CleanMasterDataBean;
 import com.zhidian.wifibox.data.CleanMasterDataBean.APKBean;
+import com.zhidian.wifibox.data.CleanMasterDataBean.BigFileBean;
 import com.zhidian.wifibox.data.CleanMasterDataBean.CacheBean;
 import com.zhidian.wifibox.data.CleanMasterDataBean.RAMBean;
 import com.zhidian.wifibox.data.CleanMasterDataBean.TrashBean;
@@ -689,6 +692,7 @@ public class CleanMasterController extends TACommand {
 			}
 			mController.sendRuntingMessage(CleanMasterActivity.MSG_APK);
 			mController.sendRuntingMessage(CleanMasterActivity.MSG_TRASH);
+			mController.sendRuntingMessage(CleanMasterActivity.MSG_BIG);
 			mCD.countDown();
 		}
 	}
@@ -700,6 +704,7 @@ public class CleanMasterController extends TACommand {
 		private List<String> mPaths;
 		private List<APKBean> mApkList;
 		private List<TrashBean> mTrashList;
+		private List<BigFileBean> mBigList;
 		private int mIndex;
 
 		public TrashScanThread(int index, CleanMasterController controller,
@@ -710,7 +715,12 @@ public class CleanMasterController extends TACommand {
 			mPaths = paths;
 			mApkList = new ArrayList<APKBean>();
 			mTrashList = new ArrayList<TrashBean>();
+			mBigList = new ArrayList<BigFileBean>();
 			setName("TrashScanThread" + mIndex);
+			setPriority(Thread.MAX_PRIORITY);
+			for (String path : paths) {
+				Log.e("", "path = " + path);
+			}
 		}
 
 		@Override
@@ -754,6 +764,18 @@ public class CleanMasterController extends TACommand {
 			File file = new File(rootpath);
 			if (file.exists()) {
 				if (file.isFile()) {
+					if (isBigFile(file)) {
+						BigFileBean bean = new BigFileBean();
+						bean.isSelect = false;
+						bean.path = file.getAbsolutePath();
+						bean.size = file.length();
+						bean.drawable = R.drawable.ic_launcher;
+						mBigList.add(bean);
+						List<BigFileBean> tmp = new ArrayList<BigFileBean>();
+						tmp.addAll(mBigList);
+						mController.sendRuntingMessage(new Object[] { mIndex,
+								tmp });
+					}
 					if (isTmpFile(file)) {
 						// 临时文件
 						TrashBean bean = new TrashBean();
@@ -854,6 +876,22 @@ public class CleanMasterController extends TACommand {
 					}
 				}
 			}
+		}
+
+		private boolean isBigFile(File file) {
+			if (file == null) {
+				return false;
+			}
+			if (!file.exists()) {
+				return false;
+			}
+			if (!file.isFile()) {
+				return false;
+			}
+			if (file.length() > 10485760L) {
+				return true;
+			}
+			return false;
 		}
 
 		/**

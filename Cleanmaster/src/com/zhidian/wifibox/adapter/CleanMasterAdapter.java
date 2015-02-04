@@ -1,5 +1,6 @@
 package com.zhidian.wifibox.adapter;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -17,6 +18,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.smartapp.ex.cleanmaster.R;
@@ -24,6 +26,7 @@ import com.ta.TAApplication;
 import com.zhidian.wifibox.activity.CleanMasterActivity;
 import com.zhidian.wifibox.data.CleanMasterDataBean;
 import com.zhidian.wifibox.data.CleanMasterDataBean.APKBean;
+import com.zhidian.wifibox.data.CleanMasterDataBean.BigFileBean;
 import com.zhidian.wifibox.data.CleanMasterDataBean.CacheBean;
 import com.zhidian.wifibox.data.CleanMasterDataBean.RAMBean;
 import com.zhidian.wifibox.data.CleanMasterDataBean.TrashBean;
@@ -44,6 +47,7 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 	private List<APKBean> mAList = new ArrayList<APKBean>();
 	private List<RAMBean> mRList = new ArrayList<RAMBean>();
 	private List<TrashCombination> mTList = new ArrayList<TrashCombination>();
+	private List<BigFileBean> mBList = new ArrayList<CleanMasterDataBean.BigFileBean>();
 
 	private Handler mHandler = null;
 
@@ -220,7 +224,7 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 
 	@Override
 	public int getGroupCount() {
-		return 4;
+		return 5;
 	}
 
 	@Override
@@ -236,6 +240,9 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 		}
 		if (groupPosition == 3) {
 			return mTList.size();
+		}
+		if (groupPosition == 4) {
+			return mBList.size();
 		}
 		return 0;
 	}
@@ -318,6 +325,15 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 					selectCount++;
 				}
 			}
+		} else if (groupPosition == 4) {
+			title.setText("大文件");
+			for (BigFileBean bfile : mBList) {
+				if (bfile.isSelect) {
+					bs = true;
+					size += bfile.size;
+					selectCount++;
+				}
+			}
 		}
 		info1.setText("(" + selectCount + "项共");
 		info2.setText(Formatter.formatFileSize(TAApplication.getApplication(),
@@ -361,9 +377,19 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 		select.setOnClickListener(mItemSelectClickListener);
 		final ImageView icon = (ImageView) convertView.findViewById(R.id.icon);
 		icon.setVisibility(View.VISIBLE);
+		LinearLayout frame1 = (LinearLayout) convertView
+				.findViewById(R.id.frame1);
 		TextView title = (TextView) convertView.findViewById(R.id.title);
 		TextView info1 = (TextView) convertView.findViewById(R.id.info1);
 		TextView info2 = (TextView) convertView.findViewById(R.id.info2);
+		LinearLayout frame2 = (LinearLayout) convertView
+				.findViewById(R.id.frame2);
+		TextView title1 = (TextView) convertView.findViewById(R.id.title2);
+		TextView info12 = (TextView) convertView.findViewById(R.id.info12);
+		TextView info22 = (TextView) convertView.findViewById(R.id.info22);
+		TextView from = (TextView) convertView.findViewById(R.id.from2);
+		frame1.setVisibility(View.VISIBLE);
+		frame2.setVisibility(View.GONE);
 		View gap2 = convertView.findViewById(R.id.gap2);
 		View gap3 = convertView.findViewById(R.id.gap3);
 		if (isLastChild) {
@@ -497,6 +523,22 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 			title.setText(trash.name);
 			info1.setText("可清理空间");
 			info2.setText(trash.size_str);
+		} else if (groupPosition == 4) {
+			frame1.setVisibility(View.GONE);
+			frame2.setVisibility(View.VISIBLE);
+			BigFileBean bigfile = mBList.get(childPosition);
+			icon.setImageResource(bigfile.drawable);
+			title1.setText((new File(bigfile.path)).getName());
+			info12.setText("大小：");
+			info22.setText(Formatter.formatFileSize(
+					TAApplication.getApplication(), bigfile.size));
+			select.setTag(bigfile);
+			if (bigfile.isSelect) {
+				select.setImageResource(R.drawable.cleanmaster_select);
+			} else {
+				select.setImageResource(R.drawable.cleanmaster_noselect);
+			}
+			from.setText(bigfile.path);
 		}
 		return convertView;
 	}
@@ -514,6 +556,7 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 		mRList.clear();
 		mAList.clear();
 		mTList.clear();
+		mBList.clear();
 		if (bean.cacheList != null) {
 			mCList.addAll(bean.cacheList);
 		}
@@ -529,10 +572,20 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 		if (bean.apkList3 != null) {
 			mAList.addAll(bean.apkList3);
 		}
+		if (bean.bigFileList1 != null) {
+			mBList.addAll(bean.bigFileList1);
+		}
+		if (bean.bigFileList2 != null) {
+			mBList.addAll(bean.bigFileList2);
+		}
+		if (bean.bigFileList3 != null) {
+			mBList.addAll(bean.bigFileList3);
+		}
 		// 处理数据
 		Collections.sort(mCList);
 		Collections.sort(mRList);
 		Collections.sort(mAList);
+		Collections.sort(mBList);
 		// 缩略图
 		List<TrashBean> tList1 = new ArrayList<TrashBean>();
 		// 空文件夹

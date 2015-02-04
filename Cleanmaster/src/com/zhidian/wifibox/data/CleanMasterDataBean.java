@@ -19,6 +19,9 @@ public class CleanMasterDataBean {
 	public List<TrashBean> trashList2 = new ArrayList<TrashBean>();
 	public List<APKBean> apkList3 = new ArrayList<APKBean>();
 	public List<TrashBean> trashList3 = new ArrayList<TrashBean>();
+	public List<BigFileBean> bigFileList1 = new ArrayList<BigFileBean>();
+	public List<BigFileBean> bigFileList2 = new ArrayList<BigFileBean>();
+	public List<BigFileBean> bigFileList3 = new ArrayList<BigFileBean>();
 
 	public List<APKBean> getAPKList() {
 		List<APKBean> ret = new ArrayList<APKBean>();
@@ -137,6 +140,21 @@ public class CleanMasterDataBean {
 		 */
 		public int type;
 		public boolean isSelect;
+	}
+
+	public static class BigFileBean implements Comparable<BigFileBean> {
+		public long size;
+		public String path;
+		public boolean isSelect;
+		public int drawable;
+
+		@Override
+		public int compareTo(BigFileBean another) {
+			if (this.size == another.size) {
+				return 0;
+			}
+			return (this.size - another.size) > 0 ? -1 : 1;
+		}
 	}
 
 }
