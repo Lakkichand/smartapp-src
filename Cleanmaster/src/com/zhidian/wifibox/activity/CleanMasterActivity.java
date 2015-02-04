@@ -16,6 +16,9 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
 import com.smartapp.ex.cleanmaster.R;
 import com.ta.TAApplication;
 import com.ta.mvc.common.TAIResponseListener;
@@ -39,6 +42,7 @@ import com.zhidian.wifibox.view.ScanView;
  * 
  */
 public class CleanMasterActivity extends Activity {
+	private AdView adView;
 	/**
 	 * 停止扫描
 	 */
@@ -558,6 +562,20 @@ public class CleanMasterActivity extends Activity {
 				CleanMasterController.class.getSimpleName(),
 				new TARequest(CleanMasterController.SCAN, null), mListener,
 				true, false);
+
+		// 创建adView。
+		adView = new AdView(this);
+		adView.setAdUnitId("ca-app-pub-6335053266754945/8627337712");
+		adView.setAdSize(AdSize.BANNER);
+		FrameLayout container = (FrameLayout) findViewById(R.id.adcontainer);
+		FrameLayout.LayoutParams clp = new FrameLayout.LayoutParams(
+				FrameLayout.LayoutParams.MATCH_PARENT,
+				FrameLayout.LayoutParams.WRAP_CONTENT);
+		container.addView(adView, clp);
+		// 启动一般性请求。
+		AdRequest adRequest = new AdRequest.Builder().build();
+		// 在adView中加载广告请求。
+		adView.loadAd(adRequest);
 	}
 
 	/**
@@ -572,17 +590,20 @@ public class CleanMasterActivity extends Activity {
 	@Override
 	protected void onResume() {
 		super.onResume();
+		adView.resume();
 		TapjoyConnect.getTapjoyConnectInstance().appResume();
 	}
 
 	@Override
 	protected void onPause() {
+		adView.pause();
 		super.onPause();
 		TapjoyConnect.getTapjoyConnectInstance().appPause();
 	}
 
 	@Override
 	protected void onDestroy() {
+		adView.destroy();
 		super.onDestroy();
 	}
 

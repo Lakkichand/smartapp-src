@@ -729,4 +729,10 @@
             android:textSize="16sp" />
     </RelativeLayout>
 
+    <FrameLayout
+        android:id="@+id/adcontainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </FrameLayout>
+
 </LinearLayout>
