@@ -512,7 +512,7 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 			info1.setText("可释放内存");
 			info2.setText(ram.ram_str);
 		} else if (groupPosition == 3) {
-			icon.setVisibility(View.GONE);
+			icon.setImageResource(R.drawable.ic_launcher);
 			TrashCombination trash = mTList.get(childPosition);
 			select.setTag(trash);
 			if (trash.isSelect) {
@@ -538,7 +538,7 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 			} else {
 				select.setImageResource(R.drawable.cleanmaster_noselect);
 			}
-			from.setText(bigfile.path);
+			from.setText(bigfile.show_path);
 		}
 		return convertView;
 	}

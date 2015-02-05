@@ -145,6 +145,7 @@ public class CleanMasterDataBean {
 	public static class BigFileBean implements Comparable<BigFileBean> {
 		public long size;
 		public String path;
+		public String show_path;
 		public boolean isSelect;
 		public int drawable;
 

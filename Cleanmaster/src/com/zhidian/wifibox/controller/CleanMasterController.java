@@ -706,6 +706,7 @@ public class CleanMasterController extends TACommand {
 		private List<TrashBean> mTrashList;
 		private List<BigFileBean> mBigList;
 		private int mIndex;
+		private List<String> mSDPath;
 
 		public TrashScanThread(int index, CleanMasterController controller,
 				CountDownLatch cd, List<String> paths) {
@@ -716,6 +717,7 @@ public class CleanMasterController extends TACommand {
 			mApkList = new ArrayList<APKBean>();
 			mTrashList = new ArrayList<TrashBean>();
 			mBigList = new ArrayList<BigFileBean>();
+			mSDPath = FileUtil.getExtSDCardPaths();
 			setName("TrashScanThread" + mIndex);
 			setPriority(Thread.MAX_PRIORITY);
 			for (String path : paths) {
@@ -781,6 +783,14 @@ public class CleanMasterController extends TACommand {
 						BigFileBean bean = new BigFileBean();
 						bean.isSelect = false;
 						bean.path = file.getAbsolutePath();
+						bean.show_path = bean.path;
+						for (String sdp : mSDPath) {
+							if (bean.path.startsWith(sdp)) {
+								bean.show_path = bean.path
+										.replaceFirst(sdp, "");
+								break;
+							}
+						}
 						bean.size = file.length();
 						bean.drawable = R.drawable.ic_launcher;
 						mBigList.add(bean);
