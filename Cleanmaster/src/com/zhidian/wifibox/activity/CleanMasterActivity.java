@@ -47,6 +47,7 @@ public class CleanMasterActivity extends Activity {
 	// TODO 点击安装包，打开安装界面
 	// TODO 清理系统应用提示
 	// TODO 垃圾清理加入其它选项
+	// TODO 测试性能
 	private AdView adView;
 	/**
 	 * 停止扫描
