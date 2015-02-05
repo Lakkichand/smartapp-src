@@ -741,12 +741,12 @@ public class CleanMasterController extends TACommand {
 								bean.size = sfile.length();
 								bean.isSelect = true;
 								mTrashList.add(bean);
-								List<TrashBean> tmp = new ArrayList<TrashBean>();
-								tmp.addAll(mTrashList);
-								mController.sendRuntingMessage(new Object[] {
-										mIndex, tmp });
 							}
 						}
+						List<TrashBean> tmp = new ArrayList<TrashBean>();
+						tmp.addAll(mTrashList);
+						mController.sendRuntingMessage(new Object[] { mIndex,
+								tmp });
 					}
 				}
 			}
@@ -754,6 +754,19 @@ public class CleanMasterController extends TACommand {
 				mController.sendRuntingMessage(path);
 				globalScan(path);
 			}
+			// 大文件
+			List<BigFileBean> tmpBigFile = new ArrayList<BigFileBean>();
+			tmpBigFile.addAll(mBigList);
+			mController.sendRuntingMessage(new Object[] { mIndex, tmpBigFile });
+			// 残留垃圾
+			List<TrashBean> tmpTrash = new ArrayList<TrashBean>();
+			tmpTrash.addAll(mTrashList);
+			mController.sendRuntingMessage(new Object[] { mIndex, tmpTrash });
+			// APK
+			List<APKBean> tmpAPK = new ArrayList<APKBean>();
+			tmpAPK.addAll(mApkList);
+			mController.sendRuntingMessage(new Object[] { mIndex, tmpAPK });
+			// 结束
 			mCD.countDown();
 		}
 
@@ -771,10 +784,12 @@ public class CleanMasterController extends TACommand {
 						bean.size = file.length();
 						bean.drawable = R.drawable.ic_launcher;
 						mBigList.add(bean);
-						List<BigFileBean> tmp = new ArrayList<BigFileBean>();
-						tmp.addAll(mBigList);
-						mController.sendRuntingMessage(new Object[] { mIndex,
-								tmp });
+						if (mBigList.size() % 3 == 0) {
+							List<BigFileBean> tmp = new ArrayList<BigFileBean>();
+							tmp.addAll(mBigList);
+							mController.sendRuntingMessage(new Object[] {
+									mIndex, tmp });
+						}
 					}
 					if (isTmpFile(file)) {
 						// 临时文件
@@ -784,10 +799,12 @@ public class CleanMasterController extends TACommand {
 						bean.size = file.length();
 						bean.isSelect = true;
 						mTrashList.add(bean);
-						List<TrashBean> tmp = new ArrayList<TrashBean>();
-						tmp.addAll(mTrashList);
-						mController.sendRuntingMessage(new Object[] { mIndex,
-								tmp });
+						if (mTrashList.size() % 3 == 0) {
+							List<TrashBean> tmp = new ArrayList<TrashBean>();
+							tmp.addAll(mTrashList);
+							mController.sendRuntingMessage(new Object[] {
+									mIndex, tmp });
+						}
 					} else if (isLogFile(file)) {
 						// 日志
 						TrashBean bean = new TrashBean();
@@ -796,10 +813,12 @@ public class CleanMasterController extends TACommand {
 						bean.size = file.length();
 						bean.isSelect = true;
 						mTrashList.add(bean);
-						List<TrashBean> tmp = new ArrayList<TrashBean>();
-						tmp.addAll(mTrashList);
-						mController.sendRuntingMessage(new Object[] { mIndex,
-								tmp });
+						if (mTrashList.size() % 3 == 0) {
+							List<TrashBean> tmp = new ArrayList<TrashBean>();
+							tmp.addAll(mTrashList);
+							mController.sendRuntingMessage(new Object[] {
+									mIndex, tmp });
+						}
 					} else if (isAPKFile(file)) {
 						// APK
 						APKBean bean = new APKBean();
@@ -845,10 +864,12 @@ public class CleanMasterController extends TACommand {
 							}
 						}
 						mApkList.add(bean);
-						List<APKBean> tmp = new ArrayList<APKBean>();
-						tmp.addAll(mApkList);
-						mController.sendRuntingMessage(new Object[] { mIndex,
-								tmp });
+						if (mApkList.size() % 3 == 0) {
+							List<APKBean> tmp = new ArrayList<APKBean>();
+							tmp.addAll(mApkList);
+							mController.sendRuntingMessage(new Object[] {
+									mIndex, tmp });
+						}
 					}
 				} else if (file.isDirectory()) {
 					if (isEmptyDirectory(file)) {
@@ -859,10 +880,12 @@ public class CleanMasterController extends TACommand {
 						bean.size = file.length();
 						bean.isSelect = true;
 						mTrashList.add(bean);
-						List<TrashBean> tmp = new ArrayList<TrashBean>();
-						tmp.addAll(mTrashList);
-						mController.sendRuntingMessage(new Object[] { mIndex,
-								tmp });
+						if (mTrashList.size() % 3 == 0) {
+							List<TrashBean> tmp = new ArrayList<TrashBean>();
+							tmp.addAll(mTrashList);
+							mController.sendRuntingMessage(new Object[] {
+									mIndex, tmp });
+						}
 					} else {
 						File[] files = file.listFiles();
 						if (files != null) {
