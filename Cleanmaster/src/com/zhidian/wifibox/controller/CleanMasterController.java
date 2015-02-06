@@ -864,13 +864,13 @@ public class CleanMasterController extends TACommand {
 										bean.pkgName);
 								if (versionCode < bean.versionCode) {
 									// 可升级
-									bean.isSelect = false;
+									bean.isSelect = true;
 								} else {
 									bean.isSelect = true;
 								}
 							} else {
 								// 未安装
-								bean.isSelect = false;
+								bean.isSelect = true;
 							}
 						}
 						mApkList.add(bean);
