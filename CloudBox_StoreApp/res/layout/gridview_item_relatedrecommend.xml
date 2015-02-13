@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:gravity="center" >
+
+    <ImageView
+        android:id="@+id/gridview_image"
+        android:layout_width="@dimen/game_photoSize"
+        android:layout_height="@dimen/game_photoSize"
+        android:layout_margin="5dip"
+        android:src="@drawable/default_logo" />
+    
+    <TextView 
+        android:id="@+id/gridview_name"
+        android:layout_width="55dip"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="13sp"
+        android:singleLine="true"
+        android:text="刀塔女神"/>
+
+</LinearLayout>

@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFf7f7f7"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/scanframe"
+        android:layout_width="match_parent"
+        android:layout_height="152dp"
+        android:background="#FF3dbe86" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/cleanmaster_back_selector" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="2dp"
+                android:text="手机清理"
+                android:textColor="@android:color/white"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="35dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/total_size_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="共有"
+                android:textColor="@android:color/white"
+                android:textSize="27dp" />
+
+            <TextView
+                android:id="@+id/total_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0B"
+                android:textColor="#FFFFFF00"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/total_size_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="垃圾"
+                android:textColor="@android:color/white"
+                android:textSize="27dp" />
+
+            <TextView
+                android:id="@+id/total_size_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(建议清理)"
+                android:textColor="@android:color/white"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/scaninfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="22dp"
+            android:background="#FFdddddd" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="22dp"
+                android:background="#FFdddddd" />
+
+            <com.zhidian.wifibox.view.RotationView
+                android:id="@+id/progress_total"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/progress_bg"
+                android:padding="3.5dp"
+                android:src="@drawable/progress_total_icon" />
+
+            <TextView
+                android:id="@+id/title_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/progress_total"
+                android:singleLine="true"
+                android:text="正在扫描"
+                android:textColor="#FF666666"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="22dp"
+                android:background="#FFdddddd" />
+
+            <com.zhidian.wifibox.view.RotationView
+                android:id="@+id/progress_cache"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/progress_bg"
+                android:padding="3.5dp"
+                android:src="@drawable/progress_icon" />
+
+            <TextView
+                android:id="@+id/title_cache"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/progress_cache"
+                android:singleLine="true"
+                android:text="缓存扫描"
+                android:textColor="#FF666666"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/size_cache"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#FF999999"
+                android:textSize="14dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="22dp"
+                android:background="#FFdddddd" />
+
+            <com.zhidian.wifibox.view.RotationView
+                android:id="@+id/progress_apk"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/progress_bg"
+                android:padding="3.5dp"
+                android:src="@drawable/progress_icon" />
+
+            <TextView
+                android:id="@+id/title_apk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/progress_apk"
+                android:singleLine="true"
+                android:text="安装包扫描"
+                android:textColor="#FF666666"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/size_apk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#FF999999"
+                android:textSize="14dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="22dp"
+                android:background="#FFdddddd" />
+
+            <com.zhidian.wifibox.view.RotationView
+                android:id="@+id/progress_ram"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/progress_bg"
+                android:padding="3.5dp"
+                android:src="@drawable/progress_icon" />
+
+            <TextView
+                android:id="@+id/title_ram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/progress_ram"
+                android:singleLine="true"
+                android:text="内存扫描"
+                android:textColor="#FF666666"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/size_ram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#FF999999"
+                android:textSize="14dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="22dp"
+                android:background="#FFdddddd" />
+
+            <com.zhidian.wifibox.view.RotationView
+                android:id="@+id/progress_trash"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/progress_bg"
+                android:padding="3.5dp"
+                android:src="@drawable/progress_icon" />
+
+            <TextView
+                android:id="@+id/title_trash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/progress_trash"
+                android:singleLine="true"
+                android:text="残留文件扫描"
+                android:textColor="#FF666666"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/size_trash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#FF999999"
+                android:textSize="14dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="0.5dp"
+        android:layout_height="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="22dp"
+        android:layout_weight="1.0"
+        android:background="#FFdddddd"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/cancle_frame"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@android:color/white"
+        android:paddingBottom="6dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="6dp"
+        android:visibility="visible" >
+
+        <Button
+            android:id="@+id/cancle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/cleanmaster_btn_bg"
+            android:gravity="center"
+            android:text="停止扫描"
+            android:textColor="@color/cleanmaster_btn_selector"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/title_frame"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:singleLine="true"
+            android:text="共发现"
+            android:textColor="#FF666666"
+            android:textSize="16.5dp" />
+
+        <TextView
+            android:id="@+id/title_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            android:text="126M"
+            android:textColor="#FFea7d00"
+            android:textSize="16.5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            android:text="垃圾可清理"
+            android:textColor="#FF666666"
+            android:textSize="16.5dp" />
+    </LinearLayout>
+
+    <ExpandableListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:listSelector="#00000000"
+        android:visibility="gone" >
+    </ExpandableListView>
+
+    <FrameLayout
+        android:id="@+id/cleaning_frame"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/cleaning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:singleLine="true"
+            android:text="正在清理："
+            android:textColor="#FF666666"
+            android:textSize="16.5dp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/clean_finish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/clean_finish" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:singleLine="true"
+                android:text="清理完成"
+                android:textColor="#FF3cbe87"
+                android:textSize="16.5dp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/clean_result_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/result_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@android:color/white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@android:color/white" >
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="缓存清理"
+                    android:textColor="#FF666666"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/info1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/title"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@+id/title"
+                    android:text="(已清理0项共"
+                    android:textColor="#FF999999"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/info2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/title"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/info1"
+                    android:text="0B"
+                    android:textColor="#FFea7d00"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/info3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/title"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/info2"
+                    android:text=")"
+                    android:textColor="#FF999999"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/gap"
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/result_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@android:color/white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@android:color/white" >
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="安装包清理"
+                    android:textColor="#FF666666"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/info1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/title"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@+id/title"
+                    android:text="(已清理0项共"
+                    android:textColor="#FF999999"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/info2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/title"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/info1"
+                    android:text="0B"
+                    android:textColor="#FFea7d00"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/info3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/title"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/info2"
+                    android:text=")"
+                    android:textColor="#FF999999"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/gap"
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/result_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@android:color/white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@android:color/white" >
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="内存加速"
+                    android:textColor="#FF666666"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/info1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/title"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@+id/title"
+                    android:text="(已清理0项共"
+                    android:textColor="#FF999999"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/info2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/title"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/info1"
+                    android:text="0B"
+                    android:textColor="#FFea7d00"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/info3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/title"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/info2"
+                    android:text=")"
+                    android:textColor="#FF999999"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/gap"
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/result_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@android:color/white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@android:color/white" >
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="残留文件"
+                    android:textColor="#FF666666"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/info1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/title"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@+id/title"
+                    android:text="(已清理0项共"
+                    android:textColor="#FF999999"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/info2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/title"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/info1"
+                    android:text="0B"
+                    android:textColor="#FFea7d00"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/info3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/title"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/info2"
+                    android:text=")"
+                    android:textColor="#FF999999"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/gap"
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/clean_frame"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@android:color/white"
+        android:paddingBottom="6dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="6dp"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/clean"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/cleanmaster_cleanbtn_bg"
+            android:gravity="center"
+            android:text="一键清理"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>

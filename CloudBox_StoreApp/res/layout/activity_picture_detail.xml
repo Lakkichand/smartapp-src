@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/file_header_title_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp" >
+
+        <com.zhidian.wifibox.view.stickygrid.StickyGridHeadersGridView
+            android:id="@+id/expandableImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/white"
+            android:childDivider="@color/transparent"
+            android:clipToPadding="false"
+            android:columnWidth="90dip"
+            android:groupIndicator="@color/transparent"
+            android:listSelector="@color/transparent"
+            android:numColumns="auto_fit"
+            android:paddingBottom="60dp"
+            android:scrollbars="none"
+            android:verticalSpacing="10dp" />
+
+        <include layout="@layout/file_bottom_delete_btn" />
+
+        <include layout="@layout/image_loading" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- For buttons -->
+    <dimen name="common_text_size_large">18sp</dimen>
+    <!-- For list texts (top line) -->
+    <dimen name="common_text_size_middle">16sp</dimen>
+    <dimen name="common_text_size_middle_2">16sp</dimen>
+    <!-- For list texts (bottom line), summary texts, icon texts, descriptions, tag texts -->
+    <dimen name="common_text_size_small">13sp</dimen>
+    <dimen name="common_text_size_small_2">10sp</dimen>
+    <dimen name="common_text_size_small_3">12sp</dimen>
+    <dimen name="page_margin_width">0dp</dimen>
+    
+</resources>
