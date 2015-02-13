@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <item name="selected_view" type="id"/>
-    <item name="tag_position" type="id"/>
-    <item name="tag_object" type="id"/>
-
-</resources>

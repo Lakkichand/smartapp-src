@@ -1,7 +1,0 @@
-代码写上必要的注释
-每次提交SVN写上修改的内容
-本地测试代码不能提交到SVN
-避免低级错误，如空指针、数组越界
-打包格式：CloudBox_StoreApp_1.3.1_SVN4948_测试服.apk
-修改禅道BUG：提交SVN是写明修改禅道BUG #2571 ，关闭禅道BUG时标明SVNXXXX的提交修改了这个BUG。
-版本发布后在release_svn_mappings写上该发布版本对应的SVN修订号，如：1.4.0 ------->>  SVN5637
