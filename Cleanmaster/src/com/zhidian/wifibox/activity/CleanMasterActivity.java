@@ -427,6 +427,9 @@ public class CleanMasterActivity extends Activity {
 						&& (oarray[1] instanceof List<?>)) {
 					int index = (Integer) oarray[0];
 					List<Object> olist = (List<Object>) oarray[1];
+					if (olist == null || olist.size() <= 0) {
+						return;
+					}
 					Object item = olist.get(0);
 					if (item instanceof TrashBean) {
 						// 残留
