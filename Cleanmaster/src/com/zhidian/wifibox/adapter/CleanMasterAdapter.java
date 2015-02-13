@@ -131,6 +131,22 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 						tb.isSelect = trash.isSelect;
 					}
 				}
+			} else if (groupPosition == 4) {
+				for (BigFileBean big : mBList) {
+					if (big.isSelect) {
+						bs = true;
+						break;
+					}
+				}
+				if (bs) {
+					for (BigFileBean big : mBList) {
+						big.isSelect = false;
+					}
+				} else {
+					for (BigFileBean big : mBList) {
+						big.isSelect = true;
+					}
+				}
 			}
 			notifyDataSetChanged();
 			mHandler.sendEmptyMessage(CleanMasterActivity.MSG_UPDATE_SELECT);
@@ -184,6 +200,9 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 				for (TrashBean tb : trash.list) {
 					tb.isSelect = trash.isSelect;
 				}
+			} else if (tag instanceof BigFileBean) {
+				BigFileBean bf = (BigFileBean) tag;
+				bf.isSelect = !bf.isSelect;
 			}
 			notifyDataSetChanged();
 			mHandler.sendEmptyMessage(CleanMasterActivity.MSG_UPDATE_SELECT);
