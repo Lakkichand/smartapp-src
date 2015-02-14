@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: C:\\Documents and Settings\\Administrator\\×ÀÃæ\\workspace\\Cleanmaster\\src\\com\\ta\\util\\download\\IDownloadService.aidl
+ * Original file: /Users/xiedezhi/Documents/workspace/Cleanmaster/src/com/ta/util/download/IDownloadService.aidl
  */
 package com.ta.util.download;
 public interface IDownloadService extends android.os.IInterface

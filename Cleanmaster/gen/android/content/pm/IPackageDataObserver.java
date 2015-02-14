@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: C:\\Documents and Settings\\Administrator\\×ÀÃæ\\workspace\\Cleanmaster\\src\\android\\content\\pm\\IPackageDataObserver.aidl
+ * Original file: /Users/xiedezhi/Documents/workspace/Cleanmaster/src/android/content/pm/IPackageDataObserver.aidl
  */
 package android.content.pm;
 /**
