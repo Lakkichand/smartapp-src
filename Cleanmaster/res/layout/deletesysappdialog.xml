@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/prompt_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_weight="5.50"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="确定要删除吗？"
+        android:textColor="#FF00c4aa"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/test_view"
+        android:layout_width="match_parent"
+        android:layout_height="1.0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:background="#FF00c9b0" />
+
+    <TextView
+        android:id="@+id/filename"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25.0dip"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text=""
+        android:textColor="#FF999999"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/gap"
+        android:layout_width="fill_parent"
+        android:layout_height="25dp" />
+
+    <TextView
+        android:id="@+id/hint_count"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="大文件不一定都是无用的垃圾文件，请谨慎选择，避免误删。"
+        android:textColor="#383838"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/delethit_dialog_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/btn_file_manager_dialog_delete"
+            android:text="取消"
+            android:textColor="#383838"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/delethit_dialog_goon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/btn_file_manager_dialog_delete"
+            android:text="确定"
+            android:textColor="#FF00c4aa"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -33,6 +33,7 @@ import com.zhidian.wifibox.data.CleanMasterDataBean.TrashBean;
 import com.zhidian.wifibox.util.AppUtils;
 import com.zhidian.wifibox.util.DrawUtil;
 import com.zhidian.wifibox.util.Setting;
+import com.zhidian.wifibox.view.dialog.DeleteSysAppDialog;
 import com.zhidian3g.wifibox.imagemanager.AsyncImageManager;
 import com.zhidian3g.wifibox.imagemanager.AsyncImageManager.AsyncImageLoadedCallBack;
 
@@ -143,9 +144,20 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 						big.isSelect = false;
 					}
 				} else {
-					for (BigFileBean big : mBList) {
-						big.isSelect = true;
-					}
+					DeleteSysAppDialog dialog = new DeleteSysAppDialog(
+							TAApplication.getApplication(),
+							new OnClickListener() {
+
+								@Override
+								public void onClick(View v) {
+									for (BigFileBean big : mBList) {
+										big.isSelect = true;
+									}
+									notifyDataSetChanged();
+									mHandler.sendEmptyMessage(CleanMasterActivity.MSG_UPDATE_SELECT);
+								}
+							}, null, "");
+					dialog.show();
 				}
 			}
 			notifyDataSetChanged();
@@ -201,8 +213,23 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 					tb.isSelect = trash.isSelect;
 				}
 			} else if (tag instanceof BigFileBean) {
-				BigFileBean bf = (BigFileBean) tag;
-				bf.isSelect = !bf.isSelect;
+				final BigFileBean bf = (BigFileBean) tag;
+				if (bf.isSelect) {
+					bf.isSelect = !bf.isSelect;
+				} else {
+					DeleteSysAppDialog dialog = new DeleteSysAppDialog(
+							TAApplication.getApplication(),
+							new OnClickListener() {
+
+								@Override
+								public void onClick(View v) {
+									bf.isSelect = !bf.isSelect;
+									notifyDataSetChanged();
+									mHandler.sendEmptyMessage(CleanMasterActivity.MSG_UPDATE_SELECT);
+								}
+							}, null, "(" + bf.show_path + ")");
+					dialog.show();
+				}
 			}
 			notifyDataSetChanged();
 			mHandler.sendEmptyMessage(CleanMasterActivity.MSG_UPDATE_SELECT);
@@ -531,7 +558,7 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 			info1.setText("可释放内存");
 			info2.setText(ram.ram_str);
 		} else if (groupPosition == 3) {
-			icon.setImageResource(R.drawable.ic_launcher);
+			icon.setImageResource(R.drawable.explorer_default_fileicon);
 			TrashCombination trash = mTList.get(childPosition);
 			select.setTag(trash);
 			if (trash.isSelect) {
@@ -546,7 +573,7 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 			frame1.setVisibility(View.GONE);
 			frame2.setVisibility(View.VISIBLE);
 			BigFileBean bigfile = mBList.get(childPosition);
-			icon.setImageResource(bigfile.drawable);
+			setBigFileIcon(bigfile.path, icon);
 			title1.setText((new File(bigfile.path)).getName());
 			info12.setText("大小：");
 			info22.setText(Formatter.formatFileSize(
@@ -560,6 +587,79 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 			from.setText(bigfile.show_path);
 		}
 		return convertView;
+	}
+
+	private void setBigFileIcon(String filepath, final ImageView icon) {
+		icon.setTag("");
+		filepath = filepath.toLowerCase();
+		icon.setImageResource(R.drawable.explorer_c_icon_document_p);
+		if (filepath.endsWith(".doc") || filepath.endsWith(".docx")) {
+			icon.setImageResource(R.drawable.icon_word);
+		} else if (filepath.endsWith(".txt")) {
+			icon.setImageResource(R.drawable.icon_txt);
+		} else if (filepath.endsWith(".ppt")) {
+			icon.setImageResource(R.drawable.icon_ppt);
+		} else if (filepath.endsWith(".pdf")) {
+			icon.setImageResource(R.drawable.icon_pdf);
+		} else if (filepath.endsWith(".xls")) {
+			icon.setImageResource(R.drawable.icon_excel);
+		} else if (filepath.endsWith(".rar") || filepath.endsWith(".zip")
+				|| filepath.endsWith(".jar") || filepath.endsWith(".ace")
+				|| filepath.endsWith(".arj") || filepath.endsWith(".bzip2")
+				|| filepath.endsWith(".gzip") || filepath.endsWith(".lzma")
+				|| filepath.endsWith(".cab") || filepath.endsWith(".crx")
+				|| filepath.endsWith(".gz") || filepath.endsWith(".hqx")
+				|| filepath.endsWith(".img") || filepath.endsWith(".lha")
+				|| filepath.endsWith(".lzo") || filepath.endsWith(".lzx")
+				|| filepath.endsWith(".pak") || filepath.endsWith(".paz")
+				|| filepath.endsWith(".tar") || filepath.endsWith(".img")
+				|| filepath.endsWith(".tz") || filepath.endsWith(".7z")
+				|| filepath.endsWith(".zoo") || filepath.endsWith(".z")) {
+			icon.setImageResource(R.drawable.icon_rar);
+		} else if (filepath.endsWith(".avi") || filepath.endsWith(".mpeg")
+				|| filepath.endsWith(".mpg") || filepath.endsWith(".dat")
+				|| filepath.endsWith(".ra") || filepath.endsWith(".rm")
+				|| filepath.endsWith(".rmvb") || filepath.endsWith(".mov")
+				|| filepath.endsWith(".qt") || filepath.endsWith(".wmv")
+				|| filepath.endsWith(".divx") || filepath.endsWith(".mpe")
+				|| filepath.endsWith(".mp4") || filepath.endsWith(".mkv")
+				|| filepath.endsWith(".vob") || filepath.endsWith(".swf")) {
+			icon.setImageResource(R.drawable.explorer_c_icon_video_p);
+		} else if (filepath.endsWith(".wav") || filepath.endsWith(".aif")
+				|| filepath.endsWith(".au") || filepath.endsWith(".mp3")
+				|| filepath.endsWith(".ram") || filepath.endsWith(".acm")
+				|| filepath.endsWith(".aifc") || filepath.endsWith(".aiff")
+				|| filepath.endsWith(".asf") || filepath.endsWith(".asp")
+				|| filepath.endsWith(".asx")) {
+			icon.setImageResource(R.drawable.explorer_c_icon_audio_p);
+		} else if (filepath.endsWith(".bmp") || filepath.endsWith(".png")
+				|| filepath.endsWith(".jpg") || filepath.endsWith(".jpeg")
+				|| filepath.endsWith(".gif")) {
+			icon.setImageResource(R.drawable.explorer_c_icon_image_p);
+		} else if (filepath.endsWith(".apk")) {
+			String pkgName = filepath + ".big";
+			icon.setTag(pkgName);
+			Bitmap bm = AsyncImageManager.getInstance().loadIcon(pkgName,
+					filepath, true, true, new AsyncImageLoadedCallBack() {
+
+						@Override
+						public void imageLoaded(Bitmap imageBitmap,
+								String imgUrl) {
+							if (imageBitmap == null) {
+								return;
+							}
+							if (icon.getTag().equals(imgUrl)) {
+								icon.setImageBitmap(imageBitmap);
+							}
+						}
+					});
+			if (bm != null) {
+				icon.setImageBitmap(bm);
+			} else {
+				// 默认
+				icon.setImageBitmap(DrawUtil.sDefaultIcon);
+			}
+		}
 	}
 
 	@Override

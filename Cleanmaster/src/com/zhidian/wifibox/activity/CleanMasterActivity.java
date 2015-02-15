@@ -43,6 +43,8 @@ import com.zhidian.wifibox.view.ScanView;
  * 
  */
 public class CleanMasterActivity extends Activity {
+
+	public static boolean sSYD = false;
 	// TODO 选择大文件时弹框提示，只提示一次（退出清零）
 	// TODO 点击安装包，打开安装界面
 	// TODO 清理系统应用提示
@@ -169,6 +171,21 @@ public class CleanMasterActivity extends Activity {
 				for (TrashBean trash : mBean.trashList3) {
 					if (trash.isSelect) {
 						size += trash.size;
+					}
+				}
+				for (BigFileBean bfb : mBean.bigFileList1) {
+					if (bfb.isSelect) {
+						size += bfb.size;
+					}
+				}
+				for (BigFileBean bfb : mBean.bigFileList2) {
+					if (bfb.isSelect) {
+						size += bfb.size;
+					}
+				}
+				for (BigFileBean bfb : mBean.bigFileList3) {
+					if (bfb.isSelect) {
+						size += bfb.size;
 					}
 				}
 				mCleanButton.setText("一键清理 "
@@ -667,6 +684,7 @@ public class CleanMasterActivity extends Activity {
 	@Override
 	protected void onDestroy() {
 		adView.destroy();
+		sSYD = false;
 		super.onDestroy();
 	}
 

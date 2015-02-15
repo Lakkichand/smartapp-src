@@ -572,11 +572,6 @@ public class CleanMasterController extends TACommand {
 					// 过滤掉自己
 					continue;
 				}
-				ApplicationInfo app = info.applicationInfo;
-				if ((app.flags & ApplicationInfo.FLAG_SYSTEM) > 0) {
-					// 过滤系统应用
-					continue;
-				}
 				int state = pm.getApplicationEnabledSetting(packageName);
 				if (state == PackageManager.COMPONENT_ENABLED_STATE_DISABLED
 						|| state == PackageManager.COMPONENT_ENABLED_STATE_DISABLED_USER) {
@@ -591,6 +586,9 @@ public class CleanMasterController extends TACommand {
 				bean.ram_str = Formatter.formatFileSize(
 						TAApplication.getApplication(), bean.ram);
 				if (whiteList.contains(bean.pkgName)) {
+					bean.isSelect = false;
+				} else if (AppUtils.isSystemApp(TAApplication.getApplication(),
+						info.packageName)) {
 					bean.isSelect = false;
 				} else {
 					bean.isSelect = true;
