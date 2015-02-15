@@ -51,6 +51,20 @@ public class CleanMasterDataBean {
 		return ret;
 	}
 
+	public List<BigFileBean> getBigFileList() {
+		List<BigFileBean> ret = new ArrayList<CleanMasterDataBean.BigFileBean>();
+		if (bigFileList1 != null) {
+			ret.addAll(bigFileList1);
+		}
+		if (bigFileList2 != null) {
+			ret.addAll(bigFileList2);
+		}
+		if (bigFileList3 != null) {
+			ret.addAll(bigFileList3);
+		}
+		return ret;
+	}
+
 	/**
 	 * 缓存
 	 */

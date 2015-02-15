@@ -95,7 +95,8 @@ public class CleanMasterController extends TACommand {
 					bean.cacheList);
 			cThread.start();
 			TrashCleanThread tThread = new TrashCleanThread(this, cd,
-					bean.getAPKList(), bean.getTrashList());
+					bean.getAPKList(), bean.getTrashList(),
+					bean.getBigFileList());
 			tThread.start();
 			RAMCleanThread rThread = new RAMCleanThread(this, cd, bean.ramList);
 			rThread.start();
@@ -402,13 +403,16 @@ public class CleanMasterController extends TACommand {
 		private CountDownLatch mCD;
 		private List<APKBean> mAPKList;
 		private List<TrashBean> mTrashList;
+		private List<BigFileBean> mBigFileList;
 
 		public TrashCleanThread(CleanMasterController controller,
-				CountDownLatch cd, List<APKBean> alist, List<TrashBean> tlist) {
+				CountDownLatch cd, List<APKBean> alist, List<TrashBean> tlist,
+				List<BigFileBean> blist) {
 			mController = controller;
 			mCD = cd;
 			mAPKList = alist;
 			mTrashList = tlist;
+			mBigFileList = blist;
 			setName("TrashCleanThread");
 		}
 
@@ -445,6 +449,23 @@ public class CleanMasterController extends TACommand {
 						size += bean.size;
 						mController.sendRuntingMessage(new Object[] {
 								CleanMasterActivity.MSG_TRASH, count, size });
+					}
+				}
+			}
+			if (mBigFileList != null && mBigFileList.size() > 0) {
+				int count = 0;
+				long size = 0;
+				for (BigFileBean bean : mBigFileList) {
+					if (bean.isSelect) {
+						mController.sendRuntingMessage(bean.show_path);
+						File file = new File(bean.path);
+						if (file.exists()) {
+							file.delete();
+						}
+						count++;
+						size += bean.size;
+						mController.sendRuntingMessage(new Object[] {
+								CleanMasterActivity.MSG_BIG, count, size });
 					}
 				}
 			}

@@ -479,278 +479,349 @@
         </LinearLayout>
     </FrameLayout>
 
-    <LinearLayout
+    <ScrollView
         android:id="@+id/clean_result_frame"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.0"
-        android:orientation="vertical"
         android:visibility="gone" >
 
         <LinearLayout
-            android:id="@+id/result_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <View
+            <LinearLayout
+                android:id="@+id/result_1"
                 android:layout_width="match_parent"
-                android:layout_height="4dp"
-                android:background="@android:color/white" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
 
-            <RelativeLayout
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="@android:color/white" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@android:color/white" >
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:text="缓存清理"
+                        android:textColor="#FF666666"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/info1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/title"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@+id/title"
+                        android:text="(已清理0项共"
+                        android:textColor="#FF999999"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/info2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/title"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/info1"
+                        android:text="0B"
+                        android:textColor="#FFea7d00"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/info3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/title"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/info2"
+                        android:text=")"
+                        android:textColor="#FF999999"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/gap"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/result_2"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:background="@android:color/white" >
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
 
-                <TextView
-                    android:id="@+id/title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="15dp"
-                    android:text="缓存清理"
-                    android:textColor="#FF666666"
-                    android:textSize="18dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="@android:color/white" />
 
-                <TextView
-                    android:id="@+id/info1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/title"
-                    android:layout_marginLeft="7dp"
-                    android:layout_toRightOf="@+id/title"
-                    android:text="(已清理0项共"
-                    android:textColor="#FF999999"
-                    android:textSize="14dp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@android:color/white" >
 
-                <TextView
-                    android:id="@+id/info2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/title"
-                    android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/info1"
-                    android:text="0B"
-                    android:textColor="#FFea7d00"
-                    android:textSize="14dp" />
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:text="安装包清理"
+                        android:textColor="#FF666666"
+                        android:textSize="18dp" />
 
-                <TextView
-                    android:id="@+id/info3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/title"
-                    android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/info2"
-                    android:text=")"
-                    android:textColor="#FF999999"
-                    android:textSize="14dp" />
-            </RelativeLayout>
+                    <TextView
+                        android:id="@+id/info1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/title"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@+id/title"
+                        android:text="(已清理0项共"
+                        android:textColor="#FF999999"
+                        android:textSize="14dp" />
 
-            <View
-                android:id="@+id/gap"
+                    <TextView
+                        android:id="@+id/info2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/title"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/info1"
+                        android:text="0B"
+                        android:textColor="#FFea7d00"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/info3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/title"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/info2"
+                        android:text=")"
+                        android:textColor="#FF999999"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/gap"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/result_3"
                 android:layout_width="match_parent"
-                android:layout_height="10dp" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="@android:color/white" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@android:color/white" >
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:text="内存加速"
+                        android:textColor="#FF666666"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/info1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/title"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@+id/title"
+                        android:text="(已清理0项共"
+                        android:textColor="#FF999999"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/info2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/title"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/info1"
+                        android:text="0B"
+                        android:textColor="#FFea7d00"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/info3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/title"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/info2"
+                        android:text=")"
+                        android:textColor="#FF999999"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/gap"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/result_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="@android:color/white" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@android:color/white" >
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:text="残留文件"
+                        android:textColor="#FF666666"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/info1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/title"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@+id/title"
+                        android:text="(已清理0项共"
+                        android:textColor="#FF999999"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/info2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/title"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/info1"
+                        android:text="0B"
+                        android:textColor="#FFea7d00"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/info3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/title"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/info2"
+                        android:text=")"
+                        android:textColor="#FF999999"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/gap"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/result_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="@android:color/white" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@android:color/white" >
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:text="大文件"
+                        android:textColor="#FF666666"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/info1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/title"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@+id/title"
+                        android:text="(已清理0项共"
+                        android:textColor="#FF999999"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/info2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/title"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/info1"
+                        android:text="0B"
+                        android:textColor="#FFea7d00"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/info3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/title"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/info2"
+                        android:text=")"
+                        android:textColor="#FF999999"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/gap"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+            </LinearLayout>
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/result_2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="4dp"
-                android:background="@android:color/white" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:background="@android:color/white" >
-
-                <TextView
-                    android:id="@+id/title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="15dp"
-                    android:text="安装包清理"
-                    android:textColor="#FF666666"
-                    android:textSize="18dp" />
-
-                <TextView
-                    android:id="@+id/info1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/title"
-                    android:layout_marginLeft="7dp"
-                    android:layout_toRightOf="@+id/title"
-                    android:text="(已清理0项共"
-                    android:textColor="#FF999999"
-                    android:textSize="14dp" />
-
-                <TextView
-                    android:id="@+id/info2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/title"
-                    android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/info1"
-                    android:text="0B"
-                    android:textColor="#FFea7d00"
-                    android:textSize="14dp" />
-
-                <TextView
-                    android:id="@+id/info3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/title"
-                    android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/info2"
-                    android:text=")"
-                    android:textColor="#FF999999"
-                    android:textSize="14dp" />
-            </RelativeLayout>
-
-            <View
-                android:id="@+id/gap"
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/result_3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="4dp"
-                android:background="@android:color/white" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:background="@android:color/white" >
-
-                <TextView
-                    android:id="@+id/title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="15dp"
-                    android:text="内存加速"
-                    android:textColor="#FF666666"
-                    android:textSize="18dp" />
-
-                <TextView
-                    android:id="@+id/info1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/title"
-                    android:layout_marginLeft="7dp"
-                    android:layout_toRightOf="@+id/title"
-                    android:text="(已清理0项共"
-                    android:textColor="#FF999999"
-                    android:textSize="14dp" />
-
-                <TextView
-                    android:id="@+id/info2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/title"
-                    android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/info1"
-                    android:text="0B"
-                    android:textColor="#FFea7d00"
-                    android:textSize="14dp" />
-
-                <TextView
-                    android:id="@+id/info3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/title"
-                    android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/info2"
-                    android:text=")"
-                    android:textColor="#FF999999"
-                    android:textSize="14dp" />
-            </RelativeLayout>
-
-            <View
-                android:id="@+id/gap"
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/result_4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="4dp"
-                android:background="@android:color/white" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:background="@android:color/white" >
-
-                <TextView
-                    android:id="@+id/title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="15dp"
-                    android:text="残留文件"
-                    android:textColor="#FF666666"
-                    android:textSize="18dp" />
-
-                <TextView
-                    android:id="@+id/info1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/title"
-                    android:layout_marginLeft="7dp"
-                    android:layout_toRightOf="@+id/title"
-                    android:text="(已清理0项共"
-                    android:textColor="#FF999999"
-                    android:textSize="14dp" />
-
-                <TextView
-                    android:id="@+id/info2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/title"
-                    android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/info1"
-                    android:text="0B"
-                    android:textColor="#FFea7d00"
-                    android:textSize="14dp" />
-
-                <TextView
-                    android:id="@+id/info3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/title"
-                    android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/info2"
-                    android:text=")"
-                    android:textColor="#FF999999"
-                    android:textSize="14dp" />
-            </RelativeLayout>
-
-            <View
-                android:id="@+id/gap"
-                android:layout_width="match_parent"
-                android:layout_height="10dp" />
-        </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
 
     <RelativeLayout
         android:id="@+id/clean_frame"

@@ -14,6 +14,7 @@ import android.widget.ExpandableListView;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
@@ -117,11 +118,12 @@ public class CleanMasterActivity extends Activity {
 	private Button mCleanButton;
 	private FrameLayout mCleaningFrame;
 	private TextView mCleaning;
-	private LinearLayout mCleanResultFrame;
+	private ScrollView mCleanResultFrame;
 	private LinearLayout mResultFrame1;
 	private LinearLayout mResultFrame2;
 	private LinearLayout mResultFrame3;
 	private LinearLayout mResultFrame4;
+	private LinearLayout mResultFrame5;
 
 	/**
 	 * 列表选项更改后，更新一键清理的大小
@@ -318,6 +320,17 @@ public class CleanMasterActivity extends Activity {
 															getApplicationContext(),
 															size));
 											mCleanTrash = size;
+										} else if (type == MSG_BIG) {
+											TextView info1 = (TextView) mResultFrame5
+													.findViewById(R.id.info1);
+											TextView info2 = (TextView) mResultFrame5
+													.findViewById(R.id.info2);
+											info1.setText("(已清理" + count + "项共");
+											info2.setText(Formatter
+													.formatFileSize(
+															getApplicationContext(),
+															size));
+											mCleanBig = size;
 										}
 										// 更新展示板
 										mScanResult.setText(Formatter
@@ -325,7 +338,8 @@ public class CleanMasterActivity extends Activity {
 														getApplicationContext(),
 														mCleanCache + mCleanAPK
 																+ mCleanRAM
-																+ mCleanTrash));
+																+ mCleanTrash
+																+ mCleanBig));
 									}
 								}
 
@@ -632,11 +646,12 @@ public class CleanMasterActivity extends Activity {
 		mScanFrame.addView(mScanView, lp);
 		mCleaningFrame = (FrameLayout) findViewById(R.id.cleaning_frame);
 		mCleaning = (TextView) mCleaningFrame.findViewById(R.id.cleaning);
-		mCleanResultFrame = (LinearLayout) findViewById(R.id.clean_result_frame);
+		mCleanResultFrame = (ScrollView) findViewById(R.id.clean_result_frame);
 		mResultFrame1 = (LinearLayout) findViewById(R.id.result_1);
 		mResultFrame2 = (LinearLayout) findViewById(R.id.result_2);
 		mResultFrame3 = (LinearLayout) findViewById(R.id.result_3);
 		mResultFrame4 = (LinearLayout) findViewById(R.id.result_4);
+		mResultFrame5 = (LinearLayout) findViewById(R.id.result_5);
 		// 开始扫描
 		TAApplication.getApplication().doCommand(
 				CleanMasterController.class.getSimpleName(),
