@@ -32,6 +32,7 @@ import com.zhidian.wifibox.data.CleanMasterDataBean.RAMBean;
 import com.zhidian.wifibox.data.CleanMasterDataBean.TrashBean;
 import com.zhidian.wifibox.util.AppUtils;
 import com.zhidian.wifibox.util.DrawUtil;
+import com.zhidian.wifibox.util.InfoUtil;
 import com.zhidian.wifibox.util.Setting;
 import com.zhidian.wifibox.view.dialog.DeleteSysAppDialog;
 import com.zhidian3g.wifibox.imagemanager.AsyncImageManager;
@@ -182,29 +183,59 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 			} else if (tag instanceof RAMBean) {
 				RAMBean ram = (RAMBean) tag;
 				ram.isSelect = !ram.isSelect;
-				Setting setting = new Setting(TAApplication.getApplication());
-				String json = setting.getString(Setting.PROTECT_APP);
-				JSONArray array = null;
-				try {
-					array = new JSONArray(json);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-				if (array == null) {
-					array = new JSONArray();
-				}
-				if (!ram.isSelect) {
-					// 加入内存白名单
-					Set<String> set = arrayToSet(array);
-					set.add(ram.pkgName);
-					array = setToArray(set);
-					setting.putString(Setting.PROTECT_APP, array.toString());
+				if (!AppUtils.isSystemApp(TAApplication.getApplication(),
+						ram.pkgName)) {
+					// 用户应用
+					Setting setting = new Setting(
+							TAApplication.getApplication());
+					String json = setting.getString(Setting.PROTECT_APP);
+					JSONArray array = null;
+					try {
+						array = new JSONArray(json);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+					if (array == null) {
+						array = new JSONArray();
+					}
+					if (!ram.isSelect) {
+						// 加入内存白名单
+						Set<String> set = arrayToSet(array);
+						set.add(ram.pkgName);
+						array = setToArray(set);
+						setting.putString(Setting.PROTECT_APP, array.toString());
+					} else {
+						// 移出内存白名单
+						Set<String> set = arrayToSet(array);
+						set.remove(ram.pkgName);
+						array = setToArray(set);
+						setting.putString(Setting.PROTECT_APP, array.toString());
+					}
 				} else {
-					// 移出内存白名单
-					Set<String> set = arrayToSet(array);
-					set.remove(ram.pkgName);
-					array = setToArray(set);
-					setting.putString(Setting.PROTECT_APP, array.toString());
+					// 系统应用
+					Setting setting = new Setting(
+							TAApplication.getApplication());
+					String json = setting.getString(Setting.BLACK_APP);
+					JSONArray array = null;
+					try {
+						array = new JSONArray(json);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+					if (array == null) {
+						array = new JSONArray();
+					}
+					if (ram.isSelect) {
+						Set<String> set = arrayToSet(array);
+						set.add(ram.pkgName);
+						array = setToArray(set);
+						setting.putString(Setting.BLACK_APP, array.toString());
+					} else {
+						Set<String> set = arrayToSet(array);
+						set.remove(ram.pkgName);
+						array = setToArray(set);
+						setting.putString(Setting.BLACK_APP, array.toString());
+					}
 				}
 			} else if (tag instanceof TrashCombination) {
 				TrashCombination trash = (TrashCombination) tag;
@@ -426,6 +457,8 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 		LinearLayout frame1 = (LinearLayout) convertView
 				.findViewById(R.id.frame1);
 		TextView title = (TextView) convertView.findViewById(R.id.title);
+		TextView tinfo = (TextView) convertView.findViewById(R.id.title_info);
+		tinfo.setVisibility(View.GONE);
 		TextView info1 = (TextView) convertView.findViewById(R.id.info1);
 		TextView info2 = (TextView) convertView.findViewById(R.id.info2);
 		LinearLayout frame2 = (LinearLayout) convertView
@@ -557,6 +590,16 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 			}
 			info1.setText("可释放内存");
 			info2.setText(ram.ram_str);
+			if (AppUtils.isSystemApp(TAApplication.getApplication(),
+					ram.pkgName)) {
+				tinfo.setVisibility(View.VISIBLE);
+				tinfo.setText("（系统应用）");
+			}
+			if (ram.pkgName.equals(InfoUtil.getCurrentInput(TAApplication
+					.getApplication()))) {
+				tinfo.setVisibility(View.VISIBLE);
+				tinfo.setText("（当前输入法）");
+			}
 		} else if (groupPosition == 3) {
 			icon.setImageResource(R.drawable.explorer_default_fileicon);
 			TrashCombination trash = mTList.get(childPosition);

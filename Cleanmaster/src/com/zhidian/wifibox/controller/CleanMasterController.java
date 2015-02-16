@@ -138,6 +138,30 @@ public class CleanMasterController extends TACommand {
 		return ret;
 	}
 
+	private static Set<String> getBlackList() {
+		Set<String> ret = new HashSet<String>();
+		Setting setting = new Setting(TAApplication.getApplication());
+		String json = setting.getString(Setting.BLACK_APP);
+		JSONArray array = null;
+		try {
+			array = new JSONArray(json);
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		if (array == null) {
+			array = new JSONArray();
+		}
+		for (int i = 0; i < array.length(); i++) {
+			try {
+				String packname = array.getString(i);
+				ret.add(packname);
+			} catch (JSONException e) {
+				e.printStackTrace();
+			}
+		}
+		return ret;
+	}
+
 	public static class RAMCleanThread extends Thread {
 		private CleanMasterController mController;
 		private CountDownLatch mCD;
@@ -585,6 +609,7 @@ public class CleanMasterController extends TACommand {
 				e.printStackTrace();
 			}
 			Set<String> whiteList = getWhileList();
+			Set<String> blackList = getBlackList();
 			for (PackageInfo info : packageInfos) {
 				String packageName = info.packageName;
 				if (packageName != null
@@ -610,7 +635,11 @@ public class CleanMasterController extends TACommand {
 					bean.isSelect = false;
 				} else if (AppUtils.isSystemApp(TAApplication.getApplication(),
 						info.packageName)) {
-					bean.isSelect = false;
+					if (blackList.contains(info.packageName)) {
+						bean.isSelect = true;
+					} else {
+						bean.isSelect = false;
+					}
 				} else {
 					bean.isSelect = true;
 				}

@@ -3,6 +3,9 @@ package com.zhidian.wifibox.data;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.ta.TAApplication;
+import com.zhidian.wifibox.util.AppUtils;
+
 /**
  * 手机清理数据封装
  * 
@@ -136,6 +139,19 @@ public class CleanMasterDataBean {
 			if (!this.isSelect && another.isSelect) {
 				return 1;
 			}
+			if (!AppUtils.isSystemApp(TAApplication.getApplication(),
+					this.pkgName)
+					&& AppUtils.isSystemApp(TAApplication.getApplication(),
+							another.pkgName)) {
+				return -1;
+			}
+			if (AppUtils.isSystemApp(TAApplication.getApplication(),
+					this.pkgName)
+					&& !AppUtils.isSystemApp(TAApplication.getApplication(),
+							another.pkgName)) {
+				return 1;
+			}
+
 			if (this.ram == another.ram) {
 				return 0;
 			}

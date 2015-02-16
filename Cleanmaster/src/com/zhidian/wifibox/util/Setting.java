@@ -32,6 +32,8 @@ public class Setting {
 	public static final String TIMESTAMP = "TIMESTAMP";// 时间戳
 	// 被保护的应用
 	public static final String PROTECT_APP = "PROTECT_APP";
+	
+	public static final String BLACK_APP = "BLACK_APP";
 	// 是否已经上传phone表
 	public static final String HASREGISTERUSERINFO = "hasRegisterUserInfo";
 	// 是否已经展示H5引导页

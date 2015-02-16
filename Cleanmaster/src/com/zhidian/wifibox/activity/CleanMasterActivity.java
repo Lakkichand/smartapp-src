@@ -46,11 +46,9 @@ import com.zhidian.wifibox.view.ScanView;
 public class CleanMasterActivity extends Activity {
 
 	public static boolean sSYD = false;
-	// TODO 选择大文件时弹框提示，只提示一次（退出清零）
-	// TODO 点击安装包，打开安装界面
 	// TODO 清理系统应用提示
 	// TODO 垃圾清理加入其它选项
-	// TODO 测试性能
+	// TODO 优化搜索速度
 	private AdView adView;
 	/**
 	 * 停止扫描
