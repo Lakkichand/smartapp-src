@@ -228,9 +228,9 @@ public class CleanMasterController extends TACommand {
 					int count = 0;
 					long size = 0;
 					for (String pkg : pkgs) {
-						activityManager.killBackgroundProcesses(pkg);
 						RAMBean bean = map.get(pkg);
 						if (bean != null) {
+							activityManager.killBackgroundProcesses(pkg);
 							mController.sendRuntingMessage(bean.name);
 							count++;
 							size += bean.ram;
