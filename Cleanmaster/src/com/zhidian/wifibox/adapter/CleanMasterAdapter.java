@@ -197,6 +197,7 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 									public void onClick(View v) {
 										ram.isSelect = !ram.isSelect;
 										notifyDataSetChanged();
+										mHandler.sendEmptyMessage(CleanMasterActivity.MSG_UPDATE_SELECT);
 									}
 								}, null, "确定要清理吗？",
 								"清理当前输入法可能影响手机的正常输入，确定要清理吗？");
@@ -262,6 +263,7 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 										setting.putString(Setting.BLACK_APP,
 												yarray.toString());
 										notifyDataSetChanged();
+										mHandler.sendEmptyMessage(CleanMasterActivity.MSG_UPDATE_SELECT);
 									}
 								}, null, "确定要清理吗？", "清理系统进程可能会影响手机正常运行，确定要清理吗？");
 						dialog.show();
