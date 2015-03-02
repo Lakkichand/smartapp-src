@@ -109,10 +109,21 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 						ram.isSelect = false;
 					}
 				} else {
-					// TODO 弹框提示
-					for (RAMBean ram : mRList) {
-						ram.isSelect = true;
-					}
+					// 弹框提示
+					RamAppDialog dialog = new RamAppDialog(
+							TAApplication.getApplication(),
+							new OnClickListener() {
+
+								@Override
+								public void onClick(View v) {
+									for (RAMBean ram : mRList) {
+										ram.isSelect = true;
+									}
+									notifyDataSetChanged();
+									mHandler.sendEmptyMessage(CleanMasterActivity.MSG_UPDATE_SELECT);
+								}
+							}, null, "确定要清理吗？", "清理系统进程可能会影响手机正常运行，确定要清理吗？");
+					dialog.show();
 				}
 			} else if (groupPosition == 3) {
 				for (TrashCombination trash : mTList) {
