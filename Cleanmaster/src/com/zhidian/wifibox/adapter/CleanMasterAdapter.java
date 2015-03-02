@@ -35,6 +35,7 @@ import com.zhidian.wifibox.util.DrawUtil;
 import com.zhidian.wifibox.util.InfoUtil;
 import com.zhidian.wifibox.util.Setting;
 import com.zhidian.wifibox.view.dialog.DeleteSysAppDialog;
+import com.zhidian.wifibox.view.dialog.RamAppDialog;
 import com.zhidian3g.wifibox.imagemanager.AsyncImageManager;
 import com.zhidian3g.wifibox.imagemanager.AsyncImageManager.AsyncImageLoadedCallBack;
 
@@ -182,17 +183,31 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 				APKBean apk = (APKBean) tag;
 				apk.isSelect = !apk.isSelect;
 			} else if (tag instanceof RAMBean) {
-				RAMBean ram = (RAMBean) tag;
-				ram.isSelect = !ram.isSelect;
+				final RAMBean ram = (RAMBean) tag;
 				if (InfoUtil.getCurrentInput(TAApplication.getApplication())
 						.equals(ram.pkgName)) {
-					// TODO 当前输入法
-					if (ram.isSelect) {
-						// TODO 弹框提示
+					// 当前输入法
+					if (!ram.isSelect) {
+						// 弹框提示
+						RamAppDialog dialog = new RamAppDialog(
+								TAApplication.getApplication(),
+								new OnClickListener() {
+
+									@Override
+									public void onClick(View v) {
+										ram.isSelect = !ram.isSelect;
+										notifyDataSetChanged();
+									}
+								}, null, "确定要清理吗？",
+								"清理当前输入法可能影响手机的正常输入，确定要清理吗？");
+						dialog.show();
+					} else {
+						ram.isSelect = !ram.isSelect;
 					}
 				} else if (!AppUtils.isSystemApp(
 						TAApplication.getApplication(), ram.pkgName)) {
 					// 用户应用
+					ram.isSelect = !ram.isSelect;
 					Setting setting = new Setting(
 							TAApplication.getApplication());
 					String json = setting.getString(Setting.PROTECT_APP);
@@ -220,7 +235,7 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 					}
 				} else {
 					// 系统应用
-					Setting setting = new Setting(
+					final Setting setting = new Setting(
 							TAApplication.getApplication());
 					String json = setting.getString(Setting.BLACK_APP);
 					JSONArray array = null;
@@ -232,13 +247,26 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 					if (array == null) {
 						array = new JSONArray();
 					}
-					if (ram.isSelect) {
-						// TODO 弹框提示
-						Set<String> set = arrayToSet(array);
-						set.add(ram.pkgName);
-						array = setToArray(set);
-						setting.putString(Setting.BLACK_APP, array.toString());
+					if (!ram.isSelect) {
+						final JSONArray xarray = array;
+						RamAppDialog dialog = new RamAppDialog(
+								TAApplication.getApplication(),
+								new OnClickListener() {
+
+									@Override
+									public void onClick(View v) {
+										ram.isSelect = !ram.isSelect;
+										Set<String> set = arrayToSet(xarray);
+										set.add(ram.pkgName);
+										JSONArray yarray = setToArray(set);
+										setting.putString(Setting.BLACK_APP,
+												yarray.toString());
+										notifyDataSetChanged();
+									}
+								}, null, "确定要清理吗？", "清理系统进程可能会影响手机正常运行，确定要清理吗？");
+						dialog.show();
 					} else {
+						ram.isSelect = !ram.isSelect;
 						Set<String> set = arrayToSet(array);
 						set.remove(ram.pkgName);
 						array = setToArray(set);
