@@ -108,6 +108,7 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 						ram.isSelect = false;
 					}
 				} else {
+					// TODO 弹框提示
 					for (RAMBean ram : mRList) {
 						ram.isSelect = true;
 					}
@@ -183,8 +184,14 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 			} else if (tag instanceof RAMBean) {
 				RAMBean ram = (RAMBean) tag;
 				ram.isSelect = !ram.isSelect;
-				if (!AppUtils.isSystemApp(TAApplication.getApplication(),
-						ram.pkgName)) {
+				if (InfoUtil.getCurrentInput(TAApplication.getApplication())
+						.equals(ram.pkgName)) {
+					// TODO 当前输入法
+					if (ram.isSelect) {
+						// TODO 弹框提示
+					}
+				} else if (!AppUtils.isSystemApp(
+						TAApplication.getApplication(), ram.pkgName)) {
 					// 用户应用
 					Setting setting = new Setting(
 							TAApplication.getApplication());
@@ -226,6 +233,7 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 						array = new JSONArray();
 					}
 					if (ram.isSelect) {
+						// TODO 弹框提示
 						Set<String> set = arrayToSet(array);
 						set.add(ram.pkgName);
 						array = setToArray(set);
