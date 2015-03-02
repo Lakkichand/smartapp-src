@@ -228,32 +228,15 @@ public class CleanMasterController extends TACommand {
 					int count = 0;
 					long size = 0;
 					for (String pkg : pkgs) {
+						activityManager.killBackgroundProcesses(pkg);
 						RAMBean bean = map.get(pkg);
 						if (bean != null) {
 							mController.sendRuntingMessage(bean.name);
-							activityManager.restartPackage(pkg);
-							activityManager.killBackgroundProcesses(pkg);
 							count++;
 							size += bean.ram;
 							mController.sendRuntingMessage(new Object[] {
 									CleanMasterActivity.MSG_RAM, count, size });
 						}
-					}
-				}
-			}
-			{
-				if (packlist != null) {
-					for (PackageInfo pInfo : packlist) {
-						if (pInfo == null) {
-							continue;
-						}
-						if (pInfo.packageName.equals(TAApplication
-								.getApplication().getPackageName())) {
-							continue;
-						}
-						activityManager.restartPackage(pInfo.packageName);
-						activityManager
-								.killBackgroundProcesses(pInfo.packageName);
 					}
 				}
 			}
