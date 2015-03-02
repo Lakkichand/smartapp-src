@@ -90,10 +90,7 @@ public class MainController extends TACommand {
 					int[] myMempid = new int[] { info.pid };
 					Debug.MemoryInfo[] memoryInfo = activityManager
 							.getProcessMemoryInfo(myMempid);
-					int memSize = memoryInfo[0].dalvikPrivateDirty
-							+ memoryInfo[0].dalvikSharedDirty
-							+ memoryInfo[0].nativePrivateDirty
-							+ memoryInfo[0].otherPrivateDirty;
+					int memSize = memoryInfo[0].getTotalPss();
 					int aMemSize = memSize / info.pkgList.length;
 					for (String pkg : info.pkgList) {
 						AppDataBean bean = map.get(pkg);

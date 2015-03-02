@@ -27,6 +27,8 @@ public class MainActivity extends SlidingFragmentActivity {
 		sm.setFadeEnabled(true);
 		sm.setFadeDegree(0.5f);
 		sm.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+		
+		
 
 	}
 

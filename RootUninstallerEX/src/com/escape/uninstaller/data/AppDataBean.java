@@ -12,5 +12,6 @@ public class AppDataBean {
 	public int versionCode;
 	public long date;
 	public String date_str;
+	public String cpu_str;
 
 }
