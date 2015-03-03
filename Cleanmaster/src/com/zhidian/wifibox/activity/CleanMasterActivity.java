@@ -3,6 +3,10 @@ package com.zhidian.wifibox.activity;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -584,6 +588,17 @@ public class CleanMasterActivity extends Activity {
 		}
 	};
 
+	/**
+	 * 应用安装卸载监听器
+	 */
+	private final BroadcastReceiver mAppInstallListener = new BroadcastReceiver() {
+
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			mAdapter.notifyDataSetChanged();
+		}
+	};
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -668,6 +683,13 @@ public class CleanMasterActivity extends Activity {
 		AdRequest adRequest = new AdRequest.Builder().build();
 		// 在adView中加载广告请求。
 		adView.loadAd(adRequest);
+		// 安装广播
+		IntentFilter intentFilter = new IntentFilter();
+		intentFilter.addAction(Intent.ACTION_PACKAGE_ADDED);
+		intentFilter.addAction(Intent.ACTION_PACKAGE_REMOVED);
+		intentFilter.addAction(Intent.ACTION_PACKAGE_CHANGED);
+		intentFilter.addDataScheme("package");
+		registerReceiver(mAppInstallListener, intentFilter);
 	}
 
 	/**
@@ -695,6 +717,7 @@ public class CleanMasterActivity extends Activity {
 
 	@Override
 	protected void onDestroy() {
+		unregisterReceiver(mAppInstallListener);
 		adView.destroy();
 		sSYD = false;
 		super.onDestroy();
