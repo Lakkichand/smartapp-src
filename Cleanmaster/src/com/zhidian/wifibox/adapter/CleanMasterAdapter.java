@@ -78,6 +78,13 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 							"application/vnd.android.package-archive");
 					TAApplication.getApplication().startActivity(intent);
 				}
+			} else if (tag instanceof BigFileBean) {
+				try {
+					BigFileBean bf = (BigFileBean) tag;
+					AppUtils.openFile(new File(bf.path));
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 			}
 		}
 	};
@@ -673,6 +680,8 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 			frame1.setVisibility(View.GONE);
 			frame2.setVisibility(View.VISIBLE);
 			BigFileBean bigfile = mBList.get(childPosition);
+			convertView.setTag(bigfile);
+			convertView.setOnClickListener(mItemClickListener);
 			setBigFileIcon(bigfile.path, icon);
 			title1.setText((new File(bigfile.path)).getName());
 			info12.setText("大小：");
