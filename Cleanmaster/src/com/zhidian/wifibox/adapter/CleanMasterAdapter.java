@@ -195,29 +195,8 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 				apk.isSelect = !apk.isSelect;
 			} else if (tag instanceof RAMBean) {
 				final RAMBean ram = (RAMBean) tag;
-				if (InfoUtil.getCurrentInput(TAApplication.getApplication())
-						.equals(ram.pkgName)) {
-					// 当前输入法
-					if (!ram.isSelect) {
-						// 弹框提示
-						RamAppDialog dialog = new RamAppDialog(
-								TAApplication.getApplication(),
-								new OnClickListener() {
-
-									@Override
-									public void onClick(View v) {
-										ram.isSelect = !ram.isSelect;
-										notifyDataSetChanged();
-										mHandler.sendEmptyMessage(CleanMasterActivity.MSG_UPDATE_SELECT);
-									}
-								}, null, "确定要清理吗？",
-								"清理当前输入法可能影响手机的正常输入，确定要清理吗？");
-						dialog.show();
-					} else {
-						ram.isSelect = !ram.isSelect;
-					}
-				} else if (!AppUtils.isSystemApp(
-						TAApplication.getApplication(), ram.pkgName)) {
+				if (!AppUtils.isSystemApp(TAApplication.getApplication(),
+						ram.pkgName)) {
 					// 用户应用
 					ram.isSelect = !ram.isSelect;
 					Setting setting = new Setting(
