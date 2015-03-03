@@ -990,6 +990,10 @@ public class CleanMasterController extends TACommand {
 					&& file.getAbsolutePath().toLowerCase().endsWith(".log")) {
 				return true;
 			}
+			if (file.isFile()
+					&& file.getAbsolutePath().toLowerCase().endsWith("log.txt")) {
+				return true;
+			}
 			return false;
 		}
 
