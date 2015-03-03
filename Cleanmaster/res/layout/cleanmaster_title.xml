@@ -71,18 +71,18 @@
             android:layout_width="0.5dp"
             android:layout_height="22dp"
             android:layout_centerVertical="true"
-            android:layout_marginRight="15dp"
+            android:layout_marginRight="10dp"
             android:layout_toLeftOf="@+id/select"
             android:background="#FFe2e2e2" />
 
         <ImageView
             android:id="@+id/select"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="14dp"
-            android:padding="6dp"
+            android:layout_marginRight="8dp"
+            android:padding="12dp"
             android:src="@drawable/cleanmaster_select" />
     </RelativeLayout>
 
