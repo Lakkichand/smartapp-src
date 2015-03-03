@@ -601,6 +601,13 @@ public class CleanMasterController extends TACommand {
 					// 过滤掉自己
 					continue;
 				}
+				if (packageName != null
+						&& packageName
+								.equals(InfoUtil.getCurrentInput(TAApplication
+										.getApplication()))) {
+					// 过滤掉当前输入法
+					continue;
+				}
 				int state = pm.getApplicationEnabledSetting(packageName);
 				if (state == PackageManager.COMPONENT_ENABLED_STATE_DISABLED
 						|| state == PackageManager.COMPONENT_ENABLED_STATE_DISABLED_USER) {
