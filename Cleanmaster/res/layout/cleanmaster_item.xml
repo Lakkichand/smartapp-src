@@ -139,11 +139,11 @@
 
         <ImageView
             android:id="@+id/select"
-            android:layout_width="29dp"
-            android:layout_height="29dp"
+            android:layout_width="39dp"
+            android:layout_height="39dp"
             android:layout_gravity="center_vertical"
-            android:layout_marginRight="14dp"
-            android:padding="7dp"
+            android:layout_marginRight="9dp"
+            android:padding="12dp"
             android:src="@drawable/cleanmaster_select" />
     </LinearLayout>
 
