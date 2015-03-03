@@ -9,7 +9,9 @@ import java.util.Set;
 
 import org.json.JSONArray;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Handler;
 import android.text.format.Formatter;
 import android.view.LayoutInflater;
@@ -56,6 +58,29 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 
 	private LayoutInflater mInflater = LayoutInflater.from(TAApplication
 			.getApplication());
+
+	/**
+	 * 列表项点击事件
+	 */
+	private OnClickListener mItemClickListener = new OnClickListener() {
+
+		@Override
+		public void onClick(View v) {
+			Object tag = v.getTag();
+			if (tag instanceof APKBean) {
+				APKBean apk = (APKBean) tag;
+				File file = new File(apk.path);
+				if (file.exists()) {
+					Intent intent = new Intent();
+					intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+					intent.setAction(android.content.Intent.ACTION_VIEW);
+					intent.setDataAndType(Uri.fromFile(file),
+							"application/vnd.android.package-archive");
+					TAApplication.getApplication().startActivity(intent);
+				}
+			}
+		}
+	};
 	/**
 	 * 全选点击
 	 */
@@ -472,6 +497,8 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 		if (convertView == null) {
 			convertView = mInflater.inflate(R.layout.cleanmaster_item, null);
 		}
+		convertView.setTag(null);
+		convertView.setOnClickListener(null);
 		View gap1 = convertView.findViewById(R.id.gap1);
 		if (childPosition == 0) {
 			gap1.setVisibility(View.GONE);
@@ -538,6 +565,8 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 		} else if (groupPosition == 1) {
 			APKBean apk = mAList.get(childPosition);
 			select.setTag(apk);
+			convertView.setTag(apk);
+			convertView.setOnClickListener(mItemClickListener);
 			if (apk.isSelect) {
 				select.setImageResource(R.drawable.cleanmaster_select);
 			} else {
