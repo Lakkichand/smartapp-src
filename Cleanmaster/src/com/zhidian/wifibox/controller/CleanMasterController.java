@@ -12,6 +12,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -683,6 +685,133 @@ public class CleanMasterController extends TACommand {
 
 	}
 
+	public static class Counter {
+
+		private int mCount = 0;
+
+		public synchronized void increase() {
+			mCount++;
+		}
+
+		public synchronized void reduce() {
+			mCount--;
+		}
+
+		public synchronized int getCount() {
+			return mCount;
+		}
+
+	}
+
+	public static class FastTrashThread extends Thread {
+
+		private ExecutorService mPool = Executors.newFixedThreadPool(5);
+		private CleanMasterController mController;
+		private CountDownLatch mCD;
+		private Counter mCounter;
+		private int mTime = 0;
+
+		public FastTrashThread(CleanMasterController controller,
+				CountDownLatch cd) {
+			mController = controller;
+			mCD = cd;
+			mCounter = new Counter();
+			super.setName("FastTrashThread");
+		}
+
+		@Override
+		public void run() {
+			List<String> paths = FileUtil.getExtSDCardPaths();
+			if (paths != null && paths.size() > 0) {
+				for (String sdPath : paths) {
+					if (!mPool.isShutdown()) {
+						mCounter.increase();
+						mPool.execute(new FastTrashRunnable(mPool, mController,
+								sdPath, mCounter));
+					}
+				}
+			}
+			while (true) {
+				if (mCounter.getCount() <= 0) {
+					mTime++;
+				} else {
+					mTime = 0;
+				}
+				if (mTime >= 5) {
+					break;
+				} else {
+					try {
+						Thread.sleep(100);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+			}
+			mController.sendRuntingMessage(CleanMasterActivity.MSG_APK);
+			mController.sendRuntingMessage(CleanMasterActivity.MSG_TRASH);
+			mController.sendRuntingMessage(CleanMasterActivity.MSG_BIG);
+			mCD.countDown();
+			// TODO 怎样判断扫描完
+			// TODO 扫描完后关闭线程池
+			// TODO 扫描完后计数器减一
+		}
+	}
+
+	public static class FastTrashRunnable implements Runnable {
+
+		private ExecutorService mPool;
+		private CleanMasterController mController;
+		private String mPath;
+		private Counter mCounter;
+
+		public FastTrashRunnable(ExecutorService pool,
+				CleanMasterController controller, String path, Counter counter) {
+			mPool = pool;
+			mController = controller;
+			mPath = path;
+			mCounter = counter;
+		}
+
+		@Override
+		public void run() {
+			File file = new File(mPath);
+			if (file.isFile()) {
+				if (isBigFile(file)) {
+					// TODO
+				}
+				if (isTmpFile(file)) {
+					// TODO
+				} else if (isLogFile(file)) {
+					// TODO
+				} else if (isAPKFile(file)) {
+					// TODO
+				}
+				// TODO 空白文件
+			} else if (file.isDirectory()) {
+				if (isEmptyDirectory(file)) {
+					// TODO
+				} else {
+					File[] files = file.listFiles();
+					if (files != null) {
+						for (File sfile : files) {
+							if (sfile != null) {
+								if (!mPool.isShutdown()) {
+									mCounter.increase();
+									mPool.execute(new FastTrashRunnable(mPool,
+											mController, sfile
+													.getAbsolutePath(),
+											mCounter));
+								}
+							}
+						}
+					}
+				}
+			}
+			mCounter.reduce();
+		}
+
+	}
+
 	public static class TrashThread extends Thread {
 
 		private CleanMasterController mController;
@@ -948,87 +1077,87 @@ public class CleanMasterController extends TACommand {
 				}
 			}
 		}
+	}
 
-		private boolean isBigFile(File file) {
+	private static boolean isBigFile(File file) {
+		if (file == null) {
+			return false;
+		}
+		if (!file.exists()) {
+			return false;
+		}
+		if (!file.isFile()) {
+			return false;
+		}
+		if (file.length() > 10485760L) {
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * 是否临时文件
+	 */
+	private static boolean isTmpFile(File file) {
+		if (file == null) {
+			return false;
+		}
+		if (file.isFile()
+				&& file.getAbsolutePath().toLowerCase().endsWith(".tmp")) {
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * 是否日志文件
+	 */
+	private static boolean isLogFile(File file) {
+		if (file == null) {
+			return false;
+		}
+		if (file.isFile()
+				&& file.getAbsolutePath().toLowerCase().endsWith(".log")) {
+			return true;
+		}
+		if (file.isFile()
+				&& file.getAbsolutePath().toLowerCase().endsWith("log.txt")) {
+			return true;
+		}
+		return false;
+	}
+
+	private static boolean isAPKFile(File file) {
+		if (file == null) {
+			return false;
+		}
+		if (file.isFile()
+				&& file.getAbsolutePath().toLowerCase().endsWith(".apk")) {
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * 是否空文件夹
+	 */
+	private static boolean isEmptyDirectory(File file) {
+		try {
 			if (file == null) {
 				return false;
 			}
-			if (!file.exists()) {
-				return false;
-			}
-			if (!file.isFile()) {
-				return false;
-			}
-			if (file.length() > 10485760L) {
-				return true;
-			}
-			return false;
-		}
-
-		/**
-		 * 是否临时文件
-		 */
-		private boolean isTmpFile(File file) {
-			if (file == null) {
-				return false;
-			}
-			if (file.isFile()
-					&& file.getAbsolutePath().toLowerCase().endsWith(".tmp")) {
-				return true;
-			}
-			return false;
-		}
-
-		/**
-		 * 是否日志文件
-		 */
-		private boolean isLogFile(File file) {
-			if (file == null) {
-				return false;
-			}
-			if (file.isFile()
-					&& file.getAbsolutePath().toLowerCase().endsWith(".log")) {
-				return true;
-			}
-			if (file.isFile()
-					&& file.getAbsolutePath().toLowerCase().endsWith("log.txt")) {
-				return true;
-			}
-			return false;
-		}
-
-		private boolean isAPKFile(File file) {
-			if (file == null) {
-				return false;
-			}
-			if (file.isFile()
-					&& file.getAbsolutePath().toLowerCase().endsWith(".apk")) {
-				return true;
-			}
-			return false;
-		}
-
-		/**
-		 * 是否空文件夹
-		 */
-		private boolean isEmptyDirectory(File file) {
-			try {
-				if (file == null) {
-					return false;
+			if (file.isDirectory()) {
+				if (file.list() == null) {
+					return true;
 				}
-				if (file.isDirectory()) {
-					if (file.list() == null) {
-						return true;
-					}
-					if (file.list() != null && file.list().length <= 0) {
-						return true;
-					}
+				if (file.list() != null && file.list().length <= 0) {
+					return true;
 				}
-				return false;
-			} catch (Exception e) {
-				e.printStackTrace();
 			}
 			return false;
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
+		return false;
 	}
 }
