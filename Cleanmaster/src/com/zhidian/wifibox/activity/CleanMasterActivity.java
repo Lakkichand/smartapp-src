@@ -50,8 +50,8 @@ import com.zhidian.wifibox.view.ScanView;
 public class CleanMasterActivity extends Activity {
 
 	public static boolean sSYD = false;
+	// TODO 优化扫描速度
 	// TODO 垃圾清理加入其它选项
-	// TODO 优化搜索速度
 	// TODO 多语言
 	private AdView adView;
 	/**
@@ -147,47 +147,17 @@ public class CleanMasterActivity extends Activity {
 						size += ram.ram;
 					}
 				}
-				for (APKBean apk : mBean.apkList1) {
+				for (APKBean apk : mBean.apkList) {
 					if (apk.isSelect) {
 						size += apk.size;
 					}
 				}
-				for (APKBean apk : mBean.apkList2) {
-					if (apk.isSelect) {
-						size += apk.size;
-					}
-				}
-				for (APKBean apk : mBean.apkList3) {
-					if (apk.isSelect) {
-						size += apk.size;
-					}
-				}
-				for (TrashBean trash : mBean.trashList1) {
+				for (TrashBean trash : mBean.trashList) {
 					if (trash.isSelect) {
 						size += trash.size;
 					}
 				}
-				for (TrashBean trash : mBean.trashList2) {
-					if (trash.isSelect) {
-						size += trash.size;
-					}
-				}
-				for (TrashBean trash : mBean.trashList3) {
-					if (trash.isSelect) {
-						size += trash.size;
-					}
-				}
-				for (BigFileBean bfb : mBean.bigFileList1) {
-					if (bfb.isSelect) {
-						size += bfb.size;
-					}
-				}
-				for (BigFileBean bfb : mBean.bigFileList2) {
-					if (bfb.isSelect) {
-						size += bfb.size;
-					}
-				}
-				for (BigFileBean bfb : mBean.bigFileList3) {
+				for (BigFileBean bfb : mBean.bigFileList) {
 					if (bfb.isSelect) {
 						size += bfb.size;
 					}

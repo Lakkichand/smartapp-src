@@ -31,9 +31,7 @@ import android.os.Environment;
 import android.os.RemoteException;
 import android.os.StatFs;
 import android.text.format.Formatter;
-import android.util.Log;
 
-import com.smartapp.ex.cleanmaster.R;
 import com.ta.TAApplication;
 import com.ta.mvc.command.TACommand;
 import com.ta.mvc.common.TARequest;
@@ -703,31 +701,104 @@ public class CleanMasterController extends TACommand {
 
 	}
 
-	public static class FastTrashThread extends Thread {
+	public static class Keeper {
+		private List<BigFileBean> mBFList = new ArrayList<CleanMasterDataBean.BigFileBean>();
+		private List<TrashBean> mTHList = new ArrayList<CleanMasterDataBean.TrashBean>();
+		private List<APKBean> mAKList = new ArrayList<CleanMasterDataBean.APKBean>();
+		private CleanMasterController mController;
+
+		public Keeper(CleanMasterController controller) {
+			mController = controller;
+		}
+
+		public synchronized void sendBigFile(BigFileBean bean) {
+			mBFList.add(bean);
+			if (mBFList.size() % 3 == 0) {
+				List<BigFileBean> bigfile = new ArrayList<CleanMasterDataBean.BigFileBean>();
+				bigfile.addAll(mBFList);
+				mController.sendRuntingMessage(bigfile);
+			}
+		}
+
+		public synchronized void sendTrashFile(TrashBean bean) {
+			mTHList.add(bean);
+			if (mTHList.size() % 3 == 0) {
+				List<TrashBean> trash = new ArrayList<CleanMasterDataBean.TrashBean>();
+				trash.addAll(mTHList);
+				mController.sendRuntingMessage(trash);
+			}
+		}
+
+		public synchronized void sendAPKFile(APKBean bean) {
+			mAKList.add(bean);
+			if (mAKList.size() % 3 == 0) {
+				List<APKBean> apk = new ArrayList<CleanMasterDataBean.APKBean>();
+				apk.addAll(mAKList);
+				mController.sendRuntingMessage(apk);
+			}
+		}
+
+		public synchronized void sendAll() {
+			List<BigFileBean> bigfile = new ArrayList<CleanMasterDataBean.BigFileBean>();
+			bigfile.addAll(mBFList);
+			mController.sendRuntingMessage(bigfile);
+
+			List<TrashBean> trash = new ArrayList<CleanMasterDataBean.TrashBean>();
+			trash.addAll(mTHList);
+			mController.sendRuntingMessage(trash);
+
+			List<APKBean> apk = new ArrayList<CleanMasterDataBean.APKBean>();
+			apk.addAll(mAKList);
+			mController.sendRuntingMessage(apk);
+		}
+	}
+
+	public static class TrashThread extends Thread {
 
 		private ExecutorService mPool = Executors.newFixedThreadPool(5);
 		private CleanMasterController mController;
 		private CountDownLatch mCD;
 		private Counter mCounter;
+		private Keeper mKeeper;
 		private int mTime = 0;
 
-		public FastTrashThread(CleanMasterController controller,
+		public TrashThread(CleanMasterController controller,
 				CountDownLatch cd) {
 			mController = controller;
 			mCD = cd;
 			mCounter = new Counter();
+			mKeeper = new Keeper(mController);
 			super.setName("FastTrashThread");
 		}
 
 		@Override
 		public void run() {
-			List<String> paths = FileUtil.getExtSDCardPaths();
+			// 扫描缩略图
+			String directory = Environment.getExternalStorageDirectory()
+					.getAbsolutePath() + "/DCIM/.thumbnails";
+			File file = new File(directory);
+			if (file.exists() && file.isDirectory()) {
+				File[] files = file.listFiles();
+				if (files != null && files.length > 0) {
+					for (File sfile : files) {
+						if (sfile != null && sfile.isFile()) {
+							TrashBean bean = new TrashBean();
+							bean.type = 1;
+							bean.path = sfile.getAbsolutePath();
+							bean.size = sfile.length();
+							bean.isSelect = true;
+							mKeeper.sendTrashFile(bean);
+						}
+					}
+				}
+			}
+			List<String> paths = FileUtil.sSDPaths;
 			if (paths != null && paths.size() > 0) {
 				for (String sdPath : paths) {
 					if (!mPool.isShutdown()) {
 						mCounter.increase();
-						mPool.execute(new FastTrashRunnable(mPool, mController,
-								sdPath, mCounter));
+						mPool.execute(new TrashRunnable(mPool, sdPath,
+								mCounter, mKeeper));
 					}
 				}
 			}
@@ -747,29 +818,28 @@ public class CleanMasterController extends TACommand {
 					}
 				}
 			}
+			mKeeper.sendAll();
+			mPool.shutdown();
 			mController.sendRuntingMessage(CleanMasterActivity.MSG_APK);
 			mController.sendRuntingMessage(CleanMasterActivity.MSG_TRASH);
 			mController.sendRuntingMessage(CleanMasterActivity.MSG_BIG);
 			mCD.countDown();
-			// TODO 怎样判断扫描完
-			// TODO 扫描完后关闭线程池
-			// TODO 扫描完后计数器减一
 		}
 	}
 
-	public static class FastTrashRunnable implements Runnable {
+	public static class TrashRunnable implements Runnable {
 
 		private ExecutorService mPool;
-		private CleanMasterController mController;
 		private String mPath;
 		private Counter mCounter;
+		private Keeper mKeeper;
 
-		public FastTrashRunnable(ExecutorService pool,
-				CleanMasterController controller, String path, Counter counter) {
+		public TrashRunnable(ExecutorService pool, String path,
+				Counter counter, Keeper keeper) {
 			mPool = pool;
-			mController = controller;
 			mPath = path;
 			mCounter = counter;
+			mKeeper = keeper;
 		}
 
 		@Override
@@ -777,19 +847,90 @@ public class CleanMasterController extends TACommand {
 			File file = new File(mPath);
 			if (file.isFile()) {
 				if (isBigFile(file)) {
-					// TODO
+					BigFileBean bean = new BigFileBean();
+					bean.isSelect = false;
+					bean.path = file.getAbsolutePath();
+					bean.show_path = bean.path;
+					for (String sdp : FileUtil.sSDPaths) {
+						if (bean.path.startsWith(sdp)) {
+							bean.show_path = bean.path.replaceFirst(sdp, "");
+							break;
+						}
+					}
+					bean.size = file.length();
+					mKeeper.sendBigFile(bean);
 				}
 				if (isTmpFile(file)) {
-					// TODO
+					// 临时文件
+					TrashBean bean = new TrashBean();
+					bean.type = 3;
+					bean.path = file.getAbsolutePath();
+					bean.size = file.length();
+					bean.isSelect = true;
+					mKeeper.sendTrashFile(bean);
 				} else if (isLogFile(file)) {
-					// TODO
+					// 日志
+					TrashBean bean = new TrashBean();
+					bean.type = 4;
+					bean.path = file.getAbsolutePath();
+					bean.size = file.length();
+					bean.isSelect = true;
+					mKeeper.sendTrashFile(bean);
 				} else if (isAPKFile(file)) {
-					// TODO
+					// APK
+					APKBean bean = new APKBean();
+					bean.path = file.getAbsolutePath();
+					bean.size = file.length();
+					bean.size_str = Formatter.formatFileSize(
+							TAApplication.getApplication(), bean.size);
+					PackageManager pm = TAApplication.getApplication()
+							.getPackageManager();
+					PackageInfo packageInfo = pm.getPackageArchiveInfo(
+							file.getAbsolutePath(),
+							PackageManager.GET_ACTIVITIES);
+					if (packageInfo == null) {
+						// 损坏
+						bean.name = file.getName();
+						bean.pkgName = "";
+						bean.versionCode = 0;
+						bean.damage = true;
+						bean.isSelect = true;
+					} else {
+						bean.name = pm.getApplicationLabel(
+								packageInfo.applicationInfo).toString();
+						bean.pkgName = packageInfo.packageName;
+						bean.versionCode = packageInfo.versionCode;
+						bean.damage = false;
+						bean.isSelect = true;
+						if (AppUtils.isAppExist(TAApplication.getApplication(),
+								bean.pkgName)) {
+							// 已安装
+							int versionCode = AppUtils.getVersionCode(
+									TAApplication.getApplication(),
+									bean.pkgName);
+							if (versionCode < bean.versionCode) {
+								// 可升级
+								bean.isSelect = true;
+							} else {
+								bean.isSelect = true;
+							}
+						} else {
+							// 未安装
+							bean.isSelect = true;
+						}
+					}
+					mKeeper.sendAPKFile(bean);
 				}
 				// TODO 空白文件
 			} else if (file.isDirectory()) {
 				if (isEmptyDirectory(file)) {
-					// TODO
+					// 空文件夹
+					TrashBean bean = new TrashBean();
+					bean.type = 2;
+					bean.path = file.getAbsolutePath();
+					bean.size = file.length();
+					bean.isSelect = true;
+					mKeeper.sendTrashFile(bean);
 				} else {
 					File[] files = file.listFiles();
 					if (files != null) {
@@ -797,10 +938,9 @@ public class CleanMasterController extends TACommand {
 							if (sfile != null) {
 								if (!mPool.isShutdown()) {
 									mCounter.increase();
-									mPool.execute(new FastTrashRunnable(mPool,
-											mController, sfile
-													.getAbsolutePath(),
-											mCounter));
+									mPool.execute(new TrashRunnable(mPool,
+											sfile.getAbsolutePath(), mCounter,
+											mKeeper));
 								}
 							}
 						}
@@ -810,273 +950,6 @@ public class CleanMasterController extends TACommand {
 			mCounter.reduce();
 		}
 
-	}
-
-	public static class TrashThread extends Thread {
-
-		private CleanMasterController mController;
-		private CountDownLatch mCD;
-
-		public TrashThread(CleanMasterController controller, CountDownLatch cd) {
-			mController = controller;
-			mCD = cd;
-			super.setName("TrashThread");
-		}
-
-		@Override
-		public void run() {
-			List<String> paths = FileUtil.getExtSDCardPaths();
-			if (paths != null && paths.size() > 0) {
-				List<String> paths1 = new ArrayList<String>();
-				List<String> paths2 = new ArrayList<String>();
-				List<String> paths3 = new ArrayList<String>();
-				for (String sdPath : paths) {
-					File file = new File(sdPath);
-					File[] farray = file.listFiles();
-					if (farray != null && farray.length > 0) {
-						int step = farray.length / 3;
-						for (int i = 0; i < farray.length; i++) {
-							if (i <= step) {
-								paths1.add(farray[i].getAbsolutePath());
-							} else if (i <= step * 2) {
-								paths2.add(farray[i].getAbsolutePath());
-							} else {
-								paths3.add(farray[i].getAbsolutePath());
-							}
-						}
-					}
-				}
-				CountDownLatch tcd = new CountDownLatch(3);
-				// 启动子线程扫描安装包和垃圾
-				new TrashScanThread(1, mController, tcd, paths1).start();
-				new TrashScanThread(2, mController, tcd, paths2).start();
-				new TrashScanThread(3, mController, tcd, paths3).start();
-				try {
-					tcd.await();
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-			}
-			mController.sendRuntingMessage(CleanMasterActivity.MSG_APK);
-			mController.sendRuntingMessage(CleanMasterActivity.MSG_TRASH);
-			mController.sendRuntingMessage(CleanMasterActivity.MSG_BIG);
-			mCD.countDown();
-		}
-	}
-
-	public static class TrashScanThread extends Thread {
-
-		private CleanMasterController mController;
-		private CountDownLatch mCD;
-		private List<String> mPaths;
-		private List<APKBean> mApkList;
-		private List<TrashBean> mTrashList;
-		private List<BigFileBean> mBigList;
-		private int mIndex;
-		private List<String> mSDPath;
-
-		public TrashScanThread(int index, CleanMasterController controller,
-				CountDownLatch cd, List<String> paths) {
-			mIndex = index;
-			mController = controller;
-			mCD = cd;
-			mPaths = paths;
-			mApkList = new ArrayList<APKBean>();
-			mTrashList = new ArrayList<TrashBean>();
-			mBigList = new ArrayList<BigFileBean>();
-			mSDPath = FileUtil.getExtSDCardPaths();
-			setName("TrashScanThread" + mIndex);
-			setPriority(Thread.MAX_PRIORITY);
-			for (String path : paths) {
-				Log.e("", "path = " + path);
-			}
-		}
-
-		@Override
-		public void run() {
-			if (mIndex == 1) {
-				// 扫描缩略图
-				String directory = Environment.getExternalStorageDirectory()
-						.getAbsolutePath() + "/DCIM/.thumbnails";
-				File file = new File(directory);
-				if (file.exists() && file.isDirectory()) {
-					File[] files = file.listFiles();
-					if (files != null && files.length > 0) {
-						for (File sfile : files) {
-							if (sfile != null && sfile.isFile()) {
-								TrashBean bean = new TrashBean();
-								bean.type = 1;
-								bean.path = sfile.getAbsolutePath();
-								bean.size = sfile.length();
-								bean.isSelect = true;
-								mTrashList.add(bean);
-							}
-						}
-						List<TrashBean> tmp = new ArrayList<TrashBean>();
-						tmp.addAll(mTrashList);
-						mController.sendRuntingMessage(new Object[] { mIndex,
-								tmp });
-					}
-				}
-			}
-			for (String path : mPaths) {
-				mController.sendRuntingMessage(path);
-				globalScan(path);
-			}
-			// 大文件
-			List<BigFileBean> tmpBigFile = new ArrayList<BigFileBean>();
-			tmpBigFile.addAll(mBigList);
-			mController.sendRuntingMessage(new Object[] { mIndex, tmpBigFile });
-			// 残留垃圾
-			List<TrashBean> tmpTrash = new ArrayList<TrashBean>();
-			tmpTrash.addAll(mTrashList);
-			mController.sendRuntingMessage(new Object[] { mIndex, tmpTrash });
-			// APK
-			List<APKBean> tmpAPK = new ArrayList<APKBean>();
-			tmpAPK.addAll(mApkList);
-			mController.sendRuntingMessage(new Object[] { mIndex, tmpAPK });
-			// 结束
-			mCD.countDown();
-		}
-
-		/**
-		 * 递归搜索该路径下的残留文件和APK
-		 */
-		private void globalScan(String rootpath) {
-			File file = new File(rootpath);
-			if (file.exists()) {
-				if (file.isFile()) {
-					if (isBigFile(file)) {
-						BigFileBean bean = new BigFileBean();
-						bean.isSelect = false;
-						bean.path = file.getAbsolutePath();
-						bean.show_path = bean.path;
-						for (String sdp : mSDPath) {
-							if (bean.path.startsWith(sdp)) {
-								bean.show_path = bean.path
-										.replaceFirst(sdp, "");
-								break;
-							}
-						}
-						bean.size = file.length();
-						bean.drawable = R.drawable.ic_launcher;
-						mBigList.add(bean);
-						if (mBigList.size() % 3 == 0) {
-							List<BigFileBean> tmp = new ArrayList<BigFileBean>();
-							tmp.addAll(mBigList);
-							mController.sendRuntingMessage(new Object[] {
-									mIndex, tmp });
-						}
-					}
-					if (isTmpFile(file)) {
-						// 临时文件
-						TrashBean bean = new TrashBean();
-						bean.type = 3;
-						bean.path = file.getAbsolutePath();
-						bean.size = file.length();
-						bean.isSelect = true;
-						mTrashList.add(bean);
-						if (mTrashList.size() % 3 == 0) {
-							List<TrashBean> tmp = new ArrayList<TrashBean>();
-							tmp.addAll(mTrashList);
-							mController.sendRuntingMessage(new Object[] {
-									mIndex, tmp });
-						}
-					} else if (isLogFile(file)) {
-						// 日志
-						TrashBean bean = new TrashBean();
-						bean.type = 4;
-						bean.path = file.getAbsolutePath();
-						bean.size = file.length();
-						bean.isSelect = true;
-						mTrashList.add(bean);
-						if (mTrashList.size() % 3 == 0) {
-							List<TrashBean> tmp = new ArrayList<TrashBean>();
-							tmp.addAll(mTrashList);
-							mController.sendRuntingMessage(new Object[] {
-									mIndex, tmp });
-						}
-					} else if (isAPKFile(file)) {
-						// APK
-						APKBean bean = new APKBean();
-						bean.path = file.getAbsolutePath();
-						bean.size = file.length();
-						bean.size_str = Formatter.formatFileSize(
-								TAApplication.getApplication(), bean.size);
-						PackageManager pm = TAApplication.getApplication()
-								.getPackageManager();
-						PackageInfo packageInfo = pm.getPackageArchiveInfo(
-								file.getAbsolutePath(),
-								PackageManager.GET_ACTIVITIES);
-						if (packageInfo == null) {
-							// 损坏
-							bean.name = file.getName();
-							bean.pkgName = "";
-							bean.versionCode = 0;
-							bean.damage = true;
-							bean.isSelect = true;
-						} else {
-							bean.name = pm.getApplicationLabel(
-									packageInfo.applicationInfo).toString();
-							bean.pkgName = packageInfo.packageName;
-							bean.versionCode = packageInfo.versionCode;
-							bean.damage = false;
-							bean.isSelect = true;
-							if (AppUtils.isAppExist(
-									TAApplication.getApplication(),
-									bean.pkgName)) {
-								// 已安装
-								int versionCode = AppUtils.getVersionCode(
-										TAApplication.getApplication(),
-										bean.pkgName);
-								if (versionCode < bean.versionCode) {
-									// 可升级
-									bean.isSelect = true;
-								} else {
-									bean.isSelect = true;
-								}
-							} else {
-								// 未安装
-								bean.isSelect = true;
-							}
-						}
-						mApkList.add(bean);
-						if (mApkList.size() % 3 == 0) {
-							List<APKBean> tmp = new ArrayList<APKBean>();
-							tmp.addAll(mApkList);
-							mController.sendRuntingMessage(new Object[] {
-									mIndex, tmp });
-						}
-					}
-				} else if (file.isDirectory()) {
-					if (isEmptyDirectory(file)) {
-						// 空文件夹
-						TrashBean bean = new TrashBean();
-						bean.type = 2;
-						bean.path = file.getAbsolutePath();
-						bean.size = file.length();
-						bean.isSelect = true;
-						mTrashList.add(bean);
-						if (mTrashList.size() % 3 == 0) {
-							List<TrashBean> tmp = new ArrayList<TrashBean>();
-							tmp.addAll(mTrashList);
-							mController.sendRuntingMessage(new Object[] {
-									mIndex, tmp });
-						}
-					} else {
-						File[] files = file.listFiles();
-						if (files != null) {
-							for (File sfile : files) {
-								if (sfile != null) {
-									// 递归
-									globalScan(sfile.getAbsolutePath());
-								}
-							}
-						}
-					}
-				}
-			}
-		}
 	}
 
 	private static boolean isBigFile(File file) {

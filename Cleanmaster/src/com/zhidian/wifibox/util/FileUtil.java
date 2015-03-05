@@ -48,6 +48,8 @@ public class FileUtil {
 	public static final String WIFIBOX_DOWN = WIFIBOX_DIR + "download/";
 	public static final String WIFIBOX_CALE = WIFIBOX_DIR + "wifiboxCale";
 
+	public static List<String> sSDPaths = FileUtil.getExtSDCardPaths();
+
 	public static File createNewFile(String path, boolean append) {
 		File newFile = new File(path);
 		if (!append) {
@@ -310,29 +312,31 @@ public class FileUtil {
 			return size + "KB";
 		}
 	}
-	
+
 	/**
 	 * 根据byte大小转换单位为MB/G/KB
+	 * 
 	 * @param bytes
 	 * @return
 	 */
-	public static String bytes2kb(long bytes) {  
-        BigDecimal filesize = new BigDecimal(bytes);  
-        BigDecimal megabyte = new BigDecimal(1024 * 1024);  
-        float returnValue = filesize.divide(megabyte, 2, BigDecimal.ROUND_UP)  
-                .floatValue();  
-        if (returnValue > 1 && returnValue < 1024)  
-            return (returnValue + "MB");
-        BigDecimal gigabyte = new BigDecimal(1024 * 1024 * 1024);
-        returnValue = filesize.divide(gigabyte, 2, BigDecimal.ROUND_UP).floatValue();
-        if (returnValue > 1) {
-        	return (returnValue + "G");
-        }
-        BigDecimal kilobyte = new BigDecimal(1024);  
-        returnValue = filesize.divide(kilobyte, 2, BigDecimal.ROUND_UP)  
-                .floatValue();  
-        return (returnValue + "KB");  
-    }
+	public static String bytes2kb(long bytes) {
+		BigDecimal filesize = new BigDecimal(bytes);
+		BigDecimal megabyte = new BigDecimal(1024 * 1024);
+		float returnValue = filesize.divide(megabyte, 2, BigDecimal.ROUND_UP)
+				.floatValue();
+		if (returnValue > 1 && returnValue < 1024)
+			return (returnValue + "MB");
+		BigDecimal gigabyte = new BigDecimal(1024 * 1024 * 1024);
+		returnValue = filesize.divide(gigabyte, 2, BigDecimal.ROUND_UP)
+				.floatValue();
+		if (returnValue > 1) {
+			return (returnValue + "G");
+		}
+		BigDecimal kilobyte = new BigDecimal(1024);
+		returnValue = filesize.divide(kilobyte, 2, BigDecimal.ROUND_UP)
+				.floatValue();
+		return (returnValue + "KB");
+	}
 
 	/**
 	 * 计算下载次数
@@ -363,20 +367,22 @@ public class FileUtil {
 			return second + "秒";
 		}
 	}
-	
+
 	/**
 	 * 把int类型的毫秒数转换成时间格式
+	 * 
 	 * @param milliscond
 	 * @return
 	 */
 	public static String milliscond2Time(int milliscond) {
 		Date date = new Date();
-	     SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss", Locale.getDefault());
-	     sdf.setTimeZone(TimeZone.getTimeZone("GMT+0"));
-	     date.setTime(milliscond);
-	     return sdf.format(date);
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss",
+				Locale.getDefault());
+		sdf.setTimeZone(TimeZone.getTimeZone("GMT+0"));
+		date.setTime(milliscond);
+		return sdf.format(date);
 	}
-	
+
 	/**
 	 * 格式化时间，将其变成00:00的形式
 	 */
@@ -467,7 +473,7 @@ public class FileUtil {
 		}
 		return null;
 	}
-	
+
 	/**
 	 * 删除单个文件
 	 * 
@@ -505,7 +511,7 @@ public class FileUtil {
 			}
 		}
 	}
-	
+
 	/**
 	 * 删除目录（文件夹）以及目录下的文件
 	 * 
@@ -548,45 +554,48 @@ public class FileUtil {
 			return false;
 		}
 	}
-	
+
 	/** 通知系统扫描SDCard，及时更新媒体库 */
 	public static void scanSdCard(Context mContext) {
 		if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
-			mContext.sendBroadcast(new Intent(Intent.ACTION_MEDIA_MOUNTED,
-					Uri.parse("file://" + Environment.getExternalStorageDirectory().getAbsolutePath())));
+			mContext.sendBroadcast(new Intent(Intent.ACTION_MEDIA_MOUNTED, Uri
+					.parse("file://"
+							+ Environment.getExternalStorageDirectory()
+									.getAbsolutePath())));
 		} else {
-			mContext.sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE,
-					Uri.parse("file://" + Environment.getExternalStorageDirectory().getAbsolutePath())));
+			mContext.sendBroadcast(new Intent(
+					Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.parse("file://"
+							+ Environment.getExternalStorageDirectory()
+									.getAbsolutePath())));
 		}
-		
+
 		// 4.4之后的系统无法通过广播更新，所以使用下面这个方法扫描更新
-		MediaScannerConnection.scanFile(mContext, new String[] { 
-				Environment.getExternalStorageDirectory().getAbsolutePath() }, null, null);
+		MediaScannerConnection.scanFile(mContext, new String[] { Environment
+				.getExternalStorageDirectory().getAbsolutePath() }, null, null);
 	}
-	
-	public static String getFileExtension(File file)
-	{
+
+	public static String getFileExtension(File file) {
 		return getFileExtension(file.getName());
 	}
-	
+
 	/**
 	 * Gets extension of the file name excluding the . character
 	 */
-	public static String getFileExtension(String fileName)
-	{
+	public static String getFileExtension(String fileName) {
 		if (fileName.contains("."))
-			return fileName.substring(fileName.lastIndexOf('.')+1);
-		else 
+			return fileName.substring(fileName.lastIndexOf('.') + 1);
+		else
 			return "";
 	}
-	
+
 	/**
 	 * 获取文件格式
 	 */
-	public static String getFileMimeType(File file)
-	{
-		String type = MimeTypeMap.getSingleton().getMimeTypeFromExtension(getFileExtension(file));
-		if (type == null) return "*/*";
+	public static String getFileMimeType(File file) {
+		String type = MimeTypeMap.getSingleton().getMimeTypeFromExtension(
+				getFileExtension(file));
+		if (type == null)
+			return "*/*";
 		return type;
 	}
 

@@ -16,54 +16,30 @@ public class CleanMasterDataBean {
 
 	public List<CacheBean> cacheList = new ArrayList<CacheBean>();
 	public List<RAMBean> ramList = new ArrayList<RAMBean>();
-	public List<APKBean> apkList1 = new ArrayList<APKBean>();
-	public List<TrashBean> trashList1 = new ArrayList<TrashBean>();
-	public List<APKBean> apkList2 = new ArrayList<APKBean>();
-	public List<TrashBean> trashList2 = new ArrayList<TrashBean>();
-	public List<APKBean> apkList3 = new ArrayList<APKBean>();
-	public List<TrashBean> trashList3 = new ArrayList<TrashBean>();
-	public List<BigFileBean> bigFileList1 = new ArrayList<BigFileBean>();
-	public List<BigFileBean> bigFileList2 = new ArrayList<BigFileBean>();
-	public List<BigFileBean> bigFileList3 = new ArrayList<BigFileBean>();
+	public List<APKBean> apkList = new ArrayList<APKBean>();
+	public List<TrashBean> trashList = new ArrayList<TrashBean>();
+	public List<BigFileBean> bigFileList = new ArrayList<BigFileBean>();
 
 	public List<APKBean> getAPKList() {
 		List<APKBean> ret = new ArrayList<APKBean>();
-		if (apkList1 != null) {
-			ret.addAll(apkList1);
-		}
-		if (apkList2 != null) {
-			ret.addAll(apkList2);
-		}
-		if (apkList3 != null) {
-			ret.addAll(apkList3);
+		if (apkList != null) {
+			ret.addAll(apkList);
 		}
 		return ret;
 	}
 
 	public List<TrashBean> getTrashList() {
 		List<TrashBean> ret = new ArrayList<TrashBean>();
-		if (trashList1 != null) {
-			ret.addAll(trashList1);
-		}
-		if (trashList2 != null) {
-			ret.addAll(trashList2);
-		}
-		if (trashList3 != null) {
-			ret.addAll(trashList3);
+		if (trashList != null) {
+			ret.addAll(trashList);
 		}
 		return ret;
 	}
 
 	public List<BigFileBean> getBigFileList() {
 		List<BigFileBean> ret = new ArrayList<CleanMasterDataBean.BigFileBean>();
-		if (bigFileList1 != null) {
-			ret.addAll(bigFileList1);
-		}
-		if (bigFileList2 != null) {
-			ret.addAll(bigFileList2);
-		}
-		if (bigFileList3 != null) {
-			ret.addAll(bigFileList3);
+		if (bigFileList != null) {
+			ret.addAll(bigFileList);
 		}
 		return ret;
 	}
@@ -177,7 +153,6 @@ public class CleanMasterDataBean {
 		public String path;
 		public String show_path;
 		public boolean isSelect;
-		public int drawable;
 
 		@Override
 		public int compareTo(BigFileBean another) {
