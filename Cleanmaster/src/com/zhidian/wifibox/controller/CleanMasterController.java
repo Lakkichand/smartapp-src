@@ -31,6 +31,7 @@ import android.os.Environment;
 import android.os.RemoteException;
 import android.os.StatFs;
 import android.text.format.Formatter;
+import android.util.Log;
 
 import com.ta.TAApplication;
 import com.ta.mvc.command.TACommand;
@@ -69,6 +70,7 @@ public class CleanMasterController extends TACommand {
 		TARequest request = getRequest();
 		String command = (String) request.getTag();
 		if (command.equals(SCAN)) {
+			long t1 = System.currentTimeMillis();
 			CountDownLatch cd = new CountDownLatch(3);
 			// 缓存扫描
 			CacheThread cThread = new CacheThread(this, cd);
@@ -84,6 +86,8 @@ public class CleanMasterController extends TACommand {
 			} catch (InterruptedException e) {
 			}
 			sendSuccessMessage(null);
+			long t2 = System.currentTimeMillis();
+			Log.e("", "scan " + (t2 - t1) + "ms");
 		} else if (command.equals(CLEAN)) {
 			// 清理
 			CleanMasterDataBean bean = (CleanMasterDataBean) request.getData();
