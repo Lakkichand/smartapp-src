@@ -887,7 +887,15 @@ public class CleanMasterController extends TACommand {
 					bean.size = file.length();
 					mKeeper.sendBigFile(bean);
 				}
-				if (isTmpFile(file)) {
+				if (isEmptyFile(file)) {
+					// 空白文件
+					TrashBean bean = new TrashBean();
+					bean.type = 5;
+					bean.path = file.getAbsolutePath();
+					bean.size = file.length();
+					bean.isSelect = true;
+					mKeeper.sendTrashFile(bean);
+				} else if (isTmpFile(file)) {
 					// 临时文件
 					TrashBean bean = new TrashBean();
 					bean.type = 3;
@@ -948,7 +956,7 @@ public class CleanMasterController extends TACommand {
 					}
 					mKeeper.sendAPKFile(bean);
 				}
-				// TODO 空白文件
+				// TODO 系统日志
 			} else if (file.isDirectory()) {
 				if (isEmptyDirectory(file)) {
 					// 空文件夹
@@ -1057,6 +1065,15 @@ public class CleanMasterController extends TACommand {
 			return false;
 		} catch (Exception e) {
 			e.printStackTrace();
+		}
+		return false;
+	}
+
+	private static boolean isEmptyFile(File file) {
+		if (file.exists() && file.isFile()) {
+			if (file.length() == 0) {
+				return true;
+			}
 		}
 		return false;
 	}

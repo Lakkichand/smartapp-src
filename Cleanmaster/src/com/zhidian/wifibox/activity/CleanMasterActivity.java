@@ -52,6 +52,7 @@ public class CleanMasterActivity extends Activity {
 	public static boolean sSYD = false;
 	// TODO 垃圾清理加入其它选项
 	// TODO 多语言
+	// TODO 残留文件点击弹框
 	private AdView adView;
 	/**
 	 * 停止扫描

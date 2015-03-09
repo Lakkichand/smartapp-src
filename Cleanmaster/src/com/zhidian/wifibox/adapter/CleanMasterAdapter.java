@@ -810,6 +810,8 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 		List<TrashBean> tList3 = new ArrayList<TrashBean>();
 		// 日志文件
 		List<TrashBean> tList4 = new ArrayList<TrashBean>();
+		// 空白文件
+		List<TrashBean> tList5 = new ArrayList<TrashBean>();
 		for (TrashBean tb : bean.trashList) {
 			if (tb.type == 1) {
 				tList1.add(tb);
@@ -819,6 +821,8 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 				tList3.add(tb);
 			} else if (tb.type == 4) {
 				tList4.add(tb);
+			} else if (tb.type == 5) {
+				tList5.add(tb);
 			}
 		}
 		if (tList1.size() > 0) {
@@ -883,6 +887,22 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 			tcb.size_str = Formatter.formatFileSize(
 					TAApplication.getApplication(), tcb.size);
 			tcb.list = tList4;
+			mTList.add(tcb);
+		}
+		if (tList5.size() > 0) {
+			// 空白文件
+			TrashCombination tcb = new TrashCombination();
+			tcb.isSelect = true;
+			tcb.name = "空白文件(" + tList5.size() + "个)";
+			long size = 0;
+			for (TrashBean tb : tList5) {
+				size += tb.size;
+				tb.isSelect = true;
+			}
+			tcb.size = size;
+			tcb.size_str = Formatter.formatFileSize(
+					TAApplication.getApplication(), tcb.size);
+			tcb.list = tList5;
 			mTList.add(tcb);
 		}
 		notifyDataSetChanged();

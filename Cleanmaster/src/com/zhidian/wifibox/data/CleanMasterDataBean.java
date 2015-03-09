@@ -142,7 +142,7 @@ public class CleanMasterDataBean {
 		public long size;
 		public String path;
 		/**
-		 * 1缩略图，2空文件夹，3临时文件，4日志文件
+		 * 1缩略图，2空文件夹，3临时文件，4日志文件，5空白文件
 		 */
 		public int type;
 		public boolean isSelect;
