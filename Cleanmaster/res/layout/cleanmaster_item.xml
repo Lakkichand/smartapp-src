@@ -21,7 +21,6 @@
             android:layout_width="55dp"
             android:layout_height="55dp"
             android:layout_marginLeft="10dp"
-            android:src="@drawable/ic_launcher"
             android:visibility="visible" />
 
         <LinearLayout
@@ -44,7 +43,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:singleLine="true"
-                    android:text="360搜索"
+                    android:text=""
                     android:textColor="#FF666666"
                     android:textSize="16dp" />
 
@@ -53,7 +52,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:singleLine="true"
-                    android:text="（系统应用）"
+                    android:text=""
                     android:textColor="#FFFF0000"
                     android:textSize="12dp" />
             </LinearLayout>
@@ -69,7 +68,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="可释放内存"
+                    android:text=""
                     android:textColor="#FF999999"
                     android:textSize="16dp" />
 
@@ -77,7 +76,7 @@
                     android:id="@+id/info2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="6.65M"
+                    android:text=""
                     android:textColor="#FFea7d00"
                     android:textSize="16dp" />
             </LinearLayout>
@@ -97,7 +96,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:singleLine="true"
-                android:text="360搜索"
+                android:text=""
                 android:textColor="#FF666666"
                 android:textSize="16dp" />
 
@@ -112,7 +111,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:singleLine="true"
-                    android:text="可释放内存"
+                    android:text=""
                     android:textColor="#FF999999"
                     android:textSize="12dp" />
 
@@ -121,7 +120,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:singleLine="true"
-                    android:text="6.65M"
+                    android:text=""
                     android:textColor="#FFea7d00"
                     android:textSize="12dp" />
             </LinearLayout>
@@ -132,7 +131,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:singleLine="true"
-                android:text="/MIBOA/Download"
+                android:text=""
                 android:textColor="#FF999999"
                 android:textSize="12dp" />
         </LinearLayout>

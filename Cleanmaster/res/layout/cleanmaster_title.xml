@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
-            android:text="缓存清理"
+            android:text=""
             android:textColor="#FF666666"
             android:textSize="16sp" />
 
@@ -31,7 +31,7 @@
             android:layout_alignBottom="@+id/title"
             android:layout_marginLeft="7dp"
             android:layout_toRightOf="@+id/title"
-            android:text="(6项共"
+            android:text=""
             android:textColor="#FF999999"
             android:textSize="13sp" />
 
@@ -42,7 +42,7 @@
             android:layout_alignBottom="@+id/title"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/info1"
-            android:text="543MB"
+            android:text=""
             android:textColor="#FFea7d00"
             android:textSize="13sp" />
 
@@ -53,7 +53,7 @@
             android:layout_alignBottom="@+id/title"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/info2"
-            android:text=")"
+            android:text=""
             android:textColor="#FF999999"
             android:textSize="13sp" />
 
