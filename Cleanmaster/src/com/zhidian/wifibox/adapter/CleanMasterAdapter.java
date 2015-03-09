@@ -791,23 +791,11 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 		if (bean.ramList != null) {
 			mRList.addAll(bean.ramList);
 		}
-		if (bean.apkList1 != null) {
-			mAList.addAll(bean.apkList1);
+		if (bean.apkList != null) {
+			mAList.addAll(bean.apkList);
 		}
-		if (bean.apkList2 != null) {
-			mAList.addAll(bean.apkList2);
-		}
-		if (bean.apkList3 != null) {
-			mAList.addAll(bean.apkList3);
-		}
-		if (bean.bigFileList1 != null) {
-			mBList.addAll(bean.bigFileList1);
-		}
-		if (bean.bigFileList2 != null) {
-			mBList.addAll(bean.bigFileList2);
-		}
-		if (bean.bigFileList3 != null) {
-			mBList.addAll(bean.bigFileList3);
+		if (bean.bigFileList != null) {
+			mBList.addAll(bean.bigFileList);
 		}
 		// 处理数据
 		Collections.sort(mCList);
@@ -822,27 +810,15 @@ public class CleanMasterAdapter extends BaseExpandableListAdapter {
 		List<TrashBean> tList3 = new ArrayList<TrashBean>();
 		// 日志文件
 		List<TrashBean> tList4 = new ArrayList<TrashBean>();
-		for (int i = 0; i < 3; i++) {
-			List<TrashBean> trList = null;
-			if (i == 0) {
-				trList = bean.trashList1;
-			} else if (i == 1) {
-				trList = bean.trashList2;
-			} else if (i == 2) {
-				trList = bean.trashList3;
-			}
-			if (trList != null) {
-				for (TrashBean tb : trList) {
-					if (tb.type == 1) {
-						tList1.add(tb);
-					} else if (tb.type == 2) {
-						tList2.add(tb);
-					} else if (tb.type == 3) {
-						tList3.add(tb);
-					} else if (tb.type == 4) {
-						tList4.add(tb);
-					}
-				}
+		for (TrashBean tb : bean.trashList) {
+			if (tb.type == 1) {
+				tList1.add(tb);
+			} else if (tb.type == 2) {
+				tList2.add(tb);
+			} else if (tb.type == 3) {
+				tList3.add(tb);
+			} else if (tb.type == 4) {
+				tList4.add(tb);
 			}
 		}
 		if (tList1.size() > 0) {

@@ -222,7 +222,7 @@ public class CleanMasterActivity extends Activity {
 
 												@Override
 												public void onClick(View v) {
-													// TODO
+													// TODO 分享清理结果
 												}
 											});
 									mCleaning.setVisibility(View.GONE);
@@ -422,43 +422,12 @@ public class CleanMasterActivity extends Activity {
 								+ Formatter.formatFileSize(
 										TAApplication.getApplication(), size)
 								+ ")");
-					}
-				}
-			} else if (obj instanceof Object[]) {
-				Object[] oarray = (Object[]) obj;
-				if (oarray.length == 2 && (oarray[0] instanceof Integer)
-						&& (oarray[1] instanceof List<?>)) {
-					int index = (Integer) oarray[0];
-					List<Object> olist = (List<Object>) oarray[1];
-					if (olist == null || olist.size() <= 0) {
-						return;
-					}
-					Object item = olist.get(0);
-					if (item instanceof TrashBean) {
-						// 残留
-						List<TrashBean> tList = (List<TrashBean>) oarray[1];
-						if (index == 1) {
-							mBean.trashList1 = tList;
-						} else if (index == 2) {
-							mBean.trashList2 = tList;
-						} else if (index == 3) {
-							mBean.trashList3 = tList;
-						}
+					} else if (item instanceof TrashBean) {
+						List<TrashBean> tlist = (List<TrashBean>) obj;
+						mBean.trashList = tlist;
 						long size = 0;
 						long totalSize = 0;
-						for (TrashBean trash : mBean.trashList1) {
-							totalSize += trash.size;
-							if (trash.isSelect) {
-								size += trash.size;
-							}
-						}
-						for (TrashBean trash : mBean.trashList2) {
-							totalSize += trash.size;
-							if (trash.isSelect) {
-								size += trash.size;
-							}
-						}
-						for (TrashBean trash : mBean.trashList3) {
+						for (TrashBean trash : mBean.trashList) {
 							totalSize += trash.size;
 							if (trash.isSelect) {
 								size += trash.size;
@@ -472,30 +441,11 @@ public class CleanMasterActivity extends Activity {
 										TAApplication.getApplication(), size)
 								+ ")");
 					} else if (item instanceof APKBean) {
-						// APK
-						List<APKBean> aList = (List<APKBean>) oarray[1];
-						if (index == 1) {
-							mBean.apkList1 = aList;
-						} else if (index == 2) {
-							mBean.apkList2 = aList;
-						} else if (index == 3) {
-							mBean.apkList3 = aList;
-						}
+						List<APKBean> alist = (List<APKBean>) obj;
+						mBean.apkList = alist;
 						long size = 0;
 						long totalSize = 0;
-						for (APKBean apk : mBean.apkList1) {
-							totalSize += apk.size;
-							if (apk.isSelect) {
-								size += apk.size;
-							}
-						}
-						for (APKBean apk : mBean.apkList2) {
-							totalSize += apk.size;
-							if (apk.isSelect) {
-								size += apk.size;
-							}
-						}
-						for (APKBean apk : mBean.apkList3) {
+						for (APKBean apk : mBean.apkList) {
 							totalSize += apk.size;
 							if (apk.isSelect) {
 								size += apk.size;
@@ -509,30 +459,11 @@ public class CleanMasterActivity extends Activity {
 										TAApplication.getApplication(), size)
 								+ ")");
 					} else if (item instanceof BigFileBean) {
-						// 大文件
-						List<BigFileBean> bList = (List<BigFileBean>) oarray[1];
-						if (index == 1) {
-							mBean.bigFileList1 = bList;
-						} else if (index == 2) {
-							mBean.bigFileList2 = bList;
-						} else if (index == 3) {
-							mBean.bigFileList3 = bList;
-						}
+						List<BigFileBean> blist = (List<BigFileBean>) obj;
+						mBean.bigFileList = blist;
 						long size = 0;
 						long totalSize = 0;
-						for (BigFileBean big : mBean.bigFileList1) {
-							totalSize += big.size;
-							if (big.isSelect) {
-								size += big.size;
-							}
-						}
-						for (BigFileBean big : mBean.bigFileList2) {
-							totalSize += big.size;
-							if (big.isSelect) {
-								size += big.size;
-							}
-						}
-						for (BigFileBean big : mBean.bigFileList3) {
+						for (BigFileBean big : mBean.bigFileList) {
 							totalSize += big.size;
 							if (big.isSelect) {
 								size += big.size;
