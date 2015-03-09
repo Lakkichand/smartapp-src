@@ -779,7 +779,7 @@ public class CleanMasterController extends TACommand {
 			mCD = cd;
 			mCounter = new Counter();
 			mKeeper = new Keeper(mController);
-			super.setName("FastTrashThread");
+			super.setName("TrashThread");
 		}
 
 		@Override
