@@ -722,10 +722,18 @@ public class CleanMasterController extends TACommand {
 
 		public synchronized void sendTrashFile(TrashBean bean) {
 			mTHList.add(bean);
-			if (mTHList.size() % 3 == 0) {
-				List<TrashBean> trash = new ArrayList<CleanMasterDataBean.TrashBean>();
-				trash.addAll(mTHList);
-				mController.sendRuntingMessage(trash);
+			if (bean.type == 1) {
+				if (mTHList.size() % 10 == 0) {
+					List<TrashBean> trash = new ArrayList<CleanMasterDataBean.TrashBean>();
+					trash.addAll(mTHList);
+					mController.sendRuntingMessage(trash);
+				}
+			} else {
+				if (mTHList.size() % 3 == 0) {
+					List<TrashBean> trash = new ArrayList<CleanMasterDataBean.TrashBean>();
+					trash.addAll(mTHList);
+					mController.sendRuntingMessage(trash);
+				}
 			}
 		}
 
@@ -755,15 +763,14 @@ public class CleanMasterController extends TACommand {
 
 	public static class TrashThread extends Thread {
 
-		private ExecutorService mPool = Executors.newFixedThreadPool(5);
+		private ExecutorService mPool = Executors.newFixedThreadPool(10);
 		private CleanMasterController mController;
 		private CountDownLatch mCD;
 		private Counter mCounter;
 		private Keeper mKeeper;
 		private int mTime = 0;
 
-		public TrashThread(CleanMasterController controller,
-				CountDownLatch cd) {
+		public TrashThread(CleanMasterController controller, CountDownLatch cd) {
 			mController = controller;
 			mCD = cd;
 			mCounter = new Counter();
@@ -792,6 +799,7 @@ public class CleanMasterController extends TACommand {
 					}
 				}
 			}
+			mKeeper.sendAll();
 			List<String> paths = FileUtil.sSDPaths;
 			if (paths != null && paths.size() > 0) {
 				for (String sdPath : paths) {
