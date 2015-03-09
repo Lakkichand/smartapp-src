@@ -50,7 +50,6 @@ import com.zhidian.wifibox.view.ScanView;
 public class CleanMasterActivity extends Activity {
 
 	public static boolean sSYD = false;
-	// TODO 优化扫描速度
 	// TODO 垃圾清理加入其它选项
 	// TODO 多语言
 	private AdView adView;
