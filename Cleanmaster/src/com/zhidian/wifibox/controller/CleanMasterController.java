@@ -706,6 +706,7 @@ public class CleanMasterController extends TACommand {
 	}
 
 	public static class Keeper {
+		private int mCount = 0;
 		private List<BigFileBean> mBFList = new ArrayList<CleanMasterDataBean.BigFileBean>();
 		private List<TrashBean> mTHList = new ArrayList<CleanMasterDataBean.TrashBean>();
 		private List<APKBean> mAKList = new ArrayList<CleanMasterDataBean.APKBean>();
@@ -762,6 +763,19 @@ public class CleanMasterController extends TACommand {
 			List<APKBean> apk = new ArrayList<CleanMasterDataBean.APKBean>();
 			apk.addAll(mAKList);
 			mController.sendRuntingMessage(apk);
+		}
+
+		public void sendPath(String path) {
+			mCount++;
+			if (mCount % 5 == 0) {
+				for (String sd : FileUtil.sSDPaths) {
+					if (path.startsWith(sd)) {
+						path = path.replaceFirst(sd, "");
+						break;
+					}
+				}
+				mController.sendRuntingMessage(path);
+			}
 		}
 	}
 
@@ -856,6 +870,7 @@ public class CleanMasterController extends TACommand {
 
 		@Override
 		public void run() {
+			mKeeper.sendPath(mPath);
 			File file = new File(mPath);
 			if (file.isFile()) {
 				if (isBigFile(file)) {
