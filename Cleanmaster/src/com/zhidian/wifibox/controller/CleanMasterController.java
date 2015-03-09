@@ -956,7 +956,6 @@ public class CleanMasterController extends TACommand {
 					}
 					mKeeper.sendAPKFile(bean);
 				}
-				// TODO 系统日志
 			} else if (file.isDirectory()) {
 				if (isEmptyDirectory(file)) {
 					// 空文件夹
