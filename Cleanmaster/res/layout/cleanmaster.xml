@@ -101,7 +101,6 @@
                 android:layout_marginLeft="12dp"
                 android:layout_toRightOf="@+id/progress_total"
                 android:singleLine="true"
-                android:text="正在扫描"
                 android:textColor="#FF666666"
                 android:textSize="16sp" />
         </RelativeLayout>
@@ -135,7 +134,7 @@
                 android:layout_marginLeft="12dp"
                 android:layout_toRightOf="@+id/progress_cache"
                 android:singleLine="true"
-                android:text="缓存扫描"
+                android:text="@string/titlecache"
                 android:textColor="#FF666666"
                 android:textSize="16sp" />
 
@@ -149,7 +148,7 @@
                 android:singleLine="true"
                 android:text=""
                 android:textColor="#FF999999"
-                android:textSize="14dp" />
+                android:textSize="14sp" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -181,7 +180,7 @@
                 android:layout_marginLeft="12dp"
                 android:layout_toRightOf="@+id/progress_apk"
                 android:singleLine="true"
-                android:text="安装包扫描"
+                android:text="@string/titleapk"
                 android:textColor="#FF666666"
                 android:textSize="16sp" />
 
@@ -195,7 +194,7 @@
                 android:singleLine="true"
                 android:text=""
                 android:textColor="#FF999999"
-                android:textSize="14dp" />
+                android:textSize="14sp" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -227,7 +226,7 @@
                 android:layout_marginLeft="12dp"
                 android:layout_toRightOf="@+id/progress_ram"
                 android:singleLine="true"
-                android:text="内存扫描"
+                android:text="@string/titleram"
                 android:textColor="#FF666666"
                 android:textSize="16sp" />
 
@@ -241,7 +240,7 @@
                 android:singleLine="true"
                 android:text=""
                 android:textColor="#FF999999"
-                android:textSize="14dp" />
+                android:textSize="14sp" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -273,7 +272,7 @@
                 android:layout_marginLeft="12dp"
                 android:layout_toRightOf="@+id/progress_trash"
                 android:singleLine="true"
-                android:text="残留文件扫描"
+                android:text="@string/titletrash"
                 android:textColor="#FF666666"
                 android:textSize="16sp" />
 
@@ -287,7 +286,7 @@
                 android:singleLine="true"
                 android:text=""
                 android:textColor="#FF999999"
-                android:textSize="14dp" />
+                android:textSize="14sp" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -319,7 +318,7 @@
                 android:layout_marginLeft="12dp"
                 android:layout_toRightOf="@+id/progress_big"
                 android:singleLine="true"
-                android:text="大文件扫描"
+                android:text="@string/titlebig"
                 android:textColor="#FF666666"
                 android:textSize="16sp" />
 
@@ -333,7 +332,7 @@
                 android:singleLine="true"
                 android:text=""
                 android:textColor="#FF999999"
-                android:textSize="14dp" />
+                android:textSize="14sp" />
         </RelativeLayout>
     </LinearLayout>
 

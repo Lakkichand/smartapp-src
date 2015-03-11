@@ -728,7 +728,7 @@ public class CleanMasterController extends TACommand {
 		public synchronized void sendTrashFile(TrashBean bean) {
 			mTHList.add(bean);
 			if (bean.type == 1) {
-				if (mTHList.size() % 10 == 0) {
+				if (mTHList.size() % 20 == 0) {
 					List<TrashBean> trash = new ArrayList<CleanMasterDataBean.TrashBean>();
 					trash.addAll(mTHList);
 					mController.sendRuntingMessage(trash);

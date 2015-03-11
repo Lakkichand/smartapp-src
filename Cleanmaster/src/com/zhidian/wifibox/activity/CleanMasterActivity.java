@@ -190,7 +190,7 @@ public class CleanMasterActivity extends Activity {
 			// 更新列表
 			mScanFrame.removeView(mScanView);
 			mScanView = null;
-			mScaning.setText("扫描完成");
+			mScaning.setText(R.string.scanfinish);
 			mTotalRotation.stop();
 			mScanInfo.setVisibility(View.GONE);
 			findViewById(R.id.line).setVisibility(View.GONE);
@@ -419,7 +419,8 @@ public class CleanMasterActivity extends Activity {
 					mBigRotation.setPadding(0, 0, 0, 0);
 				}
 			} else if (obj instanceof String) {
-				mScaning.setText("正在扫描：" + obj.toString());
+				mScaning.setText(getResources().getString(R.string.scanning)
+						+ obj.toString());
 			} else if (obj instanceof List<?>) {
 				List<Object> olist = (List<Object>) obj;
 				if (olist.size() > 0) {
