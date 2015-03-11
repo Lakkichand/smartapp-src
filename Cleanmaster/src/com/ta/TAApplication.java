@@ -16,7 +16,6 @@
 package com.ta;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Stack;
 
 import android.app.AlarmManager;
@@ -27,8 +26,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 
-import com.jiubang.core.message.IMessageHandler;
-import com.jiubang.core.message.MessageManager;
 import com.ta.exception.TANoSuchCommandException;
 import com.ta.mvc.command.TACommandExecutor;
 import com.ta.mvc.command.TAICommand;
@@ -46,7 +43,6 @@ import com.ta.util.config.TAIConfig;
 import com.ta.util.config.TAPreferenceConfig;
 import com.ta.util.config.TAPropertiesConfig;
 import com.ta.util.db.TASQLiteDatabasePool;
-import com.ta.util.http.AsyncHttpClient;
 import com.ta.util.layoutloader.TAILayoutLoader;
 import com.ta.util.layoutloader.TALayoutLoader;
 import com.ta.util.netstate.TANetChangeObserver;
@@ -84,58 +80,11 @@ public class TAApplication extends Application implements TAIResponseListener {
 	/********* 自己配置 zhaoyl *****************/
 	public static AlarmManager am;
 	public static String runPackageName = "";
-	private AsyncHttpClient mAsyncHttpClient;
-	private MessageManager mMessageManager = null;
-
-	/**
-	 * 注册消息接收者
-	 */
-	public static boolean registMsgHandler(final IMessageHandler handler) {
-		if (application != null && application.mMessageManager != null) {
-			return application.mMessageManager.registMsgHandler(handler);
-		}
-		return false;
-	}
-
-	/**
-	 * 点对点发送到UI线程上的消息
-	 */
-	public static void sendHandler(Object who, int handlerId, int msgId,
-			int param, Object object, List<? extends Object> objects) {
-		if (application != null && application.mMessageManager != null) {
-			application.mMessageManager.sendHandler(who, handlerId, msgId,
-					param, object, objects);
-		}
-	}
-
-	/**
-	 * 点对点发送到UI线程上的消息
-	 */
-	public static boolean sendMessage(Object who, int handlerId, int msgId,
-			int param, Object object, List<?> objList) {
-		if (application != null && application.mMessageManager != null) {
-			return application.mMessageManager.send(who, handlerId, msgId,
-					param, object, objList);
-		}
-		return false;
-	}
-
-	/**
-	 * 反注册消息接收者 与{@link GoLauncher#registMsgHandler(IMessageHandler, int)}配对使用
-	 */
-	public static boolean unRegistMsgHandler(IMessageHandler handler) {
-		if (application != null && application.mMessageManager != null) {
-			return application.mMessageManager.unRegistMsgHandler(handler);
-		}
-		return false;
-	}
 
 	@Override
 	public void onCreate() {
 		// TODO Auto-generated method stub
 		am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-		mAsyncHttpClient = new AsyncHttpClient();
-		mMessageManager = new MessageManager();
 		onPreCreateApplication();
 		super.onCreate();
 		doOncreate();
@@ -211,13 +160,6 @@ public class TAApplication extends Application implements TAIResponseListener {
 	 */
 	public static TAApplication getApplication() {
 		return application;
-	}
-
-	/**
-	 * 获取异步HttpClient
-	 */
-	public AsyncHttpClient getAsyncHttpClient() {
-		return mAsyncHttpClient;
 	}
 
 	protected void onAfterCreateApplication() {
