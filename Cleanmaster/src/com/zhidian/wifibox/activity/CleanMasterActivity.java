@@ -10,7 +10,11 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.text.Spannable;
+import android.text.SpannableString;
 import android.text.format.Formatter;
+import android.text.style.AbsoluteSizeSpan;
+import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -38,6 +42,7 @@ import com.zhidian.wifibox.data.CleanMasterDataBean.BigFileBean;
 import com.zhidian.wifibox.data.CleanMasterDataBean.CacheBean;
 import com.zhidian.wifibox.data.CleanMasterDataBean.RAMBean;
 import com.zhidian.wifibox.data.CleanMasterDataBean.TrashBean;
+import com.zhidian.wifibox.util.DrawUtil;
 import com.zhidian.wifibox.view.RotationView;
 import com.zhidian.wifibox.view.ScanView;
 
@@ -52,6 +57,7 @@ public class CleanMasterActivity extends Activity {
 	public static boolean sSYD = false;
 	// TODO 多语言
 	// TODO 残留文件点击弹框
+	// TODO 测试
 	private AdView adView;
 	/**
 	 * 停止扫描
@@ -202,9 +208,21 @@ public class CleanMasterActivity extends Activity {
 					mCleaningFrame.setVisibility(View.VISIBLE);
 					mCleanResultFrame.setVisibility(View.VISIBLE);
 					mCleanFrame.setVisibility(View.GONE);
-					TextView text1 = (TextView) findViewById(R.id.total_size_1);
-					text1.setText("成功清理");
-					mScanResult.setText("0B");
+					String size_str = Formatter.formatFileSize(
+							getApplicationContext(), 0);
+					String result = String.format(
+							getResources().getString(R.string.total_clean),
+							size_str);
+					int start = result.indexOf(size_str);
+					int end = start + size_str.length();
+					Spannable word = new SpannableString(result);
+					word.setSpan(
+							new AbsoluteSizeSpan(DrawUtil.sp2px(
+									getApplicationContext(), 30)), start, end,
+							Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+					word.setSpan(new ForegroundColorSpan(0xFFFFFF00), start,
+							end, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+					mScanResult.setText(word);
 					findViewById(R.id.total_size_3).setVisibility(View.GONE);
 					// 开始清理
 					TAApplication.getApplication().doCommand(
@@ -304,13 +322,36 @@ public class CleanMasterActivity extends Activity {
 											mCleanBig = size;
 										}
 										// 更新展示板
-										mScanResult.setText(Formatter
+										String size_str = Formatter
 												.formatFileSize(
 														getApplicationContext(),
 														mCleanCache + mCleanAPK
 																+ mCleanRAM
 																+ mCleanTrash
-																+ mCleanBig));
+																+ mCleanBig);
+										String result = String.format(
+												getResources().getString(
+														R.string.total_clean),
+												size_str);
+										int start = result.indexOf(size_str);
+										int end = start + size_str.length();
+										Spannable word = new SpannableString(
+												result);
+										word.setSpan(
+												new AbsoluteSizeSpan(
+														DrawUtil.sp2px(
+																getApplicationContext(),
+																30)),
+												start,
+												end,
+												Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+										word.setSpan(
+												new ForegroundColorSpan(
+														0xFFFFFF00),
+												start,
+												end,
+												Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+										mScanResult.setText(word);
 									}
 								}
 
@@ -539,7 +580,7 @@ public class CleanMasterActivity extends Activity {
 		mRAMSize = (TextView) findViewById(R.id.size_ram);
 		mTrashSize = (TextView) findViewById(R.id.size_trash);
 		mBigSize = (TextView) findViewById(R.id.size_big);
-		mScanResult = (TextView) findViewById(R.id.total_size);
+		mScanResult = (TextView) findViewById(R.id.total_size_result);
 		mTotalRotation = (RotationView) findViewById(R.id.progress_total);
 		mTotalRotation.rotate();
 		mCacheRotation = (RotationView) findViewById(R.id.progress_cache);
@@ -597,9 +638,21 @@ public class CleanMasterActivity extends Activity {
 	 * 更新扫描结果
 	 */
 	private void updateScanResult() {
-		mScanResult.setText(Formatter.formatShortFileSize(
+		String size_str = Formatter.formatShortFileSize(
 				TAApplication.getApplication(), mSelectAPK + mSelectCache
-						+ mSelectRAM + mSelectTrash + mSelectBig));
+						+ mSelectRAM + mSelectTrash + mSelectBig);
+		String result = String.format(
+				getResources().getString(R.string.total_suggestion), size_str);
+		int start = result.indexOf(size_str);
+		int end = start + size_str.length();
+		Spannable word = new SpannableString(result);
+		word.setSpan(
+				new AbsoluteSizeSpan(DrawUtil
+						.sp2px(getApplicationContext(), 30)), start, end,
+				Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+		word.setSpan(new ForegroundColorSpan(0xFFFFFF00), start, end,
+				Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+		mScanResult.setText(word);
 	}
 
 	@Override

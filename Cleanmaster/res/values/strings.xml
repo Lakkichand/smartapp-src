@@ -1,5 +1,10 @@
-<resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <string name="app_name">Cleanmaster</string>
+    <string name="app_name">清理大师</string>
+    <string name="main_title">手机清理</string>
+    <string name="total_suggestion">共有<xliff:g id="total_suggestion_size">%s</xliff:g>垃圾</string>
+    <string name="total_suggestion_small">(建议清理)</string>
+    <string name="total_clean">成功清理<xliff:g id="total_clean_size">%s</xliff:g>垃圾</string>
 
 </resources>

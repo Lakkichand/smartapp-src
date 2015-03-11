@@ -27,9 +27,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="2dp"
-                android:text="手机清理"
+                android:text="@string/main_title"
                 android:textColor="@android:color/white"
-                android:textSize="18dp" />
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -41,36 +41,20 @@
             android:orientation="horizontal" >
 
             <TextView
-                android:id="@+id/total_size_1"
+                android:id="@+id/total_size_result"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="共有"
+                android:text="@string/total_suggestion"
                 android:textColor="@android:color/white"
-                android:textSize="27dp" />
-
-            <TextView
-                android:id="@+id/total_size"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0.0B"
-                android:textColor="#FFFFFF00"
-                android:textSize="30dp" />
-
-            <TextView
-                android:id="@+id/total_size_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="垃圾"
-                android:textColor="@android:color/white"
-                android:textSize="27dp" />
+                android:textSize="27sp" />
 
             <TextView
                 android:id="@+id/total_size_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="(建议清理)"
+                android:text="@string/total_suggestion_small"
                 android:textColor="@android:color/white"
-                android:textSize="16dp" />
+                android:textSize="16sp" />
         </LinearLayout>
     </RelativeLayout>
 
